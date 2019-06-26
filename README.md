@@ -23,6 +23,10 @@ cd woocommerce-api-docs
 | `-v` or `--version`     | Shows generator version |
 | `-w` or `--woocommerce` | WooCommerce version     |
 
+## TODO
+
+- Find an alternative to ApiGen or fork ApiGen to fix support for latest PHP versions.
+
 ## Changelog
 
 [See changelog for details](https://github.com/woocommerce/woocommerce-api-docs/blob/master/CHANGELOG.md)
