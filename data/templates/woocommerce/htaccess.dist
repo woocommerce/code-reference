@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+
+RewriteRule source-function-(.*).html /wc-apidocs/namespaces/default.html#function_$1 [NE,L,R=302]
+RewriteRule function-(.*).html /wc-apidocs/namespaces/default.html#function_$1 [NE,L,R=302]
+
+RewriteRule !\.(html|php)$ - [S=6]
+RewriteRule ^([^_]*)_([^_]*)_([^_]*)_([^_]*)_([^_]*)_([^_]*)_(.*)$ $1-$2-$3-$4-$5-$6-$7 [E=underscores:Yes]
+RewriteRule ^([^_]*)_([^_]*)_([^_]*)_([^_]*)_([^_]*)_(.*)$ $1-$2-$3-$4-$5-$6 [E=underscores:Yes]
+RewriteRule ^([^_]*)_([^_]*)_([^_]*)_([^_]*)_(.*)$ $1-$2-$3-$4-$5 [E=underscores:Yes]
+RewriteRule ^([^_]*)_([^_]*)_([^_]*)_(.*)$ $1-$2-$3-$4 [E=underscores:Yes]
+RewriteRule ^([^_]*)_([^_]*)_(.*)$ $1-$2-$3 [E=underscores:Yes]
+RewriteRule ^([^_]*)_(.*)$ $1-$2 [E=underscores:Yes]
+
+RewriteCond %{ENV:underscores} ^Yes$
+RewriteRule (.*) wc-apidocs/$1 [R=302,L]
+
+RewriteRule class-(.*).html /wc-apidocs/classes/$1.html [L,R=302]
+RewriteRule package-(.*).html /wc-apidocs/packages/$1.html [L,R=302]
+RewriteRule package-(.*).html /wc-apidocs/packages/$1.html [L,R=302]
+RewriteRule source-class-(.*).html /wc-apidocs/classes/$1.html [L,R=302]
+</IfModule>
