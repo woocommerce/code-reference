@@ -1,0 +1,82 @@
+<a id="function_{{ function.name }}"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-function
+            phpdocumentor-function--{{ function.visibility }}
+            {% if function.deprecated %}phpdocumentor-element--deprecated{% endif %}
+        "
+>
+    <h4 class="phpdocumentor-function__name">{{ function.name }}()</h4>
+
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="{{ function.file.path }}">{{ function.file|route('file:short') }}</abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">{{ function.line }}</span>
+    </aside>
+
+    {% if function.summary %}
+    <p class="phpdocumentor-summary">{{ function.summary }}</p>
+    {% endif %}
+    <code class="phpdocumentor-signature phpdocumentor-code {% if function.deprecated %}phpdocumentor-signature--deprecated{% endif %}">
+        <span class="phpdocumentor-signature__visibility">{{ function.visibility }}</span>
+        {% if function.abstract %}<span class="phpdocumentor-signature__abstract">abstract</span>{% endif %}
+        {% if function.final %}<span class="phpdocumentor-signature__final">final</span>{% endif %}
+        {% if function.static %}<span class="phpdocumentor-signature__static">static</span>{% endif %}
+        <span class="phpdocumentor-signature__name">{{ function.name }}</span>(
+        {% for argument in function.arguments %}
+            <span class="phpdocumentor-signature__argument">
+            {% if argument.default %}[{% endif %}{% if not loop.first %}, {% endif %}
+                {% if argument.isVariadic %}<span class="phpdocumentor-signature__argument__variadic-operator">...</span>{% endif %}
+                {%- if argument.byReference -%}<span class="phpdocumentor-signature__argument__reference-operator">&amp;</span>{%- endif -%}
+                <span class="phpdocumentor-signature__argument__name">${{ argument.name }}</span> :
+                <span class="phpdocumentor-signature__argument__return-type">{{ argument.type|route('class:short')|join('|')|raw }}</span>
+                {% if argument.default %} = <span class="phpdocumentor-signature__argument__default-value">{{ argument.default }}</span> ]{% endif %}
+            </span>
+        {% endfor %}
+        )
+        : <span class="phpdocumentor-signature__response_type">{{ function.response.type|route('class:short')|join('|')|raw }}</span>
+    </code>
+
+    {% if function.description %}
+    <section class="phpdocumentor-description">{{ function.description|markdown }}</section>
+    {% endif %}
+
+    {% if function.arguments|length > 0 %}
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+            {% for argument in function.arguments %}
+                <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">${{ argument.name }}</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">{{ argument.type|route('class:short')|join('|')|raw }}</span>
+                    {% if argument.default %} = <span class="phpdocumentor-signature__argument__default-value">{{ argument.default }}</span>{% endif %}
+                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description">{{ argument.description|default('')|markdown }}</section></dd>
+            {% endfor %}
+        </dl>
+    {% endif %}
+
+    {% set visibleTags = function.tags|filter((v,k) => k not in ['param', 'return', 'package']) %}
+    {% if visibleTags|length > 0 %}
+        <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+            {% for name,seriesOfTag in visibleTags %}
+                {% for tag in seriesOfTag %}
+                    <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">{{ name }}</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description">{{ tag.description|default('')|markdown }}</section></dd>
+                {% endfor %}
+            {% endfor %}
+        </dl>
+    {% endif %}
+
+    {% if (function.response.type and function.response.type != 'void') or function.response.description %}
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">{{ function.response.type|route('class:short')|join('|')|raw }}</span>
+        {% if function.response.description %}
+            &mdash; <span class="phpdocumentor-description">{{ function.response.description|markdown }}</span>
+        {% endif %}
+    {% endif %}
+
+</article>

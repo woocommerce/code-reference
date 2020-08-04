@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+  <name>woocommerce</name>
+  <author>Automattic</author>
+  <version>1.0.0</version>
+  <transformations>
+    <transformation query="copy" writer="FileIo" source="css" artifact="css"/>
+    <transformation query="copy" writer="FileIo" source="images" artifact="images"/>
+    <transformation writer="twig" source="index.html.twig" artifact="index.html"/>
+    <transformation writer="twig" query="files" source="file.html.twig" />
+    <transformation writer="twig" query="indexes.namespaces" source="namespace.html.twig" />
+    <transformation writer="twig" query="indexes.packages" source="package.html.twig" />
+    <transformation writer="twig" query="indexes.classes" source="class.html.twig" />
+    <transformation writer="twig" query="indexes.interfaces" source="interface.html.twig" />
+    <transformation writer="twig" query="indexes.traits" source="trait.html.twig" />
+    <transformation writer="twig" source="search.js.twig" artifact="js/search.js" />
+    <transformation writer="twig" source="searchIndex.js.twig" artifact="js/searchIndex.js" />
+    <transformation writer="twig" source="graphs/class.html.twig" artifact="graphs/classes.html" />
+    <transformation writer="twig" source="reports/errors.html.twig" artifact="reports/errors.html" />
+    <transformation writer="twig" source="reports/deprecated.html.twig" artifact="reports/deprecated.html" />
+    <transformation writer="twig" source="reports/markers.html.twig" artifact="reports/markers.html" />
+    <transformation writer="RenderGuide" />
+    <transformation writer="Graph" source="Class" artifact="graphs/classes.svg" />
+  </transformations>
+  <parameters>
+    <parameter key="twig-debug">true</parameter>
+  </parameters>
+</template>
