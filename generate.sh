@@ -2,7 +2,7 @@
 # WooCommerce Class API docs generator
 
 # Variables
-GENERATOR_VERSION="0.1.0"
+GENERATOR_VERSION="0.2.0"
 SOURCE_VERSION=""
 GITHUB_REPO="woocommerce/woocommerce"
 
@@ -28,7 +28,7 @@ help_output() {
   echo "Generate WooCommerce Class API docs."
   echo
   echo "Examples:"
-  echo "./generate.sh -w 4.3.1"
+  echo "./generate.sh -s 4.3.1"
   echo
   echo "Available options:"
   echo "  -h [--help]           Shows help message"
