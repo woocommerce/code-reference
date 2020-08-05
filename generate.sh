@@ -2,7 +2,7 @@
 # WooCommerce Class API docs generator
 
 # Variables
-GENERATOR_VERSION="0.3.0"
+GENERATOR_VERSION="0.4.0"
 SOURCE_VERSION=""
 GITHUB_REPO="woocommerce/woocommerce"
 
