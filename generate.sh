@@ -120,7 +120,7 @@ unzip -o "woocommerce.zip" -d .
 echo
 output 2 "Generating API docs..."
 echo
-./vendor/bin/phpdoc run --template="data/templates/woocommerce"
+./vendor/bin/phpdoc run --template="data/templates/woocommerce" --setting=graphs.enabled=true
 
 # Done
 echo
