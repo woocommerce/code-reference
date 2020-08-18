@@ -104,12 +104,12 @@ main() {
 
   # Default commit message uses last title if a custom one is not supplied
   if [[ -z $commit_message ]]; then
-    commit_message="publish: $commit_title"
+    commit_message="Published code reference for version: $source_version"
   fi
 
   # Append hash to commit message unless no hash flag was found
   if [ $append_hash = true ]; then
-    commit_message="$commit_message"$'\n\n'"generated from commit $commit_hash"
+    commit_message="$commit_message"$'\n\n'"Generated from commit $commit_hash"
   fi
 
   previous_branch=`git rev-parse --abbrev-ref HEAD`
