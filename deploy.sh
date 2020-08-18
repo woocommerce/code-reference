@@ -99,7 +99,6 @@ main() {
     return 1
   fi
 
-  commit_title=`git log -n 1 --format="%s" HEAD`
   commit_hash=` git log -n 1 --format="%H" HEAD`
 
   # Default commit message uses last title if a custom one is not supplied
