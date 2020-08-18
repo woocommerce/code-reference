@@ -5,6 +5,7 @@
 GENERATOR_VERSION="0.4.0"
 SOURCE_VERSION=""
 GITHUB_REPO="woocommerce/woocommerce"
+ME=$(basename "$0")
 
 # Output colorized strings
 #
@@ -23,12 +24,12 @@ output() {
 
 # Output error message.
 help_output() {
-  echo "Usage: ./generate.sh [options]"
+  echo "Usage: ${ME} -s <version> [<options>]"
   echo
   echo "Generate WooCommerce Class API docs."
   echo
   echo "Examples:"
-  echo "./generate.sh -s 4.3.1"
+  echo "${ME} -s 4.3.1"
   echo
   echo "Available options:"
   echo "  -h [--help]           Shows help message"
@@ -44,6 +45,7 @@ output 5 "-------------------------------------------"
 # Display help message when no option is used.
 if [ -z "$1" ]; then
   help_output
+  exit 0
 fi
 
 # Set user options
@@ -74,7 +76,7 @@ while [ ! $# -eq 0 ]; do
       shift
       ;;
     *)
-      output 1 "\"${1}\" is not a valid command. See \"./generate.sh --help\"."
+      output 1 "\"${1}\" is not a valid command. See \"${ME} --help\"."
       exit 1
       ;;
   esac
@@ -82,7 +84,7 @@ while [ ! $# -eq 0 ]; do
 done
 
 if [ -z "${SOURCE_VERSION}" ]; then
-  output 1 "Please enter a source version, e.g ./generate.sh -s 4.3.1."
+  output 1 "Please enter a source version, e.g ${ME} -s 4.3.1."
   exit 1
 fi
 
