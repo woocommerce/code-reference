@@ -1,6 +1,6 @@
 # WooCommerce Code Reference Generator
 
-Generate [WooCommerce Code Reference](https://docs.woocommerce.com/wc-apidocs/index.html).
+Generate [WooCommerce Code Reference](https://woocommerce.github.io/code-reference/).
 
 ## Install
 
