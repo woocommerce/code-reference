@@ -11,6 +11,7 @@ Options:
   -h, --help               Show this help information.
   -v, --verbose            Increase verbosity. Useful for debugging.
   -s, --source-version     Source version to build and deploy.
+  -r, --github-repo        GitHub repo with username, default to \"woocommerce/woocommerce\".
   -e, --allow-empty        Allow deployment of an empty directory.
   -m, --message MESSAGE    Specify the message used when committing on the
                            deploy branch.
@@ -21,7 +22,7 @@ Options:
 "
 
 run_build() {
-    ./generate.sh -s "$source_version" || exit 1
+    ./generate.sh -s "$source_version" -r "$github_repo" || exit 1
 }
 
 parse_args() {
@@ -42,6 +43,9 @@ parse_args() {
       shift
     elif [[ $1 = "-s" || $1 = "--source-version" ]]; then
       source_version=$2
+      shift
+    elif [[ $1 = "-r" || $1 = "--github-repo" ]]; then
+      github_repo=$2
       shift
     elif [[ $1 = "-e" || $1 = "--allow-empty" ]]; then
       allow_empty=true
@@ -70,7 +74,11 @@ parse_args() {
 
   if [[ -z $source_version ]]; then
     echo "Source version is missing." >&2
-    return 1
+    exit 1
+  fi
+
+  if [[ -z $github_repo ]]; then
+    github_repo="woocommerce/woocommerce"
   fi
 
   # Set internal option vars from the environment and arg flags. All internal
