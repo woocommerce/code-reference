@@ -5,13 +5,13 @@ Generate [WooCommerce Code Reference](https://woocommerce.github.io/code-referen
 ## Install
 
 ```bash
-git clone https://github.com/woocommerce/code-reference-generator.git
+git clone https://github.com/woocommerce/code-reference.git
 ```
 
 ## Usage
 
 ```bash
-cd code-reference-generator
+cd code-reference
 ./deploy.sh -s <VERSION>
 ```
 
@@ -31,4 +31,4 @@ cd code-reference-generator
 
 ## Changelog
 
-[See changelog for details](https://github.com/woocommerce/code-reference-generator/blob/master/CHANGELOG.md)
+[See changelog for details](https://github.com/woocommerce/code-reference/blob/master/CHANGELOG.md)
