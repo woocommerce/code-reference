@@ -1,15 +1,4 @@
 {% if packages|default([]) is not empty %}
-<h3 id="packages">
-    Packages
-    <a href="#packages" class="headerlink"><i class="fas fa-link"></i></a>
-</h3>
-
-<dl class="phpdocumentor-table-of-contents">
-    {% for package in packages %}
-        <dt class="phpdocumentor-table-of-contents__entry -package">{{ package|route('class:short') }}</dt>
-    {% endfor %}
-</dl>
-{% endif %}
 
 {% if namespaces|default([]) is not empty %}
 <h3 id="namespaces">
@@ -20,6 +9,18 @@
 <dl class="phpdocumentor-table-of-contents">
     {% for namespace in namespaces %}
         <dt class="phpdocumentor-table-of-contents__entry -namespace">{{ namespace|route('class:short') }}</dt>
+    {% endfor %}
+</dl>
+{% endif %}
+
+<h3 id="packages">
+    Packages
+    <a href="#packages" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+    {% for package in packages %}
+        <dt class="phpdocumentor-table-of-contents__entry -package">{{ package|route('class:short') }}</dt>
     {% endfor %}
 </dl>
 {% endif %}

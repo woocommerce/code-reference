@@ -1,4 +1,31 @@
-<header class="phpdocumentor-header phpdocumentor-section">
-    {% include 'components/header-title.html.twig' %}
-    {% include 'components/topnav.html.twig' %}
+<header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="{{ path("/index.html") }}"><img width="180" src="{{ path('images/logo.svg') }}" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="{{ path('hooks/hooks.html') }}">Hooks Reference</a></li>
+                {% if project.settings.custom['graphs.enabled'] %}
+                    <li><a href="{{ path('graphs/classes.html') }}">Class Diagram</a></li>
+                {% endif %}
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<header class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">{{ project.name }}</h1>
+
+        <div data-search-form class="phpdocumentor-search">
+            <label class="phpdocumentor-label">
+                <span class="visually-hidden">Search</span>
+                <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+            </label>
+        </div>
+        {{ include('components/search.html.twig') }}
+    </section>
 </header>
