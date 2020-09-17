@@ -1,13 +1,28 @@
 {% extends 'base.html.twig' %}
 
+{% block javascripts %}
+    <script src="{{ path('js/prism.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+{% endblock %}
+
 {% block content %}
     {% include('components/breadcrumbs.html.twig') %}
 
     <article class="phpdocumentor-element -file">
         {{ include('components/file-title.html.twig') }}
         {{ include('components/table-of-contents.html.twig') }}
-
         {{ include('components/constants.html.twig') }}
         {{ include('components/functions.html.twig') }}
+        {% if project.settings.shouldIncludeSource %}
+            <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>{{ node.source|raw|escape }}</code></pre>
+        {% endif %}
     </article>
 {% endblock %}
