@@ -4,20 +4,23 @@
     <meta charset="utf-8">
     <title>{% block title %}{{ project.name }}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ path('images/favicon.ico') }}"/>
+    <link rel="shortcut icon" href="{{ path('images/favicon.png') }}" />
+    <link rel="apple-touch-icon" href="{{ path('images/apple-touch-icon.png') }}"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ path('images/apple-touch-icon-72x72.png') }}"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ path('images/apple-touch-icon-114x114.png') }}"/>
     <link rel="stylesheet" href="{{ path('css/normalize.css') }}">
     <link rel="stylesheet" href="{{ path('css/base.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ path('css/template.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
     {% block stylesheets %}
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{ path('css/template.css') }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
     {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="{{ path('js/search.js') }}"></script>
+    <script defer src="{{ path('js/searchIndex.js') }}"></script>
     {% block javascripts %}
-        <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
-        <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
-        <script src="{{ path('js/search.js') }}"></script>
-        <script defer src="{{ path('js/searchIndex.js') }}"></script>
     {% endblock %}
 </head>
 <body id="top">
