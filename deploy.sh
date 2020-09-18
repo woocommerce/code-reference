@@ -13,6 +13,8 @@ Options:
     -s, --source-version <VERSION>  Source version to build and deploy.
     -r, --github-repo <GITHUB_REPO> GitHub repo with username,
                                          default to \"woocommerce/woocommerce\".
+    -p, --default-package <NAME>     Default package name,
+                                         default to \"WooCommerce\".
     -e, --allow-empty               Allow deployment of an empty directory.
     -m, --message <MESSAGE>         Specify the message used when committing on
                                          the deploy branch.
@@ -65,6 +67,9 @@ parse_args() {
         elif [[ $1 = "-r" || $1 = "--github-repo" ]]; then
             github_repo=$2
             shift 2
+        elif [[ $1 = "-p" || $1 = "--default-package" ]]; then
+            default_package=$2
+            shift 2
         elif [[ $1 = "-e" || $1 = "--allow-empty" ]]; then
             allow_empty=true
             shift
@@ -97,6 +102,10 @@ parse_args() {
 
     if [[ -z $github_repo ]]; then
         github_repo="woocommerce/woocommerce"
+    fi
+
+    if [[ -z $default_package ]]; then
+        default_package="WooCommerce"
     fi
 
     # Set internal option vars from the environment and arg flags. All internal
@@ -151,7 +160,7 @@ run_build() {
     echo
     output 2 "Generating API docs..."
     echo
-    ./vendor/bin/phpdoc run --template="data/templates/${project_name}" --setting=graphs.enabled=true --sourcecode
+    ./vendor/bin/phpdoc run --template="data/templates/${project_name}" --setting=graphs.enabled=true --sourcecode --defaultpackagename=${default_package}
 }
 
 main() {
