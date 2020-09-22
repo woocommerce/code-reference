@@ -138,8 +138,7 @@ parse_args() {
 download_source() {
     # Bootstrap
     rm -f ./${project_name}.zip
-    rm -rf ./build ./${project_name}
-    mkdir -p ./build
+    rm -rf ./${project_name}
 
     # Install dependencies
     if [ ! -f "vendor/bin/phpdoc" ]; then
@@ -164,6 +163,9 @@ download_source() {
 }
 
 run_build() {
+    rm -rf ./build
+    mkdir -p ./build
+
     if $run_download; then
         download_source
     fi
