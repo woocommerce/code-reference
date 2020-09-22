@@ -35,8 +35,11 @@ var autoCompletejs = new autoComplete({
     resultItem: {
         content: function(data, source) {
             source.classList.add('phpdocumentor-search-results__entry');
-            source.innerHTML += '<h3><a href="' + data.value.url + '">' + data.match + "</a></h3>\n";
-            source.innerHTML += '<small>' + data.value.fqsen + "</small>\n";
+            var name  = 'name' === data.key ? data.match : data.value.name,
+                fqsen = 'fqsen' === data.key ? data.match : data.value.fqsen;
+
+            source.innerHTML += '<a href="' + data.value.url + '">' + name + "</a>\n";
+            source.innerHTML += '<small>' + fqsen + "</small>\n";
             source.innerHTML += '<span class="phpdocumentor-summary">' + data.value.summary + '</span>';
         },
         element: 'li'
