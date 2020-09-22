@@ -224,24 +224,19 @@ class HookDocsGenerator
             $index[] = '<a href="#hooks-' . str_replace(' ', '-', strtolower($heading)) . '">' . $heading . '</a>';
         }
 
-        $output .= implode(', ', $index);
+        $output .= '<p>' . implode(', ', $index) . '</p>';
 
         $output .= '<div class="hooks-reference">';
         foreach ($hook_list as $heading => $hooks) {
             $output .= '<h2 id="hooks-' . str_replace(' ', '-', strtolower($heading)) . '">' . $heading . '</h2>';
             $output .= '<dl class="phpdocumentor-table-of-contents">';
             foreach ($hooks as $hook => $details) {
-                $output .= '<dt class="phpdocumentor-table-of-contents__entry -' . $details['type'] . '">';
-                $output .= $hook;
-                $output .= '</dt>';
-                $output .= '<dd>';
-
+                $output .= '<dt class="phpdocumentor-table-of-contents__entry -' . $details['type'] . '">' . $hook . '</dt>';
                 $link_list = [];
                 foreach ($details['files'] as $file) {
                     $link_list[] = self::getFileLink($file);
                 }
-                $output .= implode(', ', $link_list);
-                $output .= '</dd>';
+                $output .= '<dd>' . implode(', ', $link_list) . '</dd>';
             }
             $output .= '</dl>';
         }
