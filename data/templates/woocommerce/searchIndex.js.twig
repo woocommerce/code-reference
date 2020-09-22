@@ -1,0 +1,8 @@
+var searchIndex = [
+    {% for element in project.indexes.elements %}{
+        fqsen: "{{ element.fullyQualifiedStructuralElementName|e('js') }}",
+        name: "{{ element.name|e('js') }}",
+        summary: "{{ element.summary|e('js') }}",
+        url: "{{ link(element)|replace({'../': 'https://woocommerce.github.io/code-reference/'}) }}"
+    }{% if not loop.last %},{% endif %}{% endfor %}
+];

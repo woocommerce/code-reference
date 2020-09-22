@@ -4,19 +4,8 @@ var form        = document.querySelector('.phpdocumentor-search'),
 // Init autoComplete.
 var autoCompletejs = new autoComplete({
     data: {
-        src: async function() {
-            // Add loading message.
-            searchField.setAttribute('placeholder', 'Loading...');
-
-            // Fetch data.
-            var source = await fetch(searchParams.searchIndex),
-                data   = await source.json();
-
-            searchField.setAttribute('placeholder', 'Search');
-
-            return data;
-        },
-        key: ['name'],
+        src: searchIndex,
+        key: ['name', 'fqsen'],
         cache: false
     },
     sort: function(a, b) {
@@ -56,7 +45,7 @@ var autoCompletejs = new autoComplete({
         var result = document.createElement('li');
         result.setAttribute('class', 'no-result');
         result.setAttribute('tabindex', '1');
-        result.innerHTML = 'No results were found. Try a different search term.';
+        result.innerHTML = 'No results were found. Please try a different search term.';
         document.querySelector('#autoComplete_list').appendChild(result);
     }
 });
