@@ -22,6 +22,7 @@ Options:
                                          deploy commit's message.
         --build-only                Only build but not push.
         --push-only                 Only push but not build.
+        --no-download               Skip download.
 "
 
 banner="\
@@ -85,6 +86,9 @@ parse_args() {
         elif [[ $1 = "--push-only" ]]; then
             push_only=true
             shift
+        elif [[ $1 = "--no-download" ]]; then
+            run_download=false
+            shift
         else
             break
         fi
@@ -106,6 +110,10 @@ parse_args() {
 
     if [[ -z $default_package ]]; then
         default_package="WooCommerce"
+    fi
+
+    if [[ -z $run_download ]]; then
+        run_download=true
     fi
 
     # Set internal option vars from the environment and arg flags. All internal
@@ -156,7 +164,9 @@ download_source() {
 }
 
 run_build() {
-    download_source
+    if $run_download; then
+        download_source
+    fi
     echo
     output 2 "Generating API docs..."
     echo
