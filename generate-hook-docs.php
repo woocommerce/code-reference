@@ -25,13 +25,18 @@ class HookDocsGenerator
      */
     protected const SEARCH_INDEX_PATH = 'build/api/js/searchIndex.js';
 
-    protected static $current_file           = '';
-    protected static $files_to_scan          = [];
-    protected static $pattern_custom_actions = '/do_action(.*?);/i';
-    protected static $pattern_custom_filters = '/apply_filters(.*?);/i';
-    protected static $found_files            = [];
-    protected static $custom_hooks_found     = '';
+    /**
+     * List of files found.
+     *
+     * @var array
+     */
+    protected static $found_files = [];
 
+    /**
+     * Get files to scan.
+     *
+     * @return array
+     */
     protected static function getFilesToScan(): array
     {
         $files = [];
@@ -80,9 +85,16 @@ class HookDocsGenerator
         return '<a href="../files/' . self::getFileURL($file) . '">' . basename($file['path']) . '</a>';
     }
 
+    /**
+     * Get files.
+     *
+     * @param string $pattern Search pattern.
+     * @param int    $flags   Glob flags.
+     * @param string $path    Directory path.
+     * @return array
+     */
     protected static function getFiles($pattern, $flags = 0, $path = '')
     {
-
         if (! $path && ( $dir = dirname($pattern) ) != '.') {
             if ('\\' == $dir || '/' == $dir) {
                 $dir = '';
@@ -114,6 +126,12 @@ class HookDocsGenerator
         return $files;
     }
 
+    /**
+     * Get hooks.
+     *
+     * @param array $files_to_scan Files to scan.
+     * @return array
+     */
     protected static function getHooks(array $files_to_scan): array
     {
         $scanned = [];
@@ -294,7 +312,10 @@ class HookDocsGenerator
         return $output;
     }
 
-    public static function processHooks()
+    /**
+     * Apply changes to build/.
+     */
+    public static function applyChanges()
     {
         $files_to_scan = self::getFilesToScan();
         $hook_list     = self::getHooks($files_to_scan);
@@ -323,4 +344,4 @@ class HookDocsGenerator
     }
 }
 
-HookDocsGenerator::processHooks();
+HookDocsGenerator::applyChanges();
