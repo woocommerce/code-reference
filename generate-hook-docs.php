@@ -297,15 +297,21 @@ class HookDocsGenerator
             return;
         }
 
-        $output   = self::getDelimitedListOutput($hook_list, $files_to_scan);
-        $template = file_get_contents(self::HOOKS_TEMPLATE_PATH);
-        $template = str_replace('<!-- hooks -->', $output, $template);
-        file_put_contents(self::HOOKS_TEMPLATE_PATH, $template);
+        // Add hooks reference content.
+        if (file_exists(self::HOOKS_TEMPLATE_PATH)) {
+            $output   = self::getDelimitedListOutput($hook_list, $files_to_scan);
+            $template = file_get_contents(self::HOOKS_TEMPLATE_PATH);
+            $template = str_replace('<!-- hooks -->', $output, $template);
+            file_put_contents(self::HOOKS_TEMPLATE_PATH, $template);
+        }
 
-        $output   = self::getJSOutput($hook_list);
-        $template = file_get_contents(self::SEARCH_INDEX_PATH);
-        $template = str_replace('}];', '}' . $output . '];', $template);
-        file_put_contents(self::SEARCH_INDEX_PATH, $template);
+        // Add hooks to search index.
+        if (file_exists(self::SEARCH_INDEX_PATH)) {
+            $output   = self::getJSOutput($hook_list);
+            $template = file_get_contents(self::SEARCH_INDEX_PATH);
+            $template = str_replace('}];', '}' . $output . '];', $template);
+            file_put_contents(self::SEARCH_INDEX_PATH, $template);
+        }
 
         echo "Hook docs generated :)\n";
     }

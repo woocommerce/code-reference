@@ -161,6 +161,7 @@ run_build() {
     output 2 "Generating API docs..."
     echo
     ./vendor/bin/phpdoc run --template="data/templates/${project_name}" --setting=graphs.enabled=true --sourcecode --defaultpackagename=${default_package}
+    php generate-hook-docs.php
 }
 
 main() {
