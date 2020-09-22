@@ -276,12 +276,18 @@ class HookDocsGenerator
 
         foreach ($hook_list as $heading => $hooks) {
             foreach ($hooks as $hook => $details) {
-                $output .= ',{';
-                $output .= 'fqsen: "",';
-                $output .= 'name: "' . $hook . '",';
-                $output .= 'summary: "' . $heading . ' ' . (('filter' === $details['type']) ? 'Filter' : 'Action') . '",';
-                $output .= 'url: "' . str_replace('../', 'https://woocommerce.github.io/code-reference/', self::getFileURL($details['files'][0])) . '"';
-                $output .= '}';
+                $summary = $heading . ' ' . (('filter' === $details['type']) ? 'Filter' : 'Action');
+
+                foreach ($details['files'] as $file) {
+                    $summary .= ' located in ' . str_replace('woocommerce/', '', $file['path']) . ': ' . $file['line'];
+
+                    $output .= ',{';
+                    $output .= 'fqsen: "",';
+                    $output .= 'name: "' . $hook . '",';
+                    $output .= 'summary: "' . $summary . '",';
+                    $output .= 'url: "' . str_replace('../', 'https://woocommerce.github.io/code-reference/', self::getFileURL($file)) . '"';
+                    $output .= '}';
+                }
             }
         }
 
