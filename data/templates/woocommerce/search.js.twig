@@ -39,7 +39,9 @@ var autoCompletejs = new autoComplete({
                 fqsen = 'fqsen' === data.key ? data.match : data.value.fqsen;
 
             source.innerHTML += '<a href="' + data.value.url + '">' + name + "</a>\n";
-            source.innerHTML += '<small>' + fqsen + "</small>\n";
+            if (fqsen){
+                source.innerHTML += '<small>' + fqsen + "</small>\n";
+            }
             source.innerHTML += '<span class="phpdocumentor-summary">' + data.value.summary + '</span>';
         },
         element: 'li'

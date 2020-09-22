@@ -16,9 +16,14 @@ class HookDocsGenerator
     protected const SOURCE_PATH = 'woocommerce/';
 
     /**
-     * Template path.
+     * Hooks template path.
      */
-    protected const TEMPLATE_PATH = 'build/api/hooks/hooks.html';
+    protected const HOOKS_TEMPLATE_PATH = 'build/api/hooks/hooks.html';
+
+    /**
+     * Search index path.
+     */
+    protected const SEARCH_INDEX_PATH = 'build/api/js/searchIndex.js';
 
     protected static $current_file           = '';
     protected static $files_to_scan          = [];
@@ -51,6 +56,20 @@ class HookDocsGenerator
     }
 
     /**
+     * Get file URL.
+     *
+     * @param array $file File data.
+     * @return string
+     */
+    protected static function getFileURL(array $file): string
+    {
+        $url = str_replace('.php', '.html#source-view.' . $file['line'], $file['path']);
+        $url = str_replace(['_', '/'], '-', $url);
+
+        return '../files/' . $url;
+    }
+
+    /**
      * Get file link.
      *
      * @param array $file File data.
@@ -58,9 +77,7 @@ class HookDocsGenerator
      */
     protected static function getFileLink(array $file): string
     {
-        $link = str_replace('.php', '.html#source-view.' . $file['line'], $file['path']);
-        $link = str_replace(['_', '/'], '-', $link);
-        return '<a href="../files/' . $link . '">' . basename($file['path']) . '</a>';
+        return '<a href="../files/' . self::getFileURL($file) . '">' . basename($file['path']) . '</a>';
     }
 
     protected static function getFiles($pattern, $flags = 0, $path = '')
@@ -209,14 +226,15 @@ class HookDocsGenerator
         return $results;
     }
 
-    public static function processHooks()
+    /**
+     * Get delimited list output.
+     *
+     * @param array $hook_list List of hooks.
+     * @param array $files_to_scan List of files to scan.
+     * @param string
+     */
+    protected static function getDelimitedListOutput(array $hook_list, array $files_to_scan): string
     {
-        $files_to_scan = self::getFilesToScan();
-        $hook_list = self::getHooks($files_to_scan);
-        if (empty($hook_list)) {
-            return;
-        }
-
         $output = '';
 
         $index = [];
@@ -243,9 +261,52 @@ class HookDocsGenerator
 
         $output .= '</div>';
 
-        $template = file_get_contents(self::TEMPLATE_PATH);
+        return $output;
+    }
+
+    /**
+     * Get JS output.
+     *
+     * @param array $hook_list List of hooks.
+     * @param string
+     */
+    protected static function getJSOutput(array $hook_list): string
+    {
+        $output = '';
+
+        foreach ($hook_list as $heading => $hooks) {
+            foreach ($hooks as $hook => $details) {
+                $output .= ',{';
+                $output .= 'fqsen: "",';
+                $output .= 'name: "' . $hook . '",';
+                $output .= 'summary: "' . $heading . ' ' . (('filter' === $details['type']) ? 'Filter' : 'Action') . '",';
+                $output .= 'url: "' . str_replace('../', 'https://woocommerce.github.io/code-reference/', self::getFileURL($details['files'][0])) . '"';
+                $output .= '}';
+            }
+        }
+
+        return $output;
+    }
+
+    public static function processHooks()
+    {
+        $files_to_scan = self::getFilesToScan();
+        $hook_list     = self::getHooks($files_to_scan);
+
+        if (empty($hook_list)) {
+            return;
+        }
+
+        $output   = self::getDelimitedListOutput($hook_list, $files_to_scan);
+        $template = file_get_contents(self::HOOKS_TEMPLATE_PATH);
         $template = str_replace('<!-- hooks -->', $output, $template);
-        file_put_contents(self::TEMPLATE_PATH, $template);
+        file_put_contents(self::HOOKS_TEMPLATE_PATH, $template);
+
+        $output   = self::getJSOutput($hook_list);
+        $template = file_get_contents(self::SEARCH_INDEX_PATH);
+        $template = str_replace('}];', '}' . $output . '];', $template);
+        file_put_contents(self::SEARCH_INDEX_PATH, $template);
+
         echo "Hook docs generated :)\n";
     }
 }
