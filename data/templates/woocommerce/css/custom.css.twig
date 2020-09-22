@@ -1,77 +1,3 @@
-:root {
-    /* Typography */
-    --font-primary: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-    --font-secondary: "proxima-nova",sans-serif;
-    --line-height--primary: 1.6;
-    --letter-spacing--primary: .05rem;
-    --text-base-size: 1em;
-    --text-scale-ratio: 1.2;
-
-    --text-xxs: calc(var(--text-base-size) / var(--text-scale-ratio) / var(--text-scale-ratio) / var(--text-scale-ratio));
-    --text-xs: calc(var(--text-base-size) / var(--text-scale-ratio) / var(--text-scale-ratio));
-    --text-sm: calc(var(--text-base-size) / var(--text-scale-ratio));
-    --text-md: var(--text-base-size);
-    --text-lg: calc(var(--text-base-size) * var(--text-scale-ratio));
-    --text-xl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --text-xxl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --text-xxxl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --text-xxxxl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --text-xxxxxl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-
-    /* Colors */
-    --primary-color: hsl(267, 38%, 52%);
-    --primary-color-darken: #7f54b3;
-    --primary-color-darker: #301650;
-    --primary-color-lighten: hsl(267, 57%, 80%);
-    --primary-color-lighter: hsl(267, 57%, 97%);
-
-    --text-color: #333;
-
-    --top-header-bg-color: #fff;
-    --top-header-text-color: var(--text-color);
-    --header-bg-color: var(--primary-color);
-    --code-background-color: #eaf2f9;
-    --code-border-color: #c1d9ef;
-    --button-border-color: var(--primary-color-darken);
-    --button-color: transparent;
-    --button-color-primary: var(--primary-color);
-    --button-text-color: #555;
-    --button-text-color-primary: white;
-    --popover-background-color: #f7f7f7;
-    --link-color-primary: var(--primary-color-darken);
-    --link-hover-color-primary: var(--primary-color-darker);
-    --form-field-border-color: #d1d1d1;
-    --form-field-color: #fff;
-    --admonition-success-color: var(--primary-color);
-    --admonition-border-color: silver;
-    --table-separator-color: var(--primary-color-lighten);
-    --title-text-color: white;
-    --title-text-shadow-color: var(--primary-color-darker);
-
-    /* Grid */
-    --container-width: 1400px;
-    --top-header-height: calc(var(--text-lg) + 2 * var(--spacing-sm));
-
-    /* Spacing */
-    --spacing-base-size: 1rem;
-    --spacing-scale-ratio: 1.5;
-
-    --spacing-xxxs: calc(var(--spacing-base-size) / var(--spacing-scale-ratio) / var(--spacing-scale-ratio) / var(--spacing-scale-ratio) / var(--spacing-scale-ratio));
-    --spacing-xxs: calc(var(--spacing-base-size) / var(--spacing-scale-ratio) / var(--spacing-scale-ratio) / var(--spacing-scale-ratio));
-    --spacing-xs: calc(var(--spacing-base-size) / var(--spacing-scale-ratio) / var(--spacing-scale-ratio));
-    --spacing-sm: calc(var(--spacing-base-size) / var(--spacing-scale-ratio));
-    --spacing-md: var(--spacing-base-size);
-    --spacing-lg: calc(var(--spacing-base-size) * var(--spacing-scale-ratio));
-    --spacing-xl: calc(var(--spacing-base-size) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
-    --spacing-xxl: calc(var(--spacing-base-size) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
-    --spacing-xxxl: calc(var(--spacing-base-size) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
-
-    --border-radius-base-size: 3px;
-}
-
-/* Prism */
-{% include 'css/prism.css.twig' %}
-
 /* Elements */
 abbr[title] {
     border: none;
@@ -183,29 +109,21 @@ abbr[title] {
 }
 
 /* Search */
-.phpdocumentor-search-results {
-    backdrop-filter: blur(5px);
-    background: var(--popover-background-color);
-    min-height: 100%;
-    left: calc(var(--spacing-lg) * -1);
-    position: absolute;
-    padding: 0 var(--spacing-lg);
-    opacity: 1;
-    pointer-events: all;
-    transition: opacity .3s, background .3s;
-    z-index: 1000;
-}
-
-.phpdocumentor-search-results--hidden {
-    background: transparent;
-    backdrop-filter: blur(0);
-    opacity: 0;
-    pointer-events: none;
-}
-
 .phpdocumentor-search-results__entries {
+    background: var(--popover-background-color);
+    left: 0;
     list-style: none;
-    padding: 0;
+    margin: 0 auto;
+    max-height: 30rem;
+    opacity: 1;
+    overflow-x: auto;
+    padding: 0 var(--spacing-lg);
+    pointer-events: all;
+    position: absolute;
+    right: 0;
+    transition: all 0.1s ease-in-out;
+    width: 75%;
+    z-index: 1000;
 }
 
 .phpdocumentor-search-results__entry {
@@ -217,6 +135,7 @@ abbr[title] {
 .phpdocumentor-search-results__entry a {
     color: var(--link-color-primary);
     display: block;
+    text-decoration: none;
 }
 
 .phpdocumentor-search-results__entry a:hover {
@@ -229,9 +148,15 @@ abbr[title] {
     color: var(--primary-color-darker);
     display: block;
 }
+
 .phpdocumentor-search-results__entry h3 {
+    font-weight: normal;
     line-break: anywhere;
     margin: 0;
+}
+
+.phpdocumentor-search-results__entry:last-child {
+    border-bottom: none;
 }
 
 .phpdocumentor-search {
@@ -253,6 +178,11 @@ abbr[title] {
     transition: opacity .3s, background .3s;
 }
 
+.phpdocumentor-search .phpdocumentor-label {
+    display: block;
+    margin-bottom: var(--spacing-md);
+}
+
 .phpdocumentor-search--enabled {
     display: block;
 }
@@ -266,7 +196,7 @@ abbr[title] {
 }
 
 .phpdocumentor-search input:disabled {
-    background-color: lightgray;
+    background-color: #d3d3d3;
 }
 
 .phpdocumentor-search__field {
@@ -279,10 +209,22 @@ abbr[title] {
     padding-left: 45px;
     width: 80%;
     height: 50px;
+    margin-bottom: 0;
 }
 
 .phpdocumentor-search__field:focus {
     border: none;
+}
+
+.autoComplete_highlighted {
+    opacity: 1;
+    color: var(--primary-color-darker);
+    font-weight: bold;
+}
+
+.autoComplete_highlighted::selection {
+    color: rgba(#ffffff, 0);
+    background-color: rgba(#ffffff, 0);
 }
 
 /* Footer */
