@@ -18,8 +18,6 @@
     <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.js"></script>
-
-    {# <script defer src="{{ path('js/searchIndex.js') }}"></script> #}
     {% block javascripts %}
     {% endblock %}
 </head>
@@ -47,7 +45,7 @@
             'searchIndex': '{{ path('js/searchIndex.json')|e('js') }}'
         };
     </script>
-    <script src="{{ path('js/searchIndex.js') }}"></script>
-    <script src="{{ path('js/search.js') }}"></script>
+    <script src="{{ path('js/searchIndex.js') }}?updated={{ "now"|date('U') }}"></script>
+    <script src="{{ path('js/search.js') }}?updated={{ "now"|date('U') }}"></script>
 </body>
 </html>
