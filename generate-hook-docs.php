@@ -294,8 +294,9 @@ class HookDocsGenerator
 
         foreach ($hook_list as $heading => $hooks) {
             foreach ($hooks as $hook => $details) {
-                $summary = $heading . ' ' . (('filter' === $details['type']) ? 'Filter' : 'Action');
-                $name    = $hook . ' ' . $details['type'];
+                $type    = 'filter' === $details['type'] ? 'Filter' : 'Action';
+                $summary = $heading . ' ' . $type;
+                $name    = '<strong>' . $type . ' hook: <\/strong>' . $hook;
 
                 foreach ($details['files'] as $file) {
                     $summary .= ' located in ' . str_replace('woocommerce/', '', $file['path']) . ': ' . $file['line'];
