@@ -5,24 +5,15 @@ var form        = document.querySelector('.phpdocumentor-search'),
 var autoCompletejs = new autoComplete({
     data: {
         src: searchIndex,
-        key: ['name', 'fqsen'],
-        cache: false
-    },
-    sort: function(a, b) {
-        if (a.match < b.match) {
-            return -1;
-        }
-        if (a.match > b.match) {
-            return 1;
-        }
-        return 0;
+        key: ['name'],
+        cache: true
     },
     placeHolder: 'Search',
     selector: '#autoComplete',
     highlight: true,
     threshold: 1,
-    searchEngine: 'loose',
-    maxResults: 20,
+    searchEngine: 'strict',
+    maxResults: 100,
     resultsList: {
         render: true,
         container: function(source) {
