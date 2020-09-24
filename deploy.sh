@@ -13,6 +13,8 @@ Options:
     -s, --source-version <VERSION>  Source version to build and deploy.
     -r, --github-repo <GITHUB_REPO> GitHub repo with username,
                                          default to \"woocommerce/woocommerce\".
+    -p, --default-package <NAME>     Default package name,
+                                         default to \"WooCommerce\".
     -e, --allow-empty               Allow deployment of an empty directory.
     -m, --message <MESSAGE>         Specify the message used when committing on
                                          the deploy branch.
@@ -20,6 +22,7 @@ Options:
                                          deploy commit's message.
         --build-only                Only build but not push.
         --push-only                 Only push but not build.
+        --no-download               Skip download.
 "
 
 banner="\
@@ -65,6 +68,9 @@ parse_args() {
         elif [[ $1 = "-r" || $1 = "--github-repo" ]]; then
             github_repo=$2
             shift 2
+        elif [[ $1 = "-p" || $1 = "--default-package" ]]; then
+            default_package=$2
+            shift 2
         elif [[ $1 = "-e" || $1 = "--allow-empty" ]]; then
             allow_empty=true
             shift
@@ -79,6 +85,9 @@ parse_args() {
             shift
         elif [[ $1 = "--push-only" ]]; then
             push_only=true
+            shift
+        elif [[ $1 = "--no-download" ]]; then
+            run_download=false
             shift
         else
             break
@@ -97,6 +106,14 @@ parse_args() {
 
     if [[ -z $github_repo ]]; then
         github_repo="woocommerce/woocommerce"
+    fi
+
+    if [[ -z $default_package ]]; then
+        default_package="WooCommerce"
+    fi
+
+    if [[ -z $run_download ]]; then
+        run_download=true
     fi
 
     # Set internal option vars from the environment and arg flags. All internal
@@ -121,8 +138,7 @@ parse_args() {
 download_source() {
     # Bootstrap
     rm -f ./${project_name}.zip
-    rm -rf ./build ./${project_name}
-    mkdir -p ./build
+    rm -rf ./${project_name}
 
     # Install dependencies
     if [ ! -f "vendor/bin/phpdoc" ]; then
@@ -147,11 +163,17 @@ download_source() {
 }
 
 run_build() {
-    download_source
+    rm -rf ./build
+    mkdir -p ./build
+
+    if $run_download; then
+        download_source
+    fi
     echo
     output 2 "Generating API docs..."
     echo
-    ./vendor/bin/phpdoc run --template="data/templates/${project_name}" --setting=graphs.enabled=true
+    ./vendor/bin/phpdoc run --template="data/templates/${project_name}" --sourcecode --defaultpackagename=${default_package}
+    php generate-hook-docs.php
 }
 
 main() {
