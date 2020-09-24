@@ -28,6 +28,7 @@ cd code-reference
 | `-n` or `--no-hash`                                 | Don't append the source commit's hash to the deploy commit's message. |
 | `--build-only`                                      | Only build but not push.                                              |
 | `--push-only`                                       | Only push but not build.                                              |
+| `--no-download`                                     | Skip zip download in case there's on in the project's root.           |
 
 ## Changelog
 
