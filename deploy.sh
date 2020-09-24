@@ -22,7 +22,8 @@ Options:
                                          deploy commit's message.
         --build-only                Only build but not push.
         --push-only                 Only push but not build.
-        --no-download               Skip download.
+        --no-download               Skip zip download in case there's on in the
+                                         project's root.
 "
 
 banner="\
