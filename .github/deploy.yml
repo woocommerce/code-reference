@@ -1,0 +1,37 @@
+name: GitHub Pages deploy
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'WooCommerce Version'
+        required: true
+
+jobs:
+  build-and-deploy:
+    runs-on: [ubuntu-latest]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Cache Composer dependencies
+      uses: actions/cache@v2
+      with:
+        path: /tmp/composer-cache
+        key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+
+    - name: Install dependencies
+      uses: php-actions/composer@v5
+
+    - name: Build
+      run: |
+        ./deploy.sh --build-only -s ${{ github.event.inputs.version }}
+
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        target_branch: gh-pages
+        build_dir: build/api
