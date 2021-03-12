@@ -14,16 +14,25 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Cache Composer dependencies
+    - name: Setup PHP with composer v2
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+        tools: composer:v2
+
+    - name: Get composer cache directory
+      id: composer-cache
+      run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+    - name: Cache dependencies
       uses: actions/cache@v2
       with:
-        path: /tmp/composer-cache
-        key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+        path: ${{ steps.composer-cache.outputs.dir }}
+        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+        restore-keys: ${{ runner.os }}-composer-
 
     - name: Install dependencies
-      uses: php-actions/composer@v5
-      with:
-        php_version: 7.4
+      run: composer install --prefer-dist
 
     - name: Build
       run: |
