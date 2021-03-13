@@ -5,39 +5,31 @@ on:
       version:
         description: 'WooCommerce Version'
         required: true
-
 jobs:
   build-and-deploy:
     runs-on: [ubuntu-latest]
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
     - name: Setup PHP with composer v2
       uses: shivammathur/setup-php@v2
       with:
         php-version: '7.4'
         tools: composer:v2
-
     - name: Get composer cache directory
       id: composer-cache
       run: echo "::set-output name=dir::$(composer config cache-files-dir)"
-
     - name: Cache dependencies
       uses: actions/cache@v2
       with:
         path: ${{ steps.composer-cache.outputs.dir }}
         key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
         restore-keys: ${{ runner.os }}-composer-
-
     - name: Install dependencies
       run: composer install --prefer-dist
-
     - name: Build
       run: |
         ./deploy.sh --build-only -s ${{ github.event.inputs.version }}
-
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v2
