@@ -1,0 +1,2587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866945">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866945">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">abstract-wc-order.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Abstract Order
+ *
+ * Handles generic order data and database interaction which is extended by both
+ * WC_Order (regular orders) and WC_Order_Refund (refunds are negative orders).
+ *
+ * @class       WC_Abstract_Order
+ * @version     3.0.0
+ * @package     WooCommerce\Classes
+ */
+
+use Automattic\WooCommerce\Caches\OrderCache;
+use Automattic\WooCommerce\Proxies\LegacyProxy;
+use Automattic\WooCommerce\Utilities\ArrayUtil;
+use Automattic\WooCommerce\Utilities\NumberUtil;
+use Automattic\WooCommerce\Utilities\OrderUtil;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+require_once WC_ABSPATH . &#039;includes/legacy/abstract-wc-legacy-order.php&#039;;
+
+/**
+ * WC_Abstract_Order class.
+ */
+abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
+	use WC_Item_Totals;
+
+	/**
+	 * Order Data array. This is the core order data exposed in APIs since 3.0.0.
+	 *
+	 * Notes: cart_tax = cart_tax is the new name for the legacy &#039;order_tax&#039;
+	 * which is the tax for items only, not shipping.
+	 *
+	 * @since 3.0.0
+	 * @var array
+	 */
+	protected $data = array(
+		&#039;parent_id&#039;          =&gt; 0,
+		&#039;status&#039;             =&gt; &#039;&#039;,
+		&#039;currency&#039;           =&gt; &#039;&#039;,
+		&#039;version&#039;            =&gt; &#039;&#039;,
+		&#039;prices_include_tax&#039; =&gt; false,
+		&#039;date_created&#039;       =&gt; null,
+		&#039;date_modified&#039;      =&gt; null,
+		&#039;discount_total&#039;     =&gt; 0,
+		&#039;discount_tax&#039;       =&gt; 0,
+		&#039;shipping_total&#039;     =&gt; 0,
+		&#039;shipping_tax&#039;       =&gt; 0,
+		&#039;cart_tax&#039;           =&gt; 0,
+		&#039;total&#039;              =&gt; 0,
+		&#039;total_tax&#039;          =&gt; 0,
+	);
+
+	/**
+	 * List of properties that were earlier managed by data store. However, since DataStore is a not a stored entity in itself, they used to store data in metadata of the data object.
+	 * With custom tables, some of these are moved from metadata to their own columns, but existing code will still try to add them to metadata. This array is used to keep track of such properties.
+	 *
+	 * Only reason to add a property here is that you are moving properties from DataStore instance to data object. If you are adding a new property, consider adding it to to $data array instead.
+	 *
+	 * @var array
+	 */
+	protected $legacy_datastore_props = array(
+		&#039;_recorded_coupon_usage_counts&#039;,
+	);
+
+	/**
+	 * Order items will be stored here, sometimes before they persist in the DB.
+	 *
+	 * @since 3.0.0
+	 * @var array
+	 */
+	protected $items = array();
+
+	/**
+	 * Order items that need deleting are stored here.
+	 *
+	 * @since 3.0.0
+	 * @var array
+	 */
+	protected $items_to_delete = array();
+
+	/**
+	 * Stores meta in cache for future reads.
+	 *
+	 * A group must be set to to enable caching.
+	 *
+	 * @var string
+	 */
+	protected $cache_group = &#039;orders&#039;;
+
+	/**
+	 * Which data store to load.
+	 *
+	 * @var string
+	 */
+	protected $data_store_name = &#039;order&#039;;
+
+	/**
+	 * This is the name of this object type.
+	 *
+	 * @var string
+	 */
+	protected $object_type = &#039;order&#039;;
+
+	/**
+	 * Get the order if ID is passed, otherwise the order is new and empty.
+	 * This class should NOT be instantiated, but the wc_get_order function or new WC_Order_Factory
+	 * should be used. It is possible, but the aforementioned are preferred and are the only
+	 * methods that will be maintained going forward.
+	 *
+	 * @param  int|object|WC_Order $order Order to read.
+	 */
+	public function __construct( $order = 0 ) {
+		parent::__construct( $order );
+
+		if ( is_numeric( $order ) &amp;&amp; $order &gt; 0 ) {
+			$this-&gt;set_id( $order );
+		} elseif ( $order instanceof self ) {
+			$this-&gt;set_id( $order-&gt;get_id() );
+		} elseif ( ! empty( $order-&gt;ID ) ) {
+			$this-&gt;set_id( $order-&gt;ID );
+		} else {
+			$this-&gt;set_object_read( true );
+		}
+
+		$this-&gt;data_store = WC_Data_Store::load( $this-&gt;data_store_name );
+
+		if ( $this-&gt;get_id() &gt; 0 ) {
+			$this-&gt;data_store-&gt;read( $this );
+		}
+	}
+
+	/**
+	 * This method overwrites the base class&#039;s clone method to make it a no-op. In base class WC_Data, we are unsetting the meta_id to clone.
+	 * It seems like this was done to avoid conflicting the metadata when duplicating products. However, doing that does not seems necessary for orders.
+	 * In-fact, when we do that for orders, we lose the capability to clone orders with custom meta data by caching plugins. This is because, when we clone an order object for caching, it will clone the metadata without the ID. Unfortunately, when this cached object with nulled meta ID is retrieved, WC_Data will consider it as a new meta and will insert it as a new meta-data causing duplicates.
+	 *
+	 * Eventually, we should move away from overwriting the __clone method in base class itself, since it&#039;s easily possible to still duplicate the product without having to hook into the __clone method.
+	 *
+	 * @since 7.6.0
+	 */
+	public function __clone() {}
+
+	/**
+	 * Get internal type.
+	 *
+	 * @return string
+	 */
+	public function get_type() {
+		return &#039;shop_order&#039;;
+	}
+
+	/**
+	 * Get all class data in array format.
+	 *
+	 * @since 3.0.0
+	 * @return array
+	 */
+	public function get_data() {
+		return array_merge(
+			array(
+				&#039;id&#039; =&gt; $this-&gt;get_id(),
+			),
+			$this-&gt;data,
+			array(
+				&#039;meta_data&#039;      =&gt; $this-&gt;get_meta_data(),
+				&#039;line_items&#039;     =&gt; $this-&gt;get_items( &#039;line_item&#039; ),
+				&#039;tax_lines&#039;      =&gt; $this-&gt;get_items( &#039;tax&#039; ),
+				&#039;shipping_lines&#039; =&gt; $this-&gt;get_items( &#039;shipping&#039; ),
+				&#039;fee_lines&#039;      =&gt; $this-&gt;get_items( &#039;fee&#039; ),
+				&#039;coupon_lines&#039;   =&gt; $this-&gt;get_items( &#039;coupon&#039; ),
+			)
+		);
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| CRUD methods
+	|--------------------------------------------------------------------------
+	|
+	| Methods which create, read, update and delete orders from the database.
+	| Written in abstract fashion so that the way orders are stored can be
+	| changed more easily in the future.
+	|
+	| A save method is included for convenience (chooses update or create based
+	| on if the order exists yet).
+	|
+	*/
+
+	/**
+	 * Save data to the database.
+	 *
+	 * @since 3.0.0
+	 * @return int order ID
+	 */
+	public function save() {
+		if ( ! $this-&gt;data_store ) {
+			return $this-&gt;get_id();
+		}
+
+		try {
+			/**
+			 * Trigger action before saving to the DB. Allows you to adjust object props before save.
+			 *
+			 * @param WC_Data          $this The object being saved.
+			 * @param WC_Data_Store_WP $data_store THe data store persisting the data.
+			 */
+			do_action( &#039;woocommerce_before_&#039; . $this-&gt;object_type . &#039;_object_save&#039;, $this, $this-&gt;data_store );
+
+			if ( $this-&gt;get_id() ) {
+				$this-&gt;data_store-&gt;update( $this );
+			} else {
+				$this-&gt;data_store-&gt;create( $this );
+			}
+
+			$this-&gt;save_items();
+
+			if ( OrderUtil::orders_cache_usage_is_enabled() ) {
+				$order_cache = wc_get_container()-&gt;get( OrderCache::class );
+				$order_cache-&gt;remove( $this-&gt;get_id() );
+			}
+
+			/**
+			 * Trigger action after saving to the DB.
+			 *
+			 * @param WC_Data          $this The object being saved.
+			 * @param WC_Data_Store_WP $data_store THe data store persisting the data.
+			 */
+			do_action( &#039;woocommerce_after_&#039; . $this-&gt;object_type . &#039;_object_save&#039;, $this, $this-&gt;data_store );
+
+		} catch ( Exception $e ) {
+			$message_id = $this-&gt;get_id() ? $this-&gt;get_id() : __( &#039;(no ID)&#039;, &#039;woocommerce&#039; );
+			$this-&gt;handle_exception(
+				$e,
+				wp_kses_post(
+					sprintf(
+						/* translators: 1: Order ID or &quot;(no ID)&quot; if not known. */
+						__( &#039;Error saving order ID %1$s.&#039;, &#039;woocommerce&#039; ),
+						$message_id
+					)
+				)
+			);
+		}
+
+		return $this-&gt;get_id();
+	}
+
+	/**
+	 * Log an error about this order is exception is encountered.
+	 *
+	 * @param Exception $e Exception object.
+	 * @param string    $message Message regarding exception thrown.
+	 * @since 3.7.0
+	 */
+	protected function handle_exception( $e, $message = &#039;Error&#039; ) {
+		wc_get_logger()-&gt;error(
+			$message,
+			array(
+				&#039;order&#039; =&gt; $this,
+				&#039;error&#039; =&gt; $e,
+			)
+		);
+	}
+
+	/**
+	 * Save all order items which are part of this order.
+	 */
+	protected function save_items() {
+		$items_changed = false;
+
+		foreach ( $this-&gt;items_to_delete as $item ) {
+			$item-&gt;delete();
+			$items_changed = true;
+		}
+		$this-&gt;items_to_delete = array();
+
+		// Add/save items.
+		foreach ( $this-&gt;items as $item_group =&gt; $items ) {
+			if ( is_array( $items ) ) {
+				$items = array_filter( $items );
+				foreach ( $items as $item_key =&gt; $item ) {
+					$item-&gt;set_order_id( $this-&gt;get_id() );
+
+					$item_id = $item-&gt;save();
+
+					// If ID changed (new item saved to DB)...
+					if ( $item_id !== $item_key ) {
+						$this-&gt;items[ $item_group ][ $item_id ] = $item;
+
+						unset( $this-&gt;items[ $item_group ][ $item_key ] );
+
+						$items_changed = true;
+					}
+				}
+			}
+		}
+
+		if ( $items_changed ) {
+			delete_transient( &#039;wc_order_&#039; . $this-&gt;get_id() . &#039;_needs_processing&#039; );
+		}
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Getters
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Get parent order ID.
+	 *
+	 * @since 3.0.0
+	 * @param  string $context View or edit context.
+	 * @return integer
+	 */
+	public function get_parent_id( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;parent_id&#039;, $context );
+	}
+
+	/**
+	 * Gets order currency.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return string
+	 */
+	public function get_currency( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;currency&#039;, $context );
+	}
+
+	/**
+	 * Get order_version.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return string
+	 */
+	public function get_version( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;version&#039;, $context );
+	}
+
+	/**
+	 * Get prices_include_tax.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return bool
+	 */
+	public function get_prices_include_tax( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;prices_include_tax&#039;, $context );
+	}
+
+	/**
+	 * Get date_created.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return WC_DateTime|NULL object if the date is set or null if there is no date.
+	 */
+	public function get_date_created( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;date_created&#039;, $context );
+	}
+
+	/**
+	 * Get date_modified.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return WC_DateTime|NULL object if the date is set or null if there is no date.
+	 */
+	public function get_date_modified( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;date_modified&#039;, $context );
+	}
+
+	/**
+	 * Get date_modified.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return WC_DateTime|NULL object if the date is set or null if there is no date.
+	 */
+	public function get_date_paid( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;date_paid&#039;, $context );
+	}
+
+	/**
+	 * Get date_modified.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return WC_DateTime|NULL object if the date is set or null if there is no date.
+	 */
+	public function get_date_completed( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;date_completed&#039;, $context );
+	}
+
+
+	/**
+	 * Return the order statuses without wc- internal prefix.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return string
+	 */
+	public function get_status( $context = &#039;view&#039; ) {
+		$status = $this-&gt;get_prop( &#039;status&#039;, $context );
+
+		if ( empty( $status ) &amp;&amp; &#039;view&#039; === $context ) {
+			// In view context, return the default status if no status has been set.
+			$status = apply_filters( &#039;woocommerce_default_order_status&#039;, &#039;pending&#039; );
+		}
+		return $status;
+	}
+
+	/**
+	 * Get discount_total.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return string
+	 */
+	public function get_discount_total( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;discount_total&#039;, $context );
+	}
+
+	/**
+	 * Get discount_tax.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return string
+	 */
+	public function get_discount_tax( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;discount_tax&#039;, $context );
+	}
+
+	/**
+	 * Get shipping_total.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return string
+	 */
+	public function get_shipping_total( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;shipping_total&#039;, $context );
+	}
+
+	/**
+	 * Get shipping_tax.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return string
+	 */
+	public function get_shipping_tax( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;shipping_tax&#039;, $context );
+	}
+
+	/**
+	 * Gets cart tax amount.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return float
+	 */
+	public function get_cart_tax( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;cart_tax&#039;, $context );
+	}
+
+	/**
+	 * Gets order grand total including taxes, shipping cost, fees, and coupon discounts. Used in gateways.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return float
+	 */
+	public function get_total( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;total&#039;, $context );
+	}
+
+	/**
+	 * Get total tax amount. Alias for get_order_tax().
+	 *
+	 * @param  string $context View or edit context.
+	 * @return float
+	 */
+	public function get_total_tax( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;total_tax&#039;, $context );
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Non-CRUD Getters
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Gets the total discount amount.
+	 *
+	 * @param  bool $ex_tax Show discount excl any tax.
+	 * @return float
+	 */
+	public function get_total_discount( $ex_tax = true ) {
+		if ( $ex_tax ) {
+			$total_discount = (float) $this-&gt;get_discount_total();
+		} else {
+			$total_discount = (float) $this-&gt;get_discount_total() + (float) $this-&gt;get_discount_tax();
+		}
+		return apply_filters( &#039;woocommerce_order_get_total_discount&#039;, NumberUtil::round( $total_discount, WC_ROUNDING_PRECISION ), $this );
+	}
+
+	/**
+	 * Gets order subtotal. Order subtotal is the price of all items excluding taxes, fees, shipping cost, and coupon discounts.
+	 * If sale price is set on an item, the subtotal will include this sale discount. E.g. a product with a regular
+	 * price of $100 bought at a 50% discount will represent $50 of the subtotal for the order.
+	 *
+	 * @return float
+	 */
+	public function get_subtotal() {
+		$subtotal = NumberUtil::round( $this-&gt;get_cart_subtotal_for_order(), wc_get_price_decimals() );
+		return apply_filters( &#039;woocommerce_order_get_subtotal&#039;, (float) $subtotal, $this );
+	}
+
+	/**
+	 * Get taxes, merged by code, formatted ready for output.
+	 *
+	 * @return array
+	 */
+	public function get_tax_totals() {
+		$tax_totals = array();
+
+		foreach ( $this-&gt;get_items( &#039;tax&#039; ) as $key =&gt; $tax ) {
+			$code = $tax-&gt;get_rate_code();
+
+			if ( ! isset( $tax_totals[ $code ] ) ) {
+				$tax_totals[ $code ]         = new stdClass();
+				$tax_totals[ $code ]-&gt;amount = 0;
+			}
+
+			$tax_totals[ $code ]-&gt;id               = $key;
+			$tax_totals[ $code ]-&gt;rate_id          = $tax-&gt;get_rate_id();
+			$tax_totals[ $code ]-&gt;is_compound      = $tax-&gt;is_compound();
+			$tax_totals[ $code ]-&gt;label            = $tax-&gt;get_label();
+			$tax_totals[ $code ]-&gt;amount          += (float) $tax-&gt;get_tax_total() + (float) $tax-&gt;get_shipping_tax_total();
+			$tax_totals[ $code ]-&gt;formatted_amount = wc_price( $tax_totals[ $code ]-&gt;amount, array( &#039;currency&#039; =&gt; $this-&gt;get_currency() ) );
+		}
+
+		if ( apply_filters( &#039;woocommerce_order_hide_zero_taxes&#039;, true ) ) {
+			$amounts    = array_filter( wp_list_pluck( $tax_totals, &#039;amount&#039; ) );
+			$tax_totals = array_intersect_key( $tax_totals, $amounts );
+		}
+
+		return apply_filters( &#039;woocommerce_order_get_tax_totals&#039;, $tax_totals, $this );
+	}
+
+	/**
+	 * Get all valid statuses for this order
+	 *
+	 * @since 3.0.0
+	 * @return array Internal status keys e.g. &#039;wc-processing&#039;
+	 */
+	protected function get_valid_statuses() {
+		return array_keys( wc_get_order_statuses() );
+	}
+
+	/**
+	 * Get user ID. Used by orders, not other order types like refunds.
+	 *
+	 * @param  string $context View or edit context.
+	 * @return int
+	 */
+	public function get_user_id( $context = &#039;view&#039; ) {
+		return 0;
+	}
+
+	/**
+	 * Get user. Used by orders, not other order types like refunds.
+	 *
+	 * @return WP_User|false
+	 */
+	public function get_user() {
+		return false;
+	}
+
+	/**
+	 * Gets information about whether coupon counts were updated.
+	 *
+	 * @param string $context What the value is for. Valid values are view and edit.
+	 *
+	 * @return bool True if coupon counts were updated, false otherwise.
+	 */
+	public function get_recorded_coupon_usage_counts( $context = &#039;view&#039; ) {
+		return wc_string_to_bool( $this-&gt;get_prop( &#039;recorded_coupon_usage_counts&#039;, $context ) );
+	}
+
+	/**
+	 * Get basic order data in array format.
+	 *
+	 * @return array
+	 */
+	public function get_base_data() {
+		return array_merge(
+			array( &#039;id&#039; =&gt; $this-&gt;get_id() ),
+			$this-&gt;data
+		);
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Setters
+	|--------------------------------------------------------------------------
+	|
+	| Functions for setting order data. These should not update anything in the
+	| database itself and should only change what is stored in the class
+	| object. However, for backwards compatibility pre 3.0.0 some of these
+	| setters may handle both.
+	*/
+
+	/**
+	 * Set parent order ID.
+	 *
+	 * @since 3.0.0
+	 * @param int $value Value to set.
+	 * @throws WC_Data_Exception Exception thrown if parent ID does not exist or is invalid.
+	 */
+	public function set_parent_id( $value ) {
+		if ( $value &amp;&amp; ( $value === $this-&gt;get_id() || ! wc_get_order( $value ) ) ) {
+			$this-&gt;error( &#039;order_invalid_parent_id&#039;, __( &#039;Invalid parent ID&#039;, &#039;woocommerce&#039; ) );
+		}
+		$this-&gt;set_prop( &#039;parent_id&#039;, absint( $value ) );
+	}
+
+	/**
+	 * Set order status.
+	 *
+	 * @since 3.0.0
+	 * @param string $new_status Status to change the order to. No internal wc- prefix is required.
+	 * @return array details of change
+	 */
+	public function set_status( $new_status ) {
+		$old_status = $this-&gt;get_status();
+		$new_status = &#039;wc-&#039; === substr( $new_status, 0, 3 ) ? substr( $new_status, 3 ) : $new_status;
+
+		$status_exceptions = array( &#039;auto-draft&#039;, &#039;trash&#039; );
+
+		// If setting the status, ensure it&#039;s set to a valid status.
+		if ( true === $this-&gt;object_read ) {
+			// Only allow valid new status.
+			if ( ! in_array( &#039;wc-&#039; . $new_status, $this-&gt;get_valid_statuses(), true ) &amp;&amp; ! in_array( $new_status, $status_exceptions, true ) ) {
+				$new_status = &#039;pending&#039;;
+			}
+
+			// If the old status is set but unknown (e.g. draft) assume its pending for action usage.
+			if ( $old_status &amp;&amp; ( &#039;auto-draft&#039; === $old_status || ( ! in_array( &#039;wc-&#039; . $old_status, $this-&gt;get_valid_statuses(), true ) &amp;&amp; ! in_array( $old_status, $status_exceptions, true ) ) ) ) {
+				$old_status = &#039;pending&#039;;
+			}
+		}
+
+		$this-&gt;set_prop( &#039;status&#039;, $new_status );
+
+		return array(
+			&#039;from&#039; =&gt; $old_status,
+			&#039;to&#039;   =&gt; $new_status,
+		);
+	}
+
+	/**
+	 * Set order_version.
+	 *
+	 * @param string $value Value to set.
+	 * @throws WC_Data_Exception Exception may be thrown if value is invalid.
+	 */
+	public function set_version( $value ) {
+		$this-&gt;set_prop( &#039;version&#039;, $value );
+	}
+
+	/**
+	 * Set order_currency.
+	 *
+	 * @param string $value Value to set.
+	 * @throws WC_Data_Exception Exception may be thrown if value is invalid.
+	 */
+	public function set_currency( $value ) {
+		if ( $value &amp;&amp; ! in_array( $value, array_keys( get_woocommerce_currencies() ), true ) ) {
+			$this-&gt;error( &#039;order_invalid_currency&#039;, __( &#039;Invalid currency code&#039;, &#039;woocommerce&#039; ) );
+		}
+		$this-&gt;set_prop( &#039;currency&#039;, $value ? $value : get_woocommerce_currency() );
+	}
+
+	/**
+	 * Set prices_include_tax.
+	 *
+	 * @param bool $value Value to set.
+	 * @throws WC_Data_Exception Exception may be thrown if value is invalid.
+	 */
+	public function set_prices_include_tax( $value ) {
+		$this-&gt;set_prop( &#039;prices_include_tax&#039;, (bool) $value );
+	}
+
+	/**
+	 * Set date_created.
+	 *
+	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if there is no date.
+	 * @throws WC_Data_Exception Exception may be thrown if value is invalid.
+	 */
+	public function set_date_created( $date = null ) {
+		$this-&gt;set_date_prop( &#039;date_created&#039;, $date );
+	}
+
+	/**
+	 * Set date_modified.
+	 *
+	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if there is no date.
+	 * @throws WC_Data_Exception Exception may be thrown if value is invalid.
+	 */
+	public function set_date_modified( $date = null ) {
+		$this-&gt;set_date_prop( &#039;date_modified&#039;, $date );
+	}
+
+	/**
+	 * Set discount_total.
+	 *
+	 * @param string $value Value to set.
+	 * @throws WC_Data_Exception Exception may be thrown if value is invalid.
+	 */
+	public function set_discount_total( $value ) {
+		$this-&gt;set_prop( &#039;discount_total&#039;, wc_format_decimal( $value, false, true ) );
+	}
+
+	/**
+	 * Set discount_tax.
+	 *
+	 * @param string $value Value to set.
+	 * @throws WC_Data_Exception Exception may be thrown if value is invalid.
+	 */
+	public function set_discount_tax( $value ) {
+		$this-&gt;set_prop( &#039;discount_tax&#039;, wc_format_decimal( $value, false, true ) );
+	}
+
+	/**
+	 * Set shipping_total.
+	 *
+	 * @param string $value Value to set.
+	 * @throws WC_Data_Exception Exception may be thrown if value is invalid.
+	 */
+	public function set_shipping_total( $value ) {
+		$this-&gt;set_prop( &#039;shipping_total&#039;, wc_format_decimal( $value, false, true ) );
+	}
+
+	/**
+	 * Set shipping_tax.
+	 *
+	 * @param string $value Value to set.
+	 * @throws WC_Data_Exception Exception may be thrown if value is invalid.
+	 */
+	public function set_shipping_tax( $value ) {
+		$this-&gt;set_prop( &#039;shipping_tax&#039;, wc_format_decimal( $value, false, true ) );
+		$this-&gt;set_total_tax( (float) $this-&gt;get_cart_tax() + (float) $this-&gt;get_shipping_tax() );
+	}
+
+	/**
+	 * Set cart tax.
+	 *
+	 * @param string $value Value to set.
+	 * @throws WC_Data_Exception Exception may be thrown if value is invalid.
+	 */
+	public function set_cart_tax( $value ) {
+		$this-&gt;set_prop( &#039;cart_tax&#039;, wc_format_decimal( $value, false, true ) );
+		$this-&gt;set_total_tax( (float) $this-&gt;get_cart_tax() + (float) $this-&gt;get_shipping_tax() );
+	}
+
+	/**
+	 * Sets order tax (sum of cart and shipping tax). Used internally only.
+	 *
+	 * @param string $value Value to set.
+	 * @throws WC_Data_Exception Exception may be thrown if value is invalid.
+	 */
+	protected function set_total_tax( $value ) {
+		// We round here because this is a total entry, as opposed to line items in other setters.
+		$this-&gt;set_prop( &#039;total_tax&#039;, wc_format_decimal( NumberUtil::round( $value, wc_get_price_decimals() ) ) );
+	}
+
+	/**
+	 * Set total.
+	 *
+	 * @param string $value Value to set.
+	 * @param string $deprecated Function used to set different totals based on this.
+	 *
+	 * @return bool|void
+	 * @throws WC_Data_Exception Exception may be thrown if value is invalid.
+	 */
+	public function set_total( $value, $deprecated = &#039;&#039; ) {
+		if ( $deprecated ) {
+			wc_deprecated_argument( &#039;total_type&#039;, &#039;3.0&#039;, &#039;Use dedicated total setter methods instead.&#039; );
+			return $this-&gt;legacy_set_total( $value, $deprecated );
+		}
+		$this-&gt;set_prop( &#039;total&#039;, wc_format_decimal( $value, wc_get_price_decimals() ) );
+	}
+
+	/**
+	 * Stores information about whether the coupon usage were counted.
+	 *
+	 * @param bool|string $value True if counted, false if not.
+	 *
+	 * @return void
+	 */
+	public function set_recorded_coupon_usage_counts( $value ) {
+		$this-&gt;set_prop( &#039;recorded_coupon_usage_counts&#039;, wc_string_to_bool( $value ) );
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Order Item Handling
+	|--------------------------------------------------------------------------
+	|
+	| Order items are used for products, taxes, shipping, and fees within
+	| each order.
+	*/
+
+	/**
+	 * Remove all line items (products, coupons, shipping, taxes) from the order.
+	 *
+	 * @param string $type Order item type. Default null.
+	 */
+	public function remove_order_items( $type = null ) {
+
+		/**
+		 * Trigger action before removing all order line items. Allows you to track order items.
+		 *
+		 * @param  WC_Order  $this  The current order object.
+		 * @param  string $type Order item type. Default null.
+		 *
+		 * @since 7.8.0
+		 */
+		do_action( &#039;woocommerce_remove_order_items&#039;, $this, $type );
+		if ( ! empty( $type ) ) {
+			$this-&gt;data_store-&gt;delete_items( $this, $type );
+
+			$group = $this-&gt;type_to_group( $type );
+
+			if ( $group ) {
+				unset( $this-&gt;items[ $group ] );
+			}
+		} else {
+			$this-&gt;data_store-&gt;delete_items( $this );
+			$this-&gt;items = array();
+		}
+		/**
+		 * Trigger action after removing all order line items.
+		 *
+		 * @param  WC_Order  $this  The current order object.
+		 * @param  string $type Order item type. Default null.
+		 *
+		 * @since 7.8.0
+		 */
+		do_action( &#039;woocommerce_removed_order_items&#039;, $this, $type );
+	}
+
+	/**
+	 * Convert a type to a types group.
+	 *
+	 * @param string $type type to lookup.
+	 * @return string
+	 */
+	protected function type_to_group( $type ) {
+		$type_to_group = apply_filters(
+			&#039;woocommerce_order_type_to_group&#039;,
+			array(
+				&#039;line_item&#039; =&gt; &#039;line_items&#039;,
+				&#039;tax&#039;       =&gt; &#039;tax_lines&#039;,
+				&#039;shipping&#039;  =&gt; &#039;shipping_lines&#039;,
+				&#039;fee&#039;       =&gt; &#039;fee_lines&#039;,
+				&#039;coupon&#039;    =&gt; &#039;coupon_lines&#039;,
+			)
+		);
+		return isset( $type_to_group[ $type ] ) ? $type_to_group[ $type ] : &#039;&#039;;
+	}
+
+	/**
+	 * Return an array of items/products within this order.
+	 *
+	 * @param string|array $types Types of line items to get (array or string).
+	 * @return WC_Order_Item[]
+	 */
+	public function get_items( $types = &#039;line_item&#039; ) {
+		$items = array();
+		$types = array_filter( (array) $types );
+
+		foreach ( $types as $type ) {
+			$group = $this-&gt;type_to_group( $type );
+
+			if ( $group ) {
+				if ( ! isset( $this-&gt;items[ $group ] ) ) {
+					$this-&gt;items[ $group ] = array_filter( $this-&gt;data_store-&gt;read_items( $this, $type ) );
+				}
+				// Don&#039;t use array_merge here because keys are numeric.
+				$items = $items + $this-&gt;items[ $group ];
+			}
+		}
+
+		return apply_filters( &#039;woocommerce_order_get_items&#039;, $items, $this, $types );
+	}
+
+	/**
+	 * Return array of values for calculations.
+	 *
+	 * @param string $field Field name to return.
+	 *
+	 * @return array Array of values.
+	 */
+	protected function get_values_for_total( $field ) {
+		$items = array_map(
+			function ( $item ) use ( $field ) {
+				return wc_add_number_precision( $item[ $field ], false );
+			},
+			array_values( $this-&gt;get_items() )
+		);
+		return $items;
+	}
+
+	/**
+	 * Return an array of coupons within this order.
+	 *
+	 * @since  3.7.0
+	 * @return WC_Order_Item_Coupon[]
+	 */
+	public function get_coupons() {
+		return $this-&gt;get_items( &#039;coupon&#039; );
+	}
+
+	/**
+	 * Return an array of fees within this order.
+	 *
+	 * @return WC_Order_item_Fee[]
+	 */
+	public function get_fees() {
+		return $this-&gt;get_items( &#039;fee&#039; );
+	}
+
+	/**
+	 * Return an array of taxes within this order.
+	 *
+	 * @return WC_Order_Item_Tax[]
+	 */
+	public function get_taxes() {
+		return $this-&gt;get_items( &#039;tax&#039; );
+	}
+
+	/**
+	 * Return an array of shipping costs within this order.
+	 *
+	 * @return WC_Order_Item_Shipping[]
+	 */
+	public function get_shipping_methods() {
+		return $this-&gt;get_items( &#039;shipping&#039; );
+	}
+
+	/**
+	 * Gets formatted shipping method title.
+	 *
+	 * @return string
+	 */
+	public function get_shipping_method() {
+		$names = array();
+		foreach ( $this-&gt;get_shipping_methods() as $shipping_method ) {
+			$names[] = $shipping_method-&gt;get_name();
+		}
+		return apply_filters( &#039;woocommerce_order_shipping_method&#039;, implode( &#039;, &#039;, $names ), $this );
+	}
+
+	/**
+	 * Get used coupon codes only.
+	 *
+	 * @since 3.7.0
+	 * @return array
+	 */
+	public function get_coupon_codes() {
+		$coupon_codes = array();
+		$coupons      = $this-&gt;get_items( &#039;coupon&#039; );
+
+		if ( $coupons ) {
+			foreach ( $coupons as $coupon ) {
+				$coupon_codes[] = $coupon-&gt;get_code();
+			}
+		}
+		return $coupon_codes;
+	}
+
+	/**
+	 * Gets the count of order items of a certain type.
+	 *
+	 * @param string $item_type Item type to lookup.
+	 * @return int|string
+	 */
+	public function get_item_count( $item_type = &#039;&#039; ) {
+		$items = $this-&gt;get_items( empty( $item_type ) ? &#039;line_item&#039; : $item_type );
+		$count = 0;
+
+		foreach ( $items as $item ) {
+			$count += $item-&gt;get_quantity();
+		}
+
+		return apply_filters( &#039;woocommerce_get_item_count&#039;, $count, $item_type, $this );
+	}
+
+	/**
+	 * Get an order item object, based on its type.
+	 *
+	 * @since  3.0.0
+	 * @param  int  $item_id ID of item to get.
+	 * @param  bool $load_from_db Prior to 3.2 this item was loaded direct from WC_Order_Factory, not this object. This param is here for backwards compatibility with that. If false, uses the local items variable instead.
+	 * @return WC_Order_Item|false
+	 */
+	public function get_item( $item_id, $load_from_db = true ) {
+		if ( $load_from_db ) {
+			return WC_Order_Factory::get_order_item( $item_id );
+		}
+
+		// Search for item id.
+		if ( $this-&gt;items ) {
+			foreach ( $this-&gt;items as $group =&gt; $items ) {
+				if ( isset( $items[ $item_id ] ) ) {
+					return $items[ $item_id ];
+				}
+			}
+		}
+
+		// Load all items of type and cache.
+		$type = $this-&gt;data_store-&gt;get_order_item_type( $this, $item_id );
+
+		if ( ! $type ) {
+			return false;
+		}
+
+		$items = $this-&gt;get_items( $type );
+
+		return ! empty( $items[ $item_id ] ) ? $items[ $item_id ] : false;
+	}
+
+	/**
+	 * Get key for where a certain item type is stored in _items.
+	 *
+	 * @since  3.0.0
+	 * @param  string $item object Order item (product, shipping, fee, coupon, tax).
+	 * @return string
+	 */
+	protected function get_items_key( $item ) {
+		if ( is_a( $item, &#039;WC_Order_Item_Product&#039; ) ) {
+			return &#039;line_items&#039;;
+		} elseif ( is_a( $item, &#039;WC_Order_Item_Fee&#039; ) ) {
+			return &#039;fee_lines&#039;;
+		} elseif ( is_a( $item, &#039;WC_Order_Item_Shipping&#039; ) ) {
+			return &#039;shipping_lines&#039;;
+		} elseif ( is_a( $item, &#039;WC_Order_Item_Tax&#039; ) ) {
+			return &#039;tax_lines&#039;;
+		} elseif ( is_a( $item, &#039;WC_Order_Item_Coupon&#039; ) ) {
+			return &#039;coupon_lines&#039;;
+		}
+		return apply_filters( &#039;woocommerce_get_items_key&#039;, &#039;&#039;, $item );
+	}
+
+	/**
+	 * Remove item from the order.
+	 *
+	 * @param int $item_id Item ID to delete.
+	 * @return false|void
+	 */
+	public function remove_item( $item_id ) {
+		$item      = $this-&gt;get_item( $item_id, false );
+		$items_key = $item ? $this-&gt;get_items_key( $item ) : false;
+
+		if ( ! $items_key ) {
+			return false;
+		}
+
+		// Unset and remove later.
+		$this-&gt;items_to_delete[] = $item;
+		unset( $this-&gt;items[ $items_key ][ $item-&gt;get_id() ] );
+	}
+
+	/**
+	 * Adds an order item to this order. The order item will not persist until save.
+	 *
+	 * @since 3.0.0
+	 * @param WC_Order_Item $item Order item object (product, shipping, fee, coupon, tax).
+	 * @return false|void
+	 */
+	public function add_item( $item ) {
+		$items_key = $this-&gt;get_items_key( $item );
+
+		if ( ! $items_key ) {
+			return false;
+		}
+
+		// Make sure existing items are loaded so we can append this new one.
+		if ( ! isset( $this-&gt;items[ $items_key ] ) ) {
+			$this-&gt;items[ $items_key ] = $this-&gt;get_items( $item-&gt;get_type() );
+		}
+
+		// Set parent.
+		$item-&gt;set_order_id( $this-&gt;get_id() );
+
+		// Append new row with generated temporary ID.
+		$item_id = $item-&gt;get_id();
+
+		if ( $item_id ) {
+			$this-&gt;items[ $items_key ][ $item_id ] = $item;
+		} else {
+			$this-&gt;items[ $items_key ][ &#039;new:&#039; . $items_key . count( $this-&gt;items[ $items_key ] ) ] = $item;
+		}
+	}
+
+	/**
+	 * Check and records coupon usage tentatively so that counts validation is correct. Display an error if coupon usage limit has been reached.
+	 *
+	 * If you are using this method, make sure to `release_held_coupons` in case an Exception is thrown.
+	 *
+	 * @throws Exception When not able to apply coupon.
+	 *
+	 * @param string $billing_email Billing email of order.
+	 */
+	public function hold_applied_coupons( $billing_email ) {
+		$held_keys          = array();
+		$held_keys_for_user = array();
+		$error              = null;
+
+		try {
+			foreach ( WC()-&gt;cart-&gt;get_applied_coupons() as $code ) {
+				$coupon = new WC_Coupon( $code );
+				if ( ! $coupon-&gt;get_data_store() ) {
+					continue;
+				}
+
+				// Hold coupon for when global coupon usage limit is present.
+				if ( 0 &lt; $coupon-&gt;get_usage_limit() ) {
+					$held_key = $this-&gt;hold_coupon( $coupon );
+					if ( $held_key ) {
+						$held_keys[ $coupon-&gt;get_id() ] = $held_key;
+					}
+				}
+
+				// Hold coupon for when usage limit per customer is enabled.
+				if ( 0 &lt; $coupon-&gt;get_usage_limit_per_user() ) {
+
+					if ( ! isset( $user_ids_and_emails ) ) {
+						$user_alias          = get_current_user_id() ? wp_get_current_user()-&gt;ID : sanitize_email( $billing_email );
+						$user_ids_and_emails = $this-&gt;get_billing_and_current_user_aliases( $billing_email );
+					}
+
+					$held_key_for_user = $this-&gt;hold_coupon_for_users( $coupon, $user_ids_and_emails, $user_alias );
+
+					if ( $held_key_for_user ) {
+						$held_keys_for_user[ $coupon-&gt;get_id() ] = $held_key_for_user;
+					}
+				}
+			}
+		} catch ( Exception $e ) {
+			$error = $e;
+		} finally {
+			// Even in case of error, we will save keys for whatever coupons that were held so our data remains accurate.
+			// We save them in bulk instead of one by one for performance reasons.
+			if ( 0 &lt; count( $held_keys_for_user ) || 0 &lt; count( $held_keys ) ) {
+				$this-&gt;get_data_store()-&gt;set_coupon_held_keys( $this, $held_keys, $held_keys_for_user );
+			}
+			if ( $error instanceof Exception ) {
+				throw $error;
+			}
+		}
+	}
+
+
+	/**
+	 * Hold coupon if a global usage limit is defined.
+	 *
+	 * @param WC_Coupon $coupon Coupon object.
+	 *
+	 * @return string    Meta key which indicates held coupon.
+	 * @throws Exception When can&#039;t be held.
+	 */
+	private function hold_coupon( $coupon ) {
+		$result = $coupon-&gt;get_data_store()-&gt;check_and_hold_coupon( $coupon );
+		if ( false === $result ) {
+			// translators: Actual coupon code.
+			throw new Exception( sprintf( __( &#039;An unexpected error happened while applying the Coupon %s.&#039;, &#039;woocommerce&#039; ), esc_html( $coupon-&gt;get_code() ) ) );
+		} elseif ( 0 === $result ) {
+			// translators: Actual coupon code.
+			throw new Exception( sprintf( __( &#039;Coupon %s was used in another transaction during this checkout, and coupon usage limit is reached. Please remove the coupon and try again.&#039;, &#039;woocommerce&#039; ), esc_html( $coupon-&gt;get_code() ) ) );
+		}
+		return $result;
+	}
+
+	/**
+	 * Hold coupon if usage limit per customer is defined.
+	 *
+	 * @param WC_Coupon $coupon              Coupon object.
+	 * @param array     $user_ids_and_emails Array of user Id and emails to check for usage limit.
+	 * @param string    $user_alias          User ID or email to use to record current usage.
+	 *
+	 * @return string    Meta key which indicates held coupon.
+	 * @throws Exception When coupon can&#039;t be held.
+	 */
+	private function hold_coupon_for_users( $coupon, $user_ids_and_emails, $user_alias ) {
+		$result = $coupon-&gt;get_data_store()-&gt;check_and_hold_coupon_for_user( $coupon, $user_ids_and_emails, $user_alias );
+		if ( false === $result ) {
+			// translators: Actual coupon code.
+			throw new Exception( sprintf( __( &#039;An unexpected error happened while applying the Coupon %s.&#039;, &#039;woocommerce&#039; ), esc_html( $coupon-&gt;get_code() ) ) );
+		} elseif ( 0 === $result ) {
+			// translators: Actual coupon code.
+			throw new Exception( sprintf( __( &#039;You have used this coupon %s in another transaction during this checkout, and coupon usage limit is reached. Please remove the coupon and try again.&#039;, &#039;woocommerce&#039; ), esc_html( $coupon-&gt;get_code() ) ) );
+		}
+		return $result;
+	}
+
+	/**
+	 * Helper method to get all aliases for current user and provide billing email.
+	 *
+	 * @param string $billing_email Billing email provided in form.
+	 *
+	 * @return array     Array of all aliases.
+	 * @throws Exception When validation fails.
+	 */
+	private function get_billing_and_current_user_aliases( $billing_email ) {
+		$emails = array( $billing_email );
+		if ( get_current_user_id() ) {
+			$emails[] = wp_get_current_user()-&gt;user_email;
+		}
+		$emails              = array_unique(
+			array_map( &#039;strtolower&#039;, array_map( &#039;sanitize_email&#039;, $emails ) )
+		);
+		$customer_data_store = WC_Data_Store::load( &#039;customer&#039; );
+		$user_ids            = $customer_data_store-&gt;get_user_ids_for_billing_email( $emails );
+		return array_merge( $user_ids, $emails );
+	}
+
+	/**
+	 * Apply a coupon to the order and recalculate totals.
+	 *
+	 * @since 3.2.0
+	 * @param string|WC_Coupon $raw_coupon Coupon code or object.
+	 * @return true|WP_Error True if applied, error if not.
+	 */
+	public function apply_coupon( $raw_coupon ) {
+		if ( is_a( $raw_coupon, &#039;WC_Coupon&#039; ) ) {
+			$coupon = $raw_coupon;
+		} elseif ( is_string( $raw_coupon ) ) {
+			$code   = wc_format_coupon_code( $raw_coupon );
+			$coupon = new WC_Coupon( $code );
+
+			if ( $coupon-&gt;get_code() !== $code ) {
+				return new WP_Error( &#039;invalid_coupon&#039;, __( &#039;Invalid coupon code&#039;, &#039;woocommerce&#039; ) );
+			}
+		} else {
+			return new WP_Error( &#039;invalid_coupon&#039;, __( &#039;Invalid coupon&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		// Check to make sure coupon is not already applied.
+		$applied_coupons = $this-&gt;get_items( &#039;coupon&#039; );
+		foreach ( $applied_coupons as $applied_coupon ) {
+			if ( $applied_coupon-&gt;get_code() === $coupon-&gt;get_code() ) {
+				return new WP_Error( &#039;invalid_coupon&#039;, __( &#039;Coupon code already applied!&#039;, &#039;woocommerce&#039; ) );
+			}
+		}
+
+		$discounts = new WC_Discounts( $this );
+		$applied   = $discounts-&gt;apply_coupon( $coupon );
+
+		if ( is_wp_error( $applied ) ) {
+			return $applied;
+		}
+
+		$data_store = $coupon-&gt;get_data_store();
+
+		// Check specific for guest checkouts here as well since WC_Cart handles that separately in check_customer_coupons.
+		if ( $data_store &amp;&amp; 0 === $this-&gt;get_customer_id() ) {
+			$usage_count = $data_store-&gt;get_usage_by_email( $coupon, $this-&gt;get_billing_email() );
+			if ( 0 &lt; $coupon-&gt;get_usage_limit_per_user() &amp;&amp; $usage_count &gt;= $coupon-&gt;get_usage_limit_per_user() ) {
+				return new WP_Error(
+					&#039;invalid_coupon&#039;,
+					$coupon-&gt;get_coupon_error( 106 ),
+					array(
+						&#039;status&#039; =&gt; 400,
+					)
+				);
+			}
+		}
+
+		/**
+		 * Action to signal that a coupon has been applied to an order.
+		 *
+		 * @param  WC_Coupon $coupon The applied coupon object.
+		 * @param  WC_Order  $order  The current order object.
+		 *
+		 * @since 7.3
+		 */
+		do_action( &#039;woocommerce_order_applied_coupon&#039;, $coupon, $this );
+
+		$this-&gt;set_coupon_discount_amounts( $discounts );
+		$this-&gt;save();
+
+		// Recalculate totals and taxes.
+		$this-&gt;recalculate_coupons();
+
+		// Record usage so counts and validation is correct.
+		$used_by = $this-&gt;get_user_id();
+
+		if ( ! $used_by ) {
+			$used_by = $this-&gt;get_billing_email();
+		}
+
+		$order_data_store = $this-&gt;get_data_store();
+		if ( $order_data_store-&gt;get_recorded_coupon_usage_counts( $this ) ) {
+			$coupon-&gt;increase_usage_count( $used_by );
+		}
+
+		wc_update_coupon_usage_counts( $this-&gt;get_id() );
+
+		return true;
+	}
+
+	/**
+	 * Remove a coupon from the order and recalculate totals.
+	 *
+	 * Coupons affect line item totals, but there is no relationship between
+	 * coupon and line total, so to remove a coupon we need to work from the
+	 * line subtotal (price before discount) and re-apply all coupons in this
+	 * order.
+	 *
+	 * Manual discounts are not affected; those are separate and do not affect
+	 * stored line totals.
+	 *
+	 * @since 3.2.0
+	 * @since 7.6.0 Returns a boolean indicating success.
+	 *
+	 * @param  string $code Coupon code.
+	 * @return bool TRUE if coupon was removed, FALSE otherwise.
+	 */
+	public function remove_coupon( $code ) {
+		$coupons = $this-&gt;get_items( &#039;coupon&#039; );
+
+		// Remove the coupon line.
+		foreach ( $coupons as $item_id =&gt; $coupon ) {
+			if ( $coupon-&gt;get_code() === $code ) {
+				$this-&gt;remove_item( $item_id );
+				$coupon_object = new WC_Coupon( $code );
+				$coupon_object-&gt;decrease_usage_count( $this-&gt;get_user_id() );
+				$this-&gt;recalculate_coupons();
+
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Apply all coupons in this order again to all line items.
+	 * This method is public since WooCommerce 3.8.0.
+	 *
+	 * @since 3.2.0
+	 */
+	public function recalculate_coupons() {
+		// Reset line item totals.
+		foreach ( $this-&gt;get_items() as $item ) {
+			$item-&gt;set_total( $item-&gt;get_subtotal() );
+			$item-&gt;set_total_tax( $item-&gt;get_subtotal_tax() );
+		}
+
+		$discounts = new WC_Discounts( $this );
+
+		foreach ( $this-&gt;get_items( &#039;coupon&#039; ) as $coupon_item ) {
+			$coupon_code = $coupon_item-&gt;get_code();
+			$coupon_id   = wc_get_coupon_id_by_code( $coupon_code );
+
+			// If we have a coupon ID (loaded via wc_get_coupon_id_by_code) we can simply load the new coupon object using the ID.
+			if ( $coupon_id ) {
+				$coupon_object = new WC_Coupon( $coupon_id );
+
+			} else {
+
+				// If we do not have a coupon ID (was it virtual? has it been deleted?) we must create a temporary coupon using what data we have stored during checkout.
+				$coupon_object = new WC_Coupon();
+				$coupon_object-&gt;set_props( (array) $coupon_item-&gt;get_meta( &#039;coupon_data&#039;, true ) );
+				$coupon_object-&gt;set_code( $coupon_code );
+				$coupon_object-&gt;set_virtual( true );
+
+				// If there is no coupon amount (maybe dynamic?), set it to the given **discount** amount so the coupon&#039;s same value is applied.
+				if ( ! $coupon_object-&gt;get_amount() ) {
+
+					// If the order originally had prices including tax, remove the discount + discount tax.
+					if ( $this-&gt;get_prices_include_tax() ) {
+						$coupon_object-&gt;set_amount( $coupon_item-&gt;get_discount() + $coupon_item-&gt;get_discount_tax() );
+					} else {
+						$coupon_object-&gt;set_amount( $coupon_item-&gt;get_discount() );
+					}
+					$coupon_object-&gt;set_discount_type( &#039;fixed_cart&#039; );
+				}
+			}
+
+			/**
+			 * Allow developers to filter this coupon before it gets re-applied to the order.
+			 *
+			 * @since 3.2.0
+			 */
+			$coupon_object = apply_filters( &#039;woocommerce_order_recalculate_coupons_coupon_object&#039;, $coupon_object, $coupon_code, $coupon_item, $this );
+
+			if ( $coupon_object ) {
+				$discounts-&gt;apply_coupon( $coupon_object, false );
+			}
+		}
+
+		$this-&gt;set_coupon_discount_amounts( $discounts );
+		$this-&gt;set_item_discount_amounts( $discounts );
+
+		// Recalculate totals and taxes.
+		$this-&gt;calculate_totals( true );
+	}
+
+	/**
+	 * After applying coupons via the WC_Discounts class, update line items.
+	 *
+	 * @since 3.2.0
+	 * @param WC_Discounts $discounts Discounts class.
+	 */
+	protected function set_item_discount_amounts( $discounts ) {
+		$item_discounts = $discounts-&gt;get_discounts_by_item();
+		$tax_location   = $this-&gt;get_tax_location();
+		$tax_location   = array( $tax_location[&#039;country&#039;], $tax_location[&#039;state&#039;], $tax_location[&#039;postcode&#039;], $tax_location[&#039;city&#039;] );
+
+		if ( $item_discounts ) {
+			foreach ( $item_discounts as $item_id =&gt; $amount ) {
+				$item = $this-&gt;get_item( $item_id, false );
+
+				// If the prices include tax, discounts should be taken off the tax inclusive prices like in the cart.
+				if ( $this-&gt;get_prices_include_tax() &amp;&amp; wc_tax_enabled() &amp;&amp; &#039;taxable&#039; === $item-&gt;get_tax_status() ) {
+					$taxes = WC_Tax::calc_tax( $amount, $this-&gt;get_tax_rates( $item-&gt;get_tax_class(), $tax_location ), true );
+
+					// Use unrounded taxes so totals will be re-calculated accurately, like in cart.
+					$amount = $amount - array_sum( $taxes );
+				}
+
+				$item-&gt;set_total( max( 0, $item-&gt;get_total() - $amount ) );
+			}
+		}
+	}
+
+	/**
+	 * After applying coupons via the WC_Discounts class, update or create coupon items.
+	 *
+	 * @since 3.2.0
+	 * @param WC_Discounts $discounts Discounts class.
+	 */
+	protected function set_coupon_discount_amounts( $discounts ) {
+		$coupons           = $this-&gt;get_items( &#039;coupon&#039; );
+		$coupon_code_to_id = wc_list_pluck( $coupons, &#039;get_id&#039;, &#039;get_code&#039; );
+		$all_discounts     = $discounts-&gt;get_discounts();
+		$coupon_discounts  = $discounts-&gt;get_discounts_by_coupon();
+		$tax_location      = $this-&gt;get_tax_location();
+		$tax_location      = array(
+			$tax_location[&#039;country&#039;],
+			$tax_location[&#039;state&#039;],
+			$tax_location[&#039;postcode&#039;],
+			$tax_location[&#039;city&#039;],
+		);
+
+		if ( $coupon_discounts ) {
+			foreach ( $coupon_discounts as $coupon_code =&gt; $amount ) {
+				$item_id = isset( $coupon_code_to_id[ $coupon_code ] ) ? $coupon_code_to_id[ $coupon_code ] : 0;
+
+				if ( ! $item_id ) {
+					$coupon_item = new WC_Order_Item_Coupon();
+					$coupon_item-&gt;set_code( $coupon_code );
+
+					// Add coupon data.
+					$coupon_id = wc_get_coupon_id_by_code( $coupon_code );
+					$coupon    = new WC_Coupon( $coupon_id );
+
+					// Avoid storing used_by - it&#039;s not needed and can get large.
+					$coupon_data = $coupon-&gt;get_data();
+					unset( $coupon_data[&#039;used_by&#039;] );
+
+					$coupon_item-&gt;add_meta_data( &#039;coupon_data&#039;, $coupon_data );
+				} else {
+					$coupon_item = $this-&gt;get_item( $item_id, false );
+				}
+
+				$discount_tax = 0;
+
+				// Work out how much tax has been removed as a result of the discount from this coupon.
+				foreach ( $all_discounts[ $coupon_code ] as $item_id =&gt; $item_discount_amount ) {
+					$item = $this-&gt;get_item( $item_id, false );
+
+					if ( &#039;taxable&#039; !== $item-&gt;get_tax_status() || ! wc_tax_enabled() ) {
+						continue;
+					}
+
+					$taxes = array_sum( WC_Tax::calc_tax( $item_discount_amount, $this-&gt;get_tax_rates( $item-&gt;get_tax_class(), $tax_location ), $this-&gt;get_prices_include_tax() ) );
+					if ( &#039;yes&#039; !== get_option( &#039;woocommerce_tax_round_at_subtotal&#039; ) ) {
+						$taxes = wc_round_tax_total( $taxes );
+					}
+
+					$discount_tax += $taxes;
+
+					if ( $this-&gt;get_prices_include_tax() ) {
+						$amount = $amount - $taxes;
+					}
+				}
+
+				$coupon_item-&gt;set_discount( $amount );
+				$coupon_item-&gt;set_discount_tax( $discount_tax );
+
+				$this-&gt;add_item( $coupon_item );
+			}
+		}
+	}
+
+	/**
+	 * Add a product line item to the order. This is the only line item type with
+	 * its own method because it saves looking up order amounts (costs are added up for you).
+	 *
+	 * @param  WC_Product $product Product object.
+	 * @param  int        $qty Quantity to add.
+	 * @param  array      $args Args for the added product.
+	 * @return int
+	 */
+	public function add_product( $product, $qty = 1, $args = array() ) {
+		if ( $product ) {
+			$order = ArrayUtil::get_value_or_default( $args, &#039;order&#039; );
+			$total = wc_get_price_excluding_tax(
+				$product,
+				array(
+					&#039;qty&#039;   =&gt; $qty,
+					&#039;order&#039; =&gt; $order,
+				)
+			);
+
+			$default_args = array(
+				&#039;name&#039;         =&gt; $product-&gt;get_name(),
+				&#039;tax_class&#039;    =&gt; $product-&gt;get_tax_class(),
+				&#039;product_id&#039;   =&gt; $product-&gt;is_type( &#039;variation&#039; ) ? $product-&gt;get_parent_id() : $product-&gt;get_id(),
+				&#039;variation_id&#039; =&gt; $product-&gt;is_type( &#039;variation&#039; ) ? $product-&gt;get_id() : 0,
+				&#039;variation&#039;    =&gt; $product-&gt;is_type( &#039;variation&#039; ) ? $product-&gt;get_attributes() : array(),
+				&#039;subtotal&#039;     =&gt; $total,
+				&#039;total&#039;        =&gt; $total,
+				&#039;quantity&#039;     =&gt; $qty,
+			);
+		} else {
+			$default_args = array(
+				&#039;quantity&#039; =&gt; $qty,
+			);
+		}
+
+		$args = wp_parse_args( $args, $default_args );
+
+		// BW compatibility with old args.
+		if ( isset( $args[&#039;totals&#039;] ) ) {
+			foreach ( $args[&#039;totals&#039;] as $key =&gt; $value ) {
+				if ( &#039;tax&#039; === $key ) {
+					$args[&#039;total_tax&#039;] = $value;
+				} elseif ( &#039;tax_data&#039; === $key ) {
+					$args[&#039;taxes&#039;] = $value;
+				} else {
+					$args[ $key ] = $value;
+				}
+			}
+		}
+
+		$item = wc_get_container()-&gt;get( LegacyProxy::class )-&gt;get_instance_of( WC_Order_Item_Product::class );
+		$item-&gt;set_props( $args );
+		$item-&gt;set_backorder_meta();
+		$item-&gt;set_order_id( $this-&gt;get_id() );
+		$item-&gt;save();
+		$this-&gt;add_item( $item );
+		wc_do_deprecated_action( &#039;woocommerce_order_add_product&#039;, array( $this-&gt;get_id(), $item-&gt;get_id(), $product, $qty, $args ), &#039;3.0&#039;, &#039;woocommerce_new_order_item action instead&#039; );
+		delete_transient( &#039;wc_order_&#039; . $this-&gt;get_id() . &#039;_needs_processing&#039; );
+		return $item-&gt;get_id();
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Payment Token Handling
+	|--------------------------------------------------------------------------
+	|
+	| Payment tokens are hashes used to take payments by certain gateways.
+	|
+	*/
+
+	/**
+	 * Add a payment token to an order
+	 *
+	 * @since 2.6
+	 * @param WC_Payment_Token $token Payment token object.
+	 * @return boolean|int The new token ID or false if it failed.
+	 */
+	public function add_payment_token( $token ) {
+		if ( empty( $token ) || ! ( $token instanceof WC_Payment_Token ) ) {
+			return false;
+		}
+
+		$token_ids   = $this-&gt;data_store-&gt;get_payment_token_ids( $this );
+		$token_ids[] = $token-&gt;get_id();
+		$this-&gt;data_store-&gt;update_payment_token_ids( $this, $token_ids );
+
+		do_action( &#039;woocommerce_payment_token_added_to_order&#039;, $this-&gt;get_id(), $token-&gt;get_id(), $token, $token_ids );
+		return $token-&gt;get_id();
+	}
+
+	/**
+	 * Returns a list of all payment tokens associated with the current order
+	 *
+	 * @since 2.6
+	 * @return array An array of payment token objects
+	 */
+	public function get_payment_tokens() {
+		return $this-&gt;data_store-&gt;get_payment_token_ids( $this );
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Calculations.
+	|--------------------------------------------------------------------------
+	|
+	| These methods calculate order totals and taxes based on the current data.
+	|
+	*/
+
+	/**
+	 * Calculate shipping total.
+	 *
+	 * @since 2.2
+	 * @return float
+	 */
+	public function calculate_shipping() {
+		$shipping_total = 0;
+
+		foreach ( $this-&gt;get_shipping_methods() as $shipping ) {
+			$shipping_total += $shipping-&gt;get_total();
+		}
+
+		$this-&gt;set_shipping_total( $shipping_total );
+		$this-&gt;save();
+
+		return $this-&gt;get_shipping_total();
+	}
+
+	/**
+	 * Get all tax classes for items in the order.
+	 *
+	 * @since 2.6.3
+	 * @return array
+	 */
+	public function get_items_tax_classes() {
+		$found_tax_classes = array();
+
+		foreach ( $this-&gt;get_items() as $item ) {
+			if ( is_callable( array( $item, &#039;get_tax_status&#039; ) ) &amp;&amp; in_array( $item-&gt;get_tax_status(), array( &#039;taxable&#039;, &#039;shipping&#039; ), true ) ) {
+				$found_tax_classes[] = $item-&gt;get_tax_class();
+			}
+		}
+
+		return array_unique( $found_tax_classes );
+	}
+
+	/**
+	 * Get tax location for this order.
+	 *
+	 * @since 3.2.0
+	 * @param array $args array Override the location.
+	 * @return array
+	 */
+	protected function get_tax_location( $args = array() ) {
+		$tax_based_on = get_option( &#039;woocommerce_tax_based_on&#039; );
+
+		if ( &#039;shipping&#039; === $tax_based_on &amp;&amp; ! $this-&gt;get_shipping_country() ) {
+			$tax_based_on = &#039;billing&#039;;
+		}
+
+		$args = wp_parse_args(
+			$args,
+			array(
+				&#039;country&#039;  =&gt; &#039;billing&#039; === $tax_based_on ? $this-&gt;get_billing_country() : $this-&gt;get_shipping_country(),
+				&#039;state&#039;    =&gt; &#039;billing&#039; === $tax_based_on ? $this-&gt;get_billing_state() : $this-&gt;get_shipping_state(),
+				&#039;postcode&#039; =&gt; &#039;billing&#039; === $tax_based_on ? $this-&gt;get_billing_postcode() : $this-&gt;get_shipping_postcode(),
+				&#039;city&#039;     =&gt; &#039;billing&#039; === $tax_based_on ? $this-&gt;get_billing_city() : $this-&gt;get_shipping_city(),
+			)
+		);
+
+		/**
+		 * Filters whether apply base tax for local pickup shipping method or not.
+		 *
+		 * @since 6.8.0
+		 * @param boolean apply_base_tax Whether apply base tax for local pickup. Default true.
+		 */
+		$apply_base_tax = true === apply_filters( &#039;woocommerce_apply_base_tax_for_local_pickup&#039;, true );
+
+		/**
+		 * Filters local pickup shipping methods.
+		 *
+		 * @since 6.8.0
+		 * @param string[] $local_pickup_methods Local pickup shipping method IDs.
+		 */
+		$local_pickup_methods = apply_filters( &#039;woocommerce_local_pickup_methods&#039;, array( &#039;legacy_local_pickup&#039;, &#039;local_pickup&#039; ) );
+
+		$shipping_method_ids = ArrayUtil::select( $this-&gt;get_shipping_methods(), &#039;get_method_id&#039;, ArrayUtil::SELECT_BY_OBJECT_METHOD );
+
+		// Set shop base address as a tax location if order has local pickup shipping method.
+		if ( $apply_base_tax &amp;&amp; count( array_intersect( $shipping_method_ids, $local_pickup_methods ) ) &gt; 0 ) {
+			$tax_based_on = &#039;base&#039;;
+		}
+
+		// Default to base.
+		if ( &#039;base&#039; === $tax_based_on || empty( $args[&#039;country&#039;] ) ) {
+			$args[&#039;country&#039;]  = WC()-&gt;countries-&gt;get_base_country();
+			$args[&#039;state&#039;]    = WC()-&gt;countries-&gt;get_base_state();
+			$args[&#039;postcode&#039;] = WC()-&gt;countries-&gt;get_base_postcode();
+			$args[&#039;city&#039;]     = WC()-&gt;countries-&gt;get_base_city();
+		}
+
+		return apply_filters( &#039;woocommerce_order_get_tax_location&#039;, $args, $this );
+	}
+
+	/**
+	 * Public wrapper for exposing get_tax_location() method, enabling 3rd parties to get the tax location for an order.
+	 *
+	 * @since 7.6.0
+	 * @param array $args array Override the location.
+	 * @return array
+	 */
+	public function get_taxable_location( $args = array() ) {
+		return $this-&gt;get_tax_location( $args );
+	}
+
+	/**
+	 * Get tax rates for an order. Use order&#039;s shipping or billing address, defaults to base location.
+	 *
+	 * @param string $tax_class     Tax class to get rates for.
+	 * @param array  $location_args Location to compute rates for. Should be in form: array( country, state, postcode, city).
+	 * @param object $customer      Only used to maintain backward compatibility for filter `woocommerce-matched_rates`.
+	 *
+	 * @return mixed|void Tax rates.
+	 */
+	protected function get_tax_rates( $tax_class, $location_args = array(), $customer = null ) {
+		$tax_location = $this-&gt;get_tax_location( $location_args );
+		$tax_location = array( $tax_location[&#039;country&#039;], $tax_location[&#039;state&#039;], $tax_location[&#039;postcode&#039;], $tax_location[&#039;city&#039;] );
+		return WC_Tax::get_rates_from_location( $tax_class, $tax_location, $customer );
+	}
+
+	/**
+	 * Calculate taxes for all line items and shipping, and store the totals and tax rows.
+	 *
+	 * If by default the taxes are based on the shipping address and the current order doesn&#039;t
+	 * have any, it would use the billing address rather than using the Shopping base location.
+	 *
+	 * Will use the base country unless customer addresses are set.
+	 *
+	 * @param array $args Added in 3.0.0 to pass things like location.
+	 */
+	public function calculate_taxes( $args = array() ) {
+		do_action( &#039;woocommerce_order_before_calculate_taxes&#039;, $args, $this );
+
+		$calculate_tax_for  = $this-&gt;get_tax_location( $args );
+		$shipping_tax_class = get_option( &#039;woocommerce_shipping_tax_class&#039; );
+
+		if ( &#039;inherit&#039; === $shipping_tax_class ) {
+			$found_classes      = array_intersect( array_merge( array( &#039;&#039; ), WC_Tax::get_tax_class_slugs() ), $this-&gt;get_items_tax_classes() );
+			$shipping_tax_class = count( $found_classes ) ? current( $found_classes ) : false;
+		}
+
+		$is_vat_exempt = apply_filters( &#039;woocommerce_order_is_vat_exempt&#039;, &#039;yes&#039; === $this-&gt;get_meta( &#039;is_vat_exempt&#039; ), $this );
+
+		// Trigger tax recalculation for all items.
+		foreach ( $this-&gt;get_items( array( &#039;line_item&#039;, &#039;fee&#039; ) ) as $item_id =&gt; $item ) {
+			if ( ! $is_vat_exempt ) {
+				$item-&gt;calculate_taxes( $calculate_tax_for );
+			} else {
+				$item-&gt;set_taxes( false );
+			}
+		}
+
+		foreach ( $this-&gt;get_shipping_methods() as $item_id =&gt; $item ) {
+			if ( false !== $shipping_tax_class &amp;&amp; ! $is_vat_exempt ) {
+				$item-&gt;calculate_taxes( array_merge( $calculate_tax_for, array( &#039;tax_class&#039; =&gt; $shipping_tax_class ) ) );
+			} else {
+				$item-&gt;set_taxes( false );
+			}
+		}
+
+		$this-&gt;update_taxes();
+	}
+
+	/**
+	 * Calculate fees for all line items.
+	 *
+	 * @return float Fee total.
+	 */
+	public function get_total_fees() {
+		return array_reduce(
+			$this-&gt;get_fees(),
+			function( $carry, $item ) {
+				return $carry + $item-&gt;get_total();
+			}
+		);
+	}
+
+	/**
+	 * Update tax lines for the order based on the line item taxes themselves.
+	 */
+	public function update_taxes() {
+		$cart_taxes     = array();
+		$shipping_taxes = array();
+		$existing_taxes = $this-&gt;get_taxes();
+		$saved_rate_ids = array();
+
+		foreach ( $this-&gt;get_items( array( &#039;line_item&#039;, &#039;fee&#039; ) ) as $item_id =&gt; $item ) {
+			$taxes = $item-&gt;get_taxes();
+			foreach ( $taxes[&#039;total&#039;] as $tax_rate_id =&gt; $tax ) {
+				$tax_amount = (float) $this-&gt;round_line_tax( $tax, false );
+
+				$cart_taxes[ $tax_rate_id ] = isset( $cart_taxes[ $tax_rate_id ] ) ? (float) $cart_taxes[ $tax_rate_id ] + $tax_amount : $tax_amount;
+			}
+		}
+
+		foreach ( $this-&gt;get_shipping_methods() as $item_id =&gt; $item ) {
+			$taxes = $item-&gt;get_taxes();
+			foreach ( $taxes[&#039;total&#039;] as $tax_rate_id =&gt; $tax ) {
+				$tax_amount = (float) $tax;
+
+				if ( &#039;yes&#039; !== get_option( &#039;woocommerce_tax_round_at_subtotal&#039; ) ) {
+					$tax_amount = wc_round_tax_total( $tax_amount );
+				}
+
+				$shipping_taxes[ $tax_rate_id ] = isset( $shipping_taxes[ $tax_rate_id ] ) ? $shipping_taxes[ $tax_rate_id ] + $tax_amount : $tax_amount;
+			}
+		}
+
+		foreach ( $existing_taxes as $tax ) {
+			// Remove taxes which no longer exist for cart/shipping.
+			if ( ( ! array_key_exists( $tax-&gt;get_rate_id(), $cart_taxes ) &amp;&amp; ! array_key_exists( $tax-&gt;get_rate_id(), $shipping_taxes ) ) || in_array( $tax-&gt;get_rate_id(), $saved_rate_ids, true ) ) {
+				$this-&gt;remove_item( $tax-&gt;get_id() );
+				continue;
+			}
+			$saved_rate_ids[] = $tax-&gt;get_rate_id();
+			$tax-&gt;set_rate( $tax-&gt;get_rate_id() );
+			$tax-&gt;set_tax_total( isset( $cart_taxes[ $tax-&gt;get_rate_id() ] ) ? $cart_taxes[ $tax-&gt;get_rate_id() ] : 0 );
+			$tax-&gt;set_label( WC_Tax::get_rate_label( $tax-&gt;get_rate_id() ) );
+			$tax-&gt;set_shipping_tax_total( ! empty( $shipping_taxes[ $tax-&gt;get_rate_id() ] ) ? $shipping_taxes[ $tax-&gt;get_rate_id() ] : 0 );
+			$tax-&gt;save();
+		}
+
+		$new_rate_ids = wp_parse_id_list( array_diff( array_keys( $cart_taxes + $shipping_taxes ), $saved_rate_ids ) );
+
+		// New taxes.
+		foreach ( $new_rate_ids as $tax_rate_id ) {
+			$item = new WC_Order_Item_Tax();
+			$item-&gt;set_rate( $tax_rate_id );
+			$item-&gt;set_tax_total( isset( $cart_taxes[ $tax_rate_id ] ) ? $cart_taxes[ $tax_rate_id ] : 0 );
+			$item-&gt;set_shipping_tax_total( ! empty( $shipping_taxes[ $tax_rate_id ] ) ? $shipping_taxes[ $tax_rate_id ] : 0 );
+			$this-&gt;add_item( $item );
+		}
+
+		$this-&gt;set_shipping_tax( array_sum( $shipping_taxes ) );
+		$this-&gt;set_cart_tax( array_sum( $cart_taxes ) );
+		$this-&gt;save();
+	}
+
+	/**
+	 * Helper function.
+	 * If you add all items in this order in cart again, this would be the cart subtotal (assuming all other settings are same).
+	 *
+	 * @return float Cart subtotal.
+	 */
+	protected function get_cart_subtotal_for_order() {
+		return wc_remove_number_precision(
+			$this-&gt;get_rounded_items_total(
+				$this-&gt;get_values_for_total( &#039;subtotal&#039; )
+			)
+		);
+	}
+
+	/**
+	 * Helper function.
+	 * If you add all items in this order in cart again, this would be the cart total (assuming all other settings are same).
+	 *
+	 * @return float Cart total.
+	 */
+	protected function get_cart_total_for_order() {
+		return wc_remove_number_precision(
+			$this-&gt;get_rounded_items_total(
+				$this-&gt;get_values_for_total( &#039;total&#039; )
+			)
+		);
+	}
+
+	/**
+	 * Calculate totals by looking at the contents of the order. Stores the totals and returns the orders final total.
+	 *
+	 * @since 2.2
+	 * @param  bool $and_taxes Calc taxes if true.
+	 * @return float calculated grand total.
+	 */
+	public function calculate_totals( $and_taxes = true ) {
+		do_action( &#039;woocommerce_order_before_calculate_totals&#039;, $and_taxes, $this );
+
+		$fees_total        = 0;
+		$shipping_total    = 0;
+		$cart_subtotal_tax = 0;
+		$cart_total_tax    = 0;
+
+		$cart_subtotal = $this-&gt;get_cart_subtotal_for_order();
+		$cart_total    = $this-&gt;get_cart_total_for_order();
+
+		// Sum shipping costs.
+		foreach ( $this-&gt;get_shipping_methods() as $shipping ) {
+			$shipping_total += NumberUtil::round( $shipping-&gt;get_total(), wc_get_price_decimals() );
+		}
+
+		$this-&gt;set_shipping_total( $shipping_total );
+
+		// Sum fee costs.
+		foreach ( $this-&gt;get_fees() as $item ) {
+			$fee_total = $item-&gt;get_total();
+
+			if ( 0 &gt; $fee_total ) {
+				$max_discount = NumberUtil::round( $cart_total + $fees_total + $shipping_total, wc_get_price_decimals() ) * -1;
+
+				if ( $fee_total &lt; $max_discount &amp;&amp; 0 &gt; $max_discount ) {
+					$item-&gt;set_total( $max_discount );
+				}
+			}
+			$fees_total += $item-&gt;get_total();
+		}
+
+		// Calculate taxes for items, shipping, discounts. Note; this also triggers save().
+		if ( $and_taxes ) {
+			$this-&gt;calculate_taxes();
+		}
+
+		// Sum taxes again so we can work out how much tax was discounted. This uses original values, not those possibly rounded to 2dp.
+		foreach ( $this-&gt;get_items() as $item ) {
+			$taxes = $item-&gt;get_taxes();
+
+			foreach ( $taxes[&#039;total&#039;] as $tax_rate_id =&gt; $tax ) {
+				$cart_total_tax += (float) $tax;
+			}
+
+			foreach ( $taxes[&#039;subtotal&#039;] as $tax_rate_id =&gt; $tax ) {
+				$cart_subtotal_tax += (float) $tax;
+			}
+		}
+
+		$this-&gt;set_discount_total( NumberUtil::round( $cart_subtotal - $cart_total, wc_get_price_decimals() ) );
+		$this-&gt;set_discount_tax( wc_round_tax_total( $cart_subtotal_tax - $cart_total_tax ) );
+		$this-&gt;set_total( NumberUtil::round( $cart_total + $fees_total + $this-&gt;get_shipping_total() + $this-&gt;get_cart_tax() + $this-&gt;get_shipping_tax(), wc_get_price_decimals() ) );
+
+		do_action( &#039;woocommerce_order_after_calculate_totals&#039;, $and_taxes, $this );
+
+		$this-&gt;save();
+
+		return $this-&gt;get_total();
+	}
+
+	/**
+	 * Get item subtotal - this is the cost before discount.
+	 *
+	 * @param object $item Item to get total from.
+	 * @param bool   $inc_tax (default: false).
+	 * @param bool   $round (default: true).
+	 * @return float
+	 */
+	public function get_item_subtotal( $item, $inc_tax = false, $round = true ) {
+		$subtotal = 0;
+
+		if ( is_callable( array( $item, &#039;get_subtotal&#039; ) ) &amp;&amp; $item-&gt;get_quantity() ) {
+			if ( $inc_tax ) {
+				$subtotal = ( $item-&gt;get_subtotal() + $item-&gt;get_subtotal_tax() ) / $item-&gt;get_quantity();
+			} else {
+				$subtotal = floatval( $item-&gt;get_subtotal() ) / $item-&gt;get_quantity();
+			}
+
+			$subtotal = $round ? NumberUtil::round( $subtotal, wc_get_price_decimals() ) : $subtotal;
+		}
+
+		return apply_filters( &#039;woocommerce_order_amount_item_subtotal&#039;, $subtotal, $this, $item, $inc_tax, $round );
+	}
+
+	/**
+	 * Get line subtotal - this is the cost before discount.
+	 *
+	 * @param object $item Item to get total from.
+	 * @param bool   $inc_tax (default: false).
+	 * @param bool   $round (default: true).
+	 * @return float
+	 */
+	public function get_line_subtotal( $item, $inc_tax = false, $round = true ) {
+		$subtotal = 0;
+
+		if ( is_callable( array( $item, &#039;get_subtotal&#039; ) ) ) {
+			if ( $inc_tax ) {
+				$subtotal = $item-&gt;get_subtotal() + $item-&gt;get_subtotal_tax();
+			} else {
+				$subtotal = $item-&gt;get_subtotal();
+			}
+
+			$subtotal = $round ? NumberUtil::round( $subtotal, wc_get_price_decimals() ) : $subtotal;
+		}
+
+		return apply_filters( &#039;woocommerce_order_amount_line_subtotal&#039;, $subtotal, $this, $item, $inc_tax, $round );
+	}
+
+	/**
+	 * Calculate item cost - useful for gateways.
+	 *
+	 * @param object $item Item to get total from.
+	 * @param bool   $inc_tax (default: false).
+	 * @param bool   $round (default: true).
+	 * @return float
+	 */
+	public function get_item_total( $item, $inc_tax = false, $round = true ) {
+		$total = 0;
+
+		if ( is_callable( array( $item, &#039;get_total&#039; ) ) &amp;&amp; $item-&gt;get_quantity() ) {
+			if ( $inc_tax ) {
+				$total = ( $item-&gt;get_total() + $item-&gt;get_total_tax() ) / $item-&gt;get_quantity();
+			} else {
+				$total = floatval( $item-&gt;get_total() ) / $item-&gt;get_quantity();
+			}
+
+			$total = $round ? NumberUtil::round( $total, wc_get_price_decimals() ) : $total;
+		}
+
+		return apply_filters( &#039;woocommerce_order_amount_item_total&#039;, $total, $this, $item, $inc_tax, $round );
+	}
+
+	/**
+	 * Calculate line total - useful for gateways.
+	 *
+	 * @param object $item Item to get total from.
+	 * @param bool   $inc_tax (default: false).
+	 * @param bool   $round (default: true).
+	 * @return float
+	 */
+	public function get_line_total( $item, $inc_tax = false, $round = true ) {
+		$total = 0;
+
+		if ( is_callable( array( $item, &#039;get_total&#039; ) ) ) {
+			// Check if we need to add line tax to the line total.
+			$total = $inc_tax ? $item-&gt;get_total() + $item-&gt;get_total_tax() : $item-&gt;get_total();
+
+			// Check if we need to round.
+			$total = $round ? NumberUtil::round( $total, wc_get_price_decimals() ) : $total;
+		}
+
+		return apply_filters( &#039;woocommerce_order_amount_line_total&#039;, $total, $this, $item, $inc_tax, $round );
+	}
+
+	/**
+	 * Get item tax - useful for gateways.
+	 *
+	 * @param mixed $item Item to get total from.
+	 * @param bool  $round (default: true).
+	 * @return float
+	 */
+	public function get_item_tax( $item, $round = true ) {
+		$tax = 0;
+
+		if ( is_callable( array( $item, &#039;get_total_tax&#039; ) ) &amp;&amp; $item-&gt;get_quantity() ) {
+			$tax = $item-&gt;get_total_tax() / $item-&gt;get_quantity();
+			$tax = $round ? wc_round_tax_total( $tax ) : $tax;
+		}
+
+		return apply_filters( &#039;woocommerce_order_amount_item_tax&#039;, $tax, $item, $round, $this );
+	}
+
+	/**
+	 * Get line tax - useful for gateways.
+	 *
+	 * @param mixed $item Item to get total from.
+	 * @return float
+	 */
+	public function get_line_tax( $item ) {
+		return apply_filters( &#039;woocommerce_order_amount_line_tax&#039;, is_callable( array( $item, &#039;get_total_tax&#039; ) ) ? wc_round_tax_total( $item-&gt;get_total_tax() ) : 0, $item, $this );
+	}
+
+	/**
+	 * Gets line subtotal - formatted for display.
+	 *
+	 * @param object $item Item to get total from.
+	 * @param string $tax_display Incl or excl tax display mode.
+	 * @return string
+	 */
+	public function get_formatted_line_subtotal( $item, $tax_display = &#039;&#039; ) {
+		$tax_display = $tax_display ? $tax_display : get_option( &#039;woocommerce_tax_display_cart&#039; );
+
+		if ( &#039;excl&#039; === $tax_display ) {
+			$ex_tax_label = $this-&gt;get_prices_include_tax() ? 1 : 0;
+
+			$subtotal = wc_price(
+				$this-&gt;get_line_subtotal( $item ),
+				array(
+					&#039;ex_tax_label&#039; =&gt; $ex_tax_label,
+					&#039;currency&#039;     =&gt; $this-&gt;get_currency(),
+				)
+			);
+		} else {
+			$subtotal = wc_price( $this-&gt;get_line_subtotal( $item, true ), array( &#039;currency&#039; =&gt; $this-&gt;get_currency() ) );
+		}
+
+		return apply_filters( &#039;woocommerce_order_formatted_line_subtotal&#039;, $subtotal, $item, $this );
+	}
+
+	/**
+	 * Gets order total - formatted for display.
+	 *
+	 * @return string
+	 */
+	public function get_formatted_order_total() {
+		$formatted_total = wc_price( $this-&gt;get_total(), array( &#039;currency&#039; =&gt; $this-&gt;get_currency() ) );
+		return apply_filters( &#039;woocommerce_get_formatted_order_total&#039;, $formatted_total, $this );
+	}
+
+	/**
+	 * Gets subtotal - subtotal is shown before discounts, but with localised taxes.
+	 *
+	 * @param bool   $compound (default: false).
+	 * @param string $tax_display (default: the tax_display_cart value).
+	 * @return string
+	 */
+	public function get_subtotal_to_display( $compound = false, $tax_display = &#039;&#039; ) {
+		$tax_display = $tax_display ? $tax_display : get_option( &#039;woocommerce_tax_display_cart&#039; );
+		$subtotal    = $this-&gt;get_cart_subtotal_for_order();
+
+		if ( ! $compound ) {
+
+			if ( &#039;incl&#039; === $tax_display ) {
+				$subtotal_taxes = 0;
+				foreach ( $this-&gt;get_items() as $item ) {
+					$subtotal_taxes += self::round_line_tax( $item-&gt;get_subtotal_tax(), false );
+				}
+				$subtotal += wc_round_tax_total( $subtotal_taxes );
+			}
+
+			$subtotal = wc_price( $subtotal, array( &#039;currency&#039; =&gt; $this-&gt;get_currency() ) );
+
+			if ( &#039;excl&#039; === $tax_display &amp;&amp; $this-&gt;get_prices_include_tax() &amp;&amp; wc_tax_enabled() ) {
+				$subtotal .= &#039; &lt;small class=&quot;tax_label&quot;&gt;&#039; . WC()-&gt;countries-&gt;ex_tax_or_vat() . &#039;&lt;/small&gt;&#039;;
+			}
+		} else {
+			if ( &#039;incl&#039; === $tax_display ) {
+				return &#039;&#039;;
+			}
+
+			// Add Shipping Costs.
+			$subtotal += $this-&gt;get_shipping_total();
+
+			// Remove non-compound taxes.
+			foreach ( $this-&gt;get_taxes() as $tax ) {
+				if ( $tax-&gt;is_compound() ) {
+					continue;
+				}
+				$subtotal = $subtotal + $tax-&gt;get_tax_total() + $tax-&gt;get_shipping_tax_total();
+			}
+
+			// Remove discounts.
+			$subtotal = $subtotal - $this-&gt;get_total_discount();
+			$subtotal = wc_price( $subtotal, array( &#039;currency&#039; =&gt; $this-&gt;get_currency() ) );
+		}
+
+		return apply_filters( &#039;woocommerce_order_subtotal_to_display&#039;, $subtotal, $compound, $this );
+	}
+
+	/**
+	 * Gets shipping (formatted).
+	 *
+	 * @param string $tax_display Excl or incl tax display mode.
+	 * @return string
+	 */
+	public function get_shipping_to_display( $tax_display = &#039;&#039; ) {
+		$tax_display = $tax_display ? $tax_display : get_option( &#039;woocommerce_tax_display_cart&#039; );
+
+		if ( 0 &lt; abs( (float) $this-&gt;get_shipping_total() ) ) {
+
+			if ( &#039;excl&#039; === $tax_display ) {
+
+				// Show shipping excluding tax.
+				$shipping = wc_price( $this-&gt;get_shipping_total(), array( &#039;currency&#039; =&gt; $this-&gt;get_currency() ) );
+
+				if ( (float) $this-&gt;get_shipping_tax() &gt; 0 &amp;&amp; $this-&gt;get_prices_include_tax() ) {
+					$shipping .= apply_filters( &#039;woocommerce_order_shipping_to_display_tax_label&#039;, &#039;&amp;nbsp;&lt;small class=&quot;tax_label&quot;&gt;&#039; . WC()-&gt;countries-&gt;ex_tax_or_vat() . &#039;&lt;/small&gt;&#039;, $this, $tax_display );
+				}
+			} else {
+
+				// Show shipping including tax.
+				$shipping = wc_price( (float) $this-&gt;get_shipping_total() + (float) $this-&gt;get_shipping_tax(), array( &#039;currency&#039; =&gt; $this-&gt;get_currency() ) );
+
+				if ( (float) $this-&gt;get_shipping_tax() &gt; 0 &amp;&amp; ! $this-&gt;get_prices_include_tax() ) {
+					$shipping .= apply_filters( &#039;woocommerce_order_shipping_to_display_tax_label&#039;, &#039;&amp;nbsp;&lt;small class=&quot;tax_label&quot;&gt;&#039; . WC()-&gt;countries-&gt;inc_tax_or_vat() . &#039;&lt;/small&gt;&#039;, $this, $tax_display );
+				}
+			}
+
+			/* translators: %s: method */
+			$shipping .= apply_filters( &#039;woocommerce_order_shipping_to_display_shipped_via&#039;, &#039;&amp;nbsp;&lt;small class=&quot;shipped_via&quot;&gt;&#039; . sprintf( __( &#039;via %s&#039;, &#039;woocommerce&#039; ), $this-&gt;get_shipping_method() ) . &#039;&lt;/small&gt;&#039;, $this );
+
+		} elseif ( $this-&gt;get_shipping_method() ) {
+			$shipping = $this-&gt;get_shipping_method();
+		} else {
+			$shipping = __( &#039;Free!&#039;, &#039;woocommerce&#039; );
+		}
+
+		return apply_filters( &#039;woocommerce_order_shipping_to_display&#039;, $shipping, $this, $tax_display );
+	}
+
+	/**
+	 * Get the discount amount (formatted).
+	 *
+	 * @since  2.3.0
+	 * @param string $tax_display Excl or incl tax display mode.
+	 * @return string
+	 */
+	public function get_discount_to_display( $tax_display = &#039;&#039; ) {
+		$tax_display = $tax_display ? $tax_display : get_option( &#039;woocommerce_tax_display_cart&#039; );
+
+		/**
+		 * Filter the discount amount to display.
+		 *
+		 * @since 2.7.0.
+		 */
+		return apply_filters( &#039;woocommerce_order_discount_to_display&#039;, wc_price( $this-&gt;get_total_discount( &#039;excl&#039; === $tax_display ), array( &#039;currency&#039; =&gt; $this-&gt;get_currency() ) ), $this );
+	}
+
+	/**
+	 * Add total row for subtotal.
+	 *
+	 * @param array  $total_rows Reference to total rows array.
+	 * @param string $tax_display Excl or incl tax display mode.
+	 */
+	protected function add_order_item_totals_subtotal_row( &amp;$total_rows, $tax_display ) {
+		$subtotal = $this-&gt;get_subtotal_to_display( false, $tax_display );
+
+		if ( $subtotal ) {
+			$total_rows[&#039;cart_subtotal&#039;] = array(
+				&#039;label&#039; =&gt; __( &#039;Subtotal:&#039;, &#039;woocommerce&#039; ),
+				&#039;value&#039; =&gt; $subtotal,
+			);
+		}
+	}
+
+	/**
+	 * Add total row for discounts.
+	 *
+	 * @param array  $total_rows Reference to total rows array.
+	 * @param string $tax_display Excl or incl tax display mode.
+	 */
+	protected function add_order_item_totals_discount_row( &amp;$total_rows, $tax_display ) {
+		if ( $this-&gt;get_total_discount() &gt; 0 ) {
+			$total_rows[&#039;discount&#039;] = array(
+				&#039;label&#039; =&gt; __( &#039;Discount:&#039;, &#039;woocommerce&#039; ),
+				&#039;value&#039; =&gt; &#039;-&#039; . $this-&gt;get_discount_to_display( $tax_display ),
+			);
+		}
+	}
+
+	/**
+	 * Add total row for shipping.
+	 *
+	 * @param array  $total_rows Reference to total rows array.
+	 * @param string $tax_display Excl or incl tax display mode.
+	 */
+	protected function add_order_item_totals_shipping_row( &amp;$total_rows, $tax_display ) {
+		if ( $this-&gt;get_shipping_method() ) {
+			$total_rows[&#039;shipping&#039;] = array(
+				&#039;label&#039; =&gt; __( &#039;Shipping:&#039;, &#039;woocommerce&#039; ),
+				&#039;value&#039; =&gt; $this-&gt;get_shipping_to_display( $tax_display ),
+			);
+		}
+	}
+
+	/**
+	 * Add total row for fees.
+	 *
+	 * @param array  $total_rows Reference to total rows array.
+	 * @param string $tax_display Excl or incl tax display mode.
+	 */
+	protected function add_order_item_totals_fee_rows( &amp;$total_rows, $tax_display ) {
+		$fees = $this-&gt;get_fees();
+
+		if ( $fees ) {
+			foreach ( $fees as $id =&gt; $fee ) {
+				if ( apply_filters( &#039;woocommerce_get_order_item_totals_excl_free_fees&#039;, empty( $fee[&#039;line_total&#039;] ) &amp;&amp; empty( $fee[&#039;line_tax&#039;] ), $id ) ) {
+					continue;
+				}
+				$total_rows[ &#039;fee_&#039; . $fee-&gt;get_id() ] = array(
+					&#039;label&#039; =&gt; $fee-&gt;get_name() . &#039;:&#039;,
+					&#039;value&#039; =&gt; wc_price( &#039;excl&#039; === $tax_display ? $fee-&gt;get_total() : $fee-&gt;get_total() + $fee-&gt;get_total_tax(), array( &#039;currency&#039; =&gt; $this-&gt;get_currency() ) ),
+				);
+			}
+		}
+	}
+
+	/**
+	 * Add total row for taxes.
+	 *
+	 * @param array  $total_rows Reference to total rows array.
+	 * @param string $tax_display Excl or incl tax display mode.
+	 */
+	protected function add_order_item_totals_tax_rows( &amp;$total_rows, $tax_display ) {
+		// Tax for tax exclusive prices.
+		if ( &#039;excl&#039; === $tax_display &amp;&amp; wc_tax_enabled() ) {
+			if ( &#039;itemized&#039; === get_option( &#039;woocommerce_tax_total_display&#039; ) ) {
+				foreach ( $this-&gt;get_tax_totals() as $code =&gt; $tax ) {
+					$total_rows[ sanitize_title( $code ) ] = array(
+						&#039;label&#039; =&gt; $tax-&gt;label . &#039;:&#039;,
+						&#039;value&#039; =&gt; $tax-&gt;formatted_amount,
+					);
+				}
+			} else {
+				$total_rows[&#039;tax&#039;] = array(
+					&#039;label&#039; =&gt; WC()-&gt;countries-&gt;tax_or_vat() . &#039;:&#039;,
+					&#039;value&#039; =&gt; wc_price( $this-&gt;get_total_tax(), array( &#039;currency&#039; =&gt; $this-&gt;get_currency() ) ),
+				);
+			}
+		}
+	}
+
+	/**
+	 * Add total row for grand total.
+	 *
+	 * @param array  $total_rows Reference to total rows array.
+	 * @param string $tax_display Excl or incl tax display mode.
+	 */
+	protected function add_order_item_totals_total_row( &amp;$total_rows, $tax_display ) {
+		$total_rows[&#039;order_total&#039;] = array(
+			&#039;label&#039; =&gt; __( &#039;Total:&#039;, &#039;woocommerce&#039; ),
+			&#039;value&#039; =&gt; $this-&gt;get_formatted_order_total( $tax_display ),
+		);
+	}
+
+	/**
+	 * Get totals for display on pages and in emails.
+	 *
+	 * @param mixed $tax_display Excl or incl tax display mode.
+	 * @return array
+	 */
+	public function get_order_item_totals( $tax_display = &#039;&#039; ) {
+		$tax_display = $tax_display ? $tax_display : get_option( &#039;woocommerce_tax_display_cart&#039; );
+		$total_rows  = array();
+
+		$this-&gt;add_order_item_totals_subtotal_row( $total_rows, $tax_display );
+		$this-&gt;add_order_item_totals_discount_row( $total_rows, $tax_display );
+		$this-&gt;add_order_item_totals_shipping_row( $total_rows, $tax_display );
+		$this-&gt;add_order_item_totals_fee_rows( $total_rows, $tax_display );
+		$this-&gt;add_order_item_totals_tax_rows( $total_rows, $tax_display );
+		$this-&gt;add_order_item_totals_total_row( $total_rows, $tax_display );
+
+		return apply_filters( &#039;woocommerce_get_order_item_totals&#039;, $total_rows, $this, $tax_display );
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Conditionals
+	|--------------------------------------------------------------------------
+	|
+	| Checks if a condition is true or false.
+	|
+	*/
+
+	/**
+	 * Checks the order status against a passed in status.
+	 *
+	 * @param array|string $status Status to check.
+	 * @return bool
+	 */
+	public function has_status( $status ) {
+		return apply_filters( &#039;woocommerce_order_has_status&#039;, ( is_array( $status ) &amp;&amp; in_array( $this-&gt;get_status(), $status, true ) ) || $this-&gt;get_status() === $status, $this, $status );
+	}
+
+	/**
+	 * Check whether this order has a specific shipping method or not.
+	 *
+	 * @param string $method_id Method ID to check.
+	 * @return bool
+	 */
+	public function has_shipping_method( $method_id ) {
+		foreach ( $this-&gt;get_shipping_methods() as $shipping_method ) {
+			if ( strpos( $shipping_method-&gt;get_method_id(), $method_id ) === 0 ) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Returns true if the order contains a free product.
+	 *
+	 * @since 2.5.0
+	 * @return bool
+	 */
+	public function has_free_item() {
+		foreach ( $this-&gt;get_items() as $item ) {
+			if ( ! $item-&gt;get_total() ) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Get order title.
+	 *
+	 * @return string Order title.
+	 */
+	public function get_title() : string {
+		if ( method_exists( $this-&gt;data_store, &#039;get_title&#039; ) ) {
+			return $this-&gt;data_store-&gt;get_title( $this );
+		} else {
+			return __( &#039;Order&#039;, &#039;woocommerce&#039; );
+		}
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866945"></script>
+    <script src="../js/search.js?updated=1692866945"></script>
+</body>
+</html>

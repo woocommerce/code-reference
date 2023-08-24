@@ -1,0 +1,2489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866946">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866946">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-admin-setup-wizard.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Setup Wizard Class
+ *
+ * Takes new users through some basic steps to setup their store.
+ *
+ * @package     WooCommerce\Admin
+ * @version     2.6.0
+ * @deprecated  4.6.0
+ */
+
+use Automattic\Jetpack\Constants;
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * WC_Admin_Setup_Wizard class.
+ */
+class WC_Admin_Setup_Wizard {
+
+	/**
+	 * Current step
+	 *
+	 * @var string
+	 */
+	private $step = &#039;&#039;;
+
+	/**
+	 * Steps for the setup wizard
+	 *
+	 * @var array
+	 */
+	private $steps = array();
+
+	/**
+	 * Actions to be executed after the HTTP response has completed
+	 *
+	 * @var array
+	 */
+	private $deferred_actions = array();
+
+	/**
+	 * Tweets user can optionally send after install
+	 *
+	 * @var array
+	 */
+	private $tweets = array(
+		&#039;Someone give me woo-t, I just set up a new store with #WordPress and @WooCommerce!&#039;,
+		&#039;Someone give me high five, I just set up a new store with #WordPress and @WooCommerce!&#039;,
+	);
+
+	/**
+	 * The version of WordPress required to run the WooCommerce Admin plugin
+	 *
+	 * @var string
+	 */
+	private $wc_admin_plugin_minimum_wordpress_version = &#039;5.3&#039;;
+
+	/**
+	 * Hook in tabs.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function __construct() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+	}
+
+	/**
+	 * Add admin menus/screens.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function admin_menus() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		add_dashboard_page( &#039;&#039;, &#039;&#039;, &#039;manage_options&#039;, &#039;wc-setup&#039;, &#039;&#039; );
+	}
+
+	/**
+	 * The theme &quot;extra&quot; should only be shown if the current user can modify themes
+	 * and the store doesn&#039;t already have a WooCommerce theme.
+	 *
+	 * @deprecated 4.6.0
+	 * @return boolean
+	 */
+	protected function should_show_theme() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$support_woocommerce = current_theme_supports( &#039;woocommerce&#039; ) &amp;&amp; ! wc_is_wp_default_theme_active();
+
+		return (
+			current_user_can( &#039;install_themes&#039; ) &amp;&amp;
+			current_user_can( &#039;switch_themes&#039; ) &amp;&amp;
+			! is_multisite() &amp;&amp;
+			! $support_woocommerce
+		);
+	}
+
+	/**
+	 * The &quot;automated tax&quot; extra should only be shown if the current user can
+	 * install plugins and the store is in a supported country.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function should_show_automated_tax() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		if ( ! current_user_can( &#039;install_plugins&#039; ) ) {
+			return false;
+		}
+
+		$country_code = WC()-&gt;countries-&gt;get_base_country();
+		// https://developers.taxjar.com/api/reference/#countries .
+		$tax_supported_countries = array_merge(
+			array( &#039;US&#039;, &#039;CA&#039;, &#039;AU&#039;, &#039;GB&#039; ),
+			WC()-&gt;countries-&gt;get_european_union_countries()
+		);
+
+		return in_array( $country_code, $tax_supported_countries, true );
+	}
+
+	/**
+	 * Should we show the MailChimp install option?
+	 * True only if the user can install plugins.
+	 *
+	 * @deprecated 4.6.0
+	 * @return boolean
+	 */
+	protected function should_show_mailchimp() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		return current_user_can( &#039;install_plugins&#039; );
+	}
+
+	/**
+	 * Should we show the Facebook install option?
+	 * True only if the user can install plugins,
+	 * and up until the end date of the recommendation.
+	 *
+	 * @deprecated 4.6.0
+	 * @return boolean
+	 */
+	protected function should_show_facebook() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		return current_user_can( &#039;install_plugins&#039; );
+	}
+
+	/**
+	 * Is the WooCommerce Admin actively included in the WooCommerce core?
+	 * Based on presence of a basic WC Admin function.
+	 *
+	 * @deprecated 4.6.0
+	 * @return boolean
+	 */
+	protected function is_wc_admin_active() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		return function_exists( &#039;wc_admin_url&#039; );
+	}
+
+	/**
+	 * Should we show the WooCommerce Admin install option?
+	 * True only if the user can install plugins,
+	 * and is running the correct version of WordPress.
+	 *
+	 * @see WC_Admin_Setup_Wizard::$wc_admin_plugin_minimum_wordpress_version
+	 *
+	 * @deprecated 4.6.0
+	 * @return boolean
+	 */
+	protected function should_show_wc_admin() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$wordpress_minimum_met = version_compare( get_bloginfo( &#039;version&#039; ), $this-&gt;wc_admin_plugin_minimum_wordpress_version, &#039;&gt;=&#039; );
+		return current_user_can( &#039;install_plugins&#039; ) &amp;&amp; $wordpress_minimum_met &amp;&amp; ! $this-&gt;is_wc_admin_active();
+	}
+
+	/**
+	 * Should we show the new WooCommerce Admin onboarding experience?
+	 *
+	 * @deprecated 4.6.0
+	 * @return boolean
+	 */
+	protected function should_show_wc_admin_onboarding() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		// As of WooCommerce 4.1, all new sites should use the latest OBW from wc-admin package.
+		// This filter will allow for forcing the old wizard while we migrate e2e tests.
+		return ! apply_filters( &#039;woocommerce_setup_wizard_force_legacy&#039;, false );
+	}
+
+	/**
+	 * Should we display the &#039;Recommended&#039; step?
+	 * True if at least one of the recommendations will be displayed.
+	 *
+	 * @deprecated 4.6.0
+	 * @return boolean
+	 */
+	protected function should_show_recommended_step() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		return $this-&gt;should_show_theme()
+			|| $this-&gt;should_show_automated_tax()
+			|| $this-&gt;should_show_mailchimp()
+			|| $this-&gt;should_show_facebook()
+			|| $this-&gt;should_show_wc_admin();
+	}
+
+	/**
+	 * Register/enqueue scripts and styles for the Setup Wizard.
+	 *
+	 * Hooked onto &#039;admin_enqueue_scripts&#039;.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function enqueue_scripts() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+	}
+
+	/**
+	 * Show the setup wizard.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function setup_wizard() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		if ( empty( $_GET[&#039;page&#039;] ) || &#039;wc-setup&#039; !== $_GET[&#039;page&#039;] ) { // WPCS: CSRF ok, input var ok.
+			return;
+		}
+		$default_steps = array(
+			&#039;new_onboarding&#039; =&gt; array(
+				&#039;name&#039;    =&gt; &#039;&#039;,
+				&#039;view&#039;    =&gt; array( $this, &#039;wc_setup_new_onboarding&#039; ),
+				&#039;handler&#039; =&gt; array( $this, &#039;wc_setup_new_onboarding_save&#039; ),
+			),
+			&#039;store_setup&#039;    =&gt; array(
+				&#039;name&#039;    =&gt; __( &#039;Store setup&#039;, &#039;woocommerce&#039; ),
+				&#039;view&#039;    =&gt; array( $this, &#039;wc_setup_store_setup&#039; ),
+				&#039;handler&#039; =&gt; array( $this, &#039;wc_setup_store_setup_save&#039; ),
+			),
+			&#039;payment&#039;        =&gt; array(
+				&#039;name&#039;    =&gt; __( &#039;Payment&#039;, &#039;woocommerce&#039; ),
+				&#039;view&#039;    =&gt; array( $this, &#039;wc_setup_payment&#039; ),
+				&#039;handler&#039; =&gt; array( $this, &#039;wc_setup_payment_save&#039; ),
+			),
+			&#039;shipping&#039;       =&gt; array(
+				&#039;name&#039;    =&gt; __( &#039;Shipping&#039;, &#039;woocommerce&#039; ),
+				&#039;view&#039;    =&gt; array( $this, &#039;wc_setup_shipping&#039; ),
+				&#039;handler&#039; =&gt; array( $this, &#039;wc_setup_shipping_save&#039; ),
+			),
+			&#039;recommended&#039;    =&gt; array(
+				&#039;name&#039;    =&gt; __( &#039;Recommended&#039;, &#039;woocommerce&#039; ),
+				&#039;view&#039;    =&gt; array( $this, &#039;wc_setup_recommended&#039; ),
+				&#039;handler&#039; =&gt; array( $this, &#039;wc_setup_recommended_save&#039; ),
+			),
+			&#039;activate&#039;       =&gt; array(
+				&#039;name&#039;    =&gt; __( &#039;Activate&#039;, &#039;woocommerce&#039; ),
+				&#039;view&#039;    =&gt; array( $this, &#039;wc_setup_activate&#039; ),
+				&#039;handler&#039; =&gt; array( $this, &#039;wc_setup_activate_save&#039; ),
+			),
+			&#039;next_steps&#039;     =&gt; array(
+				&#039;name&#039;    =&gt; __( &#039;Ready!&#039;, &#039;woocommerce&#039; ),
+				&#039;view&#039;    =&gt; array( $this, &#039;wc_setup_ready&#039; ),
+				&#039;handler&#039; =&gt; &#039;&#039;,
+			),
+		);
+
+		// Hide the new/improved onboarding experience screen if the user is not part of the a/b test.
+		if ( ! $this-&gt;should_show_wc_admin_onboarding() ) {
+			unset( $default_steps[&#039;new_onboarding&#039;] );
+		}
+
+		// Hide recommended step if nothing is going to be shown there.
+		if ( ! $this-&gt;should_show_recommended_step() ) {
+			unset( $default_steps[&#039;recommended&#039;] );
+		}
+
+		// Hide shipping step if the store is selling digital products only.
+		if ( &#039;virtual&#039; === get_option( &#039;woocommerce_product_type&#039; ) ) {
+			unset( $default_steps[&#039;shipping&#039;] );
+		}
+
+		// Hide activate section when the user does not have capabilities to install plugins, think multiside admins not being a super admin.
+		if ( ! current_user_can( &#039;install_plugins&#039; ) ) {
+			unset( $default_steps[&#039;activate&#039;] );
+		}
+
+		$this-&gt;steps = apply_filters( &#039;woocommerce_setup_wizard_steps&#039;, $default_steps );
+		$this-&gt;step  = isset( $_GET[&#039;step&#039;] ) ? sanitize_key( $_GET[&#039;step&#039;] ) : current( array_keys( $this-&gt;steps ) ); // WPCS: CSRF ok, input var ok.
+
+		// @codingStandardsIgnoreStart
+		if ( ! empty( $_POST[&#039;save_step&#039;] ) &amp;&amp; isset( $this-&gt;steps[ $this-&gt;step ][&#039;handler&#039;] ) ) {
+			call_user_func( $this-&gt;steps[ $this-&gt;step ][&#039;handler&#039;], $this );
+		}
+		// @codingStandardsIgnoreEnd
+
+		ob_start();
+		$this-&gt;setup_wizard_header();
+		$this-&gt;setup_wizard_steps();
+		$this-&gt;setup_wizard_content();
+		$this-&gt;setup_wizard_footer();
+		exit;
+	}
+
+	/**
+	 * Get the URL for the next step&#039;s screen.
+	 *
+	 * @param string $step  slug (default: current step).
+	 * @return string       URL for next step if a next step exists.
+	 *                      Admin URL if it&#039;s the last step.
+	 *                      Empty string on failure.
+	 *
+	 * @deprecated 4.6.0
+	 * @since 3.0.0
+	 */
+	public function get_next_step_link( $step = &#039;&#039; ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		if ( ! $step ) {
+			$step = $this-&gt;step;
+		}
+
+		$keys = array_keys( $this-&gt;steps );
+		if ( end( $keys ) === $step ) {
+			return admin_url();
+		}
+
+		$step_index = array_search( $step, $keys, true );
+		if ( false === $step_index ) {
+			return &#039;&#039;;
+		}
+
+		return add_query_arg( &#039;step&#039;, $keys[ $step_index + 1 ], remove_query_arg( &#039;activate_error&#039; ) );
+	}
+
+	/**
+	 * Setup Wizard Header.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function setup_wizard_header() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		// same as default WP from wp-admin/admin-header.php.
+		$wp_version_class = &#039;branch-&#039; . str_replace( array( &#039;.&#039;, &#039;,&#039; ), &#039;-&#039;, floatval( get_bloginfo( &#039;version&#039; ) ) );
+
+		set_current_screen();
+		?&gt;
+		&lt;!DOCTYPE html&gt;
+		&lt;html &lt;?php language_attributes(); ?&gt;&gt;
+		&lt;head&gt;
+			&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+			&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+			&lt;title&gt;&lt;?php esc_html_e( &#039;WooCommerce &amp;rsaquo; Setup Wizard&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/title&gt;
+			&lt;?php do_action( &#039;admin_enqueue_scripts&#039; ); ?&gt;
+			&lt;?php wp_print_scripts( &#039;wc-setup&#039; ); ?&gt;
+			&lt;?php do_action( &#039;admin_print_styles&#039; ); ?&gt;
+			&lt;?php do_action( &#039;admin_head&#039; ); ?&gt;
+		&lt;/head&gt;
+		&lt;body class=&quot;wc-setup wp-core-ui &lt;?php echo esc_attr( &#039;wc-setup-step__&#039; . $this-&gt;step ); ?&gt; &lt;?php echo esc_attr( $wp_version_class ); ?&gt;&quot;&gt;
+		&lt;h1 class=&quot;wc-logo&quot;&gt;&lt;a href=&quot;https://woocommerce.com/&quot;&gt;&lt;img src=&quot;&lt;?php echo esc_url( WC()-&gt;plugin_url() ); ?&gt;/assets/images/woocommerce_logo.png&quot; alt=&quot;&lt;?php esc_attr_e( &#039;WooCommerce&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; /&gt;&lt;/a&gt;&lt;/h1&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Setup Wizard Footer.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function setup_wizard_footer() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$current_step = $this-&gt;step;
+		?&gt;
+			&lt;?php if ( &#039;new_onboarding&#039; === $current_step || &#039;store-setup&#039; === $current_step ) : ?&gt;
+				&lt;a class=&quot;wc-setup-footer-links&quot; href=&quot;&lt;?php echo esc_url( admin_url() ); ?&gt;&quot;&gt;&lt;?php esc_html_e( &#039;Not right now&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/a&gt;
+			&lt;?php elseif ( &#039;recommended&#039; === $current_step || &#039;activate&#039; === $current_step ) : ?&gt;
+				&lt;a class=&quot;wc-setup-footer-links&quot; href=&quot;&lt;?php echo esc_url( $this-&gt;get_next_step_link() ); ?&gt;&quot;&gt;&lt;?php esc_html_e( &#039;Skip this step&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/a&gt;
+			&lt;?php endif; ?&gt;
+			&lt;?php do_action( &#039;woocommerce_setup_footer&#039; ); ?&gt;
+			&lt;/body&gt;
+		&lt;/html&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Output the steps.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function setup_wizard_steps() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$output_steps      = $this-&gt;steps;
+		$selected_features = array_filter( $this-&gt;wc_setup_activate_get_feature_list() );
+
+		// Hide the activate step if Jetpack is already active, unless WooCommerce Services
+		// features are selected, or unless the Activate step was already taken.
+		if ( class_exists( &#039;Jetpack&#039; ) &amp;&amp; Jetpack::is_active() &amp;&amp; empty( $selected_features ) &amp;&amp; &#039;yes&#039; !== get_transient( &#039;wc_setup_activated&#039; ) ) {
+			unset( $output_steps[&#039;activate&#039;] );
+		}
+
+		unset( $output_steps[&#039;new_onboarding&#039;] );
+
+		?&gt;
+		&lt;ol class=&quot;wc-setup-steps&quot;&gt;
+			&lt;?php
+			foreach ( $output_steps as $step_key =&gt; $step ) {
+				$is_completed = array_search( $this-&gt;step, array_keys( $this-&gt;steps ), true ) &gt; array_search( $step_key, array_keys( $this-&gt;steps ), true );
+
+				if ( $step_key === $this-&gt;step ) {
+					?&gt;
+					&lt;li class=&quot;active&quot;&gt;&lt;?php echo esc_html( $step[&#039;name&#039;] ); ?&gt;&lt;/li&gt;
+					&lt;?php
+				} elseif ( $is_completed ) {
+					?&gt;
+					&lt;li class=&quot;done&quot;&gt;
+						&lt;a href=&quot;&lt;?php echo esc_url( add_query_arg( &#039;step&#039;, $step_key, remove_query_arg( &#039;activate_error&#039; ) ) ); ?&gt;&quot;&gt;&lt;?php echo esc_html( $step[&#039;name&#039;] ); ?&gt;&lt;/a&gt;
+					&lt;/li&gt;
+					&lt;?php
+				} else {
+					?&gt;
+					&lt;li&gt;&lt;?php echo esc_html( $step[&#039;name&#039;] ); ?&gt;&lt;/li&gt;
+					&lt;?php
+				}
+			}
+			?&gt;
+		&lt;/ol&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Output the content for the current step.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function setup_wizard_content() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		echo &#039;&lt;div class=&quot;wc-setup-content&quot;&gt;&#039;;
+		if ( ! empty( $this-&gt;steps[ $this-&gt;step ][&#039;view&#039;] ) ) {
+			call_user_func( $this-&gt;steps[ $this-&gt;step ][&#039;view&#039;], $this );
+		}
+		echo &#039;&lt;/div&gt;&#039;;
+	}
+
+	/**
+	 * Display&#039;s a prompt for users to try out the new improved WooCommerce onboarding experience in WooCommerce Admin.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function wc_setup_new_onboarding() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		?&gt;
+			&lt;div class=&quot;wc-setup-step__new_onboarding-wrapper&quot;&gt;
+				&lt;p class=&quot;wc-setup-step__new_onboarding-welcome&quot;&gt;&lt;?php esc_html_e( &#039;Welcome to&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+				&lt;h1 class=&quot;wc-logo&quot;&gt;&lt;a href=&quot;https://woocommerce.com/&quot;&gt;&lt;img src=&quot;&lt;?php echo esc_url( WC()-&gt;plugin_url() ); ?&gt;/assets/images/woocommerce_logo.png&quot; alt=&quot;&lt;?php esc_attr_e( &#039;WooCommerce&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; /&gt;&lt;/a&gt;&lt;/h1&gt;
+				&lt;p&gt;&lt;?php esc_html_e( &#039;Get your store up and running more quickly with our new and improved setup experience&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+
+				&lt;form method=&quot;post&quot; class=&quot;activate-new-onboarding&quot;&gt;
+					&lt;?php wp_nonce_field( &#039;wc-setup&#039; ); ?&gt;
+					&lt;input type=&quot;hidden&quot; name=&quot;save_step&quot; value=&quot;new_onboarding&quot; /&gt;
+					&lt;p class=&quot;wc-setup-actions step&quot;&gt;
+						&lt;button class=&quot;button-primary button button-large&quot; value=&quot;&lt;?php esc_attr_e( &#039;Yes please&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; name=&quot;save_step&quot;&gt;&lt;?php esc_html_e( &#039;Yes please&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+					&lt;/p&gt;
+				&lt;/form&gt;
+				&lt;?php if ( ! $this-&gt;is_wc_admin_active() ) : ?&gt;
+					&lt;p class=&quot;wc-setup-step__new_onboarding-plugin-info&quot;&gt;&lt;?php esc_html_e( &#039;The &quot;WooCommerce Admin&quot; plugin will be installed and activated&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+				&lt;?php endif; ?&gt;
+			&lt;/div&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Installs WooCommerce admin and redirects to the new onboarding experience.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function wc_setup_new_onboarding_save() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+	}
+
+	/**
+	 * Initial &quot;store setup&quot; step.
+	 * Location, product type, page setup, and tracking opt-in.
+	 */
+	public function wc_setup_store_setup() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$address        = WC()-&gt;countries-&gt;get_base_address();
+		$address_2      = WC()-&gt;countries-&gt;get_base_address_2();
+		$city           = WC()-&gt;countries-&gt;get_base_city();
+		$state          = WC()-&gt;countries-&gt;get_base_state();
+		$country        = WC()-&gt;countries-&gt;get_base_country();
+		$postcode       = WC()-&gt;countries-&gt;get_base_postcode();
+		$currency       = get_option( &#039;woocommerce_currency&#039;, &#039;USD&#039; );
+		$product_type   = get_option( &#039;woocommerce_product_type&#039;, &#039;both&#039; );
+		$sell_in_person = get_option( &#039;woocommerce_sell_in_person&#039;, &#039;none_selected&#039; );
+
+		if ( empty( $country ) ) {
+			$user_location = WC_Geolocation::geolocate_ip();
+			$country       = $user_location[&#039;country&#039;];
+			$state         = $user_location[&#039;state&#039;];
+		}
+
+		$locale_info         = include WC()-&gt;plugin_path() . &#039;/i18n/locale-info.php&#039;;
+		$currency_by_country = wp_list_pluck( $locale_info, &#039;currency_code&#039; );
+		?&gt;
+		&lt;form method=&quot;post&quot; class=&quot;address-step&quot;&gt;
+			&lt;input type=&quot;hidden&quot; name=&quot;save_step&quot; value=&quot;store_setup&quot; /&gt;
+			&lt;?php wp_nonce_field( &#039;wc-setup&#039; ); ?&gt;
+			&lt;p class=&quot;store-setup&quot;&gt;&lt;?php esc_html_e( &#039;The following wizard will help you configure your store and get you started quickly.&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+
+			&lt;div class=&quot;store-address-container&quot;&gt;
+
+				&lt;label for=&quot;store_country&quot; class=&quot;location-prompt&quot;&gt;&lt;?php esc_html_e( &#039;Where is your store based?&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/label&gt;
+				&lt;select id=&quot;store_country&quot; name=&quot;store_country&quot; required data-placeholder=&quot;&lt;?php esc_attr_e( &#039;Choose a country / region&amp;hellip;&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; aria-label=&quot;&lt;?php esc_attr_e( &#039;Country / Region&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; class=&quot;location-input wc-enhanced-select dropdown&quot;&gt;
+					&lt;?php foreach ( WC()-&gt;countries-&gt;get_countries() as $code =&gt; $label ) : ?&gt;
+						&lt;option &lt;?php selected( $code, $country ); ?&gt; value=&quot;&lt;?php echo esc_attr( $code ); ?&gt;&quot;&gt;&lt;?php echo esc_html( $label ); ?&gt;&lt;/option&gt;
+					&lt;?php endforeach; ?&gt;
+				&lt;/select&gt;
+
+				&lt;label class=&quot;location-prompt&quot; for=&quot;store_address&quot;&gt;&lt;?php esc_html_e( &#039;Address&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/label&gt;
+				&lt;input type=&quot;text&quot; id=&quot;store_address&quot; class=&quot;location-input&quot; name=&quot;store_address&quot; required value=&quot;&lt;?php echo esc_attr( $address ); ?&gt;&quot; /&gt;
+
+				&lt;label class=&quot;location-prompt&quot; for=&quot;store_address_2&quot;&gt;&lt;?php esc_html_e( &#039;Address line 2&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/label&gt;
+				&lt;input type=&quot;text&quot; id=&quot;store_address_2&quot; class=&quot;location-input&quot; name=&quot;store_address_2&quot; value=&quot;&lt;?php echo esc_attr( $address_2 ); ?&gt;&quot; /&gt;
+
+				&lt;div class=&quot;city-and-postcode&quot;&gt;
+					&lt;div&gt;
+						&lt;label class=&quot;location-prompt&quot; for=&quot;store_city&quot;&gt;&lt;?php esc_html_e( &#039;City&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/label&gt;
+						&lt;input type=&quot;text&quot; id=&quot;store_city&quot; class=&quot;location-input&quot; name=&quot;store_city&quot; required value=&quot;&lt;?php echo esc_attr( $city ); ?&gt;&quot; /&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;store-state-container hidden&quot;&gt;
+						&lt;label for=&quot;store_state&quot; class=&quot;location-prompt&quot;&gt;
+							&lt;?php esc_html_e( &#039;State&#039;, &#039;woocommerce&#039; ); ?&gt;
+						&lt;/label&gt;
+						&lt;select id=&quot;store_state&quot; name=&quot;store_state&quot; data-placeholder=&quot;&lt;?php esc_attr_e( &#039;Choose a state&amp;hellip;&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; aria-label=&quot;&lt;?php esc_attr_e( &#039;State&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; class=&quot;location-input wc-enhanced-select dropdown&quot;&gt;&lt;/select&gt;
+					&lt;/div&gt;
+					&lt;div&gt;
+						&lt;label class=&quot;location-prompt&quot; for=&quot;store_postcode&quot;&gt;&lt;?php esc_html_e( &#039;Postcode / ZIP&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/label&gt;
+						&lt;input type=&quot;text&quot; id=&quot;store_postcode&quot; class=&quot;location-input&quot; name=&quot;store_postcode&quot; required value=&quot;&lt;?php echo esc_attr( $postcode ); ?&gt;&quot; /&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&quot;store-currency-container&quot;&gt;
+			&lt;label class=&quot;location-prompt&quot; for=&quot;currency_code&quot;&gt;
+				&lt;?php esc_html_e( &#039;What currency do you accept payments in?&#039;, &#039;woocommerce&#039; ); ?&gt;
+			&lt;/label&gt;
+			&lt;select
+				id=&quot;currency_code&quot;
+				name=&quot;currency_code&quot;
+				required
+				data-placeholder=&quot;&lt;?php esc_attr_e( &#039;Choose a currency&amp;hellip;&#039;, &#039;woocommerce&#039; ); ?&gt;&quot;
+				class=&quot;location-input wc-enhanced-select dropdown&quot;
+			&gt;
+				&lt;option value=&quot;&quot;&gt;&lt;?php esc_html_e( &#039;Choose a currency&amp;hellip;&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+				&lt;?php foreach ( get_woocommerce_currencies() as $code =&gt; $name ) : ?&gt;
+					&lt;option value=&quot;&lt;?php echo esc_attr( $code ); ?&gt;&quot; &lt;?php selected( $currency, $code ); ?&gt;&gt;
+						&lt;?php
+						$symbol = get_woocommerce_currency_symbol( $code );
+
+						if ( $symbol === $code ) {
+							/* translators: 1: currency name 2: currency code */
+							echo esc_html( sprintf( __( &#039;%1$s (%2$s)&#039;, &#039;woocommerce&#039; ), $name, $code ) );
+						} else {
+							/* translators: 1: currency name 2: currency symbol, 3: currency code */
+							echo esc_html( sprintf( __( &#039;%1$s (%2$s %3$s)&#039;, &#039;woocommerce&#039; ), $name, get_woocommerce_currency_symbol( $code ), $code ) );
+						}
+						?&gt;
+					&lt;/option&gt;
+				&lt;?php endforeach; ?&gt;
+			&lt;/select&gt;
+			&lt;script type=&quot;text/javascript&quot;&gt;
+				var wc_setup_currencies = JSON.parse( decodeURIComponent( &#039;&lt;?php echo rawurlencode( wp_json_encode( $currency_by_country ) ); ?&gt;&#039; ) );
+				var wc_base_state       = &quot;&lt;?php echo esc_js( $state ); ?&gt;&quot;;
+			&lt;/script&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&quot;product-type-container&quot;&gt;
+			&lt;label class=&quot;location-prompt&quot; for=&quot;product_type&quot;&gt;
+				&lt;?php esc_html_e( &#039;What type of products do you plan to sell?&#039;, &#039;woocommerce&#039; ); ?&gt;
+			&lt;/label&gt;
+			&lt;select id=&quot;product_type&quot; name=&quot;product_type&quot; required class=&quot;location-input wc-enhanced-select dropdown&quot;&gt;
+				&lt;option value=&quot;both&quot; &lt;?php selected( $product_type, &#039;both&#039; ); ?&gt;&gt;&lt;?php esc_html_e( &#039;I plan to sell both physical and digital products&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+				&lt;option value=&quot;physical&quot; &lt;?php selected( $product_type, &#039;physical&#039; ); ?&gt;&gt;&lt;?php esc_html_e( &#039;I plan to sell physical products&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+				&lt;option value=&quot;virtual&quot; &lt;?php selected( $product_type, &#039;virtual&#039; ); ?&gt;&gt;&lt;?php esc_html_e( &#039;I plan to sell digital products&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+			&lt;/select&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&quot;sell-in-person-container&quot;&gt;
+			&lt;input
+				type=&quot;checkbox&quot;
+				id=&quot;woocommerce_sell_in_person&quot;
+				name=&quot;sell_in_person&quot;
+				value=&quot;yes&quot;
+				&lt;?php checked( $sell_in_person, true ); ?&gt;
+			/&gt;
+			&lt;label class=&quot;location-prompt&quot; for=&quot;woocommerce_sell_in_person&quot;&gt;
+				&lt;?php esc_html_e( &#039;I will also be selling products or services in person.&#039;, &#039;woocommerce&#039; ); ?&gt;
+			&lt;/label&gt;
+			&lt;/div&gt;
+
+			&lt;input type=&quot;checkbox&quot; id=&quot;wc_tracker_checkbox&quot; name=&quot;wc_tracker_checkbox&quot; value=&quot;yes&quot; &lt;?php checked( &#039;yes&#039;, get_option( &#039;woocommerce_allow_tracking&#039;, &#039;no&#039; ) ); ?&gt; /&gt;
+
+			&lt;?php $this-&gt;tracking_modal(); ?&gt;
+
+			&lt;p class=&quot;wc-setup-actions step&quot;&gt;
+				&lt;button class=&quot;button-primary button button-large&quot; value=&quot;&lt;?php esc_attr_e( &quot;Let&#039;s go!&quot;, &#039;woocommerce&#039; ); ?&gt;&quot; name=&quot;save_step&quot;&gt;&lt;?php esc_html_e( &quot;Let&#039;s go!&quot;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+			&lt;/p&gt;
+		&lt;/form&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Template for the usage tracking modal.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function tracking_modal() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		?&gt;
+		&lt;script type=&quot;text/template&quot; id=&quot;tmpl-wc-modal-tracking-setup&quot;&gt;
+			&lt;div class=&quot;wc-backbone-modal woocommerce-tracker&quot;&gt;
+				&lt;div class=&quot;wc-backbone-modal-content&quot;&gt;
+					&lt;section class=&quot;wc-backbone-modal-main&quot; role=&quot;main&quot;&gt;
+						&lt;header class=&quot;wc-backbone-modal-header&quot;&gt;
+							&lt;h1&gt;&lt;?php esc_html_e( &#039;Help improve WooCommerce with usage tracking&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/h1&gt;
+						&lt;/header&gt;
+						&lt;article&gt;
+							&lt;p&gt;
+							&lt;?php
+								printf(
+									wp_kses(
+										/* translators: %1$s: usage tracking help link */
+										__( &#039;Learn more about how usage tracking works, and how you\&#039;ll be helping in our &lt;a href=&quot;%1$s&quot; target=&quot;_blank&quot;&gt;usage tracking documentation&lt;/a&gt;.&#039;, &#039;woocommerce&#039; ),
+										array(
+											&#039;a&#039; =&gt; array(
+												&#039;href&#039;   =&gt; array(),
+												&#039;target&#039; =&gt; array(),
+											),
+										)
+									),
+									&#039;https://woocommerce.com/usage-tracking/&#039;
+								);
+							?&gt;
+							&lt;/p&gt;
+							&lt;p class=&quot;woocommerce-tracker-checkbox&quot;&gt;
+								&lt;input type=&quot;checkbox&quot; id=&quot;wc_tracker_checkbox_dialog&quot; name=&quot;wc_tracker_checkbox_dialog&quot; value=&quot;yes&quot; &lt;?php checked( &#039;yes&#039;, get_option( &#039;woocommerce_allow_tracking&#039;, &#039;no&#039; ) ); ?&gt; /&gt;
+								&lt;label for=&quot;wc_tracker_checkbox_dialog&quot;&gt;&lt;?php esc_html_e( &#039;Enable usage tracking and help improve WooCommerce&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/label&gt;
+							&lt;/p&gt;
+						&lt;/article&gt;
+						&lt;footer&gt;
+							&lt;div class=&quot;inner&quot;&gt;
+								&lt;button class=&quot;button button-primary button-large&quot; id=&quot;wc_tracker_submit&quot; aria-label=&quot;&lt;?php esc_attr_e( &#039;Continue&#039;, &#039;woocommerce&#039; ); ?&gt;&quot;&gt;&lt;?php esc_html_e( &#039;Continue&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+							&lt;/div&gt;
+						&lt;/footer&gt;
+					&lt;/section&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;wc-backbone-modal-backdrop modal-close&quot;&gt;&lt;/div&gt;
+		&lt;/script&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Save initial store settings.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function wc_setup_store_setup_save() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+	}
+
+	/**
+	 * Finishes replying to the client, but keeps the process running for further (async) code execution.
+	 *
+	 * @see https://core.trac.wordpress.org/ticket/41358 .
+	 */
+	protected function close_http_connection() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		// Only 1 PHP process can access a session object at a time, close this so the next request isn&#039;t kept waiting.
+		// @codingStandardsIgnoreStart
+		if ( session_id() ) {
+			session_write_close();
+		}
+		// @codingStandardsIgnoreEnd
+
+		wc_set_time_limit( 0 );
+
+		// fastcgi_finish_request is the cleanest way to send the response and keep the script running, but not every server has it.
+		if ( is_callable( &#039;fastcgi_finish_request&#039; ) ) {
+			fastcgi_finish_request();
+		} else {
+			// Fallback: send headers and flush buffers.
+			if ( ! headers_sent() ) {
+				header( &#039;Connection: close&#039; );
+			}
+			@ob_end_flush(); // @codingStandardsIgnoreLine.
+			flush();
+		}
+	}
+
+	/**
+	 * Function called after the HTTP request is finished, so it&#039;s executed without the client having to wait for it.
+	 *
+	 * @see WC_Admin_Setup_Wizard::install_plugin
+	 * @see WC_Admin_Setup_Wizard::install_theme
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function run_deferred_actions() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$this-&gt;close_http_connection();
+		foreach ( $this-&gt;deferred_actions as $action ) {
+			$action[&#039;func&#039;]( ...$action[&#039;args&#039;] );
+
+			// Clear the background installation flag if this is a plugin.
+			if (
+				isset( $action[&#039;func&#039;][1] ) &amp;&amp;
+				&#039;background_installer&#039; === $action[&#039;func&#039;][1] &amp;&amp;
+				isset( $action[&#039;args&#039;][0] )
+			) {
+				delete_option( &#039;woocommerce_setup_background_installing_&#039; . $action[&#039;args&#039;][0] );
+			}
+		}
+	}
+
+	/**
+	 * Helper method to queue the background install of a plugin.
+	 *
+	 * @param string $plugin_id  Plugin id used for background install.
+	 * @param array  $plugin_info Plugin info array containing name and repo-slug, and optionally file if different from [repo-slug].php.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function install_plugin( $plugin_id, $plugin_info ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		// Make sure we don&#039;t trigger multiple simultaneous installs.
+		if ( get_option( &#039;woocommerce_setup_background_installing_&#039; . $plugin_id ) ) {
+			return;
+		}
+
+		$plugin_file = isset( $plugin_info[&#039;file&#039;] ) ? $plugin_info[&#039;file&#039;] : $plugin_info[&#039;repo-slug&#039;] . &#039;.php&#039;;
+		if ( is_plugin_active( $plugin_info[&#039;repo-slug&#039;] . &#039;/&#039; . $plugin_file ) ) {
+			return;
+		}
+
+		if ( empty( $this-&gt;deferred_actions ) ) {
+			add_action( &#039;shutdown&#039;, array( $this, &#039;run_deferred_actions&#039; ) );
+		}
+
+		array_push(
+			$this-&gt;deferred_actions,
+			array(
+				&#039;func&#039; =&gt; array( &#039;WC_Install&#039;, &#039;background_installer&#039; ),
+				&#039;args&#039; =&gt; array( $plugin_id, $plugin_info ),
+			)
+		);
+
+		// Set the background installation flag for this plugin.
+		update_option( &#039;woocommerce_setup_background_installing_&#039; . $plugin_id, true );
+	}
+
+
+	/**
+	 * Helper method to queue the background install of a theme.
+	 *
+	 * @param string $theme_id  Theme id used for background install.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function install_theme( $theme_id ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		if ( empty( $this-&gt;deferred_actions ) ) {
+			add_action( &#039;shutdown&#039;, array( $this, &#039;run_deferred_actions&#039; ) );
+		}
+		array_push(
+			$this-&gt;deferred_actions,
+			array(
+				&#039;func&#039; =&gt; array( &#039;WC_Install&#039;, &#039;theme_background_installer&#039; ),
+				&#039;args&#039; =&gt; array( $theme_id ),
+			)
+		);
+	}
+
+	/**
+	 * Helper method to install Jetpack.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function install_jetpack() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$this-&gt;install_plugin(
+			&#039;jetpack&#039;,
+			array(
+				&#039;name&#039;      =&gt; __( &#039;Jetpack&#039;, &#039;woocommerce&#039; ),
+				&#039;repo-slug&#039; =&gt; &#039;jetpack&#039;,
+			)
+		);
+	}
+
+	/**
+	 * Helper method to install WooCommerce Services and its Jetpack dependency.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function install_woocommerce_services() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$this-&gt;install_jetpack();
+		$this-&gt;install_plugin(
+			&#039;woocommerce-services&#039;,
+			array(
+				&#039;name&#039;      =&gt; __( &#039;WooCommerce Services&#039;, &#039;woocommerce&#039; ),
+				&#039;repo-slug&#039; =&gt; &#039;woocommerce-services&#039;,
+			)
+		);
+	}
+
+	/**
+	 * Retrieve info for missing WooCommerce Services and/or Jetpack plugin.
+	 *
+	 * @deprecated 4.6.0
+	 * @return array
+	 */
+	protected function get_wcs_requisite_plugins() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$plugins = array();
+		if ( ! is_plugin_active( &#039;woocommerce-services/woocommerce-services.php&#039; ) &amp;&amp; ! get_option( &#039;woocommerce_setup_background_installing_woocommerce-services&#039; ) ) {
+			$plugins[] = array(
+				&#039;name&#039; =&gt; __( &#039;WooCommerce Services&#039;, &#039;woocommerce&#039; ),
+				&#039;slug&#039; =&gt; &#039;woocommerce-services&#039;,
+			);
+		}
+		if ( ! is_plugin_active( &#039;jetpack/jetpack.php&#039; ) &amp;&amp; ! get_option( &#039;woocommerce_setup_background_installing_jetpack&#039; ) ) {
+			$plugins[] = array(
+				&#039;name&#039; =&gt; __( &#039;Jetpack&#039;, &#039;woocommerce&#039; ),
+				&#039;slug&#039; =&gt; &#039;jetpack&#039;,
+			);
+		}
+		return $plugins;
+	}
+
+	/**
+	 * Plugin install info message markup with heading.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function plugin_install_info() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		?&gt;
+		&lt;span class=&quot;plugin-install-info&quot;&gt;
+			&lt;span class=&quot;plugin-install-info-label&quot;&gt;&lt;?php esc_html_e( &#039;The following plugins will be installed and activated for you:&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/span&gt;
+			&lt;span class=&quot;plugin-install-info-list&quot;&gt;&lt;/span&gt;
+		&lt;/span&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Get shipping methods based on country code.
+	 *
+	 * @param string $country_code Country code.
+	 * @param string $currency_code Currency code.
+	 *
+	 * @deprecated 4.6.0
+	 * @return array
+	 */
+	protected function get_wizard_shipping_methods( $country_code, $currency_code ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$shipping_methods = array(
+			&#039;flat_rate&#039;     =&gt; array(
+				&#039;name&#039;        =&gt; __( &#039;Flat Rate&#039;, &#039;woocommerce&#039; ),
+				&#039;description&#039; =&gt; __( &#039;Set a fixed price to cover shipping costs.&#039;, &#039;woocommerce&#039; ),
+				&#039;settings&#039;    =&gt; array(
+					&#039;cost&#039; =&gt; array(
+						&#039;type&#039;          =&gt; &#039;text&#039;,
+						&#039;default_value&#039; =&gt; __( &#039;Cost&#039;, &#039;woocommerce&#039; ),
+						&#039;description&#039;   =&gt; __( &#039;What would you like to charge for flat rate shipping?&#039;, &#039;woocommerce&#039; ),
+						&#039;required&#039;      =&gt; true,
+					),
+				),
+			),
+			&#039;free_shipping&#039; =&gt; array(
+				&#039;name&#039;        =&gt; __( &#039;Free Shipping&#039;, &#039;woocommerce&#039; ),
+				&#039;description&#039; =&gt; __( &quot;Don&#039;t charge for shipping.&quot;, &#039;woocommerce&#039; ),
+			),
+		);
+
+		return $shipping_methods;
+	}
+
+	/**
+	 * Render the available shipping methods for a given country code.
+	 *
+	 * @param string $country_code Country code.
+	 * @param string $currency_code Currency code.
+	 * @param string $input_prefix Input prefix.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function shipping_method_selection_form( $country_code, $currency_code, $input_prefix ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$selected         = &#039;flat_rate&#039;;
+		$shipping_methods = $this-&gt;get_wizard_shipping_methods( $country_code, $currency_code );
+		?&gt;
+		&lt;div class=&quot;wc-wizard-shipping-method-select&quot;&gt;
+			&lt;div class=&quot;wc-wizard-shipping-method-dropdown&quot;&gt;
+				&lt;select
+					id=&quot;&lt;?php echo esc_attr( &quot;{$input_prefix}[method]&quot; ); ?&gt;&quot;
+					name=&quot;&lt;?php echo esc_attr( &quot;{$input_prefix}[method]&quot; ); ?&gt;&quot;
+					class=&quot;method wc-enhanced-select&quot;
+					data-plugins=&quot;&lt;?php echo wc_esc_json( wp_json_encode( $this-&gt;get_wcs_requisite_plugins() ) ); ?&gt;&quot;
+				&gt;
+				&lt;?php foreach ( $shipping_methods as $method_id =&gt; $method ) : ?&gt;
+					&lt;option value=&quot;&lt;?php echo esc_attr( $method_id ); ?&gt;&quot; &lt;?php selected( $selected, $method_id ); ?&gt;&gt;&lt;?php echo esc_html( $method[&#039;name&#039;] ); ?&gt;&lt;/option&gt;
+				&lt;?php endforeach; ?&gt;
+				&lt;/select&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;shipping-method-descriptions&quot;&gt;
+				&lt;?php foreach ( $shipping_methods as $method_id =&gt; $method ) : ?&gt;
+					&lt;p class=&quot;shipping-method-description &lt;?php echo esc_attr( $method_id ); ?&gt; &lt;?php echo $method_id !== $selected ? &#039;hide&#039; : &#039;&#039;; ?&gt;&quot;&gt;
+						&lt;?php echo esc_html( $method[&#039;description&#039;] ); ?&gt;
+					&lt;/p&gt;
+				&lt;?php endforeach; ?&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&quot;shipping-method-settings&quot;&gt;
+		&lt;?php foreach ( $shipping_methods as $method_id =&gt; $method ) : ?&gt;
+			&lt;?php
+			if ( empty( $method[&#039;settings&#039;] ) ) {
+				continue;
+			}
+			?&gt;
+			&lt;div class=&quot;shipping-method-setting &lt;?php echo esc_attr( $method_id ); ?&gt; &lt;?php echo $method_id !== $selected ? &#039;hide&#039; : &#039;&#039;; ?&gt;&quot;&gt;
+			&lt;?php foreach ( $method[&#039;settings&#039;] as $setting_id =&gt; $setting ) : ?&gt;
+				&lt;?php $method_setting_id = &quot;{$input_prefix}[{$method_id}][{$setting_id}]&quot;; ?&gt;
+				&lt;input
+					type=&quot;&lt;?php echo esc_attr( $setting[&#039;type&#039;] ); ?&gt;&quot;
+					placeholder=&quot;&lt;?php echo esc_attr( $setting[&#039;default_value&#039;] ); ?&gt;&quot;
+					id=&quot;&lt;?php echo esc_attr( $method_setting_id ); ?&gt;&quot;
+					name=&quot;&lt;?php echo esc_attr( $method_setting_id ); ?&gt;&quot;
+					class=&quot;&lt;?php echo esc_attr( $setting[&#039;required&#039;] ? &#039;shipping-method-required-field&#039; : &#039;&#039; ); ?&gt;&quot;
+					&lt;?php echo ( $method_id === $selected &amp;&amp; $setting[&#039;required&#039;] ) ? &#039;required&#039; : &#039;&#039;; ?&gt;
+				/&gt;
+				&lt;p class=&quot;description&quot;&gt;
+					&lt;?php echo esc_html( $setting[&#039;description&#039;] ); ?&gt;
+				&lt;/p&gt;
+			&lt;?php endforeach; ?&gt;
+			&lt;/div&gt;
+		&lt;?php endforeach; ?&gt;
+		&lt;/div&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Render a product weight unit dropdown.
+	 *
+	 * @deprecated 4.6.0
+	 * @return string
+	 */
+	protected function get_product_weight_selection() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$weight_unit = get_option( &#039;woocommerce_weight_unit&#039; );
+		ob_start();
+		?&gt;
+		&lt;span class=&quot;wc-setup-shipping-unit&quot;&gt;
+			&lt;select id=&quot;weight_unit&quot; name=&quot;weight_unit&quot; class=&quot;wc-enhanced-select&quot;&gt;
+				&lt;option value=&quot;kg&quot; &lt;?php selected( $weight_unit, &#039;kg&#039; ); ?&gt;&gt;&lt;?php esc_html_e( &#039;Kilograms&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+				&lt;option value=&quot;g&quot; &lt;?php selected( $weight_unit, &#039;g&#039; ); ?&gt;&gt;&lt;?php esc_html_e( &#039;Grams&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+				&lt;option value=&quot;lbs&quot; &lt;?php selected( $weight_unit, &#039;lbs&#039; ); ?&gt;&gt;&lt;?php esc_html_e( &#039;Pounds&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+				&lt;option value=&quot;oz&quot; &lt;?php selected( $weight_unit, &#039;oz&#039; ); ?&gt;&gt;&lt;?php esc_html_e( &#039;Ounces&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/span&gt;
+		&lt;?php
+
+		return ob_get_clean();
+	}
+
+	/**
+	 * Render a product dimension unit dropdown.
+	 *
+	 * @deprecated 4.6.0
+	 * @return string
+	 */
+	protected function get_product_dimension_selection() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$dimension_unit = get_option( &#039;woocommerce_dimension_unit&#039; );
+		ob_start();
+		?&gt;
+		&lt;span class=&quot;wc-setup-shipping-unit&quot;&gt;
+			&lt;select id=&quot;dimension_unit&quot; name=&quot;dimension_unit&quot; class=&quot;wc-enhanced-select&quot;&gt;
+				&lt;option value=&quot;m&quot; &lt;?php selected( $dimension_unit, &#039;m&#039; ); ?&gt;&gt;&lt;?php esc_html_e( &#039;Meters&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+				&lt;option value=&quot;cm&quot; &lt;?php selected( $dimension_unit, &#039;cm&#039; ); ?&gt;&gt;&lt;?php esc_html_e( &#039;Centimeters&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+				&lt;option value=&quot;mm&quot; &lt;?php selected( $dimension_unit, &#039;mm&#039; ); ?&gt;&gt;&lt;?php esc_html_e( &#039;Millimeters&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+				&lt;option value=&quot;in&quot; &lt;?php selected( $dimension_unit, &#039;in&#039; ); ?&gt;&gt;&lt;?php esc_html_e( &#039;Inches&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+				&lt;option value=&quot;yd&quot; &lt;?php selected( $dimension_unit, &#039;yd&#039; ); ?&gt;&gt;&lt;?php esc_html_e( &#039;Yards&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/span&gt;
+		&lt;?php
+
+		return ob_get_clean();
+	}
+
+	/**
+	 * Shipping.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function wc_setup_shipping() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$country_code          = WC()-&gt;countries-&gt;get_base_country();
+		$country_name          = WC()-&gt;countries-&gt;countries[ $country_code ];
+		$prefixed_country_name = WC()-&gt;countries-&gt;estimated_for_prefix( $country_code ) . $country_name;
+		$currency_code         = get_woocommerce_currency();
+		$existing_zones        = WC_Shipping_Zones::get_zones();
+		$intro_text            = &#039;&#039;;
+
+		if ( empty( $existing_zones ) ) {
+			$intro_text = sprintf(
+				/* translators: %s: country name including the &#039;the&#039; prefix if needed */
+				__( &quot;We&#039;ve created two Shipping Zones - for %s and for the rest of the world. Below you can set Flat Rate shipping costs for these Zones or offer Free Shipping.&quot;, &#039;woocommerce&#039; ),
+				$prefixed_country_name
+			);
+		}
+
+		$is_wcs_labels_supported  = $this-&gt;is_wcs_shipping_labels_supported_country( $country_code );
+		$is_shipstation_supported = $this-&gt;is_shipstation_supported_country( $country_code );
+
+		?&gt;
+		&lt;h1&gt;&lt;?php esc_html_e( &#039;Shipping&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/h1&gt;
+		&lt;?php if ( $intro_text ) : ?&gt;
+			&lt;p&gt;&lt;?php echo wp_kses_post( $intro_text ); ?&gt;&lt;/p&gt;
+		&lt;?php endif; ?&gt;
+		&lt;form method=&quot;post&quot;&gt;
+			&lt;?php if ( $is_wcs_labels_supported || $is_shipstation_supported ) : ?&gt;
+				&lt;ul class=&quot;wc-setup-shipping-recommended&quot;&gt;
+				&lt;?php
+				if ( $is_wcs_labels_supported ) :
+					$this-&gt;display_recommended_item(
+						array(
+							&#039;type&#039;        =&gt; &#039;woocommerce_services&#039;,
+							&#039;title&#039;       =&gt; __( &#039;Did you know you can print shipping labels at home?&#039;, &#039;woocommerce&#039; ),
+							&#039;description&#039; =&gt; __( &#039;Use WooCommerce Shipping (powered by WooCommerce Services &amp; Jetpack) to save time at the post office by printing your shipping labels at home.&#039;, &#039;woocommerce&#039; ),
+							&#039;img_url&#039;     =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/obw-woocommerce-services-icon.png&#039;,
+							&#039;img_alt&#039;     =&gt; __( &#039;WooCommerce Services icon&#039;, &#039;woocommerce&#039; ),
+							&#039;plugins&#039;     =&gt; $this-&gt;get_wcs_requisite_plugins(),
+						)
+					);
+				elseif ( $is_shipstation_supported ) :
+					$this-&gt;display_recommended_item(
+						array(
+							&#039;type&#039;        =&gt; &#039;shipstation&#039;,
+							&#039;title&#039;       =&gt; __( &#039;Did you know you can print shipping labels at home?&#039;, &#039;woocommerce&#039; ),
+							&#039;description&#039; =&gt; __( &#039;We recommend using ShipStation to save time at the post office by printing your shipping labels at home. Try ShipStation free for 30 days.&#039;, &#039;woocommerce&#039; ),
+							&#039;img_url&#039;     =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/obw-shipstation-icon.png&#039;,
+							&#039;img_alt&#039;     =&gt; __( &#039;ShipStation icon&#039;, &#039;woocommerce&#039; ),
+							&#039;plugins&#039;     =&gt; array(
+								array(
+									&#039;name&#039; =&gt; __( &#039;ShipStation&#039;, &#039;woocommerce&#039; ),
+									&#039;slug&#039; =&gt; &#039;woocommerce-shipstation-integration&#039;,
+								),
+							),
+						)
+					);
+				endif;
+				?&gt;
+				&lt;/ul&gt;
+			&lt;?php endif; ?&gt;
+
+			&lt;?php if ( empty( $existing_zones ) ) : ?&gt;
+				&lt;ul class=&quot;wc-wizard-services shipping&quot;&gt;
+					&lt;li class=&quot;wc-wizard-service-item&quot;&gt;
+						&lt;div class=&quot;wc-wizard-service-name&quot;&gt;
+							&lt;p&gt;&lt;?php echo esc_html_e( &#039;Shipping Zone&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;wc-wizard-service-description&quot;&gt;
+							&lt;p&gt;&lt;?php echo esc_html_e( &#039;Shipping Method&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;wc-wizard-service-item&quot;&gt;
+						&lt;div class=&quot;wc-wizard-service-name&quot;&gt;
+							&lt;p&gt;&lt;?php echo esc_html( $country_name ); ?&gt;&lt;/p&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;wc-wizard-service-description&quot;&gt;
+							&lt;?php $this-&gt;shipping_method_selection_form( $country_code, $currency_code, &#039;shipping_zones[domestic]&#039; ); ?&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;wc-wizard-service-enable&quot;&gt;
+							&lt;span class=&quot;wc-wizard-service-toggle&quot;&gt;
+								&lt;input id=&quot;shipping_zones[domestic][enabled]&quot; type=&quot;checkbox&quot; name=&quot;shipping_zones[domestic][enabled]&quot; value=&quot;yes&quot; checked=&quot;checked&quot; class=&quot;wc-wizard-shipping-method-enable&quot; data-plugins=&quot;true&quot; /&gt;
+								&lt;label for=&quot;shipping_zones[domestic][enabled]&quot;&gt;
+							&lt;/span&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;wc-wizard-service-item&quot;&gt;
+						&lt;div class=&quot;wc-wizard-service-name&quot;&gt;
+							&lt;p&gt;&lt;?php echo esc_html_e( &#039;Locations not covered by your other zones&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;wc-wizard-service-description&quot;&gt;
+							&lt;?php $this-&gt;shipping_method_selection_form( $country_code, $currency_code, &#039;shipping_zones[intl]&#039; ); ?&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;wc-wizard-service-enable&quot;&gt;
+							&lt;span class=&quot;wc-wizard-service-toggle&quot;&gt;
+								&lt;input id=&quot;shipping_zones[intl][enabled]&quot; type=&quot;checkbox&quot; name=&quot;shipping_zones[intl][enabled]&quot; value=&quot;yes&quot; checked=&quot;checked&quot; class=&quot;wc-wizard-shipping-method-enable&quot; data-plugins=&quot;true&quot; /&gt;
+								&lt;label for=&quot;shipping_zones[intl][enabled]&quot;&gt;
+							&lt;/span&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;wc-wizard-service-info&quot;&gt;
+						&lt;p&gt;
+						&lt;?php
+						printf(
+							wp_kses(
+								/* translators: %1$s: live rates tooltip text, %2$s: shipping extensions URL */
+								__( &#039;If you\&#039;d like to offer &lt;span class=&quot;help_tip&quot; data-tip=&quot;%1$s&quot;&gt;live rates&lt;/span&gt; from a specific carrier (e.g. UPS) you can find a variety of extensions available for WooCommerce &lt;a href=&quot;%2$s&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&#039;, &#039;woocommerce&#039; ),
+								array(
+									&#039;span&#039; =&gt; array(
+										&#039;class&#039;    =&gt; array(),
+										&#039;data-tip&#039; =&gt; array(),
+									),
+									&#039;a&#039;    =&gt; array(
+										&#039;href&#039;   =&gt; array(),
+										&#039;target&#039; =&gt; array(),
+									),
+								)
+							),
+							esc_attr__( &#039;A live rate is the exact cost to ship an order, quoted directly from the shipping carrier.&#039;, &#039;woocommerce&#039; ),
+							&#039;https://woocommerce.com/product-category/woocommerce-extensions/shipping-methods/shipping-carriers/&#039;
+						);
+						?&gt;
+						&lt;/p&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;?php endif; ?&gt;
+
+			&lt;div class=&quot;wc-setup-shipping-units&quot;&gt;
+				&lt;p&gt;
+					&lt;?php
+						echo wp_kses(
+							sprintf(
+								/* translators: %1$s: weight unit dropdown, %2$s: dimension unit dropdown */
+								esc_html__( &#039;We\&#039;ll use %1$s for product weight and %2$s for product dimensions.&#039;, &#039;woocommerce&#039; ),
+								$this-&gt;get_product_weight_selection(),
+								$this-&gt;get_product_dimension_selection()
+							),
+							array(
+								&#039;span&#039;   =&gt; array(
+									&#039;class&#039; =&gt; array(),
+								),
+								&#039;select&#039; =&gt; array(
+									&#039;id&#039;    =&gt; array(),
+									&#039;name&#039;  =&gt; array(),
+									&#039;class&#039; =&gt; array(),
+								),
+								&#039;option&#039; =&gt; array(
+									&#039;value&#039;    =&gt; array(),
+									&#039;selected&#039; =&gt; array(),
+								),
+							)
+						);
+					?&gt;
+				&lt;/p&gt;
+			&lt;/div&gt;
+
+			&lt;p class=&quot;wc-setup-actions step&quot;&gt;
+				&lt;?php $this-&gt;plugin_install_info(); ?&gt;
+				&lt;button class=&quot;button-primary button button-large button-next&quot; value=&quot;&lt;?php esc_attr_e( &#039;Continue&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; name=&quot;save_step&quot;&gt;&lt;?php esc_html_e( &#039;Continue&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+				&lt;?php wp_nonce_field( &#039;wc-setup&#039; ); ?&gt;
+			&lt;/p&gt;
+		&lt;/form&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Save shipping options.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function wc_setup_shipping_save() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+	}
+
+	/**
+	 * Is Stripe country supported
+	 * https://stripe.com/global .
+	 *
+	 * @param string $country_code Country code.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function is_stripe_supported_country( $country_code ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$stripe_supported_countries = array(
+			&#039;AU&#039;,
+			&#039;AT&#039;,
+			&#039;BE&#039;,
+			&#039;CA&#039;,
+			&#039;DK&#039;,
+			&#039;FI&#039;,
+			&#039;FR&#039;,
+			&#039;DE&#039;,
+			&#039;HK&#039;,
+			&#039;IE&#039;,
+			&#039;JP&#039;,
+			&#039;LU&#039;,
+			&#039;NL&#039;,
+			&#039;NZ&#039;,
+			&#039;NO&#039;,
+			&#039;SG&#039;,
+			&#039;ES&#039;,
+			&#039;SE&#039;,
+			&#039;CH&#039;,
+			&#039;GB&#039;,
+			&#039;US&#039;,
+		);
+
+		return in_array( $country_code, $stripe_supported_countries, true );
+	}
+
+	/**
+	 * Is PayPal currency supported.
+	 *
+	 * @param string $currency Currency code.
+	 * @return boolean
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function is_paypal_supported_currency( $currency ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$supported_currencies = array(
+			&#039;AUD&#039;,
+			&#039;BRL&#039;,
+			&#039;CAD&#039;,
+			&#039;MXN&#039;,
+			&#039;NZD&#039;,
+			&#039;HKD&#039;,
+			&#039;SGD&#039;,
+			&#039;USD&#039;,
+			&#039;EUR&#039;,
+			&#039;JPY&#039;,
+			&#039;TRY&#039;,
+			&#039;NOK&#039;,
+			&#039;CZK&#039;,
+			&#039;DKK&#039;,
+			&#039;HUF&#039;,
+			&#039;ILS&#039;,
+			&#039;MYR&#039;,
+			&#039;PHP&#039;,
+			&#039;PLN&#039;,
+			&#039;SEK&#039;,
+			&#039;CHF&#039;,
+			&#039;TWD&#039;,
+			&#039;THB&#039;,
+			&#039;GBP&#039;,
+			&#039;RMB&#039;,
+			&#039;RUB&#039;,
+			&#039;INR&#039;,
+		);
+		return in_array( $currency, $supported_currencies, true );
+	}
+
+	/**
+	 * Is Klarna Checkout country supported.
+	 *
+	 * @param string $country_code Country code.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function is_klarna_checkout_supported_country( $country_code ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$supported_countries = array(
+			&#039;SE&#039;, // Sweden.
+			&#039;FI&#039;, // Finland.
+			&#039;NO&#039;, // Norway.
+			&#039;NL&#039;, // Netherlands.
+		);
+		return in_array( $country_code, $supported_countries, true );
+	}
+
+	/**
+	 * Is Klarna Payments country supported.
+	 *
+	 * @param string $country_code Country code.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function is_klarna_payments_supported_country( $country_code ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$supported_countries = array(
+			&#039;DK&#039;, // Denmark.
+			&#039;DE&#039;, // Germany.
+			&#039;AT&#039;, // Austria.
+		);
+		return in_array( $country_code, $supported_countries, true );
+	}
+
+	/**
+	 * Is Square country supported
+	 *
+	 * @param string $country_code Country code.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function is_square_supported_country( $country_code ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$square_supported_countries = array(
+			&#039;US&#039;,
+			&#039;CA&#039;,
+			&#039;JP&#039;,
+			&#039;GB&#039;,
+			&#039;AU&#039;,
+		);
+		return in_array( $country_code, $square_supported_countries, true );
+	}
+
+	/**
+	 * Is eWAY Payments country supported
+	 *
+	 * @param string $country_code Country code.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function is_eway_payments_supported_country( $country_code ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$supported_countries = array(
+			&#039;AU&#039;, // Australia.
+			&#039;NZ&#039;, // New Zealand.
+		);
+		return in_array( $country_code, $supported_countries, true );
+	}
+
+	/**
+	 * Is ShipStation country supported
+	 *
+	 * @param string $country_code Country code.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function is_shipstation_supported_country( $country_code ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$supported_countries = array(
+			&#039;AU&#039;, // Australia.
+			&#039;CA&#039;, // Canada.
+			&#039;GB&#039;, // United Kingdom.
+		);
+		return in_array( $country_code, $supported_countries, true );
+	}
+
+	/**
+	 * Is WooCommerce Services shipping label country supported
+	 *
+	 * @param string $country_code Country code.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function is_wcs_shipping_labels_supported_country( $country_code ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$supported_countries = array(
+			&#039;US&#039;, // United States.
+		);
+		return in_array( $country_code, $supported_countries, true );
+	}
+
+	/**
+	 * Helper method to retrieve the current user&#039;s email address.
+	 *
+	 * @deprecated 4.6.0
+	 * @return string Email address
+	 */
+	protected function get_current_user_email() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$current_user = wp_get_current_user();
+		$user_email   = $current_user-&gt;user_email;
+
+		return $user_email;
+	}
+
+	/**
+	 * Array of all possible &quot;in cart&quot; gateways that can be offered.
+	 *
+	 * @deprecated 4.6.0
+	 * @return array
+	 */
+	protected function get_wizard_available_in_cart_payment_gateways() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$user_email = $this-&gt;get_current_user_email();
+
+		$stripe_description = &#039;&lt;p&gt;&#039; . sprintf(
+			/* translators: %s: URL */
+			__( &#039;Accept debit and credit cards in 135+ currencies, methods such as Alipay, and one-touch checkout with Apple Pay. &lt;a href=&quot;%s&quot; target=&quot;_blank&quot;&gt;Learn more&lt;/a&gt;.&#039;, &#039;woocommerce&#039; ),
+			&#039;https://woocommerce.com/products/stripe/&#039;
+		) . &#039;&lt;/p&gt;&#039;;
+		$paypal_checkout_description = &#039;&lt;p&gt;&#039; . sprintf(
+			/* translators: %s: URL */
+			__( &#039;Safe and secure payments using credit cards or your customer\&#039;s PayPal account. &lt;a href=&quot;%s&quot; target=&quot;_blank&quot;&gt;Learn more&lt;/a&gt;.&#039;, &#039;woocommerce&#039; ),
+			&#039;https://woocommerce.com/products/woocommerce-gateway-paypal-checkout/&#039;
+		) . &#039;&lt;/p&gt;&#039;;
+		$klarna_checkout_description = &#039;&lt;p&gt;&#039; . sprintf(
+			/* translators: %s: URL */
+			__( &#039;Full checkout experience with pay now, pay later and slice it. No credit card numbers, no passwords, no worries. &lt;a href=&quot;%s&quot; target=&quot;_blank&quot;&gt;Learn more about Klarna&lt;/a&gt;.&#039;, &#039;woocommerce&#039; ),
+			&#039;https://woocommerce.com/products/klarna-checkout/&#039;
+		) . &#039;&lt;/p&gt;&#039;;
+		$klarna_payments_description = &#039;&lt;p&gt;&#039; . sprintf(
+			/* translators: %s: URL */
+			__( &#039;Choose the payment that you want, pay now, pay later or slice it. No credit card numbers, no passwords, no worries. &lt;a href=&quot;%s&quot; target=&quot;_blank&quot;&gt;Learn more about Klarna&lt;/a&gt;.&#039;, &#039;woocommerce&#039; ),
+			&#039;https://woocommerce.com/products/klarna-payments/ &#039;
+		) . &#039;&lt;/p&gt;&#039;;
+		$square_description = &#039;&lt;p&gt;&#039; . sprintf(
+			/* translators: %s: URL */
+			__( &#039;Securely accept credit and debit cards with one low rate, no surprise fees (custom rates available). Sell online and in store and track sales and inventory in one place. &lt;a href=&quot;%s&quot; target=&quot;_blank&quot;&gt;Learn more about Square&lt;/a&gt;.&#039;, &#039;woocommerce&#039; ),
+			&#039;https://woocommerce.com/products/square/&#039;
+		) . &#039;&lt;/p&gt;&#039;;
+
+		return array(
+			&#039;stripe&#039;          =&gt; array(
+				&#039;name&#039;        =&gt; __( &#039;WooCommerce Stripe Gateway&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;       =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/stripe.png&#039;,
+				&#039;description&#039; =&gt; $stripe_description,
+				&#039;class&#039;       =&gt; &#039;checked stripe-logo&#039;,
+				&#039;repo-slug&#039;   =&gt; &#039;woocommerce-gateway-stripe&#039;,
+				&#039;settings&#039;    =&gt; array(
+					&#039;create_account&#039; =&gt; array(
+						&#039;label&#039;       =&gt; __( &#039;Set up Stripe for me using this email:&#039;, &#039;woocommerce&#039; ),
+						&#039;type&#039;        =&gt; &#039;checkbox&#039;,
+						&#039;value&#039;       =&gt; &#039;yes&#039;,
+						&#039;default&#039;     =&gt; &#039;yes&#039;,
+						&#039;placeholder&#039; =&gt; &#039;&#039;,
+						&#039;required&#039;    =&gt; false,
+						&#039;plugins&#039;     =&gt; $this-&gt;get_wcs_requisite_plugins(),
+					),
+					&#039;email&#039;          =&gt; array(
+						&#039;label&#039;       =&gt; __( &#039;Stripe email address:&#039;, &#039;woocommerce&#039; ),
+						&#039;type&#039;        =&gt; &#039;email&#039;,
+						&#039;value&#039;       =&gt; $user_email,
+						&#039;placeholder&#039; =&gt; __( &#039;Stripe email address&#039;, &#039;woocommerce&#039; ),
+						&#039;required&#039;    =&gt; true,
+					),
+				),
+			),
+			&#039;ppec_paypal&#039;     =&gt; array(
+				&#039;name&#039;        =&gt; __( &#039;WooCommerce PayPal Checkout Gateway&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;       =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/paypal.png&#039;,
+				&#039;description&#039; =&gt; $paypal_checkout_description,
+				&#039;enabled&#039;     =&gt; false,
+				&#039;class&#039;       =&gt; &#039;checked paypal-logo&#039;,
+				&#039;repo-slug&#039;   =&gt; &#039;woocommerce-gateway-paypal-express-checkout&#039;,
+				&#039;settings&#039;    =&gt; array(
+					&#039;reroute_requests&#039; =&gt; array(
+						&#039;label&#039;       =&gt; __( &#039;Set up PayPal for me using this email:&#039;, &#039;woocommerce&#039; ),
+						&#039;type&#039;        =&gt; &#039;checkbox&#039;,
+						&#039;value&#039;       =&gt; &#039;yes&#039;,
+						&#039;default&#039;     =&gt; &#039;yes&#039;,
+						&#039;placeholder&#039; =&gt; &#039;&#039;,
+						&#039;required&#039;    =&gt; false,
+						&#039;plugins&#039;     =&gt; $this-&gt;get_wcs_requisite_plugins(),
+					),
+					&#039;email&#039;            =&gt; array(
+						&#039;label&#039;       =&gt; __( &#039;Direct payments to email address:&#039;, &#039;woocommerce&#039; ),
+						&#039;type&#039;        =&gt; &#039;email&#039;,
+						&#039;value&#039;       =&gt; $user_email,
+						&#039;placeholder&#039; =&gt; __( &#039;Email address to receive payments&#039;, &#039;woocommerce&#039; ),
+						&#039;required&#039;    =&gt; true,
+					),
+				),
+			),
+			&#039;paypal&#039;          =&gt; array(
+				&#039;name&#039;        =&gt; __( &#039;PayPal Standard&#039;, &#039;woocommerce&#039; ),
+				&#039;description&#039; =&gt; __( &#039;Accept payments via PayPal using account balance or credit card.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;       =&gt; &#039;&#039;,
+				&#039;settings&#039;    =&gt; array(
+					&#039;email&#039; =&gt; array(
+						&#039;label&#039;       =&gt; __( &#039;PayPal email address:&#039;, &#039;woocommerce&#039; ),
+						&#039;type&#039;        =&gt; &#039;email&#039;,
+						&#039;value&#039;       =&gt; $user_email,
+						&#039;placeholder&#039; =&gt; __( &#039;PayPal email address&#039;, &#039;woocommerce&#039; ),
+						&#039;required&#039;    =&gt; true,
+					),
+				),
+			),
+			&#039;klarna_checkout&#039; =&gt; array(
+				&#039;name&#039;        =&gt; __( &#039;Klarna Checkout for WooCommerce&#039;, &#039;woocommerce&#039; ),
+				&#039;description&#039; =&gt; $klarna_checkout_description,
+				&#039;image&#039;       =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/klarna-black.png&#039;,
+				&#039;enabled&#039;     =&gt; true,
+				&#039;class&#039;       =&gt; &#039;klarna-logo&#039;,
+				&#039;repo-slug&#039;   =&gt; &#039;klarna-checkout-for-woocommerce&#039;,
+			),
+			&#039;klarna_payments&#039; =&gt; array(
+				&#039;name&#039;        =&gt; __( &#039;Klarna Payments for WooCommerce&#039;, &#039;woocommerce&#039; ),
+				&#039;description&#039; =&gt; $klarna_payments_description,
+				&#039;image&#039;       =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/klarna-black.png&#039;,
+				&#039;enabled&#039;     =&gt; true,
+				&#039;class&#039;       =&gt; &#039;klarna-logo&#039;,
+				&#039;repo-slug&#039;   =&gt; &#039;klarna-payments-for-woocommerce&#039;,
+			),
+			&#039;square&#039;          =&gt; array(
+				&#039;name&#039;        =&gt; __( &#039;WooCommerce Square&#039;, &#039;woocommerce&#039; ),
+				&#039;description&#039; =&gt; $square_description,
+				&#039;image&#039;       =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/square-black.png&#039;,
+				&#039;class&#039;       =&gt; &#039;square-logo&#039;,
+				&#039;enabled&#039;     =&gt; false,
+				&#039;repo-slug&#039;   =&gt; &#039;woocommerce-square&#039;,
+			),
+			&#039;eway&#039;            =&gt; array(
+				&#039;name&#039;        =&gt; __( &#039;WooCommerce eWAY Gateway&#039;, &#039;woocommerce&#039; ),
+				&#039;description&#039; =&gt; __( &#039;The eWAY extension for WooCommerce allows you to take credit card payments directly on your store without redirecting your customers to a third party site to make payment.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;       =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/eway-logo.jpg&#039;,
+				&#039;enabled&#039;     =&gt; false,
+				&#039;class&#039;       =&gt; &#039;eway-logo&#039;,
+				&#039;repo-slug&#039;   =&gt; &#039;woocommerce-gateway-eway&#039;,
+			),
+			&#039;payfast&#039;         =&gt; array(
+				&#039;name&#039;        =&gt; __( &#039;WooCommerce PayFast Gateway&#039;, &#039;woocommerce&#039; ),
+				&#039;description&#039; =&gt; __( &#039;The PayFast extension for WooCommerce enables you to accept payments by Credit Card and EFT via one of South Africa’s most popular payment gateways. No setup fees or monthly subscription costs.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;       =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/payfast.png&#039;,
+				&#039;class&#039;       =&gt; &#039;payfast-logo&#039;,
+				&#039;enabled&#039;     =&gt; false,
+				&#039;repo-slug&#039;   =&gt; &#039;woocommerce-payfast-gateway&#039;,
+				&#039;file&#039;        =&gt; &#039;gateway-payfast.php&#039;,
+			),
+		);
+	}
+
+	/**
+	 * Simple array of &quot;in cart&quot; gateways to show in wizard.
+	 *
+	 * @deprecated 4.6.0
+	 * @return array
+	 */
+	public function get_wizard_in_cart_payment_gateways() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$gateways = $this-&gt;get_wizard_available_in_cart_payment_gateways();
+		$country  = WC()-&gt;countries-&gt;get_base_country();
+		$currency = get_woocommerce_currency();
+
+		$can_stripe  = $this-&gt;is_stripe_supported_country( $country );
+		$can_eway    = $this-&gt;is_eway_payments_supported_country( $country );
+		$can_payfast = ( &#039;ZA&#039; === $country ); // South Africa.
+		$can_paypal  = $this-&gt;is_paypal_supported_currency( $currency );
+
+		if ( ! current_user_can( &#039;install_plugins&#039; ) ) {
+			return $can_paypal ? array( &#039;paypal&#039; =&gt; $gateways[&#039;paypal&#039;] ) : array();
+		}
+
+		$klarna_or_square = false;
+
+		if ( $this-&gt;is_klarna_checkout_supported_country( $country ) ) {
+			$klarna_or_square = &#039;klarna_checkout&#039;;
+		} elseif ( $this-&gt;is_klarna_payments_supported_country( $country ) ) {
+			$klarna_or_square = &#039;klarna_payments&#039;;
+		} elseif ( $this-&gt;is_square_supported_country( $country ) &amp;&amp; get_option( &#039;woocommerce_sell_in_person&#039; ) ) {
+			$klarna_or_square = &#039;square&#039;;
+		}
+
+		$offered_gateways = array();
+
+		if ( $can_stripe ) {
+			$gateways[&#039;stripe&#039;][&#039;enabled&#039;]  = true;
+			$gateways[&#039;stripe&#039;][&#039;featured&#039;] = true;
+			$offered_gateways              += array( &#039;stripe&#039; =&gt; $gateways[&#039;stripe&#039;] );
+		} elseif ( $can_paypal ) {
+			$gateways[&#039;ppec_paypal&#039;][&#039;enabled&#039;] = true;
+		}
+
+		if ( $klarna_or_square ) {
+			if ( in_array( $klarna_or_square, array( &#039;klarna_checkout&#039;, &#039;klarna_payments&#039; ), true ) ) {
+				$gateways[ $klarna_or_square ][&#039;enabled&#039;]  = true;
+				$gateways[ $klarna_or_square ][&#039;featured&#039;] = false;
+				$offered_gateways                         += array(
+					$klarna_or_square =&gt; $gateways[ $klarna_or_square ],
+				);
+			} else {
+				$offered_gateways += array(
+					$klarna_or_square =&gt; $gateways[ $klarna_or_square ],
+				);
+			}
+		}
+
+		if ( $can_paypal ) {
+			$offered_gateways += array( &#039;ppec_paypal&#039; =&gt; $gateways[&#039;ppec_paypal&#039;] );
+		}
+
+		if ( $can_eway ) {
+			$offered_gateways += array( &#039;eway&#039; =&gt; $gateways[&#039;eway&#039;] );
+		}
+
+		if ( $can_payfast ) {
+			$offered_gateways += array( &#039;payfast&#039; =&gt; $gateways[&#039;payfast&#039;] );
+		}
+
+		return $offered_gateways;
+	}
+
+	/**
+	 * Simple array of &quot;manual&quot; gateways to show in wizard.
+	 *
+	 * @deprecated 4.6.0
+	 * @return array
+	 */
+	public function get_wizard_manual_payment_gateways() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$gateways = array(
+			&#039;cheque&#039; =&gt; array(
+				&#039;name&#039;        =&gt; _x( &#039;Check payments&#039;, &#039;Check payment method&#039;, &#039;woocommerce&#039; ),
+				&#039;description&#039; =&gt; __( &#039;A simple offline gateway that lets you accept a check as method of payment.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;       =&gt; &#039;&#039;,
+				&#039;class&#039;       =&gt; &#039;&#039;,
+			),
+			&#039;bacs&#039;   =&gt; array(
+				&#039;name&#039;        =&gt; __( &#039;Bank transfer (BACS) payments&#039;, &#039;woocommerce&#039; ),
+				&#039;description&#039; =&gt; __( &#039;A simple offline gateway that lets you accept BACS payment.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;       =&gt; &#039;&#039;,
+				&#039;class&#039;       =&gt; &#039;&#039;,
+			),
+			&#039;cod&#039;    =&gt; array(
+				&#039;name&#039;        =&gt; __( &#039;Cash on delivery&#039;, &#039;woocommerce&#039; ),
+				&#039;description&#039; =&gt; __( &#039;A simple offline gateway that lets you accept cash on delivery.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;       =&gt; &#039;&#039;,
+				&#039;class&#039;       =&gt; &#039;&#039;,
+			),
+		);
+
+		return $gateways;
+	}
+
+	/**
+	 * Display service item in list.
+	 *
+	 * @param int   $item_id Item ID.
+	 * @param array $item_info Item info array.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function display_service_item( $item_id, $item_info ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$item_class = &#039;wc-wizard-service-item&#039;;
+		if ( isset( $item_info[&#039;class&#039;] ) ) {
+			$item_class .= &#039; &#039; . $item_info[&#039;class&#039;];
+		}
+
+		$previously_saved_settings = get_option( &#039;woocommerce_&#039; . $item_id . &#039;_settings&#039; );
+
+		// Show the user-saved state if it was previously saved.
+		// Otherwise, rely on the item info.
+		if ( is_array( $previously_saved_settings ) ) {
+			$should_enable_toggle = ( isset( $previously_saved_settings[&#039;enabled&#039;] ) &amp;&amp; &#039;yes&#039; === $previously_saved_settings[&#039;enabled&#039;] ) ? true : ( isset( $item_info[&#039;enabled&#039;] ) &amp;&amp; $item_info[&#039;enabled&#039;] );
+		} else {
+			$should_enable_toggle = isset( $item_info[&#039;enabled&#039;] ) &amp;&amp; $item_info[&#039;enabled&#039;];
+		}
+
+		$plugins = null;
+		if ( isset( $item_info[&#039;repo-slug&#039;] ) ) {
+			$plugin  = array(
+				&#039;slug&#039; =&gt; $item_info[&#039;repo-slug&#039;],
+				&#039;name&#039; =&gt; $item_info[&#039;name&#039;],
+			);
+			$plugins = array( $plugin );
+		}
+
+		?&gt;
+		&lt;li class=&quot;&lt;?php echo esc_attr( $item_class ); ?&gt;&quot;&gt;
+			&lt;div class=&quot;wc-wizard-service-name&quot;&gt;
+				&lt;?php if ( ! empty( $item_info[&#039;image&#039;] ) ) : ?&gt;
+					&lt;img src=&quot;&lt;?php echo esc_attr( $item_info[&#039;image&#039;] ); ?&gt;&quot; alt=&quot;&lt;?php echo esc_attr( $item_info[&#039;name&#039;] ); ?&gt;&quot; /&gt;
+				&lt;?php else : ?&gt;
+					&lt;p&gt;&lt;?php echo esc_html( $item_info[&#039;name&#039;] ); ?&gt;&lt;/p&gt;
+				&lt;?php endif; ?&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;wc-wizard-service-enable&quot;&gt;
+				&lt;span class=&quot;wc-wizard-service-toggle &lt;?php echo esc_attr( $should_enable_toggle ? &#039;&#039; : &#039;disabled&#039; ); ?&gt;&quot; tabindex=&quot;0&quot;&gt;
+					&lt;input
+						id=&quot;wc-wizard-service-&lt;?php echo esc_attr( $item_id ); ?&gt;&quot;
+						type=&quot;checkbox&quot;
+						name=&quot;wc-wizard-service-&lt;?php echo esc_attr( $item_id ); ?&gt;-enabled&quot;
+						value=&quot;yes&quot; &lt;?php checked( $should_enable_toggle ); ?&gt;
+						data-plugins=&quot;&lt;?php echo wc_esc_json( wp_json_encode( $plugins ) ); ?&gt;&quot;
+					/&gt;
+					&lt;label for=&quot;wc-wizard-service-&lt;?php echo esc_attr( $item_id ); ?&gt;&quot;&gt;
+				&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;wc-wizard-service-description&quot;&gt;
+				&lt;?php echo wp_kses_post( wpautop( $item_info[&#039;description&#039;] ) ); ?&gt;
+				&lt;?php if ( ! empty( $item_info[&#039;settings&#039;] ) ) : ?&gt;
+					&lt;div class=&quot;wc-wizard-service-settings &lt;?php echo $should_enable_toggle ? &#039;&#039; : &#039;hide&#039;; ?&gt;&quot;&gt;
+						&lt;?php foreach ( $item_info[&#039;settings&#039;] as $setting_id =&gt; $setting ) : ?&gt;
+							&lt;?php
+							$is_checkbox = &#039;checkbox&#039; === $setting[&#039;type&#039;];
+
+							if ( $is_checkbox ) {
+								$checked = false;
+								if ( isset( $previously_saved_settings[ $setting_id ] ) ) {
+									$checked = &#039;yes&#039; === $previously_saved_settings[ $setting_id ];
+								} elseif ( false === $previously_saved_settings &amp;&amp; isset( $setting[&#039;default&#039;] ) ) {
+									$checked = &#039;yes&#039; === $setting[&#039;default&#039;];
+								}
+							}
+							if ( &#039;email&#039; === $setting[&#039;type&#039;] ) {
+								$value = empty( $previously_saved_settings[ $setting_id ] )
+									? $setting[&#039;value&#039;]
+									: $previously_saved_settings[ $setting_id ];
+							}
+							?&gt;
+							&lt;?php $input_id = $item_id . &#039;_&#039; . $setting_id; ?&gt;
+							&lt;div class=&quot;&lt;?php echo esc_attr( &#039;wc-wizard-service-setting-&#039; . $input_id ); ?&gt;&quot;&gt;
+								&lt;label
+									for=&quot;&lt;?php echo esc_attr( $input_id ); ?&gt;&quot;
+									class=&quot;&lt;?php echo esc_attr( $input_id ); ?&gt;&quot;
+								&gt;
+									&lt;?php echo esc_html( $setting[&#039;label&#039;] ); ?&gt;
+								&lt;/label&gt;
+								&lt;input
+									type=&quot;&lt;?php echo esc_attr( $setting[&#039;type&#039;] ); ?&gt;&quot;
+									id=&quot;&lt;?php echo esc_attr( $input_id ); ?&gt;&quot;
+									class=&quot;&lt;?php echo esc_attr( &#039;payment-&#039; . $setting[&#039;type&#039;] . &#039;-input&#039; ); ?&gt;&quot;
+									name=&quot;&lt;?php echo esc_attr( $input_id ); ?&gt;&quot;
+									value=&quot;&lt;?php echo esc_attr( isset( $value ) ? $value : $setting[&#039;value&#039;] ); ?&gt;&quot;
+									placeholder=&quot;&lt;?php echo esc_attr( $setting[&#039;placeholder&#039;] ); ?&gt;&quot;
+									&lt;?php echo ( $setting[&#039;required&#039;] ) ? &#039;required&#039; : &#039;&#039;; ?&gt;
+									&lt;?php echo $is_checkbox ? checked( isset( $checked ) &amp;&amp; $checked, true, false ) : &#039;&#039;; ?&gt;
+									data-plugins=&quot;&lt;?php echo wc_esc_json( wp_json_encode( isset( $setting[&#039;plugins&#039;] ) ? $setting[&#039;plugins&#039;] : null ) ); ?&gt;&quot;
+								/&gt;
+								&lt;?php if ( ! empty( $setting[&#039;description&#039;] ) ) : ?&gt;
+									&lt;span class=&quot;wc-wizard-service-settings-description&quot;&gt;&lt;?php echo esc_html( $setting[&#039;description&#039;] ); ?&gt;&lt;/span&gt;
+								&lt;?php endif; ?&gt;
+							&lt;/div&gt;
+						&lt;?php endforeach; ?&gt;
+					&lt;/div&gt;
+				&lt;?php endif; ?&gt;
+			&lt;/div&gt;
+		&lt;/li&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Is it a featured service?
+	 *
+	 * @param array $service Service info array.
+	 *
+	 * @deprecated 4.6.0
+	 * @return boolean
+	 */
+	public function is_featured_service( $service ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		return ! empty( $service[&#039;featured&#039;] );
+	}
+
+	/**
+	 * Is this a non featured service?
+	 *
+	 * @param array $service Service info array.
+	 *
+	 * @deprecated 4.6.0
+	 * @return boolean
+	 */
+	public function is_not_featured_service( $service ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		return ! $this-&gt;is_featured_service( $service );
+	}
+
+	/**
+	 * Payment Step.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function wc_setup_payment() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$featured_gateways = array_filter( $this-&gt;get_wizard_in_cart_payment_gateways(), array( $this, &#039;is_featured_service&#039; ) );
+		$in_cart_gateways  = array_filter( $this-&gt;get_wizard_in_cart_payment_gateways(), array( $this, &#039;is_not_featured_service&#039; ) );
+		$manual_gateways   = $this-&gt;get_wizard_manual_payment_gateways();
+		?&gt;
+		&lt;h1&gt;&lt;?php esc_html_e( &#039;Payment&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/h1&gt;
+		&lt;form method=&quot;post&quot; class=&quot;wc-wizard-payment-gateway-form&quot;&gt;
+			&lt;p&gt;
+				&lt;?php
+				printf(
+					wp_kses(
+						/* translators: %s: Link */
+						__( &#039;WooCommerce can accept both online and offline payments. &lt;a href=&quot;%s&quot; target=&quot;_blank&quot;&gt;Additional payment methods&lt;/a&gt; can be installed later.&#039;, &#039;woocommerce&#039; ),
+						array(
+							&#039;a&#039; =&gt; array(
+								&#039;href&#039;   =&gt; array(),
+								&#039;target&#039; =&gt; array(),
+							),
+						)
+					),
+					esc_url( admin_url( &#039;admin.php?page=wc-addons&amp;section=payment-gateways&#039; ) )
+				);
+				?&gt;
+			&lt;/p&gt;
+			&lt;?php if ( $featured_gateways ) : ?&gt;
+			&lt;ul class=&quot;wc-wizard-services featured&quot;&gt;
+				&lt;?php
+				foreach ( $featured_gateways as $gateway_id =&gt; $gateway ) {
+					$this-&gt;display_service_item( $gateway_id, $gateway );
+				}
+				?&gt;
+			&lt;/ul&gt;
+			&lt;?php endif; ?&gt;
+			&lt;?php if ( $in_cart_gateways ) : ?&gt;
+			&lt;ul class=&quot;wc-wizard-services in-cart&quot;&gt;
+				&lt;?php
+				foreach ( $in_cart_gateways as $gateway_id =&gt; $gateway ) {
+					$this-&gt;display_service_item( $gateway_id, $gateway );
+				}
+				?&gt;
+			&lt;/ul&gt;
+			&lt;?php endif; ?&gt;
+			&lt;ul class=&quot;wc-wizard-services manual&quot;&gt;
+				&lt;li class=&quot;wc-wizard-services-list-toggle closed&quot;&gt;
+					&lt;div class=&quot;wc-wizard-service-name&quot;&gt;
+						&lt;?php esc_html_e( &#039;Offline Payments&#039;, &#039;woocommerce&#039; ); ?&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;wc-wizard-service-description&quot;&gt;
+						&lt;?php esc_html_e( &#039;Collect payments from customers offline.&#039;, &#039;woocommerce&#039; ); ?&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;wc-wizard-service-enable&quot; tabindex=&quot;0&quot;&gt;
+						&lt;input class=&quot;wc-wizard-service-list-toggle&quot; id=&quot;wc-wizard-service-list-toggle&quot; type=&quot;checkbox&quot;&gt;
+						&lt;label for=&quot;wc-wizard-service-list-toggle&quot;&gt;&lt;/label&gt;
+					&lt;/div&gt;
+				&lt;/li&gt;
+				&lt;?php
+				foreach ( $manual_gateways as $gateway_id =&gt; $gateway ) {
+					$this-&gt;display_service_item( $gateway_id, $gateway );
+				}
+				?&gt;
+			&lt;/ul&gt;
+			&lt;p class=&quot;wc-setup-actions step&quot;&gt;
+				&lt;?php $this-&gt;plugin_install_info(); ?&gt;
+				&lt;button type=&quot;submit&quot; class=&quot;button-primary button button-large button-next&quot; value=&quot;&lt;?php esc_attr_e( &#039;Continue&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; name=&quot;save_step&quot;&gt;&lt;?php esc_html_e( &#039;Continue&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+				&lt;?php wp_nonce_field( &#039;wc-setup&#039; ); ?&gt;
+			&lt;/p&gt;
+		&lt;/form&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Payment Step save.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function wc_setup_payment_save() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+	}
+
+	protected function display_recommended_item( $item_info ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$type        = $item_info[&#039;type&#039;];
+		$title       = $item_info[&#039;title&#039;];
+		$description = $item_info[&#039;description&#039;];
+		$img_url     = $item_info[&#039;img_url&#039;];
+		$img_alt     = $item_info[&#039;img_alt&#039;];
+		?&gt;
+		&lt;li class=&quot;recommended-item checkbox&quot;&gt;
+			&lt;input
+				id=&quot;&lt;?php echo esc_attr( &#039;wc_recommended_&#039; . $type ); ?&gt;&quot;
+				type=&quot;checkbox&quot;
+				name=&quot;&lt;?php echo esc_attr( &#039;setup_&#039; . $type ); ?&gt;&quot;
+				value=&quot;yes&quot;
+				checked
+				data-plugins=&quot;&lt;?php echo wc_esc_json( wp_json_encode( isset( $item_info[&#039;plugins&#039;] ) ? $item_info[&#039;plugins&#039;] : null ) ); ?&gt;&quot;
+			/&gt;
+			&lt;label for=&quot;&lt;?php echo esc_attr( &#039;wc_recommended_&#039; . $type ); ?&gt;&quot;&gt;
+				&lt;img
+					src=&quot;&lt;?php echo esc_url( $img_url ); ?&gt;&quot;
+					class=&quot;&lt;?php echo esc_attr( &#039;recommended-item-icon-&#039; . $type ); ?&gt; recommended-item-icon&quot;
+					alt=&quot;&lt;?php echo esc_attr( $img_alt ); ?&gt;&quot; /&gt;
+				&lt;div class=&quot;recommended-item-description-container&quot;&gt;
+					&lt;h3&gt;&lt;?php echo esc_html( $title ); ?&gt;&lt;/h3&gt;
+					&lt;p&gt;&lt;?php echo wp_kses( $description, array(
+						&#039;a&#039; =&gt; array(
+							&#039;href&#039;   =&gt; array(),
+							&#039;target&#039; =&gt; array(),
+							&#039;rel&#039;    =&gt; array(),
+						),
+						&#039;em&#039; =&gt; array(),
+					) ); ?&gt;&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/label&gt;
+		&lt;/li&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Recommended step
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function wc_setup_recommended() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		?&gt;
+		&lt;h1&gt;&lt;?php esc_html_e( &#039;Recommended for All WooCommerce Stores&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/h1&gt;
+		&lt;p&gt;
+			&lt;?php esc_html_e( &#039;Enhance your store with these recommended free features.&#039;, &#039;woocommerce&#039; ); ?&gt;
+		&lt;/p&gt;
+		&lt;form method=&quot;post&quot;&gt;
+			&lt;ul class=&quot;recommended-step&quot;&gt;
+				&lt;?php
+				if ( $this-&gt;should_show_theme() ) :
+					$theme      = wp_get_theme();
+					$theme_name = $theme[&#039;Name&#039;];
+					$this-&gt;display_recommended_item( array(
+						&#039;type&#039;        =&gt; &#039;storefront_theme&#039;,
+						&#039;title&#039;       =&gt; __( &#039;Storefront Theme&#039;, &#039;woocommerce&#039; ),
+						&#039;description&#039; =&gt; sprintf( __(
+								&#039;Design your store with deep WooCommerce integration. If toggled on, we’ll install &lt;a href=&quot;https://woocommerce.com/storefront/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Storefront&lt;/a&gt;, and your current theme &lt;em&gt;%s&lt;/em&gt; will be deactivated.&#039;, &#039;woocommerce&#039; ),
+								$theme_name
+						),
+						&#039;img_url&#039;     =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/obw-storefront-icon.svg&#039;,
+						&#039;img_alt&#039;     =&gt; __( &#039;Storefront icon&#039;, &#039;woocommerce&#039; ),
+					) );
+				endif;
+
+				if ( $this-&gt;should_show_automated_tax() ) :
+					$this-&gt;display_recommended_item( array(
+						&#039;type&#039;        =&gt; &#039;automated_taxes&#039;,
+						&#039;title&#039;       =&gt; __( &#039;Automated Taxes&#039;, &#039;woocommerce&#039; ),
+						&#039;description&#039; =&gt; __( &#039;Save time and errors with automated tax calculation and collection at checkout. Powered by WooCommerce Services and Jetpack.&#039;, &#039;woocommerce&#039; ),
+						&#039;img_url&#039;     =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/obw-taxes-icon.svg&#039;,
+						&#039;img_alt&#039;     =&gt; __( &#039;automated taxes icon&#039;, &#039;woocommerce&#039; ),
+						&#039;plugins&#039;     =&gt; $this-&gt;get_wcs_requisite_plugins(),
+					) );
+				endif;
+
+				if ( $this-&gt;should_show_wc_admin() ) :
+					$this-&gt;display_recommended_item( array(
+						&#039;type&#039;        =&gt; &#039;wc_admin&#039;,
+						&#039;title&#039;       =&gt; __( &#039;WooCommerce Admin&#039;, &#039;woocommerce&#039; ),
+						&#039;description&#039; =&gt; __( &#039;Manage your store\&#039;s reports and monitor key metrics with a new and improved interface and dashboard.&#039;, &#039;woocommerce&#039; ),
+						&#039;img_url&#039;     =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/obw-woocommerce-admin-icon.svg&#039;,
+						&#039;img_alt&#039;     =&gt; __( &#039;WooCommerce Admin icon&#039;, &#039;woocommerce&#039; ),
+						&#039;plugins&#039;     =&gt; array( array( &#039;name&#039; =&gt; __( &#039;WooCommerce Admin&#039;, &#039;woocommerce&#039; ), &#039;slug&#039; =&gt; &#039;woocommerce-admin&#039; ) ),
+					) );
+				endif;
+
+				if ( $this-&gt;should_show_mailchimp() ) :
+					$this-&gt;display_recommended_item( array(
+						&#039;type&#039;        =&gt; &#039;mailchimp&#039;,
+						&#039;title&#039;       =&gt; __( &#039;Mailchimp&#039;, &#039;woocommerce&#039; ),
+						&#039;description&#039; =&gt; __( &#039;Join the 16 million customers who use Mailchimp. Sync list and store data to send automated emails, and targeted campaigns.&#039;, &#039;woocommerce&#039; ),
+						&#039;img_url&#039;     =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/obw-mailchimp-icon.svg&#039;,
+						&#039;img_alt&#039;     =&gt; __( &#039;Mailchimp icon&#039;, &#039;woocommerce&#039; ),
+						&#039;plugins&#039;     =&gt; array( array( &#039;name&#039; =&gt; __( &#039;Mailchimp for WooCommerce&#039;, &#039;woocommerce&#039; ), &#039;slug&#039; =&gt; &#039;mailchimp-for-woocommerce&#039; ) ),
+					) );
+				endif;
+
+				if ( $this-&gt;should_show_facebook() ) :
+					$this-&gt;display_recommended_item( array(
+						&#039;type&#039;        =&gt; &#039;facebook&#039;,
+						&#039;title&#039;       =&gt; __( &#039;Facebook&#039;, &#039;woocommerce&#039; ),
+						&#039;description&#039; =&gt; __( &#039;Enjoy all Facebook products combined in one extension: pixel tracking, catalog sync, messenger chat, shop functionality and Instagram shopping (coming soon)!&#039;, &#039;woocommerce&#039; ),
+						&#039;img_url&#039;     =&gt; WC()-&gt;plugin_url() . &#039;/assets/images/obw-facebook-icon.svg&#039;,
+						&#039;img_alt&#039;     =&gt; __( &#039;Facebook icon&#039;, &#039;woocommerce&#039; ),
+						&#039;plugins&#039;     =&gt; array( array( &#039;name&#039; =&gt; __( &#039;Facebook for WooCommerce&#039;, &#039;woocommerce&#039; ), &#039;slug&#039; =&gt; &#039;facebook-for-woocommerce&#039; ) ),
+					) );
+				endif;
+			?&gt;
+		&lt;/ul&gt;
+			&lt;p class=&quot;wc-setup-actions step&quot;&gt;
+				&lt;?php $this-&gt;plugin_install_info(); ?&gt;
+				&lt;button type=&quot;submit&quot; class=&quot;button-primary button button-large button-next&quot; value=&quot;&lt;?php esc_attr_e( &#039;Continue&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; name=&quot;save_step&quot;&gt;&lt;?php esc_html_e( &#039;Continue&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+				&lt;?php wp_nonce_field( &#039;wc-setup&#039; ); ?&gt;
+			&lt;/p&gt;
+		&lt;/form&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Recommended step save.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function wc_setup_recommended_save() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+	}
+
+	/**
+	 * Go to the next step if Jetpack was connected.
+	 */
+	protected function wc_setup_activate_actions() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		if (
+			isset( $_GET[&#039;from&#039;] ) &amp;&amp;
+			&#039;wpcom&#039; === $_GET[&#039;from&#039;] &amp;&amp;
+			class_exists( &#039;Jetpack&#039; ) &amp;&amp;
+			Jetpack::is_active()
+		) {
+			wp_redirect( esc_url_raw( remove_query_arg( &#039;from&#039;, $this-&gt;get_next_step_link() ) ) );
+			exit;
+		}
+	}
+
+	/**
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function wc_setup_activate_get_feature_list() {
+		$features = array();
+
+		$stripe_settings = get_option( &#039;woocommerce_stripe_settings&#039;, false );
+		$stripe_enabled  = is_array( $stripe_settings )
+			&amp;&amp; isset( $stripe_settings[&#039;create_account&#039;] ) &amp;&amp; &#039;yes&#039; === $stripe_settings[&#039;create_account&#039;]
+			&amp;&amp; isset( $stripe_settings[&#039;enabled&#039;] ) &amp;&amp; &#039;yes&#039; === $stripe_settings[&#039;enabled&#039;];
+		$ppec_settings   = get_option( &#039;woocommerce_ppec_paypal_settings&#039;, false );
+		$ppec_enabled    = is_array( $ppec_settings )
+			&amp;&amp; isset( $ppec_settings[&#039;reroute_requests&#039;] ) &amp;&amp; &#039;yes&#039; === $ppec_settings[&#039;reroute_requests&#039;]
+			&amp;&amp; isset( $ppec_settings[&#039;enabled&#039;] ) &amp;&amp; &#039;yes&#039; === $ppec_settings[&#039;enabled&#039;];
+
+		$features[&#039;payment&#039;] = $stripe_enabled || $ppec_enabled;
+		$features[&#039;taxes&#039;]   = (bool) get_option( &#039;woocommerce_setup_automated_taxes&#039;, false );
+		$features[&#039;labels&#039;]  = (bool) get_option( &#039;woocommerce_setup_shipping_labels&#039;, false );
+
+		return $features;
+	}
+
+	/**
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function wc_setup_activate_get_feature_list_str() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$features = $this-&gt;wc_setup_activate_get_feature_list();
+		if ( $features[&#039;payment&#039;] &amp;&amp; $features[&#039;taxes&#039;] &amp;&amp; $features[&#039;labels&#039;] ) {
+			return __( &#039;payment setup, automated taxes and discounted shipping labels&#039;, &#039;woocommerce&#039; );
+		} else if ( $features[&#039;payment&#039;] &amp;&amp; $features[&#039;taxes&#039;] ) {
+			return __( &#039;payment setup and automated taxes&#039;, &#039;woocommerce&#039; );
+		} else if ( $features[&#039;payment&#039;] &amp;&amp; $features[&#039;labels&#039;] ) {
+			return __( &#039;payment setup and discounted shipping labels&#039;, &#039;woocommerce&#039; );
+		} else if ( $features[&#039;payment&#039;] ) {
+			return __( &#039;payment setup&#039;, &#039;woocommerce&#039; );
+		} else if ( $features[&#039;taxes&#039;] &amp;&amp; $features[&#039;labels&#039;] ) {
+			return __( &#039;automated taxes and discounted shipping labels&#039;, &#039;woocommerce&#039; );
+		} else if ( $features[&#039;taxes&#039;] ) {
+			return __( &#039;automated taxes&#039;, &#039;woocommerce&#039; );
+		} else if ( $features[&#039;labels&#039;] ) {
+			return __( &#039;discounted shipping labels&#039;, &#039;woocommerce&#039; );
+		}
+		return false;
+	}
+
+	/**
+	 * Activate step.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function wc_setup_activate() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$this-&gt;wc_setup_activate_actions();
+
+		$jetpack_connected = class_exists( &#039;Jetpack&#039; ) &amp;&amp; Jetpack::is_active();
+
+		$has_jetpack_error = false;
+		if ( isset( $_GET[&#039;activate_error&#039;] ) ) {
+			$has_jetpack_error = true;
+
+			$title = __( &quot;Sorry, we couldn&#039;t connect your store to Jetpack&quot;, &#039;woocommerce&#039; );
+
+			$error_message = $this-&gt;get_activate_error_message( sanitize_text_field( wp_unslash( $_GET[&#039;activate_error&#039;] ) ) );
+			$description = $error_message;
+		} else {
+			$feature_list = $this-&gt;wc_setup_activate_get_feature_list_str();
+
+			$description = false;
+
+			if ( $feature_list ) {
+				if ( ! $jetpack_connected ) {
+					/* translators: %s: list of features, potentially comma separated */
+					$description_base = __( &#039;Your store is almost ready! To activate services like %s, just connect with Jetpack.&#039;, &#039;woocommerce&#039; );
+				} else {
+					$description_base = __( &#039;Thanks for using Jetpack! Your store is almost ready: to activate services like %s, just connect your store.&#039;, &#039;woocommerce&#039; );
+				}
+				$description = sprintf( $description_base, $feature_list );
+			}
+
+			if ( ! $jetpack_connected ) {
+				$title = $feature_list ?
+					__( &#039;Connect your store to Jetpack&#039;, &#039;woocommerce&#039; ) :
+					__( &#039;Connect your store to Jetpack to enable extra features&#039;, &#039;woocommerce&#039; );
+				$button_text = __( &#039;Continue with Jetpack&#039;, &#039;woocommerce&#039; );
+			} elseif ( $feature_list ) {
+				$title = __( &#039;Connect your store to activate WooCommerce Services&#039;, &#039;woocommerce&#039; );
+				$button_text = __( &#039;Continue with WooCommerce Services&#039;, &#039;woocommerce&#039; );
+			} else {
+				wp_redirect( esc_url_raw( $this-&gt;get_next_step_link() ) );
+				exit;
+			}
+		}
+		?&gt;
+		&lt;h1&gt;&lt;?php echo esc_html( $title ); ?&gt;&lt;/h1&gt;
+		&lt;p&gt;&lt;?php echo esc_html( $description ); ?&gt;&lt;/p&gt;
+
+		&lt;?php if ( $jetpack_connected ) : ?&gt;
+			&lt;div class=&quot;activate-splash&quot;&gt;
+				&lt;img
+					class=&quot;jetpack-logo&quot;
+					src=&quot;&lt;?php echo esc_url( WC()-&gt;plugin_url() . &#039;/assets/images/jetpack_horizontal_logo.png&#039; ); ?&gt;&quot;
+					alt=&quot;&lt;?php esc_attr_e( &#039;Jetpack logo&#039;, &#039;woocommerce&#039; ); ?&gt;&quot;
+				/&gt;
+				&lt;img
+					class=&quot;wcs-notice&quot;
+					src=&quot;&lt;?php echo esc_url( WC()-&gt;plugin_url() . &#039;/assets/images/wcs-notice.png&#039; ); ?&gt;&quot;
+				/&gt;
+			&lt;/div&gt;
+		&lt;?php else : ?&gt;
+			&lt;img
+				class=&quot;jetpack-logo&quot;
+				src=&quot;&lt;?php echo esc_url( WC()-&gt;plugin_url() . &#039;/assets/images/jetpack_vertical_logo.png&#039; ); ?&gt;&quot;
+				alt=&quot;&lt;?php esc_attr_e( &#039;Jetpack logo&#039;, &#039;woocommerce&#039; ); ?&gt;&quot;
+			/&gt;
+		&lt;?php endif; ?&gt;
+
+		&lt;?php if ( $has_jetpack_error ) : ?&gt;
+			&lt;p class=&quot;wc-setup-actions step&quot;&gt;
+				&lt;a
+					href=&quot;&lt;?php echo esc_url( $this-&gt;get_next_step_link() ); ?&gt;&quot;
+					class=&quot;button-primary button button-large&quot;
+				&gt;
+					&lt;?php esc_html_e( &#039;Finish setting up your store&#039;, &#039;woocommerce&#039; ); ?&gt;
+				&lt;/a&gt;
+			&lt;/p&gt;
+		&lt;?php else : ?&gt;
+			&lt;p class=&quot;jetpack-terms&quot;&gt;
+				&lt;?php
+					printf(
+						wp_kses_post( __( &#039;By connecting your site you agree to our fascinating &lt;a href=&quot;%1$s&quot; target=&quot;_blank&quot;&gt;Terms of Service&lt;/a&gt; and to &lt;a href=&quot;%2$s&quot; target=&quot;_blank&quot;&gt;share details&lt;/a&gt; with WordPress.com&#039;, &#039;woocommerce&#039; ) ),
+						&#039;https://wordpress.com/tos&#039;,
+						&#039;https://jetpack.com/support/what-data-does-jetpack-sync&#039;
+					);
+				?&gt;
+			&lt;/p&gt;
+			&lt;form method=&quot;post&quot; class=&quot;activate-jetpack&quot;&gt;
+				&lt;p class=&quot;wc-setup-actions step&quot;&gt;
+					&lt;button type=&quot;submit&quot; class=&quot;button-primary button button-large&quot; value=&quot;&lt;?php echo esc_attr( $button_text ); ?&gt;&quot;&gt;&lt;?php echo esc_html( $button_text ); ?&gt;&lt;/button&gt;
+				&lt;/p&gt;
+				&lt;input type=&quot;hidden&quot; name=&quot;save_step&quot; value=&quot;activate&quot; /&gt;
+				&lt;?php wp_nonce_field( &#039;wc-setup&#039; ); ?&gt;
+			&lt;/form&gt;
+			&lt;?php if ( ! $jetpack_connected ) : ?&gt;
+				&lt;h3 class=&quot;jetpack-reasons&quot;&gt;
+					&lt;?php
+						echo esc_html( $description ?
+							__( &quot;Bonus reasons you&#039;ll love Jetpack&quot;, &#039;woocommerce&#039; ) :
+							__( &quot;Reasons you&#039;ll love Jetpack&quot;, &#039;woocommerce&#039; )
+						);
+					?&gt;
+				&lt;/h3&gt;
+				&lt;ul class=&quot;wc-wizard-features&quot;&gt;
+					&lt;li class=&quot;wc-wizard-feature-item&quot;&gt;
+						&lt;p class=&quot;wc-wizard-feature-name&quot;&gt;
+							&lt;strong&gt;&lt;?php esc_html_e( &#039;Better security&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/strong&gt;
+						&lt;/p&gt;
+						&lt;p class=&quot;wc-wizard-feature-description&quot;&gt;
+							&lt;?php esc_html_e( &#039;Protect your store from unauthorized access.&#039;, &#039;woocommerce&#039; ); ?&gt;
+						&lt;/p&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;wc-wizard-feature-item&quot;&gt;
+						&lt;p class=&quot;wc-wizard-feature-name&quot;&gt;
+							&lt;strong&gt;&lt;?php esc_html_e( &#039;Store stats&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/strong&gt;
+						&lt;/p&gt;
+						&lt;p class=&quot;wc-wizard-feature-description&quot;&gt;
+							&lt;?php esc_html_e( &#039;Get insights on how your store is doing, including total sales, top products, and more.&#039;, &#039;woocommerce&#039; ); ?&gt;
+						&lt;/p&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;wc-wizard-feature-item&quot;&gt;
+						&lt;p class=&quot;wc-wizard-feature-name&quot;&gt;
+							&lt;strong&gt;&lt;?php esc_html_e( &#039;Store monitoring&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/strong&gt;
+						&lt;/p&gt;
+						&lt;p class=&quot;wc-wizard-feature-description&quot;&gt;
+							&lt;?php esc_html_e( &#039;Get an alert if your store is down for even a few minutes.&#039;, &#039;woocommerce&#039; ); ?&gt;
+						&lt;/p&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;wc-wizard-feature-item&quot;&gt;
+						&lt;p class=&quot;wc-wizard-feature-name&quot;&gt;
+							&lt;strong&gt;&lt;?php esc_html_e( &#039;Product promotion&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/strong&gt;
+						&lt;/p&gt;
+						&lt;p class=&quot;wc-wizard-feature-description&quot;&gt;
+							&lt;?php esc_html_e( &quot;Share new items on social media the moment they&#039;re live in your store.&quot;, &#039;woocommerce&#039; ); ?&gt;
+						&lt;/p&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;?php endif; ?&gt;
+		&lt;?php endif; ?&gt;
+	&lt;?php
+	}
+
+	/**
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function get_all_activate_errors() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		return array(
+			&#039;default&#039; =&gt; __( &quot;Sorry! We tried, but we couldn&#039;t connect Jetpack just now 😭. Please go to the Plugins tab to connect Jetpack, so that you can finish setting up your store.&quot;, &#039;woocommerce&#039; ),
+			&#039;jetpack_cant_be_installed&#039; =&gt; __( &quot;Sorry! We tried, but we couldn&#039;t install Jetpack for you 😭. Please go to the Plugins tab to install it, and finish setting up your store.&quot;, &#039;woocommerce&#039; ),
+			&#039;register_http_request_failed&#039; =&gt; __( &quot;Sorry! We couldn&#039;t contact Jetpack just now 😭. Please make sure that your site is visible over the internet, and that it accepts incoming and outgoing requests via curl. You can also try to connect to Jetpack again, and if you run into any more issues, please contact support.&quot;, &#039;woocommerce&#039; ),
+			&#039;siteurl_private_ip_dev&#039; =&gt; __( &quot;Your site might be on a private network. Jetpack can only connect to public sites. Please make sure your site is visible over the internet, and then try connecting again 🙏.&quot; , &#039;woocommerce&#039; ),
+		);
+	}
+
+	/**
+	 *
+	 * @deprecated 4.6.0
+	 */
+	protected function get_activate_error_message( $code = &#039;&#039; ) {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		$errors = $this-&gt;get_all_activate_errors();
+		return array_key_exists( $code, $errors ) ? $errors[ $code ] : $errors[&#039;default&#039;];
+	}
+
+	/**
+	 * Activate step save.
+	 *
+	 * Install, activate, and launch connection flow for Jetpack.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function wc_setup_activate_save() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+	}
+
+	/**
+	 * Final step.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public function wc_setup_ready() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, &#039;Onboarding is maintained in WooCommerce Admin.&#039; );
+		// We&#039;ve made it! Don&#039;t prompt the user to run the wizard again.
+		WC_Admin_Notices::remove_notice( &#039;install&#039;, true );
+
+		$user_email   = $this-&gt;get_current_user_email();
+		$docs_url     = &#039;https://docs.woocommerce.com/documentation/plugins/woocommerce/getting-started/?utm_source=setupwizard&amp;utm_medium=product&amp;utm_content=docs&amp;utm_campaign=woocommerceplugin&#039;;
+		$help_text    = sprintf(
+			/* translators: %1$s: link to docs */
+			__( &#039;Visit WooCommerce.com to learn more about &lt;a href=&quot;%1$s&quot; target=&quot;_blank&quot;&gt;getting started&lt;/a&gt;.&#039;, &#039;woocommerce&#039; ),
+			$docs_url
+		);
+		?&gt;
+		&lt;h1&gt;&lt;?php esc_html_e( &quot;You&#039;re ready to start selling!&quot;, &#039;woocommerce&#039; ); ?&gt;&lt;/h1&gt;
+
+		&lt;div class=&quot;woocommerce-message woocommerce-newsletter&quot;&gt;
+			&lt;p&gt;&lt;?php esc_html_e( &quot;We&#039;re here for you — get tips, product updates, and inspiration straight to your mailbox.&quot;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+			&lt;form action=&quot;//woocommerce.us8.list-manage.com/subscribe/post?u=2c1434dc56f9506bf3c3ecd21&amp;amp;id=13860df971&amp;amp;SIGNUPPAGE=plugin&quot; method=&quot;post&quot; target=&quot;_blank&quot; novalidate&gt;
+				&lt;div class=&quot;newsletter-form-container&quot;&gt;
+					&lt;input
+						class=&quot;newsletter-form-email&quot;
+						type=&quot;email&quot;
+						value=&quot;&lt;?php echo esc_attr( $user_email ); ?&gt;&quot;
+						name=&quot;EMAIL&quot;
+						placeholder=&quot;&lt;?php esc_attr_e( &#039;Email address&#039;, &#039;woocommerce&#039; ); ?&gt;&quot;
+						required
+					&gt;
+					&lt;p class=&quot;wc-setup-actions step newsletter-form-button-container&quot;&gt;
+						&lt;button
+							type=&quot;submit&quot;
+							value=&quot;&lt;?php esc_attr_e( &#039;Yes please!&#039;, &#039;woocommerce&#039; ); ?&gt;&quot;
+							name=&quot;subscribe&quot;
+							id=&quot;mc-embedded-subscribe&quot;
+							class=&quot;button-primary button newsletter-form-button&quot;
+						&gt;&lt;?php esc_html_e( &#039;Yes please!&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+					&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/form&gt;
+		&lt;/div&gt;
+
+		&lt;ul class=&quot;wc-wizard-next-steps&quot;&gt;
+			&lt;li class=&quot;wc-wizard-next-step-item&quot;&gt;
+				&lt;div class=&quot;wc-wizard-next-step-description&quot;&gt;
+					&lt;p class=&quot;next-step-heading&quot;&gt;&lt;?php esc_html_e( &#039;Next step&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+					&lt;h3 class=&quot;next-step-description&quot;&gt;&lt;?php esc_html_e( &#039;Create some products&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/h3&gt;
+					&lt;p class=&quot;next-step-extra-info&quot;&gt;&lt;?php esc_html_e( &quot;You&#039;re ready to add products to your store.&quot;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;wc-wizard-next-step-action&quot;&gt;
+					&lt;p class=&quot;wc-setup-actions step&quot;&gt;
+						&lt;a class=&quot;button button-primary button-large&quot; href=&quot;&lt;?php echo esc_url( admin_url( &#039;post-new.php?post_type=product&amp;tutorial=true&#039; ) ); ?&gt;&quot;&gt;
+							&lt;?php esc_html_e( &#039;Create a product&#039;, &#039;woocommerce&#039; ); ?&gt;
+						&lt;/a&gt;
+					&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;wc-wizard-next-step-item&quot;&gt;
+				&lt;div class=&quot;wc-wizard-next-step-description&quot;&gt;
+					&lt;p class=&quot;next-step-heading&quot;&gt;&lt;?php esc_html_e( &#039;Have an existing store?&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+					&lt;h3 class=&quot;next-step-description&quot;&gt;&lt;?php esc_html_e( &#039;Import products&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/h3&gt;
+					&lt;p class=&quot;next-step-extra-info&quot;&gt;&lt;?php esc_html_e( &#039;Transfer existing products to your new store — just import a CSV file.&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;wc-wizard-next-step-action&quot;&gt;
+					&lt;p class=&quot;wc-setup-actions step&quot;&gt;
+						&lt;a class=&quot;button button-large&quot; href=&quot;&lt;?php echo esc_url( admin_url( &#039;edit.php?post_type=product&amp;page=product_importer&#039; ) ); ?&gt;&quot;&gt;
+							&lt;?php esc_html_e( &#039;Import products&#039;, &#039;woocommerce&#039; ); ?&gt;
+						&lt;/a&gt;
+					&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;wc-wizard-additional-steps&quot;&gt;
+				&lt;div class=&quot;wc-wizard-next-step-description&quot;&gt;
+					&lt;p class=&quot;next-step-heading&quot;&gt;&lt;?php esc_html_e( &#039;You can also:&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;wc-wizard-next-step-action&quot;&gt;
+					&lt;p class=&quot;wc-setup-actions step&quot;&gt;
+						&lt;a class=&quot;button button-large&quot; href=&quot;&lt;?php echo esc_url( admin_url() ); ?&gt;&quot;&gt;
+							&lt;?php esc_html_e( &#039;Visit Dashboard&#039;, &#039;woocommerce&#039; ); ?&gt;
+						&lt;/a&gt;
+						&lt;a class=&quot;button button-large&quot; href=&quot;&lt;?php echo esc_url( admin_url( &#039;admin.php?page=wc-settings&#039; ) ); ?&gt;&quot;&gt;
+							&lt;?php esc_html_e( &#039;Review Settings&#039;, &#039;woocommerce&#039; ); ?&gt;
+						&lt;/a&gt;
+						&lt;a class=&quot;button button-large&quot; href=&quot;&lt;?php echo esc_url( add_query_arg( array( &#039;autofocus&#039; =&gt; array( &#039;panel&#039; =&gt; &#039;woocommerce&#039; ), &#039;url&#039; =&gt; wc_get_page_permalink( &#039;shop&#039; ) ), admin_url( &#039;customize.php&#039; ) ) ); ?&gt;&quot;&gt;
+							&lt;?php esc_html_e( &#039;View &amp;amp; Customize&#039;, &#039;woocommerce&#039; ); ?&gt;
+						&lt;/a&gt;
+					&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;p class=&quot;next-steps-help-text&quot;&gt;&lt;?php echo wp_kses_post( $help_text ); ?&gt;&lt;/p&gt;
+		&lt;?php
+	}
+}
+
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866946"></script>
+    <script src="../js/search.js?updated=1692866946"></script>
+</body>
+</html>

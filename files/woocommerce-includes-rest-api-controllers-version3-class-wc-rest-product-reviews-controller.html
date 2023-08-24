@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866948">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866948">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-rest-product-reviews-controller.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * REST API Product Reviews Controller
+ *
+ * Handles requests to /products/reviews.
+ *
+ * @package WooCommerce\RestApi
+ * @since   3.5.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * REST API Product Reviews Controller Class.
+ *
+ * @package WooCommerce\RestApi
+ * @extends WC_REST_Controller
+ */
+class WC_REST_Product_Reviews_Controller extends WC_REST_Controller {
+
+	/**
+	 * Endpoint namespace.
+	 *
+	 * @var string
+	 */
+	protected $namespace = &#039;wc/v3&#039;;
+
+	/**
+	 * Route base.
+	 *
+	 * @var string
+	 */
+	protected $rest_base = &#039;products/reviews&#039;;
+
+	/**
+	 * Register the routes for product reviews.
+	 */
+	public function register_routes() {
+		register_rest_route(
+			$this-&gt;namespace, &#039;/&#039; . $this-&gt;rest_base, array(
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_items&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;get_items_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; $this-&gt;get_collection_params(),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::CREATABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;create_item&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;create_item_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; array_merge(
+						$this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::CREATABLE ), array(
+							&#039;product_id&#039;     =&gt; array(
+								&#039;required&#039;    =&gt; true,
+								&#039;description&#039; =&gt; __( &#039;Unique identifier for the product.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;integer&#039;,
+							),
+							&#039;review&#039;         =&gt; array(
+								&#039;required&#039;    =&gt; true,
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;description&#039; =&gt; __( &#039;Review content.&#039;, &#039;woocommerce&#039; ),
+							),
+							&#039;reviewer&#039;       =&gt; array(
+								&#039;required&#039;    =&gt; true,
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;description&#039; =&gt; __( &#039;Name of the reviewer.&#039;, &#039;woocommerce&#039; ),
+							),
+							&#039;reviewer_email&#039; =&gt; array(
+								&#039;required&#039;    =&gt; true,
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;description&#039; =&gt; __( &#039;Email of the reviewer.&#039;, &#039;woocommerce&#039; ),
+							),
+						)
+					),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace, &#039;/&#039; . $this-&gt;rest_base . &#039;/(?P&lt;id&gt;[\d]+)&#039;, array(
+				&#039;args&#039;   =&gt; array(
+					&#039;id&#039; =&gt; array(
+						&#039;description&#039; =&gt; __( &#039;Unique identifier for the resource.&#039;, &#039;woocommerce&#039; ),
+						&#039;type&#039;        =&gt; &#039;integer&#039;,
+					),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_item&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;get_item_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; array(
+						&#039;context&#039; =&gt; $this-&gt;get_context_param( array( &#039;default&#039; =&gt; &#039;view&#039; ) ),
+					),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::EDITABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;update_item&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; $this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::EDITABLE ),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::DELETABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;delete_item&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;delete_item_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; array(
+						&#039;force&#039; =&gt; array(
+							&#039;default&#039;     =&gt; false,
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;description&#039; =&gt; __( &#039;Whether to bypass trash and force deletion.&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace, &#039;/&#039; . $this-&gt;rest_base . &#039;/batch&#039;, array(
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::EDITABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;batch_items&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;batch_items_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; $this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::EDITABLE ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_public_batch_schema&#039; ),
+			)
+		);
+	}
+
+	/**
+	 * Check whether a given request has permission to read webhook deliveries.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function get_items_permissions_check( $request ) {
+		if ( ! wc_rest_check_product_reviews_permissions( &#039;read&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_view&#039;, __( &#039;Sorry, you cannot list resources.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access to read a product review.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function get_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_product_reviews_permissions( &#039;read&#039;, (int) $request[&#039;id&#039;] ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_view&#039;, __( &#039;Sorry, you cannot view this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access to create a new product review.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function create_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_product_reviews_permissions( &#039;create&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_create&#039;, __( &#039;Sorry, you are not allowed to create resources.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access to update a product review.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function update_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_product_reviews_permissions( &#039;edit&#039;, (int) $request[&#039;id&#039;] ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_edit&#039;, __( &#039;Sorry, you cannot edit this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access to delete a product review.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function delete_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_product_reviews_permissions( &#039;delete&#039;, (int) $request[&#039;id&#039;] ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_delete&#039;, __( &#039;Sorry, you cannot delete this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access batch create, update and delete items.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return boolean|WP_Error
+	 */
+	public function batch_items_permissions_check( $request ) {
+		if ( ! wc_rest_check_product_reviews_permissions( &#039;batch&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_batch&#039;, __( &#039;Sorry, you are not allowed to batch manipulate this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Get all reviews.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return array|WP_Error
+	 */
+	public function get_items( $request ) {
+		// Retrieve the list of registered collection query parameters.
+		$registered = $this-&gt;get_collection_params();
+
+		/*
+		 * This array defines mappings between public API query parameters whose
+		 * values are accepted as-passed, and their internal WP_Query parameter
+		 * name equivalents (some are the same). Only values which are also
+		 * present in $registered will be set.
+		 */
+		$parameter_mappings = array(
+			&#039;reviewer&#039;         =&gt; &#039;author__in&#039;,
+			&#039;reviewer_email&#039;   =&gt; &#039;author_email&#039;,
+			&#039;reviewer_exclude&#039; =&gt; &#039;author__not_in&#039;,
+			&#039;exclude&#039;          =&gt; &#039;comment__not_in&#039;,
+			&#039;include&#039;          =&gt; &#039;comment__in&#039;,
+			&#039;offset&#039;           =&gt; &#039;offset&#039;,
+			&#039;order&#039;            =&gt; &#039;order&#039;,
+			&#039;per_page&#039;         =&gt; &#039;number&#039;,
+			&#039;product&#039;          =&gt; &#039;post__in&#039;,
+			&#039;search&#039;           =&gt; &#039;search&#039;,
+			&#039;status&#039;           =&gt; &#039;status&#039;,
+		);
+
+		$prepared_args = array();
+
+		/*
+		 * For each known parameter which is both registered and present in the request,
+		 * set the parameter&#039;s value on the query $prepared_args.
+		 */
+		foreach ( $parameter_mappings as $api_param =&gt; $wp_param ) {
+			if ( isset( $registered[ $api_param ], $request[ $api_param ] ) ) {
+				$prepared_args[ $wp_param ] = $request[ $api_param ];
+			}
+		}
+
+		// Ensure certain parameter values default to empty strings.
+		foreach ( array( &#039;author_email&#039;, &#039;search&#039; ) as $param ) {
+			if ( ! isset( $prepared_args[ $param ] ) ) {
+				$prepared_args[ $param ] = &#039;&#039;;
+			}
+		}
+
+		if ( isset( $registered[&#039;orderby&#039;] ) ) {
+			$prepared_args[&#039;orderby&#039;] = $this-&gt;normalize_query_param( $request[&#039;orderby&#039;] );
+		}
+
+		if ( isset( $prepared_args[&#039;status&#039;] ) ) {
+			$prepared_args[&#039;status&#039;] = &#039;approved&#039; === $prepared_args[&#039;status&#039;] ? &#039;approve&#039; : $prepared_args[&#039;status&#039;];
+		}
+
+		$prepared_args[&#039;no_found_rows&#039;] = false;
+		$prepared_args[&#039;date_query&#039;]    = array();
+
+		// Set before into date query. Date query must be specified as an array of an array.
+		if ( isset( $registered[&#039;before&#039;], $request[&#039;before&#039;] ) ) {
+			$prepared_args[&#039;date_query&#039;][0][&#039;before&#039;] = $request[&#039;before&#039;];
+		}
+
+		// Set after into date query. Date query must be specified as an array of an array.
+		if ( isset( $registered[&#039;after&#039;], $request[&#039;after&#039;] ) ) {
+			$prepared_args[&#039;date_query&#039;][0][&#039;after&#039;] = $request[&#039;after&#039;];
+		}
+
+		if ( isset( $registered[&#039;page&#039;] ) &amp;&amp; empty( $request[&#039;offset&#039;] ) ) {
+			$prepared_args[&#039;offset&#039;] = $prepared_args[&#039;number&#039;] * ( absint( $request[&#039;page&#039;] ) - 1 );
+		}
+
+		/**
+		 * Filters arguments, before passing to WP_Comment_Query, when querying reviews via the REST API.
+		 *
+		 * @since 3.5.0
+		 * @link https://developer.wordpress.org/reference/classes/wp_comment_query/
+		 * @param array           $prepared_args Array of arguments for WP_Comment_Query.
+		 * @param WP_REST_Request $request       The current request.
+		 */
+		$prepared_args = apply_filters( &#039;woocommerce_rest_product_review_query&#039;, $prepared_args, $request );
+
+		// Make sure that returns only reviews.
+		$prepared_args[&#039;type&#039;] = &#039;review&#039;;
+
+		// Query reviews.
+		$query        = new WP_Comment_Query();
+		$query_result = $query-&gt;query( $prepared_args );
+		$reviews      = array();
+
+		foreach ( $query_result as $review ) {
+			if ( ! wc_rest_check_product_reviews_permissions( &#039;read&#039;, $review-&gt;comment_ID ) ) {
+				continue;
+			}
+
+			$data      = $this-&gt;prepare_item_for_response( $review, $request );
+			$reviews[] = $this-&gt;prepare_response_for_collection( $data );
+		}
+
+		$total_reviews = (int) $query-&gt;found_comments;
+		$max_pages     = (int) $query-&gt;max_num_pages;
+
+		if ( $total_reviews &lt; 1 ) {
+			// Out-of-bounds, run the query again without LIMIT for total count.
+			unset( $prepared_args[&#039;number&#039;], $prepared_args[&#039;offset&#039;] );
+
+			$query                  = new WP_Comment_Query();
+			$prepared_args[&#039;count&#039;] = true;
+
+			$total_reviews = $query-&gt;query( $prepared_args );
+			$max_pages     = ceil( $total_reviews / $request[&#039;per_page&#039;] );
+		}
+
+		$response = rest_ensure_response( $reviews );
+		$response-&gt;header( &#039;X-WP-Total&#039;, $total_reviews );
+		$response-&gt;header( &#039;X-WP-TotalPages&#039;, $max_pages );
+
+		$base = add_query_arg( $request-&gt;get_query_params(), rest_url( sprintf( &#039;%s/%s&#039;, $this-&gt;namespace, $this-&gt;rest_base ) ) );
+
+		if ( $request[&#039;page&#039;] &gt; 1 ) {
+			$prev_page = $request[&#039;page&#039;] - 1;
+
+			if ( $prev_page &gt; $max_pages ) {
+				$prev_page = $max_pages;
+			}
+
+			$prev_link = add_query_arg( &#039;page&#039;, $prev_page, $base );
+			$response-&gt;link_header( &#039;prev&#039;, $prev_link );
+		}
+
+		if ( $max_pages &gt; $request[&#039;page&#039;] ) {
+			$next_page = $request[&#039;page&#039;] + 1;
+			$next_link = add_query_arg( &#039;page&#039;, $next_page, $base );
+
+			$response-&gt;link_header( &#039;next&#039;, $next_link );
+		}
+
+		return $response;
+	}
+
+	/**
+	 * Create a single review.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function create_item( $request ) {
+		if ( ! empty( $request[&#039;id&#039;] ) ) {
+			return new WP_Error( &#039;woocommerce_rest_review_exists&#039;, __( &#039;Cannot create existing product review.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+		}
+
+		$product_id = (int) $request[&#039;product_id&#039;];
+
+		if ( &#039;product&#039; !== get_post_type( $product_id ) ) {
+			return new WP_Error( &#039;woocommerce_rest_product_invalid_id&#039;, __( &#039;Invalid product ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$prepared_review = $this-&gt;prepare_item_for_database( $request );
+		if ( is_wp_error( $prepared_review ) ) {
+			return $prepared_review;
+		}
+
+		$prepared_review[&#039;comment_type&#039;] = &#039;review&#039;;
+
+		/*
+		 * Do not allow a comment to be created with missing or empty comment_content. See wp_handle_comment_submission().
+		 */
+		if ( empty( $prepared_review[&#039;comment_content&#039;] ) ) {
+			return new WP_Error( &#039;woocommerce_rest_review_content_invalid&#039;, __( &#039;Invalid review content.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+		}
+
+		// Setting remaining values before wp_insert_comment so we can use wp_allow_comment().
+		if ( ! isset( $prepared_review[&#039;comment_date_gmt&#039;] ) ) {
+			$prepared_review[&#039;comment_date_gmt&#039;] = current_time( &#039;mysql&#039;, true );
+		}
+
+		if ( ! empty( $_SERVER[&#039;REMOTE_ADDR&#039;] ) &amp;&amp; rest_is_ip_address( wp_unslash( $_SERVER[&#039;REMOTE_ADDR&#039;] ) ) ) { // WPCS: input var ok, sanitization ok.
+			$prepared_review[&#039;comment_author_IP&#039;] = wc_clean( wp_unslash( $_SERVER[&#039;REMOTE_ADDR&#039;] ) ); // WPCS: input var ok.
+		} else {
+			$prepared_review[&#039;comment_author_IP&#039;] = &#039;127.0.0.1&#039;;
+		}
+
+		if ( ! empty( $request[&#039;author_user_agent&#039;] ) ) {
+			$prepared_review[&#039;comment_agent&#039;] = $request[&#039;author_user_agent&#039;];
+		} elseif ( $request-&gt;get_header( &#039;user_agent&#039; ) ) {
+			$prepared_review[&#039;comment_agent&#039;] = $request-&gt;get_header( &#039;user_agent&#039; );
+		} else {
+			$prepared_review[&#039;comment_agent&#039;] = &#039;&#039;;
+		}
+
+		$check_comment_lengths = wp_check_comment_data_max_lengths( $prepared_review );
+		if ( is_wp_error( $check_comment_lengths ) ) {
+			$error_code = str_replace( array( &#039;comment_author&#039;, &#039;comment_content&#039; ), array( &#039;reviewer&#039;, &#039;review_content&#039; ), $check_comment_lengths-&gt;get_error_code() );
+			return new WP_Error( &#039;woocommerce_rest_&#039; . $error_code, __( &#039;Product review field exceeds maximum length allowed.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+		}
+
+		$prepared_review[&#039;comment_parent&#039;]     = 0;
+		$prepared_review[&#039;comment_author_url&#039;] = &#039;&#039;;
+		$prepared_review[&#039;comment_approved&#039;]   = wp_allow_comment( $prepared_review, true );
+
+		if ( is_wp_error( $prepared_review[&#039;comment_approved&#039;] ) ) {
+			$error_code    = $prepared_review[&#039;comment_approved&#039;]-&gt;get_error_code();
+			$error_message = $prepared_review[&#039;comment_approved&#039;]-&gt;get_error_message();
+
+			if ( &#039;comment_duplicate&#039; === $error_code ) {
+				return new WP_Error( &#039;woocommerce_rest_&#039; . $error_code, $error_message, array( &#039;status&#039; =&gt; 409 ) );
+			}
+
+			if ( &#039;comment_flood&#039; === $error_code ) {
+				return new WP_Error( &#039;woocommerce_rest_&#039; . $error_code, $error_message, array( &#039;status&#039; =&gt; 400 ) );
+			}
+
+			return $prepared_review[&#039;comment_approved&#039;];
+		}
+
+		/**
+		 * Filters a review before it is inserted via the REST API.
+		 *
+		 * Allows modification of the review right before it is inserted via wp_insert_comment().
+		 * Returning a WP_Error value from the filter will shortcircuit insertion and allow
+		 * skipping further processing.
+		 *
+		 * @since 3.5.0
+		 * @param array|WP_Error  $prepared_review The prepared review data for wp_insert_comment().
+		 * @param WP_REST_Request $request          Request used to insert the review.
+		 */
+		$prepared_review = apply_filters( &#039;woocommerce_rest_pre_insert_product_review&#039;, $prepared_review, $request );
+		if ( is_wp_error( $prepared_review ) ) {
+			return $prepared_review;
+		}
+
+		$review_id = wp_insert_comment( wp_filter_comment( wp_slash( (array) $prepared_review ) ) );
+
+		if ( ! $review_id ) {
+			return new WP_Error( &#039;woocommerce_rest_review_failed_create&#039;, __( &#039;Creating product review failed.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 500 ) );
+		}
+
+		if ( isset( $request[&#039;status&#039;] ) ) {
+			$this-&gt;handle_status_param( $request[&#039;status&#039;], $review_id );
+		}
+
+		update_comment_meta( $review_id, &#039;rating&#039;, ! empty( $request[&#039;rating&#039;] ) ? $request[&#039;rating&#039;] : &#039;0&#039; );
+
+		$review = get_comment( $review_id );
+
+		/**
+		 * Fires after a comment is created or updated via the REST API.
+		 *
+		 * @param WP_Comment      $review   Inserted or updated comment object.
+		 * @param WP_REST_Request $request  Request object.
+		 * @param bool            $creating True when creating a comment, false when updating.
+		 */
+		do_action( &#039;woocommerce_rest_insert_product_review&#039;, $review, $request, true );
+
+		$fields_update = $this-&gt;update_additional_fields_for_object( $review, $request );
+		if ( is_wp_error( $fields_update ) ) {
+			return $fields_update;
+		}
+
+		$context = current_user_can( &#039;moderate_comments&#039; ) ? &#039;edit&#039; : &#039;view&#039;;
+		$request-&gt;set_param( &#039;context&#039;, $context );
+
+		$response = $this-&gt;prepare_item_for_response( $review, $request );
+		$response = rest_ensure_response( $response );
+
+		$response-&gt;set_status( 201 );
+		$response-&gt;header( &#039;Location&#039;, rest_url( sprintf( &#039;%s/%s/%d&#039;, $this-&gt;namespace, $this-&gt;rest_base, $review_id ) ) );
+
+		return $response;
+	}
+
+	/**
+	 * Get a single product review.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function get_item( $request ) {
+		$review = $this-&gt;get_review( $request[&#039;id&#039;] );
+		if ( is_wp_error( $review ) ) {
+			return $review;
+		}
+
+		$data     = $this-&gt;prepare_item_for_response( $review, $request );
+		$response = rest_ensure_response( $data );
+
+		return $response;
+	}
+
+	/**
+	 * Updates a review.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response Response object on success, or error object on failure.
+	 */
+	public function update_item( $request ) {
+		$review = $this-&gt;get_review( $request[&#039;id&#039;] );
+		if ( is_wp_error( $review ) ) {
+			return $review;
+		}
+
+		$id = (int) $review-&gt;comment_ID;
+
+		if ( isset( $request[&#039;type&#039;] ) &amp;&amp; &#039;review&#039; !== get_comment_type( $id ) ) {
+			return new WP_Error( &#039;woocommerce_rest_review_invalid_type&#039;, __( &#039;Sorry, you are not allowed to change the comment type.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$prepared_args = $this-&gt;prepare_item_for_database( $request );
+		if ( is_wp_error( $prepared_args ) ) {
+			return $prepared_args;
+		}
+
+		if ( ! empty( $prepared_args[&#039;comment_post_ID&#039;] ) ) {
+			if ( &#039;product&#039; !== get_post_type( (int) $prepared_args[&#039;comment_post_ID&#039;] ) ) {
+				return new WP_Error( &#039;woocommerce_rest_product_invalid_id&#039;, __( &#039;Invalid product ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+			}
+		}
+
+		if ( empty( $prepared_args ) &amp;&amp; isset( $request[&#039;status&#039;] ) ) {
+			// Only the comment status is being changed.
+			$change = $this-&gt;handle_status_param( $request[&#039;status&#039;], $id );
+
+			if ( ! $change ) {
+				return new WP_Error( &#039;woocommerce_rest_review_failed_edit&#039;, __( &#039;Updating review status failed.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 500 ) );
+			}
+		} elseif ( ! empty( $prepared_args ) ) {
+			if ( is_wp_error( $prepared_args ) ) {
+				return $prepared_args;
+			}
+
+			if ( isset( $prepared_args[&#039;comment_content&#039;] ) &amp;&amp; empty( $prepared_args[&#039;comment_content&#039;] ) ) {
+				return new WP_Error( &#039;woocommerce_rest_review_content_invalid&#039;, __( &#039;Invalid review content.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+			}
+
+			$prepared_args[&#039;comment_ID&#039;] = $id;
+
+			$check_comment_lengths = wp_check_comment_data_max_lengths( $prepared_args );
+			if ( is_wp_error( $check_comment_lengths ) ) {
+				$error_code = str_replace( array( &#039;comment_author&#039;, &#039;comment_content&#039; ), array( &#039;reviewer&#039;, &#039;review_content&#039; ), $check_comment_lengths-&gt;get_error_code() );
+				return new WP_Error( &#039;woocommerce_rest_&#039; . $error_code, __( &#039;Product review field exceeds maximum length allowed.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+			}
+
+			$updated = wp_update_comment( wp_slash( (array) $prepared_args ) );
+
+			if ( false === $updated ) {
+				return new WP_Error( &#039;woocommerce_rest_comment_failed_edit&#039;, __( &#039;Updating review failed.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 500 ) );
+			}
+
+			if ( isset( $request[&#039;status&#039;] ) ) {
+				$this-&gt;handle_status_param( $request[&#039;status&#039;], $id );
+			}
+		}
+
+		if ( ! empty( $request[&#039;rating&#039;] ) ) {
+			update_comment_meta( $id, &#039;rating&#039;, $request[&#039;rating&#039;] );
+		}
+
+		$review = get_comment( $id );
+
+		/** This action is documented in includes/api/class-wc-rest-product-reviews-controller.php */
+		do_action( &#039;woocommerce_rest_insert_product_review&#039;, $review, $request, false );
+
+		$fields_update = $this-&gt;update_additional_fields_for_object( $review, $request );
+
+		if ( is_wp_error( $fields_update ) ) {
+			return $fields_update;
+		}
+
+		$request-&gt;set_param( &#039;context&#039;, &#039;edit&#039; );
+
+		$response = $this-&gt;prepare_item_for_response( $review, $request );
+
+		return rest_ensure_response( $response );
+	}
+
+	/**
+	 * Deletes a review.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response Response object on success, or error object on failure.
+	 */
+	public function delete_item( $request ) {
+		$review = $this-&gt;get_review( $request[&#039;id&#039;] );
+		if ( is_wp_error( $review ) ) {
+			return $review;
+		}
+
+		$force = isset( $request[&#039;force&#039;] ) ? (bool) $request[&#039;force&#039;] : false;
+
+		/**
+		 * Filters whether a review can be trashed.
+		 *
+		 * Return false to disable trash support for the post.
+		 *
+		 * @since 3.5.0
+		 * @param bool       $supports_trash Whether the post type support trashing.
+		 * @param WP_Comment $review         The review object being considered for trashing support.
+		 */
+		$supports_trash = apply_filters( &#039;woocommerce_rest_product_review_trashable&#039;, ( EMPTY_TRASH_DAYS &gt; 0 ), $review );
+
+		$request-&gt;set_param( &#039;context&#039;, &#039;edit&#039; );
+
+		if ( $force ) {
+			$previous = $this-&gt;prepare_item_for_response( $review, $request );
+			$result   = wp_delete_comment( $review-&gt;comment_ID, true );
+			$response = new WP_REST_Response();
+			$response-&gt;set_data(
+				array(
+					&#039;deleted&#039;  =&gt; true,
+					&#039;previous&#039; =&gt; $previous-&gt;get_data(),
+				)
+			);
+		} else {
+			// If this type doesn&#039;t support trashing, error out.
+			if ( ! $supports_trash ) {
+				/* translators: %s: force=true */
+				return new WP_Error( &#039;woocommerce_rest_trash_not_supported&#039;, sprintf( __( &quot;The object does not support trashing. Set &#039;%s&#039; to delete.&quot;, &#039;woocommerce&#039; ), &#039;force=true&#039; ), array( &#039;status&#039; =&gt; 501 ) );
+			}
+
+			if ( &#039;trash&#039; === $review-&gt;comment_approved ) {
+				return new WP_Error( &#039;woocommerce_rest_already_trashed&#039;, __( &#039;The object has already been trashed.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 410 ) );
+			}
+
+			$result   = wp_trash_comment( $review-&gt;comment_ID );
+			$review   = get_comment( $review-&gt;comment_ID );
+			$response = $this-&gt;prepare_item_for_response( $review, $request );
+		}
+
+		if ( ! $result ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_delete&#039;, __( &#039;The object cannot be deleted.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 500 ) );
+		}
+
+		/**
+		 * Fires after a review is deleted via the REST API.
+		 *
+		 * @param WP_Comment       $review   The deleted review data.
+		 * @param WP_REST_Response $response The response returned from the API.
+		 * @param WP_REST_Request  $request  The request sent to the API.
+		 */
+		do_action( &#039;woocommerce_rest_delete_review&#039;, $review, $response, $request );
+
+		return $response;
+	}
+
+	/**
+	 * Prepare a single product review output for response.
+	 *
+	 * @param WP_Comment      $review Product review object.
+	 * @param WP_REST_Request $request Request object.
+	 * @return WP_REST_Response $response Response data.
+	 */
+	public function prepare_item_for_response( $review, $request ) {
+		$context = ! empty( $request[&#039;context&#039;] ) ? $request[&#039;context&#039;] : &#039;view&#039;;
+		$fields  = $this-&gt;get_fields_for_response( $request );
+		$data    = array();
+
+		if ( in_array( &#039;id&#039;, $fields, true ) ) {
+			$data[&#039;id&#039;] = (int) $review-&gt;comment_ID;
+		}
+		if ( in_array( &#039;date_created&#039;, $fields, true ) ) {
+			$data[&#039;date_created&#039;] = wc_rest_prepare_date_response( $review-&gt;comment_date );
+		}
+		if ( in_array( &#039;date_created_gmt&#039;, $fields, true ) ) {
+			$data[&#039;date_created_gmt&#039;] = wc_rest_prepare_date_response( $review-&gt;comment_date_gmt );
+		}
+		if ( in_array( &#039;product_id&#039;, $fields, true ) ) {
+			$data[&#039;product_id&#039;] = (int) $review-&gt;comment_post_ID;
+		}
+		if ( in_array( &#039;product_name&#039;, $fields, true ) ) {
+			$data[&#039;product_name&#039;] = get_the_title( (int) $review-&gt;comment_post_ID );
+		}
+		if ( in_array( &#039;product_permalink&#039;, $fields, true ) ) {
+			$data[&#039;product_permalink&#039;] = get_permalink( (int) $review-&gt;comment_post_ID );
+		}
+		if ( in_array( &#039;status&#039;, $fields, true ) ) {
+			$data[&#039;status&#039;] = $this-&gt;prepare_status_response( (string) $review-&gt;comment_approved );
+		}
+		if ( in_array( &#039;reviewer&#039;, $fields, true ) ) {
+			$data[&#039;reviewer&#039;] = $review-&gt;comment_author;
+		}
+		if ( in_array( &#039;reviewer_email&#039;, $fields, true ) ) {
+			$data[&#039;reviewer_email&#039;] = $review-&gt;comment_author_email;
+		}
+		if ( in_array( &#039;review&#039;, $fields, true ) ) {
+			$data[&#039;review&#039;] = &#039;view&#039; === $context ? wpautop( $review-&gt;comment_content ) : $review-&gt;comment_content;
+		}
+		if ( in_array( &#039;rating&#039;, $fields, true ) ) {
+			$data[&#039;rating&#039;] = (int) get_comment_meta( $review-&gt;comment_ID, &#039;rating&#039;, true );
+		}
+		if ( in_array( &#039;verified&#039;, $fields, true ) ) {
+			$data[&#039;verified&#039;] = wc_review_is_from_verified_owner( $review-&gt;comment_ID );
+		}
+		if ( in_array( &#039;reviewer_avatar_urls&#039;, $fields, true ) ) {
+			$data[&#039;reviewer_avatar_urls&#039;] = rest_get_avatar_urls( $review-&gt;comment_author_email );
+		}
+
+		$data = $this-&gt;add_additional_fields_to_object( $data, $request );
+		$data = $this-&gt;filter_response_by_context( $data, $context );
+
+		// Wrap the data in a response object.
+		$response = rest_ensure_response( $data );
+
+		$response-&gt;add_links( $this-&gt;prepare_links( $review ) );
+
+		/**
+		 * Filter product reviews object returned from the REST API.
+		 *
+		 * @param WP_REST_Response $response The response object.
+		 * @param WP_Comment       $review   Product review object used to create response.
+		 * @param WP_REST_Request  $request  Request object.
+		 */
+		return apply_filters( &#039;woocommerce_rest_prepare_product_review&#039;, $response, $review, $request );
+	}
+
+	/**
+	 * Prepare a single product review to be inserted into the database.
+	 *
+	 * @param  WP_REST_Request $request Request object.
+	 * @return array|WP_Error  $prepared_review
+	 */
+	protected function prepare_item_for_database( $request ) {
+		if ( isset( $request[&#039;id&#039;] ) ) {
+			$prepared_review[&#039;comment_ID&#039;] = (int) $request[&#039;id&#039;];
+		}
+
+		if ( isset( $request[&#039;review&#039;] ) ) {
+			$prepared_review[&#039;comment_content&#039;] = $request[&#039;review&#039;];
+		}
+
+		if ( isset( $request[&#039;product_id&#039;] ) ) {
+			$prepared_review[&#039;comment_post_ID&#039;] = (int) $request[&#039;product_id&#039;];
+		}
+
+		if ( isset( $request[&#039;reviewer&#039;] ) ) {
+			$prepared_review[&#039;comment_author&#039;] = $request[&#039;reviewer&#039;];
+		}
+
+		if ( isset( $request[&#039;reviewer_email&#039;] ) ) {
+			$prepared_review[&#039;comment_author_email&#039;] = $request[&#039;reviewer_email&#039;];
+		}
+
+		if ( ! empty( $request[&#039;date_created&#039;] ) ) {
+			$date_data = rest_get_date_with_gmt( $request[&#039;date_created&#039;] );
+
+			if ( ! empty( $date_data ) ) {
+				list( $prepared_review[&#039;comment_date&#039;], $prepared_review[&#039;comment_date_gmt&#039;] ) = $date_data;
+			}
+		} elseif ( ! empty( $request[&#039;date_created_gmt&#039;] ) ) {
+			$date_data = rest_get_date_with_gmt( $request[&#039;date_created_gmt&#039;], true );
+
+			if ( ! empty( $date_data ) ) {
+				list( $prepared_review[&#039;comment_date&#039;], $prepared_review[&#039;comment_date_gmt&#039;] ) = $date_data;
+			}
+		}
+
+		/**
+		 * Filters a review after it is prepared for the database.
+		 *
+		 * Allows modification of the review right after it is prepared for the database.
+		 *
+		 * @since 3.5.0
+		 * @param array           $prepared_review The prepared review data for `wp_insert_comment`.
+		 * @param WP_REST_Request $request         The current request.
+		 */
+		return apply_filters( &#039;woocommerce_rest_preprocess_product_review&#039;, $prepared_review, $request );
+	}
+
+	/**
+	 * Prepare links for the request.
+	 *
+	 * @param WP_Comment $review Product review object.
+	 * @return array Links for the given product review.
+	 */
+	protected function prepare_links( $review ) {
+		$links = array(
+			&#039;self&#039;       =&gt; array(
+				&#039;href&#039; =&gt; rest_url( sprintf( &#039;/%s/%s/%d&#039;, $this-&gt;namespace, $this-&gt;rest_base, $review-&gt;comment_ID ) ),
+			),
+			&#039;collection&#039; =&gt; array(
+				&#039;href&#039; =&gt; rest_url( sprintf( &#039;/%s/%s&#039;, $this-&gt;namespace, $this-&gt;rest_base ) ),
+			),
+		);
+
+		if ( 0 !== (int) $review-&gt;comment_post_ID ) {
+			$links[&#039;up&#039;] = array(
+				&#039;href&#039; =&gt; rest_url( sprintf( &#039;/%s/products/%d&#039;, $this-&gt;namespace, $review-&gt;comment_post_ID ) ),
+			);
+		}
+
+		if ( 0 !== (int) $review-&gt;user_id ) {
+			$links[&#039;reviewer&#039;] = array(
+				&#039;href&#039;       =&gt; rest_url( &#039;wp/v2/users/&#039; . $review-&gt;user_id ),
+				&#039;embeddable&#039; =&gt; true,
+			);
+		}
+
+		return $links;
+	}
+
+	/**
+	 * Get the Product Review&#039;s schema, conforming to JSON Schema.
+	 *
+	 * @return array
+	 */
+	public function get_item_schema() {
+		$schema = array(
+			&#039;$schema&#039;    =&gt; &#039;http://json-schema.org/draft-04/schema#&#039;,
+			&#039;title&#039;      =&gt; &#039;product_review&#039;,
+			&#039;type&#039;       =&gt; &#039;object&#039;,
+			&#039;properties&#039; =&gt; array(
+				&#039;id&#039;               =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Unique identifier for the resource.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;date_created&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;The date the review was created, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;date_created_gmt&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;The date the review was created, as GMT.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;product_id&#039;       =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Unique identifier for the product that the review belongs to.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;product_name&#039;       =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product name.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;product_permalink&#039;       =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product URL.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;format&#039;      =&gt; &#039;uri&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;status&#039;           =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Status of the review.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;default&#039;     =&gt; &#039;approved&#039;,
+					&#039;enum&#039;        =&gt; array( &#039;approved&#039;, &#039;hold&#039;, &#039;spam&#039;, &#039;unspam&#039;, &#039;trash&#039;, &#039;untrash&#039; ),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;reviewer&#039;         =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Reviewer name.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;reviewer_email&#039;   =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Reviewer email.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;format&#039;      =&gt; &#039;email&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;review&#039;           =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;The content of the review.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;arg_options&#039; =&gt; array(
+						&#039;sanitize_callback&#039; =&gt; &#039;wp_filter_post_kses&#039;,
+					),
+				),
+				&#039;rating&#039;           =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Review rating (0 to 5).&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;verified&#039;         =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Shows if the reviewer bought the product or not.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+			),
+		);
+
+		if ( get_option( &#039;show_avatars&#039; ) ) {
+			$avatar_properties = array();
+			$avatar_sizes      = rest_get_avatar_sizes();
+
+			foreach ( $avatar_sizes as $size ) {
+				$avatar_properties[ $size ] = array(
+					/* translators: %d: avatar image size in pixels */
+					&#039;description&#039; =&gt; sprintf( __( &#039;Avatar URL with image size of %d pixels.&#039;, &#039;woocommerce&#039; ), $size ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;format&#039;      =&gt; &#039;uri&#039;,
+					&#039;context&#039;     =&gt; array( &#039;embed&#039;, &#039;view&#039;, &#039;edit&#039; ),
+				);
+			}
+			$schema[&#039;properties&#039;][&#039;reviewer_avatar_urls&#039;] = array(
+				&#039;description&#039; =&gt; __( &#039;Avatar URLs for the object reviewer.&#039;, &#039;woocommerce&#039; ),
+				&#039;type&#039;        =&gt; &#039;object&#039;,
+				&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				&#039;readonly&#039;    =&gt; true,
+				&#039;properties&#039;  =&gt; $avatar_properties,
+			);
+		}
+
+		return $this-&gt;add_additional_fields_schema( $schema );
+	}
+
+	/**
+	 * Get the query params for collections.
+	 *
+	 * @return array
+	 */
+	public function get_collection_params() {
+		$params = parent::get_collection_params();
+
+		$params[&#039;context&#039;][&#039;default&#039;] = &#039;view&#039;;
+
+		$params[&#039;after&#039;]            = array(
+			&#039;description&#039; =&gt; __( &#039;Limit response to resources published after a given ISO8601 compliant date.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;        =&gt; &#039;string&#039;,
+			&#039;format&#039;      =&gt; &#039;date-time&#039;,
+		);
+		$params[&#039;before&#039;]           = array(
+			&#039;description&#039; =&gt; __( &#039;Limit response to reviews published before a given ISO8601 compliant date.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;        =&gt; &#039;string&#039;,
+			&#039;format&#039;      =&gt; &#039;date-time&#039;,
+		);
+		$params[&#039;exclude&#039;]          = array(
+			&#039;description&#039; =&gt; __( &#039;Ensure result set excludes specific IDs.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;        =&gt; &#039;array&#039;,
+			&#039;items&#039;       =&gt; array(
+				&#039;type&#039; =&gt; &#039;integer&#039;,
+			),
+			&#039;default&#039;     =&gt; array(),
+		);
+		$params[&#039;include&#039;]          = array(
+			&#039;description&#039; =&gt; __( &#039;Limit result set to specific IDs.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;        =&gt; &#039;array&#039;,
+			&#039;items&#039;       =&gt; array(
+				&#039;type&#039; =&gt; &#039;integer&#039;,
+			),
+			&#039;default&#039;     =&gt; array(),
+		);
+		$params[&#039;offset&#039;]           = array(
+			&#039;description&#039; =&gt; __( &#039;Offset the result set by a specific number of items.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;        =&gt; &#039;integer&#039;,
+		);
+		$params[&#039;order&#039;]            = array(
+			&#039;description&#039; =&gt; __( &#039;Order sort attribute ascending or descending.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;        =&gt; &#039;string&#039;,
+			&#039;default&#039;     =&gt; &#039;desc&#039;,
+			&#039;enum&#039;        =&gt; array(
+				&#039;asc&#039;,
+				&#039;desc&#039;,
+			),
+		);
+		$params[&#039;orderby&#039;]          = array(
+			&#039;description&#039; =&gt; __( &#039;Sort collection by object attribute.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;        =&gt; &#039;string&#039;,
+			&#039;default&#039;     =&gt; &#039;date_gmt&#039;,
+			&#039;enum&#039;        =&gt; array(
+				&#039;date&#039;,
+				&#039;date_gmt&#039;,
+				&#039;id&#039;,
+				&#039;include&#039;,
+				&#039;product&#039;,
+			),
+		);
+		$params[&#039;reviewer&#039;]         = array(
+			&#039;description&#039; =&gt; __( &#039;Limit result set to reviews assigned to specific user IDs.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;        =&gt; &#039;array&#039;,
+			&#039;items&#039;       =&gt; array(
+				&#039;type&#039; =&gt; &#039;integer&#039;,
+			),
+		);
+		$params[&#039;reviewer_exclude&#039;] = array(
+			&#039;description&#039; =&gt; __( &#039;Ensure result set excludes reviews assigned to specific user IDs.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;        =&gt; &#039;array&#039;,
+			&#039;items&#039;       =&gt; array(
+				&#039;type&#039; =&gt; &#039;integer&#039;,
+			),
+		);
+		$params[&#039;reviewer_email&#039;]   = array(
+			&#039;default&#039;     =&gt; null,
+			&#039;description&#039; =&gt; __( &#039;Limit result set to that from a specific author email.&#039;, &#039;woocommerce&#039; ),
+			&#039;format&#039;      =&gt; &#039;email&#039;,
+			&#039;type&#039;        =&gt; &#039;string&#039;,
+		);
+		$params[&#039;product&#039;]          = array(
+			&#039;default&#039;     =&gt; array(),
+			&#039;description&#039; =&gt; __( &#039;Limit result set to reviews assigned to specific product IDs.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;        =&gt; &#039;array&#039;,
+			&#039;items&#039;       =&gt; array(
+				&#039;type&#039; =&gt; &#039;integer&#039;,
+			),
+		);
+		$params[&#039;status&#039;]           = array(
+			&#039;default&#039;           =&gt; &#039;approved&#039;,
+			&#039;description&#039;       =&gt; __( &#039;Limit result set to reviews assigned a specific status.&#039;, &#039;woocommerce&#039; ),
+			&#039;sanitize_callback&#039; =&gt; &#039;sanitize_key&#039;,
+			&#039;type&#039;              =&gt; &#039;string&#039;,
+			&#039;enum&#039;              =&gt; array(
+				&#039;all&#039;,
+				&#039;hold&#039;,
+				&#039;approved&#039;,
+				&#039;spam&#039;,
+				&#039;trash&#039;,
+			),
+		);
+
+		/**
+		 * Filter collection parameters for the reviews controller.
+		 *
+		 * This filter registers the collection parameter, but does not map the
+		 * collection parameter to an internal WP_Comment_Query parameter. Use the
+		 * `wc_rest_review_query` filter to set WP_Comment_Query parameters.
+		 *
+		 * @since 3.5.0
+		 * @param array $params JSON Schema-formatted collection parameters.
+		 */
+		return apply_filters( &#039;woocommerce_rest_product_review_collection_params&#039;, $params );
+	}
+
+	/**
+	 * Get the reivew, if the ID is valid.
+	 *
+	 * @since 3.5.0
+	 * @param int $id Supplied ID.
+	 * @return WP_Comment|WP_Error Comment object if ID is valid, WP_Error otherwise.
+	 */
+	protected function get_review( $id ) {
+		$id    = (int) $id;
+		$error = new WP_Error( &#039;woocommerce_rest_review_invalid_id&#039;, __( &#039;Invalid review ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+
+		if ( 0 &gt;= $id ) {
+			return $error;
+		}
+
+		$review = get_comment( $id );
+		if ( empty( $review ) ) {
+			return $error;
+		}
+
+		if ( ! empty( $review-&gt;comment_post_ID ) ) {
+			$post = get_post( (int) $review-&gt;comment_post_ID );
+
+			if ( &#039;product&#039; !== get_post_type( (int) $review-&gt;comment_post_ID ) ) {
+				return new WP_Error( &#039;woocommerce_rest_product_invalid_id&#039;, __( &#039;Invalid product ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+			}
+		}
+
+		return $review;
+	}
+
+	/**
+	 * Prepends internal property prefix to query parameters to match our response fields.
+	 *
+	 * @since 3.5.0
+	 * @param string $query_param Query parameter.
+	 * @return string
+	 */
+	protected function normalize_query_param( $query_param ) {
+		$prefix = &#039;comment_&#039;;
+
+		switch ( $query_param ) {
+			case &#039;id&#039;:
+				$normalized = $prefix . &#039;ID&#039;;
+				break;
+			case &#039;product&#039;:
+				$normalized = $prefix . &#039;post_ID&#039;;
+				break;
+			case &#039;include&#039;:
+				$normalized = &#039;comment__in&#039;;
+				break;
+			default:
+				$normalized = $prefix . $query_param;
+				break;
+		}
+
+		return $normalized;
+	}
+
+	/**
+	 * Checks comment_approved to set comment status for single comment output.
+	 *
+	 * @since 3.5.0
+	 * @param string|int $comment_approved comment status.
+	 * @return string Comment status.
+	 */
+	protected function prepare_status_response( $comment_approved ) {
+		switch ( $comment_approved ) {
+			case &#039;hold&#039;:
+			case &#039;0&#039;:
+				$status = &#039;hold&#039;;
+				break;
+			case &#039;approve&#039;:
+			case &#039;1&#039;:
+				$status = &#039;approved&#039;;
+				break;
+			case &#039;spam&#039;:
+			case &#039;trash&#039;:
+			default:
+				$status = $comment_approved;
+				break;
+		}
+
+		return $status;
+	}
+
+	/**
+	 * Sets the comment_status of a given review object when creating or updating a review.
+	 *
+	 * @since 3.5.0
+	 * @param string|int $new_status New review status.
+	 * @param int        $id         Review ID.
+	 * @return bool Whether the status was changed.
+	 */
+	protected function handle_status_param( $new_status, $id ) {
+		$old_status = wp_get_comment_status( $id );
+
+		if ( $new_status === $old_status ) {
+			return false;
+		}
+
+		switch ( $new_status ) {
+			case &#039;approved&#039;:
+			case &#039;approve&#039;:
+			case &#039;1&#039;:
+				$changed = wp_set_comment_status( $id, &#039;approve&#039; );
+				break;
+			case &#039;hold&#039;:
+			case &#039;0&#039;:
+				$changed = wp_set_comment_status( $id, &#039;hold&#039; );
+				break;
+			case &#039;spam&#039;:
+				$changed = wp_spam_comment( $id );
+				break;
+			case &#039;unspam&#039;:
+				$changed = wp_unspam_comment( $id );
+				break;
+			case &#039;trash&#039;:
+				$changed = wp_trash_comment( $id );
+				break;
+			case &#039;untrash&#039;:
+				$changed = wp_untrash_comment( $id );
+				break;
+			default:
+				$changed = false;
+				break;
+		}
+
+		return $changed;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866948"></script>
+    <script src="../js/search.js?updated=1692866948"></script>
+</body>
+</html>

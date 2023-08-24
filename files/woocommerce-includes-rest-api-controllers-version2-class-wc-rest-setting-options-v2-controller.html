@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866948">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866948">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-rest-setting-options-v2-controller.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * REST API Setting Options controller
+ *
+ * Handles requests to the /settings/$group/$setting endpoints.
+ *
+ * @package WooCommerce\RestApi
+ * @since   3.0.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * REST API Setting Options controller class.
+ *
+ * @package WooCommerce\RestApi
+ * @extends WC_REST_Controller
+ */
+class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
+
+	/**
+	 * WP REST API namespace/version.
+	 *
+	 * @var string
+	 */
+	protected $namespace = &#039;wc/v2&#039;;
+
+	/**
+	 * Route base.
+	 *
+	 * @var string
+	 */
+	protected $rest_base = &#039;settings/(?P&lt;group_id&gt;[\w-]+)&#039;;
+
+	/**
+	 * Register routes.
+	 *
+	 * @since 3.0.0
+	 */
+	public function register_routes() {
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base,
+			array(
+				&#039;args&#039;   =&gt; array(
+					&#039;group&#039; =&gt; array(
+						&#039;description&#039; =&gt; __( &#039;Settings group ID.&#039;, &#039;woocommerce&#039; ),
+						&#039;type&#039;        =&gt; &#039;string&#039;,
+					),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_items&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;get_items_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/batch&#039;,
+			array(
+				&#039;args&#039;   =&gt; array(
+					&#039;group&#039; =&gt; array(
+						&#039;description&#039; =&gt; __( &#039;Settings group ID.&#039;, &#039;woocommerce&#039; ),
+						&#039;type&#039;        =&gt; &#039;string&#039;,
+					),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::EDITABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;batch_items&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_items_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; $this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::EDITABLE ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_public_batch_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/(?P&lt;id&gt;[\w-]+)&#039;,
+			array(
+				&#039;args&#039;   =&gt; array(
+					&#039;group&#039; =&gt; array(
+						&#039;description&#039; =&gt; __( &#039;Settings group ID.&#039;, &#039;woocommerce&#039; ),
+						&#039;type&#039;        =&gt; &#039;string&#039;,
+					),
+					&#039;id&#039;    =&gt; array(
+						&#039;description&#039; =&gt; __( &#039;Unique identifier for the resource.&#039;, &#039;woocommerce&#039; ),
+						&#039;type&#039;        =&gt; &#039;string&#039;,
+					),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_item&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;get_items_permissions_check&#039; ),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::EDITABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;update_item&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_items_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; $this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::EDITABLE ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+			)
+		);
+	}
+
+	/**
+	 * Return a single setting.
+	 *
+	 * @since  3.0.0
+	 * @param  WP_REST_Request $request Request data.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function get_item( $request ) {
+		$setting = $this-&gt;get_setting( $request[&#039;group_id&#039;], $request[&#039;id&#039;] );
+
+		if ( is_wp_error( $setting ) ) {
+			return $setting;
+		}
+
+		$response = $this-&gt;prepare_item_for_response( $setting, $request );
+
+		return rest_ensure_response( $response );
+	}
+
+	/**
+	 * Return all settings in a group.
+	 *
+	 * @since  3.0.0
+	 * @param  WP_REST_Request $request Request data.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function get_items( $request ) {
+		$settings = $this-&gt;get_group_settings( $request[&#039;group_id&#039;] );
+
+		if ( is_wp_error( $settings ) ) {
+			return $settings;
+		}
+
+		$data = array();
+
+		foreach ( $settings as $setting_obj ) {
+			$setting = $this-&gt;prepare_item_for_response( $setting_obj, $request );
+			$setting = $this-&gt;prepare_response_for_collection( $setting );
+			if ( $this-&gt;is_setting_type_valid( $setting[&#039;type&#039;] ) ) {
+				$data[] = $setting;
+			}
+		}
+
+		return rest_ensure_response( $data );
+	}
+
+	/**
+	 * Get all settings in a group.
+	 *
+	 * @since  3.0.0
+	 * @param string $group_id Group ID.
+	 * @return array|WP_Error
+	 */
+	public function get_group_settings( $group_id ) {
+		if ( empty( $group_id ) ) {
+			return new WP_Error( &#039;rest_setting_setting_group_invalid&#039;, __( &#039;Invalid setting group.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		// phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
+		$settings = apply_filters( &#039;woocommerce_settings-&#039; . $group_id, array() );
+
+		if ( empty( $settings ) ) {
+			return new WP_Error( &#039;rest_setting_setting_group_invalid&#039;, __( &#039;Invalid setting group.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$filtered_settings = array();
+		foreach ( $settings as $setting ) {
+			$option_key = $setting[&#039;option_key&#039;];
+			$setting    = $this-&gt;filter_setting( $setting );
+			$default    = isset( $setting[&#039;default&#039;] ) ? $setting[&#039;default&#039;] : &#039;&#039;;
+			// Get the option value.
+			if ( is_array( $option_key ) ) {
+				$option           = get_option( $option_key[0] );
+				$setting[&#039;value&#039;] = isset( $option[ $option_key[1] ] ) ? $option[ $option_key[1] ] : $default;
+			} else {
+				$admin_setting_value = WC_Admin_Settings::get_option( $option_key, $default );
+				$setting[&#039;value&#039;]    = $admin_setting_value;
+			}
+
+			if ( &#039;multi_select_countries&#039; === $setting[&#039;type&#039;] ) {
+				$setting[&#039;options&#039;] = WC()-&gt;countries-&gt;get_countries();
+				$setting[&#039;type&#039;]    = &#039;multiselect&#039;;
+			} elseif ( &#039;single_select_country&#039; === $setting[&#039;type&#039;] ) {
+				$setting[&#039;type&#039;]    = &#039;select&#039;;
+				$setting[&#039;options&#039;] = $this-&gt;get_countries_and_states();
+			}
+
+			$filtered_settings[] = $setting;
+		}
+
+		return $filtered_settings;
+	}
+
+	/**
+	 * Returns a list of countries and states for use in the base location setting.
+	 *
+	 * @since  3.0.7
+	 * @return array Array of states and countries.
+	 */
+	private function get_countries_and_states() {
+		$countries = WC()-&gt;countries-&gt;get_countries();
+		if ( ! $countries ) {
+			return array();
+		}
+
+		$output = array();
+
+		foreach ( $countries as $key =&gt; $value ) {
+			$states = WC()-&gt;countries-&gt;get_states( $key );
+			if ( $states ) {
+				foreach ( $states as $state_key =&gt; $state_value ) {
+					$output[ $key . &#039;:&#039; . $state_key ] = $value . &#039; - &#039; . $state_value;
+				}
+			} else {
+				$output[ $key ] = $value;
+			}
+		}
+
+		return $output;
+	}
+
+	/**
+	 * Get setting data.
+	 *
+	 * @since  3.0.0
+	 * @param string $group_id Group ID.
+	 * @param string $setting_id Setting ID.
+	 * @return stdClass|WP_Error
+	 */
+	public function get_setting( $group_id, $setting_id ) {
+		if ( empty( $setting_id ) ) {
+			return new WP_Error( &#039;rest_setting_setting_invalid&#039;, __( &#039;Invalid setting.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$settings = $this-&gt;get_group_settings( $group_id );
+
+		if ( is_wp_error( $settings ) ) {
+			return $settings;
+		}
+
+		$array_key = array_keys( wp_list_pluck( $settings, &#039;id&#039; ), $setting_id, true );
+
+		if ( empty( $array_key ) ) {
+			return new WP_Error( &#039;rest_setting_setting_invalid&#039;, __( &#039;Invalid setting.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$setting = $settings[ $array_key[0] ];
+
+		if ( ! $this-&gt;is_setting_type_valid( $setting[&#039;type&#039;] ) ) {
+			return new WP_Error( &#039;rest_setting_setting_invalid&#039;, __( &#039;Invalid setting.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		return $setting;
+	}
+
+	/**
+	 * Bulk create, update and delete items.
+	 *
+	 * @since  3.0.0
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return array Of WP_Error or WP_REST_Response.
+	 */
+	public function batch_items( $request ) {
+		// Get the request params.
+		$items = array_filter( $request-&gt;get_params() );
+
+		/*
+		 * Since our batch settings update is group-specific and matches based on the route,
+		 * we inject the URL parameters (containing group) into the batch items
+		 */
+		if ( ! empty( $items[&#039;update&#039;] ) ) {
+			$to_update = array();
+			foreach ( $items[&#039;update&#039;] as $item ) {
+				$to_update[] = array_merge( $request-&gt;get_url_params(), $item );
+			}
+			$request = new WP_REST_Request( $request-&gt;get_method() );
+			$request-&gt;set_body_params( array( &#039;update&#039; =&gt; $to_update ) );
+		}
+
+		return parent::batch_items( $request );
+	}
+
+	/**
+	 * Update a single setting in a group.
+	 *
+	 * @since  3.0.0
+	 * @param  WP_REST_Request $request Request data.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function update_item( $request ) {
+		$setting = $this-&gt;get_setting( $request[&#039;group_id&#039;], $request[&#039;id&#039;] );
+
+		if ( is_wp_error( $setting ) ) {
+			return $setting;
+		}
+
+		if ( is_callable( array( $this, &#039;validate_setting_&#039; . $setting[&#039;type&#039;] . &#039;_field&#039; ) ) ) {
+			$value = $this-&gt;{&#039;validate_setting_&#039; . $setting[&#039;type&#039;] . &#039;_field&#039;}( $request[&#039;value&#039;], $setting );
+		} else {
+			$value = $this-&gt;validate_setting_text_field( $request[&#039;value&#039;], $setting );
+		}
+
+		if ( is_wp_error( $value ) ) {
+			return $value;
+		}
+
+		if ( is_array( $setting[&#039;option_key&#039;] ) ) {
+			$setting[&#039;value&#039;]       = $value;
+			$option_key             = $setting[&#039;option_key&#039;];
+			$prev                   = get_option( $option_key[0], null ) ?? array();
+			$prev[ $option_key[1] ] = $request[&#039;value&#039;];
+			update_option( $option_key[0], $prev );
+		} else {
+			$update_data                           = array();
+			$update_data[ $setting[&#039;option_key&#039;] ] = $value;
+			$setting[&#039;value&#039;]                      = $value;
+			WC_Admin_Settings::save_fields( array( $setting ), $update_data );
+		}
+
+		$response = $this-&gt;prepare_item_for_response( $setting, $request );
+
+		return rest_ensure_response( $response );
+	}
+
+	/**
+	 * Prepare a single setting object for response.
+	 *
+	 * @since  3.0.0
+	 * @param object          $item Setting object.
+	 * @param WP_REST_Request $request Request object.
+	 * @return WP_REST_Response $response Response data.
+	 */
+	public function prepare_item_for_response( $item, $request ) {
+		unset( $item[&#039;option_key&#039;] );
+		$data     = $this-&gt;filter_setting( $item );
+		$data     = $this-&gt;add_additional_fields_to_object( $data, $request );
+		$data     = $this-&gt;filter_response_by_context( $data, empty( $request[&#039;context&#039;] ) ? &#039;view&#039; : $request[&#039;context&#039;] );
+		$response = rest_ensure_response( $data );
+		$response-&gt;add_links( $this-&gt;prepare_links( $data[&#039;id&#039;], $request[&#039;group_id&#039;] ) );
+		return $response;
+	}
+
+	/**
+	 * Prepare links for the request.
+	 *
+	 * @since  3.0.0
+	 * @param string $setting_id Setting ID.
+	 * @param string $group_id Group ID.
+	 * @return array Links for the given setting.
+	 */
+	protected function prepare_links( $setting_id, $group_id ) {
+		$base  = str_replace( &#039;(?P&lt;group_id&gt;[\w-]+)&#039;, $group_id, $this-&gt;rest_base );
+		$links = array(
+			&#039;self&#039;       =&gt; array(
+				&#039;href&#039; =&gt; rest_url( sprintf( &#039;/%s/%s/%s&#039;, $this-&gt;namespace, $base, $setting_id ) ),
+			),
+			&#039;collection&#039; =&gt; array(
+				&#039;href&#039; =&gt; rest_url( sprintf( &#039;/%s/%s&#039;, $this-&gt;namespace, $base ) ),
+			),
+		);
+
+		return $links;
+	}
+
+	/**
+	 * Makes sure the current user has access to READ the settings APIs.
+	 *
+	 * @since  3.0.0
+	 * @param WP_REST_Request $request Full data about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function get_items_permissions_check( $request ) {
+		if ( ! wc_rest_check_manager_permissions( &#039;settings&#039;, &#039;read&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_view&#039;, __( &#039;Sorry, you cannot list resources.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Makes sure the current user has access to WRITE the settings APIs.
+	 *
+	 * @since  3.0.0
+	 * @param WP_REST_Request $request Full data about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function update_items_permissions_check( $request ) {
+		if ( ! wc_rest_check_manager_permissions( &#039;settings&#039;, &#039;edit&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_edit&#039;, __( &#039;Sorry, you cannot edit this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Filters out bad values from the settings array/filter so we
+	 * only return known values via the API.
+	 *
+	 * @since 3.0.0
+	 * @param  array $setting Settings.
+	 * @return array
+	 */
+	public function filter_setting( $setting ) {
+		$setting = array_intersect_key(
+			$setting,
+			array_flip( array_filter( array_keys( $setting ), array( $this, &#039;allowed_setting_keys&#039; ) ) )
+		);
+
+		if ( empty( $setting[&#039;options&#039;] ) ) {
+			unset( $setting[&#039;options&#039;] );
+		}
+
+		if ( &#039;image_width&#039; === $setting[&#039;type&#039;] ) {
+			$setting = $this-&gt;cast_image_width( $setting );
+		}
+
+		return $setting;
+	}
+
+	/**
+	 * For image_width, Crop can return &quot;0&quot; instead of false -- so we want
+	 * to make sure we return these consistently the same we accept them.
+	 *
+	 * @todo remove in 4.0
+	 * @since 3.0.0
+	 * @param  array $setting Settings.
+	 * @return array
+	 */
+	public function cast_image_width( $setting ) {
+		foreach ( array( &#039;default&#039;, &#039;value&#039; ) as $key ) {
+			if ( isset( $setting[ $key ] ) ) {
+				$setting[ $key ][&#039;width&#039;]  = intval( $setting[ $key ][&#039;width&#039;] );
+				$setting[ $key ][&#039;height&#039;] = intval( $setting[ $key ][&#039;height&#039;] );
+				$setting[ $key ][&#039;crop&#039;]   = (bool) $setting[ $key ][&#039;crop&#039;];
+			}
+		}
+		return $setting;
+	}
+
+	/**
+	 * Callback for allowed keys for each setting response.
+	 *
+	 * @since  3.0.0
+	 * @param  string $key Key to check.
+	 * @return boolean
+	 */
+	public function allowed_setting_keys( $key ) {
+		return in_array(
+			$key,
+			array(
+				&#039;id&#039;,
+				&#039;label&#039;,
+				&#039;description&#039;,
+				&#039;default&#039;,
+				&#039;tip&#039;,
+				&#039;placeholder&#039;,
+				&#039;type&#039;,
+				&#039;options&#039;,
+				&#039;value&#039;,
+				&#039;option_key&#039;,
+			),
+			true
+		);
+	}
+
+	/**
+	 * Boolean for if a setting type is a valid supported setting type.
+	 *
+	 * @since  3.0.0
+	 * @param  string $type Type.
+	 * @return bool
+	 */
+	public function is_setting_type_valid( $type ) {
+		return in_array(
+			$type,
+			array(
+				&#039;text&#039;,         // Validates with validate_setting_text_field.
+				&#039;email&#039;,        // Validates with validate_setting_text_field.
+				&#039;number&#039;,       // Validates with validate_setting_text_field.
+				&#039;color&#039;,        // Validates with validate_setting_text_field.
+				&#039;password&#039;,     // Validates with validate_setting_text_field.
+				&#039;textarea&#039;,     // Validates with validate_setting_textarea_field.
+				&#039;select&#039;,       // Validates with validate_setting_select_field.
+				&#039;multiselect&#039;,  // Validates with validate_setting_multiselect_field.
+				&#039;radio&#039;,        // Validates with validate_setting_radio_field (-&gt; validate_setting_select_field).
+				&#039;checkbox&#039;,     // Validates with validate_setting_checkbox_field.
+				&#039;image_width&#039;,  // Validates with validate_setting_image_width_field.
+				&#039;thumbnail_cropping&#039;, // Validates with validate_setting_text_field.
+			),
+			true
+		);
+	}
+
+	/**
+	 * Get the settings schema, conforming to JSON Schema.
+	 *
+	 * @since 3.0.0
+	 * @return array
+	 */
+	public function get_item_schema() {
+		$schema = array(
+			&#039;$schema&#039;    =&gt; &#039;http://json-schema.org/draft-04/schema#&#039;,
+			&#039;title&#039;      =&gt; &#039;setting&#039;,
+			&#039;type&#039;       =&gt; &#039;object&#039;,
+			&#039;properties&#039; =&gt; array(
+				&#039;id&#039;          =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;A unique identifier for the setting.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;arg_options&#039; =&gt; array(
+						&#039;sanitize_callback&#039; =&gt; &#039;sanitize_title&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;label&#039;       =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;A human readable label for the setting used in interfaces.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;arg_options&#039; =&gt; array(
+						&#039;sanitize_callback&#039; =&gt; &#039;sanitize_text_field&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;description&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;A human readable description for the setting used in interfaces.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;arg_options&#039; =&gt; array(
+						&#039;sanitize_callback&#039; =&gt; &#039;sanitize_text_field&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;value&#039;       =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Setting value.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;mixed&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;default&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Default value for the setting.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;mixed&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;tip&#039;         =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Additional help text shown to the user about the setting.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;arg_options&#039; =&gt; array(
+						&#039;sanitize_callback&#039; =&gt; &#039;sanitize_text_field&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;placeholder&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Placeholder text to be displayed in text inputs.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;arg_options&#039; =&gt; array(
+						&#039;sanitize_callback&#039; =&gt; &#039;sanitize_text_field&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;type&#039;        =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Type of setting.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;arg_options&#039; =&gt; array(
+						&#039;sanitize_callback&#039; =&gt; &#039;sanitize_text_field&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;enum&#039;        =&gt; array( &#039;text&#039;, &#039;email&#039;, &#039;number&#039;, &#039;color&#039;, &#039;password&#039;, &#039;textarea&#039;, &#039;select&#039;, &#039;multiselect&#039;, &#039;radio&#039;, &#039;image_width&#039;, &#039;checkbox&#039;, &#039;thumbnail_cropping&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;options&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Array of options (key value pairs) for inputs such as select, multiselect, and radio buttons.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;object&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+			),
+		);
+
+		return $this-&gt;add_additional_fields_schema( $schema );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866948"></script>
+    <script src="../js/search.js?updated=1692866948"></script>
+</body>
+</html>

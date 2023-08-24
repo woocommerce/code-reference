@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866946">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866946">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-settings-shipping.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WooCommerce Shipping Settings
+ *
+ * @package     WooCommerce\Admin
+ * @version     2.6.0
+ */
+
+use Automattic\Jetpack\Constants;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+if ( class_exists( &#039;WC_Settings_Shipping&#039;, false ) ) {
+	return new WC_Settings_Shipping();
+}
+
+/**
+ * WC_Settings_Shipping.
+ */
+class WC_Settings_Shipping extends WC_Settings_Page {
+
+	/**
+	 * Constructor.
+	 */
+	public function __construct() {
+		$this-&gt;id    = &#039;shipping&#039;;
+		$this-&gt;label = __( &#039;Shipping&#039;, &#039;woocommerce&#039; );
+
+		parent::__construct();
+	}
+
+	/**
+	 * Add this page to settings.
+	 *
+	 * @param array $pages Current pages.
+	 * @return array|mixed
+	 */
+	public function add_settings_page( $pages ) {
+		return wc_shipping_enabled() ? parent::add_settings_page( $pages ) : $pages;
+	}
+
+	/**
+	 * Get own sections.
+	 *
+	 * @return array
+	 */
+	protected function get_own_sections() {
+		$sections = array(
+			&#039;&#039;        =&gt; __( &#039;Shipping zones&#039;, &#039;woocommerce&#039; ),
+			&#039;options&#039; =&gt; __( &#039;Shipping options&#039;, &#039;woocommerce&#039; ),
+			&#039;classes&#039; =&gt; __( &#039;Shipping classes&#039;, &#039;woocommerce&#039; ),
+		);
+
+		if ( ! $this-&gt;wc_is_installing() ) {
+			// Load shipping methods so we can show any global options they may have.
+			$shipping_methods = $this-&gt;get_shipping_methods();
+
+			foreach ( $shipping_methods as $method ) {
+				if ( ! $method-&gt;has_settings() ) {
+					continue;
+				}
+				$title                                 = empty( $method-&gt;method_title ) ? ucfirst( $method-&gt;id ) : $method-&gt;method_title;
+				$sections[ strtolower( $method-&gt;id ) ] = esc_html( $title );
+			}
+		}
+
+		return $sections;
+	}
+
+	/**
+	 * Is WC_INSTALLING constant defined?
+	 * This method exists to ease unit testing.
+	 *
+	 * @return bool True is the WC_INSTALLING constant is defined.
+	 */
+	protected function wc_is_installing() {
+		return Constants::is_defined( &#039;WC_INSTALLING&#039; );
+	}
+
+	/**
+	 * Get the currently available shipping methods.
+	 * This method exists to ease unit testing.
+	 *
+	 * @return array Currently available shipping methods.
+	 */
+	protected function get_shipping_methods() {
+		return WC()-&gt;shipping()-&gt;get_shipping_methods();
+	}
+
+	/**
+	 * Get settings for the default section.
+	 *
+	 * The original implementation of &#039;get_settings&#039; was returning the settings for the &quot;Options&quot; section
+	 * when the supplied value for $current_section was &#039;&#039;.
+	 *
+	 * @return array
+	 */
+	protected function get_settings_for_default_section() {
+		return $this-&gt;get_settings_for_options_section();
+	}
+
+	/**
+	 * Get settings for the options section.
+	 *
+	 * @return array
+	 */
+	protected function get_settings_for_options_section() {
+		$settings =
+			array(
+				array(
+					&#039;title&#039; =&gt; __( &#039;Shipping options&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;  =&gt; &#039;title&#039;,
+					&#039;id&#039;    =&gt; &#039;shipping_options&#039;,
+				),
+
+				array(
+					&#039;title&#039;         =&gt; __( &#039;Calculations&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;          =&gt; __( &#039;Enable the shipping calculator on the cart page&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;            =&gt; &#039;woocommerce_enable_shipping_calc&#039;,
+					&#039;default&#039;       =&gt; &#039;yes&#039;,
+					&#039;type&#039;          =&gt; &#039;checkbox&#039;,
+					&#039;checkboxgroup&#039; =&gt; &#039;start&#039;,
+					&#039;autoload&#039;      =&gt; false,
+				),
+
+				array(
+					&#039;desc&#039;          =&gt; __( &#039;Hide shipping costs until an address is entered&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;            =&gt; &#039;woocommerce_shipping_cost_requires_address&#039;,
+					&#039;default&#039;       =&gt; &#039;no&#039;,
+					&#039;type&#039;          =&gt; &#039;checkbox&#039;,
+					&#039;checkboxgroup&#039; =&gt; &#039;end&#039;,
+				),
+
+				array(
+					&#039;title&#039;           =&gt; __( &#039;Shipping destination&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;            =&gt; __( &#039;This controls which shipping address is used by default.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;              =&gt; &#039;woocommerce_ship_to_destination&#039;,
+					&#039;default&#039;         =&gt; &#039;billing&#039;,
+					&#039;type&#039;            =&gt; &#039;radio&#039;,
+					&#039;options&#039;         =&gt; array(
+						&#039;shipping&#039;     =&gt; __( &#039;Default to customer shipping address&#039;, &#039;woocommerce&#039; ),
+						&#039;billing&#039;      =&gt; __( &#039;Default to customer billing address&#039;, &#039;woocommerce&#039; ),
+						&#039;billing_only&#039; =&gt; __( &#039;Force shipping to the customer billing address&#039;, &#039;woocommerce&#039; ),
+					),
+					&#039;autoload&#039;        =&gt; false,
+					&#039;desc_tip&#039;        =&gt; true,
+					&#039;show_if_checked&#039; =&gt; &#039;option&#039;,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Debug mode&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Enable debug mode&#039;, &#039;woocommerce&#039; ),
+					&#039;desc_tip&#039; =&gt; __( &#039;Enable shipping debug mode to show matching shipping zones and to bypass shipping rate cache.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_shipping_debug_mode&#039;,
+					&#039;default&#039;  =&gt; &#039;no&#039;,
+					&#039;type&#039;     =&gt; &#039;checkbox&#039;,
+				),
+
+				array(
+					&#039;type&#039; =&gt; &#039;sectionend&#039;,
+					&#039;id&#039;   =&gt; &#039;shipping_options&#039;,
+				),
+			);
+
+		return apply_filters( &#039;woocommerce_shipping_settings&#039;, $settings );
+	}
+
+	/**
+	 * Output the settings.
+	 */
+	public function output() {
+		global $current_section, $hide_save_button;
+
+		// Load shipping methods so we can show any global options they may have.
+		$shipping_methods = $this-&gt;get_shipping_methods();
+
+		if ( &#039;&#039; === $current_section ) {
+			$this-&gt;output_zones_screen();
+		} elseif ( &#039;classes&#039; === $current_section ) {
+			$hide_save_button = true;
+			$this-&gt;output_shipping_class_screen();
+		} else {
+			$is_shipping_method = false;
+			foreach ( $shipping_methods as $method ) {
+				if ( in_array( $current_section, array( $method-&gt;id, sanitize_title( get_class( $method ) ) ), true ) &amp;&amp; $method-&gt;has_settings() ) {
+					$is_shipping_method = true;
+					$method-&gt;admin_options();
+				}
+			}
+			if ( ! $is_shipping_method ) {
+				parent::output();
+			}
+		}
+	}
+
+	/**
+	 * Save settings.
+	 */
+	public function save() {
+		global $current_section;
+
+		switch ( $current_section ) {
+			case &#039;options&#039;:
+				$this-&gt;save_settings_for_current_section();
+				$this-&gt;do_update_options_action();
+				break;
+			case &#039;classes&#039;:
+				$this-&gt;do_update_options_action();
+				break;
+			case &#039;&#039;:
+				break;
+			default:
+				$is_shipping_method = false;
+
+				foreach ( $this-&gt;get_shipping_methods() as $method_id =&gt; $method ) {
+					if ( in_array( $current_section, array( $method-&gt;id, sanitize_title( get_class( $method ) ) ), true ) ) {
+						$is_shipping_method = true;
+						$this-&gt;do_update_options_action( $method-&gt;id );
+					}
+				}
+				if ( ! $is_shipping_method ) {
+					$this-&gt;save_settings_for_current_section();
+				}
+				break;
+		}
+
+		// Increments the transient version to invalidate cache.
+		WC_Cache_Helper::get_transient_version( &#039;shipping&#039;, true );
+	}
+
+	/**
+	 * Handles output of the shipping zones page in admin.
+	 */
+	protected function output_zones_screen() {
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		global $hide_save_button;
+
+		if ( isset( $_REQUEST[&#039;zone_id&#039;] ) ) {
+			$hide_save_button = true;
+			$this-&gt;zone_methods_screen( wc_clean( wp_unslash( $_REQUEST[&#039;zone_id&#039;] ) ) );
+		} elseif ( isset( $_REQUEST[&#039;instance_id&#039;] ) ) {
+			$this-&gt;instance_settings_screen( absint( wp_unslash( $_REQUEST[&#039;instance_id&#039;] ) ) );
+		} else {
+			$hide_save_button = true;
+			$this-&gt;zones_screen();
+		}
+		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+	}
+
+	/**
+	 * Show method for a zone
+	 *
+	 * @param int $zone_id Zone ID.
+	 */
+	protected function zone_methods_screen( $zone_id ) {
+		if ( &#039;new&#039; === $zone_id ) {
+			$zone = new WC_Shipping_Zone();
+		} else {
+			$zone = WC_Shipping_Zones::get_zone( absint( $zone_id ) );
+		}
+
+		if ( ! $zone ) {
+			wp_die( esc_html__( &#039;Zone does not exist!&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$allowed_countries   = WC()-&gt;countries-&gt;get_shipping_countries();
+		$shipping_continents = WC()-&gt;countries-&gt;get_shipping_continents();
+
+		// Prepare locations.
+		$locations = array();
+		$postcodes = array();
+
+		foreach ( $zone-&gt;get_zone_locations() as $location ) {
+			if ( &#039;postcode&#039; === $location-&gt;type ) {
+				$postcodes[] = $location-&gt;code;
+			} else {
+				$locations[] = $location-&gt;type . &#039;:&#039; . $location-&gt;code;
+			}
+		}
+
+		wp_localize_script(
+			&#039;wc-shipping-zone-methods&#039;,
+			&#039;shippingZoneMethodsLocalizeScript&#039;,
+			array(
+				&#039;methods&#039;                 =&gt; $zone-&gt;get_shipping_methods( false, &#039;json&#039; ),
+				&#039;zone_name&#039;               =&gt; $zone-&gt;get_zone_name(),
+				&#039;zone_id&#039;                 =&gt; $zone-&gt;get_id(),
+				&#039;wc_shipping_zones_nonce&#039; =&gt; wp_create_nonce( &#039;wc_shipping_zones_nonce&#039; ),
+				&#039;strings&#039;                 =&gt; array(
+					&#039;unload_confirmation_msg&#039;             =&gt; __( &#039;Your changed data will be lost if you leave this page without saving.&#039;, &#039;woocommerce&#039; ),
+					&#039;save_changes_prompt&#039;                 =&gt; __( &#039;Do you wish to save your changes first? Your changed data will be discarded if you choose to cancel.&#039;, &#039;woocommerce&#039; ),
+					&#039;save_failed&#039;                         =&gt; __( &#039;Your changes were not saved. Please retry.&#039;, &#039;woocommerce&#039; ),
+					&#039;add_method_failed&#039;                   =&gt; __( &#039;Shipping method could not be added. Please retry.&#039;, &#039;woocommerce&#039; ),
+					&#039;remove_method_failed&#039;                =&gt; __( &#039;Shipping method could not be removed. Please retry.&#039;, &#039;woocommerce&#039; ),
+					&#039;yes&#039;                                 =&gt; __( &#039;Yes&#039;, &#039;woocommerce&#039; ),
+					&#039;no&#039;                                  =&gt; __( &#039;No&#039;, &#039;woocommerce&#039; ),
+					&#039;default_zone_name&#039;                   =&gt; __( &#039;Zone&#039;, &#039;woocommerce&#039; ),
+					&#039;delete_shipping_method_confirmation&#039; =&gt; __( &#039;Are you sure you want to delete this shipping method?&#039;, &#039;woocommerce&#039; ),
+				),
+			)
+		);
+		wp_enqueue_script( &#039;wc-shipping-zone-methods&#039; );
+
+		include_once dirname( __FILE__ ) . &#039;/views/html-admin-page-shipping-zone-methods.php&#039;;
+	}
+
+	/**
+	 * Show zones
+	 */
+	protected function zones_screen() {
+		$method_count = wc_get_shipping_method_count( false, true );
+
+		wp_localize_script(
+			&#039;wc-shipping-zones&#039;,
+			&#039;shippingZonesLocalizeScript&#039;,
+			array(
+				&#039;zones&#039;                   =&gt; WC_Shipping_Zones::get_zones( &#039;json&#039; ),
+				&#039;default_zone&#039;            =&gt; array(
+					&#039;zone_id&#039;    =&gt; 0,
+					&#039;zone_name&#039;  =&gt; &#039;&#039;,
+					&#039;zone_order&#039; =&gt; null,
+				),
+				&#039;wc_shipping_zones_nonce&#039; =&gt; wp_create_nonce( &#039;wc_shipping_zones_nonce&#039; ),
+				&#039;strings&#039;                 =&gt; array(
+					&#039;unload_confirmation_msg&#039;     =&gt; __( &#039;Your changed data will be lost if you leave this page without saving.&#039;, &#039;woocommerce&#039; ),
+					&#039;delete_confirmation_msg&#039;     =&gt; __( &#039;Are you sure you want to delete this zone? This action cannot be undone.&#039;, &#039;woocommerce&#039; ),
+					&#039;save_failed&#039;                 =&gt; __( &#039;Your changes were not saved. Please retry.&#039;, &#039;woocommerce&#039; ),
+					&#039;no_shipping_methods_offered&#039; =&gt; __( &#039;No shipping methods offered to this zone.&#039;, &#039;woocommerce&#039; ),
+				),
+			)
+		);
+		wp_enqueue_script( &#039;wc-shipping-zones&#039; );
+
+		include_once dirname( __FILE__ ) . &#039;/views/html-admin-page-shipping-zones.php&#039;;
+	}
+
+	/**
+	 * Show instance settings
+	 *
+	 * @param int $instance_id Shipping instance ID.
+	 */
+	protected function instance_settings_screen( $instance_id ) {
+		$zone            = WC_Shipping_Zones::get_zone_by( &#039;instance_id&#039;, $instance_id );
+		$shipping_method = WC_Shipping_Zones::get_shipping_method( $instance_id );
+
+		if ( ! $shipping_method ) {
+			wp_die( esc_html__( &#039;Invalid shipping method!&#039;, &#039;woocommerce&#039; ) );
+		}
+		if ( ! $zone ) {
+			wp_die( esc_html__( &#039;Zone does not exist!&#039;, &#039;woocommerce&#039; ) );
+		}
+		if ( ! $shipping_method-&gt;has_settings() ) {
+			wp_die( esc_html__( &#039;This shipping method does not have any settings to configure.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		if ( ! empty( $_POST[&#039;save&#039;] ) ) {
+
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			if ( empty( $_REQUEST[&#039;_wpnonce&#039;] ) || ! wp_verify_nonce( wp_unslash( $_REQUEST[&#039;_wpnonce&#039;] ), &#039;woocommerce-settings&#039; ) ) {
+				echo &#039;&lt;div class=&quot;updated error&quot;&gt;&lt;p&gt;&#039; . esc_html__( &#039;Edit failed. Please try again.&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/p&gt;&lt;/div&gt;&#039;;
+			}
+
+			$shipping_method-&gt;process_admin_options();
+			$shipping_method-&gt;display_errors();
+		}
+
+		include_once dirname( __FILE__ ) . &#039;/views/html-admin-page-shipping-zones-instance.php&#039;;
+	}
+
+	/**
+	 * Handles output of the shipping class settings screen.
+	 */
+	protected function output_shipping_class_screen() {
+		$wc_shipping = WC_Shipping::instance();
+		wp_localize_script(
+			&#039;wc-shipping-classes&#039;,
+			&#039;shippingClassesLocalizeScript&#039;,
+			array(
+				&#039;classes&#039;                   =&gt; $wc_shipping-&gt;get_shipping_classes(),
+				&#039;default_shipping_class&#039;    =&gt; array(
+					&#039;term_id&#039;     =&gt; 0,
+					&#039;name&#039;        =&gt; &#039;&#039;,
+					&#039;description&#039; =&gt; &#039;&#039;,
+				),
+				&#039;wc_shipping_classes_nonce&#039; =&gt; wp_create_nonce( &#039;wc_shipping_classes_nonce&#039; ),
+				&#039;strings&#039;                   =&gt; array(
+					&#039;unload_confirmation_msg&#039; =&gt; __( &#039;Your changed data will be lost if you leave this page without saving.&#039;, &#039;woocommerce&#039; ),
+					&#039;save_failed&#039;             =&gt; __( &#039;Your changes were not saved. Please retry.&#039;, &#039;woocommerce&#039; ),
+				),
+			)
+		);
+		wp_enqueue_script( &#039;wc-shipping-classes&#039; );
+
+		// Extendable columns to show on the shipping classes screen.
+		$shipping_class_columns = apply_filters(
+			&#039;woocommerce_shipping_classes_columns&#039;,
+			array(
+				&#039;wc-shipping-class-name&#039;        =&gt; __( &#039;Shipping class&#039;, &#039;woocommerce&#039; ),
+				&#039;wc-shipping-class-slug&#039;        =&gt; __( &#039;Slug&#039;, &#039;woocommerce&#039; ),
+				&#039;wc-shipping-class-description&#039; =&gt; __( &#039;Description&#039;, &#039;woocommerce&#039; ),
+				&#039;wc-shipping-class-count&#039;       =&gt; __( &#039;Product count&#039;, &#039;woocommerce&#039; ),
+			)
+		);
+
+		include_once dirname( __FILE__ ) . &#039;/views/html-admin-page-shipping-classes.php&#039;;
+	}
+}
+
+return new WC_Settings_Shipping();
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866946"></script>
+    <script src="../js/search.js?updated=1692866946"></script>
+</body>
+</html>

@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-coupon-data-store-cpt.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Class WC_Coupon_Data_Store_CPT file.
+ *
+ * @package WooCommerce\DataStores
+ */
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * WC Coupon Data Store: Custom Post Type.
+ *
+ * @version  3.0.0
+ */
+class WC_Coupon_Data_Store_CPT extends WC_Data_Store_WP implements WC_Coupon_Data_Store_Interface, WC_Object_Data_Store_Interface {
+
+	/**
+	 * Internal meta type used to store coupon data.
+	 *
+	 * @since 3.0.0
+	 * @var string
+	 */
+	protected $meta_type = &#039;post&#039;;
+
+	/**
+	 * Data stored in meta keys, but not considered &quot;meta&quot; for a coupon.
+	 *
+	 * @since 3.0.0
+	 * @var array
+	 */
+	protected $internal_meta_keys = array(
+		&#039;discount_type&#039;,
+		&#039;coupon_amount&#039;,
+		&#039;expiry_date&#039;,
+		&#039;date_expires&#039;,
+		&#039;usage_count&#039;,
+		&#039;individual_use&#039;,
+		&#039;product_ids&#039;,
+		&#039;exclude_product_ids&#039;,
+		&#039;usage_limit&#039;,
+		&#039;usage_limit_per_user&#039;,
+		&#039;limit_usage_to_x_items&#039;,
+		&#039;free_shipping&#039;,
+		&#039;product_categories&#039;,
+		&#039;exclude_product_categories&#039;,
+		&#039;exclude_sale_items&#039;,
+		&#039;minimum_amount&#039;,
+		&#039;maximum_amount&#039;,
+		&#039;customer_email&#039;,
+		&#039;_used_by&#039;,
+		&#039;_edit_lock&#039;,
+		&#039;_edit_last&#039;,
+	);
+
+	/**
+	 * The updated coupon properties
+	 *
+	 * @since 4.1.0
+	 * @var array
+	 */
+	protected $updated_props = array();
+
+	/**
+	 * Method to create a new coupon in the database.
+	 *
+	 * @since 3.0.0
+	 * @param WC_Coupon $coupon Coupon object.
+	 */
+	public function create( &amp;$coupon ) {
+		if ( ! $coupon-&gt;get_date_created( &#039;edit&#039; ) ) {
+			$coupon-&gt;set_date_created( time() );
+		}
+
+		$coupon_id = wp_insert_post(
+			apply_filters(
+				&#039;woocommerce_new_coupon_data&#039;,
+				array(
+					&#039;post_type&#039;     =&gt; &#039;shop_coupon&#039;,
+					&#039;post_status&#039;   =&gt; &#039;publish&#039;,
+					&#039;post_author&#039;   =&gt; get_current_user_id(),
+					&#039;post_title&#039;    =&gt; $coupon-&gt;get_code( &#039;edit&#039; ),
+					&#039;post_content&#039;  =&gt; &#039;&#039;,
+					&#039;post_excerpt&#039;  =&gt; $coupon-&gt;get_description( &#039;edit&#039; ),
+					&#039;post_date&#039;     =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $coupon-&gt;get_date_created()-&gt;getOffsetTimestamp() ),
+					&#039;post_date_gmt&#039; =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $coupon-&gt;get_date_created()-&gt;getTimestamp() ),
+				)
+			),
+			true
+		);
+
+		if ( $coupon_id ) {
+			$coupon-&gt;set_id( $coupon_id );
+			$this-&gt;update_post_meta( $coupon );
+			$coupon-&gt;save_meta_data();
+			$coupon-&gt;apply_changes();
+			delete_transient( &#039;rest_api_coupons_type_count&#039; );
+			do_action( &#039;woocommerce_new_coupon&#039;, $coupon_id, $coupon );
+		}
+	}
+
+	/**
+	 * Method to read a coupon.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @param WC_Coupon $coupon Coupon object.
+	 *
+	 * @throws Exception If invalid coupon.
+	 */
+	public function read( &amp;$coupon ) {
+		$coupon-&gt;set_defaults();
+
+		$post_object = get_post( $coupon-&gt;get_id() );
+
+		if ( ! $coupon-&gt;get_id() || ! $post_object || &#039;shop_coupon&#039; !== $post_object-&gt;post_type ) {
+			throw new Exception( __( &#039;Invalid coupon.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$coupon_id = $coupon-&gt;get_id();
+		$coupon-&gt;set_props(
+			array(
+				&#039;code&#039;                        =&gt; $post_object-&gt;post_title,
+				&#039;description&#039;                 =&gt; $post_object-&gt;post_excerpt,
+				&#039;status&#039;                      =&gt; $post_object-&gt;post_status,
+				&#039;date_created&#039;                =&gt; $this-&gt;string_to_timestamp( $post_object-&gt;post_date_gmt ),
+				&#039;date_modified&#039;               =&gt; $this-&gt;string_to_timestamp( $post_object-&gt;post_modified_gmt ),
+				&#039;date_expires&#039;                =&gt; metadata_exists( &#039;post&#039;, $coupon_id, &#039;date_expires&#039; ) ? get_post_meta( $coupon_id, &#039;date_expires&#039;, true ) : get_post_meta( $coupon_id, &#039;expiry_date&#039;, true ), // @todo: Migrate expiry_date meta to date_expires in upgrade routine.
+				&#039;discount_type&#039;               =&gt; get_post_meta( $coupon_id, &#039;discount_type&#039;, true ),
+				&#039;amount&#039;                      =&gt; get_post_meta( $coupon_id, &#039;coupon_amount&#039;, true ),
+				&#039;usage_count&#039;                 =&gt; get_post_meta( $coupon_id, &#039;usage_count&#039;, true ),
+				&#039;individual_use&#039;              =&gt; &#039;yes&#039; === get_post_meta( $coupon_id, &#039;individual_use&#039;, true ),
+				&#039;product_ids&#039;                 =&gt; array_filter( (array) explode( &#039;,&#039;, get_post_meta( $coupon_id, &#039;product_ids&#039;, true ) ) ),
+				&#039;excluded_product_ids&#039;        =&gt; array_filter( (array) explode( &#039;,&#039;, get_post_meta( $coupon_id, &#039;exclude_product_ids&#039;, true ) ) ),
+				&#039;usage_limit&#039;                 =&gt; get_post_meta( $coupon_id, &#039;usage_limit&#039;, true ),
+				&#039;usage_limit_per_user&#039;        =&gt; get_post_meta( $coupon_id, &#039;usage_limit_per_user&#039;, true ),
+				&#039;limit_usage_to_x_items&#039;      =&gt; 0 &lt; get_post_meta( $coupon_id, &#039;limit_usage_to_x_items&#039;, true ) ? get_post_meta( $coupon_id, &#039;limit_usage_to_x_items&#039;, true ) : null,
+				&#039;free_shipping&#039;               =&gt; &#039;yes&#039; === get_post_meta( $coupon_id, &#039;free_shipping&#039;, true ),
+				&#039;product_categories&#039;          =&gt; array_filter( (array) get_post_meta( $coupon_id, &#039;product_categories&#039;, true ) ),
+				&#039;excluded_product_categories&#039; =&gt; array_filter( (array) get_post_meta( $coupon_id, &#039;exclude_product_categories&#039;, true ) ),
+				&#039;exclude_sale_items&#039;          =&gt; &#039;yes&#039; === get_post_meta( $coupon_id, &#039;exclude_sale_items&#039;, true ),
+				&#039;minimum_amount&#039;              =&gt; get_post_meta( $coupon_id, &#039;minimum_amount&#039;, true ),
+				&#039;maximum_amount&#039;              =&gt; get_post_meta( $coupon_id, &#039;maximum_amount&#039;, true ),
+				&#039;email_restrictions&#039;          =&gt; array_filter( (array) get_post_meta( $coupon_id, &#039;customer_email&#039;, true ) ),
+				&#039;used_by&#039;                     =&gt; array_filter( (array) get_post_meta( $coupon_id, &#039;_used_by&#039; ) ),
+			)
+		);
+		$coupon-&gt;read_meta_data();
+		$coupon-&gt;set_object_read( true );
+		do_action( &#039;woocommerce_coupon_loaded&#039;, $coupon );
+	}
+
+	/**
+	 * Updates a coupon in the database.
+	 *
+	 * @since 3.0.0
+	 * @param WC_Coupon $coupon Coupon object.
+	 */
+	public function update( &amp;$coupon ) {
+		$coupon-&gt;save_meta_data();
+		$changes = $coupon-&gt;get_changes();
+
+		if ( array_intersect( array( &#039;code&#039;, &#039;description&#039;, &#039;date_created&#039;, &#039;date_modified&#039; ), array_keys( $changes ) ) ) {
+			$post_data = array(
+				&#039;post_title&#039;        =&gt; $coupon-&gt;get_code( &#039;edit&#039; ),
+				&#039;post_excerpt&#039;      =&gt; $coupon-&gt;get_description( &#039;edit&#039; ),
+				&#039;post_date&#039;         =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $coupon-&gt;get_date_created( &#039;edit&#039; )-&gt;getOffsetTimestamp() ),
+				&#039;post_date_gmt&#039;     =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $coupon-&gt;get_date_created( &#039;edit&#039; )-&gt;getTimestamp() ),
+				&#039;post_modified&#039;     =&gt; isset( $changes[&#039;date_modified&#039;] ) ? gmdate( &#039;Y-m-d H:i:s&#039;, $coupon-&gt;get_date_modified( &#039;edit&#039; )-&gt;getOffsetTimestamp() ) : current_time( &#039;mysql&#039; ),
+				&#039;post_modified_gmt&#039; =&gt; isset( $changes[&#039;date_modified&#039;] ) ? gmdate( &#039;Y-m-d H:i:s&#039;, $coupon-&gt;get_date_modified( &#039;edit&#039; )-&gt;getTimestamp() ) : current_time( &#039;mysql&#039;, 1 ),
+			);
+
+			/**
+			 * When updating this object, to prevent infinite loops, use $wpdb
+			 * to update data, since wp_update_post spawns more calls to the
+			 * save_post action.
+			 *
+			 * This ensures hooks are fired by either WP itself (admin screen save),
+			 * or an update purely from CRUD.
+			 */
+			if ( doing_action( &#039;save_post&#039; ) ) {
+				$GLOBALS[&#039;wpdb&#039;]-&gt;update( $GLOBALS[&#039;wpdb&#039;]-&gt;posts, $post_data, array( &#039;ID&#039; =&gt; $coupon-&gt;get_id() ) );
+				clean_post_cache( $coupon-&gt;get_id() );
+			} else {
+				wp_update_post( array_merge( array( &#039;ID&#039; =&gt; $coupon-&gt;get_id() ), $post_data ) );
+			}
+			$coupon-&gt;read_meta_data( true ); // Refresh internal meta data, in case things were hooked into `save_post` or another WP hook.
+		}
+		$this-&gt;update_post_meta( $coupon );
+		$coupon-&gt;apply_changes();
+		delete_transient( &#039;rest_api_coupons_type_count&#039; );
+		do_action( &#039;woocommerce_update_coupon&#039;, $coupon-&gt;get_id(), $coupon );
+	}
+
+	/**
+	 * Deletes a coupon from the database.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @param WC_Coupon $coupon Coupon object.
+	 * @param array     $args Array of args to pass to the delete method.
+	 */
+	public function delete( &amp;$coupon, $args = array() ) {
+		$args = wp_parse_args(
+			$args,
+			array(
+				&#039;force_delete&#039; =&gt; false,
+			)
+		);
+
+		$id = $coupon-&gt;get_id();
+
+		if ( ! $id ) {
+			return;
+		}
+
+		if ( $args[&#039;force_delete&#039;] ) {
+			wp_delete_post( $id );
+
+			wp_cache_delete( WC_Cache_Helper::get_cache_prefix( &#039;coupons&#039; ) . &#039;coupon_id_from_code_&#039; . $coupon-&gt;get_code(), &#039;coupons&#039; );
+
+			$coupon-&gt;set_id( 0 );
+			do_action( &#039;woocommerce_delete_coupon&#039;, $id );
+		} else {
+			wp_trash_post( $id );
+			do_action( &#039;woocommerce_trash_coupon&#039;, $id );
+		}
+	}
+
+	/**
+	 * Helper method that updates all the post meta for a coupon based on it&#039;s settings in the WC_Coupon class.
+	 *
+	 * @param WC_Coupon $coupon Coupon object.
+	 * @since 3.0.0
+	 */
+	private function update_post_meta( &amp;$coupon ) {
+		$meta_key_to_props = array(
+			&#039;discount_type&#039;              =&gt; &#039;discount_type&#039;,
+			&#039;coupon_amount&#039;              =&gt; &#039;amount&#039;,
+			&#039;individual_use&#039;             =&gt; &#039;individual_use&#039;,
+			&#039;product_ids&#039;                =&gt; &#039;product_ids&#039;,
+			&#039;exclude_product_ids&#039;        =&gt; &#039;excluded_product_ids&#039;,
+			&#039;usage_limit&#039;                =&gt; &#039;usage_limit&#039;,
+			&#039;usage_limit_per_user&#039;       =&gt; &#039;usage_limit_per_user&#039;,
+			&#039;limit_usage_to_x_items&#039;     =&gt; &#039;limit_usage_to_x_items&#039;,
+			&#039;usage_count&#039;                =&gt; &#039;usage_count&#039;,
+			&#039;date_expires&#039;               =&gt; &#039;date_expires&#039;,
+			&#039;free_shipping&#039;              =&gt; &#039;free_shipping&#039;,
+			&#039;product_categories&#039;         =&gt; &#039;product_categories&#039;,
+			&#039;exclude_product_categories&#039; =&gt; &#039;excluded_product_categories&#039;,
+			&#039;exclude_sale_items&#039;         =&gt; &#039;exclude_sale_items&#039;,
+			&#039;minimum_amount&#039;             =&gt; &#039;minimum_amount&#039;,
+			&#039;maximum_amount&#039;             =&gt; &#039;maximum_amount&#039;,
+			&#039;customer_email&#039;             =&gt; &#039;email_restrictions&#039;,
+		);
+
+		$props_to_update = $this-&gt;get_props_to_update( $coupon, $meta_key_to_props );
+		foreach ( $props_to_update as $meta_key =&gt; $prop ) {
+			$value = $coupon-&gt;{&quot;get_$prop&quot;}( &#039;edit&#039; );
+			$value = is_string( $value ) ? wp_slash( $value ) : $value;
+			switch ( $prop ) {
+				case &#039;individual_use&#039;:
+				case &#039;free_shipping&#039;:
+				case &#039;exclude_sale_items&#039;:
+					$value = wc_bool_to_string( $value );
+					break;
+				case &#039;product_ids&#039;:
+				case &#039;excluded_product_ids&#039;:
+					$value = implode( &#039;,&#039;, array_filter( array_map( &#039;intval&#039;, $value ) ) );
+					break;
+				case &#039;product_categories&#039;:
+				case &#039;excluded_product_categories&#039;:
+					$value = array_filter( array_map( &#039;intval&#039;, $value ) );
+					break;
+				case &#039;email_restrictions&#039;:
+					$value = array_filter( array_map( &#039;sanitize_email&#039;, $value ) );
+					break;
+				case &#039;date_expires&#039;:
+					$value = $value ? $value-&gt;getTimestamp() : null;
+					break;
+			}
+
+			$updated = $this-&gt;update_or_delete_post_meta( $coupon, $meta_key, $value );
+
+			if ( $updated ) {
+				$this-&gt;updated_props[] = $prop;
+			}
+		}
+
+		do_action( &#039;woocommerce_coupon_object_updated_props&#039;, $coupon, $this-&gt;updated_props );
+	}
+
+	/**
+	 * Increase usage count for current coupon.
+	 *
+	 * @since 3.0.0
+	 * @param WC_Coupon $coupon           Coupon object.
+	 * @param string    $used_by          Either user ID or billing email.
+	 * @param WC_Order  $order (Optional) If passed, clears the hold record associated with order.
+
+	 * @return int New usage count.
+	 */
+	public function increase_usage_count( &amp;$coupon, $used_by = &#039;&#039;, $order = null ) {
+		$coupon_held_key_for_user = &#039;&#039;;
+		if ( $order instanceof WC_Order ) {
+			$coupon_held_key_for_user = $order-&gt;get_data_store()-&gt;get_coupon_held_keys_for_users( $order, $coupon-&gt;get_id() );
+		}
+
+		$new_count = $this-&gt;update_usage_count_meta( $coupon, &#039;increase&#039; );
+
+		if ( $used_by ) {
+			$this-&gt;add_coupon_used_by( $coupon, $used_by, $coupon_held_key_for_user );
+			$coupon-&gt;set_used_by( (array) get_post_meta( $coupon-&gt;get_id(), &#039;_used_by&#039; ) );
+		}
+
+		do_action( &#039;woocommerce_increase_coupon_usage_count&#039;, $coupon, $new_count, $used_by );
+
+		return $new_count;
+	}
+
+	/**
+	 * Helper function to add a `_used_by` record to track coupons used by the user.
+	 *
+	 * @param WC_Coupon $coupon           Coupon object.
+	 * @param string    $used_by          Either user ID or billing email.
+	 * @param string    $coupon_held_key (Optional) Update meta key to `_used_by` instead of adding a new record.
+	 */
+	private function add_coupon_used_by( $coupon, $used_by, $coupon_held_key ) {
+		global $wpdb;
+		if ( $coupon_held_key &amp;&amp; &#039;&#039; !== $coupon_held_key ) {
+			// Looks like we added a tentative record for this coupon getting used.
+			// Lets change the tentative record to a permanent one.
+			$result = $wpdb-&gt;query(
+				$wpdb-&gt;prepare(
+					&quot;
+					UPDATE $wpdb-&gt;postmeta SET meta_key = %s, meta_value = %s WHERE meta_key = %s LIMIT 1&quot;,
+					&#039;_used_by&#039;,
+					$used_by,
+					$coupon_held_key
+				)
+			);
+			if ( ! $result ) {
+				// If no rows were updated, then insert a `_used_by` row manually to maintain consistency.
+				add_post_meta( $coupon-&gt;get_id(), &#039;_used_by&#039;, strtolower( $used_by ) );
+			}
+		} else {
+			add_post_meta( $coupon-&gt;get_id(), &#039;_used_by&#039;, strtolower( $used_by ) );
+		}
+	}
+
+	/**
+	 * Decrease usage count for current coupon.
+	 *
+	 * @since 3.0.0
+	 * @param WC_Coupon $coupon Coupon object.
+	 * @param string    $used_by Either user ID or billing email.
+	 * @return int New usage count.
+	 */
+	public function decrease_usage_count( &amp;$coupon, $used_by = &#039;&#039; ) {
+		global $wpdb;
+		$new_count = $this-&gt;update_usage_count_meta( $coupon, &#039;decrease&#039; );
+		if ( $used_by ) {
+			/**
+			 * We&#039;re doing this the long way because `delete_post_meta( $id, $key, $value )` deletes.
+			 * all instances where the key and value match, and we only want to delete one.
+			 */
+			$meta_id = $wpdb-&gt;get_var(
+				$wpdb-&gt;prepare(
+					&quot;SELECT meta_id FROM $wpdb-&gt;postmeta WHERE meta_key = &#039;_used_by&#039; AND meta_value = %s AND post_id = %d LIMIT 1;&quot;,
+					$used_by,
+					$coupon-&gt;get_id()
+				)
+			);
+			if ( $meta_id ) {
+				delete_metadata_by_mid( &#039;post&#039;, $meta_id );
+				$coupon-&gt;set_used_by( (array) get_post_meta( $coupon-&gt;get_id(), &#039;_used_by&#039; ) );
+			}
+		}
+
+		do_action( &#039;woocommerce_decrease_coupon_usage_count&#039;, $coupon, $new_count, $used_by );
+
+		return $new_count;
+	}
+
+	/**
+	 * Increase or decrease the usage count for a coupon by 1.
+	 *
+	 * @since 3.0.0
+	 * @param WC_Coupon $coupon Coupon object.
+	 * @param string    $operation &#039;increase&#039; or &#039;decrease&#039;.
+	 * @return int New usage count
+	 */
+	private function update_usage_count_meta( &amp;$coupon, $operation = &#039;increase&#039; ) {
+		global $wpdb;
+		$id       = $coupon-&gt;get_id();
+		$operator = ( &#039;increase&#039; === $operation ) ? &#039;+&#039; : &#039;-&#039;;
+
+		add_post_meta( $id, &#039;usage_count&#039;, $coupon-&gt;get_usage_count( &#039;edit&#039; ), true );
+		$wpdb-&gt;query(
+			$wpdb-&gt;prepare(
+				// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				&quot;UPDATE $wpdb-&gt;postmeta SET meta_value = meta_value {$operator} 1 WHERE meta_key = &#039;usage_count&#039; AND post_id = %d;&quot;,
+				$id
+			)
+		);
+
+		// Get the latest value direct from the DB, instead of possibly the WP meta cache.
+		return (int) $wpdb-&gt;get_var( $wpdb-&gt;prepare( &quot;SELECT meta_value FROM $wpdb-&gt;postmeta WHERE meta_key = &#039;usage_count&#039; AND post_id = %d;&quot;, $id ) );
+	}
+
+	/**
+	 * Returns tentative usage count for coupon.
+	 *
+	 * @param int $coupon_id Coupon ID.
+	 *
+	 * @return int Tentative usage count.
+	 */
+	public function get_tentative_usage_count( $coupon_id ) {
+		global $wpdb;
+		return $wpdb-&gt;get_var(
+			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$this-&gt;get_tentative_usage_query( $coupon_id )
+		);
+	}
+
+	/**
+	 * Get the number of uses for a coupon by user ID.
+	 *
+	 * @since 3.0.0
+	 * @param WC_Coupon $coupon Coupon object.
+	 * @param int       $user_id User ID.
+	 * @return int
+	 */
+	public function get_usage_by_user_id( &amp;$coupon, $user_id ) {
+		global $wpdb;
+		$usage_count = $wpdb-&gt;get_var(
+			$wpdb-&gt;prepare(
+				&quot;SELECT COUNT( meta_id ) FROM {$wpdb-&gt;postmeta} WHERE post_id = %d AND meta_key = &#039;_used_by&#039; AND meta_value = %d;&quot;,
+				$coupon-&gt;get_id(),
+				$user_id
+			)
+		);
+		$tentative_usage_count = $this-&gt;get_tentative_usages_for_user( $coupon-&gt;get_id(), array( $user_id ) );
+		return $tentative_usage_count + $usage_count;
+	}
+
+	/**
+	 * Get the number of uses for a coupon by email address
+	 *
+	 * @since 3.6.4
+	 * @param WC_Coupon $coupon Coupon object.
+	 * @param string    $email Email address.
+	 * @return int
+	 */
+	public function get_usage_by_email( &amp;$coupon, $email ) {
+		global $wpdb;
+		$usage_count = $wpdb-&gt;get_var(
+			$wpdb-&gt;prepare(
+				&quot;SELECT COUNT( meta_id ) FROM {$wpdb-&gt;postmeta} WHERE post_id = %d AND meta_key = &#039;_used_by&#039; AND meta_value = %s;&quot;,
+				$coupon-&gt;get_id(),
+				$email
+			)
+		);
+		$tentative_usage_count = $this-&gt;get_tentative_usages_for_user( $coupon-&gt;get_id(), array( $email ) );
+		return $tentative_usage_count + $usage_count;
+	}
+
+	/**
+	 * Get tentative coupon usages for user.
+	 *
+	 * @param int   $coupon_id    Coupon ID.
+	 * @param array $user_aliases Array of user aliases to check tentative usages for.
+	 *
+	 * @return string|null
+	 */
+	public function get_tentative_usages_for_user( $coupon_id, $user_aliases ) {
+		global $wpdb;
+		return $wpdb-&gt;get_var(
+			$this-&gt;get_tentative_usage_query_for_user( $coupon_id, $user_aliases )
+		); // WPCS: unprepared SQL ok.
+
+	}
+
+	/**
+	 * Get held time for resources before cancelling the order. Use 60 minutes as sane default.
+	 * Note that the filter `woocommerce_coupon_hold_minutes` only support minutes because it&#039;s getting used elsewhere as well, however this function returns in seconds.
+	 *
+	 * @return int
+	 */
+	private function get_tentative_held_time() {
+		return apply_filters( &#039;woocommerce_coupon_hold_minutes&#039;, ( (int) get_option( &#039;woocommerce_hold_stock_minutes&#039;, 60 ) ) ) * 60;
+	}
+
+	/**
+	 * Check and records coupon usage tentatively for short period of time so that counts validation is correct. Returns early if there is no limit defined for the coupon.
+	 *
+	 * @param WC_Coupon $coupon Coupon object.
+	 *
+	 * @return bool|int|string|null Returns meta key if coupon was held, null if returned early.
+	 */
+	public function check_and_hold_coupon( $coupon ) {
+		global $wpdb;
+
+		$usage_limit = $coupon-&gt;get_usage_limit();
+		$held_time   = $this-&gt;get_tentative_held_time();
+
+		if ( 0 &gt;= $usage_limit || 0 &gt;= $held_time ) {
+			return null;
+		}
+
+		if ( ! apply_filters( &#039;woocommerce_hold_stock_for_checkout&#039;, true ) ) {
+			return null;
+		}
+
+		// Make sure we have usage_count meta key for this coupon because its required for `$query_for_usages`.
+		// We are not directly modifying `$query_for_usages` to allow for `usage_count` not present only keep that query simple.
+		if ( ! metadata_exists( &#039;post&#039;, $coupon-&gt;get_id(), &#039;usage_count&#039; ) ) {
+			$coupon-&gt;set_usage_count( $coupon-&gt;get_usage_count() ); // Use `get_usage_count` here to write default value, which may changed by a filter.
+			$coupon-&gt;save();
+		}
+
+		$query_for_usages = $wpdb-&gt;prepare(
+			&quot;
+			SELECT meta_value from $wpdb-&gt;postmeta
+			WHERE {$wpdb-&gt;postmeta}.meta_key = &#039;usage_count&#039;
+			AND {$wpdb-&gt;postmeta}.post_id = %d
+			LIMIT 1
+			FOR UPDATE
+			&quot;,
+			$coupon-&gt;get_id()
+		);
+
+		$query_for_tentative_usages = $this-&gt;get_tentative_usage_query( $coupon-&gt;get_id() );
+		$db_timestamp               = $wpdb-&gt;get_var( &#039;SELECT UNIX_TIMESTAMP() FROM &#039; . $wpdb-&gt;posts . &#039; LIMIT 1&#039; );
+
+		$coupon_usage_key = &#039;_coupon_held_&#039; . ( (int) $db_timestamp + $held_time ) . &#039;_&#039; . wp_generate_password( 6, false );
+
+		$insert_statement = $wpdb-&gt;prepare(
+			&quot;
+			INSERT INTO $wpdb-&gt;postmeta ( post_id, meta_key, meta_value )
+			SELECT %d, %s, %s FROM $wpdb-&gt;posts
+			WHERE ( $query_for_usages ) + ( $query_for_tentative_usages ) &lt; %d
+			LIMIT 1&quot;,
+			$coupon-&gt;get_id(),
+			$coupon_usage_key,
+			&#039;&#039;,
+			$usage_limit
+		); // WPCS: unprepared SQL ok.
+
+		/**
+		 * In some cases, specifically when there is a combined index on post_id,meta_key, the insert statement above could end up in a deadlock.
+		 * We will try to insert 3 times before giving up to recover from deadlock.
+		 */
+		for ( $count = 0; $count &lt; 3; $count++ ) {
+			$result = $wpdb-&gt;query( $insert_statement ); // WPCS: unprepared SQL ok.
+			if ( false !== $result ) {
+				// Clear meta cache.
+				wp_cache_delete( WC_Coupon::generate_meta_cache_key( $coupon-&gt;get_id(), &#039;coupons&#039; ), &#039;coupons&#039; );
+				break;
+			}
+		}
+
+		return $result &gt; 0 ? $coupon_usage_key : $result;
+	}
+
+	/**
+	 * Generate query to calculate tentative usages for the coupon.
+	 *
+	 * @param int $coupon_id Coupon ID to get tentative usage query for.
+	 *
+	 * @return string Query for tentative usages.
+	 */
+	private function get_tentative_usage_query( $coupon_id ) {
+		global $wpdb;
+		return $wpdb-&gt;prepare(
+			&quot;
+			SELECT COUNT(meta_id) FROM $wpdb-&gt;postmeta
+			WHERE {$wpdb-&gt;postmeta}.meta_key like %s
+			AND {$wpdb-&gt;postmeta}.meta_key &gt; %s
+			AND {$wpdb-&gt;postmeta}.post_id = %d
+			FOR UPDATE
+			&quot;,
+			array(
+				&#039;_coupon_held_%&#039;,
+				&#039;_coupon_held_&#039; . time(),
+				$coupon_id,
+			)
+		);  // WPCS: unprepared SQL ok.
+	}
+
+	/**
+	 * Check and records coupon usage tentatively for passed user aliases for short period of time so that counts validation is correct. Returns early if there is no limit per user for the coupon.
+	 *
+	 * @param WC_Coupon $coupon       Coupon object.
+	 * @param array     $user_aliases Emails or Ids to check for user.
+	 * @param string    $user_alias   Email/ID to use as `used_by` value.
+	 *
+	 * @return null|false|int
+	 */
+	public function check_and_hold_coupon_for_user( $coupon, $user_aliases, $user_alias ) {
+		global $wpdb;
+		$limit_per_user = $coupon-&gt;get_usage_limit_per_user();
+		$held_time      = $this-&gt;get_tentative_held_time();
+
+		if ( 0 &gt;= $limit_per_user || 0 &gt;= $held_time ) {
+			// This coupon do not have any restriction for usage per customer. No need to check further, lets bail.
+			return null;
+		}
+
+		if ( ! apply_filters( &#039;woocommerce_hold_stock_for_checkout&#039;, true ) ) {
+			return null;
+		}
+
+		$format = implode( &quot;&#039;,&#039;&quot;, array_fill( 0, count( $user_aliases ), &#039;%s&#039; ) );
+
+		$query_for_usages = $wpdb-&gt;prepare(
+			&quot;
+				SELECT COUNT(*) FROM $wpdb-&gt;postmeta
+				WHERE {$wpdb-&gt;postmeta}.meta_key = &#039;_used_by&#039;
+				AND {$wpdb-&gt;postmeta}.meta_value IN (&#039;$format&#039;)
+				AND {$wpdb-&gt;postmeta}.post_id = %d
+				FOR UPDATE
+				&quot;,
+			array_merge(
+				$user_aliases,
+				array( $coupon-&gt;get_id() )
+			)
+		); // WPCS: unprepared SQL ok.
+
+		$query_for_tentative_usages = $this-&gt;get_tentative_usage_query_for_user( $coupon-&gt;get_id(), $user_aliases );
+		$db_timestamp               = $wpdb-&gt;get_var( &#039;SELECT UNIX_TIMESTAMP() FROM &#039; . $wpdb-&gt;posts . &#039; LIMIT 1&#039; );
+
+		$coupon_used_by_meta_key    = &#039;_maybe_used_by_&#039; . ( (int) $db_timestamp + $held_time ) . &#039;_&#039; . wp_generate_password( 6, false );
+		$insert_statement           = $wpdb-&gt;prepare(
+			&quot;
+			INSERT INTO $wpdb-&gt;postmeta ( post_id, meta_key, meta_value )
+			SELECT %d, %s, %s FROM $wpdb-&gt;posts
+			WHERE ( $query_for_usages ) + ( $query_for_tentative_usages ) &lt; %d
+			LIMIT 1&quot;,
+			$coupon-&gt;get_id(),
+			$coupon_used_by_meta_key,
+			$user_alias,
+			$limit_per_user
+		); // WPCS: unprepared SQL ok.
+
+		// This query can potentially be deadlocked if a combined index on post_id and meta_key is present and there is
+		// high concurrency, in which case DB will abort the query which has done less work to resolve deadlock.
+		// We will try up to 3 times before giving up.
+		for ( $count = 0; $count &lt; 3; $count++ ) {
+			$result = $wpdb-&gt;query( $insert_statement ); // WPCS: unprepared SQL ok.
+			if ( false !== $result ) {
+				// Clear meta cache.
+				wp_cache_delete( WC_Coupon::generate_meta_cache_key( $coupon-&gt;get_id(), &#039;coupons&#039; ), &#039;coupons&#039; );
+				break;
+			}
+		}
+
+		return $result &gt; 0 ? $coupon_used_by_meta_key : $result;
+	}
+
+	/**
+	 * Generate query to calculate tentative usages for the coupon by the user.
+	 *
+	 * @param int   $coupon_id    Coupon ID.
+	 * @param array $user_aliases List of user aliases to check for usages.
+	 *
+	 * @return string Tentative usages query.
+	 */
+	private function get_tentative_usage_query_for_user( $coupon_id, $user_aliases ) {
+		global $wpdb;
+
+		$format = implode( &quot;&#039;,&#039;&quot;, array_fill( 0, count( $user_aliases ), &#039;%s&#039; ) );
+
+		// Note that if you are debugging, `_maybe_used_by_%` will be converted to `_maybe_used_by_{...very long str...}` to very long string. This is expected, and is automatically corrected while running the insert query.
+		return $wpdb-&gt;prepare(
+			&quot;
+				SELECT COUNT( meta_id ) FROM $wpdb-&gt;postmeta
+				WHERE {$wpdb-&gt;postmeta}.meta_key like %s
+				AND {$wpdb-&gt;postmeta}.meta_key &gt; %s
+				AND {$wpdb-&gt;postmeta}.post_id = %d
+				AND {$wpdb-&gt;postmeta}.meta_value IN (&#039;$format&#039;)
+				FOR UPDATE
+				&quot;,
+			array_merge(
+				array(
+					&#039;_maybe_used_by_%&#039;,
+					&#039;_maybe_used_by_&#039; . time(),
+					$coupon_id,
+				),
+				$user_aliases
+			)
+		); // WPCS: unprepared SQL ok.
+	}
+
+	/**
+	 * Return a coupon code for a specific ID.
+	 *
+	 * @since 3.0.0
+	 * @param int $id Coupon ID.
+	 * @return string Coupon Code
+	 */
+	public function get_code_by_id( $id ) {
+		global $wpdb;
+		return $wpdb-&gt;get_var(
+			$wpdb-&gt;prepare(
+				&quot;SELECT post_title
+				FROM $wpdb-&gt;posts
+				WHERE ID = %d
+				AND post_type = &#039;shop_coupon&#039;
+				AND post_status = &#039;publish&#039;&quot;,
+				$id
+			)
+		);
+	}
+
+	/**
+	 * Return an array of IDs for for a specific coupon code.
+	 * Can return multiple to check for existence.
+	 *
+	 * @since 3.0.0
+	 * @param string $code Coupon code.
+	 * @return array Array of IDs.
+	 */
+	public function get_ids_by_code( $code ) {
+		global $wpdb;
+		return $wpdb-&gt;get_col(
+			$wpdb-&gt;prepare(
+				&quot;SELECT ID FROM $wpdb-&gt;posts WHERE post_title = %s AND post_type = &#039;shop_coupon&#039; AND post_status = &#039;publish&#039; ORDER BY post_date DESC&quot;,
+				wc_sanitize_coupon_code( $code )
+			)
+		);
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

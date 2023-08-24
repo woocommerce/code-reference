@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-customer-download-data-store.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WC_Customer_Download_Data_Store class file.
+ *
+ * @package WooCommerce\Classes
+ */
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * WC Customer Download Data Store.
+ *
+ * @version  3.0.0
+ */
+class WC_Customer_Download_Data_Store implements WC_Customer_Download_Data_Store_Interface {
+
+	/**
+	 * Names of the database fields for the download permissions table.
+	 */
+	const DOWNLOAD_PERMISSION_DB_FIELDS = array(
+		&#039;download_id&#039;,
+		&#039;product_id&#039;,
+		&#039;user_id&#039;,
+		&#039;user_email&#039;,
+		&#039;order_id&#039;,
+		&#039;order_key&#039;,
+		&#039;downloads_remaining&#039;,
+		&#039;access_granted&#039;,
+		&#039;download_count&#039;,
+		&#039;access_expires&#039;,
+	);
+
+	/**
+	 * Create download permission for a user, from an array of data.
+	 *
+	 * @param array $data Data to create the permission for.
+	 * @returns int The database id of the created permission, or false if the permission creation failed.
+	 */
+	public function create_from_data( $data ) {
+		$data = array_intersect_key( $data, array_flip( self::DOWNLOAD_PERMISSION_DB_FIELDS ) );
+
+		$id = $this-&gt;insert_new_download_permission( $data );
+
+		do_action( &#039;woocommerce_grant_product_download_access&#039;, $data );
+
+		return $id;
+	}
+
+	/**
+	 * Create download permission for a user.
+	 *
+	 * @param WC_Customer_Download $download WC_Customer_Download object.
+	 */
+	public function create( &amp;$download ) {
+		global $wpdb;
+
+		// Always set a access granted date.
+		if ( is_null( $download-&gt;get_access_granted( &#039;edit&#039; ) ) ) {
+			$download-&gt;set_access_granted( time() );
+		}
+
+		$data = array();
+		foreach ( self::DOWNLOAD_PERMISSION_DB_FIELDS as $db_field_name ) {
+			$value                  = call_user_func( array( $download, &#039;get_&#039; . $db_field_name ), &#039;edit&#039; );
+			$data[ $db_field_name ] = $value;
+		}
+
+		$inserted_id = $this-&gt;insert_new_download_permission( $data );
+		if ( $inserted_id ) {
+			$download-&gt;set_id( $inserted_id );
+			$download-&gt;apply_changes();
+		}
+
+		do_action( &#039;woocommerce_grant_product_download_access&#039;, $data );
+	}
+
+	/**
+	 * Create download permission for a user, from an array of data.
+	 * Assumes that all the keys in the passed data are valid.
+	 *
+	 * @param array $data Data to create the permission for.
+	 * @return int The database id of the created permission, or false if the permission creation failed.
+	 */
+	private function insert_new_download_permission( $data ) {
+		global $wpdb;
+
+		// Always set a access granted date.
+		if ( ! isset( $data[&#039;access_granted&#039;] ) ) {
+			$data[&#039;access_granted&#039;] = time();
+		}
+
+		$data[&#039;access_granted&#039;] = $this-&gt;adjust_date_for_db( $data[&#039;access_granted&#039;] );
+
+		if ( isset( $data[&#039;access_expires&#039;] ) ) {
+			$data[&#039;access_expires&#039;] = $this-&gt;adjust_date_for_db( $data[&#039;access_expires&#039;] );
+		}
+
+		$format = array(
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%d&#039;,
+			&#039;%s&#039;,
+		);
+
+		$result = $wpdb-&gt;insert(
+			$wpdb-&gt;prefix . &#039;woocommerce_downloadable_product_permissions&#039;,
+			apply_filters( &#039;woocommerce_downloadable_file_permission_data&#039;, $data ),
+			apply_filters( &#039;woocommerce_downloadable_file_permission_format&#039;, $format, $data )
+		);
+
+		return $result ? $wpdb-&gt;insert_id : false;
+	}
+
+	/**
+	 * Adjust a date value to be inserted in the database.
+	 *
+	 * @param mixed $date The date value. Can be a WC_DateTime, a timestamp, or anything else that &quot;date&quot; recognizes.
+	 * @return string The date converted to &#039;Y-m-d&#039; format.
+	 * @throws Exception The passed value can&#039;t be converted to a date.
+	 */
+	private function adjust_date_for_db( $date ) {
+		if ( &#039;WC_DateTime&#039; === get_class( $date ) ) {
+			$date = $date-&gt;getTimestamp();
+		}
+
+		$adjusted_date = date( &#039;Y-m-d&#039;, $date ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+
+		if ( $adjusted_date ) {
+			return $adjusted_date;
+		}
+
+		$msg = sprintf( __( &quot;I don&#039;t know how to get a date from a %s&quot;, &#039;woocommerce&#039; ), is_object( $date ) ? get_class( $date ) : gettype( $date ) );
+		throw new Exception( $msg );
+	}
+
+	/**
+	 * Method to read a download permission from the database.
+	 *
+	 * @param WC_Customer_Download $download WC_Customer_Download object.
+	 *
+	 * @throws Exception Throw exception if invalid download is passed.
+	 */
+	public function read( &amp;$download ) {
+		global $wpdb;
+
+		if ( ! $download-&gt;get_id() ) {
+			throw new Exception( __( &#039;Invalid download.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$download-&gt;set_defaults();
+		$raw_download = $wpdb-&gt;get_row(
+			$wpdb-&gt;prepare(
+				&quot;SELECT * FROM {$wpdb-&gt;prefix}woocommerce_downloadable_product_permissions WHERE permission_id = %d&quot;,
+				$download-&gt;get_id()
+			)
+		);
+
+		if ( ! $raw_download ) {
+			throw new Exception( __( &#039;Invalid download.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$download-&gt;set_props(
+			array(
+				&#039;download_id&#039;         =&gt; $raw_download-&gt;download_id,
+				&#039;product_id&#039;          =&gt; $raw_download-&gt;product_id,
+				&#039;user_id&#039;             =&gt; $raw_download-&gt;user_id,
+				&#039;user_email&#039;          =&gt; $raw_download-&gt;user_email,
+				&#039;order_id&#039;            =&gt; $raw_download-&gt;order_id,
+				&#039;order_key&#039;           =&gt; $raw_download-&gt;order_key,
+				&#039;downloads_remaining&#039; =&gt; $raw_download-&gt;downloads_remaining,
+				&#039;access_granted&#039;      =&gt; strtotime( $raw_download-&gt;access_granted ),
+				&#039;download_count&#039;      =&gt; $raw_download-&gt;download_count,
+				&#039;access_expires&#039;      =&gt; is_null( $raw_download-&gt;access_expires ) ? null : strtotime( $raw_download-&gt;access_expires ),
+			)
+		);
+		$download-&gt;set_object_read( true );
+	}
+
+	/**
+	 * Method to update a download in the database.
+	 *
+	 * @param WC_Customer_Download $download WC_Customer_Download object.
+	 */
+	public function update( &amp;$download ) {
+		global $wpdb;
+
+		$data = array(
+			&#039;download_id&#039;         =&gt; $download-&gt;get_download_id( &#039;edit&#039; ),
+			&#039;product_id&#039;          =&gt; $download-&gt;get_product_id( &#039;edit&#039; ),
+			&#039;user_id&#039;             =&gt; $download-&gt;get_user_id( &#039;edit&#039; ),
+			&#039;user_email&#039;          =&gt; $download-&gt;get_user_email( &#039;edit&#039; ),
+			&#039;order_id&#039;            =&gt; $download-&gt;get_order_id( &#039;edit&#039; ),
+			&#039;order_key&#039;           =&gt; $download-&gt;get_order_key( &#039;edit&#039; ),
+			&#039;downloads_remaining&#039; =&gt; $download-&gt;get_downloads_remaining( &#039;edit&#039; ),
+			// phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+			&#039;access_granted&#039;      =&gt; date( &#039;Y-m-d&#039;, $download-&gt;get_access_granted( &#039;edit&#039; )-&gt;getTimestamp() ),
+			&#039;download_count&#039;      =&gt; $download-&gt;get_download_count( &#039;edit&#039; ),
+			// phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+			&#039;access_expires&#039;      =&gt; ! is_null( $download-&gt;get_access_expires( &#039;edit&#039; ) ) ? date( &#039;Y-m-d&#039;, $download-&gt;get_access_expires( &#039;edit&#039; )-&gt;getTimestamp() ) : null,
+		);
+
+		$format = array(
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%s&#039;,
+			&#039;%d&#039;,
+			&#039;%s&#039;,
+		);
+
+		$wpdb-&gt;update(
+			$wpdb-&gt;prefix . &#039;woocommerce_downloadable_product_permissions&#039;,
+			$data,
+			array(
+				&#039;permission_id&#039; =&gt; $download-&gt;get_id(),
+			),
+			$format
+		);
+		$download-&gt;apply_changes();
+	}
+
+	/**
+	 * Method to delete a download permission from the database.
+	 *
+	 * @param WC_Customer_Download $download WC_Customer_Download object.
+	 * @param array                $args Array of args to pass to the delete method.
+	 */
+	public function delete( &amp;$download, $args = array() ) {
+		global $wpdb;
+
+		$download_id = $download-&gt;get_id();
+		$this-&gt;delete_by_id( $download_id );
+
+		$download-&gt;set_id( 0 );
+	}
+
+	/**
+	 * Method to delete a download permission from the database by ID.
+	 *
+	 * @param int $id permission_id of the download to be deleted.
+	 */
+	public function delete_by_id( $id ) {
+		global $wpdb;
+		$wpdb-&gt;query(
+			$wpdb-&gt;prepare(
+				&quot;DELETE FROM {$wpdb-&gt;prefix}woocommerce_downloadable_product_permissions
+				WHERE permission_id = %d&quot;,
+				$id
+			)
+		);
+		// Delete related records in wc_download_log (aka ON DELETE CASCADE).
+		$wpdb-&gt;query(
+			$wpdb-&gt;prepare(
+				&quot;DELETE FROM {$wpdb-&gt;prefix}wc_download_log
+				WHERE permission_id = %d&quot;,
+				$id
+			)
+		);
+	}
+
+	/**
+	 * Delete download_log related to download permission via $field with value $value.
+	 *
+	 * @param string           $field Field used to query download permission table with.
+	 * @param string|int|float $value Value to filter the field by.
+	 *
+	 * @return void
+	 */
+	private function delete_download_log_by_field_value( $field, $value ) {
+		global $wpdb;
+
+		$value_placeholder = &#039;&#039;;
+		if ( is_int( $value ) ) {
+			$value_placeholder = &#039;%d&#039;;
+		} elseif ( is_string( $value ) ) {
+			$value_placeholder = &#039;%s&#039;;
+		} elseif ( is_float( $value ) ) {
+			$value_placeholder = &#039;%f&#039;;
+		} else {
+			wc_doing_it_wrong( __METHOD__, __( &#039;Unsupported argument type provided as value.&#039;, &#039;woocommerce&#039; ), &#039;7.0&#039; );
+			// The `prepare` further down would fail if the placeholder was missing, so skip download log removal.
+			return;
+		}
+
+		$query = &quot;DELETE FROM {$wpdb-&gt;prefix}wc_download_log
+					WHERE permission_id IN (
+					    SELECT permission_id
+					    FROM {$wpdb-&gt;prefix}woocommerce_downloadable_product_permissions
+					    WHERE {$field} = {$value_placeholder}
+					)&quot;;
+
+		$wpdb-&gt;query(
+			$wpdb-&gt;prepare( $query, $value ) // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		);
+	}
+
+	/**
+	 * Method to delete a download permission from the database by order ID.
+	 *
+	 * @param int $id Order ID of the downloads that will be deleted.
+	 */
+	public function delete_by_order_id( $id ) {
+		global $wpdb;
+		// Delete related records in wc_download_log (aka ON DELETE CASCADE).
+		$this-&gt;delete_download_log_by_field_value( &#039;order_id&#039;, $id );
+
+		$wpdb-&gt;query(
+			$wpdb-&gt;prepare(
+				&quot;DELETE FROM {$wpdb-&gt;prefix}woocommerce_downloadable_product_permissions
+				WHERE order_id = %d&quot;,
+				$id
+			)
+		);
+	}
+
+	/**
+	 * Method to delete a download permission from the database by download ID.
+	 *
+	 * @param int $id download_id of the downloads that will be deleted.
+	 */
+	public function delete_by_download_id( $id ) {
+		global $wpdb;
+		// Delete related records in wc_download_log (aka ON DELETE CASCADE).
+		$this-&gt;delete_download_log_by_field_value( &#039;download_id&#039;, $id );
+
+		$wpdb-&gt;query(
+			$wpdb-&gt;prepare(
+				&quot;DELETE FROM {$wpdb-&gt;prefix}woocommerce_downloadable_product_permissions
+				WHERE download_id = %s&quot;,
+				$id
+			)
+		);
+	}
+
+	/**
+	 * Method to delete a download permission from the database by user ID.
+	 *
+	 * @since 3.4.0
+	 * @param int $id user ID of the downloads that will be deleted.
+	 * @return bool True if deleted rows.
+	 */
+	public function delete_by_user_id( $id ) {
+		global $wpdb;
+		// Delete related records in wc_download_log (aka ON DELETE CASCADE).
+		$this-&gt;delete_download_log_by_field_value( &#039;user_id&#039;, $id );
+
+		return (bool) $wpdb-&gt;query(
+			$wpdb-&gt;prepare(
+				&quot;DELETE FROM {$wpdb-&gt;prefix}woocommerce_downloadable_product_permissions
+				WHERE user_id = %d&quot;,
+				$id
+			)
+		);
+	}
+
+	/**
+	 * Method to delete a download permission from the database by user email.
+	 *
+	 * @since 3.4.0
+	 * @param string $email email of the downloads that will be deleted.
+	 * @return bool True if deleted rows.
+	 */
+	public function delete_by_user_email( $email ) {
+		global $wpdb;
+		// Delete related records in wc_download_log (aka ON DELETE CASCADE).
+		$this-&gt;delete_download_log_by_field_value( &#039;user_email&#039;, $email );
+
+		return (bool) $wpdb-&gt;query(
+			$wpdb-&gt;prepare(
+				&quot;DELETE FROM {$wpdb-&gt;prefix}woocommerce_downloadable_product_permissions
+				WHERE user_email = %s&quot;,
+				$email
+			)
+		);
+	}
+
+	/**
+	 * Get a download object.
+	 *
+	 * @param  array $data From the DB.
+	 * @return WC_Customer_Download
+	 */
+	private function get_download( $data ) {
+		return new WC_Customer_Download( $data );
+	}
+
+	/**
+	 * Get array of download ids by specified args.
+	 *
+	 * @param  array $args Arguments to filter downloads. $args[&#039;return&#039;] accepts the following values: &#039;objects&#039; (default), &#039;ids&#039; or a comma separated list of fields (for example: &#039;order_id,user_id,user_email&#039;).
+	 * @return array Can be an array of permission_ids, an array of WC_Customer_Download objects or an array of arrays containing specified fields depending on the value of $args[&#039;return&#039;].
+	 */
+	public function get_downloads( $args = array() ) {
+		global $wpdb;
+
+		$args = wp_parse_args(
+			$args,
+			array(
+				&#039;user_email&#039;  =&gt; &#039;&#039;,
+				&#039;user_id&#039;     =&gt; &#039;&#039;,
+				&#039;order_id&#039;    =&gt; &#039;&#039;,
+				&#039;order_key&#039;   =&gt; &#039;&#039;,
+				&#039;product_id&#039;  =&gt; &#039;&#039;,
+				&#039;download_id&#039; =&gt; &#039;&#039;,
+				&#039;orderby&#039;     =&gt; &#039;permission_id&#039;,
+				&#039;order&#039;       =&gt; &#039;ASC&#039;,
+				&#039;limit&#039;       =&gt; -1,
+				&#039;page&#039;        =&gt; 1,
+				&#039;return&#039;      =&gt; &#039;objects&#039;,
+			)
+		);
+
+		$valid_fields       = array( &#039;permission_id&#039;, &#039;download_id&#039;, &#039;product_id&#039;, &#039;order_id&#039;, &#039;order_key&#039;, &#039;user_email&#039;, &#039;user_id&#039;, &#039;downloads_remaining&#039;, &#039;access_granted&#039;, &#039;access_expires&#039;, &#039;download_count&#039; );
+		$get_results_output = ARRAY_A;
+
+		if ( &#039;ids&#039; === $args[&#039;return&#039;] ) {
+			$fields = &#039;permission_id&#039;;
+		} elseif ( &#039;objects&#039; === $args[&#039;return&#039;] ) {
+			$fields             = &#039;*&#039;;
+			$get_results_output = OBJECT;
+		} else {
+			$fields = explode( &#039;,&#039;, (string) $args[&#039;return&#039;] );
+			$fields = implode( &#039;, &#039;, array_intersect( $fields, $valid_fields ) );
+		}
+
+		$query   = array();
+		$query[] = &quot;SELECT {$fields} FROM {$wpdb-&gt;prefix}woocommerce_downloadable_product_permissions WHERE 1=1&quot;;
+
+		if ( $args[&#039;user_email&#039;] ) {
+			$query[] = $wpdb-&gt;prepare( &#039;AND user_email = %s&#039;, sanitize_email( $args[&#039;user_email&#039;] ) );
+		}
+
+		if ( $args[&#039;user_id&#039;] ) {
+			$query[] = $wpdb-&gt;prepare( &#039;AND user_id = %d&#039;, absint( $args[&#039;user_id&#039;] ) );
+		}
+
+		if ( $args[&#039;order_id&#039;] ) {
+			$query[] = $wpdb-&gt;prepare( &#039;AND order_id = %d&#039;, $args[&#039;order_id&#039;] );
+		}
+
+		if ( $args[&#039;order_key&#039;] ) {
+			$query[] = $wpdb-&gt;prepare( &#039;AND order_key = %s&#039;, $args[&#039;order_key&#039;] );
+		}
+
+		if ( $args[&#039;product_id&#039;] ) {
+			$query[] = $wpdb-&gt;prepare( &#039;AND product_id = %d&#039;, $args[&#039;product_id&#039;] );
+		}
+
+		if ( $args[&#039;download_id&#039;] ) {
+			$query[] = $wpdb-&gt;prepare( &#039;AND download_id = %s&#039;, $args[&#039;download_id&#039;] );
+		}
+
+		$orderby     = in_array( $args[&#039;orderby&#039;], $valid_fields, true ) ? $args[&#039;orderby&#039;] : &#039;permission_id&#039;;
+		$order       = &#039;DESC&#039; === strtoupper( $args[&#039;order&#039;] ) ? &#039;DESC&#039; : &#039;ASC&#039;;
+		$orderby_sql = sanitize_sql_orderby( &quot;{$orderby} {$order}&quot; );
+		$query[]     = &quot;ORDER BY {$orderby_sql}&quot;;
+
+		if ( 0 &lt; $args[&#039;limit&#039;] ) {
+			$query[] = $wpdb-&gt;prepare( &#039;LIMIT %d, %d&#039;, absint( $args[&#039;limit&#039;] ) * absint( $args[&#039;page&#039;] - 1 ), absint( $args[&#039;limit&#039;] ) );
+		}
+
+		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$results = $wpdb-&gt;get_results( implode( &#039; &#039;, $query ), $get_results_output );
+
+		switch ( $args[&#039;return&#039;] ) {
+			case &#039;ids&#039;:
+				return wp_list_pluck( $results, &#039;permission_id&#039; );
+			case &#039;objects&#039;:
+				return array_map( array( $this, &#039;get_download&#039; ), $results );
+			default:
+				return $results;
+		}
+	}
+
+	/**
+	 * Update download ids if the hash changes.
+	 *
+	 * @deprecated 3.3.0 Download id is now a static UUID and should not be changed based on file hash.
+	 *
+	 * @param  int    $product_id Product ID.
+	 * @param  string $old_id Old download_id.
+	 * @param  string $new_id New download_id.
+	 */
+	public function update_download_id( $product_id, $old_id, $new_id ) {
+		global $wpdb;
+
+		wc_deprecated_function( __METHOD__, &#039;3.3&#039; );
+
+		$wpdb-&gt;update(
+			$wpdb-&gt;prefix . &#039;woocommerce_downloadable_product_permissions&#039;,
+			array(
+				&#039;download_id&#039; =&gt; $new_id,
+			),
+			array(
+				&#039;download_id&#039; =&gt; $old_id,
+				&#039;product_id&#039;  =&gt; $product_id,
+			)
+		);
+	}
+
+	/**
+	 * Get a customers downloads.
+	 *
+	 * @param  int $customer_id Customer ID.
+	 * @return array
+	 */
+	public function get_downloads_for_customer( $customer_id ) {
+		global $wpdb;
+
+		return $wpdb-&gt;get_results(
+			$wpdb-&gt;prepare(
+				&quot;SELECT * FROM {$wpdb-&gt;prefix}woocommerce_downloadable_product_permissions as permissions
+				WHERE user_id = %d
+				AND permissions.order_id &gt; 0
+				AND
+					(
+						permissions.downloads_remaining &gt; 0
+						OR permissions.downloads_remaining = &#039;&#039;
+					)
+				AND
+					(
+						permissions.access_expires IS NULL
+						OR permissions.access_expires &gt;= %s
+						OR permissions.access_expires = &#039;0000-00-00 00:00:00&#039;
+					)
+				ORDER BY permissions.order_id, permissions.product_id, permissions.permission_id;&quot;,
+				$customer_id,
+				date( &#039;Y-m-d&#039;, current_time( &#039;timestamp&#039; ) )  // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+			)
+		);
+	}
+
+	/**
+	 * Update user prop for downloads based on order id.
+	 *
+	 * @param  int    $order_id Order ID.
+	 * @param  int    $customer_id Customer ID.
+	 * @param  string $email Customer email address.
+	 */
+	public function update_user_by_order_id( $order_id, $customer_id, $email ) {
+		global $wpdb;
+		$wpdb-&gt;update(
+			$wpdb-&gt;prefix . &#039;woocommerce_downloadable_product_permissions&#039;,
+			array(
+				&#039;user_id&#039;    =&gt; $customer_id,
+				&#039;user_email&#039; =&gt; $email,
+			),
+			array(
+				&#039;order_id&#039; =&gt; $order_id,
+			),
+			array(
+				&#039;%d&#039;,
+				&#039;%s&#039;,
+			),
+			array(
+				&#039;%d&#039;,
+			)
+		);
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

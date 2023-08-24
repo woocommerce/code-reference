@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-data-store-wp.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Shared logic for WP based data.
+ * Contains functions like meta handling for all default data stores.
+ * Your own data store doesn&#039;t need to use WC_Data_Store_WP -- you can write
+ * your own meta handling functions.
+ *
+ * @version 3.0.0
+ * @package WooCommerce\Classes
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * WC_Data_Store_WP class.
+ */
+class WC_Data_Store_WP {
+
+	/**
+	 * Meta type. This should match up with
+	 * the types available at https://developer.wordpress.org/reference/functions/add_metadata/.
+	 * WP defines &#039;post&#039;, &#039;user&#039;, &#039;comment&#039;, and &#039;term&#039;.
+	 *
+	 * @var string
+	 */
+	protected $meta_type = &#039;post&#039;;
+
+	/**
+	 * This only needs set if you are using a custom metadata type (for example payment tokens.
+	 * This should be the name of the field your table uses for associating meta with objects.
+	 * For example, in payment_tokenmeta, this would be payment_token_id.
+	 *
+	 * @var string
+	 */
+	protected $object_id_field_for_meta = &#039;&#039;;
+
+	/**
+	 * Data stored in meta keys, but not considered &quot;meta&quot; for an object.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @var array
+	 */
+	protected $internal_meta_keys = array();
+
+	/**
+	 * Meta data which should exist in the DB, even if empty.
+	 *
+	 * @since 3.6.0
+	 *
+	 * @var array
+	 */
+	protected $must_exist_meta_keys = array();
+
+	/**
+	 * Get and store terms from a taxonomy.
+	 *
+	 * @since  3.0.0
+	 * @param  WC_Data|integer $object WC_Data object or object ID.
+	 * @param  string          $taxonomy Taxonomy name e.g. product_cat.
+	 * @return array of terms
+	 */
+	protected function get_term_ids( $object, $taxonomy ) {
+		if ( is_numeric( $object ) ) {
+			$object_id = $object;
+		} else {
+			$object_id = $object-&gt;get_id();
+		}
+		$terms = get_the_terms( $object_id, $taxonomy );
+		if ( false === $terms || is_wp_error( $terms ) ) {
+			return array();
+		}
+		return wp_list_pluck( $terms, &#039;term_id&#039; );
+	}
+
+	/**
+	 * Returns an array of meta for an object.
+	 *
+	 * @since  3.0.0
+	 * @param  WC_Data $object WC_Data object.
+	 * @return array
+	 */
+	public function read_meta( &amp;$object ) {
+		global $wpdb;
+		$db_info       = $this-&gt;get_db_info();
+		$raw_meta_data = $wpdb-&gt;get_results(
+			$wpdb-&gt;prepare(
+				// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				&quot;SELECT {$db_info[&#039;meta_id_field&#039;]} as meta_id, meta_key, meta_value
+				FROM {$db_info[&#039;table&#039;]}
+				WHERE {$db_info[&#039;object_id_field&#039;]} = %d
+				ORDER BY {$db_info[&#039;meta_id_field&#039;]}&quot;,
+				// phpcs:enable
+				$object-&gt;get_id()
+			)
+		);
+		return $this-&gt;filter_raw_meta_data( $object, $raw_meta_data );
+	}
+
+	/**
+	 * Helper method to filter internal meta keys from all meta data rows for the object.
+	 *
+	 * @since 4.7.0
+	 *
+	 * @param WC_Data $object        WC_Data object.
+	 * @param array   $raw_meta_data Array of std object of meta data to be filtered.
+	 *
+	 * @return mixed|void
+	 */
+	public function filter_raw_meta_data( &amp;$object, $raw_meta_data ) {
+		$this-&gt;internal_meta_keys = array_unique(
+			array_merge(
+				array_map(
+					array( $this, &#039;prefix_key&#039; ),
+					$object-&gt;get_data_keys()
+				),
+				$this-&gt;internal_meta_keys
+			)
+		);
+		$meta_data                = array_filter( $raw_meta_data, array( $this, &#039;exclude_internal_meta_keys&#039; ) );
+		return apply_filters( &quot;woocommerce_data_store_wp_{$this-&gt;meta_type}_read_meta&quot;, $meta_data, $object, $this );
+	}
+
+	/**
+	 * Deletes meta based on meta ID.
+	 *
+	 * @since  3.0.0
+	 * @param  WC_Data  $object WC_Data object.
+	 * @param  stdClass $meta (containing at least -&gt;id).
+	 */
+	public function delete_meta( &amp;$object, $meta ) {
+		delete_metadata_by_mid( $this-&gt;meta_type, $meta-&gt;id );
+	}
+
+	/**
+	 * Add new piece of meta.
+	 *
+	 * @since  3.0.0
+	 * @param  WC_Data  $object WC_Data object.
+	 * @param  stdClass $meta (containing -&gt;key and -&gt;value).
+	 * @return int meta ID
+	 */
+	public function add_meta( &amp;$object, $meta ) {
+		return add_metadata( $this-&gt;meta_type, $object-&gt;get_id(), wp_slash( $meta-&gt;key ), is_string( $meta-&gt;value ) ? wp_slash( $meta-&gt;value ) : $meta-&gt;value, false );
+	}
+
+	/**
+	 * Update meta.
+	 *
+	 * @since  3.0.0
+	 * @param  WC_Data  $object WC_Data object.
+	 * @param  stdClass $meta (containing -&gt;id, -&gt;key and -&gt;value).
+	 */
+	public function update_meta( &amp;$object, $meta ) {
+		update_metadata_by_mid( $this-&gt;meta_type, $meta-&gt;id, $meta-&gt;value, $meta-&gt;key );
+	}
+
+	/**
+	 * Table structure is slightly different between meta types, this function will return what we need to know.
+	 *
+	 * @since  3.0.0
+	 * @return array Array elements: table, object_id_field, meta_id_field
+	 */
+	protected function get_db_info() {
+		global $wpdb;
+
+		$meta_id_field = &#039;meta_id&#039;; // for some reason users calls this umeta_id so we need to track this as well.
+		$table         = $wpdb-&gt;prefix;
+
+		// If we are dealing with a type of metadata that is not a core type, the table should be prefixed.
+		if ( ! in_array( $this-&gt;meta_type, array( &#039;post&#039;, &#039;user&#039;, &#039;comment&#039;, &#039;term&#039; ), true ) ) {
+			$table .= &#039;woocommerce_&#039;;
+		}
+
+		$table          .= $this-&gt;meta_type . &#039;meta&#039;;
+		$object_id_field = $this-&gt;meta_type . &#039;_id&#039;;
+
+		// Figure out our field names.
+		if ( &#039;user&#039; === $this-&gt;meta_type ) {
+			$meta_id_field = &#039;umeta_id&#039;;
+			$table         = $wpdb-&gt;usermeta;
+		}
+
+		if ( ! empty( $this-&gt;object_id_field_for_meta ) ) {
+			$object_id_field = $this-&gt;object_id_field_for_meta;
+		}
+
+		return array(
+			&#039;table&#039;           =&gt; $table,
+			&#039;object_id_field&#039; =&gt; $object_id_field,
+			&#039;meta_id_field&#039;   =&gt; $meta_id_field,
+		);
+	}
+
+	/**
+	 * Internal meta keys we don&#039;t want exposed as part of meta_data. This is in
+	 * addition to all data props with _ prefix.
+	 *
+	 * @since 2.6.0
+	 *
+	 * @param string $key Prefix to be added to meta keys.
+	 * @return string
+	 */
+	protected function prefix_key( $key ) {
+		return &#039;_&#039; === substr( $key, 0, 1 ) ? $key : &#039;_&#039; . $key;
+	}
+
+	/**
+	 * Callback to remove unwanted meta data.
+	 *
+	 * @param object $meta Meta object to check if it should be excluded or not.
+	 * @return bool
+	 */
+	protected function exclude_internal_meta_keys( $meta ) {
+		return ! in_array( $meta-&gt;meta_key, $this-&gt;internal_meta_keys, true ) &amp;&amp; 0 !== stripos( $meta-&gt;meta_key, &#039;wp_&#039; );
+	}
+
+	/**
+	 * Gets a list of props and meta keys that need updated based on change state
+	 * or if they are present in the database or not.
+	 *
+	 * @param  WC_Data $object              The WP_Data object (WC_Coupon for coupons, etc).
+	 * @param  array   $meta_key_to_props   A mapping of meta keys =&gt; prop names.
+	 * @param  string  $meta_type           The internal WP meta type (post, user, etc).
+	 * @return array                        A mapping of meta keys =&gt; prop names, filtered by ones that should be updated.
+	 */
+	protected function get_props_to_update( $object, $meta_key_to_props, $meta_type = &#039;post&#039; ) {
+		$props_to_update = array();
+		$changed_props   = $object-&gt;get_changes();
+
+		// Props should be updated if they are a part of the $changed array or don&#039;t exist yet.
+		foreach ( $meta_key_to_props as $meta_key =&gt; $prop ) {
+			if ( array_key_exists( $prop, $changed_props ) || ! metadata_exists( $meta_type, $object-&gt;get_id(), $meta_key ) ) {
+				$props_to_update[ $meta_key ] = $prop;
+			}
+		}
+
+		return $props_to_update;
+	}
+
+	/**
+	 * Update meta data in, or delete it from, the database.
+	 *
+	 * Avoids storing meta when it&#039;s either an empty string or empty array.
+	 * Other empty values such as numeric 0 and null should still be stored.
+	 * Data-stores can force meta to exist using `must_exist_meta_keys`.
+	 *
+	 * Note: WordPress `get_metadata` function returns an empty string when meta data does not exist.
+	 *
+	 * @param WC_Data $object The WP_Data object (WC_Coupon for coupons, etc).
+	 * @param string  $meta_key Meta key to update.
+	 * @param mixed   $meta_value Value to save.
+	 *
+	 * @since 3.6.0 Added to prevent empty meta being stored unless required.
+	 *
+	 * @return bool True if updated/deleted.
+	 */
+	protected function update_or_delete_post_meta( $object, $meta_key, $meta_value ) {
+		if ( in_array( $meta_value, array( array(), &#039;&#039; ), true ) &amp;&amp; ! in_array( $meta_key, $this-&gt;must_exist_meta_keys, true ) ) {
+			$updated = delete_post_meta( $object-&gt;get_id(), $meta_key );
+		} else {
+			$updated = update_post_meta( $object-&gt;get_id(), $meta_key, $meta_value );
+		}
+
+		return (bool) $updated;
+	}
+
+	/**
+	 * Get valid WP_Query args from a WC_Object_Query&#039;s query variables.
+	 *
+	 * @since 3.1.0
+	 * @param array $query_vars query vars from a WC_Object_Query.
+	 * @return array
+	 */
+	protected function get_wp_query_args( $query_vars ) {
+
+		$skipped_values = array( &#039;&#039;, array(), null );
+		$wp_query_args  = array(
+			&#039;errors&#039;     =&gt; array(),
+			&#039;meta_query&#039; =&gt; array(), // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		);
+
+		foreach ( $query_vars as $key =&gt; $value ) {
+			if ( in_array( $value, $skipped_values, true ) || &#039;meta_query&#039; === $key ) {
+				continue;
+			}
+
+			// Build meta queries out of vars that are stored in internal meta keys.
+			if ( in_array( &#039;_&#039; . $key, $this-&gt;internal_meta_keys, true ) ) {
+				// Check for existing values if wildcard is used.
+				if ( &#039;*&#039; === $value ) {
+					$wp_query_args[&#039;meta_query&#039;][] = array(
+						array(
+							&#039;key&#039;     =&gt; &#039;_&#039; . $key,
+							&#039;compare&#039; =&gt; &#039;EXISTS&#039;,
+						),
+						array(
+							&#039;key&#039;     =&gt; &#039;_&#039; . $key,
+							&#039;value&#039;   =&gt; &#039;&#039;,
+							&#039;compare&#039; =&gt; &#039;!=&#039;,
+						),
+					);
+				} else {
+					$wp_query_args[&#039;meta_query&#039;][] = array(
+						&#039;key&#039;     =&gt; &#039;_&#039; . $key,
+						&#039;value&#039;   =&gt; $value,
+						&#039;compare&#039; =&gt; is_array( $value ) ? &#039;IN&#039; : &#039;=&#039;,
+					);
+				}
+			} else { // Other vars get mapped to wp_query args or just left alone.
+				$key_mapping = array(
+					&#039;parent&#039;         =&gt; &#039;post_parent&#039;,
+					&#039;parent_exclude&#039; =&gt; &#039;post_parent__not_in&#039;,
+					&#039;exclude&#039;        =&gt; &#039;post__not_in&#039;,
+					&#039;limit&#039;          =&gt; &#039;posts_per_page&#039;,
+					&#039;type&#039;           =&gt; &#039;post_type&#039;,
+					&#039;return&#039;         =&gt; &#039;fields&#039;,
+				);
+
+				if ( isset( $key_mapping[ $key ] ) ) {
+					$wp_query_args[ $key_mapping[ $key ] ] = $value;
+				} else {
+					$wp_query_args[ $key ] = $value;
+				}
+			}
+		}
+
+		return apply_filters( &#039;woocommerce_get_wp_query_args&#039;, $wp_query_args, $query_vars );
+	}
+
+	/**
+	 * Map a valid date query var to WP_Query arguments.
+	 * Valid date formats: YYYY-MM-DD or timestamp, possibly combined with an operator from $valid_operators.
+	 * Also accepts a WC_DateTime object.
+	 *
+	 * @since 3.2.0
+	 * @param mixed  $query_var A valid date format.
+	 * @param string $key meta or db column key.
+	 * @param array  $wp_query_args WP_Query args.
+	 * @return array Modified $wp_query_args
+	 */
+	public function parse_date_for_wp_query( $query_var, $key, $wp_query_args = array() ) {
+		$query_parse_regex = &#039;/([^.&lt;&gt;]*)(&gt;=|&lt;=|&gt;|&lt;|\.\.\.)([^.&lt;&gt;]+)/&#039;;
+		$valid_operators   = array( &#039;&gt;&#039;, &#039;&gt;=&#039;, &#039;=&#039;, &#039;&lt;=&#039;, &#039;&lt;&#039;, &#039;...&#039; );
+
+		// YYYY-MM-DD queries have &#039;day&#039; precision. Timestamp/WC_DateTime queries have &#039;second&#039; precision.
+		$precision = &#039;second&#039;;
+
+		$dates    = array();
+		$operator = &#039;=&#039;;
+
+		try {
+			// Specific time query with a WC_DateTime.
+			if ( is_a( $query_var, &#039;WC_DateTime&#039; ) ) {
+				$dates[] = $query_var;
+			} elseif ( is_numeric( $query_var ) ) { // Specific time query with a timestamp.
+				$dates[] = new WC_DateTime( &quot;@{$query_var}&quot;, new DateTimeZone( &#039;UTC&#039; ) );
+			} elseif ( preg_match( $query_parse_regex, $query_var, $sections ) ) { // Query with operators and possible range of dates.
+				if ( ! empty( $sections[1] ) ) {
+					$dates[] = is_numeric( $sections[1] ) ? new WC_DateTime( &quot;@{$sections[1]}&quot;, new DateTimeZone( &#039;UTC&#039; ) ) : wc_string_to_datetime( $sections[1] );
+				}
+
+				$operator = in_array( $sections[2], $valid_operators, true ) ? $sections[2] : &#039;&#039;;
+				$dates[]  = is_numeric( $sections[3] ) ? new WC_DateTime( &quot;@{$sections[3]}&quot;, new DateTimeZone( &#039;UTC&#039; ) ) : wc_string_to_datetime( $sections[3] );
+
+				if ( ! is_numeric( $sections[1] ) &amp;&amp; ! is_numeric( $sections[3] ) ) {
+					$precision = &#039;day&#039;;
+				}
+			} else { // Specific time query with a string.
+				$dates[]   = wc_string_to_datetime( $query_var );
+				$precision = &#039;day&#039;;
+			}
+		} catch ( Exception $e ) {
+			return $wp_query_args;
+		}
+
+		// Check for valid inputs.
+		if ( ! $operator || empty( $dates ) || ( &#039;...&#039; === $operator &amp;&amp; count( $dates ) &lt; 2 ) ) {
+			return $wp_query_args;
+		}
+
+		// Build date query for &#039;post_date&#039; or &#039;post_modified&#039; keys.
+		if ( &#039;post_date&#039; === $key || &#039;post_modified&#039; === $key ) {
+			if ( ! isset( $wp_query_args[&#039;date_query&#039;] ) ) {
+				$wp_query_args[&#039;date_query&#039;] = array();
+			}
+
+			$query_arg = array(
+				&#039;column&#039;    =&gt; &#039;day&#039; === $precision ? $key : $key . &#039;_gmt&#039;,
+				&#039;inclusive&#039; =&gt; &#039;&gt;&#039; !== $operator &amp;&amp; &#039;&lt;&#039; !== $operator,
+			);
+
+			// Add &#039;before&#039;/&#039;after&#039; query args.
+			$comparisons = array();
+			if ( &#039;&gt;&#039; === $operator || &#039;&gt;=&#039; === $operator || &#039;...&#039; === $operator ) {
+				$comparisons[] = &#039;after&#039;;
+			}
+			if ( &#039;&lt;&#039; === $operator || &#039;&lt;=&#039; === $operator || &#039;...&#039; === $operator ) {
+				$comparisons[] = &#039;before&#039;;
+			}
+
+			foreach ( $comparisons as $index =&gt; $comparison ) {
+				if ( &#039;day&#039; === $precision ) {
+					/**
+					 * WordPress doesn&#039;t generate the correct SQL for inclusive day queries with both a &#039;before&#039; and
+					 * &#039;after&#039; string query, so we have to use the array format in &#039;day&#039; precision.
+					 *
+					 * @see https://core.trac.wordpress.org/ticket/29908
+					 */
+					$query_arg[ $comparison ][&#039;year&#039;]  = $dates[ $index ]-&gt;date( &#039;Y&#039; );
+					$query_arg[ $comparison ][&#039;month&#039;] = $dates[ $index ]-&gt;date( &#039;n&#039; );
+					$query_arg[ $comparison ][&#039;day&#039;]   = $dates[ $index ]-&gt;date( &#039;j&#039; );
+				} else {
+					/**
+					 * WordPress doesn&#039;t support &#039;hour&#039;/&#039;second&#039;/&#039;minute&#039; in array format &#039;before&#039;/&#039;after&#039; queries,
+					 * so we have to use a string query.
+					 */
+					$query_arg[ $comparison ] = gmdate( &#039;m/d/Y H:i:s&#039;, $dates[ $index ]-&gt;getTimestamp() );
+				}
+			}
+
+			if ( empty( $comparisons ) ) {
+				$query_arg[&#039;year&#039;]  = $dates[0]-&gt;date( &#039;Y&#039; );
+				$query_arg[&#039;month&#039;] = $dates[0]-&gt;date( &#039;n&#039; );
+				$query_arg[&#039;day&#039;]   = $dates[0]-&gt;date( &#039;j&#039; );
+				if ( &#039;second&#039; === $precision ) {
+					$query_arg[&#039;hour&#039;]   = $dates[0]-&gt;date( &#039;H&#039; );
+					$query_arg[&#039;minute&#039;] = $dates[0]-&gt;date( &#039;i&#039; );
+					$query_arg[&#039;second&#039;] = $dates[0]-&gt;date( &#039;s&#039; );
+				}
+			}
+			$wp_query_args[&#039;date_query&#039;][] = $query_arg;
+			return $wp_query_args;
+		}
+
+		// Build meta query for unrecognized keys.
+		if ( ! isset( $wp_query_args[&#039;meta_query&#039;] ) ) {
+			$wp_query_args[&#039;meta_query&#039;] = array(); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		}
+
+		// Meta dates are stored as timestamps in the db.
+		// Check against beginning/end-of-day timestamps when using &#039;day&#039; precision.
+		if ( &#039;day&#039; === $precision ) {
+			$start_timestamp = strtotime( gmdate( &#039;m/d/Y 00:00:00&#039;, $dates[0]-&gt;getTimestamp() ) );
+			$end_timestamp   = &#039;...&#039; !== $operator ? ( $start_timestamp + DAY_IN_SECONDS ) : strtotime( gmdate( &#039;m/d/Y 00:00:00&#039;, $dates[1]-&gt;getTimestamp() ) );
+			switch ( $operator ) {
+				case &#039;&gt;&#039;:
+				case &#039;&lt;=&#039;:
+					$wp_query_args[&#039;meta_query&#039;][] = array(
+						&#039;key&#039;     =&gt; $key,
+						&#039;value&#039;   =&gt; $end_timestamp,
+						&#039;compare&#039; =&gt; $operator,
+					);
+					break;
+				case &#039;&lt;&#039;:
+				case &#039;&gt;=&#039;:
+					$wp_query_args[&#039;meta_query&#039;][] = array(
+						&#039;key&#039;     =&gt; $key,
+						&#039;value&#039;   =&gt; $start_timestamp,
+						&#039;compare&#039; =&gt; $operator,
+					);
+					break;
+				default:
+					$wp_query_args[&#039;meta_query&#039;][] = array(
+						&#039;key&#039;     =&gt; $key,
+						&#039;value&#039;   =&gt; $start_timestamp,
+						&#039;compare&#039; =&gt; &#039;&gt;=&#039;,
+					);
+					$wp_query_args[&#039;meta_query&#039;][] = array(
+						&#039;key&#039;     =&gt; $key,
+						&#039;value&#039;   =&gt; $end_timestamp,
+						&#039;compare&#039; =&gt; &#039;&lt;=&#039;,
+					);
+			}
+		} else {
+			if ( &#039;...&#039; !== $operator ) {
+				$wp_query_args[&#039;meta_query&#039;][] = array(
+					&#039;key&#039;     =&gt; $key,
+					&#039;value&#039;   =&gt; $dates[0]-&gt;getTimestamp(),
+					&#039;compare&#039; =&gt; $operator,
+				);
+			} else {
+				$wp_query_args[&#039;meta_query&#039;][] = array(
+					&#039;key&#039;     =&gt; $key,
+					&#039;value&#039;   =&gt; $dates[0]-&gt;getTimestamp(),
+					&#039;compare&#039; =&gt; &#039;&gt;=&#039;,
+				);
+				$wp_query_args[&#039;meta_query&#039;][] = array(
+					&#039;key&#039;     =&gt; $key,
+					&#039;value&#039;   =&gt; $dates[1]-&gt;getTimestamp(),
+					&#039;compare&#039; =&gt; &#039;&lt;=&#039;,
+				);
+			}
+		}
+
+		return $wp_query_args;
+	}
+
+	/**
+	 * Return list of internal meta keys.
+	 *
+	 * @since 3.2.0
+	 * @return array
+	 */
+	public function get_internal_meta_keys() {
+		return $this-&gt;internal_meta_keys;
+	}
+
+	/**
+	 * Check if the terms are suitable for searching.
+	 *
+	 * Uses an array of stopwords (terms) that are excluded from the separate
+	 * term matching when searching for posts. The list of English stopwords is
+	 * the approximate search engines list, and is translatable.
+	 *
+	 * @since 3.4.0
+	 * @param array $terms Terms to check.
+	 * @return array Terms that are not stopwords.
+	 */
+	protected function get_valid_search_terms( $terms ) {
+		$valid_terms = array();
+		$stopwords   = $this-&gt;get_search_stopwords();
+
+		foreach ( $terms as $term ) {
+			// keep before/after spaces when term is for exact match, otherwise trim quotes and spaces.
+			if ( preg_match( &#039;/^&quot;.+&quot;$/&#039;, $term ) ) {
+				$term = trim( $term, &quot;\&quot;&#039;&quot; );
+			} else {
+				$term = trim( $term, &quot;\&quot;&#039; &quot; );
+			}
+
+			// Avoid single A-Z and single dashes.
+			if ( empty( $term ) || ( 1 === strlen( $term ) &amp;&amp; preg_match( &#039;/^[a-z\-]$/i&#039;, $term ) ) ) {
+				continue;
+			}
+
+			if ( in_array( wc_strtolower( $term ), $stopwords, true ) ) {
+				continue;
+			}
+
+			$valid_terms[] = $term;
+		}
+
+		return $valid_terms;
+	}
+
+	/**
+	 * Retrieve stopwords used when parsing search terms.
+	 *
+	 * @since 3.4.0
+	 * @return array Stopwords.
+	 */
+	protected function get_search_stopwords() {
+		// Translators: This is a comma-separated list of very common words that should be excluded from a search, like a, an, and the. These are usually called &quot;stopwords&quot;. You should not simply translate these individual words into your language. Instead, look for and provide commonly accepted stopwords in your language.
+		$stopwords = array_map(
+			&#039;wc_strtolower&#039;,
+			array_map(
+				&#039;trim&#039;,
+				explode(
+					&#039;,&#039;,
+					_x(
+						&#039;about,an,are,as,at,be,by,com,for,from,how,in,is,it,of,on,or,that,the,this,to,was,what,when,where,who,will,with,www&#039;,
+						&#039;Comma-separated list of search stopwords in your language&#039;,
+						&#039;woocommerce&#039;
+					)
+				)
+			)
+		);
+
+		return apply_filters( &#039;wp_search_stopwords&#039;, $stopwords );
+	}
+
+	/**
+	 * Get data to save to a lookup table.
+	 *
+	 * @since 3.6.0
+	 * @param int    $id ID of object to update.
+	 * @param string $table Lookup table name.
+	 * @return array
+	 */
+	protected function get_data_for_lookup_table( $id, $table ) {
+		return array();
+	}
+
+	/**
+	 * Get primary key name for lookup table.
+	 *
+	 * @since 3.6.0
+	 * @param string $table Lookup table name.
+	 * @return string
+	 */
+	protected function get_primary_key_for_lookup_table( $table ) {
+		return &#039;&#039;;
+	}
+
+	/**
+	 * Update a lookup table for an object.
+	 *
+	 * @since 3.6.0
+	 * @param int    $id ID of object to update.
+	 * @param string $table Lookup table name.
+	 *
+	 * @return NULL
+	 */
+	protected function update_lookup_table( $id, $table ) {
+		global $wpdb;
+
+		$id    = absint( $id );
+		$table = sanitize_key( $table );
+
+		if ( empty( $id ) || empty( $table ) ) {
+			return false;
+		}
+
+		$existing_data = wp_cache_get( &#039;lookup_table&#039;, &#039;object_&#039; . $id );
+		$update_data   = $this-&gt;get_data_for_lookup_table( $id, $table );
+
+		if ( ! empty( $update_data ) &amp;&amp; $update_data !== $existing_data ) {
+			$wpdb-&gt;replace(
+				$wpdb-&gt;$table,
+				$update_data
+			);
+			wp_cache_set( &#039;lookup_table&#039;, $update_data, &#039;object_&#039; . $id );
+		}
+	}
+
+	/**
+	 * Delete lookup table data for an ID.
+	 *
+	 * @since 3.6.0
+	 * @param int    $id ID of object to update.
+	 * @param string $table Lookup table name.
+	 */
+	public function delete_from_lookup_table( $id, $table ) {
+		global $wpdb;
+
+		$id    = absint( $id );
+		$table = sanitize_key( $table );
+
+		if ( empty( $id ) || empty( $table ) ) {
+			return false;
+		}
+
+		$pk = $this-&gt;get_primary_key_for_lookup_table( $table );
+
+		$wpdb-&gt;delete(
+			$wpdb-&gt;$table,
+			array(
+				$pk =&gt; $id,
+			)
+		);
+		wp_cache_delete( &#039;lookup_table&#039;, &#039;object_&#039; . $id );
+	}
+
+	/**
+	 * Converts a WP post date string into a timestamp.
+	 *
+	 * @since 4.8.0
+	 *
+	 * @param  string $time_string The WP post date string.
+	 * @return int|null The date string converted to a timestamp or null.
+	 */
+	protected function string_to_timestamp( $time_string ) {
+		return &#039;0000-00-00 00:00:00&#039; !== $time_string ? wc_string_to_timestamp( $time_string ) : null;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

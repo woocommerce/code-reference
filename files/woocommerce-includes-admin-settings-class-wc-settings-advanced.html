@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866946">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866946">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-settings-advanced.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WooCommerce advanced settings
+ *
+ * @package  WooCommerce\Admin
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Settings for API.
+ */
+if ( class_exists( &#039;WC_Settings_Advanced&#039;, false ) ) {
+	return new WC_Settings_Advanced();
+}
+
+/**
+ * WC_Settings_Advanced.
+ */
+class WC_Settings_Advanced extends WC_Settings_Page {
+
+	/**
+	 * Constructor.
+	 */
+	public function __construct() {
+		$this-&gt;id    = &#039;advanced&#039;;
+		$this-&gt;label = __( &#039;Advanced&#039;, &#039;woocommerce&#039; );
+
+		parent::__construct();
+		$this-&gt;notices();
+	}
+
+	/**
+	 * Get own sections.
+	 *
+	 * @return array
+	 */
+	protected function get_own_sections() {
+		return array(
+			&#039;&#039;                =&gt; __( &#039;Page setup&#039;, &#039;woocommerce&#039; ),
+			&#039;keys&#039;            =&gt; __( &#039;REST API&#039;, &#039;woocommerce&#039; ),
+			&#039;webhooks&#039;        =&gt; __( &#039;Webhooks&#039;, &#039;woocommerce&#039; ),
+			&#039;legacy_api&#039;      =&gt; __( &#039;Legacy API&#039;, &#039;woocommerce&#039; ),
+			&#039;woocommerce_com&#039; =&gt; __( &#039;WooCommerce.com&#039;, &#039;woocommerce&#039; ),
+		);
+	}
+
+	/**
+	 * Get settings for the default section.
+	 *
+	 * @return array
+	 */
+	protected function get_settings_for_default_section() {
+		$settings =
+			array(
+				array(
+					&#039;title&#039; =&gt; __( &#039;Page setup&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;  =&gt; __( &#039;These pages need to be set so that WooCommerce knows where to send users to checkout.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;  =&gt; &#039;title&#039;,
+					&#039;id&#039;    =&gt; &#039;advanced_page_options&#039;,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Cart page&#039;, &#039;woocommerce&#039; ),
+					/* Translators: %s Page contents. */
+					&#039;desc&#039;     =&gt; sprintf( __( &#039;Page contents: [%s]&#039;, &#039;woocommerce&#039; ), apply_filters( &#039;woocommerce_cart_shortcode_tag&#039;, &#039;woocommerce_cart&#039; ) ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_cart_page_id&#039;,
+					&#039;type&#039;     =&gt; &#039;single_select_page_with_search&#039;,
+					&#039;default&#039;  =&gt; &#039;&#039;,
+					&#039;class&#039;    =&gt; &#039;wc-page-search&#039;,
+					&#039;css&#039;      =&gt; &#039;min-width:300px;&#039;,
+					&#039;args&#039;     =&gt; array(
+						&#039;exclude&#039; =&gt;
+							array(
+								wc_get_page_id( &#039;checkout&#039; ),
+								wc_get_page_id( &#039;myaccount&#039; ),
+							),
+					),
+					&#039;desc_tip&#039; =&gt; true,
+					&#039;autoload&#039; =&gt; false,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Checkout page&#039;, &#039;woocommerce&#039; ),
+					/* Translators: %s Page contents. */
+					&#039;desc&#039;     =&gt; sprintf( __( &#039;Page contents: [%s]&#039;, &#039;woocommerce&#039; ), apply_filters( &#039;woocommerce_checkout_shortcode_tag&#039;, &#039;woocommerce_checkout&#039; ) ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_checkout_page_id&#039;,
+					&#039;type&#039;     =&gt; &#039;single_select_page_with_search&#039;,
+					&#039;default&#039;  =&gt; wc_get_page_id( &#039;checkout&#039; ),
+					&#039;class&#039;    =&gt; &#039;wc-page-search&#039;,
+					&#039;css&#039;      =&gt; &#039;min-width:300px;&#039;,
+					&#039;args&#039;     =&gt; array(
+						&#039;exclude&#039; =&gt;
+							array(
+								wc_get_page_id( &#039;cart&#039; ),
+								wc_get_page_id( &#039;myaccount&#039; ),
+							),
+					),
+					&#039;desc_tip&#039; =&gt; true,
+					&#039;autoload&#039; =&gt; false,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;My account page&#039;, &#039;woocommerce&#039; ),
+					/* Translators: %s Page contents. */
+					&#039;desc&#039;     =&gt; sprintf( __( &#039;Page contents: [%s]&#039;, &#039;woocommerce&#039; ), apply_filters( &#039;woocommerce_my_account_shortcode_tag&#039;, &#039;woocommerce_my_account&#039; ) ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_myaccount_page_id&#039;,
+					&#039;type&#039;     =&gt; &#039;single_select_page_with_search&#039;,
+					&#039;default&#039;  =&gt; &#039;&#039;,
+					&#039;class&#039;    =&gt; &#039;wc-page-search&#039;,
+					&#039;css&#039;      =&gt; &#039;min-width:300px;&#039;,
+					&#039;args&#039;     =&gt; array(
+						&#039;exclude&#039; =&gt;
+							array(
+								wc_get_page_id( &#039;cart&#039; ),
+								wc_get_page_id( &#039;checkout&#039; ),
+							),
+					),
+					&#039;desc_tip&#039; =&gt; true,
+					&#039;autoload&#039; =&gt; false,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Terms and conditions&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;If you define a &quot;Terms&quot; page the customer will be asked if they accept them when checking out.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_terms_page_id&#039;,
+					&#039;default&#039;  =&gt; &#039;&#039;,
+					&#039;class&#039;    =&gt; &#039;wc-page-search&#039;,
+					&#039;css&#039;      =&gt; &#039;min-width:300px;&#039;,
+					&#039;type&#039;     =&gt; &#039;single_select_page_with_search&#039;,
+					&#039;args&#039;     =&gt; array( &#039;exclude&#039; =&gt; wc_get_page_id( &#039;checkout&#039; ) ),
+					&#039;desc_tip&#039; =&gt; true,
+					&#039;autoload&#039; =&gt; false,
+				),
+
+				array(
+					&#039;type&#039; =&gt; &#039;sectionend&#039;,
+					&#039;id&#039;   =&gt; &#039;advanced_page_options&#039;,
+				),
+
+				array(
+					&#039;title&#039; =&gt; &#039;&#039;,
+					&#039;type&#039;  =&gt; &#039;title&#039;,
+					&#039;id&#039;    =&gt; &#039;checkout_process_options&#039;,
+				),
+
+				&#039;force_ssl_checkout&#039;   =&gt; array(
+					&#039;title&#039;           =&gt; __( &#039;Secure checkout&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;            =&gt; __( &#039;Force secure checkout&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;              =&gt; &#039;woocommerce_force_ssl_checkout&#039;,
+					&#039;default&#039;         =&gt; &#039;no&#039;,
+					&#039;type&#039;            =&gt; &#039;checkbox&#039;,
+					&#039;checkboxgroup&#039;   =&gt; &#039;start&#039;,
+					&#039;show_if_checked&#039; =&gt; &#039;option&#039;,
+					/* Translators: %s Docs URL. */
+					&#039;desc_tip&#039;        =&gt; sprintf( __( &#039;Force SSL (HTTPS) on the checkout pages (&lt;a href=&quot;%s&quot; target=&quot;_blank&quot;&gt;an SSL Certificate is required&lt;/a&gt;).&#039;, &#039;woocommerce&#039; ), &#039;https://docs.woocommerce.com/document/ssl-and-https/#section-3&#039; ),
+				),
+
+				&#039;unforce_ssl_checkout&#039; =&gt; array(
+					&#039;desc&#039;            =&gt; __( &#039;Force HTTP when leaving the checkout&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;              =&gt; &#039;woocommerce_unforce_ssl_checkout&#039;,
+					&#039;default&#039;         =&gt; &#039;no&#039;,
+					&#039;type&#039;            =&gt; &#039;checkbox&#039;,
+					&#039;checkboxgroup&#039;   =&gt; &#039;end&#039;,
+					&#039;show_if_checked&#039; =&gt; &#039;yes&#039;,
+				),
+
+				array(
+					&#039;type&#039; =&gt; &#039;sectionend&#039;,
+					&#039;id&#039;   =&gt; &#039;checkout_process_options&#039;,
+				),
+
+				array(
+					&#039;title&#039; =&gt; __( &#039;Checkout endpoints&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;  =&gt; &#039;title&#039;,
+					&#039;desc&#039;  =&gt; __( &#039;Endpoints are appended to your page URLs to handle specific actions during the checkout process. They should be unique.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;    =&gt; &#039;checkout_endpoint_options&#039;,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Pay&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the &quot;Checkout &amp;rarr; Pay&quot; page.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_checkout_pay_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;order-pay&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Order received&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the &quot;Checkout &amp;rarr; Order received&quot; page.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_checkout_order_received_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;order-received&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Add payment method&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the &quot;Checkout &amp;rarr; Add payment method&quot; page.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_myaccount_add_payment_method_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;add-payment-method&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Delete payment method&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the delete payment method page.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_myaccount_delete_payment_method_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;delete-payment-method&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Set default payment method&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the setting a default payment method page.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_myaccount_set_default_payment_method_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;set-default-payment-method&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;type&#039; =&gt; &#039;sectionend&#039;,
+					&#039;id&#039;   =&gt; &#039;checkout_endpoint_options&#039;,
+				),
+
+				array(
+					&#039;title&#039; =&gt; __( &#039;Account endpoints&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;  =&gt; &#039;title&#039;,
+					&#039;desc&#039;  =&gt; __( &#039;Endpoints are appended to your page URLs to handle specific actions on the accounts pages. They should be unique and can be left blank to disable the endpoint.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;    =&gt; &#039;account_endpoint_options&#039;,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Orders&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the &quot;My account &amp;rarr; Orders&quot; page.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_myaccount_orders_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;orders&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;View order&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the &quot;My account &amp;rarr; View order&quot; page.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_myaccount_view_order_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;view-order&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Downloads&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the &quot;My account &amp;rarr; Downloads&quot; page.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_myaccount_downloads_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;downloads&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Edit account&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the &quot;My account &amp;rarr; Edit account&quot; page.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_myaccount_edit_account_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;edit-account&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Addresses&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the &quot;My account &amp;rarr; Addresses&quot; page.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_myaccount_edit_address_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;edit-address&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Payment methods&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the &quot;My account &amp;rarr; Payment methods&quot; page.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_myaccount_payment_methods_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;payment-methods&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Lost password&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the &quot;My account &amp;rarr; Lost password&quot; page.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_myaccount_lost_password_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;lost-password&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;title&#039;    =&gt; __( &#039;Logout&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;     =&gt; __( &#039;Endpoint for the triggering logout. You can add this to your menus via a custom link: yoursite.com/?customer-logout=true&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;       =&gt; &#039;woocommerce_logout_endpoint&#039;,
+					&#039;type&#039;     =&gt; &#039;text&#039;,
+					&#039;default&#039;  =&gt; &#039;customer-logout&#039;,
+					&#039;desc_tip&#039; =&gt; true,
+				),
+
+				array(
+					&#039;type&#039; =&gt; &#039;sectionend&#039;,
+					&#039;id&#039;   =&gt; &#039;account_endpoint_options&#039;,
+				),
+			);
+
+		$settings = apply_filters( &#039;woocommerce_settings_pages&#039;, $settings );
+
+		if ( wc_site_is_https() ) {
+			unset( $settings[&#039;unforce_ssl_checkout&#039;], $settings[&#039;force_ssl_checkout&#039;] );
+		}
+
+		return $settings;
+	}
+
+	/**
+	 * Get settings for the WooCommerce.com section.
+	 *
+	 * @return array
+	 */
+	protected function get_settings_for_woocommerce_com_section() {
+		$tracking_info_text = sprintf( &#039;&lt;a href=&quot;%s&quot; target=&quot;_blank&quot;&gt;%s&lt;/a&gt;&#039;, &#039;https://woocommerce.com/usage-tracking&#039;, esc_html__( &#039;WooCommerce.com Usage Tracking Documentation&#039;, &#039;woocommerce&#039; ) );
+
+		$settings =
+			array(
+				array(
+					&#039;title&#039; =&gt; esc_html__( &#039;Usage Tracking&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;  =&gt; &#039;title&#039;,
+					&#039;id&#039;    =&gt; &#039;tracking_options&#039;,
+					&#039;desc&#039;  =&gt; __( &#039;Gathering usage data allows us to make WooCommerce better — your store will be considered as we evaluate new features, judge the quality of an update, or determine if an improvement makes sense.&#039;, &#039;woocommerce&#039; ),
+				),
+				array(
+					&#039;title&#039;         =&gt; __( &#039;Enable tracking&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;          =&gt; __( &#039;Allow usage of WooCommerce to be tracked&#039;, &#039;woocommerce&#039; ),
+					/* Translators: %s URL to tracking info screen. */
+					&#039;desc_tip&#039;      =&gt; sprintf( esc_html__( &#039;To opt out, leave this box unticked. Your store remains untracked, and no data will be collected. Read about what usage data is tracked at: %s.&#039;, &#039;woocommerce&#039; ), $tracking_info_text ),
+					&#039;id&#039;            =&gt; &#039;woocommerce_allow_tracking&#039;,
+					&#039;type&#039;          =&gt; &#039;checkbox&#039;,
+					&#039;checkboxgroup&#039; =&gt; &#039;start&#039;,
+					&#039;default&#039;       =&gt; &#039;no&#039;,
+					&#039;autoload&#039;      =&gt; false,
+				),
+				array(
+					&#039;type&#039; =&gt; &#039;sectionend&#039;,
+					&#039;id&#039;   =&gt; &#039;tracking_options&#039;,
+				),
+				array(
+					&#039;title&#039; =&gt; esc_html__( &#039;Marketplace suggestions&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;  =&gt; &#039;title&#039;,
+					&#039;id&#039;    =&gt; &#039;marketplace_suggestions&#039;,
+					&#039;desc&#039;  =&gt; __( &#039;We show contextual suggestions for official extensions that may be helpful to your store.&#039;, &#039;woocommerce&#039; ),
+				),
+				array(
+					&#039;title&#039;         =&gt; __( &#039;Show Suggestions&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;          =&gt; __( &#039;Display suggestions within WooCommerce&#039;, &#039;woocommerce&#039; ),
+					&#039;desc_tip&#039;      =&gt; esc_html__( &#039;Leave this box unchecked if you do not want to see suggested extensions.&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;            =&gt; &#039;woocommerce_show_marketplace_suggestions&#039;,
+					&#039;type&#039;          =&gt; &#039;checkbox&#039;,
+					&#039;checkboxgroup&#039; =&gt; &#039;start&#039;,
+					&#039;default&#039;       =&gt; &#039;yes&#039;,
+					&#039;autoload&#039;      =&gt; false,
+				),
+				array(
+					&#039;type&#039; =&gt; &#039;sectionend&#039;,
+					&#039;id&#039;   =&gt; &#039;marketplace_suggestions&#039;,
+				),
+			);
+
+		return apply_filters( &#039;woocommerce_com_integration_settings&#039;, $settings );
+	}
+
+	/**
+	 * Get settings for the legacy API section.
+	 *
+	 * @return array
+	 */
+	protected function get_settings_for_legacy_api_section() {
+		$settings =
+			array(
+				array(
+					&#039;title&#039; =&gt; &#039;&#039;,
+					&#039;type&#039;  =&gt; &#039;title&#039;,
+					&#039;desc&#039;  =&gt; &#039;&#039;,
+					&#039;id&#039;    =&gt; &#039;legacy_api_options&#039;,
+				),
+				array(
+					&#039;title&#039;   =&gt; __( &#039;Legacy API&#039;, &#039;woocommerce&#039; ),
+					&#039;desc&#039;    =&gt; __( &#039;Enable the legacy REST API&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;      =&gt; &#039;woocommerce_api_enabled&#039;,
+					&#039;type&#039;    =&gt; &#039;checkbox&#039;,
+					&#039;default&#039; =&gt; &#039;no&#039;,
+				),
+				array(
+					&#039;type&#039; =&gt; &#039;sectionend&#039;,
+					&#039;id&#039;   =&gt; &#039;legacy_api_options&#039;,
+				),
+			);
+
+		return apply_filters( &#039;woocommerce_settings_rest_api&#039;, $settings );
+	}
+
+	/**
+	 * Form method.
+	 *
+	 * @deprecated 3.4.4
+	 *
+	 * @param  string $method Method name.
+	 *
+	 * @return string
+	 */
+	public function form_method( $method ) {
+		return &#039;post&#039;;
+	}
+
+	/**
+	 * Notices.
+	 */
+	private function notices() {
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		if ( isset( $_GET[&#039;section&#039;] ) &amp;&amp; &#039;webhooks&#039; === $_GET[&#039;section&#039;] ) {
+			WC_Admin_Webhooks::notices();
+		}
+		if ( isset( $_GET[&#039;section&#039;] ) &amp;&amp; &#039;keys&#039; === $_GET[&#039;section&#039;] ) {
+			WC_Admin_API_Keys::notices();
+		}
+		// phpcs:enable
+	}
+
+	/**
+	 * Output the settings.
+	 */
+	public function output() {
+		global $current_section;
+
+		if ( &#039;webhooks&#039; === $current_section ) {
+			WC_Admin_Webhooks::page_output();
+		} elseif ( &#039;keys&#039; === $current_section ) {
+			WC_Admin_API_Keys::page_output();
+		} else {
+			parent::output();
+		}
+	}
+
+	/**
+	 * Save settings.
+	 */
+	public function save() {
+		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		global $current_section;
+
+		if ( apply_filters( &#039;woocommerce_rest_api_valid_to_save&#039;, ! in_array( $current_section, array( &#039;keys&#039;, &#039;webhooks&#039; ), true ) ) ) {
+			// Prevent the T&amp;Cs and checkout page from being set to the same page.
+			if ( isset( $_POST[&#039;woocommerce_terms_page_id&#039;], $_POST[&#039;woocommerce_checkout_page_id&#039;] ) &amp;&amp; $_POST[&#039;woocommerce_terms_page_id&#039;] === $_POST[&#039;woocommerce_checkout_page_id&#039;] ) {
+				$_POST[&#039;woocommerce_terms_page_id&#039;] = &#039;&#039;;
+			}
+
+			// Prevent the Cart, checkout and my account page from being set to the same page.
+			if ( isset( $_POST[&#039;woocommerce_cart_page_id&#039;], $_POST[&#039;woocommerce_checkout_page_id&#039;], $_POST[&#039;woocommerce_myaccount_page_id&#039;] ) ) {
+				if ( $_POST[&#039;woocommerce_cart_page_id&#039;] === $_POST[&#039;woocommerce_checkout_page_id&#039;] ) {
+					$_POST[&#039;woocommerce_checkout_page_id&#039;] = &#039;&#039;;
+				}
+				if ( $_POST[&#039;woocommerce_cart_page_id&#039;] === $_POST[&#039;woocommerce_myaccount_page_id&#039;] ) {
+					$_POST[&#039;woocommerce_myaccount_page_id&#039;] = &#039;&#039;;
+				}
+				if ( $_POST[&#039;woocommerce_checkout_page_id&#039;] === $_POST[&#039;woocommerce_myaccount_page_id&#039;] ) {
+					$_POST[&#039;woocommerce_myaccount_page_id&#039;] = &#039;&#039;;
+				}
+			}
+
+			$this-&gt;save_settings_for_current_section();
+			$this-&gt;do_update_options_action();
+		}
+		// phpcs:enable
+	}
+}
+
+// phpcs:disable Generic.Files.OneObjectStructurePerFile.MultipleFound, Generic.Commenting.Todo.CommentFound
+/**
+ * WC_Settings_Rest_API class.
+ *
+ * @deprecated 3.4 in favour of WC_Settings_Advanced.
+ */
+class WC_Settings_Rest_API extends WC_Settings_Advanced {
+}
+
+return new WC_Settings_Advanced();
+// phpcs:enable
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866946"></script>
+    <script src="../js/search.js?updated=1692866946"></script>
+</body>
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866946">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866946">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-report-sales-by-category.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Sales by category report functionality
+ *
+ * @package WooCommerce\Admin\Reporting
+ */
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit; // Exit if accessed directly.
+}
+
+/**
+ * WC_Report_Sales_By_Category
+ *
+ * @package     WooCommerce\Admin\Reports
+ * @version     2.1.0
+ */
+class WC_Report_Sales_By_Category extends WC_Admin_Report {
+
+	/**
+	 * Chart colors.
+	 *
+	 * @var array
+	 */
+	public $chart_colours = array();
+
+	/**
+	 * Categories ids.
+	 *
+	 * @var array
+	 */
+	public $show_categories = array();
+
+	/**
+	 * Item sales.
+	 *
+	 * @var array
+	 */
+	private $item_sales = array();
+
+	/**
+	 * Item sales and times.
+	 *
+	 * @var array
+	 */
+	private $item_sales_and_times = array();
+
+	/**
+	 * Constructor.
+	 */
+	public function __construct() {
+		if ( isset( $_GET[&#039;show_categories&#039;] ) ) {
+			$this-&gt;show_categories = is_array( $_GET[&#039;show_categories&#039;] ) ? array_map( &#039;absint&#039;, $_GET[&#039;show_categories&#039;] ) : array( absint( $_GET[&#039;show_categories&#039;] ) );
+		}
+	}
+
+	/**
+	 * Get all product ids in a category (and its children).
+	 *
+	 * @param  int $category_id Category ID.
+	 * @return array
+	 */
+	public function get_products_in_category( $category_id ) {
+		$term_ids    = get_term_children( $category_id, &#039;product_cat&#039; );
+		$term_ids[]  = $category_id;
+		$product_ids = get_objects_in_term( $term_ids, &#039;product_cat&#039; );
+
+		return array_unique( apply_filters( &#039;woocommerce_report_sales_by_category_get_products_in_category&#039;, $product_ids, $category_id ) );
+	}
+
+	/**
+	 * Get the legend for the main chart sidebar.
+	 *
+	 * @return array
+	 */
+	public function get_chart_legend() {
+
+		if ( empty( $this-&gt;show_categories ) ) {
+			return array();
+		}
+
+		$legend = array();
+		$index  = 0;
+
+		foreach ( $this-&gt;show_categories as $category ) {
+
+			$category    = get_term( $category, &#039;product_cat&#039; );
+			$total       = 0;
+			$product_ids = $this-&gt;get_products_in_category( $category-&gt;term_id );
+
+			foreach ( $product_ids as $id ) {
+
+				if ( isset( $this-&gt;item_sales[ $id ] ) ) {
+					$total += $this-&gt;item_sales[ $id ];
+				}
+			}
+
+			$legend[] = array(
+				/* translators: 1: total items sold 2: category name */
+				&#039;title&#039;            =&gt; sprintf( __( &#039;%1$s sales in %2$s&#039;, &#039;woocommerce&#039; ), &#039;&lt;strong&gt;&#039; . wc_price( $total ) . &#039;&lt;/strong&gt;&#039;, $category-&gt;name ),
+				&#039;color&#039;            =&gt; isset( $this-&gt;chart_colours[ $index ] ) ? $this-&gt;chart_colours[ $index ] : $this-&gt;chart_colours[0],
+				&#039;highlight_series&#039; =&gt; $index,
+			);
+
+			$index++;
+		}
+
+		return $legend;
+	}
+
+	/**
+	 * Output the report.
+	 */
+	public function output_report() {
+
+		$ranges = array(
+			&#039;year&#039;       =&gt; __( &#039;Year&#039;, &#039;woocommerce&#039; ),
+			&#039;last_month&#039; =&gt; __( &#039;Last month&#039;, &#039;woocommerce&#039; ),
+			&#039;month&#039;      =&gt; __( &#039;This month&#039;, &#039;woocommerce&#039; ),
+			&#039;7day&#039;       =&gt; __( &#039;Last 7 days&#039;, &#039;woocommerce&#039; ),
+		);
+
+		$this-&gt;chart_colours = array( &#039;#3498db&#039;, &#039;#34495e&#039;, &#039;#1abc9c&#039;, &#039;#2ecc71&#039;, &#039;#f1c40f&#039;, &#039;#e67e22&#039;, &#039;#e74c3c&#039;, &#039;#2980b9&#039;, &#039;#8e44ad&#039;, &#039;#2c3e50&#039;, &#039;#16a085&#039;, &#039;#27ae60&#039;, &#039;#f39c12&#039;, &#039;#d35400&#039;, &#039;#c0392b&#039; );
+
+		$current_range = ! empty( $_GET[&#039;range&#039;] ) ? sanitize_text_field( wp_unslash( $_GET[&#039;range&#039;] ) ) : &#039;7day&#039;;
+
+		if ( ! in_array( $current_range, array( &#039;custom&#039;, &#039;year&#039;, &#039;last_month&#039;, &#039;month&#039;, &#039;7day&#039; ) ) ) {
+			$current_range = &#039;7day&#039;;
+		}
+
+		$this-&gt;check_current_range_nonce( $current_range );
+		$this-&gt;calculate_current_range( $current_range );
+
+		// Get item sales data.
+		if ( ! empty( $this-&gt;show_categories ) ) {
+			$order_items = $this-&gt;get_order_report_data(
+				array(
+					&#039;data&#039;         =&gt; array(
+						&#039;_product_id&#039; =&gt; array(
+							&#039;type&#039;            =&gt; &#039;order_item_meta&#039;,
+							&#039;order_item_type&#039; =&gt; &#039;line_item&#039;,
+							&#039;function&#039;        =&gt; &#039;&#039;,
+							&#039;name&#039;            =&gt; &#039;product_id&#039;,
+						),
+						&#039;_line_total&#039; =&gt; array(
+							&#039;type&#039;            =&gt; &#039;order_item_meta&#039;,
+							&#039;order_item_type&#039; =&gt; &#039;line_item&#039;,
+							&#039;function&#039;        =&gt; &#039;SUM&#039;,
+							&#039;name&#039;            =&gt; &#039;order_item_amount&#039;,
+						),
+						&#039;post_date&#039;   =&gt; array(
+							&#039;type&#039;     =&gt; &#039;post_data&#039;,
+							&#039;function&#039; =&gt; &#039;&#039;,
+							&#039;name&#039;     =&gt; &#039;post_date&#039;,
+						),
+					),
+					&#039;group_by&#039;     =&gt; &#039;ID, product_id, post_date&#039;,
+					&#039;query_type&#039;   =&gt; &#039;get_results&#039;,
+					&#039;filter_range&#039; =&gt; true,
+				)
+			);
+
+			$this-&gt;item_sales           = array();
+			$this-&gt;item_sales_and_times = array();
+
+			if ( is_array( $order_items ) ) {
+
+				foreach ( $order_items as $order_item ) {
+
+					switch ( $this-&gt;chart_groupby ) {
+						case &#039;day&#039;:
+							$time = strtotime( gmdate( &#039;Ymd&#039;, strtotime( $order_item-&gt;post_date ) ) ) * 1000;
+							break;
+						case &#039;month&#039;:
+						default:
+							$time = strtotime( gmdate( &#039;Ym&#039;, strtotime( $order_item-&gt;post_date ) ) . &#039;01&#039; ) * 1000;
+							break;
+					}
+
+					$this-&gt;item_sales_and_times[ $time ][ $order_item-&gt;product_id ] = isset( $this-&gt;item_sales_and_times[ $time ][ $order_item-&gt;product_id ] ) ? $this-&gt;item_sales_and_times[ $time ][ $order_item-&gt;product_id ] + $order_item-&gt;order_item_amount : $order_item-&gt;order_item_amount;
+
+					$this-&gt;item_sales[ $order_item-&gt;product_id ] = isset( $this-&gt;item_sales[ $order_item-&gt;product_id ] ) ? $this-&gt;item_sales[ $order_item-&gt;product_id ] + $order_item-&gt;order_item_amount : $order_item-&gt;order_item_amount;
+				}
+			}
+		}
+
+		include WC()-&gt;plugin_path() . &#039;/includes/admin/views/html-report-by-date.php&#039;;
+	}
+
+	/**
+	 * Get chart widgets.
+	 *
+	 * @return array
+	 */
+	public function get_chart_widgets() {
+
+		return array(
+			array(
+				&#039;title&#039;    =&gt; __( &#039;Categories&#039;, &#039;woocommerce&#039; ),
+				&#039;callback&#039; =&gt; array( $this, &#039;category_widget&#039; ),
+			),
+		);
+	}
+
+	/**
+	 * Output category widget.
+	 */
+	public function category_widget() {
+
+		$categories = get_terms( &#039;product_cat&#039;, array( &#039;orderby&#039; =&gt; &#039;name&#039; ) );
+		?&gt;
+		&lt;form method=&quot;GET&quot;&gt;
+			&lt;div&gt;
+				&lt;select multiple=&quot;multiple&quot; data-placeholder=&quot;&lt;?php esc_attr_e( &#039;Select categories&amp;hellip;&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; class=&quot;wc-enhanced-select&quot; id=&quot;show_categories&quot; name=&quot;show_categories[]&quot; style=&quot;width: 205px;&quot;&gt;
+					&lt;?php
+						$r                 = array();
+						$r[&#039;pad_counts&#039;]   = 1;
+						$r[&#039;hierarchical&#039;] = 1;
+						$r[&#039;hide_empty&#039;]   = 1;
+						$r[&#039;value&#039;]        = &#039;id&#039;;
+						$r[&#039;selected&#039;]     = $this-&gt;show_categories;
+
+						include_once WC()-&gt;plugin_path() . &#039;/includes/walkers/class-wc-product-cat-dropdown-walker.php&#039;;
+
+						echo wc_walk_category_dropdown_tree( $categories, 0, $r ); // @codingStandardsIgnoreLine
+					?&gt;
+				&lt;/select&gt;
+				&lt;?php // @codingStandardsIgnoreStart ?&gt;
+				&lt;a href=&quot;#&quot; class=&quot;select_none&quot;&gt;&lt;?php esc_html_e( &#039;None&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;select_all&quot;&gt;&lt;?php esc_html_e( &#039;All&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/a&gt;
+				&lt;button type=&quot;submit&quot; class=&quot;submit button&quot; value=&quot;&lt;?php esc_attr_e( &#039;Show&#039;, &#039;woocommerce&#039; ); ?&gt;&quot;&gt;&lt;?php esc_html_e( &#039;Show&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+				&lt;input type=&quot;hidden&quot; name=&quot;range&quot; value=&quot;&lt;?php echo ( ! empty( $_GET[&#039;range&#039;] ) ) ? esc_attr( wp_unslash( $_GET[&#039;range&#039;] ) ) : &#039;&#039;; ?&gt;&quot; /&gt;
+				&lt;input type=&quot;hidden&quot; name=&quot;start_date&quot; value=&quot;&lt;?php echo ( ! empty( $_GET[&#039;start_date&#039;] ) ) ? esc_attr( wp_unslash( $_GET[&#039;start_date&#039;] ) ) : &#039;&#039;; ?&gt;&quot; /&gt;
+				&lt;input type=&quot;hidden&quot; name=&quot;end_date&quot; value=&quot;&lt;?php echo ( ! empty( $_GET[&#039;end_date&#039;] ) ) ? esc_attr( wp_unslash( $_GET[&#039;end_date&#039;] ) ) : &#039;&#039;; ?&gt;&quot; /&gt;
+				&lt;input type=&quot;hidden&quot; name=&quot;page&quot; value=&quot;&lt;?php echo ( ! empty( $_GET[&#039;page&#039;] ) ) ? esc_attr( wp_unslash( $_GET[&#039;page&#039;] ) ) : &#039;&#039;; ?&gt;&quot; /&gt;
+				&lt;input type=&quot;hidden&quot; name=&quot;tab&quot; value=&quot;&lt;?php echo ( ! empty( $_GET[&#039;tab&#039;] ) ) ? esc_attr( wp_unslash( $_GET[&#039;tab&#039;] ) ) : &#039;&#039;; ?&gt;&quot; /&gt;
+				&lt;input type=&quot;hidden&quot; name=&quot;report&quot; value=&quot;&lt;?php echo ( ! empty( $_GET[&#039;report&#039;] ) ) ? esc_attr( wp_unslash( $_GET[&#039;report&#039;] ) ) : &#039;&#039;; ?&gt;&quot; /&gt;
+				&lt;?php // @codingStandardsIgnoreEnd ?&gt;
+			&lt;/div&gt;
+			&lt;script type=&quot;text/javascript&quot;&gt;
+				jQuery(function(){
+					// Select all/None
+					jQuery( &#039;.chart-widget&#039; ).on( &#039;click&#039;, &#039;.select_all&#039;, function() {
+						jQuery(this).closest( &#039;div&#039; ).find( &#039;select option&#039; ).attr( &#039;selected&#039;, &#039;selected&#039; );
+						jQuery(this).closest( &#039;div&#039; ).find(&#039;select&#039;).trigger( &#039;change&#039; );
+						return false;
+					});
+
+					jQuery( &#039;.chart-widget&#039;).on( &#039;click&#039;, &#039;.select_none&#039;, function() {
+						jQuery(this).closest( &#039;div&#039; ).find( &#039;select option&#039; ).prop( &#039;selected&#039;, false );
+						jQuery(this).closest( &#039;div&#039; ).find(&#039;select&#039;).trigger( &#039;change&#039; );
+						return false;
+					});
+				});
+			&lt;/script&gt;
+		&lt;/form&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Output an export link.
+	 */
+	public function get_export_button() {
+
+		$current_range = ! empty( $_GET[&#039;range&#039;] ) ? sanitize_text_field( wp_unslash( $_GET[&#039;range&#039;] ) ) : &#039;7day&#039;;
+		?&gt;
+		&lt;a
+			href=&quot;#&quot;
+			download=&quot;report-&lt;?php echo esc_attr( $current_range ); ?&gt;-&lt;?php echo esc_attr( date_i18n( &#039;Y-m-d&#039;, current_time( &#039;timestamp&#039; ) ) ); ?&gt;.csv&quot;
+			class=&quot;export_csv&quot;
+			data-export=&quot;chart&quot;
+			data-xaxes=&quot;&lt;?php esc_attr_e( &#039;Date&#039;, &#039;woocommerce&#039; ); ?&gt;&quot;
+			data-groupby=&quot;&lt;?php echo esc_attr( $this-&gt;chart_groupby ); ?&gt;&quot;
+		&gt;
+			&lt;?php esc_html_e( &#039;Export CSV&#039;, &#039;woocommerce&#039; ); ?&gt;
+		&lt;/a&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Get the main chart.
+	 */
+	public function get_main_chart() {
+		global $wp_locale;
+
+		if ( empty( $this-&gt;show_categories ) ) {
+			?&gt;
+			&lt;div class=&quot;chart-container&quot;&gt;
+				&lt;p class=&quot;chart-prompt&quot;&gt;&lt;?php esc_html_e( &#039;Choose a category to view stats&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;?php
+		} else {
+			$chart_data = array();
+			$index      = 0;
+
+			foreach ( $this-&gt;show_categories as $category ) {
+
+				$category            = get_term( $category, &#039;product_cat&#039; );
+				$product_ids         = $this-&gt;get_products_in_category( $category-&gt;term_id );
+				$category_chart_data = array();
+
+				for ( $i = 0; $i &lt;= $this-&gt;chart_interval; $i ++ ) {
+
+					$interval_total = 0;
+
+					switch ( $this-&gt;chart_groupby ) {
+						case &#039;day&#039;:
+							$time = strtotime( gmdate( &#039;Ymd&#039;, strtotime( &quot;+{$i} DAY&quot;, $this-&gt;start_date ) ) ) * 1000;
+							break;
+						case &#039;month&#039;:
+						default:
+							$time = strtotime( gmdate( &#039;Ym&#039;, strtotime( &quot;+{$i} MONTH&quot;, $this-&gt;start_date ) ) . &#039;01&#039; ) * 1000;
+							break;
+					}
+
+					foreach ( $product_ids as $id ) {
+
+						if ( isset( $this-&gt;item_sales_and_times[ $time ][ $id ] ) ) {
+							$interval_total += $this-&gt;item_sales_and_times[ $time ][ $id ];
+						}
+					}
+
+					$category_chart_data[] = array( $time, (float) wc_format_decimal( $interval_total, wc_get_price_decimals() ) );
+				}
+
+				$chart_data[ $category-&gt;term_id ][&#039;category&#039;] = $category-&gt;name;
+				$chart_data[ $category-&gt;term_id ][&#039;data&#039;]     = $category_chart_data;
+
+				$index++;
+			}
+			?&gt;
+			&lt;div class=&quot;chart-container&quot;&gt;
+				&lt;div class=&quot;chart-placeholder main&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;?php // @codingStandardsIgnoreStart ?&gt;
+			&lt;script type=&quot;text/javascript&quot;&gt;
+				var main_chart;
+
+				jQuery(function(){
+					var drawGraph = function( highlight ) {
+						var series = [
+							&lt;?php
+								$index = 0;
+								foreach ( $chart_data as $data ) {
+									$color  = isset( $this-&gt;chart_colours[ $index ] ) ? $this-&gt;chart_colours[ $index ] : $this-&gt;chart_colours[0];
+									$width  = $this-&gt;barwidth / sizeof( $chart_data );
+									$offset = ( $width * $index );
+									$series = $data[&#039;data&#039;];
+
+									foreach ( $series as $key =&gt; $series_data ) {
+										$series[ $key ][0] = $series_data[0] + $offset;
+									}
+
+									$series = wp_json_encode( $series );
+
+									echo &#039;{
+											label: &quot;&#039; . esc_js( $data[&#039;category&#039;] ) . &#039;&quot;,
+											data: JSON.parse( decodeURIComponent( &quot;&#039; . rawurlencode( $series ) . &#039;&quot; ) ),
+											color: &quot;&#039; . $color . &#039;&quot;,
+											bars: {
+												fillColor: &quot;&#039; . $color . &#039;&quot;,
+												fill: true,
+												show: true,
+												lineWidth: 1,
+												align: &quot;center&quot;,
+												barWidth: &#039; . $width * 0.75 . &#039;,
+												stack: false
+											},
+											&#039; . $this-&gt;get_currency_tooltip() . &#039;,
+											enable_tooltip: true,
+											prepend_label: true
+										},&#039;;
+									$index++;
+								}
+							?&gt;
+						];
+
+						if ( highlight !== &#039;undefined&#039; &amp;&amp; series[ highlight ] ) {
+							highlight_series = series[ highlight ];
+
+							highlight_series.color = &#039;#9c5d90&#039;;
+
+							if ( highlight_series.bars ) {
+								highlight_series.bars.fillColor = &#039;#9c5d90&#039;;
+							}
+
+							if ( highlight_series.lines ) {
+								highlight_series.lines.lineWidth = 5;
+							}
+						}
+
+						main_chart = jQuery.plot(
+							jQuery(&#039;.chart-placeholder.main&#039;),
+							series,
+							{
+								legend: {
+									show: false
+								},
+								grid: {
+									color: &#039;#aaa&#039;,
+									borderColor: &#039;transparent&#039;,
+									borderWidth: 0,
+									hoverable: true
+								},
+								xaxes: [ {
+									color: &#039;#aaa&#039;,
+									reserveSpace: true,
+									position: &quot;bottom&quot;,
+									tickColor: &#039;transparent&#039;,
+									mode: &quot;time&quot;,
+									timeformat: &quot;&lt;?php echo ( &#039;day&#039; === $this-&gt;chart_groupby ) ? &#039;%d %b&#039; : &#039;%b&#039;; ?&gt;&quot;,
+									monthNames: JSON.parse( decodeURIComponent( &#039;&lt;?php echo rawurlencode( wp_json_encode( array_values( $wp_locale-&gt;month_abbrev ) ) ); ?&gt;&#039; ) ),
+									tickLength: 1,
+									minTickSize: [1, &quot;&lt;?php echo $this-&gt;chart_groupby; ?&gt;&quot;],
+									tickSize: [1, &quot;&lt;?php echo $this-&gt;chart_groupby; ?&gt;&quot;],
+									font: {
+										color: &quot;#aaa&quot;
+									}
+								} ],
+								yaxes: [
+									{
+										min: 0,
+										tickDecimals: 2,
+										color: &#039;transparent&#039;,
+										font: { color: &quot;#aaa&quot; }
+									}
+								],
+							}
+						);
+
+						jQuery(&#039;.chart-placeholder&#039;).trigger( &#039;resize&#039; );
+
+					}
+
+					drawGraph();
+
+					jQuery(&#039;.highlight_series&#039;).on( &#039;mouseenter&#039;,
+						function() {
+							drawGraph( jQuery(this).data(&#039;series&#039;) );
+						} ).on( &#039;mouseleave&#039;,
+						function() {
+							drawGraph();
+						}
+					);
+				});
+			&lt;/script&gt;
+			&lt;?php // @codingStandardsIgnoreEnd ?&gt;
+			&lt;?php
+		}
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866946"></script>
+    <script src="../js/search.js?updated=1692866946"></script>
+</body>
+</html>

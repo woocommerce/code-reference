@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866951">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866951">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">CoreMenu.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WooCommerce Navigation Core Menu
+ *
+ * @package Woocommerce Admin
+ */
+
+namespace Automattic\WooCommerce\Admin\Features\Navigation;
+
+use Automattic\WooCommerce\Admin\Features\Features;
+use Automattic\WooCommerce\Admin\Features\Navigation\Menu;
+use Automattic\WooCommerce\Admin\Features\Navigation\Screen;
+use Automattic\WooCommerce\Admin\Features\OnboardingTasks\TaskLists;
+use Automattic\WooCommerce\Internal\DataStores\Orders\CustomOrdersTableController;
+
+/**
+ * CoreMenu class. Handles registering Core menu items.
+ */
+class CoreMenu {
+	/**
+	 * Class instance.
+	 *
+	 * @var Menu instance
+	 */
+	protected static $instance = null;
+
+	/**
+	 * Get class instance.
+	 */
+	final public static function instance() {
+		if ( ! static::$instance ) {
+			static::$instance = new static();
+		}
+		return static::$instance;
+	}
+
+	/**
+	 * Init.
+	 */
+	public function init() {
+		add_action( &#039;admin_menu&#039;, array( $this, &#039;register_post_types&#039; ) );
+		// Add this after we&#039;ve finished migrating menu items to avoid hiding these items.
+		add_action( &#039;admin_menu&#039;, array( $this, &#039;add_dashboard_menu_items&#039; ), PHP_INT_MAX );
+	}
+
+	/**
+	 * Add registered admin settings as menu items.
+	 */
+	public static function get_setting_items() {
+		// Let the Settings feature add pages to the navigation if enabled.
+		if ( Features::is_enabled( &#039;settings&#039; ) ) {
+			return array();
+		}
+
+		// Calling this method adds pages to the below tabs filter on non-settings pages.
+		\WC_Admin_Settings::get_settings_pages();
+		$tabs = apply_filters( &#039;woocommerce_settings_tabs_array&#039;, array() );
+
+		$menu_items = array();
+		$order      = 0;
+		foreach ( $tabs as $key =&gt; $setting ) {
+			$order       += 10;
+			$menu_items[] = (
+			array(
+				&#039;parent&#039;     =&gt; &#039;woocommerce-settings&#039;,
+				&#039;title&#039;      =&gt; $setting,
+				&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+				&#039;id&#039;         =&gt; &#039;settings-&#039; . $key,
+				&#039;url&#039;        =&gt; &#039;admin.php?page=wc-settings&amp;tab=&#039; . $key,
+				&#039;order&#039;      =&gt; $order,
+			)
+			);
+		}
+
+		return $menu_items;
+	}
+
+	/**
+	 * Get unfulfilled order count
+	 *
+	 * @return array
+	 */
+	public static function get_shop_order_count() {
+		$status_counts = array_map( &#039;wc_orders_count&#039;, array( &#039;processing&#039;, &#039;on-hold&#039; ) );
+		return array_sum( $status_counts );
+	}
+
+	/**
+	 * Get all menu categories.
+	 *
+	 * @return array
+	 */
+	public static function get_categories() {
+		$analytics_enabled = Features::is_enabled( &#039;analytics&#039; );
+		return array(
+			array(
+				&#039;title&#039; =&gt; __( &#039;Orders&#039;, &#039;woocommerce&#039; ),
+				&#039;id&#039;    =&gt; &#039;woocommerce-orders&#039;,
+				&#039;badge&#039; =&gt; self::get_shop_order_count(),
+				&#039;order&#039; =&gt; 10,
+			),
+			array(
+				&#039;title&#039; =&gt; __( &#039;Products&#039;, &#039;woocommerce&#039; ),
+				&#039;id&#039;    =&gt; &#039;woocommerce-products&#039;,
+				&#039;order&#039; =&gt; 20,
+			),
+			$analytics_enabled ?
+				array(
+					&#039;title&#039; =&gt; __( &#039;Analytics&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;    =&gt; &#039;woocommerce-analytics&#039;,
+					&#039;order&#039; =&gt; 30,
+				) : null,
+			$analytics_enabled ?
+				array(
+					&#039;title&#039;  =&gt; __( &#039;Reports&#039;, &#039;woocommerce&#039; ),
+					&#039;id&#039;     =&gt; &#039;woocommerce-reports&#039;,
+					&#039;parent&#039; =&gt; &#039;woocommerce-analytics&#039;,
+					&#039;order&#039;  =&gt; 200,
+				) : null,
+			array(
+				&#039;title&#039; =&gt; __( &#039;Marketing&#039;, &#039;woocommerce&#039; ),
+				&#039;id&#039;    =&gt; &#039;woocommerce-marketing&#039;,
+				&#039;order&#039; =&gt; 40,
+			),
+			array(
+				&#039;title&#039;  =&gt; __( &#039;Settings&#039;, &#039;woocommerce&#039; ),
+				&#039;id&#039;     =&gt; &#039;woocommerce-settings&#039;,
+				&#039;menuId&#039; =&gt; &#039;secondary&#039;,
+				&#039;order&#039;  =&gt; 20,
+				&#039;url&#039;    =&gt; &#039;admin.php?page=wc-settings&#039;,
+			),
+			array(
+				&#039;title&#039;  =&gt; __( &#039;Tools&#039;, &#039;woocommerce&#039; ),
+				&#039;id&#039;     =&gt; &#039;woocommerce-tools&#039;,
+				&#039;menuId&#039; =&gt; &#039;secondary&#039;,
+				&#039;order&#039;  =&gt; 30,
+			),
+		);
+	}
+
+	/**
+	 * Get all menu items.
+	 *
+	 * @return array
+	 */
+	public static function get_items() {
+		$order_items       = self::get_order_menu_items();
+		$product_items     = Menu::get_post_type_items( &#039;product&#039;, array( &#039;parent&#039; =&gt; &#039;woocommerce-products&#039; ) );
+		$product_tag_items = Menu::get_taxonomy_items(
+			&#039;product_tag&#039;,
+			array(
+				&#039;parent&#039; =&gt; &#039;woocommerce-products&#039;,
+				&#039;order&#039;  =&gt; 30,
+			)
+		);
+		$product_cat_items = Menu::get_taxonomy_items(
+			&#039;product_cat&#039;,
+			array(
+				&#039;parent&#039; =&gt; &#039;woocommerce-products&#039;,
+				&#039;order&#039;  =&gt; 20,
+			)
+		);
+
+		$coupon_items  = Menu::get_post_type_items( &#039;shop_coupon&#039;, array( &#039;parent&#039; =&gt; &#039;woocommerce-marketing&#039; ) );
+		$setting_items = self::get_setting_items();
+		$wca_items     = array();
+		$wca_pages     = \Automattic\WooCommerce\Admin\PageController::get_instance()-&gt;get_pages();
+
+		foreach ( $wca_pages as $page ) {
+			if ( ! isset( $page[&#039;nav_args&#039;] ) ) {
+				continue;
+			}
+
+			$path = isset( $page[&#039;path&#039;] ) ? $page[&#039;path&#039;] : null;
+			$item = array_merge(
+				array(
+					&#039;id&#039;         =&gt; $page[&#039;id&#039;],
+					&#039;url&#039;        =&gt; $path,
+					&#039;title&#039;      =&gt; $page[&#039;title&#039;][0],
+					&#039;capability&#039; =&gt; isset( $page[&#039;capability&#039;] ) ? $page[&#039;capability&#039;] : &#039;manage_woocommerce&#039;,
+				),
+				$page[&#039;nav_args&#039;]
+			);
+
+			// Don&#039;t allow top-level items to be added to the primary menu.
+			if ( ! isset( $item[&#039;parent&#039;] ) || &#039;woocommerce&#039; === $item[&#039;parent&#039;] ) {
+				$item[&#039;menuId&#039;] = &#039;plugins&#039;;
+			}
+
+			$wca_items[] = $item;
+		}
+
+		$home_item = array();
+		$setup_tasks_remaining = TaskLists::setup_tasks_remaining();
+		if ( defined( &#039;\Automattic\WooCommerce\Internal\Admin\Homescreen::MENU_SLUG&#039; ) ) {
+			$home_item = array(
+				&#039;id&#039;              =&gt; &#039;woocommerce-home&#039;,
+				&#039;title&#039;           =&gt; __( &#039;Home&#039;, &#039;woocommerce&#039; ),
+				&#039;url&#039;             =&gt; \Automattic\WooCommerce\Internal\Admin\Homescreen::MENU_SLUG,
+				&#039;order&#039;           =&gt; 0,
+				&#039;matchExpression&#039; =&gt; &#039;page=wc-admin((?!path=).)*$&#039;,
+				&#039;badge&#039;           =&gt; $setup_tasks_remaining ? $setup_tasks_remaining : null,
+			);
+		}
+
+		$customers_item = array();
+		if ( Features::is_enabled( &#039;analytics&#039; ) ) {
+			$customers_item = array(
+				&#039;id&#039;    =&gt; &#039;woocommerce-analytics-customers&#039;,
+				&#039;title&#039; =&gt; __( &#039;Customers&#039;, &#039;woocommerce&#039; ),
+				&#039;url&#039;   =&gt; &#039;wc-admin&amp;path=/customers&#039;,
+				&#039;order&#039; =&gt; 50,
+			);
+		}
+
+		$add_product_mvp = array();
+		if ( Features::is_enabled( &#039;new-product-management-experience&#039; ) ) {
+			$add_product_mvp = array(
+				&#039;id&#039;     =&gt; &#039;woocommerce-add-product-mbp&#039;,
+				&#039;title&#039;  =&gt; __( &#039;Add New (MVP)&#039;, &#039;woocommerce&#039; ),
+				&#039;url&#039;    =&gt; &#039;admin.php?page=wc-admin&amp;path=/add-product&#039;,
+				&#039;parent&#039; =&gt; &#039;woocommerce-products&#039;,
+				&#039;order&#039;  =&gt; 50,
+			);
+		}
+
+		return array_merge(
+			array(
+				$home_item,
+				$customers_item,
+				$order_items[&#039;all&#039;],
+				$order_items[&#039;new&#039;],
+				$product_items[&#039;all&#039;],
+				$product_cat_items[&#039;default&#039;],
+				$product_tag_items[&#039;default&#039;],
+				array(
+					&#039;id&#039;              =&gt; &#039;woocommerce-product-attributes&#039;,
+					&#039;title&#039;           =&gt; __( &#039;Attributes&#039;, &#039;woocommerce&#039; ),
+					&#039;url&#039;             =&gt; &#039;edit.php?post_type=product&amp;page=product_attributes&#039;,
+					&#039;capability&#039;      =&gt; &#039;manage_product_terms&#039;,
+					&#039;order&#039;           =&gt; 40,
+					&#039;parent&#039;          =&gt; &#039;woocommerce-products&#039;,
+					&#039;matchExpression&#039; =&gt; &#039;edit.php(?=.*[?|&amp;]page=product_attributes(&amp;|$|#))|edit-tags.php(?=.*[?|&amp;]taxonomy=pa_)(?=.*[?|&amp;]post_type=product(&amp;|$|#))&#039;,
+				),
+				array_merge( $product_items[&#039;new&#039;], array( &#039;order&#039; =&gt; 50 ) ),
+				$coupon_items[&#039;default&#039;],
+				// Marketplace category.
+				array(
+					&#039;title&#039;      =&gt; __( &#039;Marketplace&#039;, &#039;woocommerce&#039; ),
+					&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+					&#039;id&#039;         =&gt; &#039;woocommerce-marketplace&#039;,
+					&#039;url&#039;        =&gt; &#039;wc-addons&#039;,
+					&#039;menuId&#039;     =&gt; &#039;secondary&#039;,
+					&#039;order&#039;      =&gt; 10,
+				),
+				$add_product_mvp,
+			),
+			// Tools category.
+			self::get_tool_items(),
+			// WooCommerce Admin items.
+			$wca_items,
+			// Settings category.
+			$setting_items,
+			// Legacy report items.
+			self::get_legacy_report_items()
+		);
+	}
+
+	/**
+	 * Supplies menu items for orders.
+	 *
+	 * This varies depending on whether we are actively using traditional post type-based orders or the new custom
+	 * table-based orders.
+	 *
+	 * @return ?array
+	 */
+	private static function get_order_menu_items(): ?array {
+		if ( ! wc_get_container()-&gt;get( CustomOrdersTableController::class )-&gt;custom_orders_table_usage_is_enabled() ) {
+			return Menu::get_post_type_items( &#039;shop_order&#039;, array( &#039;parent&#039; =&gt; &#039;woocommerce-orders&#039; ) );
+		}
+
+		$main_orders_menu = array(
+			&#039;title&#039;      =&gt; __( &#039;Orders&#039;, &#039;woocommerce&#039; ),
+			&#039;capability&#039; =&gt; &#039;edit_others_shop_orders&#039;,
+			&#039;id&#039;         =&gt; &#039;woocommerce-orders-default&#039;,
+			&#039;url&#039;        =&gt; &#039;admin.php?page=wc-orders&#039;,
+			&#039;parent&#039;     =&gt; &#039;woocommerce-orders&#039;,
+		);
+
+		$all_orders_entry          = $main_orders_menu;
+		$all_orders_entry[&#039;id&#039;]    = &#039;woocommerce-orders-all-items&#039;;
+		$all_orders_entry[&#039;order&#039;] = 10;
+
+		$new_orders_entry          = $main_orders_menu;
+		$new_orders_entry[&#039;title&#039;] = __( &#039;Add order&#039;, &#039;woocommerce&#039; );
+		$new_orders_entry[&#039;id&#039;]    = &#039;woocommerce-orders-add-item&#039;;
+		$new_orders_entry[&#039;url&#039;]   = &#039;admin.php?page=TBD&#039;;
+		$new_orders_entry[&#039;order&#039;] = 20;
+
+		return array(
+			&#039;default&#039; =&gt; $main_orders_menu,
+			&#039;all&#039;     =&gt; $all_orders_entry,
+			&#039;new&#039;     =&gt; $new_orders_entry,
+		);
+	}
+
+	/**
+	 * Get items for tools category.
+	 *
+	 * @return array
+	 */
+	public static function get_tool_items() {
+		$tabs = array(
+			&#039;status&#039; =&gt; __( &#039;System status&#039;, &#039;woocommerce&#039; ),
+			&#039;tools&#039;  =&gt; __( &#039;Utilities&#039;, &#039;woocommerce&#039; ),
+			&#039;logs&#039;   =&gt; __( &#039;Logs&#039;, &#039;woocommerce&#039; ),
+		);
+		$tabs = apply_filters( &#039;woocommerce_admin_status_tabs&#039;, $tabs );
+
+		$order = 1;
+		$items = array(
+			array(
+				&#039;parent&#039;     =&gt; &#039;woocommerce-tools&#039;,
+				&#039;title&#039;      =&gt; __( &#039;Import / Export&#039;, &#039;woocommerce&#039; ),
+				&#039;capability&#039; =&gt; &#039;import&#039;,
+				&#039;id&#039;         =&gt; &#039;tools-import-export&#039;,
+				&#039;url&#039;        =&gt; &#039;import.php&#039;,
+				&#039;migrate&#039;    =&gt; false,
+				&#039;order&#039;      =&gt; 0,
+			),
+		);
+
+		foreach ( $tabs as $key =&gt; $tab ) {
+			$items[] = array(
+				&#039;parent&#039;     =&gt; &#039;woocommerce-tools&#039;,
+				&#039;title&#039;      =&gt; $tab,
+				&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+				&#039;id&#039;         =&gt; &#039;tools-&#039; . $key,
+				&#039;url&#039;        =&gt; &#039;wc-status&amp;tab=&#039; . $key,
+				&#039;order&#039;      =&gt; $order,
+			);
+			$order++;
+		}
+
+		return $items;
+	}
+
+	/**
+	 * Get legacy report items.
+	 *
+	 * @return array
+	 */
+	public static function get_legacy_report_items() {
+		$reports    = \WC_Admin_Reports::get_reports();
+		$menu_items = array();
+
+		$order = 0;
+		foreach ( $reports as $key =&gt; $report ) {
+			$menu_items[] = array(
+				&#039;parent&#039;     =&gt; &#039;woocommerce-reports&#039;,
+				&#039;title&#039;      =&gt; $report[&#039;title&#039;],
+				&#039;capability&#039; =&gt; &#039;view_woocommerce_reports&#039;,
+				&#039;id&#039;         =&gt; $key,
+				&#039;url&#039;        =&gt; &#039;wc-reports&amp;tab=&#039; . $key,
+				&#039;order&#039;      =&gt; $order,
+			);
+			$order++;
+		}
+
+		return $menu_items;
+	}
+
+	/**
+	 * Register all core post types.
+	 */
+	public function register_post_types() {
+		Screen::register_post_type( &#039;shop_order&#039; );
+		Screen::register_post_type( &#039;product&#039; );
+		Screen::register_post_type( &#039;shop_coupon&#039; );
+	}
+
+	/**
+	 * Add the dashboard items to the WP menu to create a quick-access flyout menu.
+	 */
+	public function add_dashboard_menu_items() {
+		global $submenu, $menu;
+		$mapped_items = Menu::get_mapped_menu_items();
+		$top_level    = $mapped_items[&#039;woocommerce&#039;];
+
+		// phpcs:disable
+		if ( ! isset( $submenu[&#039;woocommerce&#039;] ) || empty( $top_level ) ) {
+			return;
+		}
+
+		$menuIds = array(
+			&#039;primary&#039;,
+			&#039;secondary&#039;,
+			&#039;favorites&#039;,
+		);
+
+		foreach ( $menuIds as $menuId ) {
+			foreach( $top_level[ $menuId ] as $item ) {
+				// Skip specific categories.
+				if (
+					in_array(
+						$item[&#039;id&#039;],
+						array(
+							&#039;woocommerce-tools&#039;,
+						),
+						true
+					)
+				) {
+					continue;
+				}
+
+				// Use the link from the first item if it&#039;s a category.
+				if ( ! isset( $item[&#039;url&#039;] ) ) {
+					$categoryMenuId = $menuId === &#039;favorites&#039; ? &#039;plugins&#039; : $menuId;
+					$category_items = $mapped_items[ $item[&#039;id&#039;] ][ $categoryMenuId ];
+
+					if ( ! empty( $category_items ) ) {
+						$first_item = $category_items[0];
+
+
+						$submenu[&#039;woocommerce&#039;][] = array(
+							$item[&#039;title&#039;],
+							$first_item[&#039;capability&#039;],
+							isset( $first_item[&#039;url&#039;] ) ? $first_item[&#039;url&#039;] : null,
+							$item[&#039;title&#039;],
+						);
+					}
+
+					continue;
+				}
+
+				// Show top-level items.
+				$submenu[&#039;woocommerce&#039;][] = array(
+					$item[&#039;title&#039;],
+					$item[&#039;capability&#039;],
+					isset( $item[&#039;url&#039;] ) ? $item[&#039;url&#039;] : null,
+					$item[&#039;title&#039;],
+				);
+			}
+		}
+		// phpcs:enable
+	}
+
+	/**
+	 * Get items excluded from WooCommerce menu migration.
+	 *
+	 * @return array
+	 */
+	public static function get_excluded_items() {
+		$excluded_items = array(
+			&#039;woocommerce&#039;,
+			&#039;wc-reports&#039;,
+			&#039;wc-settings&#039;,
+			&#039;wc-status&#039;,
+		);
+
+		return apply_filters( &#039;woocommerce_navigation_core_excluded_items&#039;, $excluded_items );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

@@ -1,0 +1,2313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-product-data-store-cpt.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WC_Product_Data_Store_CPT class file.
+ *
+ * @package WooCommerce\Classes
+ */
+
+use Automattic\Jetpack\Constants;
+use Automattic\WooCommerce\Internal\DownloadPermissionsAdjuster;
+use Automattic\WooCommerce\Utilities\NumberUtil;
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * WC Product Data Store: Stored in CPT.
+ *
+ * @version  3.0.0
+ */
+class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Data_Store_Interface, WC_Product_Data_Store_Interface {
+
+	/**
+	 * Data stored in meta keys, but not considered &quot;meta&quot;.
+	 *
+	 * @since 3.0.0
+	 * @var array
+	 */
+	protected $internal_meta_keys = array(
+		&#039;_visibility&#039;,
+		&#039;_sku&#039;,
+		&#039;_price&#039;,
+		&#039;_regular_price&#039;,
+		&#039;_sale_price&#039;,
+		&#039;_sale_price_dates_from&#039;,
+		&#039;_sale_price_dates_to&#039;,
+		&#039;total_sales&#039;,
+		&#039;_tax_status&#039;,
+		&#039;_tax_class&#039;,
+		&#039;_manage_stock&#039;,
+		&#039;_stock&#039;,
+		&#039;_stock_status&#039;,
+		&#039;_backorders&#039;,
+		&#039;_low_stock_amount&#039;,
+		&#039;_sold_individually&#039;,
+		&#039;_weight&#039;,
+		&#039;_length&#039;,
+		&#039;_width&#039;,
+		&#039;_height&#039;,
+		&#039;_upsell_ids&#039;,
+		&#039;_crosssell_ids&#039;,
+		&#039;_purchase_note&#039;,
+		&#039;_default_attributes&#039;,
+		&#039;_product_attributes&#039;,
+		&#039;_virtual&#039;,
+		&#039;_downloadable&#039;,
+		&#039;_download_limit&#039;,
+		&#039;_download_expiry&#039;,
+		&#039;_featured&#039;,
+		&#039;_downloadable_files&#039;,
+		&#039;_wc_rating_count&#039;,
+		&#039;_wc_average_rating&#039;,
+		&#039;_wc_review_count&#039;,
+		&#039;_variation_description&#039;,
+		&#039;_thumbnail_id&#039;,
+		&#039;_file_paths&#039;,
+		&#039;_product_image_gallery&#039;,
+		&#039;_product_version&#039;,
+		&#039;_wp_old_slug&#039;,
+		&#039;_edit_last&#039;,
+		&#039;_edit_lock&#039;,
+	);
+
+	/**
+	 * Meta data which should exist in the DB, even if empty.
+	 *
+	 * @since 3.6.0
+	 *
+	 * @var array
+	 */
+	protected $must_exist_meta_keys = array(
+		&#039;_tax_class&#039;,
+	);
+
+	/**
+	 * If we have already saved our extra data, don&#039;t do automatic / default handling.
+	 *
+	 * @var bool
+	 */
+	protected $extra_data_saved = false;
+
+	/**
+	 * Stores updated props.
+	 *
+	 * @var array
+	 */
+	protected $updated_props = array();
+
+	/*
+	|--------------------------------------------------------------------------
+	| CRUD Methods
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Method to create a new product in the database.
+	 *
+	 * @param WC_Product $product Product object.
+	 */
+	public function create( &amp;$product ) {
+		if ( ! $product-&gt;get_date_created( &#039;edit&#039; ) ) {
+			$product-&gt;set_date_created( time() );
+		}
+
+		$id = wp_insert_post(
+			apply_filters(
+				&#039;woocommerce_new_product_data&#039;,
+				array(
+					&#039;post_type&#039;      =&gt; &#039;product&#039;,
+					&#039;post_status&#039;    =&gt; $product-&gt;get_status() ? $product-&gt;get_status() : &#039;publish&#039;,
+					&#039;post_author&#039;    =&gt; get_current_user_id(),
+					&#039;post_title&#039;     =&gt; $product-&gt;get_name() ? $product-&gt;get_name() : __( &#039;Product&#039;, &#039;woocommerce&#039; ),
+					&#039;post_content&#039;   =&gt; $product-&gt;get_description(),
+					&#039;post_excerpt&#039;   =&gt; $product-&gt;get_short_description(),
+					&#039;post_parent&#039;    =&gt; $product-&gt;get_parent_id(),
+					&#039;comment_status&#039; =&gt; $product-&gt;get_reviews_allowed() ? &#039;open&#039; : &#039;closed&#039;,
+					&#039;ping_status&#039;    =&gt; &#039;closed&#039;,
+					&#039;menu_order&#039;     =&gt; $product-&gt;get_menu_order(),
+					&#039;post_password&#039;  =&gt; $product-&gt;get_post_password( &#039;edit&#039; ),
+					&#039;post_date&#039;      =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $product-&gt;get_date_created( &#039;edit&#039; )-&gt;getOffsetTimestamp() ),
+					&#039;post_date_gmt&#039;  =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $product-&gt;get_date_created( &#039;edit&#039; )-&gt;getTimestamp() ),
+					&#039;post_name&#039;      =&gt; $product-&gt;get_slug( &#039;edit&#039; ),
+				)
+			),
+			true
+		);
+
+		if ( $id &amp;&amp; ! is_wp_error( $id ) ) {
+			$product-&gt;set_id( $id );
+
+			$this-&gt;update_post_meta( $product, true );
+			$this-&gt;update_terms( $product, true );
+			$this-&gt;update_visibility( $product, true );
+			$this-&gt;update_attributes( $product, true );
+			$this-&gt;update_version_and_type( $product );
+			$this-&gt;handle_updated_props( $product );
+			$this-&gt;clear_caches( $product );
+
+			$product-&gt;save_meta_data();
+			$product-&gt;apply_changes();
+
+			do_action( &#039;woocommerce_new_product&#039;, $id, $product );
+		}
+	}
+
+	/**
+	 * Method to read a product from the database.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @throws Exception If invalid product.
+	 */
+	public function read( &amp;$product ) {
+		$product-&gt;set_defaults();
+		$post_object = get_post( $product-&gt;get_id() );
+
+		if ( ! $product-&gt;get_id() || ! $post_object || &#039;product&#039; !== $post_object-&gt;post_type ) {
+			throw new Exception( __( &#039;Invalid product.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$product-&gt;set_props(
+			array(
+				&#039;name&#039;              =&gt; $post_object-&gt;post_title,
+				&#039;slug&#039;              =&gt; $post_object-&gt;post_name,
+				&#039;date_created&#039;      =&gt; $this-&gt;string_to_timestamp( $post_object-&gt;post_date_gmt ),
+				&#039;date_modified&#039;     =&gt; $this-&gt;string_to_timestamp( $post_object-&gt;post_modified_gmt ),
+				&#039;status&#039;            =&gt; $post_object-&gt;post_status,
+				&#039;description&#039;       =&gt; $post_object-&gt;post_content,
+				&#039;short_description&#039; =&gt; $post_object-&gt;post_excerpt,
+				&#039;parent_id&#039;         =&gt; $post_object-&gt;post_parent,
+				&#039;menu_order&#039;        =&gt; $post_object-&gt;menu_order,
+				&#039;post_password&#039;     =&gt; $post_object-&gt;post_password,
+				&#039;reviews_allowed&#039;   =&gt; &#039;open&#039; === $post_object-&gt;comment_status,
+			)
+		);
+
+		$this-&gt;read_attributes( $product );
+		$this-&gt;read_downloads( $product );
+		$this-&gt;read_visibility( $product );
+		$this-&gt;read_product_data( $product );
+		$this-&gt;read_extra_data( $product );
+		$product-&gt;set_object_read( true );
+
+		do_action( &#039;woocommerce_product_read&#039;, $product-&gt;get_id() );
+	}
+
+	/**
+	 * Method to update a product in the database.
+	 *
+	 * @param WC_Product $product Product object.
+	 */
+	public function update( &amp;$product ) {
+		$product-&gt;save_meta_data();
+		$changes = $product-&gt;get_changes();
+
+		// Only update the post when the post data changes.
+		if ( array_intersect( array( &#039;description&#039;, &#039;short_description&#039;, &#039;name&#039;, &#039;parent_id&#039;, &#039;reviews_allowed&#039;, &#039;status&#039;, &#039;menu_order&#039;, &#039;date_created&#039;, &#039;date_modified&#039;, &#039;slug&#039; ), array_keys( $changes ) ) ) {
+			$post_data = array(
+				&#039;post_content&#039;   =&gt; $product-&gt;get_description( &#039;edit&#039; ),
+				&#039;post_excerpt&#039;   =&gt; $product-&gt;get_short_description( &#039;edit&#039; ),
+				&#039;post_title&#039;     =&gt; $product-&gt;get_name( &#039;edit&#039; ),
+				&#039;post_parent&#039;    =&gt; $product-&gt;get_parent_id( &#039;edit&#039; ),
+				&#039;comment_status&#039; =&gt; $product-&gt;get_reviews_allowed( &#039;edit&#039; ) ? &#039;open&#039; : &#039;closed&#039;,
+				&#039;post_status&#039;    =&gt; $product-&gt;get_status( &#039;edit&#039; ) ? $product-&gt;get_status( &#039;edit&#039; ) : &#039;publish&#039;,
+				&#039;menu_order&#039;     =&gt; $product-&gt;get_menu_order( &#039;edit&#039; ),
+				&#039;post_password&#039;  =&gt; $product-&gt;get_post_password( &#039;edit&#039; ),
+				&#039;post_name&#039;      =&gt; $product-&gt;get_slug( &#039;edit&#039; ),
+				&#039;post_type&#039;      =&gt; &#039;product&#039;,
+			);
+			if ( $product-&gt;get_date_created( &#039;edit&#039; ) ) {
+				$post_data[&#039;post_date&#039;]     = gmdate( &#039;Y-m-d H:i:s&#039;, $product-&gt;get_date_created( &#039;edit&#039; )-&gt;getOffsetTimestamp() );
+				$post_data[&#039;post_date_gmt&#039;] = gmdate( &#039;Y-m-d H:i:s&#039;, $product-&gt;get_date_created( &#039;edit&#039; )-&gt;getTimestamp() );
+			}
+			if ( isset( $changes[&#039;date_modified&#039;] ) &amp;&amp; $product-&gt;get_date_modified( &#039;edit&#039; ) ) {
+				$post_data[&#039;post_modified&#039;]     = gmdate( &#039;Y-m-d H:i:s&#039;, $product-&gt;get_date_modified( &#039;edit&#039; )-&gt;getOffsetTimestamp() );
+				$post_data[&#039;post_modified_gmt&#039;] = gmdate( &#039;Y-m-d H:i:s&#039;, $product-&gt;get_date_modified( &#039;edit&#039; )-&gt;getTimestamp() );
+			} else {
+				$post_data[&#039;post_modified&#039;]     = current_time( &#039;mysql&#039; );
+				$post_data[&#039;post_modified_gmt&#039;] = current_time( &#039;mysql&#039;, 1 );
+			}
+
+			/**
+			 * When updating this object, to prevent infinite loops, use $wpdb
+			 * to update data, since wp_update_post spawns more calls to the
+			 * save_post action.
+			 *
+			 * This ensures hooks are fired by either WP itself (admin screen save),
+			 * or an update purely from CRUD.
+			 */
+			if ( doing_action( &#039;save_post&#039; ) ) {
+				$GLOBALS[&#039;wpdb&#039;]-&gt;update( $GLOBALS[&#039;wpdb&#039;]-&gt;posts, $post_data, array( &#039;ID&#039; =&gt; $product-&gt;get_id() ) );
+				clean_post_cache( $product-&gt;get_id() );
+			} else {
+				wp_update_post( array_merge( array( &#039;ID&#039; =&gt; $product-&gt;get_id() ), $post_data ) );
+			}
+			$product-&gt;read_meta_data( true ); // Refresh internal meta data, in case things were hooked into `save_post` or another WP hook.
+
+		} else { // Only update post modified time to record this save event.
+			$GLOBALS[&#039;wpdb&#039;]-&gt;update(
+				$GLOBALS[&#039;wpdb&#039;]-&gt;posts,
+				array(
+					&#039;post_modified&#039;     =&gt; current_time( &#039;mysql&#039; ),
+					&#039;post_modified_gmt&#039; =&gt; current_time( &#039;mysql&#039;, 1 ),
+				),
+				array(
+					&#039;ID&#039; =&gt; $product-&gt;get_id(),
+				)
+			);
+			clean_post_cache( $product-&gt;get_id() );
+		}
+
+		$this-&gt;update_post_meta( $product );
+		$this-&gt;update_terms( $product );
+		$this-&gt;update_visibility( $product );
+		$this-&gt;update_attributes( $product );
+		$this-&gt;update_version_and_type( $product );
+		$this-&gt;handle_updated_props( $product );
+		$this-&gt;clear_caches( $product );
+
+		wc_get_container()
+			-&gt;get( DownloadPermissionsAdjuster::class )
+			-&gt;maybe_schedule_adjust_download_permissions( $product );
+
+		$product-&gt;apply_changes();
+
+		do_action( &#039;woocommerce_update_product&#039;, $product-&gt;get_id(), $product );
+	}
+
+	/**
+	 * Method to delete a product from the database.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @param array      $args Array of args to pass to the delete method.
+	 */
+	public function delete( &amp;$product, $args = array() ) {
+		$id        = $product-&gt;get_id();
+		$post_type = $product-&gt;is_type( &#039;variation&#039; ) ? &#039;product_variation&#039; : &#039;product&#039;;
+
+		$args = wp_parse_args(
+			$args,
+			array(
+				&#039;force_delete&#039; =&gt; false,
+			)
+		);
+
+		if ( ! $id ) {
+			return;
+		}
+
+		if ( $args[&#039;force_delete&#039;] ) {
+			do_action( &#039;woocommerce_before_delete_&#039; . $post_type, $id );
+			wp_delete_post( $id );
+			$product-&gt;set_id( 0 );
+			do_action( &#039;woocommerce_delete_&#039; . $post_type, $id );
+		} else {
+			wp_trash_post( $id );
+			$product-&gt;set_status( &#039;trash&#039; );
+			do_action( &#039;woocommerce_trash_&#039; . $post_type, $id );
+		}
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Additional Methods
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Read product data. Can be overridden by child classes to load other props.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @since 3.0.0
+	 */
+	protected function read_product_data( &amp;$product ) {
+		$id                = $product-&gt;get_id();
+		$post_meta_values  = get_post_meta( $id );
+		$meta_key_to_props = array(
+			&#039;_sku&#039;                   =&gt; &#039;sku&#039;,
+			&#039;_regular_price&#039;         =&gt; &#039;regular_price&#039;,
+			&#039;_sale_price&#039;            =&gt; &#039;sale_price&#039;,
+			&#039;_price&#039;                 =&gt; &#039;price&#039;,
+			&#039;_sale_price_dates_from&#039; =&gt; &#039;date_on_sale_from&#039;,
+			&#039;_sale_price_dates_to&#039;   =&gt; &#039;date_on_sale_to&#039;,
+			&#039;total_sales&#039;            =&gt; &#039;total_sales&#039;,
+			&#039;_tax_status&#039;            =&gt; &#039;tax_status&#039;,
+			&#039;_tax_class&#039;             =&gt; &#039;tax_class&#039;,
+			&#039;_manage_stock&#039;          =&gt; &#039;manage_stock&#039;,
+			&#039;_backorders&#039;            =&gt; &#039;backorders&#039;,
+			&#039;_low_stock_amount&#039;      =&gt; &#039;low_stock_amount&#039;,
+			&#039;_sold_individually&#039;     =&gt; &#039;sold_individually&#039;,
+			&#039;_weight&#039;                =&gt; &#039;weight&#039;,
+			&#039;_length&#039;                =&gt; &#039;length&#039;,
+			&#039;_width&#039;                 =&gt; &#039;width&#039;,
+			&#039;_height&#039;                =&gt; &#039;height&#039;,
+			&#039;_upsell_ids&#039;            =&gt; &#039;upsell_ids&#039;,
+			&#039;_crosssell_ids&#039;         =&gt; &#039;cross_sell_ids&#039;,
+			&#039;_purchase_note&#039;         =&gt; &#039;purchase_note&#039;,
+			&#039;_default_attributes&#039;    =&gt; &#039;default_attributes&#039;,
+			&#039;_virtual&#039;               =&gt; &#039;virtual&#039;,
+			&#039;_downloadable&#039;          =&gt; &#039;downloadable&#039;,
+			&#039;_download_limit&#039;        =&gt; &#039;download_limit&#039;,
+			&#039;_download_expiry&#039;       =&gt; &#039;download_expiry&#039;,
+			&#039;_thumbnail_id&#039;          =&gt; &#039;image_id&#039;,
+			&#039;_stock&#039;                 =&gt; &#039;stock_quantity&#039;,
+			&#039;_stock_status&#039;          =&gt; &#039;stock_status&#039;,
+			&#039;_wc_average_rating&#039;     =&gt; &#039;average_rating&#039;,
+			&#039;_wc_rating_count&#039;       =&gt; &#039;rating_counts&#039;,
+			&#039;_wc_review_count&#039;       =&gt; &#039;review_count&#039;,
+			&#039;_product_image_gallery&#039; =&gt; &#039;gallery_image_ids&#039;,
+		);
+
+		$set_props = array();
+
+		foreach ( $meta_key_to_props as $meta_key =&gt; $prop ) {
+			$meta_value         = isset( $post_meta_values[ $meta_key ][0] ) ? $post_meta_values[ $meta_key ][0] : null;
+			$set_props[ $prop ] = maybe_unserialize( $meta_value ); // get_post_meta only unserializes single values.
+		}
+
+		$set_props[&#039;category_ids&#039;]      = $this-&gt;get_term_ids( $product, &#039;product_cat&#039; );
+		$set_props[&#039;tag_ids&#039;]           = $this-&gt;get_term_ids( $product, &#039;product_tag&#039; );
+		$set_props[&#039;shipping_class_id&#039;] = current( $this-&gt;get_term_ids( $product, &#039;product_shipping_class&#039; ) );
+		$set_props[&#039;gallery_image_ids&#039;] = array_filter( explode( &#039;,&#039;, $set_props[&#039;gallery_image_ids&#039;] ?? &#039;&#039; ) );
+
+		$product-&gt;set_props( $set_props );
+	}
+
+	/**
+	 * Re-reads stock from the DB ignoring changes.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @param int|float  $new_stock New stock level if already read.
+	 */
+	public function read_stock_quantity( &amp;$product, $new_stock = null ) {
+		$object_read = $product-&gt;get_object_read();
+		$product-&gt;set_object_read( false ); // This makes update of qty go directly to data- instead of changes-array of the product object (which is needed as the data should hold status of the object as it was read from the db).
+		$product-&gt;set_stock_quantity( is_null( $new_stock ) ? get_post_meta( $product-&gt;get_id(), &#039;_stock&#039;, true ) : $new_stock );
+		$product-&gt;set_object_read( $object_read );
+	}
+
+	/**
+	 * Read extra data associated with the product, like button text or product URL for external products.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @since 3.0.0
+	 */
+	protected function read_extra_data( &amp;$product ) {
+		foreach ( $product-&gt;get_extra_data_keys() as $key ) {
+			$function = &#039;set_&#039; . $key;
+			if ( is_callable( array( $product, $function ) ) ) {
+				$product-&gt;{$function}( get_post_meta( $product-&gt;get_id(), &#039;_&#039; . $key, true ) );
+			}
+		}
+	}
+
+	/**
+	 * Convert visibility terms to props.
+	 * Catalog visibility valid values are &#039;visible&#039;, &#039;catalog&#039;, &#039;search&#039;, and &#039;hidden&#039;.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @since 3.0.0
+	 */
+	protected function read_visibility( &amp;$product ) {
+		$terms           = get_the_terms( $product-&gt;get_id(), &#039;product_visibility&#039; );
+		$term_names      = is_array( $terms ) ? wp_list_pluck( $terms, &#039;name&#039; ) : array();
+		$featured        = in_array( &#039;featured&#039;, $term_names, true );
+		$exclude_search  = in_array( &#039;exclude-from-search&#039;, $term_names, true );
+		$exclude_catalog = in_array( &#039;exclude-from-catalog&#039;, $term_names, true );
+
+		if ( $exclude_search &amp;&amp; $exclude_catalog ) {
+			$catalog_visibility = &#039;hidden&#039;;
+		} elseif ( $exclude_search ) {
+			$catalog_visibility = &#039;catalog&#039;;
+		} elseif ( $exclude_catalog ) {
+			$catalog_visibility = &#039;search&#039;;
+		} else {
+			$catalog_visibility = &#039;visible&#039;;
+		}
+
+		$product-&gt;set_props(
+			array(
+				&#039;featured&#039;           =&gt; $featured,
+				&#039;catalog_visibility&#039; =&gt; $catalog_visibility,
+			)
+		);
+	}
+
+	/**
+	 * Read attributes from post meta.
+	 *
+	 * @param WC_Product $product Product object.
+	 */
+	protected function read_attributes( &amp;$product ) {
+		$meta_attributes = get_post_meta( $product-&gt;get_id(), &#039;_product_attributes&#039;, true );
+
+		if ( ! empty( $meta_attributes ) &amp;&amp; is_array( $meta_attributes ) ) {
+			$attributes = array();
+			foreach ( $meta_attributes as $meta_attribute_key =&gt; $meta_attribute_value ) {
+				$meta_value = array_merge(
+					array(
+						&#039;name&#039;         =&gt; &#039;&#039;,
+						&#039;value&#039;        =&gt; &#039;&#039;,
+						&#039;position&#039;     =&gt; 0,
+						&#039;is_visible&#039;   =&gt; 0,
+						&#039;is_variation&#039; =&gt; 0,
+						&#039;is_taxonomy&#039;  =&gt; 0,
+					),
+					(array) $meta_attribute_value
+				);
+
+				// Check if is a taxonomy attribute.
+				if ( ! empty( $meta_value[&#039;is_taxonomy&#039;] ) ) {
+					if ( ! taxonomy_exists( $meta_value[&#039;name&#039;] ) ) {
+						continue;
+					}
+					$id      = wc_attribute_taxonomy_id_by_name( $meta_value[&#039;name&#039;] );
+					$options = wc_get_object_terms( $product-&gt;get_id(), $meta_value[&#039;name&#039;], &#039;term_id&#039; );
+				} else {
+					$id      = 0;
+					$options = wc_get_text_attributes( $meta_value[&#039;value&#039;] );
+				}
+
+				$attribute = new WC_Product_Attribute();
+				$attribute-&gt;set_id( $id );
+				$attribute-&gt;set_name( $meta_value[&#039;name&#039;] );
+				$attribute-&gt;set_options( $options );
+				$attribute-&gt;set_position( $meta_value[&#039;position&#039;] );
+				$attribute-&gt;set_visible( $meta_value[&#039;is_visible&#039;] );
+				$attribute-&gt;set_variation( $meta_value[&#039;is_variation&#039;] );
+				$attributes[] = $attribute;
+			}
+			$product-&gt;set_attributes( $attributes );
+		}
+	}
+
+	/**
+	 * Read downloads from post meta.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @since 3.0.0
+	 */
+	protected function read_downloads( &amp;$product ) {
+		$meta_values = array_filter( (array) get_post_meta( $product-&gt;get_id(), &#039;_downloadable_files&#039;, true ) );
+
+		if ( $meta_values ) {
+			$downloads = array();
+			foreach ( $meta_values as $key =&gt; $value ) {
+				if ( ! isset( $value[&#039;name&#039;], $value[&#039;file&#039;] ) ) {
+					continue;
+				}
+				$download = new WC_Product_Download();
+				$download-&gt;set_id( $key );
+				$download-&gt;set_name( $value[&#039;name&#039;] ? $value[&#039;name&#039;] : wc_get_filename_from_url( $value[&#039;file&#039;] ) );
+				$download-&gt;set_file( apply_filters( &#039;woocommerce_file_download_path&#039;, $value[&#039;file&#039;], $product, $key ) );
+				$downloads[] = $download;
+			}
+			$product-&gt;set_downloads( $downloads );
+		}
+	}
+
+	/**
+	 * Helper method that updates all the post meta for a product based on it&#039;s settings in the WC_Product class.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @param bool       $force Force update. Used during create.
+	 * @since 3.0.0
+	 */
+	protected function update_post_meta( &amp;$product, $force = false ) {
+		$meta_key_to_props = array(
+			&#039;_sku&#039;                   =&gt; &#039;sku&#039;,
+			&#039;_regular_price&#039;         =&gt; &#039;regular_price&#039;,
+			&#039;_sale_price&#039;            =&gt; &#039;sale_price&#039;,
+			&#039;_sale_price_dates_from&#039; =&gt; &#039;date_on_sale_from&#039;,
+			&#039;_sale_price_dates_to&#039;   =&gt; &#039;date_on_sale_to&#039;,
+			&#039;total_sales&#039;            =&gt; &#039;total_sales&#039;,
+			&#039;_tax_status&#039;            =&gt; &#039;tax_status&#039;,
+			&#039;_tax_class&#039;             =&gt; &#039;tax_class&#039;,
+			&#039;_manage_stock&#039;          =&gt; &#039;manage_stock&#039;,
+			&#039;_backorders&#039;            =&gt; &#039;backorders&#039;,
+			&#039;_low_stock_amount&#039;      =&gt; &#039;low_stock_amount&#039;,
+			&#039;_sold_individually&#039;     =&gt; &#039;sold_individually&#039;,
+			&#039;_weight&#039;                =&gt; &#039;weight&#039;,
+			&#039;_length&#039;                =&gt; &#039;length&#039;,
+			&#039;_width&#039;                 =&gt; &#039;width&#039;,
+			&#039;_height&#039;                =&gt; &#039;height&#039;,
+			&#039;_upsell_ids&#039;            =&gt; &#039;upsell_ids&#039;,
+			&#039;_crosssell_ids&#039;         =&gt; &#039;cross_sell_ids&#039;,
+			&#039;_purchase_note&#039;         =&gt; &#039;purchase_note&#039;,
+			&#039;_default_attributes&#039;    =&gt; &#039;default_attributes&#039;,
+			&#039;_virtual&#039;               =&gt; &#039;virtual&#039;,
+			&#039;_downloadable&#039;          =&gt; &#039;downloadable&#039;,
+			&#039;_product_image_gallery&#039; =&gt; &#039;gallery_image_ids&#039;,
+			&#039;_download_limit&#039;        =&gt; &#039;download_limit&#039;,
+			&#039;_download_expiry&#039;       =&gt; &#039;download_expiry&#039;,
+			&#039;_thumbnail_id&#039;          =&gt; &#039;image_id&#039;,
+			&#039;_stock&#039;                 =&gt; &#039;stock_quantity&#039;,
+			&#039;_stock_status&#039;          =&gt; &#039;stock_status&#039;,
+			&#039;_wc_average_rating&#039;     =&gt; &#039;average_rating&#039;,
+			&#039;_wc_rating_count&#039;       =&gt; &#039;rating_counts&#039;,
+			&#039;_wc_review_count&#039;       =&gt; &#039;review_count&#039;,
+		);
+
+		// Make sure to take extra data (like product url or text for external products) into account.
+		$extra_data_keys = $product-&gt;get_extra_data_keys();
+
+		foreach ( $extra_data_keys as $key ) {
+			$meta_key_to_props[ &#039;_&#039; . $key ] = $key;
+		}
+
+		$props_to_update = $force ? $meta_key_to_props : $this-&gt;get_props_to_update( $product, $meta_key_to_props );
+
+		foreach ( $props_to_update as $meta_key =&gt; $prop ) {
+			$value = $product-&gt;{&quot;get_$prop&quot;}( &#039;edit&#039; );
+			$value = is_string( $value ) ? wp_slash( $value ) : $value;
+			switch ( $prop ) {
+				case &#039;virtual&#039;:
+				case &#039;downloadable&#039;:
+				case &#039;manage_stock&#039;:
+				case &#039;sold_individually&#039;:
+					$value = wc_bool_to_string( $value );
+					break;
+				case &#039;gallery_image_ids&#039;:
+					$value = implode( &#039;,&#039;, $value );
+					break;
+				case &#039;date_on_sale_from&#039;:
+				case &#039;date_on_sale_to&#039;:
+					$value = $value ? $value-&gt;getTimestamp() : &#039;&#039;;
+					break;
+				case &#039;stock_quantity&#039;:
+					// Fire actions to let 3rd parties know the stock is about to be changed.
+					if ( $product-&gt;is_type( &#039;variation&#039; ) ) {
+						/**
+						* Action to signal that the value of &#039;stock_quantity&#039; for a variation is about to change.
+						*
+						* @since 4.9
+						*
+						* @param int $product The variation whose stock is about to change.
+						*/
+						do_action( &#039;woocommerce_variation_before_set_stock&#039;, $product );
+					} else {
+						/**
+						* Action to signal that the value of &#039;stock_quantity&#039; for a product is about to change.
+						*
+						* @since 4.9
+						*
+						* @param int $product The product whose stock is about to change.
+						*/
+						do_action( &#039;woocommerce_product_before_set_stock&#039;, $product );
+					}
+					break;
+			}
+
+			$updated = $this-&gt;update_or_delete_post_meta( $product, $meta_key, $value );
+
+			if ( $updated ) {
+				$this-&gt;updated_props[] = $prop;
+			}
+		}
+
+		// Update extra data associated with the product like button text or product URL for external products.
+		if ( ! $this-&gt;extra_data_saved ) {
+			foreach ( $extra_data_keys as $key ) {
+				$meta_key = &#039;_&#039; . $key;
+				$function = &#039;get_&#039; . $key;
+				if ( ! array_key_exists( $meta_key, $props_to_update ) ) {
+					continue;
+				}
+				if ( is_callable( array( $product, $function ) ) ) {
+					$value   = $product-&gt;{$function}( &#039;edit&#039; );
+					$value   = is_string( $value ) ? wp_slash( $value ) : $value;
+					$updated = $this-&gt;update_or_delete_post_meta( $product, $meta_key, $value );
+
+					if ( $updated ) {
+						$this-&gt;updated_props[] = $key;
+					}
+				}
+			}
+		}
+
+		if ( $this-&gt;update_downloads( $product, $force ) ) {
+			$this-&gt;updated_props[] = &#039;downloads&#039;;
+		}
+	}
+
+	/**
+	 * Handle updated meta props after updating meta data.
+	 *
+	 * @since 3.0.0
+	 * @param WC_Product $product Product Object.
+	 */
+	protected function handle_updated_props( &amp;$product ) {
+		$price_is_synced = $product-&gt;is_type( array( &#039;variable&#039;, &#039;grouped&#039; ) );
+
+		if ( ! $price_is_synced ) {
+			if ( in_array( &#039;regular_price&#039;, $this-&gt;updated_props, true ) || in_array( &#039;sale_price&#039;, $this-&gt;updated_props, true ) ) {
+				if ( $product-&gt;get_sale_price( &#039;edit&#039; ) &gt;= $product-&gt;get_regular_price( &#039;edit&#039; ) ) {
+					update_post_meta( $product-&gt;get_id(), &#039;_sale_price&#039;, &#039;&#039; );
+					$product-&gt;set_sale_price( &#039;&#039; );
+				}
+			}
+
+			if ( in_array( &#039;date_on_sale_from&#039;, $this-&gt;updated_props, true ) || in_array( &#039;date_on_sale_to&#039;, $this-&gt;updated_props, true ) || in_array( &#039;regular_price&#039;, $this-&gt;updated_props, true ) || in_array( &#039;sale_price&#039;, $this-&gt;updated_props, true ) || in_array( &#039;product_type&#039;, $this-&gt;updated_props, true ) ) {
+				if ( $product-&gt;is_on_sale( &#039;edit&#039; ) ) {
+					update_post_meta( $product-&gt;get_id(), &#039;_price&#039;, $product-&gt;get_sale_price( &#039;edit&#039; ) );
+					$product-&gt;set_price( $product-&gt;get_sale_price( &#039;edit&#039; ) );
+				} else {
+					update_post_meta( $product-&gt;get_id(), &#039;_price&#039;, $product-&gt;get_regular_price( &#039;edit&#039; ) );
+					$product-&gt;set_price( $product-&gt;get_regular_price( &#039;edit&#039; ) );
+				}
+			}
+		}
+
+		if ( in_array( &#039;stock_quantity&#039;, $this-&gt;updated_props, true ) ) {
+			if ( $product-&gt;is_type( &#039;variation&#039; ) ) {
+				do_action( &#039;woocommerce_variation_set_stock&#039;, $product );
+			} else {
+				do_action( &#039;woocommerce_product_set_stock&#039;, $product );
+			}
+		}
+
+		if ( in_array( &#039;stock_status&#039;, $this-&gt;updated_props, true ) ) {
+			if ( $product-&gt;is_type( &#039;variation&#039; ) ) {
+				do_action( &#039;woocommerce_variation_set_stock_status&#039;, $product-&gt;get_id(), $product-&gt;get_stock_status(), $product );
+			} else {
+				do_action( &#039;woocommerce_product_set_stock_status&#039;, $product-&gt;get_id(), $product-&gt;get_stock_status(), $product );
+			}
+		}
+
+		if ( array_intersect( $this-&gt;updated_props, array( &#039;sku&#039;, &#039;regular_price&#039;, &#039;sale_price&#039;, &#039;date_on_sale_from&#039;, &#039;date_on_sale_to&#039;, &#039;total_sales&#039;, &#039;average_rating&#039;, &#039;stock_quantity&#039;, &#039;stock_status&#039;, &#039;manage_stock&#039;, &#039;downloadable&#039;, &#039;virtual&#039;, &#039;tax_status&#039;, &#039;tax_class&#039; ) ) ) {
+			$this-&gt;update_lookup_table( $product-&gt;get_id(), &#039;wc_product_meta_lookup&#039; );
+		}
+
+		// Trigger action so 3rd parties can deal with updated props.
+		do_action( &#039;woocommerce_product_object_updated_props&#039;, $product, $this-&gt;updated_props );
+
+		// After handling, we can reset the props array.
+		$this-&gt;updated_props = array();
+	}
+
+	/**
+	 * For all stored terms in all taxonomies, save them to the DB.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @param bool       $force Force update. Used during create.
+	 * @since 3.0.0
+	 */
+	protected function update_terms( &amp;$product, $force = false ) {
+		$changes = $product-&gt;get_changes();
+
+		if ( $force || array_key_exists( &#039;category_ids&#039;, $changes ) ) {
+			$categories = $product-&gt;get_category_ids( &#039;edit&#039; );
+
+			if ( empty( $categories ) &amp;&amp; get_option( &#039;default_product_cat&#039;, 0 ) ) {
+				$categories = array( get_option( &#039;default_product_cat&#039;, 0 ) );
+			}
+
+			wp_set_post_terms( $product-&gt;get_id(), $categories, &#039;product_cat&#039;, false );
+		}
+		if ( $force || array_key_exists( &#039;tag_ids&#039;, $changes ) ) {
+			wp_set_post_terms( $product-&gt;get_id(), $product-&gt;get_tag_ids( &#039;edit&#039; ), &#039;product_tag&#039;, false );
+		}
+		if ( $force || array_key_exists( &#039;shipping_class_id&#039;, $changes ) ) {
+			wp_set_post_terms( $product-&gt;get_id(), array( $product-&gt;get_shipping_class_id( &#039;edit&#039; ) ), &#039;product_shipping_class&#039;, false );
+		}
+
+		_wc_recount_terms_by_product( $product-&gt;get_id() );
+	}
+
+	/**
+	 * Update visibility terms based on props.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @param WC_Product $product Product object.
+	 * @param bool       $force Force update. Used during create.
+	 */
+	protected function update_visibility( &amp;$product, $force = false ) {
+		$changes = $product-&gt;get_changes();
+
+		if ( $force || array_intersect( array( &#039;featured&#039;, &#039;stock_status&#039;, &#039;average_rating&#039;, &#039;catalog_visibility&#039; ), array_keys( $changes ) ) ) {
+			$terms = array();
+
+			if ( $product-&gt;get_featured() ) {
+				$terms[] = &#039;featured&#039;;
+			}
+
+			if ( &#039;outofstock&#039; === $product-&gt;get_stock_status() ) {
+				$terms[] = &#039;outofstock&#039;;
+			}
+
+			$rating = min( 5, NumberUtil::round( $product-&gt;get_average_rating(), 0 ) );
+
+			if ( $rating &gt; 0 ) {
+				$terms[] = &#039;rated-&#039; . $rating;
+			}
+
+			switch ( $product-&gt;get_catalog_visibility() ) {
+				case &#039;hidden&#039;:
+					$terms[] = &#039;exclude-from-search&#039;;
+					$terms[] = &#039;exclude-from-catalog&#039;;
+					break;
+				case &#039;catalog&#039;:
+					$terms[] = &#039;exclude-from-search&#039;;
+					break;
+				case &#039;search&#039;:
+					$terms[] = &#039;exclude-from-catalog&#039;;
+					break;
+			}
+
+			if ( ! is_wp_error( wp_set_post_terms( $product-&gt;get_id(), $terms, &#039;product_visibility&#039;, false ) ) ) {
+				do_action( &#039;woocommerce_product_set_visibility&#039;, $product-&gt;get_id(), $product-&gt;get_catalog_visibility() );
+			}
+		}
+	}
+
+	/**
+	 * Update attributes which are a mix of terms and meta data.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @param bool       $force Force update. Used during create.
+	 * @since 3.0.0
+	 */
+	protected function update_attributes( &amp;$product, $force = false ) {
+		$changes = $product-&gt;get_changes();
+
+		if ( $force || array_key_exists( &#039;attributes&#039;, $changes ) ) {
+			$attributes  = $product-&gt;get_attributes();
+			$meta_values = array();
+
+			if ( $attributes ) {
+				foreach ( $attributes as $attribute_key =&gt; $attribute ) {
+					$value = &#039;&#039;;
+
+					if ( is_null( $attribute ) ) {
+						if ( taxonomy_exists( $attribute_key ) ) {
+							// Handle attributes that have been unset.
+							wp_set_object_terms( $product-&gt;get_id(), array(), $attribute_key );
+						} elseif ( taxonomy_exists( urldecode( $attribute_key ) ) ) {
+							// Handle attributes that have been unset.
+							wp_set_object_terms( $product-&gt;get_id(), array(), urldecode( $attribute_key ) );
+						}
+						continue;
+
+					} elseif ( $attribute-&gt;is_taxonomy() ) {
+						wp_set_object_terms( $product-&gt;get_id(), wp_list_pluck( (array) $attribute-&gt;get_terms(), &#039;term_id&#039; ), $attribute-&gt;get_name() );
+					} else {
+						$value = wc_implode_text_attributes( $attribute-&gt;get_options() );
+					}
+
+					// Store in format WC uses in meta.
+					$meta_values[ $attribute_key ] = array(
+						&#039;name&#039;         =&gt; $attribute-&gt;get_name(),
+						&#039;value&#039;        =&gt; $value,
+						&#039;position&#039;     =&gt; $attribute-&gt;get_position(),
+						&#039;is_visible&#039;   =&gt; $attribute-&gt;get_visible() ? 1 : 0,
+						&#039;is_variation&#039; =&gt; $attribute-&gt;get_variation() ? 1 : 0,
+						&#039;is_taxonomy&#039;  =&gt; $attribute-&gt;is_taxonomy() ? 1 : 0,
+					);
+				}
+			}
+			// Note, we use wp_slash to add extra level of escaping. See https://codex.wordpress.org/Function_Reference/update_post_meta#Workaround.
+			$this-&gt;update_or_delete_post_meta( $product, &#039;_product_attributes&#039;, wp_slash( $meta_values ) );
+		}
+	}
+
+	/**
+	 * Update downloads.
+	 *
+	 * @since 3.0.0
+	 * @param WC_Product $product Product object.
+	 * @param bool       $force Force update. Used during create.
+	 * @return bool If updated or not.
+	 */
+	protected function update_downloads( &amp;$product, $force = false ) {
+		$changes = $product-&gt;get_changes();
+
+		if ( $force || array_key_exists( &#039;downloads&#039;, $changes ) ) {
+			$downloads   = $product-&gt;get_downloads();
+			$meta_values = array();
+
+			if ( $downloads ) {
+				foreach ( $downloads as $key =&gt; $download ) {
+					// Store in format WC uses in meta.
+					$meta_values[ $key ] = $download-&gt;get_data();
+				}
+			}
+
+			if ( $product-&gt;is_type( &#039;variation&#039; ) ) {
+				do_action( &#039;woocommerce_process_product_file_download_paths&#039;, $product-&gt;get_parent_id(), $product-&gt;get_id(), $downloads );
+			} else {
+				do_action( &#039;woocommerce_process_product_file_download_paths&#039;, $product-&gt;get_id(), 0, $downloads );
+			}
+
+			return $this-&gt;update_or_delete_post_meta( $product, &#039;_downloadable_files&#039;, wp_slash( $meta_values ) );
+		}
+		return false;
+	}
+
+	/**
+	 * Make sure we store the product type and version (to track data changes).
+	 *
+	 * @param WC_Product $product Product object.
+	 * @since 3.0.0
+	 */
+	protected function update_version_and_type( &amp;$product ) {
+		$old_type = WC_Product_Factory::get_product_type( $product-&gt;get_id() );
+		$new_type = $product-&gt;get_type();
+
+		wp_set_object_terms( $product-&gt;get_id(), $new_type, &#039;product_type&#039; );
+		update_post_meta( $product-&gt;get_id(), &#039;_product_version&#039;, Constants::get_constant( &#039;WC_VERSION&#039; ) );
+
+		// Action for the transition.
+		if ( $old_type !== $new_type ) {
+			$this-&gt;updated_props[] = &#039;product_type&#039;;
+			do_action( &#039;woocommerce_product_type_changed&#039;, $product, $old_type, $new_type );
+		}
+	}
+
+	/**
+	 * Clear any caches.
+	 *
+	 * @param WC_Product $product Product object.
+	 * @since 3.0.0
+	 */
+	protected function clear_caches( &amp;$product ) {
+		wc_delete_product_transients( $product-&gt;get_id() );
+		if ( $product-&gt;get_parent_id( &#039;edit&#039; ) ) {
+			wc_delete_product_transients( $product-&gt;get_parent_id( &#039;edit&#039; ) );
+			WC_Cache_Helper::invalidate_cache_group( &#039;product_&#039; . $product-&gt;get_parent_id( &#039;edit&#039; ) );
+		}
+		WC_Cache_Helper::invalidate_attribute_count( array_keys( $product-&gt;get_attributes() ) );
+		WC_Cache_Helper::invalidate_cache_group( &#039;product_&#039; . $product-&gt;get_id() );
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| wc-product-functions.php methods
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Returns an array of on sale products, as an array of objects with an
+	 * ID and parent_id present. Example: $return[0]-&gt;id, $return[0]-&gt;parent_id.
+	 *
+	 * @return array
+	 * @since 3.0.0
+	 */
+	public function get_on_sale_products() {
+		global $wpdb;
+
+		$exclude_term_ids            = array();
+		$outofstock_join             = &#039;&#039;;
+		$outofstock_where            = &#039;&#039;;
+		$non_published_where         = &#039;&#039;;
+		$product_visibility_term_ids = wc_get_product_visibility_term_ids();
+
+		if ( &#039;yes&#039; === get_option( &#039;woocommerce_hide_out_of_stock_items&#039; ) &amp;&amp; $product_visibility_term_ids[&#039;outofstock&#039;] ) {
+			$exclude_term_ids[] = $product_visibility_term_ids[&#039;outofstock&#039;];
+		}
+
+		if ( count( $exclude_term_ids ) ) {
+			$outofstock_join  = &quot; LEFT JOIN ( SELECT object_id FROM {$wpdb-&gt;term_relationships} WHERE term_taxonomy_id IN ( &quot; . implode( &#039;,&#039;, array_map( &#039;absint&#039;, $exclude_term_ids ) ) . &#039; ) ) AS exclude_join ON exclude_join.object_id = id&#039;;
+			$outofstock_where = &#039; AND exclude_join.object_id IS NULL&#039;;
+		}
+
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		return $wpdb-&gt;get_results(
+			&quot;
+			SELECT posts.ID as id, posts.post_parent as parent_id
+			FROM {$wpdb-&gt;posts} AS posts
+			INNER JOIN {$wpdb-&gt;wc_product_meta_lookup} AS lookup ON posts.ID = lookup.product_id
+			$outofstock_join
+			WHERE posts.post_type IN ( &#039;product&#039;, &#039;product_variation&#039; )
+			AND posts.post_status = &#039;publish&#039;
+			AND lookup.onsale = 1
+			$outofstock_where
+			AND posts.post_parent NOT IN (
+				SELECT ID FROM `$wpdb-&gt;posts` as posts
+				WHERE posts.post_type = &#039;product&#039;
+				AND posts.post_parent = 0
+				AND posts.post_status != &#039;publish&#039;
+			)
+			GROUP BY posts.ID
+			&quot;
+		);
+		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+	}
+
+	/**
+	 * Returns a list of product IDs ( id as key =&gt; parent as value) that are
+	 * featured. Uses get_posts instead of wc_get_products since we want
+	 * some extra meta queries and ALL products (posts_per_page = -1).
+	 *
+	 * @return array
+	 * @since 3.0.0
+	 */
+	public function get_featured_product_ids() {
+		$product_visibility_term_ids = wc_get_product_visibility_term_ids();
+
+		return get_posts(
+			array(
+				&#039;post_type&#039;      =&gt; array( &#039;product&#039;, &#039;product_variation&#039; ),
+				&#039;posts_per_page&#039; =&gt; -1,
+				&#039;post_status&#039;    =&gt; &#039;publish&#039;,
+				&#039;tax_query&#039;      =&gt; array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+					&#039;relation&#039; =&gt; &#039;AND&#039;,
+					array(
+						&#039;taxonomy&#039; =&gt; &#039;product_visibility&#039;,
+						&#039;field&#039;    =&gt; &#039;term_taxonomy_id&#039;,
+						&#039;terms&#039;    =&gt; array( $product_visibility_term_ids[&#039;featured&#039;] ),
+					),
+					array(
+						&#039;taxonomy&#039; =&gt; &#039;product_visibility&#039;,
+						&#039;field&#039;    =&gt; &#039;term_taxonomy_id&#039;,
+						&#039;terms&#039;    =&gt; array( $product_visibility_term_ids[&#039;exclude-from-catalog&#039;] ),
+						&#039;operator&#039; =&gt; &#039;NOT IN&#039;,
+					),
+				),
+				&#039;fields&#039;         =&gt; &#039;id=&gt;parent&#039;,
+			)
+		);
+	}
+
+	/**
+	 * Check if product sku is found for any other product IDs.
+	 *
+	 * @since 3.0.0
+	 * @param int    $product_id Product ID.
+	 * @param string $sku Will be slashed to work around https://core.trac.wordpress.org/ticket/27421.
+	 * @return bool
+	 */
+	public function is_existing_sku( $product_id, $sku ) {
+		global $wpdb;
+
+		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		return (bool) $wpdb-&gt;get_var(
+			$wpdb-&gt;prepare(
+				&quot;
+				SELECT posts.ID
+				FROM {$wpdb-&gt;posts} as posts
+				INNER JOIN {$wpdb-&gt;wc_product_meta_lookup} AS lookup ON posts.ID = lookup.product_id
+				WHERE
+				posts.post_type IN ( &#039;product&#039;, &#039;product_variation&#039; )
+				AND posts.post_status != &#039;trash&#039;
+				AND lookup.sku = %s
+				AND lookup.product_id &lt;&gt; %d
+				LIMIT 1
+				&quot;,
+				wp_slash( $sku ),
+				$product_id
+			)
+		);
+	}
+
+	/**
+	 * Return product ID based on SKU.
+	 *
+	 * @since 3.0.0
+	 * @param string $sku Product SKU.
+	 * @return int
+	 */
+	public function get_product_id_by_sku( $sku ) {
+		global $wpdb;
+
+		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		$id = $wpdb-&gt;get_var(
+			$wpdb-&gt;prepare(
+				&quot;
+				SELECT posts.ID
+				FROM {$wpdb-&gt;posts} as posts
+				INNER JOIN {$wpdb-&gt;wc_product_meta_lookup} AS lookup ON posts.ID = lookup.product_id
+				WHERE
+				posts.post_type IN ( &#039;product&#039;, &#039;product_variation&#039; )
+				AND posts.post_status != &#039;trash&#039;
+				AND lookup.sku = %s
+				LIMIT 1
+				&quot;,
+				$sku
+			)
+		);
+
+		return (int) apply_filters( &#039;woocommerce_get_product_id_by_sku&#039;, $id, $sku );
+	}
+
+	/**
+	 * Returns an array of IDs of products that have sales starting soon.
+	 *
+	 * @since 3.0.0
+	 * @return array
+	 */
+	public function get_starting_sales() {
+		global $wpdb;
+
+		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		return $wpdb-&gt;get_col(
+			$wpdb-&gt;prepare(
+				&quot;SELECT postmeta.post_id FROM {$wpdb-&gt;postmeta} as postmeta
+				LEFT JOIN {$wpdb-&gt;postmeta} as postmeta_2 ON postmeta.post_id = postmeta_2.post_id
+				LEFT JOIN {$wpdb-&gt;postmeta} as postmeta_3 ON postmeta.post_id = postmeta_3.post_id
+				WHERE postmeta.meta_key = &#039;_sale_price_dates_from&#039;
+					AND postmeta_2.meta_key = &#039;_price&#039;
+					AND postmeta_3.meta_key = &#039;_sale_price&#039;
+					AND postmeta.meta_value &gt; 0
+					AND postmeta.meta_value &lt; %s
+					AND postmeta_2.meta_value != postmeta_3.meta_value&quot;,
+				time()
+			)
+		);
+	}
+
+	/**
+	 * Returns an array of IDs of products that have sales which are due to end.
+	 *
+	 * @since 3.0.0
+	 * @return array
+	 */
+	public function get_ending_sales() {
+		global $wpdb;
+
+		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		return $wpdb-&gt;get_col(
+			$wpdb-&gt;prepare(
+				&quot;SELECT postmeta.post_id FROM {$wpdb-&gt;postmeta} as postmeta
+				LEFT JOIN {$wpdb-&gt;postmeta} as postmeta_2 ON postmeta.post_id = postmeta_2.post_id
+				LEFT JOIN {$wpdb-&gt;postmeta} as postmeta_3 ON postmeta.post_id = postmeta_3.post_id
+				WHERE postmeta.meta_key = &#039;_sale_price_dates_to&#039;
+					AND postmeta_2.meta_key = &#039;_price&#039;
+					AND postmeta_3.meta_key = &#039;_regular_price&#039;
+					AND postmeta.meta_value &gt; 0
+					AND postmeta.meta_value &lt; %s
+					AND postmeta_2.meta_value != postmeta_3.meta_value&quot;,
+				time()
+			)
+		);
+	}
+
+	/**
+	 * Find a matching (enabled) variation within a variable product.
+	 *
+	 * @since  3.0.0
+	 * @param  WC_Product $product Variable product.
+	 * @param  array      $match_attributes Array of attributes we want to try to match.
+	 * @return int Matching variation ID or 0.
+	 */
+	public function find_matching_product_variation( $product, $match_attributes = array() ) {
+		global $wpdb;
+
+		$meta_attribute_names = array();
+
+		// Get attributes to match in meta.
+		foreach ( $product-&gt;get_attributes() as $attribute ) {
+			if ( ! $attribute-&gt;get_variation() ) {
+				continue;
+			}
+			$meta_attribute_names[] = &#039;attribute_&#039; . sanitize_title( $attribute-&gt;get_name() );
+		}
+
+		// Get the attributes of the variations.
+		$query = $wpdb-&gt;prepare(
+			&quot;
+			SELECT postmeta.post_id, postmeta.meta_key, postmeta.meta_value, posts.menu_order FROM {$wpdb-&gt;postmeta} as postmeta
+			LEFT JOIN {$wpdb-&gt;posts} as posts ON postmeta.post_id=posts.ID
+			WHERE postmeta.post_id IN (
+				SELECT ID FROM {$wpdb-&gt;posts}
+				WHERE {$wpdb-&gt;posts}.post_parent = %d
+				AND {$wpdb-&gt;posts}.post_status = &#039;publish&#039;
+				AND {$wpdb-&gt;posts}.post_type = &#039;product_variation&#039;
+			)
+			&quot;,
+			$product-&gt;get_id()
+		);
+
+		$query .= &quot; AND postmeta.meta_key IN ( &#039;&quot; . implode( &quot;&#039;,&#039;&quot;, array_map( &#039;esc_sql&#039;, $meta_attribute_names ) ) . &quot;&#039; )&quot;;
+
+		$query .= &#039; ORDER BY posts.menu_order ASC, postmeta.post_id ASC;&#039;;
+
+		$attributes = $wpdb-&gt;get_results( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+
+		if ( ! $attributes ) {
+			return 0;
+		}
+
+		$sorted_meta = array();
+
+		foreach ( $attributes as $m ) {
+			$sorted_meta[ $m-&gt;post_id ][ $m-&gt;meta_key ] = $m-&gt;meta_value; // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+		}
+
+		/**
+		 * Check each variation to find the one that matches the $match_attributes.
+		 *
+		 * Note: Not all meta fields will be set which is why we check existence.
+		 */
+		foreach ( $sorted_meta as $variation_id =&gt; $variation ) {
+			$match = true;
+
+			// Loop over the variation meta keys and values i.e. what is saved to the products. Note: $attribute_value is empty when &#039;any&#039; is in use.
+			foreach ( $variation as $attribute_key =&gt; $attribute_value ) {
+				$match_any_value = &#039;&#039; === $attribute_value;
+
+				if ( ! $match_any_value &amp;&amp; ! array_key_exists( $attribute_key, $match_attributes ) ) {
+					$match = false; // Requires a selection but no value was provide.
+				}
+
+				if ( array_key_exists( $attribute_key, $match_attributes ) ) { // Value to match was provided.
+					if ( ! $match_any_value &amp;&amp; $match_attributes[ $attribute_key ] !== $attribute_value ) {
+						$match = false; // Provided value does not match variation.
+					}
+				}
+			}
+
+			if ( true === $match ) {
+				return $variation_id;
+			}
+		}
+
+		if ( version_compare( get_post_meta( $product-&gt;get_id(), &#039;_product_version&#039;, true ), &#039;2.4.0&#039;, &#039;&lt;&#039; ) ) {
+			/**
+			 * Pre 2.4 handling where &#039;slugs&#039; were saved instead of the full text attribute.
+			 * Fallback is here because there are cases where data will be &#039;synced&#039; but the product version will remain the same.
+			 */
+			return ( array_map( &#039;sanitize_title&#039;, $match_attributes ) === $match_attributes ) ? 0 : $this-&gt;find_matching_product_variation( $product, array_map( &#039;sanitize_title&#039;, $match_attributes ) );
+		}
+
+		return 0;
+	}
+
+	/**
+	 * Creates all possible combinations of variations from the attributes, without creating duplicates.
+	 *
+	 * @since  3.6.0
+	 * @todo   Add to interface in 4.0.
+	 * @param  WC_Product $product Variable product.
+	 * @param  int        $limit Limit the number of created variations.
+	 * @return int        Number of created variations.
+	 */
+	public function create_all_product_variations( $product, $limit = -1 ) {
+		$count = 0;
+
+		if ( ! $product ) {
+			return $count;
+		}
+
+		$attributes = wc_list_pluck( array_filter( $product-&gt;get_attributes(), &#039;wc_attributes_array_filter_variation&#039; ), &#039;get_slugs&#039; );
+
+		if ( empty( $attributes ) ) {
+			return $count;
+		}
+
+		// Get existing variations so we don&#039;t create duplicates.
+		$existing_variations = array_map( &#039;wc_get_product&#039;, $product-&gt;get_children() );
+		$existing_attributes = array();
+
+		foreach ( $existing_variations as $existing_variation ) {
+			$existing_attributes[] = $existing_variation-&gt;get_attributes();
+		}
+
+		$possible_attributes = array_reverse( wc_array_cartesian( $attributes ) );
+
+		foreach ( $possible_attributes as $possible_attribute ) {
+			// Allow any order if key/values -- do not use strict mode.
+			if ( in_array( $possible_attribute, $existing_attributes ) ) { // phpcs:ignore WordPress.PHP.StrictInArray.MissingTrueStrict
+				continue;
+			}
+			$variation = wc_get_product_object( &#039;variation&#039; );
+			$variation-&gt;set_parent_id( $product-&gt;get_id() );
+			$variation-&gt;set_attributes( $possible_attribute );
+			$variation_id = $variation-&gt;save();
+
+			do_action( &#039;product_variation_linked&#039;, $variation_id );
+
+			$count ++;
+
+			if ( $limit &gt; 0 &amp;&amp; $count &gt;= $limit ) {
+				break;
+			}
+		}
+
+		return $count;
+	}
+
+	/**
+	 * Make sure all variations have a sort order set so they can be reordered correctly.
+	 *
+	 * @param int $parent_id Product ID.
+	 */
+	public function sort_all_product_variations( $parent_id ) {
+		global $wpdb;
+
+		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		$ids   = $wpdb-&gt;get_col(
+			$wpdb-&gt;prepare(
+				&quot;SELECT ID FROM {$wpdb-&gt;posts} WHERE post_type = &#039;product_variation&#039; AND post_parent = %d AND post_status in ( &#039;publish&#039;, &#039;private&#039; ) ORDER BY menu_order ASC, ID ASC&quot;,
+				$parent_id
+			)
+		);
+		$index = 1;
+
+		foreach ( $ids as $id ) {
+			// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+			$wpdb-&gt;update( $wpdb-&gt;posts, array( &#039;menu_order&#039; =&gt; ( $index++ ) ), array( &#039;ID&#039; =&gt; absint( $id ) ) );
+		}
+	}
+
+	/**
+	 * Return a list of related products (using data like categories and IDs).
+	 *
+	 * @since 3.0.0
+	 * @param array $cats_array  List of categories IDs.
+	 * @param array $tags_array  List of tags IDs.
+	 * @param array $exclude_ids Excluded IDs.
+	 * @param int   $limit       Limit of results.
+	 * @param int   $product_id  Product ID.
+	 * @return array
+	 */
+	public function get_related_products( $cats_array, $tags_array, $exclude_ids, $limit, $product_id ) {
+		global $wpdb;
+
+		$args = array(
+			&#039;categories&#039;  =&gt; $cats_array,
+			&#039;tags&#039;        =&gt; $tags_array,
+			&#039;exclude_ids&#039; =&gt; $exclude_ids,
+			&#039;limit&#039;       =&gt; $limit + 10,
+		);
+
+		$related_product_query = (array) apply_filters( &#039;woocommerce_product_related_posts_query&#039;, $this-&gt;get_related_products_query( $cats_array, $tags_array, $exclude_ids, $limit + 10 ), $product_id, $args );
+
+		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery, WordPress.DB.PreparedSQL.NotPrepared
+		return $wpdb-&gt;get_col( implode( &#039; &#039;, $related_product_query ) );
+	}
+
+	/**
+	 * Builds the related posts query.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @param array $cats_array  List of categories IDs.
+	 * @param array $tags_array  List of tags IDs.
+	 * @param array $exclude_ids Excluded IDs.
+	 * @param int   $limit       Limit of results.
+	 *
+	 * @return array
+	 */
+	public function get_related_products_query( $cats_array, $tags_array, $exclude_ids, $limit ) {
+		global $wpdb;
+
+		$include_term_ids            = array_merge( $cats_array, $tags_array );
+		$exclude_term_ids            = array();
+		$product_visibility_term_ids = wc_get_product_visibility_term_ids();
+
+		if ( $product_visibility_term_ids[&#039;exclude-from-catalog&#039;] ) {
+			$exclude_term_ids[] = $product_visibility_term_ids[&#039;exclude-from-catalog&#039;];
+		}
+
+		if ( &#039;yes&#039; === get_option( &#039;woocommerce_hide_out_of_stock_items&#039; ) &amp;&amp; $product_visibility_term_ids[&#039;outofstock&#039;] ) {
+			$exclude_term_ids[] = $product_visibility_term_ids[&#039;outofstock&#039;];
+		}
+
+		$query = array(
+			&#039;fields&#039; =&gt; &quot;
+				SELECT DISTINCT ID FROM {$wpdb-&gt;posts} p
+			&quot;,
+			&#039;join&#039;   =&gt; &#039;&#039;,
+			&#039;where&#039;  =&gt; &quot;
+				WHERE 1=1
+				AND p.post_status = &#039;publish&#039;
+				AND p.post_type = &#039;product&#039;
+
+			&quot;,
+			&#039;limits&#039; =&gt; &#039;
+				LIMIT &#039; . absint( $limit ) . &#039;
+			&#039;,
+		);
+
+		if ( count( $exclude_term_ids ) ) {
+			$query[&#039;join&#039;]  .= &quot; LEFT JOIN ( SELECT object_id FROM {$wpdb-&gt;term_relationships} WHERE term_taxonomy_id IN ( &quot; . implode( &#039;,&#039;, array_map( &#039;absint&#039;, $exclude_term_ids ) ) . &#039; ) ) AS exclude_join ON exclude_join.object_id = p.ID&#039;;
+			$query[&#039;where&#039;] .= &#039; AND exclude_join.object_id IS NULL&#039;;
+		}
+
+		if ( count( $include_term_ids ) ) {
+			$query[&#039;join&#039;] .= &quot; INNER JOIN ( SELECT object_id FROM {$wpdb-&gt;term_relationships} INNER JOIN {$wpdb-&gt;term_taxonomy} using( term_taxonomy_id ) WHERE term_id IN ( &quot; . implode( &#039;,&#039;, array_map( &#039;absint&#039;, $include_term_ids ) ) . &#039; ) ) AS include_join ON include_join.object_id = p.ID&#039;;
+		}
+
+		if ( count( $exclude_ids ) ) {
+			$query[&#039;where&#039;] .= &#039; AND p.ID NOT IN ( &#039; . implode( &#039;,&#039;, array_map( &#039;absint&#039;, $exclude_ids ) ) . &#039; )&#039;;
+		}
+
+		return $query;
+	}
+
+	/**
+	 * Update a product&#039;s stock amount directly in the database.
+	 *
+	 * Updates both post meta and lookup tables. Ignores manage stock setting on the product.
+	 *
+	 * @param int            $product_id_with_stock Product ID.
+	 * @param int|float|null $stock_quantity        Stock quantity.
+	 */
+	protected function set_product_stock( $product_id_with_stock, $stock_quantity ) {
+		global $wpdb;
+
+		// Generate SQL.
+		$sql = $wpdb-&gt;prepare(
+			&quot;UPDATE {$wpdb-&gt;postmeta} SET meta_value = %f WHERE post_id = %d AND meta_key=&#039;_stock&#039;&quot;,
+			$stock_quantity,
+			$product_id_with_stock
+		);
+
+		$sql = apply_filters( &#039;woocommerce_update_product_stock_query&#039;, $sql, $product_id_with_stock, $stock_quantity, &#039;set&#039; );
+
+		$wpdb-&gt;query( $sql ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.PreparedSQL.NotPrepared
+
+		// Cache delete is required (not only) to set correct data for lookup table (which reads from cache).
+		// Sometimes I wonder if it shouldn&#039;t be part of update_lookup_table.
+		wp_cache_delete( $product_id_with_stock, &#039;post_meta&#039; );
+
+		$this-&gt;update_lookup_table( $product_id_with_stock, &#039;wc_product_meta_lookup&#039; );
+	}
+
+	/**
+	 * Update a product&#039;s stock amount directly.
+	 *
+	 * Uses queries rather than update_post_meta so we can do this in one query (to avoid stock issues).
+	 * Ignores manage stock setting on the product and sets quantities directly in the db: post meta and lookup tables.
+	 * Uses locking to update the quantity. If the lock is not acquired, change is lost.
+	 *
+	 * @since  3.0.0 this supports set, increase and decrease.
+	 * @param  int            $product_id_with_stock Product ID.
+	 * @param  int|float|null $stock_quantity Stock quantity.
+	 * @param  string         $operation Set, increase and decrease.
+	 * @return int|float New stock level.
+	 */
+	public function update_product_stock( $product_id_with_stock, $stock_quantity = null, $operation = &#039;set&#039; ) {
+		global $wpdb;
+
+		// Ensures a row exists to update.
+		add_post_meta( $product_id_with_stock, &#039;_stock&#039;, 0, true );
+
+		if ( &#039;set&#039; === $operation ) {
+			$new_stock = wc_stock_amount( $stock_quantity );
+
+			// Generate SQL.
+			$sql = $wpdb-&gt;prepare(
+				&quot;UPDATE {$wpdb-&gt;postmeta} SET meta_value = %f WHERE post_id = %d AND meta_key=&#039;_stock&#039;&quot;,
+				$new_stock,
+				$product_id_with_stock
+			);
+		} else {
+			$current_stock = wc_stock_amount(
+				$wpdb-&gt;get_var(
+					$wpdb-&gt;prepare(
+						&quot;SELECT meta_value FROM {$wpdb-&gt;postmeta} WHERE post_id = %d AND meta_key=&#039;_stock&#039;;&quot;,
+						$product_id_with_stock
+					)
+				)
+			);
+
+			// Calculate new value for filter below. Set multiplier to subtract or add the meta_value.
+			switch ( $operation ) {
+				case &#039;increase&#039;:
+					$new_stock  = $current_stock + wc_stock_amount( $stock_quantity );
+					$multiplier = 1;
+					break;
+				default:
+					$new_stock  = $current_stock - wc_stock_amount( $stock_quantity );
+					$multiplier = -1;
+					break;
+			}
+
+			// Generate SQL.
+			$sql = $wpdb-&gt;prepare(
+				&quot;UPDATE {$wpdb-&gt;postmeta} SET meta_value = meta_value %+f WHERE post_id = %d AND meta_key=&#039;_stock&#039;&quot;,
+				wc_stock_amount( $stock_quantity ) * $multiplier, // This will either subtract or add depending on operation.
+				$product_id_with_stock
+			);
+		}
+
+		$sql = apply_filters( &#039;woocommerce_update_product_stock_query&#039;, $sql, $product_id_with_stock, $new_stock, $operation );
+
+		$wpdb-&gt;query( $sql ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.PreparedSQL.NotPrepared
+
+		// Cache delete is required (not only) to set correct data for lookup table (which reads from cache).
+		// Sometimes I wonder if it shouldn&#039;t be part of update_lookup_table.
+		wp_cache_delete( $product_id_with_stock, &#039;post_meta&#039; );
+
+		$this-&gt;update_lookup_table( $product_id_with_stock, &#039;wc_product_meta_lookup&#039; );
+
+		/**
+		 * Fire an action for this direct update so it can be detected by other code.
+		 *
+		 * @since 3.6
+		 * @param int $product_id_with_stock Product ID that was updated directly.
+		 */
+		do_action( &#039;woocommerce_updated_product_stock&#039;, $product_id_with_stock );
+
+		return $new_stock;
+	}
+
+	/**
+	 * Update a product&#039;s sale count directly.
+	 *
+	 * Uses queries rather than update_post_meta so we can do this in one query for performance.
+	 *
+	 * @since  3.0.0 this supports set, increase and decrease.
+	 * @param  int      $product_id Product ID.
+	 * @param  int|null $quantity Quantity.
+	 * @param  string   $operation set, increase and decrease.
+	 */
+	public function update_product_sales( $product_id, $quantity = null, $operation = &#039;set&#039; ) {
+		global $wpdb;
+		add_post_meta( $product_id, &#039;total_sales&#039;, 0, true );
+
+		// Update stock in DB directly.
+		switch ( $operation ) {
+			case &#039;increase&#039;:
+				// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+				$wpdb-&gt;query(
+					$wpdb-&gt;prepare(
+						&quot;UPDATE {$wpdb-&gt;postmeta} SET meta_value = meta_value + %f WHERE post_id = %d AND meta_key=&#039;total_sales&#039;&quot;,
+						$quantity,
+						$product_id
+					)
+				);
+				break;
+			case &#039;decrease&#039;:
+				// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+				$wpdb-&gt;query(
+					$wpdb-&gt;prepare(
+						&quot;UPDATE {$wpdb-&gt;postmeta} SET meta_value = meta_value - %f WHERE post_id = %d AND meta_key=&#039;total_sales&#039;&quot;,
+						$quantity,
+						$product_id
+					)
+				);
+				break;
+			default:
+				// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+				$wpdb-&gt;query(
+					$wpdb-&gt;prepare(
+						&quot;UPDATE {$wpdb-&gt;postmeta} SET meta_value = %f WHERE post_id = %d AND meta_key=&#039;total_sales&#039;&quot;,
+						$quantity,
+						$product_id
+					)
+				);
+				break;
+		}
+
+		wp_cache_delete( $product_id, &#039;post_meta&#039; );
+
+		$this-&gt;update_lookup_table( $product_id, &#039;wc_product_meta_lookup&#039; );
+
+		/**
+		 * Fire an action for this direct update so it can be detected by other code.
+		 *
+		 * @since 3.6
+		 * @param int $product_id Product ID that was updated directly.
+		 */
+		do_action( &#039;woocommerce_updated_product_sales&#039;, $product_id );
+	}
+
+	/**
+	 * Update a products average rating meta.
+	 *
+	 * @since 3.0.0
+	 * @todo Deprecate unused function?
+	 * @param WC_Product $product Product object.
+	 */
+	public function update_average_rating( $product ) {
+		update_post_meta( $product-&gt;get_id(), &#039;_wc_average_rating&#039;, $product-&gt;get_average_rating( &#039;edit&#039; ) );
+		self::update_visibility( $product, true );
+	}
+
+	/**
+	 * Update a products review count meta.
+	 *
+	 * @since 3.0.0
+	 * @todo Deprecate unused function?
+	 * @param WC_Product $product Product object.
+	 */
+	public function update_review_count( $product ) {
+		update_post_meta( $product-&gt;get_id(), &#039;_wc_review_count&#039;, $product-&gt;get_review_count( &#039;edit&#039; ) );
+	}
+
+	/**
+	 * Update a products rating counts.
+	 *
+	 * @since 3.0.0
+	 * @todo Deprecate unused function?
+	 * @param WC_Product $product Product object.
+	 */
+	public function update_rating_counts( $product ) {
+		update_post_meta( $product-&gt;get_id(), &#039;_wc_rating_count&#039;, $product-&gt;get_rating_counts( &#039;edit&#039; ) );
+	}
+
+	/**
+	 * Get shipping class ID by slug.
+	 *
+	 * @since 3.0.0
+	 * @param string $slug Product shipping class slug.
+	 * @return int|false
+	 */
+	public function get_shipping_class_id_by_slug( $slug ) {
+		$shipping_class_term = get_term_by( &#039;slug&#039;, $slug, &#039;product_shipping_class&#039; );
+		if ( $shipping_class_term ) {
+			return $shipping_class_term-&gt;term_id;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * Returns an array of products.
+	 *
+	 * @param  array $args Args to pass to WC_Product_Query().
+	 * @return array|object
+	 * @see wc_get_products
+	 */
+	public function get_products( $args = array() ) {
+		$query = new WC_Product_Query( $args );
+		return $query-&gt;get_products();
+	}
+
+	/**
+	 * Search product data for a term and return ids.
+	 *
+	 * @param  string     $term Search term.
+	 * @param  string     $type Type of product.
+	 * @param  bool       $include_variations Include variations in search or not.
+	 * @param  bool       $all_statuses Should we search all statuses or limit to published.
+	 * @param  null|int   $limit Limit returned results. @since 3.5.0.
+	 * @param  null|array $include Keep specific results. @since 3.6.0.
+	 * @param  null|array $exclude Discard specific results. @since 3.6.0.
+	 * @return array of ids
+	 */
+	public function search_products( $term, $type = &#039;&#039;, $include_variations = false, $all_statuses = false, $limit = null, $include = null, $exclude = null ) {
+		global $wpdb;
+
+		$custom_results = apply_filters( &#039;woocommerce_product_pre_search_products&#039;, false, $term, $type, $include_variations, $all_statuses, $limit );
+
+		if ( is_array( $custom_results ) ) {
+			return $custom_results;
+		}
+
+		$post_types   = $include_variations ? array( &#039;product&#039;, &#039;product_variation&#039; ) : array( &#039;product&#039; );
+		$join_query   = &#039;&#039;;
+		$type_where   = &#039;&#039;;
+		$status_where = &#039;&#039;;
+		$limit_query  = &#039;&#039;;
+
+		// When searching variations we should include the parent&#039;s meta table for use in searches.
+		if ( $include_variations ) {
+			$join_query = &quot; LEFT JOIN {$wpdb-&gt;wc_product_meta_lookup} parent_wc_product_meta_lookup
+			 ON posts.post_type = &#039;product_variation&#039; AND parent_wc_product_meta_lookup.product_id = posts.post_parent &quot;;
+		}
+
+		/**
+		 * Hook woocommerce_search_products_post_statuses.
+		 *
+		 * @since 3.7.0
+		 * @param array $post_statuses List of post statuses.
+		 */
+		$post_statuses = apply_filters(
+			&#039;woocommerce_search_products_post_statuses&#039;,
+			current_user_can( &#039;edit_private_products&#039; ) ? array( &#039;private&#039;, &#039;publish&#039; ) : array( &#039;publish&#039; )
+		);
+
+		// See if search term contains OR keywords.
+		if ( stristr( $term, &#039; or &#039; ) ) {
+			$term_groups = preg_split( &#039;/\s+or\s+/i&#039;, $term );
+		} else {
+			$term_groups = array( $term );
+		}
+
+		$search_where   = &#039;&#039;;
+		$search_queries = array();
+
+		foreach ( $term_groups as $term_group ) {
+			// Parse search terms.
+			if ( preg_match_all( &#039;/&quot;.*?(&quot;|$)|((?&lt;=[\t &quot;,+])|^)[^\t &quot;,+]+/&#039;, $term_group, $matches ) ) {
+				$search_terms = $this-&gt;get_valid_search_terms( $matches[0] );
+				$count        = count( $search_terms );
+
+				// if the search string has only short terms or stopwords, or is 10+ terms long, match it as sentence.
+				if ( 9 &lt; $count || 0 === $count ) {
+					$search_terms = array( $term_group );
+				}
+			} else {
+				$search_terms = array( $term_group );
+			}
+
+			$term_group_query = &#039;&#039;;
+			$searchand        = &#039;&#039;;
+
+			foreach ( $search_terms as $search_term ) {
+				$like = &#039;%&#039; . $wpdb-&gt;esc_like( $search_term ) . &#039;%&#039;;
+
+				// Variations should also search the parent&#039;s meta table for fallback fields.
+				if ( $include_variations ) {
+					$variation_query = $wpdb-&gt;prepare( &quot; OR ( wc_product_meta_lookup.sku = &#039;&#039; AND parent_wc_product_meta_lookup.sku LIKE %s ) &quot;, $like );
+				} else {
+					$variation_query = &#039;&#039;;
+				}
+
+				$term_group_query .= $wpdb-&gt;prepare( &quot; {$searchand} ( ( posts.post_title LIKE %s) OR ( posts.post_excerpt LIKE %s) OR ( posts.post_content LIKE %s ) OR ( wc_product_meta_lookup.sku LIKE %s ) $variation_query)&quot;, $like, $like, $like, $like ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				$searchand         = &#039; AND &#039;;
+			}
+
+			if ( $term_group_query ) {
+				$search_queries[] = $term_group_query;
+			}
+		}
+
+		if ( ! empty( $search_queries ) ) {
+			$search_where = &#039; AND (&#039; . implode( &#039;) OR (&#039;, $search_queries ) . &#039;) &#039;;
+		}
+
+		if ( ! empty( $include ) &amp;&amp; is_array( $include ) ) {
+			$search_where .= &#039; AND posts.ID IN(&#039; . implode( &#039;,&#039;, array_map( &#039;absint&#039;, $include ) ) . &#039;) &#039;;
+		}
+
+		if ( ! empty( $exclude ) &amp;&amp; is_array( $exclude ) ) {
+			$search_where .= &#039; AND posts.ID NOT IN(&#039; . implode( &#039;,&#039;, array_map( &#039;absint&#039;, $exclude ) ) . &#039;) &#039;;
+		}
+
+		if ( &#039;virtual&#039; === $type ) {
+			$type_where = &#039; AND ( wc_product_meta_lookup.virtual = 1 ) &#039;;
+		} elseif ( &#039;downloadable&#039; === $type ) {
+			$type_where = &#039; AND ( wc_product_meta_lookup.downloadable = 1 ) &#039;;
+		}
+
+		if ( ! $all_statuses ) {
+			$status_where = &quot; AND posts.post_status IN (&#039;&quot; . implode( &quot;&#039;,&#039;&quot;, $post_statuses ) . &quot;&#039;) &quot;;
+		}
+
+		if ( $limit ) {
+			$limit_query = $wpdb-&gt;prepare( &#039; LIMIT %d &#039;, $limit );
+		}
+
+		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		$search_results = $wpdb-&gt;get_results(
+			// phpcs:disable
+			&quot;SELECT DISTINCT posts.ID as product_id, posts.post_parent as parent_id FROM {$wpdb-&gt;posts} posts
+			 LEFT JOIN {$wpdb-&gt;wc_product_meta_lookup} wc_product_meta_lookup ON posts.ID = wc_product_meta_lookup.product_id
+			 $join_query
+			WHERE posts.post_type IN (&#039;&quot; . implode( &quot;&#039;,&#039;&quot;, $post_types ) . &quot;&#039;)
+			$search_where
+			$status_where
+			$type_where
+			ORDER BY posts.post_parent ASC, posts.post_title ASC
+			$limit_query
+			&quot;
+			// phpcs:enable
+		);
+
+		$product_ids = wp_parse_id_list( array_merge( wp_list_pluck( $search_results, &#039;product_id&#039; ), wp_list_pluck( $search_results, &#039;parent_id&#039; ) ) );
+
+		if ( is_numeric( $term ) ) {
+			$post_id   = absint( $term );
+			$post_type = get_post_type( $post_id );
+
+			if ( &#039;product_variation&#039; === $post_type &amp;&amp; $include_variations ) {
+				$product_ids[] = $post_id;
+			} elseif ( &#039;product&#039; === $post_type ) {
+				$product_ids[] = $post_id;
+			}
+
+			$product_ids[] = wp_get_post_parent_id( $post_id );
+		}
+
+		return wp_parse_id_list( $product_ids );
+	}
+
+	/**
+	 * Get the product type based on product ID.
+	 *
+	 * @since 3.0.0
+	 * @param int $product_id Product ID.
+	 * @return bool|string
+	 */
+	public function get_product_type( $product_id ) {
+		$cache_key    = WC_Cache_Helper::get_cache_prefix( &#039;product_&#039; . $product_id ) . &#039;_type_&#039; . $product_id;
+		$product_type = wp_cache_get( $cache_key, &#039;products&#039; );
+
+		if ( $product_type ) {
+			return $product_type;
+		}
+
+		$post_type = get_post_type( $product_id );
+
+		if ( &#039;product_variation&#039; === $post_type ) {
+			$product_type = &#039;variation&#039;;
+		} elseif ( &#039;product&#039; === $post_type ) {
+			$terms        = get_the_terms( $product_id, &#039;product_type&#039; );
+			$product_type = ! empty( $terms ) &amp;&amp; ! is_wp_error( $terms ) ? sanitize_title( current( $terms )-&gt;name ) : &#039;simple&#039;;
+		} else {
+			$product_type = false;
+		}
+
+		wp_cache_set( $cache_key, $product_type, &#039;products&#039; );
+
+		return $product_type;
+	}
+
+	/**
+	 * Add ability to get products by &#039;reviews_allowed&#039; in WC_Product_Query.
+	 *
+	 * @since 3.2.0
+	 * @param string   $where Where clause.
+	 * @param WP_Query $wp_query WP_Query instance.
+	 * @return string
+	 */
+	public function reviews_allowed_query_where( $where, $wp_query ) {
+		global $wpdb;
+
+		if ( isset( $wp_query-&gt;query_vars[&#039;reviews_allowed&#039;] ) &amp;&amp; is_bool( $wp_query-&gt;query_vars[&#039;reviews_allowed&#039;] ) ) {
+			if ( $wp_query-&gt;query_vars[&#039;reviews_allowed&#039;] ) {
+				$where .= &quot; AND $wpdb-&gt;posts.comment_status = &#039;open&#039;&quot;;
+			} else {
+				$where .= &quot; AND $wpdb-&gt;posts.comment_status = &#039;closed&#039;&quot;;
+			}
+		}
+
+		return $where;
+	}
+
+	/**
+	 * Get valid WP_Query args from a WC_Product_Query&#039;s query variables.
+	 *
+	 * @since 3.2.0
+	 * @param array $query_vars Query vars from a WC_Product_Query.
+	 * @return array
+	 */
+	protected function get_wp_query_args( $query_vars ) {
+
+		// Map query vars to ones that get_wp_query_args or WP_Query recognize.
+		$key_mapping = array(
+			&#039;status&#039;         =&gt; &#039;post_status&#039;,
+			&#039;page&#039;           =&gt; &#039;paged&#039;,
+			&#039;include&#039;        =&gt; &#039;post__in&#039;,
+			&#039;stock_quantity&#039; =&gt; &#039;stock&#039;,
+			&#039;average_rating&#039; =&gt; &#039;wc_average_rating&#039;,
+			&#039;review_count&#039;   =&gt; &#039;wc_review_count&#039;,
+		);
+		foreach ( $key_mapping as $query_key =&gt; $db_key ) {
+			if ( isset( $query_vars[ $query_key ] ) ) {
+				$query_vars[ $db_key ] = $query_vars[ $query_key ];
+				unset( $query_vars[ $query_key ] );
+			}
+		}
+
+		// Map boolean queries that are stored as &#039;yes&#039;/&#039;no&#039; in the DB to &#039;yes&#039; or &#039;no&#039;.
+		$boolean_queries = array(
+			&#039;virtual&#039;,
+			&#039;downloadable&#039;,
+			&#039;sold_individually&#039;,
+			&#039;manage_stock&#039;,
+		);
+		foreach ( $boolean_queries as $boolean_query ) {
+			if ( isset( $query_vars[ $boolean_query ] ) &amp;&amp; &#039;&#039; !== $query_vars[ $boolean_query ] ) {
+				$query_vars[ $boolean_query ] = $query_vars[ $boolean_query ] ? &#039;yes&#039; : &#039;no&#039;;
+			}
+		}
+
+		// These queries cannot be auto-generated so we have to remove them and build them manually.
+		$manual_queries = array(
+			&#039;sku&#039;        =&gt; &#039;&#039;,
+			&#039;featured&#039;   =&gt; &#039;&#039;,
+			&#039;visibility&#039; =&gt; &#039;&#039;,
+		);
+		foreach ( $manual_queries as $key =&gt; $manual_query ) {
+			if ( isset( $query_vars[ $key ] ) ) {
+				$manual_queries[ $key ] = $query_vars[ $key ];
+				unset( $query_vars[ $key ] );
+			}
+		}
+
+		$wp_query_args = parent::get_wp_query_args( $query_vars );
+
+		if ( ! isset( $wp_query_args[&#039;date_query&#039;] ) ) {
+			$wp_query_args[&#039;date_query&#039;] = array();
+		}
+		if ( ! isset( $wp_query_args[&#039;meta_query&#039;] ) ) {
+			$wp_query_args[&#039;meta_query&#039;] = array(); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		}
+
+		// Handle product types.
+		if ( &#039;variation&#039; === $query_vars[&#039;type&#039;] ) {
+			$wp_query_args[&#039;post_type&#039;] = &#039;product_variation&#039;;
+		} elseif ( is_array( $query_vars[&#039;type&#039;] ) &amp;&amp; in_array( &#039;variation&#039;, $query_vars[&#039;type&#039;], true ) ) {
+			$wp_query_args[&#039;post_type&#039;]   = array( &#039;product_variation&#039;, &#039;product&#039; );
+			$wp_query_args[&#039;tax_query&#039;][] = array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+				&#039;relation&#039; =&gt; &#039;OR&#039;,
+				array(
+					&#039;taxonomy&#039; =&gt; &#039;product_type&#039;,
+					&#039;field&#039;    =&gt; &#039;slug&#039;,
+					&#039;terms&#039;    =&gt; $query_vars[&#039;type&#039;],
+				),
+				array(
+					&#039;taxonomy&#039; =&gt; &#039;product_type&#039;,
+					&#039;field&#039;    =&gt; &#039;id&#039;,
+					&#039;operator&#039; =&gt; &#039;NOT EXISTS&#039;,
+				),
+			);
+		} else {
+			$wp_query_args[&#039;post_type&#039;]   = &#039;product&#039;;
+			$wp_query_args[&#039;tax_query&#039;][] = array(
+				&#039;taxonomy&#039; =&gt; &#039;product_type&#039;,
+				&#039;field&#039;    =&gt; &#039;slug&#039;,
+				&#039;terms&#039;    =&gt; $query_vars[&#039;type&#039;],
+			);
+		}
+
+		// Handle product categories.
+		if ( ! empty( $query_vars[&#039;category&#039;] ) ) {
+			$wp_query_args[&#039;tax_query&#039;][] = array(
+				&#039;taxonomy&#039; =&gt; &#039;product_cat&#039;,
+				&#039;field&#039;    =&gt; &#039;slug&#039;,
+				&#039;terms&#039;    =&gt; $query_vars[&#039;category&#039;],
+			);
+		}
+
+		// Handle product tags.
+		if ( ! empty( $query_vars[&#039;tag&#039;] ) ) {
+			unset( $wp_query_args[&#039;tag&#039;] );
+			$wp_query_args[&#039;tax_query&#039;][] = array(
+				&#039;taxonomy&#039; =&gt; &#039;product_tag&#039;,
+				&#039;field&#039;    =&gt; &#039;slug&#039;,
+				&#039;terms&#039;    =&gt; $query_vars[&#039;tag&#039;],
+			);
+		}
+
+		// Handle shipping classes.
+		if ( ! empty( $query_vars[&#039;shipping_class&#039;] ) ) {
+			$wp_query_args[&#039;tax_query&#039;][] = array(
+				&#039;taxonomy&#039; =&gt; &#039;product_shipping_class&#039;,
+				&#039;field&#039;    =&gt; &#039;slug&#039;,
+				&#039;terms&#039;    =&gt; $query_vars[&#039;shipping_class&#039;],
+			);
+		}
+
+		// Handle total_sales.
+		// This query doesn&#039;t get auto-generated since the meta key doesn&#039;t have the underscore prefix.
+		if ( isset( $query_vars[&#039;total_sales&#039;] ) &amp;&amp; &#039;&#039; !== $query_vars[&#039;total_sales&#039;] ) {
+			$wp_query_args[&#039;meta_query&#039;][] = array(
+				&#039;key&#039;     =&gt; &#039;total_sales&#039;,
+				&#039;value&#039;   =&gt; absint( $query_vars[&#039;total_sales&#039;] ),
+				&#039;compare&#039; =&gt; &#039;=&#039;,
+			);
+		}
+
+		// Handle SKU.
+		if ( $manual_queries[&#039;sku&#039;] ) {
+			// Check for existing values if wildcard is used.
+			if ( &#039;*&#039; === $manual_queries[&#039;sku&#039;] ) {
+				$wp_query_args[&#039;meta_query&#039;][] = array(
+					array(
+						&#039;key&#039;     =&gt; &#039;_sku&#039;,
+						&#039;compare&#039; =&gt; &#039;EXISTS&#039;,
+					),
+					array(
+						&#039;key&#039;     =&gt; &#039;_sku&#039;,
+						&#039;value&#039;   =&gt; &#039;&#039;,
+						&#039;compare&#039; =&gt; &#039;!=&#039;,
+					),
+				);
+			} else {
+				$wp_query_args[&#039;meta_query&#039;][] = array(
+					&#039;key&#039;     =&gt; &#039;_sku&#039;,
+					&#039;value&#039;   =&gt; $manual_queries[&#039;sku&#039;],
+					&#039;compare&#039; =&gt; &#039;LIKE&#039;,
+				);
+			}
+		}
+
+		// Handle featured.
+		if ( &#039;&#039; !== $manual_queries[&#039;featured&#039;] ) {
+			$product_visibility_term_ids = wc_get_product_visibility_term_ids();
+			if ( $manual_queries[&#039;featured&#039;] ) {
+				$wp_query_args[&#039;tax_query&#039;][] = array(
+					&#039;taxonomy&#039; =&gt; &#039;product_visibility&#039;,
+					&#039;field&#039;    =&gt; &#039;term_taxonomy_id&#039;,
+					&#039;terms&#039;    =&gt; array( $product_visibility_term_ids[&#039;featured&#039;] ),
+				);
+				$wp_query_args[&#039;tax_query&#039;][] = array(
+					&#039;taxonomy&#039; =&gt; &#039;product_visibility&#039;,
+					&#039;field&#039;    =&gt; &#039;term_taxonomy_id&#039;,
+					&#039;terms&#039;    =&gt; array( $product_visibility_term_ids[&#039;exclude-from-catalog&#039;] ),
+					&#039;operator&#039; =&gt; &#039;NOT IN&#039;,
+				);
+			} else {
+				$wp_query_args[&#039;tax_query&#039;][] = array(
+					&#039;taxonomy&#039; =&gt; &#039;product_visibility&#039;,
+					&#039;field&#039;    =&gt; &#039;term_taxonomy_id&#039;,
+					&#039;terms&#039;    =&gt; array( $product_visibility_term_ids[&#039;featured&#039;] ),
+					&#039;operator&#039; =&gt; &#039;NOT IN&#039;,
+				);
+			}
+		}
+
+		// Handle visibility.
+		if ( $manual_queries[&#039;visibility&#039;] ) {
+			switch ( $manual_queries[&#039;visibility&#039;] ) {
+				case &#039;search&#039;:
+					$wp_query_args[&#039;tax_query&#039;][] = array(
+						&#039;taxonomy&#039; =&gt; &#039;product_visibility&#039;,
+						&#039;field&#039;    =&gt; &#039;slug&#039;,
+						&#039;terms&#039;    =&gt; array( &#039;exclude-from-search&#039; ),
+						&#039;operator&#039; =&gt; &#039;NOT IN&#039;,
+					);
+					break;
+				case &#039;catalog&#039;:
+					$wp_query_args[&#039;tax_query&#039;][] = array(
+						&#039;taxonomy&#039; =&gt; &#039;product_visibility&#039;,
+						&#039;field&#039;    =&gt; &#039;slug&#039;,
+						&#039;terms&#039;    =&gt; array( &#039;exclude-from-catalog&#039; ),
+						&#039;operator&#039; =&gt; &#039;NOT IN&#039;,
+					);
+					break;
+				case &#039;visible&#039;:
+					$wp_query_args[&#039;tax_query&#039;][] = array(
+						&#039;taxonomy&#039; =&gt; &#039;product_visibility&#039;,
+						&#039;field&#039;    =&gt; &#039;slug&#039;,
+						&#039;terms&#039;    =&gt; array( &#039;exclude-from-catalog&#039;, &#039;exclude-from-search&#039; ),
+						&#039;operator&#039; =&gt; &#039;NOT IN&#039;,
+					);
+					break;
+				case &#039;hidden&#039;:
+					$wp_query_args[&#039;tax_query&#039;][] = array(
+						&#039;taxonomy&#039; =&gt; &#039;product_visibility&#039;,
+						&#039;field&#039;    =&gt; &#039;slug&#039;,
+						&#039;terms&#039;    =&gt; array( &#039;exclude-from-catalog&#039;, &#039;exclude-from-search&#039; ),
+						&#039;operator&#039; =&gt; &#039;AND&#039;,
+					);
+					break;
+			}
+		}
+
+		// Handle date queries.
+		$date_queries = array(
+			&#039;date_created&#039;      =&gt; &#039;post_date&#039;,
+			&#039;date_modified&#039;     =&gt; &#039;post_modified&#039;,
+			&#039;date_on_sale_from&#039; =&gt; &#039;_sale_price_dates_from&#039;,
+			&#039;date_on_sale_to&#039;   =&gt; &#039;_sale_price_dates_to&#039;,
+		);
+		foreach ( $date_queries as $query_var_key =&gt; $db_key ) {
+			if ( isset( $query_vars[ $query_var_key ] ) &amp;&amp; &#039;&#039; !== $query_vars[ $query_var_key ] ) {
+
+				// Remove any existing meta queries for the same keys to prevent conflicts.
+				$existing_queries = wp_list_pluck( $wp_query_args[&#039;meta_query&#039;], &#039;key&#039;, true );
+				foreach ( $existing_queries as $query_index =&gt; $query_contents ) {
+					unset( $wp_query_args[&#039;meta_query&#039;][ $query_index ] );
+				}
+
+				$wp_query_args = $this-&gt;parse_date_for_wp_query( $query_vars[ $query_var_key ], $db_key, $wp_query_args );
+			}
+		}
+
+		// Handle paginate.
+		if ( ! isset( $query_vars[&#039;paginate&#039;] ) || ! $query_vars[&#039;paginate&#039;] ) {
+			$wp_query_args[&#039;no_found_rows&#039;] = true;
+		}
+
+		// Handle reviews_allowed.
+		if ( isset( $query_vars[&#039;reviews_allowed&#039;] ) &amp;&amp; is_bool( $query_vars[&#039;reviews_allowed&#039;] ) ) {
+			add_filter( &#039;posts_where&#039;, array( $this, &#039;reviews_allowed_query_where&#039; ), 10, 2 );
+		}
+
+		// Handle orderby.
+		if ( isset( $query_vars[&#039;orderby&#039;] ) &amp;&amp; &#039;include&#039; === $query_vars[&#039;orderby&#039;] ) {
+			$wp_query_args[&#039;orderby&#039;] = &#039;post__in&#039;;
+		}
+
+		return apply_filters( &#039;woocommerce_product_data_store_cpt_get_products_query&#039;, $wp_query_args, $query_vars, $this );
+	}
+
+	/**
+	 * Query for Products matching specific criteria.
+	 *
+	 * @since 3.2.0
+	 *
+	 * @param array $query_vars Query vars from a WC_Product_Query.
+	 *
+	 * @return array|object
+	 */
+	public function query( $query_vars ) {
+		$args = $this-&gt;get_wp_query_args( $query_vars );
+
+		if ( ! empty( $args[&#039;errors&#039;] ) ) {
+			$query = (object) array(
+				&#039;posts&#039;         =&gt; array(),
+				&#039;found_posts&#039;   =&gt; 0,
+				&#039;max_num_pages&#039; =&gt; 0,
+			);
+		} else {
+			$query = new WP_Query( $args );
+		}
+
+		if ( isset( $query_vars[&#039;return&#039;] ) &amp;&amp; &#039;objects&#039; === $query_vars[&#039;return&#039;] &amp;&amp; ! empty( $query-&gt;posts ) ) {
+			// Prime caches before grabbing objects.
+			update_post_caches( $query-&gt;posts, array( &#039;product&#039;, &#039;product_variation&#039; ) );
+		}
+
+		$products = ( isset( $query_vars[&#039;return&#039;] ) &amp;&amp; &#039;ids&#039; === $query_vars[&#039;return&#039;] ) ? $query-&gt;posts : array_filter( array_map( &#039;wc_get_product&#039;, $query-&gt;posts ) );
+
+		if ( isset( $query_vars[&#039;paginate&#039;] ) &amp;&amp; $query_vars[&#039;paginate&#039;] ) {
+			return (object) array(
+				&#039;products&#039;      =&gt; $products,
+				&#039;total&#039;         =&gt; $query-&gt;found_posts,
+				&#039;max_num_pages&#039; =&gt; $query-&gt;max_num_pages,
+			);
+		}
+
+		return $products;
+	}
+
+	/**
+	 * Get data to save to a lookup table.
+	 *
+	 * @since 3.6.0
+	 * @param int    $id ID of object to update.
+	 * @param string $table Lookup table name.
+	 * @return array
+	 */
+	protected function get_data_for_lookup_table( $id, $table ) {
+		if ( &#039;wc_product_meta_lookup&#039; === $table ) {
+			$price_meta   = (array) get_post_meta( $id, &#039;_price&#039;, false );
+			$manage_stock = get_post_meta( $id, &#039;_manage_stock&#039;, true );
+			$stock        = &#039;yes&#039; === $manage_stock ? wc_stock_amount( get_post_meta( $id, &#039;_stock&#039;, true ) ) : null;
+			$price        = wc_format_decimal( get_post_meta( $id, &#039;_price&#039;, true ) );
+			$sale_price   = wc_format_decimal( get_post_meta( $id, &#039;_sale_price&#039;, true ) );
+			return array(
+				&#039;product_id&#039;     =&gt; absint( $id ),
+				&#039;sku&#039;            =&gt; get_post_meta( $id, &#039;_sku&#039;, true ),
+				&#039;virtual&#039;        =&gt; &#039;yes&#039; === get_post_meta( $id, &#039;_virtual&#039;, true ) ? 1 : 0,
+				&#039;downloadable&#039;   =&gt; &#039;yes&#039; === get_post_meta( $id, &#039;_downloadable&#039;, true ) ? 1 : 0,
+				&#039;min_price&#039;      =&gt; reset( $price_meta ),
+				&#039;max_price&#039;      =&gt; end( $price_meta ),
+				&#039;onsale&#039;         =&gt; $sale_price &amp;&amp; $price === $sale_price ? 1 : 0,
+				&#039;stock_quantity&#039; =&gt; $stock,
+				&#039;stock_status&#039;   =&gt; get_post_meta( $id, &#039;_stock_status&#039;, true ),
+				&#039;rating_count&#039;   =&gt; array_sum( (array) get_post_meta( $id, &#039;_wc_rating_count&#039;, true ) ),
+				&#039;average_rating&#039; =&gt; get_post_meta( $id, &#039;_wc_average_rating&#039;, true ),
+				&#039;total_sales&#039;    =&gt; get_post_meta( $id, &#039;total_sales&#039;, true ),
+				&#039;tax_status&#039;     =&gt; get_post_meta( $id, &#039;_tax_status&#039;, true ),
+				&#039;tax_class&#039;      =&gt; get_post_meta( $id, &#039;_tax_class&#039;, true ),
+			);
+		}
+		return array();
+	}
+
+	/**
+	 * Get primary key name for lookup table.
+	 *
+	 * @since 3.6.0
+	 * @param string $table Lookup table name.
+	 * @return string
+	 */
+	protected function get_primary_key_for_lookup_table( $table ) {
+		if ( &#039;wc_product_meta_lookup&#039; === $table ) {
+			return &#039;product_id&#039;;
+		}
+		return &#039;&#039;;
+	}
+
+	/**
+	 * Returns query statement for getting current `_stock` of a product.
+	 *
+	 * @internal MAX function below is used to make sure result is a scalar.
+	 * @param int $product_id Product ID.
+	 * @return string|void Query statement.
+	 */
+	public function get_query_for_stock( $product_id ) {
+		global $wpdb;
+		return $wpdb-&gt;prepare(
+			&quot;
+			SELECT COALESCE ( MAX( meta_value ), 0 ) FROM $wpdb-&gt;postmeta as meta_table
+			WHERE meta_table.meta_key = &#039;_stock&#039;
+			AND meta_table.post_id = %d
+			&quot;,
+			$product_id
+		);
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

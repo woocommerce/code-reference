@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866946">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866946">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-meta-box-product-data.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Product Data
+ *
+ * Displays the product data box, tabbed, with several panels covering price, stock etc.
+ *
+ * @package  WooCommerce\Admin\Meta Boxes
+ * @version  3.0.0
+ */
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * WC_Meta_Box_Product_Data Class.
+ */
+class WC_Meta_Box_Product_Data {
+
+	/**
+	 * Output the metabox.
+	 *
+	 * @param WP_Post $post Post object.
+	 */
+	public static function output( $post ) {
+		global $thepostid, $product_object;
+
+		$thepostid      = $post-&gt;ID;
+		$product_object = $thepostid ? wc_get_product( $thepostid ) : new WC_Product();
+
+		wp_nonce_field( &#039;woocommerce_save_data&#039;, &#039;woocommerce_meta_nonce&#039; );
+
+		include __DIR__ . &#039;/views/html-product-data-panel.php&#039;;
+	}
+
+	/**
+	 * Show tab content/settings.
+	 */
+	private static function output_tabs() {
+		global $post, $thepostid, $product_object;
+
+		include __DIR__ . &#039;/views/html-product-data-general.php&#039;;
+		include __DIR__ . &#039;/views/html-product-data-inventory.php&#039;;
+		include __DIR__ . &#039;/views/html-product-data-shipping.php&#039;;
+		include __DIR__ . &#039;/views/html-product-data-linked-products.php&#039;;
+		include __DIR__ . &#039;/views/html-product-data-attributes.php&#039;;
+		include __DIR__ . &#039;/views/html-product-data-advanced.php&#039;;
+	}
+
+	/**
+	 * Return array of product type options.
+	 *
+	 * @return array
+	 */
+	private static function get_product_type_options() {
+		/* phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment */
+		return apply_filters(
+			&#039;product_type_options&#039;,
+			wc_get_default_product_type_options(),
+		);
+		/* phpcs: enable */
+	}
+
+	/**
+	 * Return array of tabs to show.
+	 *
+	 * @return array
+	 */
+	private static function get_product_data_tabs() {
+		/* phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment */
+		$tabs = apply_filters(
+			&#039;woocommerce_product_data_tabs&#039;,
+			array(
+				&#039;general&#039;        =&gt; array(
+					&#039;label&#039;    =&gt; __( &#039;General&#039;, &#039;woocommerce&#039; ),
+					&#039;target&#039;   =&gt; &#039;general_product_data&#039;,
+					&#039;class&#039;    =&gt; array( &#039;hide_if_grouped&#039; ),
+					&#039;priority&#039; =&gt; 10,
+				),
+				&#039;inventory&#039;      =&gt; array(
+					&#039;label&#039;    =&gt; __( &#039;Inventory&#039;, &#039;woocommerce&#039; ),
+					&#039;target&#039;   =&gt; &#039;inventory_product_data&#039;,
+					&#039;class&#039;    =&gt; array( &#039;show_if_simple&#039;, &#039;show_if_variable&#039;, &#039;show_if_grouped&#039;, &#039;show_if_external&#039; ),
+					&#039;priority&#039; =&gt; 20,
+				),
+				&#039;shipping&#039;       =&gt; array(
+					&#039;label&#039;    =&gt; __( &#039;Shipping&#039;, &#039;woocommerce&#039; ),
+					&#039;target&#039;   =&gt; &#039;shipping_product_data&#039;,
+					&#039;class&#039;    =&gt; array( &#039;hide_if_virtual&#039;, &#039;hide_if_grouped&#039;, &#039;hide_if_external&#039; ),
+					&#039;priority&#039; =&gt; 30,
+				),
+				&#039;linked_product&#039; =&gt; array(
+					&#039;label&#039;    =&gt; __( &#039;Linked Products&#039;, &#039;woocommerce&#039; ),
+					&#039;target&#039;   =&gt; &#039;linked_product_data&#039;,
+					&#039;class&#039;    =&gt; array(),
+					&#039;priority&#039; =&gt; 40,
+				),
+				&#039;attribute&#039;      =&gt; array(
+					&#039;label&#039;    =&gt; __( &#039;Attributes&#039;, &#039;woocommerce&#039; ),
+					&#039;target&#039;   =&gt; &#039;product_attributes&#039;,
+					&#039;class&#039;    =&gt; array(),
+					&#039;priority&#039; =&gt; 50,
+				),
+				&#039;variations&#039;     =&gt; array(
+					&#039;label&#039;    =&gt; __( &#039;Variations&#039;, &#039;woocommerce&#039; ),
+					&#039;target&#039;   =&gt; &#039;variable_product_options&#039;,
+					&#039;class&#039;    =&gt; array( &#039;show_if_variable&#039; ),
+					&#039;priority&#039; =&gt; 60,
+				),
+				&#039;advanced&#039;       =&gt; array(
+					&#039;label&#039;    =&gt; __( &#039;Advanced&#039;, &#039;woocommerce&#039; ),
+					&#039;target&#039;   =&gt; &#039;advanced_product_data&#039;,
+					&#039;class&#039;    =&gt; array(),
+					&#039;priority&#039; =&gt; 70,
+				),
+			)
+		);
+		/* phpcs: enable */
+
+		// Sort tabs based on priority.
+		uasort( $tabs, array( __CLASS__, &#039;product_data_tabs_sort&#039; ) );
+
+		return $tabs;
+	}
+
+	/**
+	 * Callback to sort product data tabs on priority.
+	 *
+	 * @since 3.1.0
+	 * @param int $a First item.
+	 * @param int $b Second item.
+	 *
+	 * @return bool
+	 */
+	private static function product_data_tabs_sort( $a, $b ) {
+		if ( ! isset( $a[&#039;priority&#039;], $b[&#039;priority&#039;] ) ) {
+			return -1;
+		}
+
+		if ( $a[&#039;priority&#039;] === $b[&#039;priority&#039;] ) {
+			return 0;
+		}
+
+		return $a[&#039;priority&#039;] &lt; $b[&#039;priority&#039;] ? -1 : 1;
+	}
+
+	/**
+	 * Filter callback for finding variation attributes.
+	 *
+	 * @param  WC_Product_Attribute $attribute Product attribute.
+	 * @return bool
+	 */
+	private static function filter_variation_attributes( $attribute ) {
+		return true === $attribute-&gt;get_variation();
+	}
+
+	/**
+	 * Filter callback for finding non-variation attributes.
+	 *
+	 * @param  WC_Product_Attribute $attribute Product attribute.
+	 * @return bool
+	 */
+	private static function filter_non_variation_attributes( $attribute ) {
+		return false === $attribute-&gt;get_variation();
+	}
+
+	/**
+	 * Show options for the variable product type.
+	 */
+	public static function output_variations() {
+		global $post, $wpdb, $product_object;
+
+		/* phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment */
+		$variation_attributes   = array_filter( $product_object-&gt;get_attributes(), array( __CLASS__, &#039;filter_variation_attributes&#039; ) );
+		$default_attributes     = $product_object-&gt;get_default_attributes();
+		$variations_count       = absint( apply_filters( &#039;woocommerce_admin_meta_boxes_variations_count&#039;, $wpdb-&gt;get_var( $wpdb-&gt;prepare( &quot;SELECT COUNT(ID) FROM $wpdb-&gt;posts WHERE post_parent = %d AND post_type = &#039;product_variation&#039; AND post_status IN (&#039;publish&#039;, &#039;private&#039;)&quot;, $post-&gt;ID ) ), $post-&gt;ID ) );
+		$variations_per_page    = absint( apply_filters( &#039;woocommerce_admin_meta_boxes_variations_per_page&#039;, 15 ) );
+		$variations_total_pages = ceil( $variations_count / $variations_per_page );
+		$modal_title            = get_bloginfo( &#039;name&#039; ) . __( &#039; says&#039;, &#039;woocommerce&#039; );
+		/* phpcs: enable */
+
+		include __DIR__ . &#039;/views/html-product-data-variations.php&#039;;
+	}
+
+	/**
+	 * Prepare downloads for save.
+	 *
+	 * @param array $file_names File names.
+	 * @param array $file_urls File urls.
+	 * @param array $file_hashes File hashes.
+	 *
+	 * @return array
+	 */
+	private static function prepare_downloads( $file_names, $file_urls, $file_hashes ) {
+		$downloads = array();
+
+		if ( ! empty( $file_urls ) ) {
+			$file_url_size = count( $file_urls );
+
+			for ( $i = 0; $i &lt; $file_url_size; $i ++ ) {
+				if ( ! empty( $file_urls[ $i ] ) ) {
+					$downloads[] = array(
+						&#039;name&#039;        =&gt; wc_clean( $file_names[ $i ] ),
+						&#039;file&#039;        =&gt; wp_unslash( trim( $file_urls[ $i ] ) ),
+						&#039;download_id&#039; =&gt; wc_clean( $file_hashes[ $i ] ),
+					);
+				}
+			}
+		}
+		return $downloads;
+	}
+
+	/**
+	 * Prepare children for save.
+	 *
+	 * @return array
+	 */
+	private static function prepare_children() {
+		return isset( $_POST[&#039;grouped_products&#039;] ) ? array_filter( array_map( &#039;intval&#039;, (array) $_POST[&#039;grouped_products&#039;] ) ) : array(); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+	}
+
+	/**
+	 * Prepare attributes for save.
+	 *
+	 * @param array $data Attribute data.
+	 *
+	 * @return array
+	 */
+	public static function prepare_attributes( $data = false ) {
+		$attributes = array();
+
+		if ( ! $data ) {
+			$data = stripslashes_deep( $_POST ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+		}
+
+		if ( isset( $data[&#039;attribute_names&#039;], $data[&#039;attribute_values&#039;] ) ) {
+			$attribute_names         = $data[&#039;attribute_names&#039;];
+			$attribute_values        = $data[&#039;attribute_values&#039;];
+			$attribute_visibility    = isset( $data[&#039;attribute_visibility&#039;] ) ? $data[&#039;attribute_visibility&#039;] : array();
+			$attribute_variation     = isset( $data[&#039;attribute_variation&#039;] ) ? $data[&#039;attribute_variation&#039;] : array();
+			$attribute_position      = $data[&#039;attribute_position&#039;];
+			$attribute_names_max_key = max( array_keys( $attribute_names ) );
+
+			for ( $i = 0; $i &lt;= $attribute_names_max_key; $i++ ) {
+				if ( empty( $attribute_names[ $i ] ) || ! isset( $attribute_values[ $i ] ) ) {
+					continue;
+				}
+				$attribute_id   = 0;
+				$attribute_name = wc_clean( esc_html( $attribute_names[ $i ] ) );
+
+				if ( &#039;pa_&#039; === substr( $attribute_name, 0, 3 ) ) {
+					$attribute_id = wc_attribute_taxonomy_id_by_name( $attribute_name );
+				}
+
+				$options = isset( $attribute_values[ $i ] ) ? $attribute_values[ $i ] : &#039;&#039;;
+
+				if ( is_array( $options ) ) {
+					// Term ids sent as array.
+					$options = wp_parse_id_list( $options );
+				} else {
+					// Terms or text sent in textarea.
+					$options = 0 &lt; $attribute_id ? wc_sanitize_textarea( esc_html( wc_sanitize_term_text_based( $options ) ) ) : wc_sanitize_textarea( esc_html( $options ) );
+					$options = wc_get_text_attributes( $options );
+				}
+
+				if ( empty( $options ) ) {
+					continue;
+				}
+
+				$attribute = new WC_Product_Attribute();
+				$attribute-&gt;set_id( $attribute_id );
+				$attribute-&gt;set_name( $attribute_name );
+				$attribute-&gt;set_options( $options );
+				$attribute-&gt;set_position( $attribute_position[ $i ] );
+				$attribute-&gt;set_visible( isset( $attribute_visibility[ $i ] ) );
+				$attribute-&gt;set_variation( isset( $attribute_variation[ $i ] ) );
+				/* phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment */
+				$attributes[] = apply_filters( &#039;woocommerce_admin_meta_boxes_prepare_attribute&#039;, $attribute, $data, $i );
+				/* phpcs: enable */
+			}
+		}
+		return $attributes;
+	}
+
+	/**
+	 * Prepare attributes for a specific variation or defaults.
+	 *
+	 * @param  array  $all_attributes List of attribute keys.
+	 * @param  string $key_prefix Attribute key prefix.
+	 * @param  int    $index Attribute array index.
+	 * @return array
+	 */
+	private static function prepare_set_attributes( $all_attributes, $key_prefix = &#039;attribute_&#039;, $index = null ) {
+		$attributes = array();
+
+		if ( $all_attributes ) {
+			foreach ( $all_attributes as $attribute ) {
+				if ( $attribute-&gt;get_variation() ) {
+					$attribute_key = sanitize_title( $attribute-&gt;get_name() );
+
+					if ( ! is_null( $index ) ) {
+						$value = isset( $_POST[ $key_prefix . $attribute_key ][ $index ] ) ? wp_unslash( $_POST[ $key_prefix . $attribute_key ][ $index ] ) : &#039;&#039;; // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+					} else {
+						$value = isset( $_POST[ $key_prefix . $attribute_key ] ) ? wp_unslash( $_POST[ $key_prefix . $attribute_key ] ) : &#039;&#039;; // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+					}
+
+					if ( $attribute-&gt;is_taxonomy() ) {
+						// Don&#039;t use wc_clean as it destroys sanitized characters.
+						$value = sanitize_title( $value );
+					} else {
+						$value = html_entity_decode( wc_clean( $value ), ENT_QUOTES, get_bloginfo( &#039;charset&#039; ) ); // WPCS: sanitization ok.
+					}
+
+					$attributes[ $attribute_key ] = $value;
+				}
+			}
+		}
+
+		return $attributes;
+	}
+
+	/**
+	 * Save meta box data.
+	 *
+	 * @param int     $post_id WP post id.
+	 * @param WP_Post $post Post object.
+	 */
+	public static function save( $post_id, $post ) {
+		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// Process product type first so we have the correct class to run setters.
+		$product_type = empty( $_POST[&#039;product-type&#039;] ) ? WC_Product_Factory::get_product_type( $post_id ) : sanitize_title( wp_unslash( $_POST[&#039;product-type&#039;] ) );
+		$classname    = WC_Product_Factory::get_product_classname( $post_id, $product_type ? $product_type : &#039;simple&#039; );
+		$product      = new $classname( $post_id );
+		$attributes   = self::prepare_attributes();
+		$stock        = null;
+
+		// Handle stock changes.
+		if ( isset( $_POST[&#039;_stock&#039;] ) ) {
+			if ( isset( $_POST[&#039;_original_stock&#039;] ) &amp;&amp; wc_stock_amount( $product-&gt;get_stock_quantity( &#039;edit&#039; ) ) !== wc_stock_amount( wp_unslash( $_POST[&#039;_original_stock&#039;] ) ) ) {
+				/* translators: 1: product ID 2: quantity in stock */
+				WC_Admin_Meta_Boxes::add_error( sprintf( __( &#039;The stock has not been updated because the value has changed since editing. Product %1$d has %2$d units in stock.&#039;, &#039;woocommerce&#039; ), $product-&gt;get_id(), $product-&gt;get_stock_quantity( &#039;edit&#039; ) ) );
+			} else {
+				$stock = wc_stock_amount( wp_unslash( $_POST[&#039;_stock&#039;] ) );
+			}
+		}
+
+		// Handle dates.
+		$date_on_sale_from = &#039;&#039;;
+		$date_on_sale_to   = &#039;&#039;;
+
+		// Force date from to beginning of day.
+		if ( isset( $_POST[&#039;_sale_price_dates_from&#039;] ) ) {
+			$date_on_sale_from = wc_clean( wp_unslash( $_POST[&#039;_sale_price_dates_from&#039;] ) );
+
+			if ( ! empty( $date_on_sale_from ) ) {
+				$date_on_sale_from = date( &#039;Y-m-d 00:00:00&#039;, strtotime( $date_on_sale_from ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+			}
+		}
+
+		// Force date to to the end of the day.
+		if ( isset( $_POST[&#039;_sale_price_dates_to&#039;] ) ) {
+			$date_on_sale_to = wc_clean( wp_unslash( $_POST[&#039;_sale_price_dates_to&#039;] ) );
+
+			if ( ! empty( $date_on_sale_to ) ) {
+				$date_on_sale_to = date( &#039;Y-m-d 23:59:59&#039;, strtotime( $date_on_sale_to ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+			}
+		}
+
+		$errors = $product-&gt;set_props(
+			array(
+				&#039;sku&#039;                =&gt; isset( $_POST[&#039;_sku&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;_sku&#039;] ) ) : null,
+				&#039;purchase_note&#039;      =&gt; isset( $_POST[&#039;_purchase_note&#039;] ) ? wp_kses_post( wp_unslash( $_POST[&#039;_purchase_note&#039;] ) ) : &#039;&#039;,
+				&#039;downloadable&#039;       =&gt; isset( $_POST[&#039;_downloadable&#039;] ),
+				&#039;virtual&#039;            =&gt; isset( $_POST[&#039;_virtual&#039;] ),
+				&#039;featured&#039;           =&gt; isset( $_POST[&#039;_featured&#039;] ),
+				&#039;catalog_visibility&#039; =&gt; isset( $_POST[&#039;_visibility&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;_visibility&#039;] ) ) : null,
+				&#039;tax_status&#039;         =&gt; isset( $_POST[&#039;_tax_status&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;_tax_status&#039;] ) ) : null,
+				&#039;tax_class&#039;          =&gt; isset( $_POST[&#039;_tax_class&#039;] ) ? sanitize_title( wp_unslash( $_POST[&#039;_tax_class&#039;] ) ) : null,
+				&#039;weight&#039;             =&gt; isset( $_POST[&#039;_weight&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;_weight&#039;] ) ) : null,
+				&#039;length&#039;             =&gt; isset( $_POST[&#039;_length&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;_length&#039;] ) ) : null,
+				&#039;width&#039;              =&gt; isset( $_POST[&#039;_width&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;_width&#039;] ) ) : null,
+				&#039;height&#039;             =&gt; isset( $_POST[&#039;_height&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;_height&#039;] ) ) : null,
+				&#039;shipping_class_id&#039;  =&gt; isset( $_POST[&#039;product_shipping_class&#039;] ) ? absint( wp_unslash( $_POST[&#039;product_shipping_class&#039;] ) ) : null,
+				&#039;sold_individually&#039;  =&gt; ! empty( $_POST[&#039;_sold_individually&#039;] ),
+				&#039;upsell_ids&#039;         =&gt; isset( $_POST[&#039;upsell_ids&#039;] ) ? array_map( &#039;intval&#039;, (array) wp_unslash( $_POST[&#039;upsell_ids&#039;] ) ) : array(),
+				&#039;cross_sell_ids&#039;     =&gt; isset( $_POST[&#039;crosssell_ids&#039;] ) ? array_map( &#039;intval&#039;, (array) wp_unslash( $_POST[&#039;crosssell_ids&#039;] ) ) : array(),
+				&#039;regular_price&#039;      =&gt; isset( $_POST[&#039;_regular_price&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;_regular_price&#039;] ) ) : null,
+				&#039;sale_price&#039;         =&gt; isset( $_POST[&#039;_sale_price&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;_sale_price&#039;] ) ) : null,
+				&#039;date_on_sale_from&#039;  =&gt; $date_on_sale_from,
+				&#039;date_on_sale_to&#039;    =&gt; $date_on_sale_to,
+				&#039;manage_stock&#039;       =&gt; ! empty( $_POST[&#039;_manage_stock&#039;] ),
+				&#039;backorders&#039;         =&gt; isset( $_POST[&#039;_backorders&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;_backorders&#039;] ) ) : null,
+				&#039;stock_status&#039;       =&gt; isset( $_POST[&#039;_stock_status&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;_stock_status&#039;] ) ) : null,
+				&#039;stock_quantity&#039;     =&gt; $stock,
+				&#039;low_stock_amount&#039;   =&gt; isset( $_POST[&#039;_low_stock_amount&#039;] ) &amp;&amp; &#039;&#039; !== $_POST[&#039;_low_stock_amount&#039;] ? wc_stock_amount( wp_unslash( $_POST[&#039;_low_stock_amount&#039;] ) ) : &#039;&#039;,
+				&#039;download_limit&#039;     =&gt; isset( $_POST[&#039;_download_limit&#039;] ) &amp;&amp; &#039;&#039; !== $_POST[&#039;_download_limit&#039;] ? absint( wp_unslash( $_POST[&#039;_download_limit&#039;] ) ) : &#039;&#039;,
+				&#039;download_expiry&#039;    =&gt; isset( $_POST[&#039;_download_expiry&#039;] ) &amp;&amp; &#039;&#039; !== $_POST[&#039;_download_expiry&#039;] ? absint( wp_unslash( $_POST[&#039;_download_expiry&#039;] ) ) : &#039;&#039;,
+				// Those are sanitized inside prepare_downloads.
+				&#039;downloads&#039;          =&gt; self::prepare_downloads(
+					isset( $_POST[&#039;_wc_file_names&#039;] ) ? wp_unslash( $_POST[&#039;_wc_file_names&#039;] ) : array(), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+					isset( $_POST[&#039;_wc_file_urls&#039;] ) ? wp_unslash( $_POST[&#039;_wc_file_urls&#039;] ) : array(), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+					isset( $_POST[&#039;_wc_file_hashes&#039;] ) ? wp_unslash( $_POST[&#039;_wc_file_hashes&#039;] ) : array() // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+				),
+				&#039;product_url&#039;        =&gt; isset( $_POST[&#039;_product_url&#039;] ) ? esc_url_raw( wp_unslash( $_POST[&#039;_product_url&#039;] ) ) : &#039;&#039;,
+				&#039;button_text&#039;        =&gt; isset( $_POST[&#039;_button_text&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;_button_text&#039;] ) ) : &#039;&#039;,
+				&#039;children&#039;           =&gt; &#039;grouped&#039; === $product_type ? self::prepare_children() : null,
+				&#039;reviews_allowed&#039;    =&gt; ! empty( $_POST[&#039;comment_status&#039;] ) &amp;&amp; &#039;open&#039; === $_POST[&#039;comment_status&#039;],
+				&#039;attributes&#039;         =&gt; $attributes,
+				&#039;default_attributes&#039; =&gt; self::prepare_set_attributes( $attributes, &#039;default_attribute_&#039; ),
+			)
+		);
+
+		if ( is_wp_error( $errors ) ) {
+			WC_Admin_Meta_Boxes::add_error( $errors-&gt;get_error_message() );
+		}
+
+		/**
+		 * Set props before save.
+		 *
+		 * @since 3.0.0
+		 */
+		do_action( &#039;woocommerce_admin_process_product_object&#039;, $product );
+
+		$product-&gt;save();
+
+		if ( $product-&gt;is_type( &#039;variable&#039; ) ) {
+			$original_post_title = isset( $_POST[&#039;original_post_title&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;original_post_title&#039;] ) ) : &#039;&#039;;
+			$post_title          = isset( $_POST[&#039;post_title&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;post_title&#039;] ) ) : &#039;&#039;;
+
+			$product-&gt;get_data_store()-&gt;sync_variation_names( $product, $original_post_title, $post_title );
+		}
+		/* phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment */
+		do_action( &#039;woocommerce_process_product_meta_&#039; . $product_type, $post_id );
+		/* phpcs:enable WordPress.Security.NonceVerification.Missing and WooCommerce.Commenting.CommentHooks.MissingHookComment */
+	}
+
+	/**
+	 * Save variation meta box data.
+	 *
+	 * @param int     $post_id WP post id.
+	 * @param WP_Post $post Post object.
+	 */
+	public static function save_variations( $post_id, $post ) {
+		global $wpdb;
+
+		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		if ( isset( $_POST[&#039;variable_post_id&#039;] ) ) {
+			$parent = wc_get_product( $post_id );
+			$parent-&gt;set_default_attributes( self::prepare_set_attributes( $parent-&gt;get_attributes(), &#039;default_attribute_&#039; ) );
+			$parent-&gt;save();
+
+			$max_loop   = max( array_keys( wp_unslash( $_POST[&#039;variable_post_id&#039;] ) ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$data_store = $parent-&gt;get_data_store();
+			$data_store-&gt;sort_all_product_variations( $parent-&gt;get_id() );
+			$new_variation_menu_order_id    = ! empty( $_POST[&#039;new_variation_menu_order_id&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;new_variation_menu_order_id&#039;] ) ) : false;
+			$new_variation_menu_order_value = ! empty( $_POST[&#039;new_variation_menu_order_value&#039;] ) ? wc_clean( wp_unslash( $_POST[&#039;new_variation_menu_order_value&#039;] ) ) : false;
+
+			// Only perform this operation if setting menu order via the prompt.
+			if ( $new_variation_menu_order_id &amp;&amp; $new_variation_menu_order_value ) {
+				/*
+				 * We need to gather all the variations with menu order that is
+				 * equal or greater than the menu order that is newly set and
+				 * increment them by one so that we can correctly insert the updated
+				 * variation menu order.
+				 */
+				$wpdb-&gt;query(
+					$wpdb-&gt;prepare(
+						&quot;UPDATE {$wpdb-&gt;posts} SET menu_order = menu_order + 1 WHERE post_type = &#039;product_variation&#039; AND post_parent = %d AND post_status = &#039;publish&#039; AND menu_order &gt;= %d AND ID != %d&quot;,
+						$post_id,
+						$new_variation_menu_order_value,
+						$new_variation_menu_order_id
+					)
+				);
+			}
+
+			for ( $i = 0; $i &lt;= $max_loop; $i++ ) {
+
+				if ( ! isset( $_POST[&#039;variable_post_id&#039;][ $i ] ) ) {
+					continue;
+				}
+				$variation_id = absint( $_POST[&#039;variable_post_id&#039;][ $i ] );
+				$variation    = wc_get_product_object( &#039;variation&#039;, $variation_id );
+				$stock        = null;
+
+				// Handle stock changes.
+				if ( isset( $_POST[&#039;variable_stock&#039;], $_POST[&#039;variable_stock&#039;][ $i ] ) ) {
+					if ( isset( $_POST[&#039;variable_original_stock&#039;], $_POST[&#039;variable_original_stock&#039;][ $i ] ) &amp;&amp; wc_stock_amount( $variation-&gt;get_stock_quantity( &#039;edit&#039; ) ) !== wc_stock_amount( wp_unslash( $_POST[&#039;variable_original_stock&#039;][ $i ] ) ) ) {
+						/* translators: 1: product ID 2: quantity in stock */
+						WC_Admin_Meta_Boxes::add_error( sprintf( __( &#039;The stock has not been updated because the value has changed since editing. Product %1$d has %2$d units in stock.&#039;, &#039;woocommerce&#039; ), $variation-&gt;get_id(), $variation-&gt;get_stock_quantity( &#039;edit&#039; ) ) );
+					} else {
+						$stock = wc_stock_amount( wp_unslash( $_POST[&#039;variable_stock&#039;][ $i ] ) );
+					}
+				}
+
+				// Handle dates.
+				$date_on_sale_from = &#039;&#039;;
+				$date_on_sale_to   = &#039;&#039;;
+
+				// Force date from to beginning of day.
+				if ( isset( $_POST[&#039;variable_sale_price_dates_from&#039;][ $i ] ) ) {
+					$date_on_sale_from = wc_clean( wp_unslash( $_POST[&#039;variable_sale_price_dates_from&#039;][ $i ] ) );
+
+					if ( ! empty( $date_on_sale_from ) ) {
+						$date_on_sale_from = date( &#039;Y-m-d 00:00:00&#039;, strtotime( $date_on_sale_from ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+					}
+				}
+
+				// Force date to to the end of the day.
+				if ( isset( $_POST[&#039;variable_sale_price_dates_to&#039;][ $i ] ) ) {
+					$date_on_sale_to = wc_clean( wp_unslash( $_POST[&#039;variable_sale_price_dates_to&#039;][ $i ] ) );
+
+					if ( ! empty( $date_on_sale_to ) ) {
+						$date_on_sale_to = date( &#039;Y-m-d 23:59:59&#039;, strtotime( $date_on_sale_to ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+					}
+				}
+
+				$errors = $variation-&gt;set_props(
+					array(
+						&#039;status&#039;            =&gt; isset( $_POST[&#039;variable_enabled&#039;][ $i ] ) ? &#039;publish&#039; : &#039;private&#039;,
+						&#039;menu_order&#039;        =&gt; isset( $_POST[&#039;variation_menu_order&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variation_menu_order&#039;][ $i ] ) ) : null,
+						&#039;regular_price&#039;     =&gt; isset( $_POST[&#039;variable_regular_price&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_regular_price&#039;][ $i ] ) ) : null,
+						&#039;sale_price&#039;        =&gt; isset( $_POST[&#039;variable_sale_price&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_sale_price&#039;][ $i ] ) ) : null,
+						&#039;virtual&#039;           =&gt; isset( $_POST[&#039;variable_is_virtual&#039;][ $i ] ),
+						&#039;downloadable&#039;      =&gt; isset( $_POST[&#039;variable_is_downloadable&#039;][ $i ] ),
+						&#039;date_on_sale_from&#039; =&gt; $date_on_sale_from,
+						&#039;date_on_sale_to&#039;   =&gt; $date_on_sale_to,
+						&#039;description&#039;       =&gt; isset( $_POST[&#039;variable_description&#039;][ $i ] ) ? wp_kses_post( wp_unslash( $_POST[&#039;variable_description&#039;][ $i ] ) ) : null,
+						&#039;download_limit&#039;    =&gt; isset( $_POST[&#039;variable_download_limit&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_download_limit&#039;][ $i ] ) ) : null,
+						&#039;download_expiry&#039;   =&gt; isset( $_POST[&#039;variable_download_expiry&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_download_expiry&#039;][ $i ] ) ) : null,
+						// Those are sanitized inside prepare_downloads.
+						&#039;downloads&#039;         =&gt; self::prepare_downloads(
+							isset( $_POST[&#039;_wc_variation_file_names&#039;][ $variation_id ] ) ? wp_unslash( $_POST[&#039;_wc_variation_file_names&#039;][ $variation_id ] ) : array(), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+							isset( $_POST[&#039;_wc_variation_file_urls&#039;][ $variation_id ] ) ? wp_unslash( $_POST[&#039;_wc_variation_file_urls&#039;][ $variation_id ] ) : array(), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+							isset( $_POST[&#039;_wc_variation_file_hashes&#039;][ $variation_id ] ) ? wp_unslash( $_POST[&#039;_wc_variation_file_hashes&#039;][ $variation_id ] ) : array() // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+						),
+						&#039;manage_stock&#039;      =&gt; isset( $_POST[&#039;variable_manage_stock&#039;][ $i ] ),
+						&#039;stock_quantity&#039;    =&gt; $stock,
+						&#039;low_stock_amount&#039;  =&gt; isset( $_POST[&#039;variable_low_stock_amount&#039;][ $i ] ) &amp;&amp; &#039;&#039; !== $_POST[&#039;variable_low_stock_amount&#039;][ $i ] ? wc_stock_amount( wp_unslash( $_POST[&#039;variable_low_stock_amount&#039;][ $i ] ) ) : &#039;&#039;,
+						&#039;backorders&#039;        =&gt; isset( $_POST[&#039;variable_backorders&#039;], $_POST[&#039;variable_backorders&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_backorders&#039;][ $i ] ) ) : null,
+						&#039;stock_status&#039;      =&gt; isset( $_POST[&#039;variable_stock_status&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_stock_status&#039;][ $i ] ) ) : null,
+						&#039;image_id&#039;          =&gt; isset( $_POST[&#039;upload_image_id&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;upload_image_id&#039;][ $i ] ) ) : null,
+						&#039;attributes&#039;        =&gt; self::prepare_set_attributes( $parent-&gt;get_attributes(), &#039;attribute_&#039;, $i ),
+						&#039;sku&#039;               =&gt; isset( $_POST[&#039;variable_sku&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_sku&#039;][ $i ] ) ) : &#039;&#039;,
+						&#039;weight&#039;            =&gt; isset( $_POST[&#039;variable_weight&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_weight&#039;][ $i ] ) ) : &#039;&#039;,
+						&#039;length&#039;            =&gt; isset( $_POST[&#039;variable_length&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_length&#039;][ $i ] ) ) : &#039;&#039;,
+						&#039;width&#039;             =&gt; isset( $_POST[&#039;variable_width&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_width&#039;][ $i ] ) ) : &#039;&#039;,
+						&#039;height&#039;            =&gt; isset( $_POST[&#039;variable_height&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_height&#039;][ $i ] ) ) : &#039;&#039;,
+						&#039;shipping_class_id&#039; =&gt; isset( $_POST[&#039;variable_shipping_class&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_shipping_class&#039;][ $i ] ) ) : null,
+						&#039;tax_class&#039;         =&gt; isset( $_POST[&#039;variable_tax_class&#039;][ $i ] ) ? wc_clean( wp_unslash( $_POST[&#039;variable_tax_class&#039;][ $i ] ) ) : null,
+					)
+				);
+
+				if ( is_wp_error( $errors ) ) {
+					WC_Admin_Meta_Boxes::add_error( $errors-&gt;get_error_message() );
+				}
+
+				/**
+				 * Set variation props before save.
+				 *
+				 * @param object $variation WC_Product_Variation object.
+				 * @param int $i
+				 * @since 3.8.0
+				 */
+				do_action( &#039;woocommerce_admin_process_variation_object&#039;, $variation, $i );
+
+				$variation-&gt;save();
+				/* phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment */
+				do_action( &#039;woocommerce_save_product_variation&#039;, $variation_id, $i );
+				/* phpcs: enable */
+			}
+		}
+		// phpcs:enable WordPress.Security.NonceVerification.Missing
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866946"></script>
+    <script src="../js/search.js?updated=1692866946"></script>
+</body>
+</html>

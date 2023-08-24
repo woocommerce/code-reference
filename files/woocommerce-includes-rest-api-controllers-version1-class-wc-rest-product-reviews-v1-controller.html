@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866948">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866948">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-rest-product-reviews-v1-controller.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * REST API Product Reviews Controller
+ *
+ * Handles requests to /products/&lt;product_id&gt;/reviews.
+ *
+ * @author   WooThemes
+ * @category API
+ * @package WooCommerce\RestApi
+ * @since    3.0.0
+ */
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * REST API Product Reviews Controller Class.
+ *
+ * @package WooCommerce\RestApi
+ * @extends WC_REST_Controller
+ */
+class WC_REST_Product_Reviews_V1_Controller extends WC_REST_Controller {
+
+	/**
+	 * Endpoint namespace.
+	 *
+	 * @var string
+	 */
+	protected $namespace = &#039;wc/v1&#039;;
+
+	/**
+	 * Route base.
+	 *
+	 * @var string
+	 */
+	protected $rest_base = &#039;products/(?P&lt;product_id&gt;[\d]+)/reviews&#039;;
+
+	/**
+	 * Register the routes for product reviews.
+	 */
+	public function register_routes() {
+		register_rest_route( $this-&gt;namespace, &#039;/&#039; . $this-&gt;rest_base, array(
+			&#039;args&#039; =&gt; array(
+				&#039;product_id&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Unique identifier for the variable product.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+				),
+				&#039;id&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Unique identifier for the variation.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+				),
+			),
+			array(
+				&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+				&#039;callback&#039;            =&gt; array( $this, &#039;get_items&#039; ),
+				&#039;permission_callback&#039; =&gt; array( $this, &#039;get_items_permissions_check&#039; ),
+				&#039;args&#039;                =&gt; $this-&gt;get_collection_params(),
+			),
+			array(
+				&#039;methods&#039;             =&gt; WP_REST_Server::CREATABLE,
+				&#039;callback&#039;            =&gt; array( $this, &#039;create_item&#039; ),
+				&#039;permission_callback&#039; =&gt; array( $this, &#039;create_item_permissions_check&#039; ),
+				&#039;args&#039;                =&gt; array_merge( $this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::CREATABLE ), array(
+					&#039;review&#039; =&gt; array(
+						&#039;required&#039;    =&gt; true,
+						&#039;type&#039;        =&gt; &#039;string&#039;,
+						&#039;description&#039; =&gt; __( &#039;Review content.&#039;, &#039;woocommerce&#039; ),
+					),
+					&#039;name&#039; =&gt; array(
+						&#039;required&#039;    =&gt; true,
+						&#039;type&#039;        =&gt; &#039;string&#039;,
+						&#039;description&#039; =&gt; __( &#039;Name of the reviewer.&#039;, &#039;woocommerce&#039; ),
+					),
+					&#039;email&#039; =&gt; array(
+						&#039;required&#039;    =&gt; true,
+						&#039;type&#039;        =&gt; &#039;string&#039;,
+						&#039;description&#039; =&gt; __( &#039;Email of the reviewer.&#039;, &#039;woocommerce&#039; ),
+					),
+				) ),
+			),
+			&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+		) );
+
+		register_rest_route( $this-&gt;namespace, &#039;/&#039; . $this-&gt;rest_base . &#039;/(?P&lt;id&gt;[\d]+)&#039;, array(
+			&#039;args&#039; =&gt; array(
+				&#039;product_id&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Unique identifier for the variable product.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+				),
+				&#039;id&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Unique identifier for the resource.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+				),
+			),
+			array(
+				&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+				&#039;callback&#039;            =&gt; array( $this, &#039;get_item&#039; ),
+				&#039;permission_callback&#039; =&gt; array( $this, &#039;get_item_permissions_check&#039; ),
+				&#039;args&#039;                =&gt; array(
+					&#039;context&#039; =&gt; $this-&gt;get_context_param( array( &#039;default&#039; =&gt; &#039;view&#039; ) ),
+				),
+			),
+			array(
+				&#039;methods&#039;             =&gt; WP_REST_Server::EDITABLE,
+				&#039;callback&#039;            =&gt; array( $this, &#039;update_item&#039; ),
+				&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				&#039;args&#039;                =&gt; $this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::EDITABLE ),
+			),
+			array(
+				&#039;methods&#039;             =&gt; WP_REST_Server::DELETABLE,
+				&#039;callback&#039;            =&gt; array( $this, &#039;delete_item&#039; ),
+				&#039;permission_callback&#039; =&gt; array( $this, &#039;delete_item_permissions_check&#039; ),
+				&#039;args&#039;                =&gt; array(
+					&#039;force&#039; =&gt; array(
+						&#039;default&#039;     =&gt; false,
+						&#039;type&#039;        =&gt; &#039;boolean&#039;,
+						&#039;description&#039; =&gt; __( &#039;Whether to bypass trash and force deletion.&#039;, &#039;woocommerce&#039; ),
+					),
+				),
+			),
+			&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+		) );
+	}
+
+	/**
+	 * Check whether a given request has permission to read webhook deliveries.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function get_items_permissions_check( $request ) {
+		if ( ! wc_rest_check_product_reviews_permissions( &#039;read&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_view&#039;, __( &#039;Sorry, you cannot list resources.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access to read a product review.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function get_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_product_reviews_permissions( &#039;read&#039;, (int) $request[&#039;id&#039;] ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_view&#039;, __( &#039;Sorry, you cannot view this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access to create a new product review.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function create_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_product_reviews_permissions( &#039;create&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_create&#039;, __( &#039;Sorry, you are not allowed to create resources.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access to update a product review.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function update_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_product_reviews_permissions( &#039;edit&#039;, (int) $request[&#039;id&#039;] ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_edit&#039;, __( &#039;Sorry, you cannot edit this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access to delete a product review.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function delete_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_product_reviews_permissions( &#039;delete&#039;, (int) $request[&#039;id&#039;] ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_delete&#039;, __( &#039;Sorry, you cannot delete this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Get all reviews from a product.
+	 *
+	 * @param WP_REST_Request $request
+	 *
+	 * @return array|WP_Error
+	 */
+	public function get_items( $request ) {
+		$product_id = (int) $request[&#039;product_id&#039;];
+
+		if ( &#039;product&#039; !== get_post_type( $product_id ) ) {
+			return new WP_Error( &#039;woocommerce_rest_product_invalid_id&#039;, __( &#039;Invalid product ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$reviews = get_approved_comments( $product_id );
+		$data    = array();
+		foreach ( $reviews as $review_data ) {
+			$review = $this-&gt;prepare_item_for_response( $review_data, $request );
+			$review = $this-&gt;prepare_response_for_collection( $review );
+			$data[] = $review;
+		}
+
+		return rest_ensure_response( $data );
+	}
+
+	/**
+	 * Get a single product review.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function get_item( $request ) {
+		$id         = (int) $request[&#039;id&#039;];
+		$product_id = (int) $request[&#039;product_id&#039;];
+
+		if ( &#039;product&#039; !== get_post_type( $product_id ) ) {
+			return new WP_Error( &#039;woocommerce_rest_product_invalid_id&#039;, __( &#039;Invalid product ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$review = get_comment( $id );
+
+		if ( empty( $id ) || empty( $review ) || intval( $review-&gt;comment_post_ID ) !== $product_id ) {
+			return new WP_Error( &#039;woocommerce_rest_invalid_id&#039;, __( &#039;Invalid resource ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$delivery = $this-&gt;prepare_item_for_response( $review, $request );
+		$response = rest_ensure_response( $delivery );
+
+		return $response;
+	}
+
+
+	/**
+	 * Create a product review.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function create_item( $request ) {
+		$product_id = (int) $request[&#039;product_id&#039;];
+
+		if ( &#039;product&#039; !== get_post_type( $product_id ) ) {
+			return new WP_Error( &#039;woocommerce_rest_product_invalid_id&#039;, __( &#039;Invalid product ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$prepared_review = $this-&gt;prepare_item_for_database( $request );
+
+		/**
+		 * Filter a product review (comment) before it is inserted via the REST API.
+		 *
+		 * Allows modification of the comment right before it is inserted via `wp_insert_comment`.
+		 *
+		 * @param array           $prepared_review The prepared comment data for `wp_insert_comment`.
+		 * @param WP_REST_Request $request          Request used to insert the comment.
+		 */
+		$prepared_review = apply_filters( &#039;rest_pre_insert_product_review&#039;, $prepared_review, $request );
+
+		$product_review_id = wp_insert_comment( $prepared_review );
+		if ( ! $product_review_id ) {
+			return new WP_Error( &#039;rest_product_review_failed_create&#039;, __( &#039;Creating product review failed.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 500 ) );
+		}
+
+		update_comment_meta( $product_review_id, &#039;rating&#039;, ( ! empty( $request[&#039;rating&#039;] ) ? $request[&#039;rating&#039;] : &#039;0&#039; ) );
+
+		$product_review = get_comment( $product_review_id );
+		$this-&gt;update_additional_fields_for_object( $product_review, $request );
+
+		/**
+		 * Fires after a single item is created or updated via the REST API.
+		 *
+		 * @param WP_Comment      $product_review Inserted object.
+		 * @param WP_REST_Request $request        Request object.
+		 * @param boolean         $creating       True when creating item, false when updating.
+		 */
+		do_action( &quot;woocommerce_rest_insert_product_review&quot;, $product_review, $request, true );
+
+		$request-&gt;set_param( &#039;context&#039;, &#039;edit&#039; );
+		$response = $this-&gt;prepare_item_for_response( $product_review, $request );
+		$response = rest_ensure_response( $response );
+		$response-&gt;set_status( 201 );
+		$base = str_replace( &#039;(?P&lt;product_id&gt;[\d]+)&#039;, $product_id, $this-&gt;rest_base );
+		$response-&gt;header( &#039;Location&#039;, rest_url( sprintf( &#039;/%s/%s/%d&#039;, $this-&gt;namespace, $base, $product_review_id ) ) );
+
+		return $response;
+	}
+
+	/**
+	 * Update a single product review.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function update_item( $request ) {
+		$product_review_id = (int) $request[&#039;id&#039;];
+		$product_id        = (int) $request[&#039;product_id&#039;];
+
+		if ( &#039;product&#039; !== get_post_type( $product_id ) ) {
+			return new WP_Error( &#039;woocommerce_rest_product_invalid_id&#039;, __( &#039;Invalid product ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$review = get_comment( $product_review_id );
+
+		if ( empty( $product_review_id ) || empty( $review ) || intval( $review-&gt;comment_post_ID ) !== $product_id ) {
+			return new WP_Error( &#039;woocommerce_rest_product_review_invalid_id&#039;, __( &#039;Invalid resource ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$prepared_review = $this-&gt;prepare_item_for_database( $request );
+
+		$updated = wp_update_comment( $prepared_review );
+		if ( 0 === $updated ) {
+			return new WP_Error( &#039;rest_product_review_failed_edit&#039;, __( &#039;Updating product review failed.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 500 ) );
+		}
+
+		if ( ! empty( $request[&#039;rating&#039;] ) ) {
+			update_comment_meta( $product_review_id, &#039;rating&#039;, $request[&#039;rating&#039;] );
+		}
+
+		$product_review = get_comment( $product_review_id );
+		$this-&gt;update_additional_fields_for_object( $product_review, $request );
+
+		/**
+		 * Fires after a single item is created or updated via the REST API.
+		 *
+		 * @param WP_Comment         $comment      Inserted object.
+		 * @param WP_REST_Request $request   Request object.
+		 * @param boolean         $creating  True when creating item, false when updating.
+		 */
+		do_action( &quot;woocommerce_rest_insert_product_review&quot;, $product_review, $request, true );
+
+		$request-&gt;set_param( &#039;context&#039;, &#039;edit&#039; );
+		$response = $this-&gt;prepare_item_for_response( $product_review, $request );
+
+		return rest_ensure_response( $response );
+	}
+
+	/**
+	 * Delete a product review.
+	 *
+	 * @param WP_REST_Request $request Full details about the request
+	 *
+	 * @return bool|WP_Error|WP_REST_Response
+	 */
+	public function delete_item( $request ) {
+		$product_id        = (int) $request[&#039;product_id&#039;];
+		$product_review_id = (int) $request[&#039;id&#039;];
+		$force             = isset( $request[&#039;force&#039;] ) ? (bool) $request[&#039;force&#039;]     : false;
+
+		if ( &#039;product&#039; !== get_post_type( $product_id ) ) {
+			return new WP_Error( &#039;woocommerce_rest_product_invalid_id&#039;, __( &#039;Invalid product ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$product_review = get_comment( $product_review_id );
+		if ( empty( $product_review_id ) || empty( $product_review-&gt;comment_ID ) || empty( $product_review-&gt;comment_post_ID ) ) {
+			return new WP_Error( &#039;woocommerce_rest_product_review_invalid_id&#039;, __( &#039;Invalid product review ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		/**
+		 * Filter whether a product review is trashable.
+		 *
+		 * Return false to disable trash support for the product review.
+		 *
+		 * @param boolean $supports_trash        Whether the object supports trashing.
+		 * @param WP_Post $product_review        The object being considered for trashing support.
+		 */
+		$supports_trash = apply_filters( &#039;rest_product_review_trashable&#039;, ( EMPTY_TRASH_DAYS &gt; 0 ), $product_review );
+
+		$request-&gt;set_param( &#039;context&#039;, &#039;edit&#039; );
+		$response = $this-&gt;prepare_item_for_response( $product_review, $request );
+
+		if ( $force ) {
+			$result = wp_delete_comment( $product_review_id, true );
+		} else {
+			if ( ! $supports_trash ) {
+				return new WP_Error( &#039;rest_trash_not_supported&#039;, __( &#039;The product review does not support trashing.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 501 ) );
+			}
+
+			if ( &#039;trash&#039; === $product_review-&gt;comment_approved ) {
+				return new WP_Error( &#039;rest_already_trashed&#039;, __( &#039;The comment has already been trashed.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 410 ) );
+			}
+
+			$result = wp_trash_comment( $product_review-&gt;comment_ID );
+		}
+
+		if ( ! $result ) {
+			return new WP_Error( &#039;rest_cannot_delete&#039;, __( &#039;The product review cannot be deleted.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 500 ) );
+		}
+
+		/**
+		 * Fires after a product review is deleted via the REST API.
+		 *
+		 * @param object           $product_review  The deleted item.
+		 * @param WP_REST_Response $response        The response data.
+		 * @param WP_REST_Request  $request         The request sent to the API.
+		 */
+		do_action( &#039;rest_delete_product_review&#039;, $product_review, $response, $request );
+
+		return $response;
+	}
+
+	/**
+	 * Prepare a single product review output for response.
+	 *
+	 * @param WP_Comment $review Product review object.
+	 * @param WP_REST_Request $request Request object.
+	 * @return WP_REST_Response $response Response data.
+	 */
+	public function prepare_item_for_response( $review, $request ) {
+		$data = array(
+			&#039;id&#039;           =&gt; (int) $review-&gt;comment_ID,
+			&#039;date_created&#039; =&gt; wc_rest_prepare_date_response( $review-&gt;comment_date_gmt ),
+			&#039;review&#039;       =&gt; $review-&gt;comment_content,
+			&#039;rating&#039;       =&gt; (int) get_comment_meta( $review-&gt;comment_ID, &#039;rating&#039;, true ),
+			&#039;name&#039;         =&gt; $review-&gt;comment_author,
+			&#039;email&#039;        =&gt; $review-&gt;comment_author_email,
+			&#039;verified&#039;     =&gt; wc_review_is_from_verified_owner( $review-&gt;comment_ID ),
+		);
+
+		$context = ! empty( $request[&#039;context&#039;] ) ? $request[&#039;context&#039;] : &#039;view&#039;;
+		$data    = $this-&gt;add_additional_fields_to_object( $data, $request );
+		$data    = $this-&gt;filter_response_by_context( $data, $context );
+
+		// Wrap the data in a response object.
+		$response = rest_ensure_response( $data );
+
+		$response-&gt;add_links( $this-&gt;prepare_links( $review, $request ) );
+
+		/**
+		 * Filter product reviews object returned from the REST API.
+		 *
+		 * @param WP_REST_Response $response The response object.
+		 * @param WP_Comment       $review   Product review object used to create response.
+		 * @param WP_REST_Request  $request  Request object.
+		 */
+		return apply_filters( &#039;woocommerce_rest_prepare_product_review&#039;, $response, $review, $request );
+	}
+
+	/**
+	 * Prepare a single product review to be inserted into the database.
+	 *
+	 * @param  WP_REST_Request $request Request object.
+	 * @return array|WP_Error  $prepared_review
+	 */
+	protected function prepare_item_for_database( $request ) {
+		$prepared_review = array( &#039;comment_approved&#039; =&gt; 1, &#039;comment_type&#039; =&gt; &#039;review&#039; );
+
+		if ( isset( $request[&#039;id&#039;] ) ) {
+			$prepared_review[&#039;comment_ID&#039;] = (int) $request[&#039;id&#039;];
+		}
+
+		if ( isset( $request[&#039;review&#039;] ) ) {
+			$prepared_review[&#039;comment_content&#039;] = $request[&#039;review&#039;];
+		}
+
+		if ( isset( $request[&#039;product_id&#039;] ) ) {
+			$prepared_review[&#039;comment_post_ID&#039;] = (int) $request[&#039;product_id&#039;];
+		}
+
+		if ( isset( $request[&#039;name&#039;] ) ) {
+			$prepared_review[&#039;comment_author&#039;] = $request[&#039;name&#039;];
+		}
+
+		if ( isset( $request[&#039;email&#039;] ) ) {
+			$prepared_review[&#039;comment_author_email&#039;] = $request[&#039;email&#039;];
+		}
+
+		if ( isset( $request[&#039;date_created&#039;] ) ) {
+			$prepared_review[&#039;comment_date&#039;] = $request[&#039;date_created&#039;];
+		}
+
+		if ( isset( $request[&#039;date_created_gmt&#039;] ) ) {
+			$prepared_review[&#039;comment_date_gmt&#039;] = $request[&#039;date_created_gmt&#039;];
+		}
+
+		return apply_filters( &#039;rest_preprocess_product_review&#039;, $prepared_review, $request );
+	}
+
+	/**
+	 * Prepare links for the request.
+	 *
+	 * @param WP_Comment $review Product review object.
+	 * @param WP_REST_Request $request Request object.
+	 * @return array Links for the given product review.
+	 */
+	protected function prepare_links( $review, $request ) {
+		$product_id = (int) $request[&#039;product_id&#039;];
+		$base       = str_replace( &#039;(?P&lt;product_id&gt;[\d]+)&#039;, $product_id, $this-&gt;rest_base );
+		$links      = array(
+			&#039;self&#039; =&gt; array(
+				&#039;href&#039; =&gt; rest_url( sprintf( &#039;/%s/%s/%d&#039;, $this-&gt;namespace, $base, $review-&gt;comment_ID ) ),
+			),
+			&#039;collection&#039; =&gt; array(
+				&#039;href&#039; =&gt; rest_url( sprintf( &#039;/%s/%s&#039;, $this-&gt;namespace, $base ) ),
+			),
+			&#039;up&#039; =&gt; array(
+				&#039;href&#039; =&gt; rest_url( sprintf( &#039;/%s/products/%d&#039;, $this-&gt;namespace, $product_id ) ),
+			),
+		);
+
+		return $links;
+	}
+
+	/**
+	 * Get the Product Review&#039;s schema, conforming to JSON Schema.
+	 *
+	 * @return array
+	 */
+	public function get_item_schema() {
+		$schema = array(
+			&#039;$schema&#039;    =&gt; &#039;http://json-schema.org/draft-04/schema#&#039;,
+			&#039;title&#039;      =&gt; &#039;product_review&#039;,
+			&#039;type&#039;       =&gt; &#039;object&#039;,
+			&#039;properties&#039; =&gt; array(
+				&#039;id&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Unique identifier for the resource.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;review&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;The content of the review.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;date_created&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;The date the review was created, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;rating&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Review rating (0 to 5).&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;name&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Reviewer name.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;email&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Reviewer email.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;verified&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Shows if the reviewer bought the product or not.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+			),
+		);
+
+		return $this-&gt;add_additional_fields_schema( $schema );
+	}
+
+	/**
+	 * Get the query params for collections.
+	 *
+	 * @return array
+	 */
+	public function get_collection_params() {
+		return array(
+			&#039;context&#039; =&gt; $this-&gt;get_context_param( array( &#039;default&#039; =&gt; &#039;view&#039; ) ),
+		);
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866948"></script>
+    <script src="../js/search.js?updated=1692866948"></script>
+</body>
+</html>

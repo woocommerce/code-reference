@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866948">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866948">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">connect-existing-pages.php</h2>
+
+                
+
+            <section class="phpdocumentor-functions">
+        <h3 class="phpdocumentor-elements__header" id="functions">
+            Functions
+            <a href="#functions" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_admin_get_core_pages_to_connect">
+        wc_admin_get_core_pages_to_connect()
+        <a href="#function_wc_admin_get_core_pages_to_connect" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/react-admin/connect-existing-pages.php"><a href="../files/woocommerce-includes-react-admin-connect-existing-pages.html#source-view.17">includes/react-admin/connect-existing-pages.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">17</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Returns core WC pages to connect to WC-Admin.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_admin_get_core_pages_to_connect</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_admin_filter_core_page_breadcrumbs">
+        wc_admin_filter_core_page_breadcrumbs()
+        <a href="#function_wc_admin_filter_core_page_breadcrumbs" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/react-admin/connect-existing-pages.php"><a href="../files/woocommerce-includes-react-admin-connect-existing-pages.html#source-view.59">includes/react-admin/connect-existing-pages.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">59</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Filter breadcrumbs for core pages that aren&#039;t explicitly connected.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_admin_filter_core_page_breadcrumbs</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$breadcrumbs</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$breadcrumbs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Breadcrumb pieces.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_admin_connect_core_pages">
+        wc_admin_connect_core_pages()
+        <a href="#function_wc_admin_connect_core_pages" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/react-admin/connect-existing-pages.php"><a href="../files/woocommerce-includes-react-admin-connect-existing-pages.html#source-view.108">includes/react-admin/connect-existing-pages.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">108</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Render the WC-Admin header bar on all WooCommerce core pages.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_admin_connect_core_pages</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$is_connected</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$current_page</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$is_connected</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Whether the current page is connected.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$current_page</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The current page, if connected.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+            </section>
+
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Connect existing WooCommerce pages to WooCommerce Admin.
+ *
+ * @package WooCommerce\Admin
+ */
+
+use Automattic\WooCommerce\Admin\PageController;
+use Automattic\WooCommerce\Admin\Features\Features;
+use Automattic\WooCommerce\Utilities\OrderUtil;
+
+/**
+ * Returns core WC pages to connect to WC-Admin.
+ *
+ * @return array
+ */
+function wc_admin_get_core_pages_to_connect() {
+	$all_reports = WC_Admin_Reports::get_reports();
+	$report_tabs = array();
+
+	foreach ( $all_reports as $report_id =&gt; $report_data ) {
+		$report_tabs[ $report_id ] = $report_data[&#039;title&#039;];
+	}
+
+	return array(
+		&#039;wc-addons&#039;   =&gt; array(
+			&#039;title&#039; =&gt; __( &#039;Extensions&#039;, &#039;woocommerce&#039; ),
+			&#039;tabs&#039;  =&gt; array(),
+		),
+		&#039;wc-reports&#039;  =&gt; array(
+			&#039;title&#039; =&gt; __( &#039;Reports&#039;, &#039;woocommerce&#039; ),
+			&#039;tabs&#039;  =&gt; $report_tabs,
+		),
+		&#039;wc-settings&#039; =&gt; array(
+			&#039;title&#039; =&gt; __( &#039;Settings&#039;, &#039;woocommerce&#039; ),
+			&#039;tabs&#039;  =&gt; apply_filters( &#039;woocommerce_settings_tabs_array&#039;, array() ), // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingHookComment
+		),
+		&#039;wc-status&#039;   =&gt; array(
+			&#039;title&#039; =&gt; __( &#039;Status&#039;, &#039;woocommerce&#039; ),
+			// phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingHookComment
+			&#039;tabs&#039;  =&gt; apply_filters(
+				&#039;woocommerce_admin_status_tabs&#039;,
+				array(
+					&#039;status&#039; =&gt; __( &#039;System status&#039;, &#039;woocommerce&#039; ),
+					&#039;tools&#039;  =&gt; __( &#039;Tools&#039;, &#039;woocommerce&#039; ),
+					&#039;logs&#039;   =&gt; __( &#039;Logs&#039;, &#039;woocommerce&#039; ),
+				)
+			),
+		),
+	);
+}
+
+/**
+ * Filter breadcrumbs for core pages that aren&#039;t explicitly connected.
+ *
+ * @param array $breadcrumbs Breadcrumb pieces.
+ * @return array Filtered breadcrumb pieces.
+ */
+function wc_admin_filter_core_page_breadcrumbs( $breadcrumbs ) {
+	$screen_id              = PageController::get_instance()-&gt;get_current_screen_id();
+	$pages_to_connect       = wc_admin_get_core_pages_to_connect();
+	$woocommerce_breadcrumb = array(
+		&#039;admin.php?page=wc-admin&#039;,
+		__( &#039;WooCommerce&#039;, &#039;woocommerce&#039; ),
+	);
+
+	foreach ( $pages_to_connect as $page_id =&gt; $page_data ) {
+		if ( preg_match( &quot;/^woocommerce_page_{$page_id}\-/&quot;, $screen_id ) ) {
+			if ( empty( $page_data[&#039;tabs&#039;] ) ) {
+				$new_breadcrumbs = array(
+					$woocommerce_breadcrumb,
+					$page_data[&#039;title&#039;],
+				);
+			} else {
+				$new_breadcrumbs = array(
+					$woocommerce_breadcrumb,
+					array(
+						add_query_arg( &#039;page&#039;, $page_id, &#039;admin.php&#039; ),
+						$page_data[&#039;title&#039;],
+					),
+				);
+
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				if ( isset( $_GET[&#039;tab&#039;] ) ) {
+					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+					$current_tab = wc_clean( wp_unslash( $_GET[&#039;tab&#039;] ) );
+				} else {
+					$current_tab = key( $page_data[&#039;tabs&#039;] );
+				}
+
+				$new_breadcrumbs[] = $page_data[&#039;tabs&#039;][ $current_tab ];
+			}
+
+			return $new_breadcrumbs;
+		}
+	}
+
+	return $breadcrumbs;
+}
+
+/**
+ * Render the WC-Admin header bar on all WooCommerce core pages.
+ *
+ * @param bool $is_connected Whether the current page is connected.
+ * @param bool $current_page The current page, if connected.
+ * @return bool Whether to connect the page.
+ */
+function wc_admin_connect_core_pages( $is_connected, $current_page ) {
+	if ( false === $is_connected &amp;&amp; false === $current_page ) {
+		$screen_id        = PageController::get_instance()-&gt;get_current_screen_id();
+		$pages_to_connect = wc_admin_get_core_pages_to_connect();
+
+		foreach ( $pages_to_connect as $page_id =&gt; $page_data ) {
+			if ( preg_match( &quot;/^woocommerce_page_{$page_id}\-/&quot;, $screen_id ) ) {
+				add_filter( &#039;woocommerce_navigation_get_breadcrumbs&#039;, &#039;wc_admin_filter_core_page_breadcrumbs&#039; );
+
+				return true;
+			}
+		}
+	}
+
+	return $is_connected;
+}
+
+add_filter( &#039;woocommerce_navigation_is_connected_page&#039;, &#039;wc_admin_connect_core_pages&#039;, 10, 2 );
+
+$posttype_list_base = &#039;edit.php&#039;;
+
+// WooCommerce &gt; Orders.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-orders&#039;,
+		&#039;screen_id&#039; =&gt; &#039;edit-shop_order&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Orders&#039;, &#039;woocommerce&#039; ),
+		&#039;path&#039;      =&gt; add_query_arg( &#039;post_type&#039;, &#039;shop_order&#039;, $posttype_list_base ),
+	)
+);
+
+// WooCommerce &gt; Orders &gt; Add New.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-add-order&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-orders&#039;,
+		&#039;screen_id&#039; =&gt; &#039;shop_order-add&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Add New&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+// WooCommerce &gt; Orders &gt; Edit Order.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-edit-order&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-orders&#039;,
+		&#039;screen_id&#039; =&gt; &#039;shop_order&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Edit Order&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
+	// WooCommerce &gt; Orders (COT).
+	wc_admin_connect_page(
+		array(
+			&#039;id&#039;        =&gt; &#039;woocommerce-custom-orders&#039;,
+			&#039;screen_id&#039; =&gt; wc_get_page_screen_id( &#039;shop-order&#039; ),
+			&#039;title&#039;     =&gt; __( &#039;Orders&#039;, &#039;woocommerce&#039; ),
+			&#039;path&#039;      =&gt; &#039;admin.php?page=wc-orders&#039;,
+		)
+	);
+}
+
+// WooCommerce &gt; Coupons.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-coupons&#039;,
+		&#039;parent&#039;    =&gt; Features::is_enabled( &#039;coupons&#039; ) ? &#039;woocommerce-marketing&#039; : null,
+		&#039;screen_id&#039; =&gt; &#039;edit-shop_coupon&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Coupons&#039;, &#039;woocommerce&#039; ),
+		&#039;path&#039;      =&gt; add_query_arg( &#039;post_type&#039;, &#039;shop_coupon&#039;, $posttype_list_base ),
+	)
+);
+
+// WooCommerce &gt; Coupons &gt; Add New.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-add-coupon&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-coupons&#039;,
+		&#039;screen_id&#039; =&gt; &#039;shop_coupon-add&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Add New&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+// WooCommerce &gt; Coupons &gt; Edit Coupon.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-edit-coupon&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-coupons&#039;,
+		&#039;screen_id&#039; =&gt; &#039;shop_coupon&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Edit Coupon&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+// WooCommerce &gt; Products.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-products&#039;,
+		&#039;screen_id&#039; =&gt; &#039;edit-product&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Products&#039;, &#039;woocommerce&#039; ),
+		&#039;path&#039;      =&gt; add_query_arg( &#039;post_type&#039;, &#039;product&#039;, $posttype_list_base ),
+	)
+);
+
+// WooCommerce &gt; Products &gt; Add New.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-add-product&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-products&#039;,
+		&#039;screen_id&#039; =&gt; &#039;product-add&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Add New&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+// WooCommerce &gt; Products &gt; Edit Order.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-edit-product&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-products&#039;,
+		&#039;screen_id&#039; =&gt; &#039;product&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Edit Product&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+// WooCommerce &gt; Products &gt; Import Products.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-import-products&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-products&#039;,
+		&#039;screen_id&#039; =&gt; &#039;product_page_product_importer&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Import Products&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+// WooCommerce &gt; Products &gt; Export Products.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-export-products&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-products&#039;,
+		&#039;screen_id&#039; =&gt; &#039;product_page_product_exporter&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Export Products&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+// WooCommerce &gt; Products &gt; Product categories.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-product-categories&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-products&#039;,
+		&#039;screen_id&#039; =&gt; &#039;edit-product_cat&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Product categories&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+// WooCommerce &gt; Products &gt; Edit category.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-product-edit-category&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-products&#039;,
+		&#039;screen_id&#039; =&gt; &#039;product_cat&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Edit category&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+// WooCommerce &gt; Products &gt; Product tags.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-product-tags&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-products&#039;,
+		&#039;screen_id&#039; =&gt; &#039;edit-product_tag&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Product tags&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+// WooCommerce &gt; Products &gt; Edit tag.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-product-edit-tag&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-products&#039;,
+		&#039;screen_id&#039; =&gt; &#039;product_tag&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Edit tag&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+// WooCommerce &gt; Products &gt; Attributes.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-product-attributes&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-products&#039;,
+		&#039;screen_id&#039; =&gt; &#039;product_page_product_attributes&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Attributes&#039;, &#039;woocommerce&#039; ),
+	)
+);
+
+// WooCommerce &gt; Products &gt; Edit attribute.
+wc_admin_connect_page(
+	array(
+		&#039;id&#039;        =&gt; &#039;woocommerce-product-edit-attribute&#039;,
+		&#039;parent&#039;    =&gt; &#039;woocommerce-products&#039;,
+		&#039;screen_id&#039; =&gt; &#039;product_page_product_attribute-edit&#039;,
+		&#039;title&#039;     =&gt; __( &#039;Edit attribute&#039;, &#039;woocommerce&#039; ),
+	)
+);
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866948"></script>
+    <script src="../js/search.js?updated=1692866948"></script>
+</body>
+</html>

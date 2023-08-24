@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866945">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866945">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">abstract-wc-widget.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Abstract widget class
+ *
+ * @class WC_Widget
+ * @package  WooCommerce\Abstracts
+ */
+
+use Automattic\Jetpack\Constants;
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * WC_Widget
+ *
+ * @package  WooCommerce\Abstracts
+ * @version  2.5.0
+ * @extends  WP_Widget
+ */
+abstract class WC_Widget extends WP_Widget {
+
+	/**
+	 * CSS class.
+	 *
+	 * @var string
+	 */
+	public $widget_cssclass;
+
+	/**
+	 * Widget description.
+	 *
+	 * @var string
+	 */
+	public $widget_description;
+
+	/**
+	 * Widget ID.
+	 *
+	 * @var string
+	 */
+	public $widget_id;
+
+	/**
+	 * Widget name.
+	 *
+	 * @var string
+	 */
+	public $widget_name;
+
+	/**
+	 * Settings.
+	 *
+	 * @var array
+	 */
+	public $settings;
+
+	/**
+	 * Constructor.
+	 */
+	public function __construct() {
+		$widget_ops = array(
+			&#039;classname&#039;                   =&gt; $this-&gt;widget_cssclass,
+			&#039;description&#039;                 =&gt; $this-&gt;widget_description,
+			&#039;customize_selective_refresh&#039; =&gt; true,
+			&#039;show_instance_in_rest&#039;       =&gt; true,
+		);
+
+		parent::__construct( $this-&gt;widget_id, $this-&gt;widget_name, $widget_ops );
+
+		add_action( &#039;save_post&#039;, array( $this, &#039;flush_widget_cache&#039; ) );
+		add_action( &#039;deleted_post&#039;, array( $this, &#039;flush_widget_cache&#039; ) );
+		add_action( &#039;switch_theme&#039;, array( $this, &#039;flush_widget_cache&#039; ) );
+	}
+
+	/**
+	 * Get cached widget.
+	 *
+	 * @param  array $args Arguments.
+	 * @return bool true if the widget is cached otherwise false
+	 */
+	public function get_cached_widget( $args ) {
+		// Don&#039;t get cache if widget_id doesn&#039;t exists.
+		if ( empty( $args[&#039;widget_id&#039;] ) ) {
+			return false;
+		}
+
+		$cache = wp_cache_get( $this-&gt;get_widget_id_for_cache( $this-&gt;widget_id ), &#039;widget&#039; );
+
+		if ( ! is_array( $cache ) ) {
+			$cache = array();
+		}
+
+		if ( isset( $cache[ $this-&gt;get_widget_id_for_cache( $args[&#039;widget_id&#039;] ) ] ) ) {
+			echo $cache[ $this-&gt;get_widget_id_for_cache( $args[&#039;widget_id&#039;] ) ]; // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Cache the widget.
+	 *
+	 * @param  array  $args Arguments.
+	 * @param  string $content Content.
+	 * @return string the content that was cached
+	 */
+	public function cache_widget( $args, $content ) {
+		// Don&#039;t set any cache if widget_id doesn&#039;t exist.
+		if ( empty( $args[&#039;widget_id&#039;] ) ) {
+			return $content;
+		}
+
+		$cache = wp_cache_get( $this-&gt;get_widget_id_for_cache( $this-&gt;widget_id ), &#039;widget&#039; );
+
+		if ( ! is_array( $cache ) ) {
+			$cache = array();
+		}
+
+		$cache[ $this-&gt;get_widget_id_for_cache( $args[&#039;widget_id&#039;] ) ] = $content;
+
+		wp_cache_set( $this-&gt;get_widget_id_for_cache( $this-&gt;widget_id ), $cache, &#039;widget&#039; );
+
+		return $content;
+	}
+
+	/**
+	 * Flush the cache.
+	 */
+	public function flush_widget_cache() {
+		foreach ( array( &#039;https&#039;, &#039;http&#039; ) as $scheme ) {
+			wp_cache_delete( $this-&gt;get_widget_id_for_cache( $this-&gt;widget_id, $scheme ), &#039;widget&#039; );
+		}
+	}
+
+	/**
+	 * Get this widgets title.
+	 *
+	 * @param array $instance Array of instance options.
+	 * @return string
+	 */
+	protected function get_instance_title( $instance ) {
+		if ( isset( $instance[&#039;title&#039;] ) ) {
+			return $instance[&#039;title&#039;];
+		}
+
+		if ( isset( $this-&gt;settings, $this-&gt;settings[&#039;title&#039;], $this-&gt;settings[&#039;title&#039;][&#039;std&#039;] ) ) {
+			return $this-&gt;settings[&#039;title&#039;][&#039;std&#039;];
+		}
+
+		return &#039;&#039;;
+	}
+
+	/**
+	 * Output the html at the start of a widget.
+	 *
+	 * @param array $args Arguments.
+	 * @param array $instance Instance.
+	 */
+	public function widget_start( $args, $instance ) {
+		echo $args[&#039;before_widget&#039;]; // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+
+		$title = apply_filters( &#039;widget_title&#039;, $this-&gt;get_instance_title( $instance ), $instance, $this-&gt;id_base );
+
+		if ( $title ) {
+			echo $args[&#039;before_title&#039;] . $title . $args[&#039;after_title&#039;]; // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+		}
+	}
+
+	/**
+	 * Output the html at the end of a widget.
+	 *
+	 * @param  array $args Arguments.
+	 */
+	public function widget_end( $args ) {
+		echo $args[&#039;after_widget&#039;]; // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+	}
+
+	/**
+	 * Updates a particular instance of a widget.
+	 *
+	 * @see    WP_Widget-&gt;update
+	 * @param  array $new_instance New instance.
+	 * @param  array $old_instance Old instance.
+	 * @return array
+	 */
+	public function update( $new_instance, $old_instance ) {
+
+		$instance = $old_instance;
+
+		if ( empty( $this-&gt;settings ) ) {
+			return $instance;
+		}
+
+		// Loop settings and get values to save.
+		foreach ( $this-&gt;settings as $key =&gt; $setting ) {
+			if ( ! isset( $setting[&#039;type&#039;] ) ) {
+				continue;
+			}
+
+			// Format the value based on settings type.
+			switch ( $setting[&#039;type&#039;] ) {
+				case &#039;number&#039;:
+					$instance[ $key ] = absint( $new_instance[ $key ] );
+
+					if ( isset( $setting[&#039;min&#039;] ) &amp;&amp; &#039;&#039; !== $setting[&#039;min&#039;] ) {
+						$instance[ $key ] = max( $instance[ $key ], $setting[&#039;min&#039;] );
+					}
+
+					if ( isset( $setting[&#039;max&#039;] ) &amp;&amp; &#039;&#039; !== $setting[&#039;max&#039;] ) {
+						$instance[ $key ] = min( $instance[ $key ], $setting[&#039;max&#039;] );
+					}
+					break;
+				case &#039;textarea&#039;:
+					$instance[ $key ] = wp_kses( trim( wp_unslash( $new_instance[ $key ] ) ), wp_kses_allowed_html( &#039;post&#039; ) );
+					break;
+				case &#039;checkbox&#039;:
+					$instance[ $key ] = empty( $new_instance[ $key ] ) ? 0 : 1;
+					break;
+				default:
+					$instance[ $key ] = isset( $new_instance[ $key ] ) ? sanitize_text_field( $new_instance[ $key ] ) : $setting[&#039;std&#039;];
+					break;
+			}
+
+			/**
+			 * Sanitize the value of a setting.
+			 */
+			$instance[ $key ] = apply_filters( &#039;woocommerce_widget_settings_sanitize_option&#039;, $instance[ $key ], $new_instance, $key, $setting );
+		}
+
+		$this-&gt;flush_widget_cache();
+
+		return $instance;
+	}
+
+	/**
+	 * Outputs the settings update form.
+	 *
+	 * @see   WP_Widget-&gt;form
+	 *
+	 * @param array $instance Instance.
+	 */
+	public function form( $instance ) {
+
+		if ( empty( $this-&gt;settings ) ) {
+			return;
+		}
+
+		foreach ( $this-&gt;settings as $key =&gt; $setting ) {
+
+			$class = isset( $setting[&#039;class&#039;] ) ? $setting[&#039;class&#039;] : &#039;&#039;;
+			$value = isset( $instance[ $key ] ) ? $instance[ $key ] : $setting[&#039;std&#039;];
+
+			switch ( $setting[&#039;type&#039;] ) {
+
+				case &#039;text&#039;:
+					?&gt;
+					&lt;p&gt;
+						&lt;label for=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_id( $key ) ); ?&gt;&quot;&gt;&lt;?php echo wp_kses_post( $setting[&#039;label&#039;] ); ?&gt;&lt;/label&gt;&lt;?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?&gt;
+						&lt;input class=&quot;widefat &lt;?php echo esc_attr( $class ); ?&gt;&quot; id=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_id( $key ) ); ?&gt;&quot; name=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_name( $key ) ); ?&gt;&quot; type=&quot;text&quot; value=&quot;&lt;?php echo esc_attr( $value ); ?&gt;&quot; /&gt;
+					&lt;/p&gt;
+					&lt;?php
+					break;
+
+				case &#039;number&#039;:
+					?&gt;
+					&lt;p&gt;
+						&lt;label for=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_id( $key ) ); ?&gt;&quot;&gt;&lt;?php echo $setting[&#039;label&#039;]; /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?&gt;&lt;/label&gt;
+						&lt;input class=&quot;widefat &lt;?php echo esc_attr( $class ); ?&gt;&quot; id=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_id( $key ) ); ?&gt;&quot; name=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_name( $key ) ); ?&gt;&quot; type=&quot;number&quot; step=&quot;&lt;?php echo esc_attr( $setting[&#039;step&#039;] ); ?&gt;&quot; min=&quot;&lt;?php echo esc_attr( $setting[&#039;min&#039;] ); ?&gt;&quot; max=&quot;&lt;?php echo esc_attr( $setting[&#039;max&#039;] ); ?&gt;&quot; value=&quot;&lt;?php echo esc_attr( $value ); ?&gt;&quot; /&gt;
+					&lt;/p&gt;
+					&lt;?php
+					break;
+
+				case &#039;select&#039;:
+					?&gt;
+					&lt;p&gt;
+						&lt;label for=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_id( $key ) ); ?&gt;&quot;&gt;&lt;?php echo $setting[&#039;label&#039;]; /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?&gt;&lt;/label&gt;
+						&lt;select class=&quot;widefat &lt;?php echo esc_attr( $class ); ?&gt;&quot; id=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_id( $key ) ); ?&gt;&quot; name=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_name( $key ) ); ?&gt;&quot;&gt;
+							&lt;?php foreach ( $setting[&#039;options&#039;] as $option_key =&gt; $option_value ) : ?&gt;
+								&lt;option value=&quot;&lt;?php echo esc_attr( $option_key ); ?&gt;&quot; &lt;?php selected( $option_key, $value ); ?&gt;&gt;&lt;?php echo esc_html( $option_value ); ?&gt;&lt;/option&gt;
+							&lt;?php endforeach; ?&gt;
+						&lt;/select&gt;
+					&lt;/p&gt;
+					&lt;?php
+					break;
+
+				case &#039;textarea&#039;:
+					?&gt;
+					&lt;p&gt;
+						&lt;label for=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_id( $key ) ); ?&gt;&quot;&gt;&lt;?php echo $setting[&#039;label&#039;]; /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?&gt;&lt;/label&gt;
+						&lt;textarea class=&quot;widefat &lt;?php echo esc_attr( $class ); ?&gt;&quot; id=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_id( $key ) ); ?&gt;&quot; name=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_name( $key ) ); ?&gt;&quot; cols=&quot;20&quot; rows=&quot;3&quot;&gt;&lt;?php echo esc_textarea( $value ); ?&gt;&lt;/textarea&gt;
+						&lt;?php if ( isset( $setting[&#039;desc&#039;] ) ) : ?&gt;
+							&lt;small&gt;&lt;?php echo esc_html( $setting[&#039;desc&#039;] ); ?&gt;&lt;/small&gt;
+						&lt;?php endif; ?&gt;
+					&lt;/p&gt;
+					&lt;?php
+					break;
+
+				case &#039;checkbox&#039;:
+					?&gt;
+					&lt;p&gt;
+						&lt;input class=&quot;checkbox &lt;?php echo esc_attr( $class ); ?&gt;&quot; id=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_id( $key ) ); ?&gt;&quot; name=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_name( $key ) ); ?&gt;&quot; type=&quot;checkbox&quot; value=&quot;1&quot; &lt;?php checked( $value, 1 ); ?&gt; /&gt;
+						&lt;label for=&quot;&lt;?php echo esc_attr( $this-&gt;get_field_id( $key ) ); ?&gt;&quot;&gt;&lt;?php echo $setting[&#039;label&#039;]; /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?&gt;&lt;/label&gt;
+					&lt;/p&gt;
+					&lt;?php
+					break;
+
+				// Default: run an action.
+				default:
+					do_action( &#039;woocommerce_widget_field_&#039; . $setting[&#039;type&#039;], $key, $value, $setting, $instance );
+					break;
+			}
+		}
+	}
+
+	/**
+	 * Get current page URL with various filtering props supported by WC.
+	 *
+	 * @return string
+	 * @since  3.3.0
+	 */
+	protected function get_current_page_url() {
+		if ( Constants::is_defined( &#039;SHOP_IS_ON_FRONT&#039; ) ) {
+			$link = home_url();
+		} elseif ( is_shop() ) {
+			$link = get_permalink( wc_get_page_id( &#039;shop&#039; ) );
+		} elseif ( is_product_category() ) {
+			$link = get_term_link( get_query_var( &#039;product_cat&#039; ), &#039;product_cat&#039; );
+		} elseif ( is_product_tag() ) {
+			$link = get_term_link( get_query_var( &#039;product_tag&#039; ), &#039;product_tag&#039; );
+		} else {
+			$queried_object = get_queried_object();
+			$link           = get_term_link( $queried_object-&gt;slug, $queried_object-&gt;taxonomy );
+		}
+
+		// Min/Max.
+		if ( isset( $_GET[&#039;min_price&#039;] ) ) {
+			$link = add_query_arg( &#039;min_price&#039;, wc_clean( wp_unslash( $_GET[&#039;min_price&#039;] ) ), $link );
+		}
+
+		if ( isset( $_GET[&#039;max_price&#039;] ) ) {
+			$link = add_query_arg( &#039;max_price&#039;, wc_clean( wp_unslash( $_GET[&#039;max_price&#039;] ) ), $link );
+		}
+
+		// Order by.
+		if ( isset( $_GET[&#039;orderby&#039;] ) ) {
+			$link = add_query_arg( &#039;orderby&#039;, wc_clean( wp_unslash( $_GET[&#039;orderby&#039;] ) ), $link );
+		}
+
+		/**
+		 * Search Arg.
+		 * To support quote characters, first they are decoded from &amp;quot; entities, then URL encoded.
+		 */
+		if ( get_search_query() ) {
+			$link = add_query_arg( &#039;s&#039;, rawurlencode( htmlspecialchars_decode( get_search_query() ) ), $link );
+		}
+
+		// Post Type Arg.
+		if ( isset( $_GET[&#039;post_type&#039;] ) ) {
+			$link = add_query_arg( &#039;post_type&#039;, wc_clean( wp_unslash( $_GET[&#039;post_type&#039;] ) ), $link );
+
+			// Prevent post type and page id when pretty permalinks are disabled.
+			if ( is_shop() ) {
+				$link = remove_query_arg( &#039;page_id&#039;, $link );
+			}
+		}
+
+		// Min Rating Arg.
+		if ( isset( $_GET[&#039;rating_filter&#039;] ) ) {
+			$link = add_query_arg( &#039;rating_filter&#039;, wc_clean( wp_unslash( $_GET[&#039;rating_filter&#039;] ) ), $link );
+		}
+
+		// All current filters.
+		if ( $_chosen_attributes = WC_Query::get_layered_nav_chosen_attributes() ) { // phpcs:ignore Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure, WordPress.CodeAnalysis.AssignmentInCondition.Found
+			foreach ( $_chosen_attributes as $name =&gt; $data ) {
+				$filter_name = wc_attribute_taxonomy_slug( $name );
+				if ( ! empty( $data[&#039;terms&#039;] ) ) {
+					$link = add_query_arg( &#039;filter_&#039; . $filter_name, implode( &#039;,&#039;, $data[&#039;terms&#039;] ), $link );
+				}
+				if ( &#039;or&#039; === $data[&#039;query_type&#039;] ) {
+					$link = add_query_arg( &#039;query_type_&#039; . $filter_name, &#039;or&#039;, $link );
+				}
+			}
+		}
+
+		return apply_filters( &#039;woocommerce_widget_get_current_page_url&#039;, $link, $this );
+	}
+
+	/**
+	 * Get widget id plus scheme/protocol to prevent serving mixed content from (persistently) cached widgets.
+	 *
+	 * @since  3.4.0
+	 * @param  string $widget_id Id of the cached widget.
+	 * @param  string $scheme    Scheme for the widget id.
+	 * @return string            Widget id including scheme/protocol.
+	 */
+	protected function get_widget_id_for_cache( $widget_id, $scheme = &#039;&#039; ) {
+		if ( $scheme ) {
+			$widget_id_for_cache = $widget_id . &#039;-&#039; . $scheme;
+		} else {
+			$widget_id_for_cache = $widget_id . &#039;-&#039; . ( is_ssl() ? &#039;https&#039; : &#039;http&#039; );
+		}
+
+		return apply_filters( &#039;woocommerce_cached_widget_id&#039;, $widget_id_for_cache );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866945"></script>
+    <script src="../js/search.js?updated=1692866945"></script>
+</body>
+</html>

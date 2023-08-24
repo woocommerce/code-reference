@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-session-handler.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Handle data for the current customers session.
+ * Implements the WC_Session abstract class.
+ *
+ * From 2.5 this uses a custom table for session storage. Based on https://github.com/kloon/woocommerce-large-sessions.
+ *
+ * @class    WC_Session_Handler
+ * @version  2.5.0
+ * @package  WooCommerce\Classes
+ */
+
+use Automattic\Jetpack\Constants;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Session handler class.
+ */
+class WC_Session_Handler extends WC_Session {
+
+	/**
+	 * Cookie name used for the session.
+	 *
+	 * @var string cookie name
+	 */
+	protected $_cookie;
+
+	/**
+	 * Stores session expiry.
+	 *
+	 * @var string session due to expire timestamp
+	 */
+	protected $_session_expiring;
+
+	/**
+	 * Stores session due to expire timestamp.
+	 *
+	 * @var string session expiration timestamp
+	 */
+	protected $_session_expiration;
+
+	/**
+	 * True when the cookie exists.
+	 *
+	 * @var bool Based on whether a cookie exists.
+	 */
+	protected $_has_cookie = false;
+
+	/**
+	 * Table name for session data.
+	 *
+	 * @var string Custom session table name
+	 */
+	protected $_table;
+
+	/**
+	 * Constructor for the session class.
+	 */
+	public function __construct() {
+		$this-&gt;_cookie = apply_filters( &#039;woocommerce_cookie&#039;, &#039;wp_woocommerce_session_&#039; . COOKIEHASH );
+		$this-&gt;_table  = $GLOBALS[&#039;wpdb&#039;]-&gt;prefix . &#039;woocommerce_sessions&#039;;
+	}
+
+	/**
+	 * Init hooks and session data.
+	 *
+	 * @since 3.3.0
+	 */
+	public function init() {
+		$this-&gt;init_session_cookie();
+
+		add_action( &#039;woocommerce_set_cart_cookies&#039;, array( $this, &#039;set_customer_session_cookie&#039; ), 10 );
+		add_action( &#039;shutdown&#039;, array( $this, &#039;save_data&#039; ), 20 );
+		add_action( &#039;wp_logout&#039;, array( $this, &#039;destroy_session&#039; ) );
+
+		if ( ! is_user_logged_in() ) {
+			add_filter( &#039;nonce_user_logged_out&#039;, array( $this, &#039;maybe_update_nonce_user_logged_out&#039; ), 10, 2 );
+		}
+	}
+
+	/**
+	 * Setup cookie and customer ID.
+	 *
+	 * @since 3.6.0
+	 */
+	public function init_session_cookie() {
+		$cookie = $this-&gt;get_session_cookie();
+
+		if ( $cookie ) {
+			// Customer ID will be an MD5 hash id this is a guest session.
+			$this-&gt;_customer_id        = $cookie[0];
+			$this-&gt;_session_expiration = $cookie[1];
+			$this-&gt;_session_expiring   = $cookie[2];
+			$this-&gt;_has_cookie         = true;
+			$this-&gt;_data               = $this-&gt;get_session_data();
+
+			if ( ! $this-&gt;is_session_cookie_valid() ) {
+				$this-&gt;destroy_session();
+				$this-&gt;set_session_expiration();
+			}
+
+			// If the user logs in, update session.
+			if ( is_user_logged_in() &amp;&amp; strval( get_current_user_id() ) !== $this-&gt;_customer_id ) {
+				$guest_session_id   = $this-&gt;_customer_id;
+				$this-&gt;_customer_id = strval( get_current_user_id() );
+				$this-&gt;_dirty       = true;
+				$this-&gt;save_data( $guest_session_id );
+				$this-&gt;set_customer_session_cookie( true );
+			}
+
+			// Update session if its close to expiring.
+			if ( time() &gt; $this-&gt;_session_expiring ) {
+				$this-&gt;set_session_expiration();
+				$this-&gt;update_session_timestamp( $this-&gt;_customer_id, $this-&gt;_session_expiration );
+			}
+		} else {
+			$this-&gt;set_session_expiration();
+			$this-&gt;_customer_id = $this-&gt;generate_customer_id();
+			$this-&gt;_data        = $this-&gt;get_session_data();
+		}
+	}
+
+	/**
+	 * Checks if session cookie is expired, or belongs to a logged out user.
+	 *
+	 * @return bool Whether session cookie is valid.
+	 */
+	private function is_session_cookie_valid() {
+		// If session is expired, session cookie is invalid.
+		if ( time() &gt; $this-&gt;_session_expiration ) {
+			return false;
+		}
+
+		// If user has logged out, session cookie is invalid.
+		if ( ! is_user_logged_in() &amp;&amp; ! $this-&gt;is_customer_guest( $this-&gt;_customer_id ) ) {
+			return false;
+		}
+
+		// Session from a different user is not valid. (Although from a guest user will be valid)
+		if ( is_user_logged_in() &amp;&amp; ! $this-&gt;is_customer_guest( $this-&gt;_customer_id ) &amp;&amp; strval( get_current_user_id() ) !== $this-&gt;_customer_id ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Sets the session cookie on-demand (usually after adding an item to the cart).
+	 *
+	 * Since the cookie name (as of 2.1) is prepended with wp, cache systems like batcache will not cache pages when set.
+	 *
+	 * Warning: Cookies will only be set if this is called before the headers are sent.
+	 *
+	 * @param bool $set Should the session cookie be set.
+	 */
+	public function set_customer_session_cookie( $set ) {
+		if ( $set ) {
+			$to_hash           = $this-&gt;_customer_id . &#039;|&#039; . $this-&gt;_session_expiration;
+			$cookie_hash       = hash_hmac( &#039;md5&#039;, $to_hash, wp_hash( $to_hash ) );
+			$cookie_value      = $this-&gt;_customer_id . &#039;||&#039; . $this-&gt;_session_expiration . &#039;||&#039; . $this-&gt;_session_expiring . &#039;||&#039; . $cookie_hash;
+			$this-&gt;_has_cookie = true;
+
+			if ( ! isset( $_COOKIE[ $this-&gt;_cookie ] ) || $_COOKIE[ $this-&gt;_cookie ] !== $cookie_value ) {
+				wc_setcookie( $this-&gt;_cookie, $cookie_value, $this-&gt;_session_expiration, $this-&gt;use_secure_cookie(), true );
+			}
+		}
+	}
+
+	/**
+	 * Should the session cookie be secure?
+	 *
+	 * @since 3.6.0
+	 * @return bool
+	 */
+	protected function use_secure_cookie() {
+		return apply_filters( &#039;wc_session_use_secure_cookie&#039;, wc_site_is_https() &amp;&amp; is_ssl() );
+	}
+
+	/**
+	 * Return true if the current user has an active session, i.e. a cookie to retrieve values.
+	 *
+	 * @return bool
+	 */
+	public function has_session() {
+		return isset( $_COOKIE[ $this-&gt;_cookie ] ) || $this-&gt;_has_cookie || is_user_logged_in(); // @codingStandardsIgnoreLine.
+	}
+
+	/**
+	 * Set session expiration.
+	 */
+	public function set_session_expiration() {
+		$this-&gt;_session_expiring   = time() + intval( apply_filters( &#039;wc_session_expiring&#039;, 60 * 60 * 47 ) ); // 47 Hours.
+		$this-&gt;_session_expiration = time() + intval( apply_filters( &#039;wc_session_expiration&#039;, 60 * 60 * 48 ) ); // 48 Hours.
+	}
+
+	/**
+	 * Generate a unique customer ID for guests, or return user ID if logged in.
+	 *
+	 * Uses Portable PHP password hashing framework to generate a unique cryptographically strong ID.
+	 *
+	 * @return string
+	 */
+	public function generate_customer_id() {
+		$customer_id = &#039;&#039;;
+
+		if ( is_user_logged_in() ) {
+			$customer_id = strval( get_current_user_id() );
+		}
+
+		if ( empty( $customer_id ) ) {
+			require_once ABSPATH . &#039;wp-includes/class-phpass.php&#039;;
+			$hasher      = new PasswordHash( 8, false );
+			$customer_id = &#039;t_&#039; . substr( md5( $hasher-&gt;get_random_bytes( 32 ) ), 2 );
+		}
+
+		return $customer_id;
+	}
+
+	/**
+	 * Checks if this is an auto-generated customer ID.
+	 *
+	 * @param string|int $customer_id Customer ID to check.
+	 *
+	 * @return bool Whether customer ID is randomly generated.
+	 */
+	private function is_customer_guest( $customer_id ) {
+		$customer_id = strval( $customer_id );
+
+		if ( empty( $customer_id ) ) {
+			return true;
+		}
+
+		if ( &#039;t_&#039; === substr( $customer_id, 0, 2 ) ) {
+			return true;
+		}
+
+		/**
+		 * Legacy checks. This is to handle sessions that were created from a previous release.
+		 * Maybe we can get rid of them after a few releases.
+		 */
+
+		// Almost all random $customer_ids will have some letters in it, while all actual ids will be integers.
+		if ( strval( (int) $customer_id ) !== $customer_id ) {
+			return true;
+		}
+
+		// Performance hack to potentially save a DB query, when same user as $customer_id is logged in.
+		if ( is_user_logged_in() &amp;&amp; strval( get_current_user_id() ) === $customer_id ) {
+			return false;
+		} else {
+			$customer = new WC_Customer( $customer_id );
+
+			if ( 0 === $customer-&gt;get_id() ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Get session unique ID for requests if session is initialized or user ID if logged in.
+	 * Introduced to help with unit tests.
+	 *
+	 * @since 5.3.0
+	 * @return string
+	 */
+	public function get_customer_unique_id() {
+		$customer_id = &#039;&#039;;
+
+		if ( $this-&gt;has_session() &amp;&amp; $this-&gt;_customer_id ) {
+			$customer_id = $this-&gt;_customer_id;
+		} elseif ( is_user_logged_in() ) {
+			$customer_id = (string) get_current_user_id();
+		}
+
+		return $customer_id;
+	}
+
+	/**
+	 * Get the session cookie, if set. Otherwise return false.
+	 *
+	 * Session cookies without a customer ID are invalid.
+	 *
+	 * @return bool|array
+	 */
+	public function get_session_cookie() {
+		$cookie_value = isset( $_COOKIE[ $this-&gt;_cookie ] ) ? wp_unslash( $_COOKIE[ $this-&gt;_cookie ] ) : false; // @codingStandardsIgnoreLine.
+
+		if ( empty( $cookie_value ) || ! is_string( $cookie_value ) ) {
+			return false;
+		}
+
+		$parsed_cookie = explode( &#039;||&#039;, $cookie_value );
+
+		if ( count( $parsed_cookie ) &lt; 4 ) {
+			return false;
+		}
+
+		list( $customer_id, $session_expiration, $session_expiring, $cookie_hash ) = $parsed_cookie;
+
+		if ( empty( $customer_id ) ) {
+			return false;
+		}
+
+		// Validate hash.
+		$to_hash = $customer_id . &#039;|&#039; . $session_expiration;
+		$hash    = hash_hmac( &#039;md5&#039;, $to_hash, wp_hash( $to_hash ) );
+
+		if ( empty( $cookie_hash ) || ! hash_equals( $hash, $cookie_hash ) ) {
+			return false;
+		}
+
+		return array( $customer_id, $session_expiration, $session_expiring, $cookie_hash );
+	}
+
+	/**
+	 * Get session data.
+	 *
+	 * @return array
+	 */
+	public function get_session_data() {
+		return $this-&gt;has_session() ? (array) $this-&gt;get_session( $this-&gt;_customer_id, array() ) : array();
+	}
+
+	/**
+	 * Gets a cache prefix. This is used in session names so the entire cache can be invalidated with 1 function call.
+	 *
+	 * @return string
+	 */
+	private function get_cache_prefix() {
+		return WC_Cache_Helper::get_cache_prefix( WC_SESSION_CACHE_GROUP );
+	}
+
+	/**
+	 * Save data and delete guest session.
+	 *
+	 * @param int $old_session_key session ID before user logs in.
+	 */
+	public function save_data( $old_session_key = 0 ) {
+		// Dirty if something changed - prevents saving nothing new.
+		if ( $this-&gt;_dirty &amp;&amp; $this-&gt;has_session() ) {
+			global $wpdb;
+
+			$wpdb-&gt;query(
+				$wpdb-&gt;prepare(
+					&quot;INSERT INTO {$wpdb-&gt;prefix}woocommerce_sessions (`session_key`, `session_value`, `session_expiry`) VALUES (%s, %s, %d)
+ 					ON DUPLICATE KEY UPDATE `session_value` = VALUES(`session_value`), `session_expiry` = VALUES(`session_expiry`)&quot;,
+					$this-&gt;_customer_id,
+					maybe_serialize( $this-&gt;_data ),
+					$this-&gt;_session_expiration
+				)
+			);
+
+			wp_cache_set( $this-&gt;get_cache_prefix() . $this-&gt;_customer_id, $this-&gt;_data, WC_SESSION_CACHE_GROUP, $this-&gt;_session_expiration - time() );
+			$this-&gt;_dirty = false;
+			if ( get_current_user_id() != $old_session_key &amp;&amp; ! is_object( get_user_by( &#039;id&#039;, $old_session_key ) ) ) {
+				$this-&gt;delete_session( $old_session_key );
+			}
+		}
+	}
+
+	/**
+	 * Destroy all session data.
+	 */
+	public function destroy_session() {
+		$this-&gt;delete_session( $this-&gt;_customer_id );
+		$this-&gt;forget_session();
+	}
+
+	/**
+	 * Forget all session data without destroying it.
+	 */
+	public function forget_session() {
+		wc_setcookie( $this-&gt;_cookie, &#039;&#039;, time() - YEAR_IN_SECONDS, $this-&gt;use_secure_cookie(), true );
+
+		if ( ! is_admin() ) {
+			include_once WC_ABSPATH . &#039;includes/wc-cart-functions.php&#039;;
+
+			wc_empty_cart();
+		}
+
+		$this-&gt;_data        = array();
+		$this-&gt;_dirty       = false;
+		$this-&gt;_customer_id = $this-&gt;generate_customer_id();
+	}
+
+	/**
+	 * When a user is logged out, ensure they have a unique nonce by using the customer/session ID.
+	 *
+	 * @deprecated 5.3.0
+	 * @param int $uid User ID.
+	 * @return int|string
+	 */
+	public function nonce_user_logged_out( $uid ) {
+		wc_deprecated_function( &#039;WC_Session_Handler::nonce_user_logged_out&#039;, &#039;5.3&#039;, &#039;WC_Session_Handler::maybe_update_nonce_user_logged_out&#039; );
+
+		return $this-&gt;has_session() &amp;&amp; $this-&gt;_customer_id ? $this-&gt;_customer_id : $uid;
+	}
+
+	/**
+	 * When a user is logged out, ensure they have a unique nonce to manage cart and more using the customer/session ID.
+	 * This filter runs everything `wp_verify_nonce()` and `wp_create_nonce()` gets called.
+	 *
+	 * @since 5.3.0
+	 * @param int    $uid    User ID.
+	 * @param string $action The nonce action.
+	 * @return int|string
+	 */
+	public function maybe_update_nonce_user_logged_out( $uid, $action ) {
+		if ( Automattic\WooCommerce\Utilities\StringUtil::starts_with( $action, &#039;woocommerce&#039; ) ) {
+			return $this-&gt;has_session() &amp;&amp; $this-&gt;_customer_id ? $this-&gt;_customer_id : $uid;
+		}
+
+		return $uid;
+	}
+
+	/**
+	 * Cleanup session data from the database and clear caches.
+	 */
+	public function cleanup_sessions() {
+		global $wpdb;
+
+		$wpdb-&gt;query( $wpdb-&gt;prepare( &quot;DELETE FROM $this-&gt;_table WHERE session_expiry &lt; %d&quot;, time() ) ); // @codingStandardsIgnoreLine.
+
+		if ( class_exists( &#039;WC_Cache_Helper&#039; ) ) {
+			WC_Cache_Helper::invalidate_cache_group( WC_SESSION_CACHE_GROUP );
+		}
+	}
+
+	/**
+	 * Returns the session.
+	 *
+	 * @param string $customer_id Customer ID.
+	 * @param mixed  $default Default session value.
+	 * @return string|array
+	 */
+	public function get_session( $customer_id, $default = false ) {
+		global $wpdb;
+
+		if ( Constants::is_defined( &#039;WP_SETUP_CONFIG&#039; ) ) {
+			return false;
+		}
+
+		// Try to get it from the cache, it will return false if not present or if object cache not in use.
+		$value = wp_cache_get( $this-&gt;get_cache_prefix() . $customer_id, WC_SESSION_CACHE_GROUP );
+
+		if ( false === $value ) {
+			$value = $wpdb-&gt;get_var( $wpdb-&gt;prepare( &quot;SELECT session_value FROM $this-&gt;_table WHERE session_key = %s&quot;, $customer_id ) ); // @codingStandardsIgnoreLine.
+
+			if ( is_null( $value ) ) {
+				$value = $default;
+			}
+
+			$cache_duration = $this-&gt;_session_expiration - time();
+			if ( 0 &lt; $cache_duration ) {
+				wp_cache_add( $this-&gt;get_cache_prefix() . $customer_id, $value, WC_SESSION_CACHE_GROUP, $cache_duration );
+			}
+		}
+
+		return maybe_unserialize( $value );
+	}
+
+	/**
+	 * Delete the session from the cache and database.
+	 *
+	 * @param int $customer_id Customer ID.
+	 */
+	public function delete_session( $customer_id ) {
+		global $wpdb;
+
+		wp_cache_delete( $this-&gt;get_cache_prefix() . $customer_id, WC_SESSION_CACHE_GROUP );
+
+		$wpdb-&gt;delete(
+			$this-&gt;_table,
+			array(
+				&#039;session_key&#039; =&gt; $customer_id,
+			)
+		);
+	}
+
+	/**
+	 * Update the session expiry timestamp.
+	 *
+	 * @param string $customer_id Customer ID.
+	 * @param int    $timestamp Timestamp to expire the cookie.
+	 */
+	public function update_session_timestamp( $customer_id, $timestamp ) {
+		global $wpdb;
+
+		$wpdb-&gt;update(
+			$this-&gt;_table,
+			array(
+				&#039;session_expiry&#039; =&gt; $timestamp,
+			),
+			array(
+				&#039;session_key&#039; =&gt; $customer_id,
+			),
+			array(
+				&#039;%d&#039;,
+			)
+		);
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866946">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866946">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-admin-report.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Admin report functionality.
+ *
+ * @package WooCommerce\Admin\Reports
+ */
+
+use Automattic\WooCommerce\Utilities\ArrayUtil;
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit; // Exit if accessed directly.
+}
+
+/**
+ * Admin Report.
+ *
+ * Extended by reports to show charts and stats in admin.
+ *
+ * @package     WooCommerce\Admin\Reports
+ * @version     2.1.0
+ */
+class WC_Admin_Report {
+
+	/**
+	 * List of transients name that have been updated and need persisting.
+	 *
+	 * @var array
+	 */
+	protected static $transients_to_update = array();
+
+	/**
+	 * The list of transients.
+	 *
+	 * @var array
+	 */
+	protected static $cached_results = array();
+
+	/**
+	 * The chart interval.
+	 *
+	 * @var int
+	 */
+	public $chart_interval;
+
+	/**
+	 * Group by SQL query.
+	 *
+	 * @var string
+	 */
+	public $group_by_query;
+
+	/**
+	 * The bar width.
+	 *
+	 * @var int
+	 */
+	public $barwidth;
+
+	/**
+	 * Group chart item by day or month.
+	 *
+	 * @var string
+	 */
+	public $chart_groupby;
+
+	/**
+	 * The start date of the report.
+	 *
+	 * @var int timestamp
+	 */
+	public $start_date;
+
+	/**
+	 * The end date of the report.
+	 *
+	 * @var int timestamp
+	 */
+	public $end_date;
+
+	/**
+	 * Get report totals such as order totals and discount amounts.
+	 *
+	 * Data example:
+	 *
+	 * &#039;_order_total&#039; =&gt; array(
+	 *     &#039;type&#039;     =&gt; &#039;meta&#039;,
+	 *     &#039;function&#039; =&gt; &#039;SUM&#039;,
+	 *     &#039;name&#039;     =&gt; &#039;total_sales&#039;
+	 * )
+	 *
+	 * @param  array $args arguments for the report.
+	 * @return mixed depending on query_type
+	 */
+	public function get_order_report_data( $args = array() ) {
+		global $wpdb;
+
+		$default_args = array(
+			&#039;data&#039;                =&gt; array(),
+			&#039;where&#039;               =&gt; array(),
+			&#039;where_meta&#039;          =&gt; array(),
+			&#039;query_type&#039;          =&gt; &#039;get_row&#039;,
+			&#039;group_by&#039;            =&gt; &#039;&#039;,
+			&#039;order_by&#039;            =&gt; &#039;&#039;,
+			&#039;limit&#039;               =&gt; &#039;&#039;,
+			&#039;filter_range&#039;        =&gt; false,
+			&#039;nocache&#039;             =&gt; false,
+			&#039;debug&#039;               =&gt; false,
+			&#039;order_types&#039;         =&gt; wc_get_order_types( &#039;reports&#039; ),
+			&#039;order_status&#039;        =&gt; array( &#039;completed&#039;, &#039;processing&#039;, &#039;on-hold&#039; ),
+			&#039;parent_order_status&#039; =&gt; false,
+		);
+		$args         = apply_filters( &#039;woocommerce_reports_get_order_report_data_args&#039;, $args );
+		$args         = wp_parse_args( $args, $default_args );
+
+		// phpcs:ignore WordPress.PHP.DontExtract.extract_extract
+		extract( $args );
+
+		if ( empty( $data ) ) {
+			return &#039;&#039;;
+		}
+
+		$order_status = apply_filters( &#039;woocommerce_reports_order_statuses&#039;, $order_status );
+
+		$query  = array();
+		$select = array();
+
+		foreach ( $data as $raw_key =&gt; $value ) {
+			$key      = sanitize_key( $raw_key );
+			$distinct = &#039;&#039;;
+
+			if ( isset( $value[&#039;distinct&#039;] ) ) {
+				$distinct = &#039;DISTINCT&#039;;
+			}
+
+			switch ( $value[&#039;type&#039;] ) {
+				case &#039;meta&#039;:
+					$get_key = &quot;meta_{$key}.meta_value&quot;;
+					break;
+				case &#039;parent_meta&#039;:
+					$get_key = &quot;parent_meta_{$key}.meta_value&quot;;
+					break;
+				case &#039;post_data&#039;:
+					$get_key = &quot;posts.{$key}&quot;;
+					break;
+				case &#039;order_item_meta&#039;:
+					$get_key = &quot;order_item_meta_{$key}.meta_value&quot;;
+					break;
+				case &#039;order_item&#039;:
+					$get_key = &quot;order_items.{$key}&quot;;
+					break;
+			}
+
+			if ( empty( $get_key ) ) {
+				// Skip to the next foreach iteration else the query will be invalid.
+				continue;
+			}
+
+			if ( $value[&#039;function&#039;] ) {
+				$get = &quot;{$value[&#039;function&#039;]}({$distinct} {$get_key})&quot;;
+			} else {
+				$get = &quot;{$distinct} {$get_key}&quot;;
+			}
+
+			$select[] = &quot;{$get} as {$value[&#039;name&#039;]}&quot;;
+		}
+
+		$query[&#039;select&#039;] = &#039;SELECT &#039; . implode( &#039;,&#039;, $select );
+		$query[&#039;from&#039;]   = &quot;FROM {$wpdb-&gt;posts} AS posts&quot;;
+
+		// Joins.
+		$joins = array();
+
+		foreach ( ( $data + $where ) as $raw_key =&gt; $value ) {
+			$join_type = isset( $value[&#039;join_type&#039;] ) ? $value[&#039;join_type&#039;] : &#039;INNER&#039;;
+			$type      = isset( $value[&#039;type&#039;] ) ? $value[&#039;type&#039;] : false;
+			$key       = sanitize_key( $raw_key );
+
+			switch ( $type ) {
+				case &#039;meta&#039;:
+					$joins[ &quot;meta_{$key}&quot; ] = &quot;{$join_type} JOIN {$wpdb-&gt;postmeta} AS meta_{$key} ON ( posts.ID = meta_{$key}.post_id AND meta_{$key}.meta_key = &#039;{$raw_key}&#039; )&quot;;
+					break;
+				case &#039;parent_meta&#039;:
+					$joins[ &quot;parent_meta_{$key}&quot; ] = &quot;{$join_type} JOIN {$wpdb-&gt;postmeta} AS parent_meta_{$key} ON (posts.post_parent = parent_meta_{$key}.post_id) AND (parent_meta_{$key}.meta_key = &#039;{$raw_key}&#039;)&quot;;
+					break;
+				case &#039;order_item_meta&#039;:
+					$joins[&#039;order_items&#039;] = &quot;{$join_type} JOIN {$wpdb-&gt;prefix}woocommerce_order_items AS order_items ON (posts.ID = order_items.order_id)&quot;;
+
+					if ( ! empty( $value[&#039;order_item_type&#039;] ) ) {
+						$joins[&#039;order_items&#039;] .= &quot; AND (order_items.order_item_type = &#039;{$value[&#039;order_item_type&#039;]}&#039;)&quot;;
+					}
+
+					$joins[ &quot;order_item_meta_{$key}&quot; ] = &quot;{$join_type} JOIN {$wpdb-&gt;prefix}woocommerce_order_itemmeta AS order_item_meta_{$key} ON &quot; .
+														&quot;(order_items.order_item_id = order_item_meta_{$key}.order_item_id) &quot; .
+														&quot; AND (order_item_meta_{$key}.meta_key = &#039;{$raw_key}&#039;)&quot;;
+					break;
+				case &#039;order_item&#039;:
+					$joins[&#039;order_items&#039;] = &quot;{$join_type} JOIN {$wpdb-&gt;prefix}woocommerce_order_items AS order_items ON posts.ID = order_items.order_id&quot;;
+					break;
+			}
+		}
+
+		if ( ! empty( $where_meta ) ) {
+			foreach ( $where_meta as $value ) {
+				if ( ! is_array( $value ) ) {
+					continue;
+				}
+				$join_type = isset( $value[&#039;join_type&#039;] ) ? $value[&#039;join_type&#039;] : &#039;INNER&#039;;
+				$type      = isset( $value[&#039;type&#039;] ) ? $value[&#039;type&#039;] : false;
+				$key       = sanitize_key( is_array( $value[&#039;meta_key&#039;] ) ? $value[&#039;meta_key&#039;][0] . &#039;_array&#039; : $value[&#039;meta_key&#039;] );
+
+				if ( &#039;order_item_meta&#039; === $type ) {
+
+					$joins[&#039;order_items&#039;]              = &quot;{$join_type} JOIN {$wpdb-&gt;prefix}woocommerce_order_items AS order_items ON posts.ID = order_items.order_id&quot;;
+					$joins[ &quot;order_item_meta_{$key}&quot; ] = &quot;{$join_type} JOIN {$wpdb-&gt;prefix}woocommerce_order_itemmeta AS order_item_meta_{$key} ON order_items.order_item_id = order_item_meta_{$key}.order_item_id&quot;;
+
+				} else {
+					// If we have a where clause for meta, join the postmeta table.
+					$joins[ &quot;meta_{$key}&quot; ] = &quot;{$join_type} JOIN {$wpdb-&gt;postmeta} AS meta_{$key} ON posts.ID = meta_{$key}.post_id&quot;;
+				}
+			}
+		}
+
+		if ( ! empty( $parent_order_status ) ) {
+			$joins[&#039;parent&#039;] = &quot;LEFT JOIN {$wpdb-&gt;posts} AS parent ON posts.post_parent = parent.ID&quot;;
+		}
+
+		$query[&#039;join&#039;] = implode( &#039; &#039;, $joins );
+
+		$query[&#039;where&#039;] = &quot;
+			WHERE 	posts.post_type 	IN ( &#039;&quot; . implode( &quot;&#039;,&#039;&quot;, $order_types ) . &quot;&#039; )
+			&quot;;
+
+		if ( ! empty( $order_status ) ) {
+			$query[&#039;where&#039;] .= &quot;
+				AND 	posts.post_status 	IN ( &#039;wc-&quot; . implode( &quot;&#039;,&#039;wc-&quot;, $order_status ) . &quot;&#039;)
+			&quot;;
+		}
+
+		if ( ! empty( $parent_order_status ) ) {
+			if ( ! empty( $order_status ) ) {
+				$query[&#039;where&#039;] .= &quot; AND ( parent.post_status IN ( &#039;wc-&quot; . implode( &quot;&#039;,&#039;wc-&quot;, $parent_order_status ) . &quot;&#039;) OR parent.ID IS NULL ) &quot;;
+			} else {
+				$query[&#039;where&#039;] .= &quot; AND parent.post_status IN ( &#039;wc-&quot; . implode( &quot;&#039;,&#039;wc-&quot;, $parent_order_status ) . &quot;&#039;) &quot;;
+			}
+		}
+
+		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date
+		if ( $filter_range ) {
+			$query[&#039;where&#039;] .= &quot;
+				AND 	posts.post_date &gt;= &#039;&quot; . date( &#039;Y-m-d H:i:s&#039;, $this-&gt;start_date ) . &quot;&#039;
+				AND 	posts.post_date &lt; &#039;&quot; . date( &#039;Y-m-d H:i:s&#039;, strtotime( &#039;+1 DAY&#039;, $this-&gt;end_date ) ) . &quot;&#039;
+			&quot;;
+		}
+		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date
+
+		if ( ! empty( $where_meta ) ) {
+
+			$relation = isset( $where_meta[&#039;relation&#039;] ) ? $where_meta[&#039;relation&#039;] : &#039;AND&#039;;
+
+			$query[&#039;where&#039;] .= &#039; AND (&#039;;
+
+			foreach ( $where_meta as $index =&gt; $value ) {
+
+				if ( ! is_array( $value ) ) {
+					continue;
+				}
+
+				$key = sanitize_key( is_array( $value[&#039;meta_key&#039;] ) ? $value[&#039;meta_key&#039;][0] . &#039;_array&#039; : $value[&#039;meta_key&#039;] );
+
+				if ( strtolower( $value[&#039;operator&#039;] ) === &#039;in&#039; || strtolower( $value[&#039;operator&#039;] ) === &#039;not in&#039; ) {
+
+					if ( is_array( $value[&#039;meta_value&#039;] ) ) {
+						// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+						$value[&#039;meta_value&#039;] = implode( &quot;&#039;,&#039;&quot;, $value[&#039;meta_value&#039;] );
+					}
+
+					if ( ! empty( $value[&#039;meta_value&#039;] ) ) {
+						$where_value = &quot;{$value[&#039;operator&#039;]} (&#039;{$value[&#039;meta_value&#039;]}&#039;)&quot;;
+					}
+				} else {
+					$where_value = &quot;{$value[&#039;operator&#039;]} &#039;{$value[&#039;meta_value&#039;]}&#039;&quot;;
+				}
+
+				if ( ! empty( $where_value ) ) {
+					if ( $index &gt; 0 ) {
+						$query[&#039;where&#039;] .= &#039; &#039; . $relation;
+					}
+
+					if ( isset( $value[&#039;type&#039;] ) &amp;&amp; &#039;order_item_meta&#039; === $value[&#039;type&#039;] ) {
+
+						if ( is_array( $value[&#039;meta_key&#039;] ) ) {
+							$query[&#039;where&#039;] .= &quot; ( order_item_meta_{$key}.meta_key   IN (&#039;&quot; . implode( &quot;&#039;,&#039;&quot;, $value[&#039;meta_key&#039;] ) . &quot;&#039;)&quot;;
+						} else {
+							$query[&#039;where&#039;] .= &quot; ( order_item_meta_{$key}.meta_key   = &#039;{$value[&#039;meta_key&#039;]}&#039;&quot;;
+						}
+
+						$query[&#039;where&#039;] .= &quot; AND order_item_meta_{$key}.meta_value {$where_value} )&quot;;
+					} else {
+
+						if ( is_array( $value[&#039;meta_key&#039;] ) ) {
+							$query[&#039;where&#039;] .= &quot; ( meta_{$key}.meta_key   IN (&#039;&quot; . implode( &quot;&#039;,&#039;&quot;, $value[&#039;meta_key&#039;] ) . &quot;&#039;)&quot;;
+						} else {
+							$query[&#039;where&#039;] .= &quot; ( meta_{$key}.meta_key   = &#039;{$value[&#039;meta_key&#039;]}&#039;&quot;;
+						}
+
+						$query[&#039;where&#039;] .= &quot; AND meta_{$key}.meta_value {$where_value} )&quot;;
+					}
+				}
+			}
+
+			$query[&#039;where&#039;] .= &#039;)&#039;;
+		}
+
+		if ( ! empty( $where ) ) {
+
+			foreach ( $where as $value ) {
+
+				if ( strtolower( $value[&#039;operator&#039;] ) === &#039;in&#039; || strtolower( $value[&#039;operator&#039;] ) === &#039;not in&#039; ) {
+
+					if ( is_array( $value[&#039;value&#039;] ) ) {
+						$value[&#039;value&#039;] = implode( &quot;&#039;,&#039;&quot;, $value[&#039;value&#039;] );
+					}
+
+					if ( ! empty( $value[&#039;value&#039;] ) ) {
+						$where_value = &quot;{$value[&#039;operator&#039;]} (&#039;{$value[&#039;value&#039;]}&#039;)&quot;;
+					}
+				} else {
+					$where_value = &quot;{$value[&#039;operator&#039;]} &#039;{$value[&#039;value&#039;]}&#039;&quot;;
+				}
+
+				if ( ! empty( $where_value ) ) {
+					$query[&#039;where&#039;] .= &quot; AND {$value[&#039;key&#039;]} {$where_value}&quot;;
+				}
+			}
+		}
+
+		if ( $group_by ) {
+			$query[&#039;group_by&#039;] = &quot;GROUP BY {$group_by}&quot;;
+		}
+
+		if ( $order_by ) {
+			$query[&#039;order_by&#039;] = &quot;ORDER BY {$order_by}&quot;;
+		}
+
+		if ( $limit ) {
+			$query[&#039;limit&#039;] = &quot;LIMIT {$limit}&quot;;
+		}
+
+		$query = apply_filters( &#039;woocommerce_reports_get_order_report_query&#039;, $query );
+		$query = implode( &#039; &#039;, $query );
+
+		if ( $debug ) {
+			echo &#039;&lt;pre&gt;&#039;;
+			wc_print_r( $query );
+			echo &#039;&lt;/pre&gt;&#039;;
+		}
+
+		if ( $debug || $nocache ) {
+			self::enable_big_selects();
+
+			$result = apply_filters( &#039;woocommerce_reports_get_order_report_data&#039;, $wpdb-&gt;$query_type( $query ), $data );
+		} else {
+			$query_hash = md5( $query_type . $query );
+			$result     = $this-&gt;get_cached_query( $query_hash );
+			if ( null === $result ) {
+				self::enable_big_selects();
+
+				$result = apply_filters( &#039;woocommerce_reports_get_order_report_data&#039;, $wpdb-&gt;$query_type( $query ), $data );
+			}
+			$this-&gt;set_cached_query( $query_hash, $result );
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Init the static hooks of the class.
+	 */
+	protected static function add_update_transients_hook() {
+		if ( ! has_action( &#039;shutdown&#039;, array( &#039;WC_Admin_Report&#039;, &#039;maybe_update_transients&#039; ) ) ) {
+			add_action( &#039;shutdown&#039;, array( &#039;WC_Admin_Report&#039;, &#039;maybe_update_transients&#039; ) );
+		}
+	}
+
+	/**
+	 * Enables big mysql selects for reports, just once for this session.
+	 */
+	protected static function enable_big_selects() {
+		static $big_selects = false;
+
+		global $wpdb;
+
+		if ( ! $big_selects ) {
+			$wpdb-&gt;query( &#039;SET SESSION SQL_BIG_SELECTS=1&#039; );
+			$big_selects = true;
+		}
+	}
+
+	/**
+	 * Get the cached query result or null if it&#039;s not in the cache.
+	 *
+	 * @param string $query_hash The query hash.
+	 *
+	 * @return mixed
+	 */
+	protected function get_cached_query( $query_hash ) {
+		$class = strtolower( get_class( $this ) );
+
+		if ( ! isset( self::$cached_results[ $class ] ) ) {
+			self::$cached_results[ $class ] = get_transient( strtolower( get_class( $this ) ) );
+		}
+
+		if ( isset( self::$cached_results[ $class ][ $query_hash ] ) ) {
+			return self::$cached_results[ $class ][ $query_hash ];
+		}
+
+		return null;
+	}
+
+	/**
+	 * Set the cached query result.
+	 *
+	 * @param string $query_hash The query hash.
+	 * @param mixed  $data The data to cache.
+	 */
+	protected function set_cached_query( $query_hash, $data ) {
+		$class = strtolower( get_class( $this ) );
+
+		if ( ! isset( self::$cached_results[ $class ] ) ) {
+			self::$cached_results[ $class ] = get_transient( $class );
+		}
+
+		if ( false === self::$cached_results[ $class ] ) {
+			self::$cached_results[ $class ] = array();
+		}
+
+		self::add_update_transients_hook();
+
+		self::$transients_to_update[ $class ]          = $class;
+		self::$cached_results[ $class ][ $query_hash ] = $data;
+	}
+
+	/**
+	 * Function to update the modified transients at the end of the request.
+	 */
+	public static function maybe_update_transients() {
+		foreach ( self::$transients_to_update as $key =&gt; $transient_name ) {
+			set_transient( $transient_name, self::$cached_results[ $transient_name ], DAY_IN_SECONDS );
+		}
+		// Transients have been updated reset the list.
+		self::$transients_to_update = array();
+	}
+
+	/**
+	 * Put data with post_date&#039;s into an array of times.
+	 *
+	 * @param  array  $data array of your data.
+	 * @param  string $date_key key for the &#039;date&#039; field. e.g. &#039;post_date&#039;.
+	 * @param  string $data_key key for the data you are charting.
+	 * @param  int    $interval interval to use.
+	 * @param  string $start_date start date.
+	 * @param  string $group_by group by.
+	 * @return array
+	 */
+	public function prepare_chart_data( $data, $date_key, $data_key, $interval, $start_date, $group_by ) {
+		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date
+
+		$prepared_data = array();
+
+		// Ensure all days (or months) have values in this range.
+		if ( &#039;day&#039; === $group_by ) {
+			for ( $i = 0; $i &lt;= $interval; $i ++ ) {
+				$time = strtotime( date( &#039;Ymd&#039;, strtotime( &quot;+{$i} DAY&quot;, $start_date ) ) ) . &#039;000&#039;;
+
+				if ( ! isset( $prepared_data[ $time ] ) ) {
+					$prepared_data[ $time ] = array( esc_js( $time ), 0 );
+				}
+			}
+		} else {
+			$current_yearnum  = date( &#039;Y&#039;, $start_date );
+			$current_monthnum = date( &#039;m&#039;, $start_date );
+
+			for ( $i = 0; $i &lt;= $interval; $i ++ ) {
+				$time = strtotime( $current_yearnum . str_pad( $current_monthnum, 2, &#039;0&#039;, STR_PAD_LEFT ) . &#039;01&#039; ) . &#039;000&#039;;
+
+				if ( ! isset( $prepared_data[ $time ] ) ) {
+					$prepared_data[ $time ] = array( esc_js( $time ), 0 );
+				}
+
+				$current_monthnum ++;
+
+				if ( $current_monthnum &gt; 12 ) {
+					$current_monthnum = 1;
+					$current_yearnum  ++;
+				}
+			}
+		}
+
+		foreach ( $data as $d ) {
+			switch ( $group_by ) {
+				case &#039;day&#039;:
+					$time = strtotime( date( &#039;Ymd&#039;, strtotime( $d-&gt;$date_key ) ) ) . &#039;000&#039;;
+					break;
+				case &#039;month&#039;:
+				default:
+					$time = strtotime( date( &#039;Ym&#039;, strtotime( $d-&gt;$date_key ) ) . &#039;01&#039; ) . &#039;000&#039;;
+					break;
+			}
+
+			if ( ! isset( $prepared_data[ $time ] ) ) {
+				continue;
+			}
+
+			if ( $data_key ) {
+				$prepared_data[ $time ][1] += is_numeric( $d-&gt;$data_key ) ? $d-&gt;$data_key : 0;
+			} else {
+				$prepared_data[ $time ][1] ++;
+			}
+		}
+
+		return $prepared_data;
+
+		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date
+	}
+
+	/**
+	 * Prepares a sparkline to show sales in the last X days.
+	 *
+	 * @param  int    $id ID of the product to show. Blank to get all orders.
+	 * @param  int    $days Days of stats to get.
+	 * @param  string $type Type of sparkline to get. Ignored if ID is not set.
+	 * @return string
+	 */
+	public function sales_sparkline( $id = &#039;&#039;, $days = 7, $type = &#039;sales&#039; ) {
+
+		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date, WordPress.DateTime.CurrentTimeTimestamp.Requested
+
+		if ( $id ) {
+			$meta_key = ( &#039;sales&#039; === $type ) ? &#039;_line_total&#039; : &#039;_qty&#039;;
+
+			$data = $this-&gt;get_order_report_data(
+				array(
+					&#039;data&#039;         =&gt; array(
+						&#039;_product_id&#039; =&gt; array(
+							&#039;type&#039;            =&gt; &#039;order_item_meta&#039;,
+							&#039;order_item_type&#039; =&gt; &#039;line_item&#039;,
+							&#039;function&#039;        =&gt; &#039;&#039;,
+							&#039;name&#039;            =&gt; &#039;product_id&#039;,
+						),
+						$meta_key     =&gt; array(
+							&#039;type&#039;            =&gt; &#039;order_item_meta&#039;,
+							&#039;order_item_type&#039; =&gt; &#039;line_item&#039;,
+							&#039;function&#039;        =&gt; &#039;SUM&#039;,
+							&#039;name&#039;            =&gt; &#039;sparkline_value&#039;,
+						),
+						&#039;post_date&#039;   =&gt; array(
+							&#039;type&#039;     =&gt; &#039;post_data&#039;,
+							&#039;function&#039; =&gt; &#039;&#039;,
+							&#039;name&#039;     =&gt; &#039;post_date&#039;,
+						),
+					),
+					&#039;where&#039;        =&gt; array(
+						array(
+							&#039;key&#039;      =&gt; &#039;post_date&#039;,
+							&#039;value&#039;    =&gt; date( &#039;Y-m-d&#039;, strtotime( &#039;midnight -&#039; . ( $days - 1 ) . &#039; days&#039;, current_time( &#039;timestamp&#039; ) ) ),
+							&#039;operator&#039; =&gt; &#039;&gt;&#039;,
+						),
+						array(
+							&#039;key&#039;      =&gt; &#039;order_item_meta__product_id.meta_value&#039;,
+							&#039;value&#039;    =&gt; $id,
+							&#039;operator&#039; =&gt; &#039;=&#039;,
+						),
+					),
+					&#039;group_by&#039;     =&gt; &#039;YEAR(posts.post_date), MONTH(posts.post_date), DAY(posts.post_date)&#039;,
+					&#039;query_type&#039;   =&gt; &#039;get_results&#039;,
+					&#039;filter_range&#039; =&gt; false,
+				)
+			);
+		} else {
+
+			$data = $this-&gt;get_order_report_data(
+				array(
+					&#039;data&#039;         =&gt; array(
+						&#039;_order_total&#039; =&gt; array(
+							&#039;type&#039;     =&gt; &#039;meta&#039;,
+							&#039;function&#039; =&gt; &#039;SUM&#039;,
+							&#039;name&#039;     =&gt; &#039;sparkline_value&#039;,
+						),
+						&#039;post_date&#039;    =&gt; array(
+							&#039;type&#039;     =&gt; &#039;post_data&#039;,
+							&#039;function&#039; =&gt; &#039;&#039;,
+							&#039;name&#039;     =&gt; &#039;post_date&#039;,
+						),
+					),
+					&#039;where&#039;        =&gt; array(
+						array(
+							&#039;key&#039;      =&gt; &#039;post_date&#039;,
+							&#039;value&#039;    =&gt; date( &#039;Y-m-d&#039;, strtotime( &#039;midnight -&#039; . ( $days - 1 ) . &#039; days&#039;, current_time( &#039;timestamp&#039; ) ) ),
+							&#039;operator&#039; =&gt; &#039;&gt;&#039;,
+						),
+					),
+					&#039;group_by&#039;     =&gt; &#039;YEAR(posts.post_date), MONTH(posts.post_date), DAY(posts.post_date)&#039;,
+					&#039;query_type&#039;   =&gt; &#039;get_results&#039;,
+					&#039;filter_range&#039; =&gt; false,
+				)
+			);
+		}
+
+		$total = 0;
+		foreach ( $data as $d ) {
+			$total += $d-&gt;sparkline_value;
+		}
+
+		if ( &#039;sales&#039; === $type ) {
+			/* translators: 1: total income 2: days */
+			$tooltip = sprintf( __( &#039;Sold %1$s worth in the last %2$d days&#039;, &#039;woocommerce&#039; ), wp_strip_all_tags( wc_price( $total ) ), $days );
+		} else {
+			/* translators: 1: total items sold 2: days */
+			$tooltip = sprintf( _n( &#039;Sold %1$d item in the last %2$d days&#039;, &#039;Sold %1$d items in the last %2$d days&#039;, $total, &#039;woocommerce&#039; ), $total, $days );
+		}
+
+		$sparkline_data = array_values( $this-&gt;prepare_chart_data( $data, &#039;post_date&#039;, &#039;sparkline_value&#039;, $days - 1, strtotime( &#039;midnight -&#039; . ( $days - 1 ) . &#039; days&#039;, current_time( &#039;timestamp&#039; ) ), &#039;day&#039; ) );
+
+		return &#039;&lt;span class=&quot;wc_sparkline &#039; . ( ( &#039;sales&#039; === $type ) ? &#039;lines&#039; : &#039;bars&#039; ) . &#039; tips&quot; data-color=&quot;#777&quot; data-tip=&quot;&#039; . esc_attr( $tooltip ) . &#039;&quot; data-barwidth=&quot;&#039; . 60 * 60 * 16 * 1000 . &#039;&quot; data-sparkline=&quot;&#039; . wc_esc_json( wp_json_encode( $sparkline_data ) ) . &#039;&quot;&gt;&lt;/span&gt;&#039;;
+
+		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date, WordPress.DateTime.CurrentTimeTimestamp.Requested
+	}
+
+	/**
+	 * Get the current range and calculate the start and end dates.
+	 *
+	 * @param  string $current_range Type of range.
+	 */
+	public function calculate_current_range( $current_range ) {
+
+		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date, WordPress.DateTime.CurrentTimeTimestamp.Requested
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+
+		switch ( $current_range ) {
+
+			case &#039;custom&#039;:
+				// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+				$this-&gt;start_date = max( strtotime( &#039;-20 years&#039; ), strtotime( sanitize_text_field( wp_unslash( $_GET[&#039;start_date&#039;] ) ) ) );
+
+				if ( empty( $_GET[&#039;end_date&#039;] ) ) {
+					$this-&gt;end_date = strtotime( &#039;midnight&#039;, current_time( &#039;timestamp&#039; ) );
+				} else {
+					$this-&gt;end_date = strtotime( &#039;midnight&#039;, strtotime( sanitize_text_field( wp_unslash( $_GET[&#039;end_date&#039;] ) ) ) );
+				}
+
+				$interval = 0;
+				$min_date = $this-&gt;start_date;
+
+				// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
+				while ( ( $min_date = strtotime( &#039;+1 MONTH&#039;, $min_date ) ) &lt;= $this-&gt;end_date ) {
+					$interval ++;
+				}
+
+				// 3 months max for day view
+				if ( $interval &gt; 3 ) {
+					$this-&gt;chart_groupby = &#039;month&#039;;
+				} else {
+					$this-&gt;chart_groupby = &#039;day&#039;;
+				}
+				break;
+
+			case &#039;year&#039;:
+				$this-&gt;start_date    = strtotime( date( &#039;Y-01-01&#039;, current_time( &#039;timestamp&#039; ) ) );
+				$this-&gt;end_date      = strtotime( &#039;midnight&#039;, current_time( &#039;timestamp&#039; ) );
+				$this-&gt;chart_groupby = &#039;month&#039;;
+				break;
+
+			case &#039;last_month&#039;:
+				$first_day_current_month = strtotime( date( &#039;Y-m-01&#039;, current_time( &#039;timestamp&#039; ) ) );
+				$this-&gt;start_date        = strtotime( date( &#039;Y-m-01&#039;, strtotime( &#039;-1 DAY&#039;, $first_day_current_month ) ) );
+				$this-&gt;end_date          = strtotime( date( &#039;Y-m-t&#039;, strtotime( &#039;-1 DAY&#039;, $first_day_current_month ) ) );
+				$this-&gt;chart_groupby     = &#039;day&#039;;
+				break;
+
+			case &#039;month&#039;:
+				$this-&gt;start_date    = strtotime( date( &#039;Y-m-01&#039;, current_time( &#039;timestamp&#039; ) ) );
+				$this-&gt;end_date      = strtotime( &#039;midnight&#039;, current_time( &#039;timestamp&#039; ) );
+				$this-&gt;chart_groupby = &#039;day&#039;;
+				break;
+
+			case &#039;7day&#039;:
+				$this-&gt;start_date    = strtotime( &#039;-6 days&#039;, strtotime( &#039;midnight&#039;, current_time( &#039;timestamp&#039; ) ) );
+				$this-&gt;end_date      = strtotime( &#039;midnight&#039;, current_time( &#039;timestamp&#039; ) );
+				$this-&gt;chart_groupby = &#039;day&#039;;
+				break;
+		}
+
+		// Group by.
+		switch ( $this-&gt;chart_groupby ) {
+
+			case &#039;day&#039;:
+				$this-&gt;group_by_query = &#039;YEAR(posts.post_date), MONTH(posts.post_date), DAY(posts.post_date)&#039;;
+				$this-&gt;chart_interval = absint( ceil( max( 0, ( $this-&gt;end_date - $this-&gt;start_date ) / ( 60 * 60 * 24 ) ) ) );
+				$this-&gt;barwidth       = 60 * 60 * 24 * 1000;
+				break;
+
+			case &#039;month&#039;:
+				$this-&gt;group_by_query = &#039;YEAR(posts.post_date), MONTH(posts.post_date)&#039;;
+				$this-&gt;chart_interval = 0;
+				$min_date             = strtotime( date( &#039;Y-m-01&#039;, $this-&gt;start_date ) );
+
+				// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
+				while ( ( $min_date = strtotime( &#039;+1 MONTH&#039;, $min_date ) ) &lt;= $this-&gt;end_date ) {
+					$this-&gt;chart_interval ++;
+				}
+
+				$this-&gt;barwidth = 60 * 60 * 24 * 7 * 4 * 1000;
+				break;
+		}
+
+		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date, WordPress.DateTime.CurrentTimeTimestamp.Requested
+	}
+
+	/**
+	 * Return currency tooltip JS based on WooCommerce currency position settings.
+	 *
+	 * @return string
+	 */
+	public function get_currency_tooltip() {
+		switch ( get_option( &#039;woocommerce_currency_pos&#039; ) ) {
+			case &#039;right&#039;:
+				$currency_tooltip = &#039;append_tooltip: &quot;&#039; . get_woocommerce_currency_symbol() . &#039;&quot;&#039;;
+				break;
+			case &#039;right_space&#039;:
+				$currency_tooltip = &#039;append_tooltip: &quot;&amp;nbsp;&#039; . get_woocommerce_currency_symbol() . &#039;&quot;&#039;;
+				break;
+			case &#039;left&#039;:
+				$currency_tooltip = &#039;prepend_tooltip: &quot;&#039; . get_woocommerce_currency_symbol() . &#039;&quot;&#039;;
+				break;
+			case &#039;left_space&#039;:
+			default:
+				$currency_tooltip = &#039;prepend_tooltip: &quot;&#039; . get_woocommerce_currency_symbol() . &#039;&amp;nbsp;&quot;&#039;;
+				break;
+		}
+
+		return $currency_tooltip;
+	}
+
+	/**
+	 * Get the main chart.
+	 */
+	public function get_main_chart() {}
+
+	/**
+	 * Get the legend for the main chart sidebar.
+	 *
+	 * @return array
+	 */
+	public function get_chart_legend() {
+		return array();
+	}
+
+	/**
+	 * Get chart widgets.
+	 *
+	 * @return array
+	 */
+	public function get_chart_widgets() {
+		return array();
+	}
+
+	/**
+	 * Get an export link if needed.
+	 */
+	public function get_export_button() {}
+
+	/**
+	 * Output the report.
+	 */
+	public function output_report() {}
+
+	/**
+	 * Check nonce for current range.
+	 *
+	 * @since  3.0.4
+	 * @param  string $current_range Current range.
+	 */
+	public function check_current_range_nonce( $current_range ) {
+		if ( &#039;custom&#039; !== $current_range ) {
+			return;
+		}
+
+		if ( ! isset( $_GET[&#039;wc_reports_nonce&#039;] ) || ! wp_verify_nonce( sanitize_key( $_GET[&#039;wc_reports_nonce&#039;] ), &#039;custom_range&#039; ) ) {
+			// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+			wp_die(
+				/* translators: %1$s: open link, %2$s: close link */
+				sprintf( esc_html__( &#039;This report link has expired. %1$sClick here to view the filtered report%2$s.&#039;, &#039;woocommerce&#039; ), &#039;&lt;a href=&quot;&#039; . esc_url( wp_nonce_url( esc_url_raw( wp_unslash( $_SERVER[&#039;REQUEST_URI&#039;] ) ), &#039;custom_range&#039;, &#039;wc_reports_nonce&#039; ) ) . &#039;&quot;&gt;&#039;, &#039;&lt;/a&gt;&#039; ),
+				esc_attr__( &#039;Confirm navigation&#039;, &#039;woocommerce&#039; )
+			);
+			// phpcs:enable WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+			exit;
+		}
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866946"></script>
+    <script src="../js/search.js?updated=1692866946"></script>
+</body>
+</html>

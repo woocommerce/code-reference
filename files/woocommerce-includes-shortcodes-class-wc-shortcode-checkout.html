@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866948">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866948">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-shortcode-checkout.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Checkout Shortcode
+ *
+ * Used on the checkout page, the checkout shortcode displays the checkout process.
+ *
+ * @package WooCommerce\Shortcodes\Checkout
+ * @version 2.0.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Shortcode checkout class.
+ */
+class WC_Shortcode_Checkout {
+
+	/**
+	 * Get the shortcode content.
+	 *
+	 * @param array $atts Shortcode attributes.
+	 * @return string
+	 */
+	public static function get( $atts ) {
+		return WC_Shortcodes::shortcode_wrapper( array( __CLASS__, &#039;output&#039; ), $atts );
+	}
+
+	/**
+	 * Output the shortcode.
+	 *
+	 * @param array $atts Shortcode attributes.
+	 */
+	public static function output( $atts ) {
+		global $wp;
+
+		// Check cart class is loaded or abort.
+		if ( is_null( WC()-&gt;cart ) ) {
+			return;
+		}
+
+		// Backwards compatibility with old pay and thanks link arguments.
+		if ( isset( $_GET[&#039;order&#039;] ) &amp;&amp; isset( $_GET[&#039;key&#039;] ) ) { // WPCS: input var ok, CSRF ok.
+			wc_deprecated_argument( __CLASS__ . &#039;-&gt;&#039; . __FUNCTION__, &#039;2.1&#039;, &#039;&quot;order&quot; is no longer used to pass an order ID. Use the order-pay or order-received endpoint instead.&#039; );
+
+			// Get the order to work out what we are showing.
+			$order_id = absint( $_GET[&#039;order&#039;] ); // WPCS: input var ok.
+			$order    = wc_get_order( $order_id );
+
+			if ( $order &amp;&amp; $order-&gt;has_status( &#039;pending&#039; ) ) {
+				$wp-&gt;query_vars[&#039;order-pay&#039;] = absint( $_GET[&#039;order&#039;] ); // WPCS: input var ok.
+			} else {
+				$wp-&gt;query_vars[&#039;order-received&#039;] = absint( $_GET[&#039;order&#039;] ); // WPCS: input var ok.
+			}
+		}
+
+		// Handle checkout actions.
+		if ( ! empty( $wp-&gt;query_vars[&#039;order-pay&#039;] ) ) {
+
+			self::order_pay( $wp-&gt;query_vars[&#039;order-pay&#039;] );
+
+		} elseif ( isset( $wp-&gt;query_vars[&#039;order-received&#039;] ) ) {
+
+			self::order_received( $wp-&gt;query_vars[&#039;order-received&#039;] );
+
+		} else {
+
+			self::checkout();
+
+		}
+	}
+
+	/**
+	 * Show the pay page.
+	 *
+	 * @throws Exception When validate fails.
+	 * @param int $order_id Order ID.
+	 */
+	private static function order_pay( $order_id ) {
+
+		do_action( &#039;before_woocommerce_pay&#039; );
+
+		$order_id = absint( $order_id );
+
+		// Pay for existing order.
+		if ( isset( $_GET[&#039;pay_for_order&#039;], $_GET[&#039;key&#039;] ) &amp;&amp; $order_id ) { // WPCS: input var ok, CSRF ok.
+			try {
+				$order_key = isset( $_GET[&#039;key&#039;] ) ? wc_clean( wp_unslash( $_GET[&#039;key&#039;] ) ) : &#039;&#039;; // WPCS: input var ok, CSRF ok.
+				$order     = wc_get_order( $order_id );
+
+				// Order or payment link is invalid.
+				if ( ! $order || $order-&gt;get_id() !== $order_id || ! hash_equals( $order-&gt;get_order_key(), $order_key ) ) {
+					throw new Exception( __( &#039;Sorry, this order is invalid and cannot be paid for.&#039;, &#039;woocommerce&#039; ) );
+				}
+
+				// Logged out customer does not have permission to pay for this order.
+				if ( ! current_user_can( &#039;pay_for_order&#039;, $order_id ) &amp;&amp; ! is_user_logged_in() ) {
+					wc_print_notice( esc_html__( &#039;Please log in to your account below to continue to the payment form.&#039;, &#039;woocommerce&#039; ), &#039;notice&#039; );
+					woocommerce_login_form(
+						array(
+							&#039;redirect&#039; =&gt; $order-&gt;get_checkout_payment_url(),
+						)
+					);
+					return;
+				}
+
+				// Add notice if logged in customer is trying to pay for guest order.
+				if ( ! $order-&gt;get_user_id() &amp;&amp; is_user_logged_in() ) {
+					// If order has does not have same billing email then current logged in user then show warning.
+					if ( $order-&gt;get_billing_email() !== wp_get_current_user()-&gt;user_email ) {
+						wc_print_notice( __( &#039;You are paying for a guest order. Please continue with payment only if you recognize this order.&#039;, &#039;woocommerce&#039; ), &#039;error&#039; );
+					}
+				}
+
+				// Logged in customer trying to pay for someone else&#039;s order.
+				if ( ! current_user_can( &#039;pay_for_order&#039;, $order_id ) ) {
+					throw new Exception( __( &#039;This order cannot be paid for. Please contact us if you need assistance.&#039;, &#039;woocommerce&#039; ) );
+				}
+
+				// Does not need payment.
+				if ( ! $order-&gt;needs_payment() ) {
+					/* translators: %s: order status */
+					throw new Exception( sprintf( __( &#039;This order&amp;rsquo;s status is &amp;ldquo;%s&amp;rdquo;&amp;mdash;it cannot be paid for. Please contact us if you need assistance.&#039;, &#039;woocommerce&#039; ), wc_get_order_status_name( $order-&gt;get_status() ) ) );
+				}
+
+				// Ensure order items are still stocked if paying for a failed order. Pending orders do not need this check because stock is held.
+				if ( ! $order-&gt;has_status( wc_get_is_pending_statuses() ) ) {
+					$quantities = array();
+
+					foreach ( $order-&gt;get_items() as $item_key =&gt; $item ) {
+						if ( $item &amp;&amp; is_callable( array( $item, &#039;get_product&#039; ) ) ) {
+							$product = $item-&gt;get_product();
+
+							if ( ! $product ) {
+								continue;
+							}
+
+							$quantities[ $product-&gt;get_stock_managed_by_id() ] = isset( $quantities[ $product-&gt;get_stock_managed_by_id() ] ) ? $quantities[ $product-&gt;get_stock_managed_by_id() ] + $item-&gt;get_quantity() : $item-&gt;get_quantity();
+						}
+					}
+
+					// Stock levels may already have been adjusted for this order (in which case we don&#039;t need to worry about checking for low stock).
+					if ( ! $order-&gt;get_data_store()-&gt;get_stock_reduced( $order-&gt;get_id() ) ) {
+						foreach ( $order-&gt;get_items() as $item_key =&gt; $item ) {
+							if ( $item &amp;&amp; is_callable( array( $item, &#039;get_product&#039; ) ) ) {
+								$product = $item-&gt;get_product();
+
+								if ( ! $product ) {
+									continue;
+								}
+
+								if ( ! apply_filters( &#039;woocommerce_pay_order_product_in_stock&#039;, $product-&gt;is_in_stock(), $product, $order ) ) {
+									/* translators: %s: product name */
+									throw new Exception( sprintf( __( &#039;Sorry, &quot;%s&quot; is no longer in stock so this order cannot be paid for. We apologize for any inconvenience caused.&#039;, &#039;woocommerce&#039; ), $product-&gt;get_name() ) );
+								}
+
+								// We only need to check products managing stock, with a limited stock qty.
+								if ( ! $product-&gt;managing_stock() || $product-&gt;backorders_allowed()  ) {
+									continue;
+								}
+
+								// Check stock based on all items in the cart and consider any held stock within pending orders.
+								$held_stock     = wc_get_held_stock_quantity( $product, $order-&gt;get_id() );
+								$required_stock = $quantities[ $product-&gt;get_stock_managed_by_id() ];
+
+								if ( ! apply_filters( &#039;woocommerce_pay_order_product_has_enough_stock&#039;, ( $product-&gt;get_stock_quantity() &gt;= ( $held_stock + $required_stock ) ), $product, $order ) ) {
+									/* translators: 1: product name 2: quantity in stock */
+									throw new Exception( sprintf( __( &#039;Sorry, we do not have enough &quot;%1$s&quot; in stock to fulfill your order (%2$s available). We apologize for any inconvenience caused.&#039;, &#039;woocommerce&#039; ), $product-&gt;get_name(), wc_format_stock_quantity_for_display( $product-&gt;get_stock_quantity() - $held_stock, $product ) ) );
+								}
+							}
+						}
+					}
+				}
+
+				// If we cannot match the order with the current user, ask that they verify their email address.
+				if ( self::guest_should_verify_email( $order, &#039;order-pay&#039; ) ) {
+					wc_get_template(
+						&#039;checkout/form-verify-email.php&#039;,
+						array(
+							&#039;failed_submission&#039; =&gt; ! empty( $_POST[&#039;email&#039;] ), // phpcs:ignore WordPress.Security.NonceVerification.Missing
+							&#039;verify_url&#039;        =&gt; $order-&gt;get_checkout_payment_url(),
+						)
+					);
+					return;
+				}
+
+				WC()-&gt;customer-&gt;set_props(
+					array(
+						&#039;billing_country&#039;  =&gt; $order-&gt;get_billing_country() ? $order-&gt;get_billing_country() : null,
+						&#039;billing_state&#039;    =&gt; $order-&gt;get_billing_state() ? $order-&gt;get_billing_state() : null,
+						&#039;billing_postcode&#039; =&gt; $order-&gt;get_billing_postcode() ? $order-&gt;get_billing_postcode() : null,
+					)
+				);
+				WC()-&gt;customer-&gt;save();
+
+				$available_gateways = WC()-&gt;payment_gateways-&gt;get_available_payment_gateways();
+
+				if ( count( $available_gateways ) ) {
+					current( $available_gateways )-&gt;set_current();
+				}
+
+				/**
+				 * Allows the text of the submit button on the Pay for Order page to be changed.
+				 *
+				 * @param string $text The text of the button.
+				 *
+				 * @since 3.0.2
+				 */
+				$order_button_text = apply_filters( &#039;woocommerce_pay_order_button_text&#039;, __( &#039;Pay for order&#039;, &#039;woocommerce&#039; ) );
+
+				/**
+				 * Triggered right before the Pay for Order form, after validation of the order and customer.
+				 *
+				 * @param WC_Order $order              The order that is being paid for.
+				 * @param string   $order_button_text  The text for the submit button.
+				 * @param array    $available_gateways All available gateways.
+				 *
+				 * @since 6.6
+				 */
+				do_action( &#039;before_woocommerce_pay_form&#039;, $order, $order_button_text, $available_gateways );
+
+				wc_get_template(
+					&#039;checkout/form-pay.php&#039;,
+					array(
+						&#039;order&#039;              =&gt; $order,
+						&#039;available_gateways&#039; =&gt; $available_gateways,
+						&#039;order_button_text&#039;  =&gt; $order_button_text,
+					)
+				);
+
+			} catch ( Exception $e ) {
+				wc_print_notice( $e-&gt;getMessage(), &#039;error&#039; );
+			}
+		} elseif ( $order_id ) {
+
+			// Pay for order after checkout step.
+			$order_key = isset( $_GET[&#039;key&#039;] ) ? wc_clean( wp_unslash( $_GET[&#039;key&#039;] ) ) : &#039;&#039;; // WPCS: input var ok, CSRF ok.
+			$order     = wc_get_order( $order_id );
+
+			if ( $order &amp;&amp; $order-&gt;get_id() === $order_id &amp;&amp; hash_equals( $order-&gt;get_order_key(), $order_key ) ) {
+
+				if ( $order-&gt;needs_payment() ) {
+
+					wc_get_template( &#039;checkout/order-receipt.php&#039;, array( &#039;order&#039; =&gt; $order ) );
+
+				} else {
+					/* translators: %s: order status */
+					wc_print_notice( sprintf( __( &#039;This order&amp;rsquo;s status is &amp;ldquo;%s&amp;rdquo;&amp;mdash;it cannot be paid for. Please contact us if you need assistance.&#039;, &#039;woocommerce&#039; ), wc_get_order_status_name( $order-&gt;get_status() ) ), &#039;error&#039; );
+				}
+			} else {
+				wc_print_notice( __( &#039;Sorry, this order is invalid and cannot be paid for.&#039;, &#039;woocommerce&#039; ), &#039;error&#039; );
+			}
+		} else {
+			wc_print_notice( __( &#039;Invalid order.&#039;, &#039;woocommerce&#039; ), &#039;error&#039; );
+		}
+
+		do_action( &#039;after_woocommerce_pay&#039; );
+	}
+
+	/**
+	 * Show the thanks page.
+	 *
+	 * @param int $order_id Order ID.
+	 */
+	private static function order_received( $order_id = 0 ) {
+		$order = false;
+
+		// Get the order.
+		$order_id  = apply_filters( &#039;woocommerce_thankyou_order_id&#039;, absint( $order_id ) );
+		$order_key = apply_filters( &#039;woocommerce_thankyou_order_key&#039;, empty( $_GET[&#039;key&#039;] ) ? &#039;&#039; : wc_clean( wp_unslash( $_GET[&#039;key&#039;] ) ) ); // WPCS: input var ok, CSRF ok.
+
+		if ( $order_id &gt; 0 ) {
+			$order = wc_get_order( $order_id );
+
+			if ( ! $order || ! hash_equals( $order-&gt;get_order_key(), $order_key ) ) {
+				$order = false;
+			}
+		}
+
+		// Empty awaiting payment session.
+		unset( WC()-&gt;session-&gt;order_awaiting_payment );
+
+		// In case order is created from admin, but paid by the actual customer, store the ip address of the payer
+		// when they visit the payment confirmation page.
+		if ( $order &amp;&amp; $order-&gt;is_created_via( &#039;admin&#039; ) ) {
+			$order-&gt;set_customer_ip_address( WC_Geolocation::get_ip_address() );
+			$order-&gt;save();
+		}
+
+		// Empty current cart.
+		wc_empty_cart();
+
+		// If the specified order ID was invalid, we still render the default order received page (which will simply
+		// state that the order was received, but will not output any other details: this makes it harder to probe for
+		// valid order IDs than if we state that the order ID was not recognized).
+		if ( ! $order ) {
+			wc_get_template( &#039;checkout/thankyou.php&#039;, array( &#039;order&#039; =&gt; false ) );
+			return;
+		}
+
+		$order_customer_id = $order-&gt;get_customer_id();
+
+		// For non-guest orders, require the user to be logged in before showing this page.
+		if ( $order_customer_id &amp;&amp; get_current_user_id() !== $order_customer_id ) {
+			wc_print_notice( esc_html__( &#039;Please log in to your account to view this order.&#039;, &#039;woocommerce&#039; ), &#039;notice&#039; );
+			woocommerce_login_form( array( &#039;redirect&#039; =&gt; $order-&gt;get_checkout_order_received_url() ) );
+			return;
+		}
+
+		// For guest orders, request they verify their email address (unless we can identify them via the active user session).
+		if ( self::guest_should_verify_email( $order, &#039;order-received&#039; ) ) {
+			wc_get_template(
+				&#039;checkout/form-verify-email.php&#039;,
+				array(
+					&#039;failed_submission&#039; =&gt; ! empty( $_POST[&#039;email&#039;] ), // phpcs:ignore WordPress.Security.NonceVerification.Missing
+					&#039;verify_url&#039;        =&gt; $order-&gt;get_checkout_order_received_url(),
+				)
+			);
+			return;
+		}
+
+		// Otherwise, display the thank you (order received) page.
+		wc_get_template( &#039;checkout/thankyou.php&#039;, array( &#039;order&#039; =&gt; $order ) );
+	}
+
+	/**
+	 * Show the checkout.
+	 */
+	private static function checkout() {
+		// Show non-cart errors.
+		do_action( &#039;woocommerce_before_checkout_form_cart_notices&#039; );
+
+		// Check cart has contents.
+		if ( WC()-&gt;cart-&gt;is_empty() &amp;&amp; ! is_customize_preview() &amp;&amp; apply_filters( &#039;woocommerce_checkout_redirect_empty_cart&#039;, true ) ) {
+			return;
+		}
+
+		// Check cart contents for errors.
+		do_action( &#039;woocommerce_check_cart_items&#039; );
+
+		// Calc totals.
+		WC()-&gt;cart-&gt;calculate_totals();
+
+		// Get checkout object.
+		$checkout = WC()-&gt;checkout();
+
+		if ( empty( $_POST ) &amp;&amp; wc_notice_count( &#039;error&#039; ) &gt; 0 ) { // WPCS: input var ok, CSRF ok.
+
+			wc_get_template( &#039;checkout/cart-errors.php&#039;, array( &#039;checkout&#039; =&gt; $checkout ) );
+			wc_clear_notices();
+
+		} else {
+
+			$non_js_checkout = ! empty( $_POST[&#039;woocommerce_checkout_update_totals&#039;] ); // WPCS: input var ok, CSRF ok.
+
+			if ( wc_notice_count( &#039;error&#039; ) === 0 &amp;&amp; $non_js_checkout ) {
+				wc_add_notice( __( &#039;The order totals have been updated. Please confirm your order by pressing the &quot;Place order&quot; button at the bottom of the page.&#039;, &#039;woocommerce&#039; ) );
+			}
+
+			wc_get_template( &#039;checkout/form-checkout.php&#039;, array( &#039;checkout&#039; =&gt; $checkout ) );
+
+		}
+	}
+
+	/**
+	 * Tries to determine if the user&#039;s email address should be verified before rendering either the &#039;order received&#039; or
+	 * &#039;order pay&#039; pages. This should only be applied to guest orders.
+	 *
+	 * @param WC_Order $order   The order for which a need for email verification is being determined.
+	 * @param string   $context The context in which email verification is being tested.
+	 *
+	 * @return bool
+	 */
+	private static function guest_should_verify_email( WC_Order $order, string $context ): bool {
+		$order_email       = $order-&gt;get_billing_email();
+		$order_customer_id = $order-&gt;get_customer_id();
+
+		// If we do not have a billing email for the order (could happen in the order is created manually, or if the
+		// requirement for this has been removed from the checkout flow), email verification does not make sense.
+		if ( empty( $order_email ) ) {
+			return false;
+		}
+
+		// No verification step is needed if the user is logged in and is already associated with the order.
+		if ( $order_customer_id &amp;&amp; get_current_user_id() === $order_customer_id ) {
+			return false;
+		}
+
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( ! empty( $_POST ) &amp;&amp; ! wp_verify_nonce( $_POST[&#039;check_submission&#039;] ?? &#039;&#039;, &#039;wc_verify_email&#039; ) ) {
+			return true;
+		}
+
+		/**
+		 * Controls the grace period within which we do not require any sort of email verification step before rendering
+		 * the &#039;order received&#039; or &#039;order pay&#039; pages.
+		 *
+		 * To eliminate the grace period, set to zero (or to a negative value). Note that this filter is not invoked
+		 * at all if email verification is deemed to be unnecessary (in other words, it cannot be used to force
+		 * verification in *all* cases).
+		 *
+		 * @since 8.0.0
+		 *
+		 * @param int      $grace_period Time in seconds after an order is placed before email verification may be required.
+		 * @param WC_Order $order        The order for which this grace period is being assessed.
+		 * @param string   $context      Indicates the context in which we might verify the email address. Typically &#039;order-pay&#039; or &#039;order-received&#039;.
+		 */
+		$verification_grace_period = (int) apply_filters( &#039;woocommerce_order_email_verification_grace_period&#039;, 10 * MINUTE_IN_SECONDS, $order, $context );
+		$date_created              = $order-&gt;get_date_created();
+
+		// We do not need to verify the email address if we are within the grace period immediately following order creation.
+		if (
+			is_a( $date_created, WC_DateTime::class )
+			&amp;&amp; time() - $date_created-&gt;getTimestamp() &lt;= $verification_grace_period
+		) {
+			return false;
+		}
+
+		$session       = wc()-&gt;session;
+		$session_email = &#039;&#039;;
+
+		if ( is_a( $session, WC_Session::class ) ) {
+			$customer      = $session-&gt;get( &#039;customer&#039; );
+			$session_email = is_array( $customer ) &amp;&amp; isset( $customer[&#039;email&#039;] ) ? $customer[&#039;email&#039;] : &#039;&#039;;
+		}
+
+		$session_email_match  = $session_email === $order-&gt;get_billing_email();
+		$supplied_email_match = isset( $_POST[&#039;email&#039;] ) &amp;&amp; sanitize_email( wp_unslash( $_POST[&#039;email&#039;] ) ?? &#039;&#039; ) === $order-&gt;get_billing_email();
+		$can_view_orders      = current_user_can( &#039;read_private_shop_orders&#039; );
+
+		// If we cannot match the order with the current user, the user should verify their email address.
+		$email_verification_required = ! $session_email_match &amp;&amp; ! $supplied_email_match &amp;&amp; ! $can_view_orders;
+
+		/**
+		 * Provides an opportunity to override the (potential) requirement for shoppers to verify their email address
+		 * before we show information such as the order summary, or order payment page.
+		 *
+		 * Note that this hook is not always triggered, therefore it is (for example) unsuitable as a way of forcing
+		 * email verification across all order confirmation/order payment scenarios. Instead, the filter primarily
+		 * exists as a way to *remove* the email verification step.
+		 *
+		 * @since 7.9.0
+		 *
+		 * @param bool     $email_verification_required If email verification is required.
+		 * @param WC_Order $order                       The relevant order.
+		 * @param string   $context                     The context under which we are performing this check.
+		 */
+		return (bool) apply_filters( &#039;woocommerce_order_email_verification_required&#039;, $email_verification_required, $order, $context );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866948"></script>
+    <script src="../js/search.js?updated=1692866948"></script>
+</body>
+</html>

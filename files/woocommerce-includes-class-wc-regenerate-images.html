@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-regenerate-images.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Regenerate Images Functionality
+ *
+ * All functionality pertaining to regenerating product images in realtime.
+ *
+ * @package WooCommerce\Classes
+ * @version 3.5.0
+ * @since   3.3.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Regenerate Images Class
+ */
+class WC_Regenerate_Images {
+
+	/**
+	 * Background process to regenerate all images
+	 *
+	 * @var WC_Regenerate_Images_Request
+	 */
+	protected static $background_process;
+
+	/**
+	 * Stores size being generated on the fly.
+	 *
+	 * @var string
+	 */
+	protected static $regenerate_size;
+
+	/**
+	 * Init function
+	 */
+	public static function init() {
+		add_action( &#039;image_get_intermediate_size&#039;, array( __CLASS__, &#039;filter_image_get_intermediate_size&#039; ), 10, 3 );
+		add_filter( &#039;wp_generate_attachment_metadata&#039;, array( __CLASS__, &#039;add_uncropped_metadata&#039; ) );
+		add_filter( &#039;wp_get_attachment_image_src&#039;, array( __CLASS__, &#039;maybe_resize_image&#039; ), 10, 4 );
+
+		// Not required when Jetpack Photon is in use.
+		if ( method_exists( &#039;Jetpack&#039;, &#039;is_module_active&#039; ) &amp;&amp; Jetpack::is_module_active( &#039;photon&#039; ) ) {
+			return;
+		}
+
+		if ( apply_filters( &#039;woocommerce_background_image_regeneration&#039;, true ) ) {
+			include_once WC_ABSPATH . &#039;includes/class-wc-regenerate-images-request.php&#039;;
+
+			self::$background_process = new WC_Regenerate_Images_Request();
+
+			add_action( &#039;admin_init&#039;, array( __CLASS__, &#039;regenerating_notice&#039; ) );
+			add_action( &#039;woocommerce_hide_regenerating_thumbnails_notice&#039;, array( __CLASS__, &#039;dismiss_regenerating_notice&#039; ) );
+
+			// Regenerate thumbnails in the background after settings changes. Not ran on multisite to avoid multiple simultaneous jobs.
+			if ( ! is_multisite() ) {
+				add_action( &#039;customize_save_after&#039;, array( __CLASS__, &#039;maybe_regenerate_images&#039; ) );
+				add_action( &#039;after_switch_theme&#039;, array( __CLASS__, &#039;maybe_regenerate_images&#039; ) );
+			}
+		}
+	}
+
+	/**
+	 * If an intermediate size meta differs from the actual image size (settings were changed?) return false so the wrong size is not used.
+	 *
+	 * @param array  $data Size data.
+	 * @param int    $attachment_id Attachment ID.
+	 * @param string $size Size name.
+	 * @return array
+	 */
+	public static function filter_image_get_intermediate_size( $data, $attachment_id, $size ) {
+		if ( ! is_string( $size ) || ! in_array( $size, apply_filters( &#039;woocommerce_image_sizes_to_resize&#039;, array( &#039;woocommerce_thumbnail&#039;, &#039;woocommerce_gallery_thumbnail&#039;, &#039;woocommerce_single&#039; ) ), true ) ) {
+			return $data;
+		}
+
+		// If we don&#039;t have sizes, we cannot proceed.
+		if ( ! isset( $data[&#039;width&#039;], $data[&#039;height&#039;] ) ) {
+			return $data;
+		}
+
+		// See if the image size has changed from our settings.
+		if ( ! self::image_size_matches_settings( $data, $size ) ) {
+			// If Photon is running we can just return false and let Jetpack handle regeneration.
+			if ( method_exists( &#039;Jetpack&#039;, &#039;is_module_active&#039; ) &amp;&amp; Jetpack::is_module_active( &#039;photon&#039; ) ) {
+				return false;
+			} else {
+				// If we get here, Jetpack is not running and we don&#039;t have the correct image sized stored. Try to return closest match.
+				$size_data = wc_get_image_size( $size );
+				return image_get_intermediate_size( $attachment_id, array( absint( $size_data[&#039;width&#039;] ), absint( $size_data[&#039;height&#039;] ) ) );
+			}
+		}
+		return $data;
+	}
+
+	/**
+	 * We need to track if uncropped was on or off when generating the images.
+	 *
+	 * @param array $meta_data Array of meta data.
+	 * @return array
+	 */
+	public static function add_uncropped_metadata( $meta_data ) {
+		$size_data = wc_get_image_size( &#039;woocommerce_thumbnail&#039; );
+		if ( isset( $meta_data[&#039;sizes&#039;], $meta_data[&#039;sizes&#039;][&#039;woocommerce_thumbnail&#039;] ) ) {
+			$meta_data[&#039;sizes&#039;][&#039;woocommerce_thumbnail&#039;][&#039;uncropped&#039;] = empty( $size_data[&#039;height&#039;] );
+		}
+		return $meta_data;
+	}
+
+	/**
+	 * See if an image&#039;s dimensions match actual settings.
+	 *
+	 * @param array  $image Image dimensions array.
+	 * @param string $size Named size.
+	 * @return bool True if they match. False if they do not (may trigger regen).
+	 */
+	protected static function image_size_matches_settings( $image, $size ) {
+		$target_size = wc_get_image_size( $size );
+		$uncropped   = &#039;&#039; === $target_size[&#039;width&#039;] || &#039;&#039; === $target_size[&#039;height&#039;];
+
+		if ( ! $uncropped ) {
+			$ratio_match = wp_image_matches_ratio( $image[&#039;width&#039;], $image[&#039;height&#039;], $target_size[&#039;width&#039;], $target_size[&#039;height&#039;] );
+
+			// Size is invalid if the widths or crop setting don&#039;t match.
+			if ( $ratio_match &amp;&amp; $target_size[&#039;width&#039;] !== $image[&#039;width&#039;] ) {
+				return false;
+			}
+
+			// Size is invalid if the heights don&#039;t match.
+			if ( $ratio_match &amp;&amp; $target_size[&#039;height&#039;] &amp;&amp; $target_size[&#039;height&#039;] !== $image[&#039;height&#039;] ) {
+				return false;
+			}
+		}
+
+		// If cropping mode has changed, regenerate the image.
+		if ( $uncropped &amp;&amp; empty( $image[&#039;uncropped&#039;] ) ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Show notice when job is running in background.
+	 */
+	public static function regenerating_notice() {
+		if ( ! self::$background_process-&gt;is_running() ) {
+			WC_Admin_Notices::add_notice( &#039;regenerating_thumbnails&#039; );
+		} else {
+			WC_Admin_Notices::remove_notice( &#039;regenerating_thumbnails&#039; );
+		}
+	}
+
+	/**
+	 * Dismiss notice and cancel jobs.
+	 */
+	public static function dismiss_regenerating_notice() {
+		if ( self::$background_process ) {
+			self::$background_process-&gt;kill_process();
+
+			$log = wc_get_logger();
+			$log-&gt;info(
+				__( &#039;Cancelled product image regeneration job.&#039;, &#039;woocommerce&#039; ),
+				array(
+					&#039;source&#039; =&gt; &#039;wc-image-regeneration&#039;,
+				)
+			);
+		}
+		WC_Admin_Notices::remove_notice( &#039;regenerating_thumbnails&#039; );
+	}
+
+	/**
+	 * Regenerate images if the settings have changed since last re-generation.
+	 *
+	 * @return void
+	 */
+	public static function maybe_regenerate_images() {
+		$size_hash = md5(
+			wp_json_encode(
+				array(
+					wc_get_image_size( &#039;thumbnail&#039; ),
+					wc_get_image_size( &#039;single&#039; ),
+					wc_get_image_size( &#039;gallery_thumbnail&#039; ),
+				)
+			)
+		);
+
+		if ( update_option( &#039;woocommerce_maybe_regenerate_images_hash&#039;, $size_hash ) ) {
+			// Size settings have changed. Trigger regen.
+			self::queue_image_regeneration();
+		}
+	}
+
+	/**
+	 * Check if we should maybe generate a new image size if not already there.
+	 *
+	 * @param array        $image Properties of the image.
+	 * @param int          $attachment_id Attachment ID.
+	 * @param string|array $size Image size.
+	 * @param bool         $icon If icon or not.
+	 * @return array
+	 */
+	public static function maybe_resize_image( $image, $attachment_id, $size, $icon ) {
+		if ( ! apply_filters( &#039;woocommerce_resize_images&#039;, true ) ) {
+			return $image;
+		}
+
+		// List of sizes we want to resize. Ignore others.
+		if ( ! $image || ! in_array( $size, apply_filters( &#039;woocommerce_image_sizes_to_resize&#039;, array( &#039;woocommerce_thumbnail&#039;, &#039;woocommerce_gallery_thumbnail&#039;, &#039;woocommerce_single&#039; ) ), true ) ) {
+			return $image;
+		}
+
+		$target_size      = wc_get_image_size( $size );
+		$image_width      = $image[1];
+		$image_height     = $image[2];
+		$ratio_match      = false;
+		$target_uncropped = &#039;&#039; === $target_size[&#039;width&#039;] || &#039;&#039; === $target_size[&#039;height&#039;] || ! $target_size[&#039;crop&#039;];
+
+		// If &#039;&#039; is passed to either size, we test ratios against the original file. It&#039;s uncropped.
+		if ( $target_uncropped ) {
+			$full_size = self::get_full_size_image_dimensions( $attachment_id );
+
+			if ( ! $full_size || ! $full_size[&#039;width&#039;] || ! $full_size[&#039;height&#039;] ) {
+				return $image;
+			}
+
+			$ratio_match = wp_image_matches_ratio( $image_width, $image_height, $full_size[&#039;width&#039;], $full_size[&#039;height&#039;] );
+		} else {
+			$ratio_match = wp_image_matches_ratio( $image_width, $image_height, $target_size[&#039;width&#039;], $target_size[&#039;height&#039;] );
+		}
+
+		if ( ! $ratio_match ) {
+			$full_size = self::get_full_size_image_dimensions( $attachment_id );
+
+			if ( ! $full_size ) {
+				return $image;
+			}
+
+			// Check if the actual image has a larger dimension than the requested image size. Smaller images are not zoom-cropped.
+			if ( $image_width === $target_size[&#039;width&#039;] &amp;&amp; $full_size[&#039;height&#039;] &lt; $target_size[&#039;height&#039;] ) {
+				return $image;
+			}
+
+			if ( $image_height === $target_size[&#039;height&#039;] &amp;&amp; $full_size[&#039;width&#039;] &lt; $target_size[&#039;width&#039;] ) {
+				return $image;
+			}
+
+			// If the full size image is smaller both ways, don&#039;t scale it up.
+			if ( $full_size[&#039;height&#039;] &lt; $target_size[&#039;height&#039;] &amp;&amp; $full_size[&#039;width&#039;] &lt; $target_size[&#039;width&#039;] ) {
+				return $image;
+			}
+
+			return self::resize_and_return_image( $attachment_id, $image, $size, $icon );
+		}
+
+		return $image;
+	}
+
+	/**
+	 * Get full size image dimensions.
+	 *
+	 * @param int $attachment_id Attachment ID of image.
+	 * @return array Width and height. Empty array if the dimensions cannot be found.
+	 */
+	private static function get_full_size_image_dimensions( $attachment_id ) {
+		$imagedata = wp_get_attachment_metadata( $attachment_id );
+
+		if ( ! $imagedata ) {
+			return array();
+		}
+
+		if ( ! isset( $imagedata[&#039;file&#039;] ) &amp;&amp; isset( $imagedata[&#039;sizes&#039;][&#039;full&#039;] ) ) {
+			$imagedata[&#039;height&#039;] = $imagedata[&#039;sizes&#039;][&#039;full&#039;][&#039;height&#039;];
+			$imagedata[&#039;width&#039;]  = $imagedata[&#039;sizes&#039;][&#039;full&#039;][&#039;width&#039;];
+		}
+
+		return array(
+			&#039;width&#039;  =&gt; $imagedata[&#039;width&#039;],
+			&#039;height&#039; =&gt; $imagedata[&#039;height&#039;],
+		);
+	}
+
+	/**
+	 * Ensure we are dealing with the correct image attachment
+	 *
+	 * @param int|WP_Post $attachment Attachment object or ID.
+	 * @return boolean
+	 */
+	public static function is_regeneratable( $attachment ) {
+		if ( &#039;site-icon&#039; === get_post_meta( is_object( $attachment ) ? $attachment-&gt;ID : $attachment, &#039;_wp_attachment_context&#039;, true ) ) {
+			return false;
+		}
+
+		if ( wp_attachment_is_image( $attachment ) ) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Only regenerate images for the requested size.
+	 *
+	 * @param array $sizes Array of image sizes.
+	 * @return array
+	 */
+	public static function adjust_intermediate_image_sizes( $sizes ) {
+		return array( self::$regenerate_size );
+	}
+
+	/**
+	 * Generate the thumbnail filename and dimensions for a given file.
+	 *
+	 * @param string $fullsizepath Path to full size image.
+	 * @param int    $thumbnail_width  The width of the thumbnail.
+	 * @param int    $thumbnail_height The height of the thumbnail.
+	 * @param bool   $crop             Whether to crop or not.
+	 * @return array|false An array of the filename, thumbnail width, and thumbnail height, or false on failure to resize such as the thumbnail being larger than the fullsize image.
+	 */
+	private static function get_image( $fullsizepath, $thumbnail_width, $thumbnail_height, $crop ) {
+		list( $fullsize_width, $fullsize_height ) = getimagesize( $fullsizepath );
+
+		$dimensions = image_resize_dimensions( $fullsize_width, $fullsize_height, $thumbnail_width, $thumbnail_height, $crop );
+		$editor     = wp_get_image_editor( $fullsizepath );
+
+		if ( is_wp_error( $editor ) ) {
+			return false;
+		}
+
+		if ( ! $dimensions || ! is_array( $dimensions ) ) {
+			return false;
+		}
+
+		list( , , , , $dst_w, $dst_h ) = $dimensions;
+		$suffix                        = &quot;{$dst_w}x{$dst_h}&quot;;
+		$file_ext                      = strtolower( pathinfo( $fullsizepath, PATHINFO_EXTENSION ) );
+
+		return array(
+			&#039;filename&#039; =&gt; $editor-&gt;generate_filename( $suffix, null, $file_ext ),
+			&#039;width&#039;    =&gt; $dst_w,
+			&#039;height&#039;   =&gt; $dst_h,
+		);
+	}
+
+	/**
+	 * Regenerate the image according to the required size
+	 *
+	 * @param int    $attachment_id Attachment ID.
+	 * @param array  $image Original Image.
+	 * @param string $size Size to return for new URL.
+	 * @param bool   $icon If icon or not.
+	 * @return string
+	 */
+	private static function resize_and_return_image( $attachment_id, $image, $size, $icon ) {
+		if ( ! self::is_regeneratable( $attachment_id ) ) {
+			return $image;
+		}
+
+		$fullsizepath = get_attached_file( $attachment_id );
+
+		if ( false === $fullsizepath || is_wp_error( $fullsizepath ) || ! file_exists( $fullsizepath ) ) {
+			return $image;
+		}
+
+		if ( ! function_exists( &#039;wp_crop_image&#039; ) ) {
+			include ABSPATH . &#039;wp-admin/includes/image.php&#039;;
+		}
+
+		self::$regenerate_size = is_customize_preview() ? $size . &#039;_preview&#039; : $size;
+
+		if ( is_customize_preview() ) {
+			$image_size = wc_get_image_size( $size );
+
+			// Make sure registered image size matches the size we&#039;re requesting.
+			add_image_size( self::$regenerate_size, absint( $image_size[&#039;width&#039;] ), absint( $image_size[&#039;height&#039;] ), $image_size[&#039;crop&#039;] );
+
+			$thumbnail = self::get_image( $fullsizepath, absint( $image_size[&#039;width&#039;] ), absint( $image_size[&#039;height&#039;] ), $image_size[&#039;crop&#039;] );
+
+			// If the file is already there perhaps just load it if we&#039;re using the customizer. No need to store in meta data.
+			if ( $thumbnail &amp;&amp; file_exists( $thumbnail[&#039;filename&#039;] ) ) {
+				$wp_uploads     = wp_upload_dir( null, false );
+				$wp_uploads_dir = $wp_uploads[&#039;basedir&#039;];
+				$wp_uploads_url = $wp_uploads[&#039;baseurl&#039;];
+
+				return array(
+					0 =&gt; str_replace( $wp_uploads_dir, $wp_uploads_url, $thumbnail[&#039;filename&#039;] ),
+					1 =&gt; $thumbnail[&#039;width&#039;],
+					2 =&gt; $thumbnail[&#039;height&#039;],
+				);
+			}
+		}
+
+		$metadata = wp_get_attachment_metadata( $attachment_id );
+
+		// Fix for images with no metadata.
+		if ( ! is_array( $metadata ) ) {
+			$metadata = array();
+		}
+
+		// We only want to regen a specific image size.
+		add_filter( &#039;intermediate_image_sizes&#039;, array( __CLASS__, &#039;adjust_intermediate_image_sizes&#039; ) );
+
+		// This function will generate the new image sizes.
+		$new_metadata = wp_generate_attachment_metadata( $attachment_id, $fullsizepath );
+
+		// Remove custom filter.
+		remove_filter( &#039;intermediate_image_sizes&#039;, array( __CLASS__, &#039;adjust_intermediate_image_sizes&#039; ) );
+
+		// If something went wrong lets just return the original image.
+		if ( is_wp_error( $new_metadata ) || empty( $new_metadata ) ) {
+			return $image;
+		}
+
+		if ( isset( $new_metadata[&#039;sizes&#039;][ self::$regenerate_size ] ) ) {
+			$metadata[&#039;sizes&#039;][ self::$regenerate_size ] = $new_metadata[&#039;sizes&#039;][ self::$regenerate_size ];
+			wp_update_attachment_metadata( $attachment_id, $metadata );
+		}
+
+		// Now we&#039;ve done our regen, attempt to return the new size.
+		$new_image = self::unfiltered_image_downsize( $attachment_id, self::$regenerate_size );
+
+		return $new_image ? $new_image : $image;
+	}
+
+	/**
+	 * Image downsize, without this classes filtering on the results.
+	 *
+	 * @param int    $attachment_id Attachment ID.
+	 * @param string $size Size to downsize to.
+	 * @return string New image URL.
+	 */
+	private static function unfiltered_image_downsize( $attachment_id, $size ) {
+		remove_action( &#039;image_get_intermediate_size&#039;, array( __CLASS__, &#039;filter_image_get_intermediate_size&#039; ), 10, 3 );
+
+		$return = image_downsize( $attachment_id, $size );
+
+		add_action( &#039;image_get_intermediate_size&#039;, array( __CLASS__, &#039;filter_image_get_intermediate_size&#039; ), 10, 3 );
+
+		return $return;
+	}
+
+	/**
+	 * Get list of images and queue them for regeneration
+	 *
+	 * @return void
+	 */
+	public static function queue_image_regeneration() {
+		global $wpdb;
+		// First lets cancel existing running queue to avoid running it more than once.
+		self::$background_process-&gt;kill_process();
+
+		// Now lets find all product image attachments IDs and pop them onto the queue.
+		$images = $wpdb-&gt;get_results( // @codingStandardsIgnoreLine
+			&quot;SELECT ID
+			FROM $wpdb-&gt;posts
+			WHERE post_type = &#039;attachment&#039;
+			AND post_mime_type LIKE &#039;image/%&#039;
+			ORDER BY ID DESC&quot;
+		);
+		foreach ( $images as $image ) {
+			self::$background_process-&gt;push_to_queue(
+				array(
+					&#039;attachment_id&#039; =&gt; $image-&gt;ID,
+				)
+			);
+		}
+
+		// Lets dispatch the queue to start processing.
+		self::$background_process-&gt;save()-&gt;dispatch();
+	}
+}
+
+add_action( &#039;init&#039;, array( &#039;WC_Regenerate_Images&#039;, &#039;init&#039; ) );
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866946">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866946">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-helper-updater.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * The update helper for WooCommerce.com plugins.
+ *
+ * @class WC_Helper_Updater
+ * @package WooCommerce\Admin\Helper
+ */
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * WC_Helper_Updater Class
+ *
+ * Contains the logic to fetch available updates and hook into Core&#039;s update
+ * routines to serve WooCommerce.com-provided packages.
+ */
+class WC_Helper_Updater {
+
+	/**
+	 * Loads the class, runs on init.
+	 */
+	public static function load() {
+		add_action( &#039;pre_set_site_transient_update_plugins&#039;, array( __CLASS__, &#039;transient_update_plugins&#039; ), 21, 1 );
+		add_action( &#039;pre_set_site_transient_update_themes&#039;, array( __CLASS__, &#039;transient_update_themes&#039; ), 21, 1 );
+		add_action( &#039;upgrader_process_complete&#039;, array( __CLASS__, &#039;upgrader_process_complete&#039; ) );
+		add_action( &#039;upgrader_pre_download&#039;, array( __CLASS__, &#039;block_expired_updates&#039; ), 10, 2 );
+	}
+
+	/**
+	 * Runs in a cron thread, or in a visitor thread if triggered
+	 * by _maybe_update_plugins(), or in an auto-update thread.
+	 *
+	 * @param object $transient The update_plugins transient object.
+	 *
+	 * @return object The same or a modified version of the transient.
+	 */
+	public static function transient_update_plugins( $transient ) {
+		$update_data = self::get_update_data();
+
+		foreach ( WC_Helper::get_local_woo_plugins() as $plugin ) {
+			if ( empty( $update_data[ $plugin[&#039;_product_id&#039;] ] ) ) {
+				continue;
+			}
+
+			$data     = $update_data[ $plugin[&#039;_product_id&#039;] ];
+			$filename = $plugin[&#039;_filename&#039;];
+
+			$item = array(
+				&#039;id&#039;             =&gt; &#039;woocommerce-com-&#039; . $plugin[&#039;_product_id&#039;],
+				&#039;slug&#039;           =&gt; &#039;woocommerce-com-&#039; . $data[&#039;slug&#039;],
+				&#039;plugin&#039;         =&gt; $filename,
+				&#039;new_version&#039;    =&gt; $data[&#039;version&#039;],
+				&#039;url&#039;            =&gt; $data[&#039;url&#039;],
+				&#039;package&#039;        =&gt; $data[&#039;package&#039;],
+				&#039;upgrade_notice&#039; =&gt; $data[&#039;upgrade_notice&#039;],
+			);
+
+			if ( isset( $data[&#039;requires_php&#039;] ) ) {
+				$item[&#039;requires_php&#039;] = $data[&#039;requires_php&#039;];
+			}
+
+			// We don&#039;t want to deliver a valid upgrade package when their subscription has expired.
+			// To avoid the generic &quot;no_package&quot; error that empty strings give, we will store an
+			// indication of expiration for the `upgrader_pre_download` filter to error on.
+			if ( ! self::_has_active_subscription( $plugin[&#039;_product_id&#039;] ) ) {
+				$item[&#039;package&#039;] = &#039;woocommerce-com-expired-&#039; . $plugin[&#039;_product_id&#039;];
+			}
+
+			if ( version_compare( $plugin[&#039;Version&#039;], $data[&#039;version&#039;], &#039;&lt;&#039; ) ) {
+				$transient-&gt;response[ $filename ] = (object) $item;
+				unset( $transient-&gt;no_update[ $filename ] );
+			} else {
+				$transient-&gt;no_update[ $filename ] = (object) $item;
+				unset( $transient-&gt;response[ $filename ] );
+			}
+		}
+
+		$translations = self::get_translations_update_data();
+		$transient-&gt;translations = array_merge( isset( $transient-&gt;translations ) ? $transient-&gt;translations : array(), $translations );
+
+		return $transient;
+	}
+
+	/**
+	 * Runs on pre_set_site_transient_update_themes, provides custom
+	 * packages for WooCommerce.com-hosted extensions.
+	 *
+	 * @param object $transient The update_themes transient object.
+	 *
+	 * @return object The same or a modified version of the transient.
+	 */
+	public static function transient_update_themes( $transient ) {
+		$update_data = self::get_update_data();
+
+		foreach ( WC_Helper::get_local_woo_themes() as $theme ) {
+			if ( empty( $update_data[ $theme[&#039;_product_id&#039;] ] ) ) {
+				continue;
+			}
+
+			$data = $update_data[ $theme[&#039;_product_id&#039;] ];
+			$slug = $theme[&#039;_stylesheet&#039;];
+
+			$item = array(
+				&#039;theme&#039;       =&gt; $slug,
+				&#039;new_version&#039; =&gt; $data[&#039;version&#039;],
+				&#039;url&#039;         =&gt; $data[&#039;url&#039;],
+				&#039;package&#039;     =&gt; &#039;&#039;,
+			);
+
+			if ( self::_has_active_subscription( $theme[&#039;_product_id&#039;] ) ) {
+				$item[&#039;package&#039;] = $data[&#039;package&#039;];
+			}
+
+			if ( version_compare( $theme[&#039;Version&#039;], $data[&#039;version&#039;], &#039;&lt;&#039; ) ) {
+				$transient-&gt;response[ $slug ] = $item;
+			} else {
+				unset( $transient-&gt;response[ $slug ] );
+				$transient-&gt;checked[ $slug ] = $data[&#039;version&#039;];
+			}
+		}
+
+		return $transient;
+	}
+
+	/**
+	 * Get update data for all plugins.
+	 *
+	 * @return array Update data {product_id =&gt; data}
+	 * @see get_update_data
+	 */
+	public static function get_available_extensions_downloads_data() {
+		$payload = array();
+
+		// Scan subscriptions.
+		foreach ( WC_Helper::get_subscriptions() as $subscription ) {
+			$payload[ $subscription[&#039;product_id&#039;] ] = array(
+				&#039;product_id&#039; =&gt; $subscription[&#039;product_id&#039;],
+				&#039;file_id&#039;    =&gt; &#039;&#039;,
+			);
+		}
+
+		// Scan local plugins which may or may not have a subscription.
+		foreach ( WC_Helper::get_local_woo_plugins() as $data ) {
+			if ( ! isset( $payload[ $data[&#039;_product_id&#039;] ] ) ) {
+				$payload[ $data[&#039;_product_id&#039;] ] = array(
+					&#039;product_id&#039; =&gt; $data[&#039;_product_id&#039;],
+				);
+			}
+
+			$payload[ $data[&#039;_product_id&#039;] ][&#039;file_id&#039;] = $data[&#039;_file_id&#039;];
+		}
+
+		return self::_update_check( $payload );
+	}
+
+	/**
+	 * Get update data for all extensions.
+	 *
+	 * Scans through all subscriptions for the connected user, as well
+	 * as all Woo extensions without a subscription, and obtains update
+	 * data for each product.
+	 *
+	 * @return array Update data {product_id =&gt; data}
+	 */
+	public static function get_update_data() {
+		$payload = array();
+
+		// Scan subscriptions.
+		foreach ( WC_Helper::get_subscriptions() as $subscription ) {
+			$payload[ $subscription[&#039;product_id&#039;] ] = array(
+				&#039;product_id&#039; =&gt; $subscription[&#039;product_id&#039;],
+				&#039;file_id&#039;    =&gt; &#039;&#039;,
+			);
+		}
+
+		// Scan local plugins which may or may not have a subscription.
+		foreach ( WC_Helper::get_local_woo_plugins() as $data ) {
+			if ( ! isset( $payload[ $data[&#039;_product_id&#039;] ] ) ) {
+				$payload[ $data[&#039;_product_id&#039;] ] = array(
+					&#039;product_id&#039; =&gt; $data[&#039;_product_id&#039;],
+				);
+			}
+
+			$payload[ $data[&#039;_product_id&#039;] ][&#039;file_id&#039;] = $data[&#039;_file_id&#039;];
+		}
+
+		// Scan local themes.
+		foreach ( WC_Helper::get_local_woo_themes() as $data ) {
+			if ( ! isset( $payload[ $data[&#039;_product_id&#039;] ] ) ) {
+				$payload[ $data[&#039;_product_id&#039;] ] = array(
+					&#039;product_id&#039; =&gt; $data[&#039;_product_id&#039;],
+				);
+			}
+
+			$payload[ $data[&#039;_product_id&#039;] ][&#039;file_id&#039;] = $data[&#039;_file_id&#039;];
+		}
+
+		return self::_update_check( $payload );
+	}
+
+	/**
+	 * Get translations updates information.
+	 *
+	 * Scans through all subscriptions for the connected user, as well
+	 * as all Woo extensions without a subscription, and obtains update
+	 * data for each product.
+	 *
+	 * @return array Update data {product_id =&gt; data}
+	 */
+	public static function get_translations_update_data() {
+		$payload = array();
+
+		$installed_translations = wp_get_installed_translations( &#039;plugins&#039; );
+
+		$locales = array_values( get_available_languages() );
+		/**
+		 * Filters the locales requested for plugin translations.
+		 *
+		 * @since 3.7.0
+		 * @since 4.5.0 The default value of the `$locales` parameter changed to include all locales.
+		 *
+		 * @param array $locales Plugin locales. Default is all available locales of the site.
+		 */
+		$locales = apply_filters( &#039;plugins_update_check_locales&#039;, $locales );
+		$locales = array_unique( $locales );
+
+		// No locales, the response will be empty, we can return now.
+		if ( empty( $locales ) ) {
+			return array();
+		}
+
+		// Scan local plugins which may or may not have a subscription.
+		$plugins                 = WC_Helper::get_local_woo_plugins();
+		$active_woo_plugins      = array_intersect( array_keys( $plugins ), get_option( &#039;active_plugins&#039;, array() ) );
+
+		/*
+		* Use only plugins that are subscribed to the automatic translations updates.
+		*/
+		$active_for_translations = array_filter(
+			$active_woo_plugins,
+			function( $plugin ) use ( $plugins ) {
+				return apply_filters( &#039;woocommerce_translations_updates_for_&#039; . $plugins[ $plugin ][&#039;slug&#039;], false );
+			}
+		);
+
+		// Nothing to check for, exit.
+		if ( empty( $active_for_translations ) ) {
+			return array();
+		}
+
+		if ( wp_doing_cron() ) {
+			$timeout = 30;
+		} else {
+			// Three seconds, plus one extra second for every 10 plugins.
+			$timeout = 3 + (int) ( count( $active_for_translations ) / 10 );
+		}
+
+		$request_body = array(
+			&#039;locales&#039; =&gt; $locales,
+			&#039;plugins&#039; =&gt; array(),
+		);
+
+		foreach ( $active_for_translations as $active_plugin ) {
+			$plugin = $plugins[ $active_plugin ];
+			$request_body[&#039;plugins&#039;][ $plugin[&#039;slug&#039;] ] = array( &#039;version&#039; =&gt; $plugin[&#039;Version&#039;] );
+		}
+
+		$raw_response = wp_remote_post(
+			&#039;https://translate.wordpress.com/api/translations-updates/woocommerce&#039;,
+			array(
+				&#039;body&#039;        =&gt; json_encode( $request_body ),
+				&#039;headers&#039;     =&gt; array( &#039;Content-Type: application/json&#039; ),
+				&#039;timeout&#039;     =&gt; $timeout,
+			)
+		);
+
+		// Something wrong happened on the translate server side.
+		$response_code = wp_remote_retrieve_response_code( $raw_response );
+		if ( 200 !== $response_code ) {
+			return array();
+		}
+
+		$response = json_decode( wp_remote_retrieve_body( $raw_response ), true );
+
+		// API error, api returned but something was wrong.
+		if ( array_key_exists( &#039;success&#039;, $response ) &amp;&amp; false === $response[&#039;success&#039;] ) {
+			return array();
+		}
+
+		$translations = array();
+
+		foreach ( $response[&#039;data&#039;] as $plugin_name =&gt; $language_packs ) {
+			foreach ( $language_packs as $language_pack ) {
+				// Maybe we have this language pack already installed so lets check revision date.
+				if ( array_key_exists( $plugin_name, $installed_translations ) &amp;&amp; array_key_exists( $language_pack[&#039;wp_locale&#039;], $installed_translations[ $plugin_name ] ) ) {
+					$installed_translation_revision_time = new DateTime( $installed_translations[ $plugin_name ][ $language_pack[&#039;wp_locale&#039;] ][&#039;PO-Revision-Date&#039;] );
+					$new_translation_revision_time       = new DateTime( $language_pack[&#039;last_modified&#039;] );
+					// Skip if translation language pack is not newer than what is installed already.
+					if ( $new_translation_revision_time &lt;= $installed_translation_revision_time ) {
+						continue;
+					}
+				}
+				$translations[] = array(
+					&#039;type&#039;       =&gt; &#039;plugin&#039;,
+					&#039;slug&#039;       =&gt; $plugin_name,
+					&#039;language&#039;   =&gt; $language_pack[&#039;wp_locale&#039;],
+					&#039;version&#039;    =&gt; $language_pack[&#039;version&#039;],
+					&#039;updated&#039;    =&gt; $language_pack[&#039;last_modified&#039;],
+					&#039;package&#039;    =&gt; $language_pack[&#039;package&#039;],
+					&#039;autoupdate&#039; =&gt; true,
+				);
+			}
+		}
+
+		return $translations;
+	}
+
+	/**
+	 * Run an update check API call.
+	 *
+	 * The call is cached based on the payload (product ids, file ids). If
+	 * the payload changes, the cache is going to miss.
+	 *
+	 * @param array $payload Information about the plugin to update.
+	 * @return array Update data for each requested product.
+	 */
+	private static function _update_check( $payload ) {
+		ksort( $payload );
+		$hash = md5( wp_json_encode( $payload ) );
+
+		$cache_key = &#039;_woocommerce_helper_updates&#039;;
+		$data      = get_transient( $cache_key );
+		if ( false !== $data ) {
+			if ( hash_equals( $hash, $data[&#039;hash&#039;] ) ) {
+				return $data[&#039;products&#039;];
+			}
+		}
+
+		$data = array(
+			&#039;hash&#039;     =&gt; $hash,
+			&#039;updated&#039;  =&gt; time(),
+			&#039;products&#039; =&gt; array(),
+			&#039;errors&#039;   =&gt; array(),
+		);
+
+		$request = WC_Helper_API::post(
+			&#039;update-check&#039;,
+			array(
+				&#039;body&#039;          =&gt; wp_json_encode( array( &#039;products&#039; =&gt; $payload ) ),
+				&#039;authenticated&#039; =&gt; true,
+			)
+		);
+
+		if ( wp_remote_retrieve_response_code( $request ) !== 200 ) {
+			$data[&#039;errors&#039;][] = &#039;http-error&#039;;
+		} else {
+			$data[&#039;products&#039;] = json_decode( wp_remote_retrieve_body( $request ), true );
+		}
+
+		set_transient( $cache_key, $data, 12 * HOUR_IN_SECONDS );
+		return $data[&#039;products&#039;];
+	}
+
+	/**
+	 * Check for an active subscription.
+	 *
+	 * Checks a given product id against all subscriptions on
+	 * the current site. Returns true if at least one active
+	 * subscription is found.
+	 *
+	 * @param int $product_id The product id to look for.
+	 *
+	 * @return bool True if active subscription found.
+	 */
+	private static function _has_active_subscription( $product_id ) {
+		if ( ! isset( $auth ) ) {
+			$auth = WC_Helper_Options::get( &#039;auth&#039; );
+		}
+
+		if ( ! isset( $subscriptions ) ) {
+			$subscriptions = WC_Helper::get_subscriptions();
+		}
+
+		if ( empty( $auth[&#039;site_id&#039;] ) || empty( $subscriptions ) ) {
+			return false;
+		}
+
+		// Check for an active subscription.
+		foreach ( $subscriptions as $subscription ) {
+			if ( $subscription[&#039;product_id&#039;] != $product_id ) {
+				continue;
+			}
+
+			if ( in_array( absint( $auth[&#039;site_id&#039;] ), $subscription[&#039;connections&#039;] ) ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Get the number of products that have updates.
+	 *
+	 * @return int The number of products with updates.
+	 */
+	public static function get_updates_count() {
+		$cache_key = &#039;_woocommerce_helper_updates_count&#039;;
+		$count     = get_transient( $cache_key );
+		if ( false !== $count ) {
+			return $count;
+		}
+
+		// Don&#039;t fetch any new data since this function in high-frequency.
+		if ( ! get_transient( &#039;_woocommerce_helper_subscriptions&#039; ) ) {
+			return 0;
+		}
+
+		if ( ! get_transient( &#039;_woocommerce_helper_updates&#039; ) ) {
+			return 0;
+		}
+
+		$count       = 0;
+		$update_data = self::get_update_data();
+
+		if ( empty( $update_data ) ) {
+			set_transient( $cache_key, $count, 12 * HOUR_IN_SECONDS );
+			return $count;
+		}
+
+		// Scan local plugins.
+		foreach ( WC_Helper::get_local_woo_plugins() as $plugin ) {
+			if ( empty( $update_data[ $plugin[&#039;_product_id&#039;] ] ) ) {
+				continue;
+			}
+
+			if ( version_compare( $plugin[&#039;Version&#039;], $update_data[ $plugin[&#039;_product_id&#039;] ][&#039;version&#039;], &#039;&lt;&#039; ) ) {
+				$count++;
+			}
+		}
+
+		// Scan local themes.
+		foreach ( WC_Helper::get_local_woo_themes() as $theme ) {
+			if ( empty( $update_data[ $theme[&#039;_product_id&#039;] ] ) ) {
+				continue;
+			}
+
+			if ( version_compare( $theme[&#039;Version&#039;], $update_data[ $theme[&#039;_product_id&#039;] ][&#039;version&#039;], &#039;&lt;&#039; ) ) {
+				$count++;
+			}
+		}
+
+		set_transient( $cache_key, $count, 12 * HOUR_IN_SECONDS );
+		return $count;
+	}
+
+	/**
+	 * Return the updates count markup.
+	 *
+	 * @return string Updates count markup, empty string if no updates avairable.
+	 */
+	public static function get_updates_count_html() {
+		$count = self::get_updates_count();
+		if ( ! $count ) {
+			return &#039;&#039;;
+		}
+
+		$count_html = sprintf( &#039;&lt;span class=&quot;update-plugins count-%d&quot;&gt;&lt;span class=&quot;update-count&quot;&gt;%d&lt;/span&gt;&lt;/span&gt;&#039;, $count, number_format_i18n( $count ) );
+		return $count_html;
+	}
+
+	/**
+	 * Flushes cached update data.
+	 */
+	public static function flush_updates_cache() {
+		delete_transient( &#039;_woocommerce_helper_updates&#039; );
+		delete_transient( &#039;_woocommerce_helper_updates_count&#039; );
+		delete_site_transient( &#039;update_plugins&#039; );
+		delete_site_transient( &#039;update_themes&#039; );
+	}
+
+	/**
+	 * Fires when a user successfully updated a theme or a plugin.
+	 */
+	public static function upgrader_process_complete() {
+		delete_transient( &#039;_woocommerce_helper_updates_count&#039; );
+	}
+
+	/**
+	 * Hooked into the upgrader_pre_download filter in order to better handle error messaging around expired
+	 * plugin updates. Initially we were using an empty string, but the error message that no_package
+	 * results in does not fit the cause.
+	 *
+	 * @since 4.1.0
+	 * @param bool   $reply Holds the current filtered response.
+	 * @param string $package The path to the package file for the update.
+	 * @return false|WP_Error False to proceed with the update as normal, anything else to be returned instead of updating.
+	 */
+	public static function block_expired_updates( $reply, $package ) {
+		// Don&#039;t override a reply that was set already.
+		if ( false !== $reply ) {
+			return $reply;
+		}
+
+		// Only for packages with expired subscriptions.
+		if ( 0 !== strpos( $package, &#039;woocommerce-com-expired-&#039; ) ) {
+			return false;
+		}
+
+		return new WP_Error(
+			&#039;woocommerce_subscription_expired&#039;,
+			sprintf(
+				// translators: %s: URL of WooCommerce.com subscriptions tab.
+				__( &#039;Please visit the &lt;a href=&quot;%s&quot; target=&quot;_blank&quot;&gt;subscriptions page&lt;/a&gt; and renew to continue receiving updates.&#039;, &#039;woocommerce&#039; ),
+				esc_url( admin_url( &#039;admin.php?page=wc-addons&amp;section=helper&#039; ) )
+			)
+		);
+	}
+}
+
+WC_Helper_Updater::load();
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866946"></script>
+    <script src="../js/search.js?updated=1692866946"></script>
+</body>
+</html>

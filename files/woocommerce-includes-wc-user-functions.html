@@ -1,0 +1,2728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866950">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866950">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">wc-user-functions.php</h2>
+
+                
+
+            <section class="phpdocumentor-functions">
+        <h3 class="phpdocumentor-elements__header" id="functions">
+            Functions
+            <a href="#functions" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_disable_admin_bar">
+        wc_disable_admin_bar()
+        <a href="#function_wc_disable_admin_bar" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.24">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">24</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Prevent any user who cannot &#039;edit_posts&#039; (subscribers, customers etc) from seeing the admin bar.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_disable_admin_bar</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$show_admin_bar</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"><p>Note: get_option( 'woocommerce_lock_down_admin', true ) is a deprecated option here for backwards compatibility. Defaults to true.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$show_admin_bar</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>If should display admin bar.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_create_new_customer">
+        wc_create_new_customer()
+        <a href="#function_wc_create_new_customer" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.51">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">51</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Create a new customer.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_create_new_customer</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$email</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$username</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$password</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$args</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">array()</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|<abbr title="\WP_Error">WP_Error</abbr></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$email</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Customer email.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$username</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Customer username.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$password</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Customer password.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$args</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">array()</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>List of arguments to pass to <code class="prettyprint">wp_insert_user()</code>.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_create_new_customer_username">
+        wc_create_new_customer_username()
+        <a href="#function_wc_create_new_customer_username" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.130">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">130</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Create a unique username for a new customer.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_create_new_customer_username</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$email</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$new_user_args</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">array()</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$suffix</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$email</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>New customer email address.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$new_user_args</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">array()</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Array of new user args, maybe including first and last names.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$suffix</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Append string to username to make it unique.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_set_customer_auth_cookie">
+        wc_set_customer_auth_cookie()
+        <a href="#function_wc_set_customer_auth_cookie" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.229">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">229</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Login a customer (set auth cookie and set global user object).</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_set_customer_auth_cookie</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$customer_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$customer_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Customer ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_update_new_customer_past_orders">
+        wc_update_new_customer_past_orders()
+        <a href="#function_wc_update_new_customer_past_orders" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.243">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">243</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get past orders (by email) and update them.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_update_new_customer_past_orders</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$customer_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$customer_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Customer ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_paying_customer">
+        wc_paying_customer()
+        <a href="#function_wc_paying_customer" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.296">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">296</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Order payment completed - This is a paying customer.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_paying_customer</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_customer_bought_product">
+        wc_customer_bought_product()
+        <a href="#function_wc_customer_bought_product" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.320">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">320</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Checks if a user (by email or ID or both) has bought an item.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_customer_bought_product</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$customer_email</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$product_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$customer_email</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Customer email to check.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>User ID to check.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$product_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Product ID to check.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_current_user_has_role">
+        wc_current_user_has_role()
+        <a href="#function_wc_current_user_has_role" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.409">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">409</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Checks if the current user has a role.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_current_user_has_role</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$role</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$role</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The role.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_user_has_role">
+        wc_user_has_role()
+        <a href="#function_wc_user_has_role" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.420">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">420</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Checks if a user has a role.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_user_has_role</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|<abbr title="\WP_User">WP_User</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$role</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|<abbr title="\WP_User">WP_User</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The user.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$role</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The role.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_customer_has_capability">
+        wc_customer_has_capability()
+        <a href="#function_wc_customer_has_capability" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.441">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">441</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Checks if a user has a certain capability.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_customer_has_capability</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$allcaps</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$caps</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$args</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$allcaps</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>All capabilities.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$caps</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Capabilities.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$args</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Arguments.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_shop_manager_has_capability">
+        wc_shop_manager_has_capability()
+        <a href="#function_wc_shop_manager_has_capability" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.511">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">511</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Safe way of allowing shop managers restricted capabilities that will remove
+access to the capabilities if WooCommerce is deactivated.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_shop_manager_has_capability</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, bool&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$allcaps</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$caps</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$args</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\WP_User">WP_User</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, bool&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$allcaps</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, bool&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Array of key/value pairs where keys represent a capability name and boolean values
+represent whether the user has that capability.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$caps</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required primitive capabilities for the requested capability.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$args</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Arguments that accompany the requested capability check.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\WP_User">WP_User</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The user object.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.5.4</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_modify_editable_roles">
+        wc_modify_editable_roles()
+        <a href="#function_wc_modify_editable_roles" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.528">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">528</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Modify the list of editable roles to prevent non-admin adding admin users.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_modify_editable_roles</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$roles</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$roles</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Roles.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_modify_map_meta_cap">
+        wc_modify_map_meta_cap()
+        <a href="#function_wc_modify_map_meta_cap" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.556">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">556</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Modify capabilities to prevent non-admin users editing admin users.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_modify_map_meta_cap</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$caps</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$cap</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$args</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"><p>$args[0] will be the user being edited in this case.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$caps</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Array of caps.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$cap</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Name of the cap we are checking.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>ID of the user being checked against.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$args</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Arguments.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_customer_download_permissions">
+        wc_get_customer_download_permissions()
+        <a href="#function_wc_get_customer_download_permissions" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.593">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">593</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get customer download permissions from the database.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_customer_download_permissions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$customer_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$customer_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Customer/User ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_customer_available_downloads">
+        wc_get_customer_available_downloads()
+        <a href="#function_wc_get_customer_available_downloads" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.604">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">604</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get customer available downloads.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_customer_available_downloads</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$customer_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$customer_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Customer/User ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_customer_total_spent">
+        wc_get_customer_total_spent()
+        <a href="#function_wc_get_customer_total_spent" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.700">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">700</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get total spent by customer.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_customer_total_spent</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>User ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_customer_order_count">
+        wc_get_customer_order_count()
+        <a href="#function_wc_get_customer_order_count" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.711">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">711</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get total orders by customer.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_customer_order_count</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>User ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_reset_order_customer_id_on_deleted_user">
+        wc_reset_order_customer_id_on_deleted_user()
+        <a href="#function_wc_reset_order_customer_id_on_deleted_user" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.721">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">721</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Reset _customer_user on orders when a user is deleted.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_reset_order_customer_id_on_deleted_user</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>User ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_review_is_from_verified_owner">
+        wc_review_is_from_verified_owner()
+        <a href="#function_wc_review_is_from_verified_owner" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.768">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">768</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get review verification status.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_review_is_from_verified_owner</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$comment_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$comment_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Comment ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_disable_author_archives_for_customers">
+        wc_disable_author_archives_for_customers()
+        <a href="#function_wc_disable_author_archives_for_customers" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.778">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">778</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Disable author archives for customers.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_disable_author_archives_for_customers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.5.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_update_profile_last_update_time">
+        wc_update_profile_last_update_time()
+        <a href="#function_wc_update_profile_last_update_time" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.800">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">800</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Hooks into the `profile_update` hook to set the user last updated timestamp.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_update_profile_last_update_time</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$old</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The user that was updated.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$old</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The profile fields pre-change.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_meta_update_last_update_time">
+        wc_meta_update_last_update_time()
+        <a href="#function_wc_meta_update_last_update_time" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.815">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">815</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Hooks into the update user meta function to set the user last updated timestamp.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_meta_update_last_update_time</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$meta_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$meta_key</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$_meta_value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$meta_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>ID of the meta object that was changed.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The user that was updated.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$meta_key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Name of the meta key that was changed.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$_meta_value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Value of the meta that was changed.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_set_user_last_update_time">
+        wc_set_user_last_update_time()
+        <a href="#function_wc_set_user_last_update_time" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.835">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">835</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets a user&#039;s &quot;last update&quot; time to the current timestamp.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_set_user_last_update_time</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The user to set a timestamp for.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_customer_saved_methods_list">
+        wc_get_customer_saved_methods_list()
+        <a href="#function_wc_get_customer_saved_methods_list" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.846">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">846</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get customer saved payment methods list.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_customer_saved_methods_list</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$customer_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$customer_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Customer ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_customer_last_order">
+        wc_get_customer_last_order()
+        <a href="#function_wc_get_customer_last_order" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.857">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">857</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get info about customer&#039;s last order.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_customer_last_order</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$customer_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a>|bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$customer_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Customer ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_user_search_columns">
+        wc_user_search_columns()
+        <a href="#function_wc_user_search_columns" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.870">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">870</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Add support for searching by display_name.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_user_search_columns</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$search_columns</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$search_columns</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Column names.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.2.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_delete_user_data">
+        wc_delete_user_data()
+        <a href="#function_wc_delete_user_data" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.881">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">881</span>
+</aside>
+
+        <p class="phpdocumentor-summary">When a user is deleted in WordPress, delete corresponding WooCommerce data.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_delete_user_data</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>User ID being deleted.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_maybe_store_user_agent">
+        wc_maybe_store_user_agent()
+        <a href="#function_wc_maybe_store_user_agent" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.916">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">916</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Store user agents. Used for tracker.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_maybe_store_user_agent</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user_login</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int|object&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user_login</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>User login.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|object</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>User.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.0.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_user_logged_in">
+        wc_user_logged_in()
+        <a href="#function_wc_user_logged_in" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.932">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">932</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Update logic triggered on login.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_user_logged_in</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user_login</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user_login</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>User login.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user</span>
+                : <span class="phpdocumentor-signature__argument__return-type">object</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>User.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.4.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_current_user_is_active">
+        wc_current_user_is_active()
+        <a href="#function_wc_current_user_is_active" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.943">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">943</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Update when the user was last active.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_current_user_is_active</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.4.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_update_user_last_active">
+        wc_update_user_last_active()
+        <a href="#function_wc_update_user_last_active" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.957">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">957</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Set the user last active timestamp to now.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_update_user_last_active</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>User ID to mark active.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.4.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_translate_user_roles">
+        wc_translate_user_roles()
+        <a href="#function_wc_translate_user_roles" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-user-functions.php"><a href="../files/woocommerce-includes-wc-user-functions.html#source-view.974">includes/wc-user-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">974</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Translate WC roles using the woocommerce textdomain.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_translate_user_roles</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$translation</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$text</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$context</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$domain</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$translation</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Translated text.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$text</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Text to translate.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$context</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Context information for the translators.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$domain</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Text domain. Unique identifier for retrieving translated strings.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.7.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+            </section>
+
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WooCommerce Customer Functions
+ *
+ * Functions for customers.
+ *
+ * @package WooCommerce\Functions
+ * @version 2.2.0
+ */
+
+use Automattic\WooCommerce\Internal\DataStores\Orders\OrdersTableDataStore;
+use Automattic\WooCommerce\Utilities\OrderUtil;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Prevent any user who cannot &#039;edit_posts&#039; (subscribers, customers etc) from seeing the admin bar.
+ *
+ * Note: get_option( &#039;woocommerce_lock_down_admin&#039;, true ) is a deprecated option here for backwards compatibility. Defaults to true.
+ *
+ * @param bool $show_admin_bar If should display admin bar.
+ * @return bool
+ */
+function wc_disable_admin_bar( $show_admin_bar ) {
+	/**
+	 * Controls whether the WooCommerce admin bar should be disabled.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @param bool $enabled
+	 */
+	if ( apply_filters( &#039;woocommerce_disable_admin_bar&#039;, true ) &amp;&amp; ! ( current_user_can( &#039;edit_posts&#039; ) || current_user_can( &#039;manage_woocommerce&#039; ) ) ) {
+		$show_admin_bar = false;
+	}
+
+	return $show_admin_bar;
+}
+add_filter( &#039;show_admin_bar&#039;, &#039;wc_disable_admin_bar&#039;, 10, 1 ); // phpcs:ignore WordPress.VIP.AdminBarRemoval.RemovalDetected
+
+if ( ! function_exists( &#039;wc_create_new_customer&#039; ) ) {
+
+	/**
+	 * Create a new customer.
+	 *
+	 * @param  string $email    Customer email.
+	 * @param  string $username Customer username.
+	 * @param  string $password Customer password.
+	 * @param  array  $args     List of arguments to pass to `wp_insert_user()`.
+	 * @return int|WP_Error Returns WP_Error on failure, Int (user ID) on success.
+	 */
+	function wc_create_new_customer( $email, $username = &#039;&#039;, $password = &#039;&#039;, $args = array() ) {
+		if ( empty( $email ) || ! is_email( $email ) ) {
+			return new WP_Error( &#039;registration-error-invalid-email&#039;, __( &#039;Please provide a valid email address.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		if ( email_exists( $email ) ) {
+			return new WP_Error( &#039;registration-error-email-exists&#039;, apply_filters( &#039;woocommerce_registration_error_email_exists&#039;, __( &#039;An account is already registered with your email address. &lt;a href=&quot;#&quot; class=&quot;showlogin&quot;&gt;Please log in.&lt;/a&gt;&#039;, &#039;woocommerce&#039; ), $email ) );
+		}
+
+		if ( &#039;yes&#039; === get_option( &#039;woocommerce_registration_generate_username&#039;, &#039;yes&#039; ) &amp;&amp; empty( $username ) ) {
+			$username = wc_create_new_customer_username( $email, $args );
+		}
+
+		$username = sanitize_user( $username );
+
+		if ( empty( $username ) || ! validate_username( $username ) ) {
+			return new WP_Error( &#039;registration-error-invalid-username&#039;, __( &#039;Please enter a valid account username.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		if ( username_exists( $username ) ) {
+			return new WP_Error( &#039;registration-error-username-exists&#039;, __( &#039;An account is already registered with that username. Please choose another.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		// Handle password creation.
+		$password_generated = false;
+		if ( &#039;yes&#039; === get_option( &#039;woocommerce_registration_generate_password&#039; ) &amp;&amp; empty( $password ) ) {
+			$password           = wp_generate_password();
+			$password_generated = true;
+		}
+
+		if ( empty( $password ) ) {
+			return new WP_Error( &#039;registration-error-missing-password&#039;, __( &#039;Please enter an account password.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		// Use WP_Error to handle registration errors.
+		$errors = new WP_Error();
+
+		do_action( &#039;woocommerce_register_post&#039;, $username, $email, $errors );
+
+		$errors = apply_filters( &#039;woocommerce_registration_errors&#039;, $errors, $username, $email );
+
+		if ( $errors-&gt;get_error_code() ) {
+			return $errors;
+		}
+
+		$new_customer_data = apply_filters(
+			&#039;woocommerce_new_customer_data&#039;,
+			array_merge(
+				$args,
+				array(
+					&#039;user_login&#039; =&gt; $username,
+					&#039;user_pass&#039;  =&gt; $password,
+					&#039;user_email&#039; =&gt; $email,
+					&#039;role&#039;       =&gt; &#039;customer&#039;,
+				)
+			)
+		);
+
+		$customer_id = wp_insert_user( $new_customer_data );
+
+		if ( is_wp_error( $customer_id ) ) {
+			return $customer_id;
+		}
+
+		do_action( &#039;woocommerce_created_customer&#039;, $customer_id, $new_customer_data, $password_generated );
+
+		return $customer_id;
+	}
+}
+
+/**
+ * Create a unique username for a new customer.
+ *
+ * @since 3.6.0
+ * @param string $email New customer email address.
+ * @param array  $new_user_args Array of new user args, maybe including first and last names.
+ * @param string $suffix Append string to username to make it unique.
+ * @return string Generated username.
+ */
+function wc_create_new_customer_username( $email, $new_user_args = array(), $suffix = &#039;&#039; ) {
+	$username_parts = array();
+
+	if ( isset( $new_user_args[&#039;first_name&#039;] ) ) {
+		$username_parts[] = sanitize_user( $new_user_args[&#039;first_name&#039;], true );
+	}
+
+	if ( isset( $new_user_args[&#039;last_name&#039;] ) ) {
+		$username_parts[] = sanitize_user( $new_user_args[&#039;last_name&#039;], true );
+	}
+
+	// Remove empty parts.
+	$username_parts = array_filter( $username_parts );
+
+	// If there are no parts, e.g. name had unicode chars, or was not provided, fallback to email.
+	if ( empty( $username_parts ) ) {
+		$email_parts    = explode( &#039;@&#039;, $email );
+		$email_username = $email_parts[0];
+
+		// Exclude common prefixes.
+		if ( in_array(
+			$email_username,
+			array(
+				&#039;sales&#039;,
+				&#039;hello&#039;,
+				&#039;mail&#039;,
+				&#039;contact&#039;,
+				&#039;info&#039;,
+			),
+			true
+		) ) {
+			// Get the domain part.
+			$email_username = $email_parts[1];
+		}
+
+		$username_parts[] = sanitize_user( $email_username, true );
+	}
+
+	$username = wc_strtolower( implode( &#039;.&#039;, $username_parts ) );
+
+	if ( $suffix ) {
+		$username .= $suffix;
+	}
+
+	/**
+	 * WordPress 4.4 - filters the list of blocked usernames.
+	 *
+	 * @since 3.7.0
+	 * @param array $usernames Array of blocked usernames.
+	 */
+	$illegal_logins = (array) apply_filters( &#039;illegal_user_logins&#039;, array() );
+
+	// Stop illegal logins and generate a new random username.
+	if ( in_array( strtolower( $username ), array_map( &#039;strtolower&#039;, $illegal_logins ), true ) ) {
+		$new_args = array();
+
+		/**
+		 * Filter generated customer username.
+		 *
+		 * @since 3.7.0
+		 * @param string $username      Generated username.
+		 * @param string $email         New customer email address.
+		 * @param array  $new_user_args Array of new user args, maybe including first and last names.
+		 * @param string $suffix        Append string to username to make it unique.
+		 */
+		$new_args[&#039;first_name&#039;] = apply_filters(
+			&#039;woocommerce_generated_customer_username&#039;,
+			&#039;woo_user_&#039; . zeroise( wp_rand( 0, 9999 ), 4 ),
+			$email,
+			$new_user_args,
+			$suffix
+		);
+
+		return wc_create_new_customer_username( $email, $new_args, $suffix );
+	}
+
+	if ( username_exists( $username ) ) {
+		// Generate something unique to append to the username in case of a conflict with another user.
+		$suffix = &#039;-&#039; . zeroise( wp_rand( 0, 9999 ), 4 );
+		return wc_create_new_customer_username( $email, $new_user_args, $suffix );
+	}
+
+	/**
+	 * Filter new customer username.
+	 *
+	 * @since 3.7.0
+	 * @param string $username      Customer username.
+	 * @param string $email         New customer email address.
+	 * @param array  $new_user_args Array of new user args, maybe including first and last names.
+	 * @param string $suffix        Append string to username to make it unique.
+	 */
+	return apply_filters( &#039;woocommerce_new_customer_username&#039;, $username, $email, $new_user_args, $suffix );
+}
+
+/**
+ * Login a customer (set auth cookie and set global user object).
+ *
+ * @param int $customer_id Customer ID.
+ */
+function wc_set_customer_auth_cookie( $customer_id ) {
+	wp_set_current_user( $customer_id );
+	wp_set_auth_cookie( $customer_id, true );
+
+	// Update session.
+	WC()-&gt;session-&gt;init_session_cookie();
+}
+
+/**
+ * Get past orders (by email) and update them.
+ *
+ * @param  int $customer_id Customer ID.
+ * @return int
+ */
+function wc_update_new_customer_past_orders( $customer_id ) {
+	$linked          = 0;
+	$complete        = 0;
+	$customer        = get_user_by( &#039;id&#039;, absint( $customer_id ) );
+	$customer_orders = wc_get_orders(
+		array(
+			&#039;limit&#039;    =&gt; -1,
+			&#039;customer&#039; =&gt; array( array( 0, $customer-&gt;user_email ) ),
+			&#039;return&#039;   =&gt; &#039;ids&#039;,
+		)
+	);
+
+	if ( ! empty( $customer_orders ) ) {
+		foreach ( $customer_orders as $order_id ) {
+			$order = wc_get_order( $order_id );
+			if ( ! $order ) {
+				continue;
+			}
+
+			$order-&gt;set_customer_id( $customer-&gt;ID );
+			$order-&gt;save();
+
+			if ( $order-&gt;has_downloadable_item() ) {
+				$data_store = WC_Data_Store::load( &#039;customer-download&#039; );
+				$data_store-&gt;delete_by_order_id( $order-&gt;get_id() );
+				wc_downloadable_product_permissions( $order-&gt;get_id(), true );
+			}
+
+			do_action( &#039;woocommerce_update_new_customer_past_order&#039;, $order_id, $customer );
+
+			if ( $order-&gt;get_status() === &#039;wc-completed&#039; ) {
+				$complete++;
+			}
+
+			$linked++;
+		}
+	}
+
+	if ( $complete ) {
+		update_user_meta( $customer_id, &#039;paying_customer&#039;, 1 );
+		update_user_meta( $customer_id, &#039;_order_count&#039;, &#039;&#039; );
+		update_user_meta( $customer_id, &#039;_money_spent&#039;, &#039;&#039; );
+		delete_user_meta( $customer_id, &#039;_last_order&#039; );
+	}
+
+	return $linked;
+}
+
+/**
+ * Order payment completed - This is a paying customer.
+ *
+ * @param int $order_id Order ID.
+ */
+function wc_paying_customer( $order_id ) {
+	$order       = wc_get_order( $order_id );
+	$customer_id = $order-&gt;get_customer_id();
+
+	if ( $customer_id &gt; 0 &amp;&amp; &#039;shop_order_refund&#039; !== $order-&gt;get_type() ) {
+		$customer = new WC_Customer( $customer_id );
+
+		if ( ! $customer-&gt;get_is_paying_customer() ) {
+			$customer-&gt;set_is_paying_customer( true );
+			$customer-&gt;save();
+		}
+	}
+}
+add_action( &#039;woocommerce_payment_complete&#039;, &#039;wc_paying_customer&#039; );
+add_action( &#039;woocommerce_order_status_completed&#039;, &#039;wc_paying_customer&#039; );
+
+/**
+ * Checks if a user (by email or ID or both) has bought an item.
+ *
+ * @param string $customer_email Customer email to check.
+ * @param int    $user_id User ID to check.
+ * @param int    $product_id Product ID to check.
+ * @return bool
+ */
+function wc_customer_bought_product( $customer_email, $user_id, $product_id ) {
+	global $wpdb;
+
+	$result = apply_filters( &#039;woocommerce_pre_customer_bought_product&#039;, null, $customer_email, $user_id, $product_id );
+
+	if ( null !== $result ) {
+		return $result;
+	}
+
+	$transient_name    = &#039;wc_customer_bought_product_&#039; . md5( $customer_email . $user_id );
+	$transient_version = WC_Cache_Helper::get_transient_version( &#039;orders&#039; );
+	$transient_value   = get_transient( $transient_name );
+
+	if ( isset( $transient_value[&#039;value&#039;], $transient_value[&#039;version&#039;] ) &amp;&amp; $transient_value[&#039;version&#039;] === $transient_version ) {
+		$result = $transient_value[&#039;value&#039;];
+	} else {
+		$customer_data = array( $user_id );
+
+		if ( $user_id ) {
+			$user = get_user_by( &#039;id&#039;, $user_id );
+
+			if ( isset( $user-&gt;user_email ) ) {
+				$customer_data[] = $user-&gt;user_email;
+			}
+		}
+
+		if ( is_email( $customer_email ) ) {
+			$customer_data[] = $customer_email;
+		}
+
+		$customer_data = array_map( &#039;esc_sql&#039;, array_filter( array_unique( $customer_data ) ) );
+		$statuses      = array_map( &#039;esc_sql&#039;, wc_get_is_paid_statuses() );
+
+		if ( count( $customer_data ) === 0 ) {
+			return false;
+		}
+
+		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
+			$statuses = array_map(
+				function ( $status ) {
+					return &quot;wc-$status&quot;;
+				},
+				$statuses
+			);
+			$order_table = OrdersTableDataStore::get_orders_table_name();
+			$sql = &quot;
+SELECT im.meta_value FROM $order_table AS o
+INNER JOIN {$wpdb-&gt;prefix}woocommerce_order_items AS i ON o.id = i.order_id
+INNER JOIN {$wpdb-&gt;prefix}woocommerce_order_itemmeta AS im ON i.order_item_id = im.order_item_id
+WHERE o.status IN (&#039;&quot; . implode( &quot;&#039;,&#039;&quot;, $statuses ) . &quot;&#039;)
+AND im.meta_key IN (&#039;_product_id&#039;, &#039;_variation_id&#039; )
+AND im.meta_value != 0
+AND ( o.customer_id IN (&#039;&quot; . implode( &quot;&#039;,&#039;&quot;, $customer_data ) . &quot;&#039;) OR o.billing_email IN (&#039;&quot; . implode( &quot;&#039;,&#039;&quot;, $customer_data ) . &quot;&#039;) )
+
+&quot;;
+			$result = $wpdb-&gt;get_col( $sql );
+		} else {
+			$result = $wpdb-&gt;get_col(
+				&quot;
+SELECT im.meta_value FROM {$wpdb-&gt;posts} AS p
+INNER JOIN {$wpdb-&gt;postmeta} AS pm ON p.ID = pm.post_id
+INNER JOIN {$wpdb-&gt;prefix}woocommerce_order_items AS i ON p.ID = i.order_id
+INNER JOIN {$wpdb-&gt;prefix}woocommerce_order_itemmeta AS im ON i.order_item_id = im.order_item_id
+WHERE p.post_status IN ( &#039;wc-&quot; . implode( &quot;&#039;,&#039;wc-&quot;, $statuses ) . &quot;&#039; )
+AND pm.meta_key IN ( &#039;_billing_email&#039;, &#039;_customer_user&#039; )
+AND im.meta_key IN ( &#039;_product_id&#039;, &#039;_variation_id&#039; )
+AND im.meta_value != 0
+AND pm.meta_value IN ( &#039;&quot; . implode( &quot;&#039;,&#039;&quot;, $customer_data ) . &quot;&#039; )
+		&quot;
+			); // WPCS: unprepared SQL ok.
+		}
+		$result = array_map( &#039;absint&#039;, $result );
+
+		$transient_value = array(
+			&#039;version&#039; =&gt; $transient_version,
+			&#039;value&#039;   =&gt; $result,
+		);
+
+		set_transient( $transient_name, $transient_value, DAY_IN_SECONDS * 30 );
+	}
+	return in_array( absint( $product_id ), $result, true );
+}
+
+/**
+ * Checks if the current user has a role.
+ *
+ * @param string $role The role.
+ * @return bool
+ */
+function wc_current_user_has_role( $role ) {
+	return wc_user_has_role( wp_get_current_user(), $role );
+}
+
+/**
+ * Checks if a user has a role.
+ *
+ * @param int|\WP_User $user The user.
+ * @param string       $role The role.
+ * @return bool
+ */
+function wc_user_has_role( $user, $role ) {
+	if ( ! is_object( $user ) ) {
+		$user = get_userdata( $user );
+	}
+
+	if ( ! $user || ! $user-&gt;exists() ) {
+		return false;
+	}
+
+	return in_array( $role, $user-&gt;roles, true );
+}
+
+/**
+ * Checks if a user has a certain capability.
+ *
+ * @param array $allcaps All capabilities.
+ * @param array $caps    Capabilities.
+ * @param array $args    Arguments.
+ *
+ * @return array The filtered array of all capabilities.
+ */
+function wc_customer_has_capability( $allcaps, $caps, $args ) {
+	if ( isset( $caps[0] ) ) {
+		switch ( $caps[0] ) {
+			case &#039;view_order&#039;:
+				$user_id = intval( $args[1] );
+				$order   = wc_get_order( $args[2] );
+
+				if ( $order &amp;&amp; $user_id === $order-&gt;get_user_id() ) {
+					$allcaps[&#039;view_order&#039;] = true;
+				}
+				break;
+			case &#039;pay_for_order&#039;:
+				$user_id  = intval( $args[1] );
+				$order_id = isset( $args[2] ) ? $args[2] : null;
+
+				// When no order ID, we assume it&#039;s a new order
+				// and thus, customer can pay for it.
+				if ( ! $order_id ) {
+					$allcaps[&#039;pay_for_order&#039;] = true;
+					break;
+				}
+
+				$order = wc_get_order( $order_id );
+
+				if ( $order &amp;&amp; ( $user_id === $order-&gt;get_user_id() || ! $order-&gt;get_user_id() ) ) {
+					$allcaps[&#039;pay_for_order&#039;] = true;
+				}
+				break;
+			case &#039;order_again&#039;:
+				$user_id = intval( $args[1] );
+				$order   = wc_get_order( $args[2] );
+
+				if ( $order &amp;&amp; $user_id === $order-&gt;get_user_id() ) {
+					$allcaps[&#039;order_again&#039;] = true;
+				}
+				break;
+			case &#039;cancel_order&#039;:
+				$user_id = intval( $args[1] );
+				$order   = wc_get_order( $args[2] );
+
+				if ( $order &amp;&amp; $user_id === $order-&gt;get_user_id() ) {
+					$allcaps[&#039;cancel_order&#039;] = true;
+				}
+				break;
+			case &#039;download_file&#039;:
+				$user_id  = intval( $args[1] );
+				$download = $args[2];
+
+				if ( $download &amp;&amp; $user_id === $download-&gt;get_user_id() ) {
+					$allcaps[&#039;download_file&#039;] = true;
+				}
+				break;
+		}
+	}
+	return $allcaps;
+}
+add_filter( &#039;user_has_cap&#039;, &#039;wc_customer_has_capability&#039;, 10, 3 );
+
+/**
+ * Safe way of allowing shop managers restricted capabilities that will remove
+ * access to the capabilities if WooCommerce is deactivated.
+ *
+ * @since 3.5.4
+ * @param bool[]   $allcaps Array of key/value pairs where keys represent a capability name and boolean values
+ *                          represent whether the user has that capability.
+ * @param string[] $caps    Required primitive capabilities for the requested capability.
+ * @param array    $args Arguments that accompany the requested capability check.
+ * @param WP_User  $user    The user object.
+ * @return bool[]
+ */
+function wc_shop_manager_has_capability( $allcaps, $caps, $args, $user ) {
+
+	if ( wc_user_has_role( $user, &#039;shop_manager&#039; ) ) {
+		// @see wc_modify_map_meta_cap, which limits editing to customers.
+		$allcaps[&#039;edit_users&#039;] = true;
+	}
+
+	return $allcaps;
+}
+add_filter( &#039;user_has_cap&#039;, &#039;wc_shop_manager_has_capability&#039;, 10, 4 );
+
+/**
+ * Modify the list of editable roles to prevent non-admin adding admin users.
+ *
+ * @param  array $roles Roles.
+ * @return array
+ */
+function wc_modify_editable_roles( $roles ) {
+	if ( is_multisite() &amp;&amp; is_super_admin() ) {
+		return $roles;
+	}
+	if ( ! wc_current_user_has_role( &#039;administrator&#039; ) ) {
+		unset( $roles[&#039;administrator&#039;] );
+
+		if ( wc_current_user_has_role( &#039;shop_manager&#039; ) ) {
+			$shop_manager_editable_roles = apply_filters( &#039;woocommerce_shop_manager_editable_roles&#039;, array( &#039;customer&#039; ) );
+			return array_intersect_key( $roles, array_flip( $shop_manager_editable_roles ) );
+		}
+	}
+
+	return $roles;
+}
+add_filter( &#039;editable_roles&#039;, &#039;wc_modify_editable_roles&#039; );
+
+/**
+ * Modify capabilities to prevent non-admin users editing admin users.
+ *
+ * $args[0] will be the user being edited in this case.
+ *
+ * @param  array  $caps    Array of caps.
+ * @param  string $cap     Name of the cap we are checking.
+ * @param  int    $user_id ID of the user being checked against.
+ * @param  array  $args    Arguments.
+ * @return array
+ */
+function wc_modify_map_meta_cap( $caps, $cap, $user_id, $args ) {
+	if ( is_multisite() &amp;&amp; is_super_admin() ) {
+		return $caps;
+	}
+	switch ( $cap ) {
+		case &#039;edit_user&#039;:
+		case &#039;remove_user&#039;:
+		case &#039;promote_user&#039;:
+		case &#039;delete_user&#039;:
+			if ( ! isset( $args[0] ) || $args[0] === $user_id ) {
+				break;
+			} else {
+				if ( ! wc_current_user_has_role( &#039;administrator&#039; ) ) {
+					if ( wc_user_has_role( $args[0], &#039;administrator&#039; ) ) {
+						$caps[] = &#039;do_not_allow&#039;;
+					} elseif ( wc_current_user_has_role( &#039;shop_manager&#039; ) ) {
+						// Shop managers can only edit customer info.
+						$userdata                    = get_userdata( $args[0] );
+						$shop_manager_editable_roles = apply_filters( &#039;woocommerce_shop_manager_editable_roles&#039;, array( &#039;customer&#039; ) );
+						if ( property_exists( $userdata, &#039;roles&#039; ) &amp;&amp; ! empty( $userdata-&gt;roles ) &amp;&amp; ! array_intersect( $userdata-&gt;roles, $shop_manager_editable_roles ) ) {
+							$caps[] = &#039;do_not_allow&#039;;
+						}
+					}
+				}
+			}
+			break;
+	}
+	return $caps;
+}
+add_filter( &#039;map_meta_cap&#039;, &#039;wc_modify_map_meta_cap&#039;, 10, 4 );
+
+/**
+ * Get customer download permissions from the database.
+ *
+ * @param int $customer_id Customer/User ID.
+ * @return array
+ */
+function wc_get_customer_download_permissions( $customer_id ) {
+	$data_store = WC_Data_Store::load( &#039;customer-download&#039; );
+	return apply_filters( &#039;woocommerce_permission_list&#039;, $data_store-&gt;get_downloads_for_customer( $customer_id ), $customer_id );
+}
+
+/**
+ * Get customer available downloads.
+ *
+ * @param int $customer_id Customer/User ID.
+ * @return array
+ */
+function wc_get_customer_available_downloads( $customer_id ) {
+	$downloads   = array();
+	$_product    = null;
+	$order       = null;
+	$file_number = 0;
+
+	// Get results from valid orders only.
+	$results = wc_get_customer_download_permissions( $customer_id );
+
+	if ( $results ) {
+		foreach ( $results as $result ) {
+			$order_id = intval( $result-&gt;order_id );
+
+			if ( ! $order || $order-&gt;get_id() !== $order_id ) {
+				// New order.
+				$order    = wc_get_order( $order_id );
+				$_product = null;
+			}
+
+			// Make sure the order exists for this download.
+			if ( ! $order ) {
+				continue;
+			}
+
+			// Check if downloads are permitted.
+			if ( ! $order-&gt;is_download_permitted() ) {
+				continue;
+			}
+
+			$product_id = intval( $result-&gt;product_id );
+
+			if ( ! $_product || $_product-&gt;get_id() !== $product_id ) {
+				// New product.
+				$file_number = 0;
+				$_product    = wc_get_product( $product_id );
+			}
+
+			// Check product exists and has the file.
+			if ( ! $_product || ! $_product-&gt;exists() || ! $_product-&gt;has_file( $result-&gt;download_id ) ) {
+				continue;
+			}
+
+			$download_file = $_product-&gt;get_file( $result-&gt;download_id );
+
+			// If the downloadable file has been disabled (it may be located in an untrusted location) then do not return it.
+			if ( ! $download_file-&gt;get_enabled() ) {
+				continue;
+			}
+
+			// Download name will be &#039;Product Name&#039; for products with a single downloadable file, and &#039;Product Name - File X&#039; for products with multiple files.
+			$download_name = apply_filters(
+				&#039;woocommerce_downloadable_product_name&#039;,
+				$download_file[&#039;name&#039;],
+				$_product,
+				$result-&gt;download_id,
+				$file_number
+			);
+
+			$downloads[] = array(
+				&#039;download_url&#039;        =&gt; add_query_arg(
+					array(
+						&#039;download_file&#039; =&gt; $product_id,
+						&#039;order&#039;         =&gt; $result-&gt;order_key,
+						&#039;email&#039;         =&gt; rawurlencode( $result-&gt;user_email ),
+						&#039;key&#039;           =&gt; $result-&gt;download_id,
+					),
+					home_url( &#039;/&#039; )
+				),
+				&#039;download_id&#039;         =&gt; $result-&gt;download_id,
+				&#039;product_id&#039;          =&gt; $_product-&gt;get_id(),
+				&#039;product_name&#039;        =&gt; $_product-&gt;get_name(),
+				&#039;product_url&#039;         =&gt; $_product-&gt;is_visible() ? $_product-&gt;get_permalink() : &#039;&#039;, // Since 3.3.0.
+				&#039;download_name&#039;       =&gt; $download_name,
+				&#039;order_id&#039;            =&gt; $order-&gt;get_id(),
+				&#039;order_key&#039;           =&gt; $order-&gt;get_order_key(),
+				&#039;downloads_remaining&#039; =&gt; $result-&gt;downloads_remaining,
+				&#039;access_expires&#039;      =&gt; $result-&gt;access_expires,
+				&#039;file&#039;                =&gt; array(
+					&#039;name&#039; =&gt; $download_file-&gt;get_name(),
+					&#039;file&#039; =&gt; $download_file-&gt;get_file(),
+				),
+			);
+
+			$file_number++;
+		}
+	}
+
+	return apply_filters( &#039;woocommerce_customer_available_downloads&#039;, $downloads, $customer_id );
+}
+
+/**
+ * Get total spent by customer.
+ *
+ * @param  int $user_id User ID.
+ * @return string
+ */
+function wc_get_customer_total_spent( $user_id ) {
+	$customer = new WC_Customer( $user_id );
+	return $customer-&gt;get_total_spent();
+}
+
+/**
+ * Get total orders by customer.
+ *
+ * @param  int $user_id User ID.
+ * @return int
+ */
+function wc_get_customer_order_count( $user_id ) {
+	$customer = new WC_Customer( $user_id );
+	return $customer-&gt;get_order_count();
+}
+
+/**
+ * Reset _customer_user on orders when a user is deleted.
+ *
+ * @param int $user_id User ID.
+ */
+function wc_reset_order_customer_id_on_deleted_user( $user_id ) {
+	global $wpdb;
+
+	if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
+		$order_table_ds = wc_get_container()-&gt;get( OrdersTableDataStore::class );
+		$order_table    = $order_table_ds::get_orders_table_name();
+		$wpdb-&gt;update(
+			$order_table,
+			array(
+				&#039;customer_id&#039;      =&gt; 0,
+				&#039;date_updated_gmt&#039; =&gt; current_time( &#039;mysql&#039;, true ),
+			),
+			array(
+				&#039;customer_id&#039; =&gt; $user_id,
+			),
+			array(
+				&#039;%d&#039;,
+				&#039;%s&#039;,
+			),
+			array(
+				&#039;%d&#039;,
+			)
+		);
+	}
+
+	if ( ! OrderUtil::custom_orders_table_usage_is_enabled() || OrderUtil::is_custom_order_tables_in_sync() ) {
+		$wpdb-&gt;update(
+			$wpdb-&gt;postmeta,
+			array(
+				&#039;meta_value&#039; =&gt; 0, //phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			),
+			array(
+				&#039;meta_key&#039;   =&gt; &#039;_customer_user&#039;, //phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+				&#039;meta_value&#039; =&gt; $user_id, //phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			)
+		);
+	}
+}
+
+add_action( &#039;deleted_user&#039;, &#039;wc_reset_order_customer_id_on_deleted_user&#039; );
+
+/**
+ * Get review verification status.
+ *
+ * @param  int $comment_id Comment ID.
+ * @return bool
+ */
+function wc_review_is_from_verified_owner( $comment_id ) {
+	$verified = get_comment_meta( $comment_id, &#039;verified&#039;, true );
+	return &#039;&#039; === $verified ? WC_Comments::add_comment_purchase_verification( $comment_id ) : (bool) $verified;
+}
+
+/**
+ * Disable author archives for customers.
+ *
+ * @since 2.5.0
+ */
+function wc_disable_author_archives_for_customers() {
+	global $author;
+
+	if ( is_author() ) {
+		$user = get_user_by( &#039;id&#039;, $author );
+
+		if ( user_can( $user, &#039;customer&#039; ) &amp;&amp; ! user_can( $user, &#039;edit_posts&#039; ) ) {
+			wp_safe_redirect( wc_get_page_permalink( &#039;shop&#039; ) );
+			exit;
+		}
+	}
+}
+
+add_action( &#039;template_redirect&#039;, &#039;wc_disable_author_archives_for_customers&#039; );
+
+/**
+ * Hooks into the `profile_update` hook to set the user last updated timestamp.
+ *
+ * @since 2.6.0
+ * @param int   $user_id The user that was updated.
+ * @param array $old     The profile fields pre-change.
+ */
+function wc_update_profile_last_update_time( $user_id, $old ) {
+	wc_set_user_last_update_time( $user_id );
+}
+
+add_action( &#039;profile_update&#039;, &#039;wc_update_profile_last_update_time&#039;, 10, 2 );
+
+/**
+ * Hooks into the update user meta function to set the user last updated timestamp.
+ *
+ * @since 2.6.0
+ * @param int    $meta_id     ID of the meta object that was changed.
+ * @param int    $user_id     The user that was updated.
+ * @param string $meta_key    Name of the meta key that was changed.
+ * @param mixed  $_meta_value Value of the meta that was changed.
+ */
+function wc_meta_update_last_update_time( $meta_id, $user_id, $meta_key, $_meta_value ) {
+	$keys_to_track = apply_filters( &#039;woocommerce_user_last_update_fields&#039;, array( &#039;first_name&#039;, &#039;last_name&#039; ) );
+
+	$update_time = in_array( $meta_key, $keys_to_track, true ) ? true : false;
+	$update_time = &#039;billing_&#039; === substr( $meta_key, 0, 8 ) ? true : $update_time;
+	$update_time = &#039;shipping_&#039; === substr( $meta_key, 0, 9 ) ? true : $update_time;
+
+	if ( $update_time ) {
+		wc_set_user_last_update_time( $user_id );
+	}
+}
+
+add_action( &#039;update_user_meta&#039;, &#039;wc_meta_update_last_update_time&#039;, 10, 4 );
+
+/**
+ * Sets a user&#039;s &quot;last update&quot; time to the current timestamp.
+ *
+ * @since 2.6.0
+ * @param int $user_id The user to set a timestamp for.
+ */
+function wc_set_user_last_update_time( $user_id ) {
+	update_user_meta( $user_id, &#039;last_update&#039;, gmdate( &#039;U&#039; ) );
+}
+
+/**
+ * Get customer saved payment methods list.
+ *
+ * @since 2.6.0
+ * @param int $customer_id Customer ID.
+ * @return array
+ */
+function wc_get_customer_saved_methods_list( $customer_id ) {
+	return apply_filters( &#039;woocommerce_saved_payment_methods_list&#039;, array(), $customer_id );
+}
+
+/**
+ * Get info about customer&#039;s last order.
+ *
+ * @since 2.6.0
+ * @param int $customer_id Customer ID.
+ * @return WC_Order|bool Order object if successful or false.
+ */
+function wc_get_customer_last_order( $customer_id ) {
+	$customer = new WC_Customer( $customer_id );
+
+	return $customer-&gt;get_last_order();
+}
+
+/**
+ * Add support for searching by display_name.
+ *
+ * @since 3.2.0
+ * @param array $search_columns Column names.
+ * @return array
+ */
+function wc_user_search_columns( $search_columns ) {
+	$search_columns[] = &#039;display_name&#039;;
+	return $search_columns;
+}
+add_filter( &#039;user_search_columns&#039;, &#039;wc_user_search_columns&#039; );
+
+/**
+ * When a user is deleted in WordPress, delete corresponding WooCommerce data.
+ *
+ * @param int $user_id User ID being deleted.
+ */
+function wc_delete_user_data( $user_id ) {
+	global $wpdb;
+
+	// Clean up sessions.
+	$wpdb-&gt;delete(
+		$wpdb-&gt;prefix . &#039;woocommerce_sessions&#039;,
+		array(
+			&#039;session_key&#039; =&gt; $user_id,
+		)
+	);
+
+	// Revoke API keys.
+	$wpdb-&gt;delete(
+		$wpdb-&gt;prefix . &#039;woocommerce_api_keys&#039;,
+		array(
+			&#039;user_id&#039; =&gt; $user_id,
+		)
+	);
+
+	// Clean up payment tokens.
+	$payment_tokens = WC_Payment_Tokens::get_customer_tokens( $user_id );
+
+	foreach ( $payment_tokens as $payment_token ) {
+		$payment_token-&gt;delete();
+	}
+}
+add_action( &#039;delete_user&#039;, &#039;wc_delete_user_data&#039; );
+
+/**
+ * Store user agents. Used for tracker.
+ *
+ * @since 3.0.0
+ * @param string     $user_login User login.
+ * @param int|object $user       User.
+ */
+function wc_maybe_store_user_agent( $user_login, $user ) {
+	if ( &#039;yes&#039; === get_option( &#039;woocommerce_allow_tracking&#039;, &#039;no&#039; ) &amp;&amp; user_can( $user, &#039;manage_woocommerce&#039; ) ) {
+		$admin_user_agents   = array_filter( (array) get_option( &#039;woocommerce_tracker_ua&#039;, array() ) );
+		$admin_user_agents[] = wc_get_user_agent();
+		update_option( &#039;woocommerce_tracker_ua&#039;, array_unique( $admin_user_agents ), false );
+	}
+}
+add_action( &#039;wp_login&#039;, &#039;wc_maybe_store_user_agent&#039;, 10, 2 );
+
+/**
+ * Update logic triggered on login.
+ *
+ * @since 3.4.0
+ * @param string $user_login User login.
+ * @param object $user       User.
+ */
+function wc_user_logged_in( $user_login, $user ) {
+	wc_update_user_last_active( $user-&gt;ID );
+	update_user_meta( $user-&gt;ID, &#039;_woocommerce_load_saved_cart_after_login&#039;, 1 );
+}
+add_action( &#039;wp_login&#039;, &#039;wc_user_logged_in&#039;, 10, 2 );
+
+/**
+ * Update when the user was last active.
+ *
+ * @since 3.4.0
+ */
+function wc_current_user_is_active() {
+	if ( ! is_user_logged_in() ) {
+		return;
+	}
+	wc_update_user_last_active( get_current_user_id() );
+}
+add_action( &#039;wp&#039;, &#039;wc_current_user_is_active&#039;, 10 );
+
+/**
+ * Set the user last active timestamp to now.
+ *
+ * @since 3.4.0
+ * @param int $user_id User ID to mark active.
+ */
+function wc_update_user_last_active( $user_id ) {
+	if ( ! $user_id ) {
+		return;
+	}
+	update_user_meta( $user_id, &#039;wc_last_active&#039;, (string) strtotime( gmdate( &#039;Y-m-d&#039;, time() ) ) );
+}
+
+/**
+ * Translate WC roles using the woocommerce textdomain.
+ *
+ * @since 3.7.0
+ * @param string $translation  Translated text.
+ * @param string $text         Text to translate.
+ * @param string $context      Context information for the translators.
+ * @param string $domain       Text domain. Unique identifier for retrieving translated strings.
+ * @return string
+ */
+function wc_translate_user_roles( $translation, $text, $context, $domain ) {
+	// translate_user_role() only accepts a second parameter starting in WP 5.2.
+	if ( version_compare( get_bloginfo( &#039;version&#039; ), &#039;5.2&#039;, &#039;&lt;&#039; ) ) {
+		return $translation;
+	}
+
+	if ( &#039;User role&#039; === $context &amp;&amp; &#039;default&#039; === $domain &amp;&amp; in_array( $text, array( &#039;Shop manager&#039;, &#039;Customer&#039; ), true ) ) {
+		return translate_user_role( $text, &#039;woocommerce&#039; );
+	}
+
+	return $translation;
+}
+add_filter( &#039;gettext_with_context&#039;, &#039;wc_translate_user_roles&#039;, 10, 4 );
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866950"></script>
+    <script src="../js/search.js?updated=1692866950"></script>
+</body>
+</html>

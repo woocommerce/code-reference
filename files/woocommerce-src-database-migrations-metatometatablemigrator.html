@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866952">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866952">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">MetaToMetaTableMigrator.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Generic Migration class to move any meta data associated to an entity, to a different meta table associated with a custom entity table.
+ */
+
+namespace Automattic\WooCommerce\Database\Migrations;
+
+/**
+ * Base class for implementing migrations from the standard WordPress meta table
+ * to custom meta (key-value pairs) tables.
+ *
+ * @package Automattic\WooCommerce\Database\Migrations\CustomOrderTable
+ */
+abstract class MetaToMetaTableMigrator extends TableMigrator {
+
+	/**
+	 * Schema config, see __construct for more details.
+	 *
+	 * @var array
+	 */
+	private $schema_config;
+
+	/**
+	 * Returns config for the migration.
+	 *
+	 * @return array Meta config, must be in following format:
+	 * array(
+	 *  &#039;source&#039;      =&gt; array(
+	 *      &#039;meta&#039;          =&gt; array(
+	 *          &#039;table_name&#039;        =&gt; source_meta_table_name,
+	 *          &#039;entity_id_column&#039;  =&gt; entity_id column name in source meta table,
+	 *          &#039;meta_key_column&#039;   =&gt; meta_key column&#039;,
+	 *          &#039;meta_value_column&#039; =&gt; meta_value column&#039;,
+	 *      ),
+	 *      &#039;entity&#039; =&gt; array(
+	 *          &#039;table_name&#039;       =&gt; entity table name for the meta table,
+	 *          &#039;source_id_column&#039; =&gt; column name in entity table which maps to meta table,
+	 *          &#039;id_column&#039;        =&gt; id column in entity table,
+	 *      ),
+	 *      &#039;excluded_keys&#039; =&gt; array of keys to exclude,
+	 *  ),
+	 *  &#039;destination&#039; =&gt; array(
+	 *      &#039;meta&#039;   =&gt; array(
+	 *          &#039;table_name&#039;        =&gt; destination meta table name,
+	 *          &#039;entity_id_column&#039;  =&gt; entity_id column in meta table,
+	 *          &#039;meta_key_column&#039;   =&gt; meta key column,
+	 *          &#039;meta_value_column&#039; =&gt; meta_value column,
+	 *          &#039;entity_id_type&#039;    =&gt; data type of entity id,
+	 *          &#039;meta_id_column&#039;    =&gt; id column in meta table,
+	 *      ),
+	 *  ),
+	 * )
+	 */
+	abstract protected function get_meta_config(): array;
+
+	/**
+	 * MetaToMetaTableMigrator constructor.
+	 */
+	public function __construct() {
+		$this-&gt;schema_config = $this-&gt;get_meta_config();
+	}
+
+	/**
+	 * Return data to be migrated for a batch of entities.
+	 *
+	 * @param array $entity_ids Ids of entities to migrate.
+	 *
+	 * @return array[] Data to be migrated. Would be of the form: array( &#039;data&#039; =&gt; array( ... ), &#039;errors&#039; =&gt; array( ... ) ).
+	 */
+	public function fetch_sanitized_migration_data( $entity_ids ) {
+		$this-&gt;clear_errors();
+		$to_migrate = $this-&gt;fetch_data_for_migration_for_ids( $entity_ids );
+		if ( empty( $to_migrate ) ) {
+			return array(
+				&#039;data&#039;   =&gt; array(),
+				&#039;errors&#039; =&gt; array(),
+			);
+		}
+
+		$already_migrated = $this-&gt;get_already_migrated_records( array_keys( $to_migrate ) );
+
+		return array(
+			&#039;data&#039;   =&gt; $this-&gt;classify_update_insert_records( $to_migrate, $already_migrated ),
+			&#039;errors&#039; =&gt; $this-&gt;get_errors(),
+		);
+	}
+
+	/**
+	 * Migrate a batch of entities from the posts table to the corresponding table.
+	 *
+	 * @param array $entity_ids Ids of entities ro migrate.
+	 */
+	protected function process_migration_batch_for_ids_core( array $entity_ids ): void {
+		$sanitized_data = $this-&gt;fetch_sanitized_migration_data( $entity_ids );
+		$this-&gt;process_migration_data( $sanitized_data );
+	}
+
+	/**
+	 * Process migration data for a batch of entities.
+	 *
+	 * @param array $data Data to be migrated. Should be of the form: array( &#039;data&#039; =&gt; array( ... ) ) as returned by the `fetch_sanitized_migration_data` method.
+	 *
+	 * @return array Array of errors and exception if any.
+	 */
+	public function process_migration_data( array $data ) {
+		if ( isset( $data[&#039;data&#039;] ) ) {
+			$data = $data[&#039;data&#039;];
+		}
+		$this-&gt;clear_errors();
+		$exception = null;
+
+		$to_insert = $data[0];
+		$to_update = $data[1];
+
+		try {
+			if ( ! empty( $to_insert ) ) {
+				$insert_queries       = $this-&gt;generate_insert_sql_for_batch( $to_insert );
+				$processed_rows_count = $this-&gt;db_query( $insert_queries );
+				$this-&gt;maybe_add_insert_or_update_error( &#039;insert&#039;, $processed_rows_count );
+			}
+
+			if ( ! empty( $to_update ) ) {
+				$update_queries       = $this-&gt;generate_update_sql_for_batch( $to_update );
+				$processed_rows_count = $this-&gt;db_query( $update_queries );
+				$this-&gt;maybe_add_insert_or_update_error( &#039;update&#039;, $processed_rows_count );
+			}
+		} catch ( \Exception $e ) {
+			$exception = $e;
+		}
+
+		return array(
+			&#039;errors&#039;    =&gt; $this-&gt;get_errors(),
+			&#039;exception&#039; =&gt; $exception,
+		);
+	}
+
+	/**
+	 * Generate update SQL for given batch.
+	 *
+	 * @param array $batch List of data to generate update SQL for. Should be in same format as output of $this-&gt;fetch_data_for_migration_for_ids.
+	 *
+	 * @return string Query to update batch records.
+	 */
+	private function generate_update_sql_for_batch( array $batch ): string {
+		global $wpdb;
+
+		$table             = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;table_name&#039;];
+		$meta_id_column    = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;meta_id_column&#039;];
+		$meta_key_column   = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;meta_key_column&#039;];
+		$meta_value_column = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;meta_value_column&#039;];
+		$entity_id_column  = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;entity_id_column&#039;];
+		$columns           = array( $meta_id_column, $entity_id_column, $meta_key_column, $meta_value_column );
+		$columns_sql       = implode( &#039;`, `&#039;, $columns );
+
+		$entity_id_column_placeholder = MigrationHelper::get_wpdb_placeholder_for_type( $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;entity_id_type&#039;] );
+		$placeholder_string           = &quot;%d, $entity_id_column_placeholder, %s, %s&quot;;
+		$values                       = array();
+		foreach ( $batch as $entity_id =&gt; $rows ) {
+			foreach ( $rows as $meta_key =&gt; $meta_details ) {
+
+				// phpcs:disable WordPress.DB.PreparedSQL, WordPress.DB.PreparedSQLPlaceholders
+				$values[] = $wpdb-&gt;prepare(
+					&quot;( $placeholder_string )&quot;,
+					array( $meta_details[&#039;id&#039;], $entity_id, $meta_key, $meta_details[&#039;meta_value&#039;] )
+				);
+				// phpcs:enable
+			}
+		}
+		$value_sql = implode( &#039;,&#039;, $values );
+
+		$on_duplicate_key_clause = MigrationHelper::generate_on_duplicate_statement_clause( $columns );
+
+		return &quot;INSERT INTO $table ( `$columns_sql` ) VALUES $value_sql $on_duplicate_key_clause&quot;;
+	}
+
+	/**
+	 * Generate insert sql queries for batches.
+	 *
+	 * @param array $batch Data to generate queries for.
+	 *
+	 * @return string Insert SQL query.
+	 */
+	private function generate_insert_sql_for_batch( array $batch ): string {
+		global $wpdb;
+
+		$table             = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;table_name&#039;];
+		$meta_key_column   = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;meta_key_column&#039;];
+		$meta_value_column = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;meta_value_column&#039;];
+		$entity_id_column  = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;entity_id_column&#039;];
+		$column_sql        = &quot;(`$entity_id_column`, `$meta_key_column`, `$meta_value_column`)&quot;;
+
+		$entity_id_column_placeholder = MigrationHelper::get_wpdb_placeholder_for_type( $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;entity_id_type&#039;] );
+		$placeholder_string           = &quot;$entity_id_column_placeholder, %s, %s&quot;;
+		$values                       = array();
+		foreach ( $batch as $entity_id =&gt; $rows ) {
+			foreach ( $rows as $meta_key =&gt; $meta_values ) {
+				foreach ( $meta_values as $meta_value ) {
+					$query_params = array(
+						$entity_id,
+						$meta_key,
+						$meta_value,
+					);
+					// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders
+					$value_sql = $wpdb-&gt;prepare( &quot;$placeholder_string&quot;, $query_params );
+					$values[]  = $value_sql;
+				}
+			}
+		}
+
+		$values_sql = implode( &#039;), (&#039;, $values );
+
+		return &quot;INSERT IGNORE INTO $table $column_sql VALUES ($values_sql)&quot;;
+	}
+
+	/**
+	 * Fetch data for migration.
+	 *
+	 * @param array $entity_ids Array of IDs to fetch data for.
+	 *
+	 * @return array[] Data, will of the form:
+	 * array(
+	 *   &#039;id_1&#039; =&gt; array( &#039;column1&#039; =&gt; array( value1_1, value1_2...), &#039;column2&#039; =&gt; array(value2_1, value2_2...), ...),
+	 *   ...,
+	 * )
+	 */
+	public function fetch_data_for_migration_for_ids( array $entity_ids ): array {
+		if ( empty( $entity_ids ) ) {
+			return array();
+		}
+
+		$meta_query = $this-&gt;build_meta_table_query( $entity_ids );
+
+		$meta_data_rows = $this-&gt;db_get_results( $meta_query );
+		if ( empty( $meta_data_rows ) ) {
+			return array();
+		}
+
+		foreach ( $meta_data_rows as $migrate_row ) {
+			if ( ! isset( $to_migrate[ $migrate_row-&gt;entity_id ] ) ) {
+				$to_migrate[ $migrate_row-&gt;entity_id ] = array();
+			}
+
+			if ( ! isset( $to_migrate[ $migrate_row-&gt;entity_id ][ $migrate_row-&gt;meta_key ] ) ) {
+				// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+				$to_migrate[ $migrate_row-&gt;entity_id ][ $migrate_row-&gt;meta_key ] = array();
+			}
+
+			$to_migrate[ $migrate_row-&gt;entity_id ][ $migrate_row-&gt;meta_key ][] = $migrate_row-&gt;meta_value;
+		}
+
+		return $to_migrate;
+	}
+
+	/**
+	 * Helper method to get already migrated records. Will be used to find prevent migration of already migrated records.
+	 *
+	 * @param array $entity_ids List of entity ids to check for.
+	 *
+	 * @return array Already migrated records.
+	 */
+	private function get_already_migrated_records( array $entity_ids ): array {
+		global $wpdb;
+
+		$destination_table_name        = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;table_name&#039;];
+		$destination_id_column         = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;meta_id_column&#039;];
+		$destination_entity_id_column  = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;entity_id_column&#039;];
+		$destination_meta_key_column   = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;meta_key_column&#039;];
+		$destination_meta_value_column = $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;meta_value_column&#039;];
+
+		$entity_id_type_placeholder = MigrationHelper::get_wpdb_placeholder_for_type( $this-&gt;schema_config[&#039;destination&#039;][&#039;meta&#039;][&#039;entity_id_type&#039;] );
+		$entity_ids_placeholder     = implode( &#039;,&#039;, array_fill( 0, count( $entity_ids ), $entity_id_type_placeholder ) );
+
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
+		$data_already_migrated = $this-&gt;db_get_results(
+			$wpdb-&gt;prepare(
+				&quot;
+SELECT
+	   $destination_id_column meta_id,
+       $destination_entity_id_column entity_id,
+       $destination_meta_key_column meta_key,
+       $destination_meta_value_column meta_value
+FROM $destination_table_name destination
+WHERE destination.$destination_entity_id_column in ( $entity_ids_placeholder ) ORDER BY destination.$destination_entity_id_column
+&quot;,
+				$entity_ids
+			)
+		);
+		// phpcs:enable
+
+		$already_migrated = array();
+
+		foreach ( $data_already_migrated as $migrate_row ) {
+			if ( ! isset( $already_migrated[ $migrate_row-&gt;entity_id ] ) ) {
+				$already_migrated[ $migrate_row-&gt;entity_id ] = array();
+			}
+
+			// phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_meta_key, WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			if ( ! isset( $already_migrated[ $migrate_row-&gt;entity_id ][ $migrate_row-&gt;meta_key ] ) ) {
+				$already_migrated[ $migrate_row-&gt;entity_id ][ $migrate_row-&gt;meta_key ] = array();
+			}
+
+			$already_migrated[ $migrate_row-&gt;entity_id ][ $migrate_row-&gt;meta_key ][] = array(
+				&#039;id&#039;         =&gt; $migrate_row-&gt;meta_id,
+				&#039;meta_value&#039; =&gt; $migrate_row-&gt;meta_value,
+			);
+			// phpcs:enable
+		}
+
+		return $already_migrated;
+	}
+
+	/**
+	 * Classify each record on whether to migrate or update.
+	 *
+	 * @param array $to_migrate Records to migrate.
+	 * @param array $already_migrated Records already migrated.
+	 *
+	 * @return array[] Returns two arrays, first for records to migrate, and second for records to upgrade.
+	 */
+	private function classify_update_insert_records( array $to_migrate, array $already_migrated ): array {
+		$to_update = array();
+		$to_insert = array();
+
+		foreach ( $to_migrate as $entity_id =&gt; $rows ) {
+			foreach ( $rows as $meta_key =&gt; $meta_values ) {
+				// If there is no corresponding record in the destination table then insert.
+				// If there is single value in both already migrated and current then update.
+				// If there are multiple values in either already_migrated records or in to_migrate_records, then insert instead of updating.
+				if ( ! isset( $already_migrated[ $entity_id ][ $meta_key ] ) ) {
+					if ( ! isset( $to_insert[ $entity_id ] ) ) {
+						$to_insert[ $entity_id ] = array();
+					}
+					$to_insert[ $entity_id ][ $meta_key ] = $meta_values;
+				} else {
+					if ( 1 === count( $meta_values ) &amp;&amp; 1 === count( $already_migrated[ $entity_id ][ $meta_key ] ) ) {
+						if ( $meta_values[0] === $already_migrated[ $entity_id ][ $meta_key ][0][&#039;meta_value&#039;] ) {
+							continue;
+						}
+						if ( ! isset( $to_update[ $entity_id ] ) ) {
+							$to_update[ $entity_id ] = array();
+						}
+						$to_update[ $entity_id ][ $meta_key ] = array(
+							&#039;id&#039;         =&gt; $already_migrated[ $entity_id ][ $meta_key ][0][&#039;id&#039;],
+							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+							&#039;meta_value&#039; =&gt; $meta_values[0],
+						);
+						continue;
+					}
+
+					// There are multiple meta entries, let&#039;s find the unique entries and insert.
+					$unique_meta_values = array_diff( $meta_values, array_column( $already_migrated[ $entity_id ][ $meta_key ], &#039;meta_value&#039; ) );
+					if ( 0 === count( $unique_meta_values ) ) {
+						continue;
+					}
+					if ( ! isset( $to_insert[ $entity_id ] ) ) {
+						$to_insert[ $entity_id ] = array();
+					}
+					$to_insert[ $entity_id ][ $meta_key ] = $unique_meta_values;
+				}
+			}
+		}
+
+		return array( $to_insert, $to_update );
+	}
+
+	/**
+	 * Helper method to build query used to fetch data from source meta table.
+	 *
+	 * @param array $entity_ids List of entity IDs to build meta query for.
+	 *
+	 * @return string Query that can be used to fetch data.
+	 */
+	private function build_meta_table_query( array $entity_ids ): string {
+		global $wpdb;
+		$source_meta_table        = $this-&gt;schema_config[&#039;source&#039;][&#039;meta&#039;][&#039;table_name&#039;];
+		$source_meta_key_column   = $this-&gt;schema_config[&#039;source&#039;][&#039;meta&#039;][&#039;meta_key_column&#039;];
+		$source_meta_value_column = $this-&gt;schema_config[&#039;source&#039;][&#039;meta&#039;][&#039;meta_value_column&#039;];
+		$source_entity_id_column  = $this-&gt;schema_config[&#039;source&#039;][&#039;meta&#039;][&#039;entity_id_column&#039;];
+		$order_by                 = &quot;source.$source_entity_id_column ASC&quot;;
+
+		$where_clause = &quot;source.`$source_entity_id_column` IN (&quot; . implode( &#039;, &#039;, array_fill( 0, count( $entity_ids ), &#039;%d&#039; ) ) . &#039;)&#039;;
+
+		$entity_table                  = $this-&gt;schema_config[&#039;source&#039;][&#039;entity&#039;][&#039;table_name&#039;];
+		$entity_id_column              = $this-&gt;schema_config[&#039;source&#039;][&#039;entity&#039;][&#039;id_column&#039;];
+		$entity_meta_id_mapping_column = $this-&gt;schema_config[&#039;source&#039;][&#039;entity&#039;][&#039;source_id_column&#039;];
+
+		if ( $this-&gt;schema_config[&#039;source&#039;][&#039;excluded_keys&#039;] ) {
+			$key_placeholder = implode( &#039;,&#039;, array_fill( 0, count( $this-&gt;schema_config[&#039;source&#039;][&#039;excluded_keys&#039;] ), &#039;%s&#039; ) );
+			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $source_meta_key_column is escaped for backticks, $key_placeholder is hardcoded.
+			$exclude_clause = $wpdb-&gt;prepare( &quot;source.$source_meta_key_column NOT IN ( $key_placeholder )&quot;, $this-&gt;schema_config[&#039;source&#039;][&#039;excluded_keys&#039;] );
+			$where_clause   = &quot;$where_clause AND $exclude_clause&quot;;
+		}
+
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
+		return $wpdb-&gt;prepare(
+			&quot;
+SELECT
+	source.`$source_entity_id_column` as source_entity_id,
+	entity.`$entity_id_column` as entity_id,
+	source.`$source_meta_key_column` as meta_key,
+	source.`$source_meta_value_column` as meta_value
+FROM `$source_meta_table` source
+JOIN `$entity_table` entity ON entity.`$entity_meta_id_mapping_column` = source.`$source_entity_id_column`
+WHERE $where_clause ORDER BY $order_by
+&quot;,
+			$entity_ids
+		);
+		// phpcs:enable
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866952"></script>
+    <script src="../js/search.js?updated=1692866952"></script>
+</body>
+</html>

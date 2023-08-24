@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866948">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866948">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-rest-webhooks-v1-controller.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * REST API Webhooks controller
+ *
+ * Handles requests to the /webhooks endpoint.
+ *
+ * @package WooCommerce\RestApi
+ * @since    3.0.0
+ */
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * REST API Webhooks controller class.
+ *
+ * @package WooCommerce\RestApi
+ * @extends WC_REST_Controller
+ */
+class WC_REST_Webhooks_V1_Controller extends WC_REST_Controller {
+
+	/**
+	 * Endpoint namespace.
+	 *
+	 * @var string
+	 */
+	protected $namespace = &#039;wc/v1&#039;;
+
+	/**
+	 * Route base.
+	 *
+	 * @var string
+	 */
+	protected $rest_base = &#039;webhooks&#039;;
+
+	/**
+	 * Post type.
+	 *
+	 * @var string
+	 */
+	protected $post_type = &#039;shop_webhook&#039;;
+
+	/**
+	 * Register the routes for webhooks.
+	 */
+	public function register_routes() {
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_items&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;get_items_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; $this-&gt;get_collection_params(),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::CREATABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;create_item&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;create_item_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; array_merge(
+						$this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::CREATABLE ),
+						array(
+							&#039;topic&#039;        =&gt; array(
+								&#039;required&#039;    =&gt; true,
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;description&#039; =&gt; __( &#039;Webhook topic.&#039;, &#039;woocommerce&#039; ),
+							),
+							&#039;delivery_url&#039; =&gt; array(
+								&#039;required&#039;    =&gt; true,
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;description&#039; =&gt; __( &#039;Webhook delivery URL.&#039;, &#039;woocommerce&#039; ),
+							),
+						)
+					),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/(?P&lt;id&gt;[\d]+)&#039;,
+			array(
+				&#039;args&#039;   =&gt; array(
+					&#039;id&#039; =&gt; array(
+						&#039;description&#039; =&gt; __( &#039;Unique identifier for the resource.&#039;, &#039;woocommerce&#039; ),
+						&#039;type&#039;        =&gt; &#039;integer&#039;,
+					),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_item&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;get_item_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; array(
+						&#039;context&#039; =&gt; $this-&gt;get_context_param( array( &#039;default&#039; =&gt; &#039;view&#039; ) ),
+					),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::EDITABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;update_item&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; $this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::EDITABLE ),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::DELETABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;delete_item&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;delete_item_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; array(
+						&#039;force&#039; =&gt; array(
+							&#039;default&#039;     =&gt; false,
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;description&#039; =&gt; __( &#039;Required to be true, as resource does not support trashing.&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/batch&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::EDITABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;batch_items&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;batch_items_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; $this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::EDITABLE ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_public_batch_schema&#039; ),
+			)
+		);
+	}
+
+	/**
+	 * Check whether a given request has permission to read webhooks.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function get_items_permissions_check( $request ) {
+		if ( ! wc_rest_check_manager_permissions( &#039;webhooks&#039;, &#039;read&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_view&#039;, __( &#039;Sorry, you cannot list resources.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access create webhooks.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 *
+	 * @return bool|WP_Error
+	 */
+	public function create_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_manager_permissions( &#039;webhooks&#039;, &#039;create&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_create&#039;, __( &#039;Sorry, you are not allowed to create resources.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access to read a webhook.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function get_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_manager_permissions( &#039;webhooks&#039;, &#039;read&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_view&#039;, __( &#039;Sorry, you cannot view this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access update a webhook.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 *
+	 * @return bool|WP_Error
+	 */
+	public function update_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_manager_permissions( &#039;webhooks&#039;, &#039;edit&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_edit&#039;, __( &#039;Sorry, you are not allowed to edit this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access delete a webhook.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 *
+	 * @return bool|WP_Error
+	 */
+	public function delete_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_manager_permissions( &#039;webhooks&#039;, &#039;delete&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_delete&#039;, __( &#039;Sorry, you are not allowed to delete this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Check if a given request has access batch create, update and delete items.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 *
+	 * @return bool|WP_Error
+	 */
+	public function batch_items_permissions_check( $request ) {
+		if ( ! wc_rest_check_manager_permissions( &#039;webhooks&#039;, &#039;batch&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_batch&#039;, __( &#039;Sorry, you are not allowed to batch manipulate this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Get the default REST API version.
+	 *
+	 * @since  3.0.0
+	 * @return string
+	 */
+	protected function get_default_api_version() {
+		return &#039;wp_api_v1&#039;;
+	}
+
+	/**
+	 * Get all webhooks.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function get_items( $request ) {
+		$args            = array();
+		$args[&#039;order&#039;]   = $request[&#039;order&#039;];
+		$args[&#039;orderby&#039;] = $request[&#039;orderby&#039;];
+		$args[&#039;status&#039;]  = &#039;all&#039; === $request[&#039;status&#039;] ? &#039;&#039; : $request[&#039;status&#039;];
+		$args[&#039;include&#039;] = implode( &#039;,&#039;, $request[&#039;include&#039;] );
+		$args[&#039;exclude&#039;] = implode( &#039;,&#039;, $request[&#039;exclude&#039;] );
+		$args[&#039;limit&#039;]   = $request[&#039;per_page&#039;];
+		$args[&#039;search&#039;]  = $request[&#039;search&#039;];
+		$args[&#039;before&#039;]  = $request[&#039;before&#039;];
+		$args[&#039;after&#039;]   = $request[&#039;after&#039;];
+
+		if ( empty( $request[&#039;offset&#039;] ) ) {
+			$args[&#039;offset&#039;] = 1 &lt; $request[&#039;page&#039;] ? ( $request[&#039;page&#039;] - 1 ) * $args[&#039;limit&#039;] : 0;
+		}
+
+		/**
+		 * Filter arguments, before passing to WC_Webhook_Data_Store-&gt;search_webhooks, when querying webhooks via the REST API.
+		 *
+		 * @param array           $args    Array of arguments for $wpdb-&gt;get_results().
+		 * @param WP_REST_Request $request The current request.
+		 */
+		$prepared_args = apply_filters( &#039;woocommerce_rest_webhook_query&#039;, $args, $request );
+		unset( $prepared_args[&#039;page&#039;] );
+		$prepared_args[&#039;paginate&#039;] = true;
+
+		// Get the webhooks.
+		$webhooks    = array();
+		$data_store  = WC_Data_Store::load( &#039;webhook&#039; );
+		$results     = $data_store-&gt;search_webhooks( $prepared_args );
+		$webhook_ids = $results-&gt;webhooks;
+
+		foreach ( $webhook_ids as $webhook_id ) {
+			$data       = $this-&gt;prepare_item_for_response( $webhook_id, $request );
+			$webhooks[] = $this-&gt;prepare_response_for_collection( $data );
+		}
+
+		$response       = rest_ensure_response( $webhooks );
+		$per_page       = (int) $prepared_args[&#039;limit&#039;];
+		$page           = ceil( ( ( (int) $prepared_args[&#039;offset&#039;] ) / $per_page ) + 1 );
+		$total_webhooks = $results-&gt;total;
+		$max_pages      = $results-&gt;max_num_pages;
+		$base           = add_query_arg( $request-&gt;get_query_params(), rest_url( sprintf( &#039;/%s/%s&#039;, $this-&gt;namespace, $this-&gt;rest_base ) ) );
+
+		$response-&gt;header( &#039;X-WP-Total&#039;, $total_webhooks );
+		$response-&gt;header( &#039;X-WP-TotalPages&#039;, $max_pages );
+
+		if ( $page &gt; 1 ) {
+			$prev_page = $page - 1;
+			if ( $prev_page &gt; $max_pages ) {
+				$prev_page = $max_pages;
+			}
+			$prev_link = add_query_arg( &#039;page&#039;, $prev_page, $base );
+			$response-&gt;link_header( &#039;prev&#039;, $prev_link );
+		}
+		if ( $max_pages &gt; $page ) {
+			$next_page = $page + 1;
+			$next_link = add_query_arg( &#039;page&#039;, $next_page, $base );
+			$response-&gt;link_header( &#039;next&#039;, $next_link );
+		}
+
+		return $response;
+	}
+
+	/**
+	 * Get a single item.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function get_item( $request ) {
+		$id = (int) $request[&#039;id&#039;];
+
+		if ( empty( $id ) ) {
+			return new WP_Error( &quot;woocommerce_rest_{$this-&gt;post_type}_invalid_id&quot;, __( &#039;Invalid ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$data     = $this-&gt;prepare_item_for_response( $id, $request );
+		$response = rest_ensure_response( $data );
+
+		return $response;
+	}
+
+	/**
+	 * Create a single webhook.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function create_item( $request ) {
+		if ( ! empty( $request[&#039;id&#039;] ) ) {
+			/* translators: %s: post type */
+			return new WP_Error( &quot;woocommerce_rest_{$this-&gt;post_type}_exists&quot;, sprintf( __( &#039;Cannot create existing %s.&#039;, &#039;woocommerce&#039; ), $this-&gt;post_type ), array( &#039;status&#039; =&gt; 400 ) );
+		}
+
+		// Validate topic.
+		if ( empty( $request[&#039;topic&#039;] ) || ! wc_is_webhook_valid_topic( strtolower( $request[&#039;topic&#039;] ) ) ) {
+			return new WP_Error( &quot;woocommerce_rest_{$this-&gt;post_type}_invalid_topic&quot;, __( &#039;Webhook topic is required and must be valid.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+		}
+
+		// Validate delivery URL.
+		if ( empty( $request[&#039;delivery_url&#039;] ) || ! wc_is_valid_url( $request[&#039;delivery_url&#039;] ) ) {
+			return new WP_Error( &quot;woocommerce_rest_{$this-&gt;post_type}_invalid_delivery_url&quot;, __( &#039;Webhook delivery URL must be a valid URL starting with http:// or https://.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+		}
+
+		$post = $this-&gt;prepare_item_for_database( $request );
+		if ( is_wp_error( $post ) ) {
+			return $post;
+		}
+
+		$webhook = new WC_Webhook();
+		$webhook-&gt;set_name( $post-&gt;post_title );
+		$webhook-&gt;set_user_id( $post-&gt;post_author );
+		$webhook-&gt;set_status( &#039;publish&#039; === $post-&gt;post_status ? &#039;active&#039; : &#039;disabled&#039; );
+		$webhook-&gt;set_topic( $request[&#039;topic&#039;] );
+		$webhook-&gt;set_delivery_url( $request[&#039;delivery_url&#039;] );
+		$webhook-&gt;set_secret( ! empty( $request[&#039;secret&#039;] ) ? $request[&#039;secret&#039;] : wp_generate_password( 50, true, true ) );
+		$webhook-&gt;set_api_version( $this-&gt;get_default_api_version() );
+		$webhook-&gt;save();
+
+		$this-&gt;update_additional_fields_for_object( $webhook, $request );
+
+		/**
+		 * Fires after a single item is created or updated via the REST API.
+		 *
+		 * @param WC_Webhook      $webhook  Webhook data.
+		 * @param WP_REST_Request $request  Request object.
+		 * @param bool            $creating True when creating item, false when updating.
+		 */
+		do_action( &#039;woocommerce_rest_insert_webhook_object&#039;, $webhook, $request, true );
+
+		$request-&gt;set_param( &#039;context&#039;, &#039;edit&#039; );
+		$response = $this-&gt;prepare_item_for_response( $webhook-&gt;get_id(), $request );
+		$response = rest_ensure_response( $response );
+		$response-&gt;set_status( 201 );
+		$response-&gt;header( &#039;Location&#039;, rest_url( sprintf( &#039;/%s/%s/%d&#039;, $this-&gt;namespace, $this-&gt;rest_base, $webhook-&gt;get_id() ) ) );
+
+		// Send ping.
+		$webhook-&gt;deliver_ping();
+
+		return $response;
+	}
+
+	/**
+	 * Update a single webhook.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function update_item( $request ) {
+		$id      = (int) $request[&#039;id&#039;];
+		$webhook = wc_get_webhook( $id );
+
+		if ( empty( $webhook ) || is_null( $webhook ) ) {
+			return new WP_Error( &quot;woocommerce_rest_{$this-&gt;post_type}_invalid_id&quot;, __( &#039;ID is invalid.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+		}
+
+		// Update topic.
+		if ( ! empty( $request[&#039;topic&#039;] ) ) {
+			if ( wc_is_webhook_valid_topic( strtolower( $request[&#039;topic&#039;] ) ) ) {
+				$webhook-&gt;set_topic( $request[&#039;topic&#039;] );
+			} else {
+				return new WP_Error( &quot;woocommerce_rest_{$this-&gt;post_type}_invalid_topic&quot;, __( &#039;Webhook topic must be valid.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+			}
+		}
+
+		// Update delivery URL.
+		if ( ! empty( $request[&#039;delivery_url&#039;] ) ) {
+			if ( wc_is_valid_url( $request[&#039;delivery_url&#039;] ) ) {
+				$webhook-&gt;set_delivery_url( $request[&#039;delivery_url&#039;] );
+			} else {
+				return new WP_Error( &quot;woocommerce_rest_{$this-&gt;post_type}_invalid_delivery_url&quot;, __( &#039;Webhook delivery URL must be a valid URL starting with http:// or https://.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+			}
+		}
+
+		// Update secret.
+		if ( ! empty( $request[&#039;secret&#039;] ) ) {
+			$webhook-&gt;set_secret( $request[&#039;secret&#039;] );
+		}
+
+		// Update status.
+		if ( ! empty( $request[&#039;status&#039;] ) ) {
+			if ( wc_is_webhook_valid_status( strtolower( $request[&#039;status&#039;] ) ) ) {
+				$webhook-&gt;set_status( $request[&#039;status&#039;] );
+			} else {
+				return new WP_Error( &quot;woocommerce_rest_{$this-&gt;post_type}_invalid_status&quot;, __( &#039;Webhook status must be valid.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+			}
+		}
+
+		$post = $this-&gt;prepare_item_for_database( $request );
+		if ( is_wp_error( $post ) ) {
+			return $post;
+		}
+
+		if ( isset( $post-&gt;post_title ) ) {
+			$webhook-&gt;set_name( $post-&gt;post_title );
+		}
+
+		$webhook-&gt;save();
+
+		$this-&gt;update_additional_fields_for_object( $webhook, $request );
+
+		/**
+		 * Fires after a single item is created or updated via the REST API.
+		 *
+		 * @param WC_Webhook      $webhook  Webhook data.
+		 * @param WP_REST_Request $request  Request object.
+		 * @param bool            $creating True when creating item, false when updating.
+		 */
+		do_action( &#039;woocommerce_rest_insert_webhook_object&#039;, $webhook, $request, false );
+
+		$request-&gt;set_param( &#039;context&#039;, &#039;edit&#039; );
+		$response = $this-&gt;prepare_item_for_response( $webhook-&gt;get_id(), $request );
+
+		return rest_ensure_response( $response );
+	}
+
+	/**
+	 * Delete a single webhook.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_REST_Response|WP_Error
+	 */
+	public function delete_item( $request ) {
+		$id    = (int) $request[&#039;id&#039;];
+		$force = isset( $request[&#039;force&#039;] ) ? (bool) $request[&#039;force&#039;] : false;
+
+		// We don&#039;t support trashing for this type, error out.
+		if ( ! $force ) {
+			return new WP_Error( &#039;woocommerce_rest_trash_not_supported&#039;, __( &#039;Webhooks do not support trashing.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 501 ) );
+		}
+
+		$webhook = wc_get_webhook( $id );
+
+		if ( empty( $webhook ) || is_null( $webhook ) ) {
+			return new WP_Error( &quot;woocommerce_rest_{$this-&gt;post_type}_invalid_id&quot;, __( &#039;Invalid ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$request-&gt;set_param( &#039;context&#039;, &#039;edit&#039; );
+		$response = $this-&gt;prepare_item_for_response( $webhook, $request );
+		$result   = $webhook-&gt;delete( true );
+
+		if ( ! $result ) {
+			/* translators: %s: post type */
+			return new WP_Error( &#039;woocommerce_rest_cannot_delete&#039;, sprintf( __( &#039;The %s cannot be deleted.&#039;, &#039;woocommerce&#039; ), $this-&gt;post_type ), array( &#039;status&#039; =&gt; 500 ) );
+		}
+
+		/**
+		 * Fires after a single item is deleted or trashed via the REST API.
+		 *
+		 * @param WC_Webhook       $webhook     The deleted or trashed item.
+		 * @param WP_REST_Response $response The response data.
+		 * @param WP_REST_Request  $request  The request sent to the API.
+		 */
+		do_action( &#039;woocommerce_rest_delete_webhook_object&#039;, $webhook, $response, $request );
+
+		return $response;
+	}
+
+	/**
+	 * Prepare a single webhook for create or update.
+	 *
+	 * @param WP_REST_Request $request Request object.
+	 * @return WP_Error|stdClass $data Post object.
+	 */
+	protected function prepare_item_for_database( $request ) {
+		$data = new stdClass();
+
+		// Post ID.
+		if ( isset( $request[&#039;id&#039;] ) ) {
+			$data-&gt;ID = absint( $request[&#039;id&#039;] );
+		}
+
+		// Validate required POST fields.
+		if ( &#039;POST&#039; === $request-&gt;get_method() &amp;&amp; empty( $data-&gt;ID ) ) {
+			$data-&gt;post_title = ! empty( $request[&#039;name&#039;] ) ? $request[&#039;name&#039;] : sprintf( __( &#039;Webhook created on %s&#039;, &#039;woocommerce&#039; ), (new DateTime(&#039;now&#039;))-&gt;format( _x( &#039;M d, Y @ h:i A&#039;, &#039;Webhook created on date parsed by DateTime::format&#039;, &#039;woocommerce&#039; ) ) ); // @codingStandardsIgnoreLine
+
+			// Post author.
+			$data-&gt;post_author = get_current_user_id();
+
+			// Post password.
+			$data-&gt;post_password = &#039;webhook_&#039; . wp_generate_password();
+
+			// Post status.
+			$data-&gt;post_status = &#039;publish&#039;;
+		} else {
+
+			// Allow edit post title.
+			if ( ! empty( $request[&#039;name&#039;] ) ) {
+				$data-&gt;post_title = $request[&#039;name&#039;];
+			}
+		}
+
+		// Comment status.
+		$data-&gt;comment_status = &#039;closed&#039;;
+
+		// Ping status.
+		$data-&gt;ping_status = &#039;closed&#039;;
+
+		/**
+		 * Filter the query_vars used in `get_items` for the constructed query.
+		 *
+		 * The dynamic portion of the hook name, $this-&gt;post_type, refers to post_type of the post being
+		 * prepared for insertion.
+		 *
+		 * @param stdClass        $data An object representing a single item prepared
+		 *                                       for inserting or updating the database.
+		 * @param WP_REST_Request $request       Request object.
+		 */
+		return apply_filters( &quot;woocommerce_rest_pre_insert_{$this-&gt;post_type}&quot;, $data, $request );
+	}
+
+	/**
+	 * Prepare a single webhook output for response.
+	 *
+	 * @param int             $id       Webhook ID or object.
+	 * @param WP_REST_Request $request  Request object.
+	 * @return WP_REST_Response $response Response data.
+	 */
+	public function prepare_item_for_response( $id, $request ) {
+		$webhook = wc_get_webhook( $id );
+
+		if ( empty( $webhook ) || is_null( $webhook ) ) {
+			return new WP_Error( &quot;woocommerce_rest_{$this-&gt;post_type}_invalid_id&quot;, __( &#039;ID is invalid.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+		}
+
+		$data = array(
+			&#039;id&#039;            =&gt; $webhook-&gt;get_id(),
+			&#039;name&#039;          =&gt; $webhook-&gt;get_name(),
+			&#039;status&#039;        =&gt; $webhook-&gt;get_status(),
+			&#039;topic&#039;         =&gt; $webhook-&gt;get_topic(),
+			&#039;resource&#039;      =&gt; $webhook-&gt;get_resource(),
+			&#039;event&#039;         =&gt; $webhook-&gt;get_event(),
+			&#039;hooks&#039;         =&gt; $webhook-&gt;get_hooks(),
+			&#039;delivery_url&#039;  =&gt; $webhook-&gt;get_delivery_url(),
+			&#039;date_created&#039;  =&gt; wc_rest_prepare_date_response( $webhook-&gt;get_date_created() ),
+			&#039;date_modified&#039; =&gt; wc_rest_prepare_date_response( $webhook-&gt;get_date_modified() ),
+		);
+
+		$context = ! empty( $request[&#039;context&#039;] ) ? $request[&#039;context&#039;] : &#039;view&#039;;
+		$data    = $this-&gt;add_additional_fields_to_object( $data, $request );
+		$data    = $this-&gt;filter_response_by_context( $data, $context );
+
+		// Wrap the data in a response object.
+		$response = rest_ensure_response( $data );
+
+		$response-&gt;add_links( $this-&gt;prepare_links( $webhook-&gt;get_id() ) );
+
+		/**
+		 * Filter webhook object returned from the REST API.
+		 *
+		 * @param WP_REST_Response $response The response object.
+		 * @param WC_Webhook       $webhook  Webhook object used to create response.
+		 * @param WP_REST_Request  $request  Request object.
+		 */
+		return apply_filters( &quot;woocommerce_rest_prepare_{$this-&gt;post_type}&quot;, $response, $webhook, $request );
+	}
+
+	/**
+	 * Prepare links for the request.
+	 *
+	 * @param int $id Webhook ID.
+	 * @return array
+	 */
+	protected function prepare_links( $id ) {
+		$links = array(
+			&#039;self&#039;       =&gt; array(
+				&#039;href&#039; =&gt; rest_url( sprintf( &#039;/%s/%s/%d&#039;, $this-&gt;namespace, $this-&gt;rest_base, $id ) ),
+			),
+			&#039;collection&#039; =&gt; array(
+				&#039;href&#039; =&gt; rest_url( sprintf( &#039;/%s/%s&#039;, $this-&gt;namespace, $this-&gt;rest_base ) ),
+			),
+		);
+
+		return $links;
+	}
+
+	/**
+	 * Get the Webhook&#039;s schema, conforming to JSON Schema.
+	 *
+	 * @return array
+	 */
+	public function get_item_schema() {
+		$schema = array(
+			&#039;$schema&#039;    =&gt; &#039;http://json-schema.org/draft-04/schema#&#039;,
+			&#039;title&#039;      =&gt; &#039;webhook&#039;,
+			&#039;type&#039;       =&gt; &#039;object&#039;,
+			&#039;properties&#039; =&gt; array(
+				&#039;id&#039;            =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Unique identifier for the resource.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;name&#039;          =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;A friendly name for the webhook.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;status&#039;        =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Webhook status.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;default&#039;     =&gt; &#039;active&#039;,
+					&#039;enum&#039;        =&gt; array_keys( wc_get_webhook_statuses() ),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;topic&#039;         =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Webhook topic.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;resource&#039;      =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Webhook resource.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;event&#039;         =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Webhook event.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;hooks&#039;         =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;WooCommerce action names associated with the webhook.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039; =&gt; &#039;string&#039;,
+					),
+				),
+				&#039;delivery_url&#039;  =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;The URL where the webhook payload is delivered.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;format&#039;      =&gt; &#039;uri&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;secret&#039;        =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;Secret key used to generate a hash of the delivered webhook and provided in the request headers. This will default to a MD5 hash from the current user&#039;s ID|username if not provided.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;edit&#039; ),
+				),
+				&#039;date_created&#039;  =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;The date the webhook was created, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;date_modified&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;The date the webhook was last modified, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+			),
+		);
+
+		return $this-&gt;add_additional_fields_schema( $schema );
+	}
+
+	/**
+	 * Get the query params for collections of attachments.
+	 *
+	 * @return array
+	 */
+	public function get_collection_params() {
+		$params = parent::get_collection_params();
+
+		$params[&#039;context&#039;][&#039;default&#039;] = &#039;view&#039;;
+
+		$params[&#039;after&#039;]   = array(
+			&#039;description&#039;       =&gt; __( &#039;Limit response to resources published after a given ISO8601 compliant date.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;string&#039;,
+			&#039;format&#039;            =&gt; &#039;date-time&#039;,
+			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
+		);
+		$params[&#039;before&#039;]  = array(
+			&#039;description&#039;       =&gt; __( &#039;Limit response to resources published before a given ISO8601 compliant date.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;string&#039;,
+			&#039;format&#039;            =&gt; &#039;date-time&#039;,
+			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
+		);
+		$params[&#039;exclude&#039;] = array(
+			&#039;description&#039;       =&gt; __( &#039;Ensure result set excludes specific IDs.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;array&#039;,
+			&#039;items&#039;             =&gt; array(
+				&#039;type&#039; =&gt; &#039;integer&#039;,
+			),
+			&#039;default&#039;           =&gt; array(),
+			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_id_list&#039;,
+		);
+		$params[&#039;include&#039;] = array(
+			&#039;description&#039;       =&gt; __( &#039;Limit result set to specific ids.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;array&#039;,
+			&#039;items&#039;             =&gt; array(
+				&#039;type&#039; =&gt; &#039;integer&#039;,
+			),
+			&#039;default&#039;           =&gt; array(),
+			&#039;sanitize_callback&#039; =&gt; &#039;wp_parse_id_list&#039;,
+		);
+		$params[&#039;offset&#039;]  = array(
+			&#039;description&#039;       =&gt; __( &#039;Offset the result set by a specific number of items.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;integer&#039;,
+			&#039;sanitize_callback&#039; =&gt; &#039;absint&#039;,
+			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
+		);
+		$params[&#039;order&#039;]   = array(
+			&#039;description&#039;       =&gt; __( &#039;Order sort attribute ascending or descending.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;string&#039;,
+			&#039;default&#039;           =&gt; &#039;desc&#039;,
+			&#039;enum&#039;              =&gt; array( &#039;asc&#039;, &#039;desc&#039; ),
+			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
+		);
+		$params[&#039;orderby&#039;] = array(
+			&#039;description&#039;       =&gt; __( &#039;Sort collection by object attribute.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;string&#039;,
+			&#039;default&#039;           =&gt; &#039;date&#039;,
+			&#039;enum&#039;              =&gt; array(
+				&#039;date&#039;,
+				&#039;id&#039;,
+				&#039;title&#039;,
+			),
+			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
+		);
+		$params[&#039;status&#039;]  = array(
+			&#039;default&#039;           =&gt; &#039;all&#039;,
+			&#039;description&#039;       =&gt; __( &#039;Limit result set to webhooks assigned a specific status.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;string&#039;,
+			&#039;enum&#039;              =&gt; array( &#039;all&#039;, &#039;active&#039;, &#039;paused&#039;, &#039;disabled&#039; ),
+			&#039;sanitize_callback&#039; =&gt; &#039;sanitize_key&#039;,
+			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
+		);
+
+		return $params;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866948"></script>
+    <script src="../js/search.js?updated=1692866948"></script>
+</body>
+</html>

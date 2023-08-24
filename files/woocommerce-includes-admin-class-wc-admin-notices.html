@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866946">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866946">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-admin-notices.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Display notices in admin
+ *
+ * @package WooCommerce\Admin
+ * @version 3.4.0
+ */
+
+use Automattic\Jetpack\Constants;
+use Automattic\WooCommerce\Internal\Utilities\Users;
+use Automattic\WooCommerce\Internal\Traits\AccessiblePrivateMethods;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * WC_Admin_Notices Class.
+ */
+class WC_Admin_Notices {
+
+	use AccessiblePrivateMethods;
+
+	/**
+	 * Stores notices.
+	 *
+	 * @var array
+	 */
+	private static $notices = array();
+
+	/**
+	 * Array of notices - name =&gt; callback.
+	 *
+	 * @var array
+	 */
+	private static $core_notices = array(
+		&#039;update&#039;                             =&gt; &#039;update_notice&#039;,
+		&#039;template_files&#039;                     =&gt; &#039;template_file_check_notice&#039;,
+		&#039;legacy_shipping&#039;                    =&gt; &#039;legacy_shipping_notice&#039;,
+		&#039;no_shipping_methods&#039;                =&gt; &#039;no_shipping_methods_notice&#039;,
+		&#039;regenerating_thumbnails&#039;            =&gt; &#039;regenerating_thumbnails_notice&#039;,
+		&#039;regenerating_lookup_table&#039;          =&gt; &#039;regenerating_lookup_table_notice&#039;,
+		&#039;no_secure_connection&#039;               =&gt; &#039;secure_connection_notice&#039;,
+		WC_PHP_MIN_REQUIREMENTS_NOTICE       =&gt; &#039;wp_php_min_requirements_notice&#039;,
+		&#039;maxmind_license_key&#039;                =&gt; &#039;maxmind_missing_license_key_notice&#039;,
+		&#039;redirect_download_method&#039;           =&gt; &#039;redirect_download_method_notice&#039;,
+		&#039;uploads_directory_is_unprotected&#039;   =&gt; &#039;uploads_directory_is_unprotected_notice&#039;,
+		&#039;base_tables_missing&#039;                =&gt; &#039;base_tables_missing_notice&#039;,
+		&#039;download_directories_sync_complete&#039; =&gt; &#039;download_directories_sync_complete&#039;,
+	);
+
+	/**
+	 * Constructor.
+	 */
+	public static function init() {
+		self::$notices = get_option( &#039;woocommerce_admin_notices&#039;, array() );
+
+		add_action( &#039;switch_theme&#039;, array( __CLASS__, &#039;reset_admin_notices&#039; ) );
+		add_action( &#039;woocommerce_installed&#039;, array( __CLASS__, &#039;reset_admin_notices&#039; ) );
+		add_action( &#039;wp_loaded&#039;, array( __CLASS__, &#039;add_redirect_download_method_notice&#039; ) );
+		add_action( &#039;admin_init&#039;, array( __CLASS__, &#039;hide_notices&#039; ), 20 );
+		self::add_action( &#039;admin_init&#039;, array( __CLASS__, &#039;maybe_remove_php74_required_notice&#039; ) );
+
+		// @TODO: This prevents Action Scheduler async jobs from storing empty list of notices during WC installation.
+		// That could lead to OBW not starting and &#039;Run setup wizard&#039; notice not appearing in WP admin, which we want
+		// to avoid.
+		if ( ! WC_Install::is_new_install() || ! wc_is_running_from_async_action_scheduler() ) {
+			add_action( &#039;shutdown&#039;, array( __CLASS__, &#039;store_notices&#039; ) );
+		}
+
+		if ( current_user_can( &#039;manage_woocommerce&#039; ) ) {
+			add_action( &#039;admin_print_styles&#039;, array( __CLASS__, &#039;add_notices&#039; ) );
+		}
+	}
+
+	/**
+	 * Parses query to create nonces when available.
+	 *
+	 * @deprecated 5.4.0
+	 * @param object $response The WP_REST_Response we&#039;re working with.
+	 * @return object $response The prepared WP_REST_Response object.
+	 */
+	public static function prepare_note_with_nonce( $response ) {
+		wc_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;5.4.0&#039; );
+
+		return $response;
+	}
+
+	/**
+	 * Store notices to DB
+	 */
+	public static function store_notices() {
+		update_option( &#039;woocommerce_admin_notices&#039;, self::get_notices() );
+	}
+
+	/**
+	 * Get notices
+	 *
+	 * @return array
+	 */
+	public static function get_notices() {
+		return self::$notices;
+	}
+
+	/**
+	 * Remove all notices.
+	 */
+	public static function remove_all_notices() {
+		self::$notices = array();
+	}
+
+	/**
+	 * Reset notices for themes when switched or a new version of WC is installed.
+	 */
+	public static function reset_admin_notices() {
+		if ( ! self::is_ssl() ) {
+			self::add_notice( &#039;no_secure_connection&#039; );
+		}
+		if ( ! self::is_uploads_directory_protected() ) {
+			self::add_notice( &#039;uploads_directory_is_unprotected&#039; );
+		}
+		self::add_notice( &#039;template_files&#039; );
+		self::add_min_version_notice();
+		self::add_maxmind_missing_license_key_notice();
+		self::maybe_add_php74_required_notice();
+	}
+
+	// phpcs:disable Generic.Commenting.Todo.TaskFound
+
+	/**
+	 * Add an admin notice about the bump of the required PHP version in WooCommerce 8.2
+	 * if the current PHP version is too old.
+	 *
+	 * TODO: Remove this method in WooCommerce 8.2.
+	 */
+	private static function maybe_add_php74_required_notice() {
+		if ( version_compare( phpversion(), &#039;7.4&#039;, &#039;&gt;=&#039; ) ) {
+			return;
+		}
+
+		self::add_custom_notice(
+			&#039;php74_required_in_woo_82&#039;,
+			sprintf(
+				&#039;%s%s&#039;,
+				sprintf(
+					&#039;&lt;h4&gt;%s&lt;/h4&gt;&#039;,
+					esc_html__( &#039;PHP version requirements will change soon&#039;, &#039;woocommerce&#039; )
+				),
+				sprintf(
+				// translators: Placeholder is a URL.
+					wpautop( wp_kses_data( __( &#039;WooCommerce 8.2, scheduled for &lt;b&gt;October 2023&lt;/b&gt;, will require PHP 7.4 or newer to work. Your server is currently running an older version of PHP, so this change will impact your store. Upgrading to at least PHP 8.0 is recommended. &lt;b&gt;&lt;a href=&quot;%s&quot;&gt;Learn more about this change.&lt;/a&gt;&lt;/b&gt;&#039;, &#039;woocommerce&#039; ) ) ),
+					&#039;https://developer.woocommerce.com/2023/06/05/new-requirement-for-woocommerce-8-2-php-7-4/&#039;
+				)
+			)
+		);
+	}
+
+	/**
+	 * Remove the admin notice about the bump of the required PHP version in WooCommerce 8.2
+	 * if the current PHP version is good.
+	 *
+	 * TODO: Remove this method in WooCommerce 8.2.
+	 */
+	private static function maybe_remove_php74_required_notice() {
+		if ( version_compare( phpversion(), &#039;7.4&#039;, &#039;&gt;=&#039; ) &amp;&amp; self::has_notice( &#039;php74_required_in_woo_82&#039; ) ) {
+			self::remove_notice( &#039;php74_required_in_woo_82&#039; );
+		}
+	}
+
+	// phpcs:enable Generic.Commenting.Todo.TaskFound
+
+	/**
+	 * Show a notice.
+	 *
+	 * @param string $name Notice name.
+	 * @param bool   $force_save Force saving inside this method instead of at the &#039;shutdown&#039;.
+	 */
+	public static function add_notice( $name, $force_save = false ) {
+		self::$notices = array_unique( array_merge( self::get_notices(), array( $name ) ) );
+
+		if ( $force_save ) {
+			// Adding early save to prevent more race conditions with notices.
+			self::store_notices();
+		}
+	}
+
+	/**
+	 * Remove a notice from being displayed.
+	 *
+	 * @param string $name Notice name.
+	 * @param bool   $force_save Force saving inside this method instead of at the &#039;shutdown&#039;.
+	 */
+	public static function remove_notice( $name, $force_save = false ) {
+		self::$notices = array_diff( self::get_notices(), array( $name ) );
+		delete_option( &#039;woocommerce_admin_notice_&#039; . $name );
+
+		if ( $force_save ) {
+			// Adding early save to prevent more race conditions with notices.
+			self::store_notices();
+		}
+	}
+
+	/**
+	 * See if a notice is being shown.
+	 *
+	 * @param string $name Notice name.
+	 *
+	 * @return boolean
+	 */
+	public static function has_notice( $name ) {
+		return in_array( $name, self::get_notices(), true );
+	}
+
+	/**
+	 * Hide a notice if the GET variable is set.
+	 */
+	public static function hide_notices() {
+		if ( isset( $_GET[&#039;wc-hide-notice&#039;] ) &amp;&amp; isset( $_GET[&#039;_wc_notice_nonce&#039;] ) ) { // WPCS: input var ok, CSRF ok.
+			if ( ! wp_verify_nonce( sanitize_key( wp_unslash( $_GET[&#039;_wc_notice_nonce&#039;] ) ), &#039;woocommerce_hide_notices_nonce&#039; ) ) { // WPCS: input var ok, CSRF ok.
+				wp_die( esc_html__( &#039;Action failed. Please refresh the page and retry.&#039;, &#039;woocommerce&#039; ) );
+			}
+
+			$notice_name = sanitize_text_field( wp_unslash( $_GET[&#039;wc-hide-notice&#039;] ) ); // WPCS: input var ok, CSRF ok.
+
+			/**
+			 * Filter the capability required to dismiss a given notice.
+			 *
+			 * @since 6.7.0
+			 *
+			 * @param string $default_capability The default required capability.
+			 * @param string $notice_name The notice name.
+			 */
+			$required_capability = apply_filters( &#039;woocommerce_dismiss_admin_notice_capability&#039;, &#039;manage_woocommerce&#039;, $notice_name );
+
+			if ( ! current_user_can( $required_capability ) ) {
+				wp_die( esc_html__( &#039;You don&amp;#8217;t have permission to do this.&#039;, &#039;woocommerce&#039; ) );
+			}
+
+			self::hide_notice( $notice_name );
+		}
+	}
+
+	/**
+	 * Hide a single notice.
+	 *
+	 * @param string $name Notice name.
+	 */
+	private static function hide_notice( $name ) {
+		self::remove_notice( $name );
+
+		update_user_meta( get_current_user_id(), &#039;dismissed_&#039; . $name . &#039;_notice&#039;, true );
+
+		do_action( &#039;woocommerce_hide_&#039; . $name . &#039;_notice&#039; );
+	}
+
+	/**
+	 * Add notices + styles if needed.
+	 */
+	public static function add_notices() {
+		$notices = self::get_notices();
+
+		if ( empty( $notices ) ) {
+			return;
+		}
+
+		$screen          = get_current_screen();
+		$screen_id       = $screen ? $screen-&gt;id : &#039;&#039;;
+		$show_on_screens = array(
+			&#039;dashboard&#039;,
+			&#039;plugins&#039;,
+		);
+
+		// Notices should only show on WooCommerce screens, the main dashboard, and on the plugins screen.
+		if ( ! in_array( $screen_id, wc_get_screen_ids(), true ) &amp;&amp; ! in_array( $screen_id, $show_on_screens, true ) ) {
+			return;
+		}
+
+		wp_enqueue_style( &#039;woocommerce-activation&#039;, plugins_url( &#039;/assets/css/activation.css&#039;, WC_PLUGIN_FILE ), array(), Constants::get_constant( &#039;WC_VERSION&#039; ) );
+
+		// Add RTL support.
+		wp_style_add_data( &#039;woocommerce-activation&#039;, &#039;rtl&#039;, &#039;replace&#039; );
+
+		foreach ( $notices as $notice ) {
+			if ( ! empty( self::$core_notices[ $notice ] ) &amp;&amp; apply_filters( &#039;woocommerce_show_admin_notice&#039;, true, $notice ) ) {
+				add_action( &#039;admin_notices&#039;, array( __CLASS__, self::$core_notices[ $notice ] ) );
+			} else {
+				add_action( &#039;admin_notices&#039;, array( __CLASS__, &#039;output_custom_notices&#039; ) );
+			}
+		}
+	}
+
+	/**
+	 * Add a custom notice.
+	 *
+	 * @param string $name        Notice name.
+	 * @param string $notice_html Notice HTML.
+	 */
+	public static function add_custom_notice( $name, $notice_html ) {
+		self::add_notice( $name );
+		update_option( &#039;woocommerce_admin_notice_&#039; . $name, wp_kses_post( $notice_html ) );
+	}
+
+	/**
+	 * Output any stored custom notices.
+	 */
+	public static function output_custom_notices() {
+		$notices = self::get_notices();
+
+		if ( ! empty( $notices ) ) {
+			foreach ( $notices as $notice ) {
+				if ( empty( self::$core_notices[ $notice ] ) ) {
+					$notice_html = get_option( &#039;woocommerce_admin_notice_&#039; . $notice );
+
+					if ( $notice_html ) {
+						include dirname( __FILE__ ) . &#039;/views/html-notice-custom.php&#039;;
+					}
+				}
+			}
+		}
+	}
+
+	/**
+	 * If we need to update the database, include a message with the DB update button.
+	 */
+	public static function update_notice() {
+		$screen    = get_current_screen();
+		$screen_id = $screen ? $screen-&gt;id : &#039;&#039;;
+		if ( WC()-&gt;is_wc_admin_active() &amp;&amp; in_array( $screen_id, wc_get_screen_ids(), true ) ) {
+			return;
+		}
+
+		if ( WC_Install::needs_db_update() ) {
+			$next_scheduled_date = WC()-&gt;queue()-&gt;get_next( &#039;woocommerce_run_update_callback&#039;, null, &#039;woocommerce-db-updates&#039; );
+
+			if ( $next_scheduled_date || ! empty( $_GET[&#039;do_update_woocommerce&#039;] ) ) { // WPCS: input var ok, CSRF ok.
+				include dirname( __FILE__ ) . &#039;/views/html-notice-updating.php&#039;;
+			} else {
+				include dirname( __FILE__ ) . &#039;/views/html-notice-update.php&#039;;
+			}
+		} else {
+			include dirname( __FILE__ ) . &#039;/views/html-notice-updated.php&#039;;
+		}
+	}
+
+	/**
+	 * If we have just installed, show a message with the install pages button.
+	 *
+	 * @deprecated 4.6.0
+	 */
+	public static function install_notice() {
+		_deprecated_function( __CLASS__ . &#039;::&#039; . __FUNCTION__, &#039;4.6.0&#039;, esc_html__( &#039;Onboarding is maintained in WooCommerce Admin.&#039;, &#039;woocommerce&#039; ) );
+	}
+
+	/**
+	 * Show a notice highlighting bad template files.
+	 */
+	public static function template_file_check_notice() {
+		$core_templates = WC_Admin_Status::scan_template_files( WC()-&gt;plugin_path() . &#039;/templates&#039; );
+		$outdated       = false;
+
+		foreach ( $core_templates as $file ) {
+
+			$theme_file = false;
+			if ( file_exists( get_stylesheet_directory() . &#039;/&#039; . $file ) ) {
+				$theme_file = get_stylesheet_directory() . &#039;/&#039; . $file;
+			} elseif ( file_exists( get_stylesheet_directory() . &#039;/&#039; . WC()-&gt;template_path() . $file ) ) {
+				$theme_file = get_stylesheet_directory() . &#039;/&#039; . WC()-&gt;template_path() . $file;
+			} elseif ( file_exists( get_template_directory() . &#039;/&#039; . $file ) ) {
+				$theme_file = get_template_directory() . &#039;/&#039; . $file;
+			} elseif ( file_exists( get_template_directory() . &#039;/&#039; . WC()-&gt;template_path() . $file ) ) {
+				$theme_file = get_template_directory() . &#039;/&#039; . WC()-&gt;template_path() . $file;
+			}
+
+			if ( false !== $theme_file ) {
+				$core_version  = WC_Admin_Status::get_file_version( WC()-&gt;plugin_path() . &#039;/templates/&#039; . $file );
+				$theme_version = WC_Admin_Status::get_file_version( $theme_file );
+
+				if ( $core_version &amp;&amp; $theme_version &amp;&amp; version_compare( $theme_version, $core_version, &#039;&lt;&#039; ) ) {
+					$outdated = true;
+					break;
+				}
+			}
+		}
+
+		if ( $outdated ) {
+			include dirname( __FILE__ ) . &#039;/views/html-notice-template-check.php&#039;;
+		} else {
+			self::remove_notice( &#039;template_files&#039; );
+		}
+	}
+
+	/**
+	 * Show a notice asking users to convert to shipping zones.
+	 *
+	 * @todo remove in 4.0.0
+	 */
+	public static function legacy_shipping_notice() {
+		$maybe_load_legacy_methods = array( &#039;flat_rate&#039;, &#039;free_shipping&#039;, &#039;international_delivery&#039;, &#039;local_delivery&#039;, &#039;local_pickup&#039; );
+		$enabled                   = false;
+
+		foreach ( $maybe_load_legacy_methods as $method ) {
+			$options = get_option( &#039;woocommerce_&#039; . $method . &#039;_settings&#039; );
+			if ( $options &amp;&amp; isset( $options[&#039;enabled&#039;] ) &amp;&amp; &#039;yes&#039; === $options[&#039;enabled&#039;] ) {
+				$enabled = true;
+			}
+		}
+
+		if ( $enabled ) {
+			include dirname( __FILE__ ) . &#039;/views/html-notice-legacy-shipping.php&#039;;
+		} else {
+			self::remove_notice( &#039;template_files&#039; );
+		}
+	}
+
+	/**
+	 * No shipping methods.
+	 */
+	public static function no_shipping_methods_notice() {
+		if ( wc_shipping_enabled() &amp;&amp; ( empty( $_GET[&#039;page&#039;] ) || empty( $_GET[&#039;tab&#039;] ) || &#039;wc-settings&#039; !== $_GET[&#039;page&#039;] || &#039;shipping&#039; !== $_GET[&#039;tab&#039;] ) ) { // WPCS: input var ok, CSRF ok.
+			$product_count = wp_count_posts( &#039;product&#039; );
+			$method_count  = wc_get_shipping_method_count();
+
+			if ( $product_count-&gt;publish &gt; 0 &amp;&amp; 0 === $method_count ) {
+				include dirname( __FILE__ ) . &#039;/views/html-notice-no-shipping-methods.php&#039;;
+			}
+
+			if ( $method_count &gt; 0 ) {
+				self::remove_notice( &#039;no_shipping_methods&#039; );
+			}
+		}
+	}
+
+	/**
+	 * Notice shown when regenerating thumbnails background process is running.
+	 */
+	public static function regenerating_thumbnails_notice() {
+		include dirname( __FILE__ ) . &#039;/views/html-notice-regenerating-thumbnails.php&#039;;
+	}
+
+	/**
+	 * Notice about secure connection.
+	 */
+	public static function secure_connection_notice() {
+		if ( self::is_ssl() || get_user_meta( get_current_user_id(), &#039;dismissed_no_secure_connection_notice&#039;, true ) ) {
+			return;
+		}
+
+		include dirname( __FILE__ ) . &#039;/views/html-notice-secure-connection.php&#039;;
+	}
+
+	/**
+	 * Notice shown when regenerating thumbnails background process is running.
+	 *
+	 * @since 3.6.0
+	 */
+	public static function regenerating_lookup_table_notice() {
+		// See if this is still relevant.
+		if ( ! wc_update_product_lookup_tables_is_running() ) {
+			self::remove_notice( &#039;regenerating_lookup_table&#039; );
+			return;
+		}
+
+		include dirname( __FILE__ ) . &#039;/views/html-notice-regenerating-lookup-table.php&#039;;
+	}
+
+	/**
+	 * Add notice about minimum PHP and WordPress requirement.
+	 *
+	 * @since 3.6.5
+	 */
+	public static function add_min_version_notice() {
+		if ( version_compare( phpversion(), WC_NOTICE_MIN_PHP_VERSION, &#039;&lt;&#039; ) || version_compare( get_bloginfo( &#039;version&#039; ), WC_NOTICE_MIN_WP_VERSION, &#039;&lt;&#039; ) ) {
+			self::add_notice( WC_PHP_MIN_REQUIREMENTS_NOTICE );
+		}
+	}
+
+	/**
+	 * Notice about WordPress and PHP minimum requirements.
+	 *
+	 * @since 3.6.5
+	 * @return void
+	 */
+	public static function wp_php_min_requirements_notice() {
+		if ( apply_filters( &#039;woocommerce_hide_php_wp_nag&#039;, get_user_meta( get_current_user_id(), &#039;dismissed_&#039; . WC_PHP_MIN_REQUIREMENTS_NOTICE . &#039;_notice&#039;, true ) ) ) {
+			self::remove_notice( WC_PHP_MIN_REQUIREMENTS_NOTICE );
+			return;
+		}
+
+		$old_php = version_compare( phpversion(), WC_NOTICE_MIN_PHP_VERSION, &#039;&lt;&#039; );
+		$old_wp  = version_compare( get_bloginfo( &#039;version&#039; ), WC_NOTICE_MIN_WP_VERSION, &#039;&lt;&#039; );
+
+		// Both PHP and WordPress up to date version =&gt; no notice.
+		if ( ! $old_php &amp;&amp; ! $old_wp ) {
+			return;
+		}
+
+		if ( $old_php &amp;&amp; $old_wp ) {
+			$msg = sprintf(
+				/* translators: 1: Minimum PHP version 2: Minimum WordPress version */
+				__( &#039;Update required: WooCommerce will soon require PHP version %1$s and WordPress version %2$s or newer.&#039;, &#039;woocommerce&#039; ),
+				WC_NOTICE_MIN_PHP_VERSION,
+				WC_NOTICE_MIN_WP_VERSION
+			);
+		} elseif ( $old_php ) {
+			$msg = sprintf(
+				/* translators: %s: Minimum PHP version */
+				__( &#039;Update required: WooCommerce will soon require PHP version %s or newer.&#039;, &#039;woocommerce&#039; ),
+				WC_NOTICE_MIN_PHP_VERSION
+			);
+		} elseif ( $old_wp ) {
+			$msg = sprintf(
+				/* translators: %s: Minimum WordPress version */
+				__( &#039;Update required: WooCommerce will soon require WordPress version %s or newer.&#039;, &#039;woocommerce&#039; ),
+				WC_NOTICE_MIN_WP_VERSION
+			);
+		}
+
+		include dirname( __FILE__ ) . &#039;/views/html-notice-wp-php-minimum-requirements.php&#039;;
+	}
+
+	/**
+	 * Add MaxMind missing license key notice.
+	 *
+	 * @since 3.9.0
+	 */
+	public static function add_maxmind_missing_license_key_notice() {
+		$default_address = get_option( &#039;woocommerce_default_customer_address&#039; );
+
+		if ( ! in_array( $default_address, array( &#039;geolocation&#039;, &#039;geolocation_ajax&#039; ), true ) ) {
+			return;
+		}
+
+		$integration_options = get_option( &#039;woocommerce_maxmind_geolocation_settings&#039; );
+		if ( empty( $integration_options[&#039;license_key&#039;] ) ) {
+			self::add_notice( &#039;maxmind_license_key&#039; );
+
+		}
+	}
+
+	/**
+	 *  Add notice about Redirect-only download method, nudging user to switch to a different method instead.
+	 */
+	public static function add_redirect_download_method_notice() {
+		if ( &#039;redirect&#039; === get_option( &#039;woocommerce_file_download_method&#039; ) ) {
+			self::add_notice( &#039;redirect_download_method&#039; );
+		} else {
+			self::remove_notice( &#039;redirect_download_method&#039; );
+		}
+	}
+
+	/**
+	 * Notice about the completion of the product downloads sync, with further advice for the site operator.
+	 */
+	public static function download_directories_sync_complete() {
+		$notice_dismissed = apply_filters(
+			&#039;woocommerce_hide_download_directories_sync_complete&#039;,
+			get_user_meta( get_current_user_id(), &#039;download_directories_sync_complete&#039;, true )
+		);
+
+		if ( $notice_dismissed ) {
+			self::remove_notice( &#039;download_directories_sync_complete&#039; );
+		}
+
+		if ( Users::is_site_administrator() ) {
+			include __DIR__ . &#039;/views/html-notice-download-dir-sync-complete.php&#039;;
+		}
+	}
+
+	/**
+	 * Display MaxMind missing license key notice.
+	 *
+	 * @since 3.9.0
+	 */
+	public static function maxmind_missing_license_key_notice() {
+		$user_dismissed_notice   = get_user_meta( get_current_user_id(), &#039;dismissed_maxmind_license_key_notice&#039;, true );
+		$filter_dismissed_notice = ! apply_filters( &#039;woocommerce_maxmind_geolocation_display_notices&#039;, true );
+
+		if ( $user_dismissed_notice || $filter_dismissed_notice ) {
+			self::remove_notice( &#039;maxmind_license_key&#039; );
+			return;
+		}
+
+		include dirname( __FILE__ ) . &#039;/views/html-notice-maxmind-license-key.php&#039;;
+	}
+
+	/**
+	 * Notice about Redirect-Only download method.
+	 *
+	 * @since 4.0
+	 */
+	public static function redirect_download_method_notice() {
+		if ( apply_filters( &#039;woocommerce_hide_redirect_method_nag&#039;, get_user_meta( get_current_user_id(), &#039;dismissed_redirect_download_method_notice&#039;, true ) ) ) {
+			self::remove_notice( &#039;redirect_download_method&#039; );
+			return;
+		}
+
+		include dirname( __FILE__ ) . &#039;/views/html-notice-redirect-only-download.php&#039;;
+	}
+
+	/**
+	 * Notice about uploads directory begin unprotected.
+	 *
+	 * @since 4.2.0
+	 */
+	public static function uploads_directory_is_unprotected_notice() {
+		if ( get_user_meta( get_current_user_id(), &#039;dismissed_uploads_directory_is_unprotected_notice&#039;, true ) || self::is_uploads_directory_protected() ) {
+			self::remove_notice( &#039;uploads_directory_is_unprotected&#039; );
+			return;
+		}
+
+		include dirname( __FILE__ ) . &#039;/views/html-notice-uploads-directory-is-unprotected.php&#039;;
+	}
+
+	/**
+	 * Notice about base tables missing.
+	 */
+	public static function base_tables_missing_notice() {
+		$notice_dismissed = apply_filters(
+			&#039;woocommerce_hide_base_tables_missing_nag&#039;,
+			get_user_meta( get_current_user_id(), &#039;dismissed_base_tables_missing_notice&#039;, true )
+		);
+		if ( $notice_dismissed ) {
+			self::remove_notice( &#039;base_tables_missing&#039; );
+		}
+
+		include dirname( __FILE__ ) . &#039;/views/html-notice-base-table-missing.php&#039;;
+	}
+
+	/**
+	 * Determine if the store is running SSL.
+	 *
+	 * @return bool Flag SSL enabled.
+	 * @since  3.5.1
+	 */
+	protected static function is_ssl() {
+		$shop_page = wc_get_page_permalink( &#039;shop&#039; );
+
+		return ( is_ssl() &amp;&amp; &#039;https&#039; === substr( $shop_page, 0, 5 ) );
+	}
+
+	/**
+	 * Wrapper for is_plugin_active.
+	 *
+	 * @param string $plugin Plugin to check.
+	 * @return boolean
+	 */
+	protected static function is_plugin_active( $plugin ) {
+		if ( ! function_exists( &#039;is_plugin_active&#039; ) ) {
+			include_once ABSPATH . &#039;wp-admin/includes/plugin.php&#039;;
+		}
+		return is_plugin_active( $plugin );
+	}
+
+	/**
+	 * Simplify Commerce is no longer in core.
+	 *
+	 * @deprecated 3.6.0 No longer shown.
+	 */
+	public static function simplify_commerce_notice() {
+		wc_deprecated_function( &#039;WC_Admin_Notices::simplify_commerce_notice&#039;, &#039;3.6.0&#039; );
+	}
+
+	/**
+	 * Show the Theme Check notice.
+	 *
+	 * @deprecated 3.3.0 No longer shown.
+	 */
+	public static function theme_check_notice() {
+		wc_deprecated_function( &#039;WC_Admin_Notices::theme_check_notice&#039;, &#039;3.3.0&#039; );
+	}
+
+	/**
+	 * Check if uploads directory is protected.
+	 *
+	 * @since 4.2.0
+	 * @return bool
+	 */
+	protected static function is_uploads_directory_protected() {
+		$cache_key = &#039;_woocommerce_upload_directory_status&#039;;
+		$status    = get_transient( $cache_key );
+
+		// Check for cache.
+		if ( false !== $status ) {
+			return &#039;protected&#039; === $status;
+		}
+
+		// Get only data from the uploads directory.
+		$uploads = wp_get_upload_dir();
+
+		// Check for the &quot;uploads/woocommerce_uploads&quot; directory.
+		$response         = wp_safe_remote_get(
+			esc_url_raw( $uploads[&#039;baseurl&#039;] . &#039;/woocommerce_uploads/&#039; ),
+			array(
+				&#039;redirection&#039; =&gt; 0,
+			)
+		);
+		$response_code    = intval( wp_remote_retrieve_response_code( $response ) );
+		$response_content = wp_remote_retrieve_body( $response );
+
+		// Check if returns 200 with empty content in case can open an index.html file,
+		// and check for non-200 codes in case the directory is protected.
+		$is_protected = ( 200 === $response_code &amp;&amp; empty( $response_content ) ) || ( 200 !== $response_code );
+		set_transient( $cache_key, $is_protected ? &#039;protected&#039; : &#039;unprotected&#039;, 1 * DAY_IN_SECONDS );
+
+		return $is_protected;
+	}
+}
+
+WC_Admin_Notices::init();
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866946"></script>
+    <script src="../js/search.js?updated=1692866946"></script>
+</body>
+</html>

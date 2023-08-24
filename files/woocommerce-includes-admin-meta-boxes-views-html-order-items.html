@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866946">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866946">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">html-order-items.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Order items HTML for meta box.
+ *
+ * @package WooCommerce\Admin
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Allow plugins to determine whether refunds UI should be rendered in the template.
+ *
+ * @since 6.4.0
+ *
+ * @param bool     $render_refunds If the refunds UI should be rendered.
+ * @param int      $order_id       The Order ID.
+ * @param WC_Order $order          The Order object.
+ */
+$render_refunds = (bool) apply_filters( &#039;woocommerce_admin_order_should_render_refunds&#039;, 0 &lt; $order-&gt;get_total() - $order-&gt;get_total_refunded() || 0 &lt; absint( $order-&gt;get_item_count() - $order-&gt;get_item_count_refunded() ), $order-&gt;get_id(), $order );
+
+global $wpdb;
+
+$payment_gateway     = wc_get_payment_gateway_by_order( $order );
+$line_items          = $order-&gt;get_items( apply_filters( &#039;woocommerce_admin_order_item_types&#039;, &#039;line_item&#039; ) );
+$discounts           = $order-&gt;get_items( &#039;discount&#039; );
+$line_items_fee      = $order-&gt;get_items( &#039;fee&#039; );
+$line_items_shipping = $order-&gt;get_items( &#039;shipping&#039; );
+
+if ( wc_tax_enabled() ) {
+	$order_taxes      = $order-&gt;get_taxes();
+	$tax_classes      = WC_Tax::get_tax_classes();
+	$classes_options  = wc_get_product_tax_class_options();
+	$show_tax_columns = count( $order_taxes ) === 1;
+}
+?&gt;
+&lt;div class=&quot;woocommerce_order_items_wrapper wc-order-items-editable&quot;&gt;
+	&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;woocommerce_order_items&quot;&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th class=&quot;item sortable&quot; colspan=&quot;2&quot; data-sort=&quot;string-ins&quot;&gt;&lt;?php esc_html_e( &#039;Item&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/th&gt;
+				&lt;?php do_action( &#039;woocommerce_admin_order_item_headers&#039;, $order ); ?&gt;
+				&lt;th class=&quot;item_cost sortable&quot; data-sort=&quot;float&quot;&gt;&lt;?php esc_html_e( &#039;Cost&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/th&gt;
+				&lt;th class=&quot;quantity sortable&quot; data-sort=&quot;int&quot;&gt;&lt;?php esc_html_e( &#039;Qty&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/th&gt;
+				&lt;th class=&quot;line_cost sortable&quot; data-sort=&quot;float&quot;&gt;&lt;?php esc_html_e( &#039;Total&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/th&gt;
+				&lt;?php
+				if ( ! empty( $order_taxes ) ) :
+					foreach ( $order_taxes as $tax_id =&gt; $tax_item ) :
+						$tax_class      = wc_get_tax_class_by_tax_id( $tax_item[&#039;rate_id&#039;] );
+						$tax_class_name = isset( $classes_options[ $tax_class ] ) ? $classes_options[ $tax_class ] : __( &#039;Tax&#039;, &#039;woocommerce&#039; );
+						$column_label   = ! empty( $tax_item[&#039;label&#039;] ) ? $tax_item[&#039;label&#039;] : __( &#039;Tax&#039;, &#039;woocommerce&#039; );
+						/* translators: %1$s: tax item name %2$s: tax class name  */
+						$column_tip = sprintf( esc_html__( &#039;%1$s (%2$s)&#039;, &#039;woocommerce&#039; ), $tax_item[&#039;name&#039;], $tax_class_name );
+						?&gt;
+						&lt;th class=&quot;line_tax tips&quot; data-tip=&quot;&lt;?php echo esc_attr( $column_tip ); ?&gt;&quot;&gt;
+							&lt;?php echo esc_attr( $column_label ); ?&gt;
+							&lt;input type=&quot;hidden&quot; class=&quot;order-tax-id&quot; name=&quot;order_taxes[&lt;?php echo esc_attr( $tax_id ); ?&gt;]&quot; value=&quot;&lt;?php echo esc_attr( $tax_item[&#039;rate_id&#039;] ); ?&gt;&quot;&gt;
+							&lt;?php if ( $order-&gt;is_editable() ) : ?&gt;
+								&lt;a class=&quot;delete-order-tax&quot; href=&quot;#&quot; data-rate_id=&quot;&lt;?php echo esc_attr( $tax_id ); ?&gt;&quot;&gt;&lt;/a&gt;
+							&lt;?php endif; ?&gt;
+						&lt;/th&gt;
+						&lt;?php
+					endforeach;
+				endif;
+				?&gt;
+				&lt;th class=&quot;wc-order-edit-line-item&quot; width=&quot;1%&quot;&gt;&amp;nbsp;&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tbody id=&quot;order_line_items&quot;&gt;
+			&lt;?php
+			foreach ( $line_items as $item_id =&gt; $item ) {
+				do_action( &#039;woocommerce_before_order_item_&#039; . $item-&gt;get_type() . &#039;_html&#039;, $item_id, $item, $order );
+
+				include __DIR__ . &#039;/html-order-item.php&#039;;
+
+				do_action( &#039;woocommerce_order_item_&#039; . $item-&gt;get_type() . &#039;_html&#039;, $item_id, $item, $order );
+			}
+			do_action( &#039;woocommerce_admin_order_items_after_line_items&#039;, $order-&gt;get_id() );
+			?&gt;
+		&lt;/tbody&gt;
+		&lt;tbody id=&quot;order_fee_line_items&quot;&gt;
+			&lt;?php
+			foreach ( $line_items_fee as $item_id =&gt; $item ) {
+				include __DIR__ . &#039;/html-order-fee.php&#039;;
+			}
+			do_action( &#039;woocommerce_admin_order_items_after_fees&#039;, $order-&gt;get_id() );
+			?&gt;
+		&lt;/tbody&gt;
+		&lt;tbody id=&quot;order_shipping_line_items&quot;&gt;
+			&lt;?php
+			$shipping_methods = WC()-&gt;shipping() ? WC()-&gt;shipping()-&gt;load_shipping_methods() : array();
+			foreach ( $line_items_shipping as $item_id =&gt; $item ) {
+				include __DIR__ . &#039;/html-order-shipping.php&#039;;
+			}
+			do_action( &#039;woocommerce_admin_order_items_after_shipping&#039;, $order-&gt;get_id() );
+			?&gt;
+		&lt;/tbody&gt;
+		&lt;tbody id=&quot;order_refunds&quot;&gt;
+			&lt;?php
+			$refunds = $order-&gt;get_refunds();
+
+			if ( $refunds ) {
+				foreach ( $refunds as $refund ) {
+					include __DIR__ . &#039;/html-order-refund.php&#039;;
+				}
+				do_action( &#039;woocommerce_admin_order_items_after_refunds&#039;, $order-&gt;get_id() );
+			}
+			?&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;wc-order-data-row wc-order-totals-items wc-order-items-editable&quot;&gt;
+	&lt;?php
+	$coupons = $order-&gt;get_items( &#039;coupon&#039; );
+	if ( $coupons ) :
+		?&gt;
+		&lt;div class=&quot;wc-used-coupons&quot;&gt;
+			&lt;ul class=&quot;wc_coupon_list&quot;&gt;
+				&lt;li&gt;&lt;strong&gt;&lt;?php esc_html_e( &#039;Coupon(s)&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/strong&gt;&lt;/li&gt;
+				&lt;?php
+				foreach ( $coupons as $item_id =&gt; $item ) :
+					$post_id = $wpdb-&gt;get_var( $wpdb-&gt;prepare( &quot;SELECT ID FROM {$wpdb-&gt;posts} WHERE post_title = %s AND post_type = &#039;shop_coupon&#039; AND post_status = &#039;publish&#039; LIMIT 1;&quot;, $item-&gt;get_code() ) ); // phpcs:disable WordPress.WP.GlobalVariablesOverride.Prohibited
+					$class   = $order-&gt;is_editable() ? &#039;code editable&#039; : &#039;code&#039;;
+					?&gt;
+					&lt;li class=&quot;&lt;?php echo esc_attr( $class ); ?&gt;&quot;&gt;
+						&lt;?php if ( $post_id ) : ?&gt;
+							&lt;?php
+							$post_url = apply_filters(
+								&#039;woocommerce_admin_order_item_coupon_url&#039;,
+								add_query_arg(
+									array(
+										&#039;post&#039;   =&gt; $post_id,
+										&#039;action&#039; =&gt; &#039;edit&#039;,
+									),
+									admin_url( &#039;post.php&#039; )
+								),
+								$item,
+								$order
+							);
+							?&gt;
+							&lt;a href=&quot;&lt;?php echo esc_url( $post_url ); ?&gt;&quot; class=&quot;tips&quot; data-tip=&quot;&lt;?php echo esc_attr( wc_price( $item-&gt;get_discount(), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ) ); ?&gt;&quot;&gt;
+								&lt;span&gt;&lt;?php echo esc_html( $item-&gt;get_code() ); ?&gt;&lt;/span&gt;
+							&lt;/a&gt;
+						&lt;?php else : ?&gt;
+							&lt;span class=&quot;tips&quot; data-tip=&quot;&lt;?php echo esc_attr( wc_price( $item-&gt;get_discount(), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ) ); ?&gt;&quot;&gt;
+								&lt;span&gt;&lt;?php echo esc_html( $item-&gt;get_code() ); ?&gt;&lt;/span&gt;
+							&lt;/span&gt;
+						&lt;?php endif; ?&gt;
+						&lt;?php if ( $order-&gt;is_editable() ) : ?&gt;
+							&lt;a class=&quot;remove-coupon&quot; href=&quot;javascript:void(0)&quot; aria-label=&quot;Remove&quot; data-code=&quot;&lt;?php echo esc_attr( $item-&gt;get_code() ); ?&gt;&quot;&gt;&lt;/a&gt;
+						&lt;?php endif; ?&gt;
+					&lt;/li&gt;
+				&lt;?php endforeach; ?&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;?php endif; ?&gt;
+	&lt;table class=&quot;wc-order-totals&quot;&gt;
+			&lt;tr&gt;
+				&lt;td class=&quot;label&quot;&gt;&lt;?php esc_html_e( &#039;Items Subtotal:&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/td&gt;
+				&lt;td width=&quot;1%&quot;&gt;&lt;/td&gt;
+				&lt;td class=&quot;total&quot;&gt;
+					&lt;?php echo wc_price( $order-&gt;get_subtotal(), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;?php if ( 0 &lt; $order-&gt;get_total_discount() ) : ?&gt;
+			&lt;tr&gt;
+				&lt;td class=&quot;label&quot;&gt;&lt;?php esc_html_e( &#039;Coupon(s):&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/td&gt;
+				&lt;td width=&quot;1%&quot;&gt;&lt;/td&gt;
+				&lt;td class=&quot;total&quot;&gt;-
+					&lt;?php echo wc_price( $order-&gt;get_total_discount(), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;?php endif; ?&gt;
+		&lt;?php if ( 0 &lt; $order-&gt;get_total_fees() ) : ?&gt;
+			&lt;tr&gt;
+				&lt;td class=&quot;label&quot;&gt;&lt;?php esc_html_e( &#039;Fees:&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/td&gt;
+				&lt;td width=&quot;1%&quot;&gt;&lt;/td&gt;
+				&lt;td class=&quot;total&quot;&gt;
+					&lt;?php echo wc_price( $order-&gt;get_total_fees(), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;?php endif; ?&gt;
+
+		&lt;?php do_action( &#039;woocommerce_admin_order_totals_after_discount&#039;, $order-&gt;get_id() ); ?&gt;
+
+		&lt;?php if ( $order-&gt;get_shipping_methods() ) : ?&gt;
+			&lt;tr&gt;
+				&lt;td class=&quot;label&quot;&gt;&lt;?php esc_html_e( &#039;Shipping:&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/td&gt;
+				&lt;td width=&quot;1%&quot;&gt;&lt;/td&gt;
+				&lt;td class=&quot;total&quot;&gt;
+					&lt;?php echo wc_price( $order-&gt;get_shipping_total(), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;?php endif; ?&gt;
+
+		&lt;?php do_action( &#039;woocommerce_admin_order_totals_after_shipping&#039;, $order-&gt;get_id() ); ?&gt;
+
+		&lt;?php if ( wc_tax_enabled() ) : ?&gt;
+			&lt;?php foreach ( $order-&gt;get_tax_totals() as $code =&gt; $tax_total ) : ?&gt;
+				&lt;tr&gt;
+					&lt;td class=&quot;label&quot;&gt;&lt;?php echo esc_html( $tax_total-&gt;label ); ?&gt;:&lt;/td&gt;
+					&lt;td width=&quot;1%&quot;&gt;&lt;/td&gt;
+					&lt;td class=&quot;total&quot;&gt;
+						&lt;?php
+							// We use wc_round_tax_total here because tax may need to be round up or round down depending upon settings, whereas wc_price alone will always round it down.
+							echo wc_price( wc_round_tax_total( $tax_total-&gt;amount ), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						?&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;?php endforeach; ?&gt;
+		&lt;?php endif; ?&gt;
+
+		&lt;?php do_action( &#039;woocommerce_admin_order_totals_after_tax&#039;, $order-&gt;get_id() ); ?&gt;
+
+		&lt;tr&gt;
+			&lt;td class=&quot;label&quot;&gt;&lt;?php esc_html_e( &#039;Order Total&#039;, &#039;woocommerce&#039; ); ?&gt;:&lt;/td&gt;
+			&lt;td width=&quot;1%&quot;&gt;&lt;/td&gt;
+			&lt;td class=&quot;total&quot;&gt;
+				&lt;?php echo wc_price( $order-&gt;get_total(), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+
+	&lt;/table&gt;
+
+	&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+	&lt;?php if ( in_array( $order-&gt;get_status(), array( &#039;processing&#039;, &#039;completed&#039;, &#039;refunded&#039; ), true ) &amp;&amp; ! empty( $order-&gt;get_date_paid() ) ) : ?&gt;
+
+		&lt;table class=&quot;wc-order-totals&quot; style=&quot;border-top: 1px solid #999; margin-top:12px; padding-top:12px&quot;&gt;
+			&lt;tr&gt;
+				&lt;td class=&quot;&lt;?php echo $order-&gt;get_total_refunded() ? &#039;label&#039; : &#039;label label-highlight&#039;; ?&gt;&quot;&gt;&lt;?php esc_html_e( &#039;Paid&#039;, &#039;woocommerce&#039; ); ?&gt;: &lt;br /&gt;&lt;/td&gt;
+				&lt;td width=&quot;1%&quot;&gt;&lt;/td&gt;
+				&lt;td class=&quot;total&quot;&gt;
+					&lt;?php echo wc_price( $order-&gt;get_total(), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span class=&quot;description&quot;&gt;
+					&lt;?php
+					if ( $order-&gt;get_payment_method_title() ) {
+						/* translators: 1: payment date. 2: payment method */
+						echo esc_html( sprintf( __( &#039;%1$s via %2$s&#039;, &#039;woocommerce&#039; ), $order-&gt;get_date_paid()-&gt;date_i18n( get_option( &#039;date_format&#039; ) ), $order-&gt;get_payment_method_title() ) );
+					} else {
+						echo esc_html( $order-&gt;get_date_paid()-&gt;date_i18n( get_option( &#039;date_format&#039; ) ) );
+					}
+					?&gt;
+					&lt;/span&gt;
+				&lt;/td&gt;
+				&lt;td colspan=&quot;2&quot;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+
+	&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+	&lt;?php endif; ?&gt;
+
+	&lt;?php if ( $order-&gt;get_total_refunded() ) : ?&gt;
+		&lt;table class=&quot;wc-order-totals&quot; style=&quot;border-top: 1px solid #999; margin-top:12px; padding-top:12px&quot;&gt;
+			&lt;tr&gt;
+				&lt;td class=&quot;label refunded-total&quot;&gt;&lt;?php esc_html_e( &#039;Refunded&#039;, &#039;woocommerce&#039; ); ?&gt;:&lt;/td&gt;
+				&lt;td width=&quot;1%&quot;&gt;&lt;/td&gt;
+				&lt;td class=&quot;total refunded-total&quot;&gt;-&lt;?php echo wc_price( $order-&gt;get_total_refunded(), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+
+			&lt;?php do_action( &#039;woocommerce_admin_order_totals_after_refunded&#039;, $order-&gt;get_id() ); ?&gt;
+
+			&lt;tr&gt;
+				&lt;td class=&quot;label label-highlight&quot;&gt;&lt;?php esc_html_e( &#039;Net Payment&#039;, &#039;woocommerce&#039; ); ?&gt;:&lt;/td&gt;
+				&lt;td width=&quot;1%&quot;&gt;&lt;/td&gt;
+				&lt;td class=&quot;total&quot;&gt;
+				&lt;?php echo wc_price( $order-&gt;get_total() - $order-&gt;get_total_refunded(), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+
+		&lt;/table&gt;
+	&lt;?php endif; ?&gt;
+
+	&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+	&lt;table class=&quot;wc-order-totals&quot;&gt;
+		&lt;?php do_action( &#039;woocommerce_admin_order_totals_after_total&#039;, $order-&gt;get_id() ); ?&gt;
+	&lt;/table&gt;
+
+	&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;wc-order-data-row wc-order-bulk-actions wc-order-data-row-toggle&quot;&gt;
+	&lt;p class=&quot;add-items&quot;&gt;
+		&lt;?php if ( $order-&gt;is_editable() ) : ?&gt;
+			&lt;button type=&quot;button&quot; class=&quot;button add-line-item&quot;&gt;&lt;?php esc_html_e( &#039;Add item(s)&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+			&lt;?php if ( wc_coupons_enabled() ) : ?&gt;
+				&lt;button type=&quot;button&quot; class=&quot;button add-coupon&quot;&gt;&lt;?php esc_html_e( &#039;Apply coupon&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+			&lt;?php endif; ?&gt;
+		&lt;?php else : ?&gt;
+			&lt;span class=&quot;description&quot;&gt;&lt;?php echo wc_help_tip( __( &#039;To edit this order change the status back to &quot;Pending payment&quot;&#039;, &#039;woocommerce&#039; ) ); ?&gt; &lt;?php esc_html_e( &#039;This order is no longer editable.&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/span&gt;
+		&lt;?php endif; ?&gt;
+		&lt;?php if ( $render_refunds ) : ?&gt;
+			&lt;button type=&quot;button&quot; class=&quot;button refund-items&quot;&gt;&lt;?php esc_html_e( &#039;Refund&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+		&lt;?php endif; ?&gt;
+		&lt;?php
+			// Allow adding custom buttons.
+			do_action( &#039;woocommerce_order_item_add_action_buttons&#039;, $order );
+		?&gt;
+		&lt;?php if ( $order-&gt;is_editable() ) : ?&gt;
+			&lt;button type=&quot;button&quot; class=&quot;button button-primary calculate-action&quot;&gt;&lt;?php esc_html_e( &#039;Recalculate&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+		&lt;?php endif; ?&gt;
+	&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;wc-order-data-row wc-order-add-item wc-order-data-row-toggle&quot; style=&quot;display:none;&quot;&gt;
+	&lt;button type=&quot;button&quot; class=&quot;button add-order-item&quot;&gt;&lt;?php esc_html_e( &#039;Add product(s)&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+	&lt;button type=&quot;button&quot; class=&quot;button add-order-fee&quot;&gt;&lt;?php esc_html_e( &#039;Add fee&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+	&lt;button type=&quot;button&quot; class=&quot;button add-order-shipping&quot;&gt;&lt;?php esc_html_e( &#039;Add shipping&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+	&lt;?php if ( wc_tax_enabled() ) : ?&gt;
+		&lt;button type=&quot;button&quot; class=&quot;button add-order-tax&quot;&gt;&lt;?php esc_html_e( &#039;Add tax&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+	&lt;?php endif; ?&gt;
+	&lt;?php
+		// Allow adding custom buttons.
+		do_action( &#039;woocommerce_order_item_add_line_buttons&#039;, $order );
+	?&gt;
+	&lt;button type=&quot;button&quot; class=&quot;button cancel-action&quot;&gt;&lt;?php esc_html_e( &#039;Cancel&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+	&lt;button type=&quot;button&quot; class=&quot;button button-primary save-action&quot;&gt;&lt;?php esc_html_e( &#039;Save&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;?php if ( $render_refunds ) : ?&gt;
+&lt;div class=&quot;wc-order-data-row wc-order-refund-items wc-order-data-row-toggle&quot; style=&quot;display: none;&quot;&gt;
+	&lt;table class=&quot;wc-order-totals&quot;&gt;
+		&lt;?php if ( &#039;yes&#039; === get_option( &#039;woocommerce_manage_stock&#039; ) ) : ?&gt;
+			&lt;tr&gt;
+				&lt;td class=&quot;label&quot;&gt;&lt;label for=&quot;restock_refunded_items&quot;&gt;&lt;?php esc_html_e( &#039;Restock refunded items&#039;, &#039;woocommerce&#039; ); ?&gt;:&lt;/label&gt;&lt;/td&gt;
+				&lt;td class=&quot;total&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;restock_refunded_items&quot; name=&quot;restock_refunded_items&quot; &lt;?php checked( apply_filters( &#039;woocommerce_restock_refunded_items&#039;, true ) ); ?&gt; /&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;?php endif; ?&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;label&quot;&gt;&lt;?php esc_html_e( &#039;Amount already refunded&#039;, &#039;woocommerce&#039; ); ?&gt;:&lt;/td&gt;
+			&lt;td class=&quot;total&quot;&gt;-&lt;?php echo wc_price( $order-&gt;get_total_refunded(), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;label&quot;&gt;&lt;?php esc_html_e( &#039;Total available to refund&#039;, &#039;woocommerce&#039; ); ?&gt;:&lt;/td&gt;
+			&lt;td class=&quot;total&quot;&gt;&lt;?php echo wc_price( $order-&gt;get_total() - $order-&gt;get_total_refunded(), array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;label&quot;&gt;
+				&lt;label for=&quot;refund_amount&quot;&gt;
+					&lt;?php echo wc_help_tip( __( &#039;Refund the line items above. This will show the total amount to be refunded&#039;, &#039;woocommerce&#039; ) ); ?&gt;
+					&lt;?php esc_html_e( &#039;Refund amount&#039;, &#039;woocommerce&#039; ); ?&gt;:
+				&lt;/label&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;total&quot;&gt;
+				&lt;input type=&quot;text&quot; id=&quot;refund_amount&quot; name=&quot;refund_amount&quot; class=&quot;wc_input_price&quot;
+				&lt;?php
+				if ( wc_tax_enabled() ) {
+					// If taxes are enabled, using this refund amount can cause issues due to taxes not being refunded also.
+					// The refunds should be added to the line items, not the order as a whole.
+					echo &#039;readonly&#039;;
+				}
+				?&gt;
+				/&gt;
+				&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;label&quot;&gt;
+				&lt;label for=&quot;refund_reason&quot;&gt;
+					&lt;?php echo wc_help_tip( __( &#039;Note: the refund reason will be visible by the customer.&#039;, &#039;woocommerce&#039; ) ); ?&gt;
+					&lt;?php esc_html_e( &#039;Reason for refund (optional):&#039;, &#039;woocommerce&#039; ); ?&gt;
+				&lt;/label&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;total&quot;&gt;
+				&lt;input type=&quot;text&quot; id=&quot;refund_reason&quot; name=&quot;refund_reason&quot; /&gt;
+				&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+	&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;refund-actions&quot;&gt;
+		&lt;?php
+		$refund_amount = &#039;&lt;span class=&quot;wc-order-refund-amount&quot;&gt;&#039; . wc_price( 0, array( &#039;currency&#039; =&gt; $order-&gt;get_currency() ) ) . &#039;&lt;/span&gt;&#039;;
+		$gateway_name  = false !== $payment_gateway ? ( ! empty( $payment_gateway-&gt;method_title ) ? $payment_gateway-&gt;method_title : $payment_gateway-&gt;get_title() ) : __( &#039;Payment gateway&#039;, &#039;woocommerce&#039; );
+
+		if ( false !== $payment_gateway &amp;&amp; $payment_gateway-&gt;can_refund_order( $order ) ) {
+			/* translators: refund amount, gateway name */
+			echo &#039;&lt;button type=&quot;button&quot; class=&quot;button button-primary do-api-refund&quot;&gt;&#039; . sprintf( esc_html__( &#039;Refund %1$s via %2$s&#039;, &#039;woocommerce&#039; ), wp_kses_post( $refund_amount ), esc_html( $gateway_name ) ) . &#039;&lt;/button&gt;&#039;;
+		}
+		?&gt;
+		&lt;?php /* translators: refund amount  */ ?&gt;
+		&lt;button type=&quot;button&quot; class=&quot;button button-primary do-manual-refund tips&quot; data-tip=&quot;&lt;?php esc_attr_e( &#039;You will need to manually issue a refund through your payment gateway after using this.&#039;, &#039;woocommerce&#039; ); ?&gt;&quot;&gt;&lt;?php printf( esc_html__( &#039;Refund %s manually&#039;, &#039;woocommerce&#039; ), wp_kses_post( $refund_amount ) ); ?&gt;&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;button cancel-action&quot;&gt;&lt;?php esc_html_e( &#039;Cancel&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+		&lt;input type=&quot;hidden&quot; id=&quot;refunded_amount&quot; name=&quot;refunded_amount&quot; value=&quot;&lt;?php echo esc_attr( $order-&gt;get_total_refunded() ); ?&gt;&quot; /&gt;
+		&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;?php endif; ?&gt;
+
+&lt;script type=&quot;text/template&quot; id=&quot;tmpl-wc-modal-add-products&quot;&gt;
+	&lt;div class=&quot;wc-backbone-modal&quot;&gt;
+		&lt;div class=&quot;wc-backbone-modal-content&quot;&gt;
+			&lt;section class=&quot;wc-backbone-modal-main&quot; role=&quot;main&quot;&gt;
+				&lt;header class=&quot;wc-backbone-modal-header&quot;&gt;
+					&lt;h1&gt;&lt;?php esc_html_e( &#039;Add products&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/h1&gt;
+					&lt;button class=&quot;modal-close modal-close-link dashicons dashicons-no-alt&quot;&gt;
+						&lt;span class=&quot;screen-reader-text&quot;&gt;Close modal panel&lt;/span&gt;
+					&lt;/button&gt;
+				&lt;/header&gt;
+				&lt;article&gt;
+					&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
+						&lt;table class=&quot;widefat&quot;&gt;
+							&lt;thead&gt;
+								&lt;tr&gt;
+									&lt;th&gt;&lt;?php esc_html_e( &#039;Product&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/th&gt;
+									&lt;th&gt;&lt;?php esc_html_e( &#039;Quantity&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/th&gt;
+								&lt;/tr&gt;
+							&lt;/thead&gt;
+							&lt;?php
+								$row = &#039;
+									&lt;td&gt;&lt;select class=&quot;wc-product-search&quot; name=&quot;item_id&quot; data-allow_clear=&quot;true&quot; data-display_stock=&quot;true&quot; data-exclude_type=&quot;variable&quot; data-placeholder=&quot;&#039; . esc_attr__( &#039;Search for a product&amp;hellip;&#039;, &#039;woocommerce&#039; ) . &#039;&quot;&gt;&lt;/select&gt;&lt;/td&gt;
+									&lt;td&gt;&lt;input type=&quot;number&quot; step=&quot;1&quot; min=&quot;0&quot; max=&quot;9999&quot; autocomplete=&quot;off&quot; name=&quot;item_qty&quot; placeholder=&quot;1&quot; size=&quot;4&quot; class=&quot;quantity&quot; /&gt;&lt;/td&gt;&#039;;
+							?&gt;
+							&lt;tbody data-row=&quot;&lt;?php echo esc_attr( $row ); ?&gt;&quot;&gt;
+								&lt;tr&gt;
+									&lt;?php echo $row; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?&gt;
+								&lt;/tr&gt;
+							&lt;/tbody&gt;
+						&lt;/table&gt;
+					&lt;/form&gt;
+				&lt;/article&gt;
+				&lt;footer&gt;
+					&lt;div class=&quot;inner&quot;&gt;
+						&lt;button id=&quot;btn-ok&quot; class=&quot;button button-primary button-large&quot;&gt;&lt;?php esc_html_e( &#039;Add&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+					&lt;/div&gt;
+				&lt;/footer&gt;
+			&lt;/section&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;wc-backbone-modal-backdrop modal-close&quot;&gt;&lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script type=&quot;text/template&quot; id=&quot;tmpl-wc-modal-add-tax&quot;&gt;
+	&lt;div class=&quot;wc-backbone-modal&quot;&gt;
+		&lt;div class=&quot;wc-backbone-modal-content&quot;&gt;
+			&lt;section class=&quot;wc-backbone-modal-main&quot; role=&quot;main&quot;&gt;
+				&lt;header class=&quot;wc-backbone-modal-header&quot;&gt;
+					&lt;h1&gt;&lt;?php esc_html_e( &#039;Add tax&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/h1&gt;
+					&lt;button class=&quot;modal-close modal-close-link dashicons dashicons-no-alt&quot;&gt;
+						&lt;span class=&quot;screen-reader-text&quot;&gt;Close modal panel&lt;/span&gt;
+					&lt;/button&gt;
+				&lt;/header&gt;
+				&lt;article&gt;
+					&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
+						&lt;table class=&quot;widefat&quot;&gt;
+							&lt;thead&gt;
+								&lt;tr&gt;
+									&lt;th&gt;&amp;nbsp;&lt;/th&gt;
+									&lt;th&gt;&lt;?php esc_html_e( &#039;Rate name&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/th&gt;
+									&lt;th&gt;&lt;?php esc_html_e( &#039;Tax class&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/th&gt;
+									&lt;th&gt;&lt;?php esc_html_e( &#039;Rate code&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/th&gt;
+									&lt;th&gt;&lt;?php esc_html_e( &#039;Rate %&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/th&gt;
+								&lt;/tr&gt;
+							&lt;/thead&gt;
+						&lt;?php
+						$rates = $wpdb-&gt;get_results( &quot;SELECT * FROM {$wpdb-&gt;prefix}woocommerce_tax_rates ORDER BY tax_rate_name LIMIT 100&quot; );
+						foreach ( $rates as $rate ) {
+							echo &#039;
+									&lt;tr&gt;
+										&lt;td&gt;&lt;input type=&quot;radio&quot; id=&quot;add_order_tax_&#039; . absint( $rate-&gt;tax_rate_id ) . &#039;&quot; name=&quot;add_order_tax&quot; value=&quot;&#039; . absint( $rate-&gt;tax_rate_id ) . &#039;&quot; /&gt;&lt;/td&gt;
+										&lt;td&gt;&lt;label for=&quot;add_order_tax_&#039; . absint( $rate-&gt;tax_rate_id ) . &#039;&quot;&gt;&#039; . esc_html( WC_Tax::get_rate_label( $rate ) ) . &#039;&lt;/label&gt;&lt;/td&gt;
+										&lt;td&gt;&#039; . ( isset( $classes_options[ $rate-&gt;tax_rate_class ] ) ? esc_html( $classes_options[ $rate-&gt;tax_rate_class ] ) : &#039;-&#039; ) . &#039;&lt;/td&gt;
+										&lt;td&gt;&#039; . esc_html( WC_Tax::get_rate_code( $rate ) ) . &#039;&lt;/td&gt;
+										&lt;td&gt;&#039; . esc_html( WC_Tax::get_rate_percent( $rate ) ) . &#039;&lt;/td&gt;
+									&lt;/tr&gt;
+								&#039;;
+						}
+						?&gt;
+						&lt;/table&gt;
+						&lt;?php if ( absint( $wpdb-&gt;get_var( &quot;SELECT COUNT(tax_rate_id) FROM {$wpdb-&gt;prefix}woocommerce_tax_rates;&quot; ) ) &gt; 100 ) : ?&gt;
+							&lt;p&gt;
+								&lt;label for=&quot;manual_tax_rate_id&quot;&gt;&lt;?php esc_html_e( &#039;Or, enter tax rate ID:&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/label&gt;&lt;br/&gt;
+								&lt;input type=&quot;number&quot; name=&quot;manual_tax_rate_id&quot; id=&quot;manual_tax_rate_id&quot; step=&quot;1&quot; placeholder=&quot;&lt;?php esc_attr_e( &#039;Optional&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; /&gt;
+							&lt;/p&gt;
+						&lt;?php endif; ?&gt;
+					&lt;/form&gt;
+				&lt;/article&gt;
+				&lt;footer&gt;
+					&lt;div class=&quot;inner&quot;&gt;
+						&lt;button id=&quot;btn-ok&quot; class=&quot;button button-primary button-large&quot;&gt;&lt;?php esc_html_e( &#039;Add&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/button&gt;
+					&lt;/div&gt;
+				&lt;/footer&gt;
+			&lt;/section&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;wc-backbone-modal-backdrop modal-close&quot;&gt;&lt;/div&gt;
+&lt;/script&gt;
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866946"></script>
+    <script src="../js/search.js?updated=1692866946"></script>
+</body>
+</html>

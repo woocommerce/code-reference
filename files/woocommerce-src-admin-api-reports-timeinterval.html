@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866951">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866951">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">TimeInterval.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Class for time interval and numeric range handling for reports.
+ */
+
+namespace Automattic\WooCommerce\Admin\API\Reports;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Date &amp; time interval and numeric range handling class for Reporting API.
+ */
+class TimeInterval {
+
+	/**
+	 * Format string for ISO DateTime formatter.
+	 *
+	 * @var string
+	 */
+	public static $iso_datetime_format = &#039;Y-m-d\TH:i:s&#039;;
+
+	/**
+	 * Format string for use in SQL queries.
+	 *
+	 * @var string
+	 */
+	public static $sql_datetime_format = &#039;Y-m-d H:i:s&#039;;
+
+	/**
+	 * Converts local datetime to GMT/UTC time.
+	 *
+	 * @param string $datetime_string String representation of local datetime.
+	 * @return DateTime
+	 */
+	public static function convert_local_datetime_to_gmt( $datetime_string ) {
+		$datetime = new \DateTime( $datetime_string, new \DateTimeZone( wc_timezone_string() ) );
+		$datetime-&gt;setTimezone( new \DateTimeZone( &#039;GMT&#039; ) );
+		return $datetime;
+	}
+
+	/**
+	 * Returns default &#039;before&#039; parameter for the reports.
+	 *
+	 * @return DateTime
+	 */
+	public static function default_before() {
+		$datetime = new \WC_DateTime();
+		// Set local timezone or offset.
+		if ( get_option( &#039;timezone_string&#039; ) ) {
+			$datetime-&gt;setTimezone( new \DateTimeZone( wc_timezone_string() ) );
+		} else {
+			$datetime-&gt;set_utc_offset( wc_timezone_offset() );
+		}
+		return $datetime;
+	}
+
+	/**
+	 * Returns default &#039;after&#039; parameter for the reports.
+	 *
+	 * @return DateTime
+	 */
+	public static function default_after() {
+		$now       = time();
+		$week_back = $now - WEEK_IN_SECONDS;
+
+		$datetime = new \WC_DateTime();
+		$datetime-&gt;setTimestamp( $week_back );
+		// Set local timezone or offset.
+		if ( get_option( &#039;timezone_string&#039; ) ) {
+			$datetime-&gt;setTimezone( new \DateTimeZone( wc_timezone_string() ) );
+		} else {
+			$datetime-&gt;set_utc_offset( wc_timezone_offset() );
+		}
+		return $datetime;
+	}
+
+	/**
+	 * Returns date format to be used as grouping clause in SQL.
+	 *
+	 * @param string $time_interval Time interval.
+	 * @param string $table_name Name of the db table relevant for the date constraint.
+	 * @param string $date_column_name Name of the date table column.
+	 * @return mixed
+	 */
+	public static function db_datetime_format( $time_interval, $table_name, $date_column_name = &#039;date_created&#039; ) {
+		$first_day_of_week = absint( get_option( &#039;start_of_week&#039; ) );
+
+		if ( 1 === $first_day_of_week ) {
+			// Week begins on Monday, ISO 8601.
+			$week_format = &quot;DATE_FORMAT({$table_name}.`{$date_column_name}`, &#039;%x-%v&#039;)&quot;;
+		} else {
+			// Week begins on day other than specified by ISO 8601, needs to be in sync with function simple_week_number.
+			$week_format = &quot;CONCAT(YEAR({$table_name}.`{$date_column_name}`), &#039;-&#039;, LPAD( FLOOR( ( DAYOFYEAR({$table_name}.`{$date_column_name}`) + ( ( DATE_FORMAT(MAKEDATE(YEAR({$table_name}.`{$date_column_name}`),1), &#039;%w&#039;) - $first_day_of_week + 7 ) % 7 ) - 1 ) / 7  ) + 1 , 2, &#039;0&#039;))&quot;;
+
+		}
+
+		// Whenever this is changed, double check method time_interval_id to make sure they are in sync.
+		$mysql_date_format_mapping = array(
+			&#039;hour&#039;    =&gt; &quot;DATE_FORMAT({$table_name}.`{$date_column_name}`, &#039;%Y-%m-%d %H&#039;)&quot;,
+			&#039;day&#039;     =&gt; &quot;DATE_FORMAT({$table_name}.`{$date_column_name}`, &#039;%Y-%m-%d&#039;)&quot;,
+			&#039;week&#039;    =&gt; $week_format,
+			&#039;month&#039;   =&gt; &quot;DATE_FORMAT({$table_name}.`{$date_column_name}`, &#039;%Y-%m&#039;)&quot;,
+			&#039;quarter&#039; =&gt; &quot;CONCAT(YEAR({$table_name}.`{$date_column_name}`), &#039;-&#039;, QUARTER({$table_name}.`{$date_column_name}`))&quot;,
+			&#039;year&#039;    =&gt; &quot;YEAR({$table_name}.`{$date_column_name}`)&quot;,
+
+		);
+
+		return $mysql_date_format_mapping[ $time_interval ];
+	}
+
+	/**
+	 * Returns quarter for the DateTime.
+	 *
+	 * @param DateTime $datetime Local date &amp; time.
+	 * @return int|null
+	 */
+	public static function quarter( $datetime ) {
+		switch ( (int) $datetime-&gt;format( &#039;m&#039; ) ) {
+			case 1:
+			case 2:
+			case 3:
+				return 1;
+			case 4:
+			case 5:
+			case 6:
+				return 2;
+			case 7:
+			case 8:
+			case 9:
+				return 3;
+			case 10:
+			case 11:
+			case 12:
+				return 4;
+
+		}
+		return null;
+	}
+
+	/**
+	 * Returns simple week number for the DateTime, for week starting on $first_day_of_week.
+	 *
+	 * The first week of the year is considered to be the week containing January 1.
+	 * The second week starts on the next $first_day_of_week.
+	 *
+	 * @param DateTime $datetime          Local date for which the week number is to be calculated.
+	 * @param int      $first_day_of_week 0 for Sunday to 6 for Saturday.
+	 * @return int
+	 */
+	public static function simple_week_number( $datetime, $first_day_of_week ) {
+		$beg_of_year_day          = new \DateTime( &quot;{$datetime-&gt;format(&#039;Y&#039;)}-01-01&quot; );
+		$adj_day_beg_of_year      = ( (int) $beg_of_year_day-&gt;format( &#039;w&#039; ) - $first_day_of_week + 7 ) % 7;
+		$days_since_start_of_year = (int) $datetime-&gt;format( &#039;z&#039; ) + 1;
+
+		return (int) floor( ( ( $days_since_start_of_year + $adj_day_beg_of_year - 1 ) / 7 ) ) + 1;
+	}
+
+	/**
+	 * Returns ISO 8601 week number for the DateTime, if week starts on Monday,
+	 * otherwise returns simple week number.
+	 *
+	 * @see TimeInterval::simple_week_number()
+	 *
+	 * @param DateTime $datetime          Local date for which the week number is to be calculated.
+	 * @param int      $first_day_of_week 0 for Sunday to 6 for Saturday.
+	 * @return int
+	 */
+	public static function week_number( $datetime, $first_day_of_week ) {
+		if ( 1 === $first_day_of_week ) {
+			$week_number = (int) $datetime-&gt;format( &#039;W&#039; );
+		} else {
+			$week_number = self::simple_week_number( $datetime, $first_day_of_week );
+		}
+		return $week_number;
+	}
+
+	/**
+	 * Returns time interval id for the DateTime.
+	 *
+	 * @param string   $time_interval Time interval type (week, day, etc).
+	 * @param DateTime $datetime      Date &amp; time.
+	 * @return string
+	 */
+	public static function time_interval_id( $time_interval, $datetime ) {
+		// Whenever this is changed, double check method db_datetime_format to make sure they are in sync.
+		$php_time_format_for = array(
+			&#039;hour&#039;    =&gt; &#039;Y-m-d H&#039;,
+			&#039;day&#039;     =&gt; &#039;Y-m-d&#039;,
+			&#039;week&#039;    =&gt; &#039;o-W&#039;,
+			&#039;month&#039;   =&gt; &#039;Y-m&#039;,
+			&#039;quarter&#039; =&gt; &#039;Y-&#039; . self::quarter( $datetime ),
+			&#039;year&#039;    =&gt; &#039;Y&#039;,
+		);
+
+		// If the week does not begin on Monday.
+		$first_day_of_week = absint( get_option( &#039;start_of_week&#039; ) );
+
+		if ( &#039;week&#039; === $time_interval &amp;&amp; 1 !== $first_day_of_week ) {
+			$week_no = self::simple_week_number( $datetime, $first_day_of_week );
+			$week_no = str_pad( $week_no, 2, &#039;0&#039;, STR_PAD_LEFT );
+			$year_no = $datetime-&gt;format( &#039;Y&#039; );
+			return &quot;$year_no-$week_no&quot;;
+		}
+
+		return $datetime-&gt;format( $php_time_format_for[ $time_interval ] );
+	}
+
+	/**
+	 * Calculates number of time intervals between two dates, closed interval on both sides.
+	 *
+	 * @param DateTime $start_datetime Start date &amp; time.
+	 * @param DateTime $end_datetime End date &amp; time.
+	 * @param string   $interval Time interval increment, e.g. hour, day, week.
+	 *
+	 * @return int
+	 */
+	public static function intervals_between( $start_datetime, $end_datetime, $interval ) {
+		switch ( $interval ) {
+			case &#039;hour&#039;:
+				$end_timestamp   = (int) $end_datetime-&gt;format( &#039;U&#039; );
+				$start_timestamp = (int) $start_datetime-&gt;format( &#039;U&#039; );
+				$addendum        = 0;
+				// modulo HOUR_IN_SECONDS would normally work, but there are non-full hour timezones, e.g. Nepal.
+				$start_min_sec = (int) $start_datetime-&gt;format( &#039;i&#039; ) * MINUTE_IN_SECONDS + (int) $start_datetime-&gt;format( &#039;s&#039; );
+				$end_min_sec   = (int) $end_datetime-&gt;format( &#039;i&#039; ) * MINUTE_IN_SECONDS + (int) $end_datetime-&gt;format( &#039;s&#039; );
+				if ( $end_min_sec &lt; $start_min_sec ) {
+					$addendum = 1;
+				}
+				$diff_timestamp = $end_timestamp - $start_timestamp;
+
+				return (int) floor( ( (int) $diff_timestamp ) / HOUR_IN_SECONDS ) + 1 + $addendum;
+			case &#039;day&#039;:
+				$days               = $start_datetime-&gt;diff( $end_datetime )-&gt;format( &#039;%r%a&#039; );
+				$end_hour_min_sec   = (int) $end_datetime-&gt;format( &#039;H&#039; ) * HOUR_IN_SECONDS + (int) $end_datetime-&gt;format( &#039;i&#039; ) * MINUTE_IN_SECONDS + (int) $end_datetime-&gt;format( &#039;s&#039; );
+				$start_hour_min_sec = (int) $start_datetime-&gt;format( &#039;H&#039; ) * HOUR_IN_SECONDS + (int) $start_datetime-&gt;format( &#039;i&#039; ) * MINUTE_IN_SECONDS + (int) $start_datetime-&gt;format( &#039;s&#039; );
+				if ( $end_hour_min_sec &lt; $start_hour_min_sec ) {
+					$days++;
+				}
+
+				return $days + 1;
+			case &#039;week&#039;:
+				// @todo Optimize? approximately day count / 7, but year end is tricky, a week can have fewer days.
+				$week_count = 0;
+				do {
+					$start_datetime = self::next_week_start( $start_datetime );
+					$week_count++;
+				} while ( $start_datetime &lt;= $end_datetime );
+				return $week_count;
+			case &#039;month&#039;:
+				// Year diff in months: (end_year - start_year - 1) * 12.
+				$year_diff_in_months = ( (int) $end_datetime-&gt;format( &#039;Y&#039; ) - (int) $start_datetime-&gt;format( &#039;Y&#039; ) - 1 ) * 12;
+				// All the months in end_date year plus months from X to 12 in the start_date year.
+				$month_diff = (int) $end_datetime-&gt;format( &#039;n&#039; ) + ( 12 - (int) $start_datetime-&gt;format( &#039;n&#039; ) );
+				// Add months for number of years between end_date and start_date.
+				$month_diff += $year_diff_in_months + 1;
+				return $month_diff;
+			case &#039;quarter&#039;:
+				// Year diff in quarters: (end_year - start_year - 1) * 4.
+				$year_diff_in_quarters = ( (int) $end_datetime-&gt;format( &#039;Y&#039; ) - (int) $start_datetime-&gt;format( &#039;Y&#039; ) - 1 ) * 4;
+				// All the quarters in end_date year plus quarters from X to 4 in the start_date year.
+				$quarter_diff = self::quarter( $end_datetime ) + ( 4 - self::quarter( $start_datetime ) );
+				// Add quarters for number of years between end_date and start_date.
+				$quarter_diff += $year_diff_in_quarters + 1;
+				return $quarter_diff;
+			case &#039;year&#039;:
+				$year_diff = (int) $end_datetime-&gt;format( &#039;Y&#039; ) - (int) $start_datetime-&gt;format( &#039;Y&#039; );
+				return $year_diff + 1;
+		}
+		return 0;
+	}
+
+	/**
+	 * Returns a new DateTime object representing the next hour start/previous hour end if reversed.
+	 *
+	 * @param DateTime $datetime Date and time.
+	 * @param bool     $reversed Going backwards in time instead of forward.
+	 * @return DateTime
+	 */
+	public static function next_hour_start( $datetime, $reversed = false ) {
+		$hour_increment         = $reversed ? 0 : 1;
+		$timestamp              = (int) $datetime-&gt;format( &#039;U&#039; );
+		$seconds_into_hour      = (int) $datetime-&gt;format( &#039;i&#039; ) * MINUTE_IN_SECONDS + (int) $datetime-&gt;format( &#039;s&#039; );
+		$hours_offset_timestamp = $timestamp + ( $hour_increment * HOUR_IN_SECONDS - $seconds_into_hour );
+
+		if ( $reversed ) {
+			$hours_offset_timestamp --;
+		}
+
+		$hours_offset_time = new \DateTime();
+		$hours_offset_time-&gt;setTimestamp( $hours_offset_timestamp );
+		$hours_offset_time-&gt;setTimezone( new \DateTimeZone( wc_timezone_string() ) );
+		return $hours_offset_time;
+	}
+
+	/**
+	 * Returns a new DateTime object representing the next day start, or previous day end if reversed.
+	 *
+	 * @param DateTime $datetime Date and time.
+	 * @param bool     $reversed Going backwards in time instead of forward.
+	 * @return DateTime
+	 */
+	public static function next_day_start( $datetime, $reversed = false ) {
+		$oneday       = new \DateInterval( &#039;P1D&#039; );
+		$new_datetime = clone $datetime;
+
+		if ( $reversed ) {
+			$new_datetime-&gt;sub( $oneday );
+			$new_datetime-&gt;setTime( 23, 59, 59 );
+		} else {
+			$new_datetime-&gt;add( $oneday );
+			$new_datetime-&gt;setTime( 0, 0, 0 );
+		}
+
+		return $new_datetime;
+	}
+
+	/**
+	 * Returns DateTime object representing the next week start, or previous week end if reversed.
+	 *
+	 * The next week start is the first day of the next week at 00:00:00.
+	 * The previous week end is the last day of the previous week at 23:59:59.
+	 * The start day is determined by the &quot;start_of_week&quot; wp_option.
+	 *
+	 * @param DateTime $datetime Date and time.
+	 * @param bool     $reversed Going backwards in time instead of forward.
+	 * @return DateTime
+	 */
+	public static function next_week_start( $datetime, $reversed = false ) {
+		$seven_days = new \DateInterval( &#039;P7D&#039; );
+		// Default timezone set in wp-settings.php.
+		$default_timezone = date_default_timezone_get();
+		// Timezone that the WP site uses in Settings &gt; General.
+		$original_timezone = $datetime-&gt;getTimezone();
+		// @codingStandardsIgnoreStart
+		date_default_timezone_set( &#039;UTC&#039; );
+		$start_end_timestamp  = get_weekstartend( $datetime-&gt;format( &#039;Y-m-d&#039; ) );
+		date_default_timezone_set( $default_timezone );
+		// @codingStandardsIgnoreEnd
+		if ( $reversed ) {
+			$result = \DateTime::createFromFormat( &#039;U&#039;, $start_end_timestamp[&#039;end&#039;] )-&gt;sub( $seven_days );
+		} else {
+			$result = \DateTime::createFromFormat( &#039;U&#039;, $start_end_timestamp[&#039;start&#039;] )-&gt;add( $seven_days );
+		}
+		return \DateTime::createFromFormat( &#039;Y-m-d H:i:s&#039;, $result-&gt;format( &#039;Y-m-d H:i:s&#039; ), $original_timezone );
+	}
+
+
+	/**
+	 * Returns a new DateTime object representing the next month start, or previous month end if reversed.
+	 *
+	 * @param DateTime $datetime Date and time.
+	 * @param bool     $reversed Going backwards in time instead of forward.
+	 * @return DateTime
+	 */
+	public static function next_month_start( $datetime, $reversed = false ) {
+		$month_increment = 1;
+		$year            = $datetime-&gt;format( &#039;Y&#039; );
+		$month           = (int) $datetime-&gt;format( &#039;m&#039; );
+
+		if ( $reversed ) {
+			$beg_of_month_datetime       = new \DateTime( &quot;$year-$month-01 00:00:00&quot;, new \DateTimeZone( wc_timezone_string() ) );
+			$timestamp                   = (int) $beg_of_month_datetime-&gt;format( &#039;U&#039; );
+			$end_of_prev_month_timestamp = $timestamp - 1;
+			$datetime-&gt;setTimestamp( $end_of_prev_month_timestamp );
+		} else {
+			$month += $month_increment;
+			if ( $month &gt; 12 ) {
+				$month = 1;
+				$year ++;
+			}
+			$day      = &#039;01&#039;;
+			$datetime = new \DateTime( &quot;$year-$month-$day 00:00:00&quot;, new \DateTimeZone( wc_timezone_string() ) );
+		}
+
+		return $datetime;
+	}
+
+	/**
+	 * Returns a new DateTime object representing the next quarter start, or previous quarter end if reversed.
+	 *
+	 * @param DateTime $datetime Date and time.
+	 * @param bool     $reversed Going backwards in time instead of forward.
+	 * @return DateTime
+	 */
+	public static function next_quarter_start( $datetime, $reversed = false ) {
+		$year  = $datetime-&gt;format( &#039;Y&#039; );
+		$month = (int) $datetime-&gt;format( &#039;n&#039; );
+
+		switch ( $month ) {
+			case 1:
+			case 2:
+			case 3:
+				if ( $reversed ) {
+					$month = 1;
+				} else {
+					$month = 4;
+				}
+				break;
+			case 4:
+			case 5:
+			case 6:
+				if ( $reversed ) {
+					$month = 4;
+				} else {
+					$month = 7;
+				}
+				break;
+			case 7:
+			case 8:
+			case 9:
+				if ( $reversed ) {
+					$month = 7;
+				} else {
+					$month = 10;
+				}
+				break;
+			case 10:
+			case 11:
+			case 12:
+				if ( $reversed ) {
+					$month = 10;
+				} else {
+					$month = 1;
+					$year ++;
+				}
+				break;
+		}
+		$datetime = new \DateTime( &quot;$year-$month-01 00:00:00&quot;, new \DateTimeZone( wc_timezone_string() ) );
+		if ( $reversed ) {
+			$timestamp                   = (int) $datetime-&gt;format( &#039;U&#039; );
+			$end_of_prev_month_timestamp = $timestamp - 1;
+			$datetime-&gt;setTimestamp( $end_of_prev_month_timestamp );
+		}
+
+		return $datetime;
+	}
+
+	/**
+	 * Return a new DateTime object representing the next year start, or previous year end if reversed.
+	 *
+	 * @param DateTime $datetime Date and time.
+	 * @param bool     $reversed Going backwards in time instead of forward.
+	 * @return DateTime
+	 */
+	public static function next_year_start( $datetime, $reversed = false ) {
+		$year_increment = 1;
+		$year           = (int) $datetime-&gt;format( &#039;Y&#039; );
+		$month          = &#039;01&#039;;
+		$day            = &#039;01&#039;;
+
+		if ( $reversed ) {
+			$datetime                   = new \DateTime( &quot;$year-$month-$day 00:00:00&quot;, new \DateTimeZone( wc_timezone_string() ) );
+			$timestamp                  = (int) $datetime-&gt;format( &#039;U&#039; );
+			$end_of_prev_year_timestamp = $timestamp - 1;
+			$datetime-&gt;setTimestamp( $end_of_prev_year_timestamp );
+		} else {
+			$year    += $year_increment;
+			$datetime = new \DateTime( &quot;$year-$month-$day 00:00:00&quot;, new \DateTimeZone( wc_timezone_string() ) );
+		}
+
+		return $datetime;
+	}
+
+	/**
+	 * Returns beginning of next time interval for provided DateTime.
+	 *
+	 * E.g. for current DateTime, beginning of next day, week, quarter, etc.
+	 *
+	 * @param DateTime $datetime      Date and time.
+	 * @param string   $time_interval Time interval, e.g. week, day, hour.
+	 * @param bool     $reversed Going backwards in time instead of forward.
+	 * @return DateTime
+	 */
+	public static function iterate( $datetime, $time_interval, $reversed = false ) {
+		return call_user_func( array( __CLASS__, &quot;next_{$time_interval}_start&quot; ), $datetime, $reversed );
+	}
+
+	/**
+	 * Returns expected number of items on the page in case of date ordering.
+	 *
+	 * @param int $expected_interval_count Expected number of intervals in total.
+	 * @param int $items_per_page          Number of items per page.
+	 * @param int $page_no                 Page number.
+	 *
+	 * @return float|int
+	 */
+	public static function expected_intervals_on_page( $expected_interval_count, $items_per_page, $page_no ) {
+		$total_pages = (int) ceil( $expected_interval_count / $items_per_page );
+		if ( $page_no &lt; $total_pages ) {
+			return $items_per_page;
+		} elseif ( $page_no === $total_pages ) {
+			return $expected_interval_count - ( $page_no - 1 ) * $items_per_page;
+		} else {
+			return 0;
+		}
+	}
+
+	/**
+	 * Returns true if there are any intervals that need to be filled in the response.
+	 *
+	 * @param int    $expected_interval_count Expected number of intervals in total.
+	 * @param int    $db_records              Total number of records for given period in the database.
+	 * @param int    $items_per_page          Number of items per page.
+	 * @param int    $page_no                 Page number.
+	 * @param string $order                   asc or desc.
+	 * @param string $order_by                Column by which the result will be sorted.
+	 * @param int    $intervals_count         Number of records for given (possibly shortened) time interval.
+	 *
+	 * @return bool
+	 */
+	public static function intervals_missing( $expected_interval_count, $db_records, $items_per_page, $page_no, $order, $order_by, $intervals_count ) {
+		if ( $expected_interval_count &lt;= $db_records ) {
+			return false;
+		}
+		if ( &#039;date&#039; === $order_by ) {
+			$expected_intervals_on_page = self::expected_intervals_on_page( $expected_interval_count, $items_per_page, $page_no );
+			return $intervals_count &lt; $expected_intervals_on_page;
+		}
+		if ( &#039;desc&#039; === $order ) {
+			return $page_no &gt; floor( $db_records / $items_per_page );
+		}
+		if ( &#039;asc&#039; === $order ) {
+			return $page_no &lt;= ceil( ( $expected_interval_count - $db_records ) / $items_per_page );
+		}
+		// Invalid ordering.
+		return false;
+	}
+
+	/**
+	 * Normalize &quot;*_between&quot; parameters to &quot;*_min&quot; and &quot;*_max&quot; for numeric values
+	 * and &quot;*_after&quot; and &quot;*_before&quot; for date values.
+	 *
+	 * @param array        $request Query params from REST API request.
+	 * @param string|array $param_names One or more param names to handle. Should not include &quot;_between&quot; suffix.
+	 * @param bool         $is_date Boolean if the param is date is related.
+	 * @return array Normalized query values.
+	 */
+	public static function normalize_between_params( $request, $param_names, $is_date ) {
+		if ( ! is_array( $param_names ) ) {
+			$param_names = array( $param_names );
+		}
+
+		$normalized = array();
+
+		foreach ( $param_names as $param_name ) {
+			if ( ! is_array( $request[ $param_name . &#039;_between&#039; ] ) ) {
+				continue;
+			}
+
+			$range = $request[ $param_name . &#039;_between&#039; ];
+
+			if ( 2 !== count( $range ) ) {
+				continue;
+			}
+
+			$min = $is_date ? &#039;_after&#039; : &#039;_min&#039;;
+			$max = $is_date ? &#039;_before&#039; : &#039;_max&#039;;
+
+			if ( $range[0] &lt; $range[1] ) {
+				$normalized[ $param_name . $min ] = $range[0];
+				$normalized[ $param_name . $max ] = $range[1];
+			} else {
+				$normalized[ $param_name . $min ] = $range[1];
+				$normalized[ $param_name . $max ] = $range[0];
+			}
+		}
+
+		return $normalized;
+	}
+
+	/**
+	 * Validate a &quot;*_between&quot; range argument (an array with 2 numeric items).
+	 *
+	 * @param  mixed           $value Parameter value.
+	 * @param  WP_REST_Request $request REST Request.
+	 * @param  string          $param Parameter name.
+	 * @return WP_Error|boolean
+	 */
+	public static function rest_validate_between_numeric_arg( $value, $request, $param ) {
+		if ( ! wp_is_numeric_array( $value ) ) {
+			return new \WP_Error(
+				&#039;rest_invalid_param&#039;,
+				/* translators: 1: parameter name */
+				sprintf( __( &#039;%1$s is not a numerically indexed array.&#039;, &#039;woocommerce&#039; ), $param )
+			);
+		}
+
+		if (
+			2 !== count( $value ) ||
+			! is_numeric( $value[0] ) ||
+			! is_numeric( $value[1] )
+		) {
+			return new \WP_Error(
+				&#039;rest_invalid_param&#039;,
+				/* translators: %s: parameter name */
+				sprintf( __( &#039;%s must contain 2 numbers.&#039;, &#039;woocommerce&#039; ), $param )
+			);
+		}
+
+		return true;
+	}
+
+	/**
+	 * Validate a &quot;*_between&quot; range argument (an array with 2 date items).
+	 *
+	 * @param  mixed           $value Parameter value.
+	 * @param  WP_REST_Request $request REST Request.
+	 * @param  string          $param Parameter name.
+	 * @return WP_Error|boolean
+	 */
+	public static function rest_validate_between_date_arg( $value, $request, $param ) {
+		if ( ! wp_is_numeric_array( $value ) ) {
+			return new \WP_Error(
+				&#039;rest_invalid_param&#039;,
+				/* translators: 1: parameter name */
+				sprintf( __( &#039;%1$s is not a numerically indexed array.&#039;, &#039;woocommerce&#039; ), $param )
+			);
+		}
+
+		if (
+			2 !== count( $value ) ||
+			! rest_parse_date( $value[0] ) ||
+			! rest_parse_date( $value[1] )
+		) {
+			return new \WP_Error(
+				&#039;rest_invalid_param&#039;,
+				/* translators: %s: parameter name */
+				sprintf( __( &#039;%s must contain 2 valid dates.&#039;, &#039;woocommerce&#039; ), $param )
+			);
+		}
+
+		return true;
+	}
+
+	/**
+	 * Get dates from a timeframe string.
+	 *
+	 * @param int           $timeframe Timeframe to use.  One of: last_week|last_month|last_quarter|last_6_months|last_year.
+	 * @param DateTime|null $current_date DateTime of current date to compare.
+	 * @return array
+	 */
+	public static function get_timeframe_dates( $timeframe, $current_date = null ) {
+		if ( ! $current_date ) {
+			$current_date = new \DateTime();
+		}
+		$current_year  = $current_date-&gt;format( &#039;Y&#039; );
+		$current_month = $current_date-&gt;format( &#039;m&#039; );
+
+		if ( &#039;last_week&#039; === $timeframe ) {
+			return array(
+				&#039;start&#039; =&gt; $current_date-&gt;modify( &#039;last week monday&#039; )-&gt;format( &#039;Y-m-d 00:00:00&#039; ),
+				&#039;end&#039;   =&gt; $current_date-&gt;modify( &#039;this sunday&#039; )-&gt;format( &#039;Y-m-d 23:59:59&#039; ),
+			);
+		}
+
+		if ( &#039;last_month&#039; === $timeframe ) {
+			return array(
+				&#039;start&#039; =&gt; $current_date-&gt;modify( &#039;first day of previous month&#039; )-&gt;format( &#039;Y-m-d 00:00:00&#039; ),
+				&#039;end&#039;   =&gt; $current_date-&gt;modify( &#039;last day of this month&#039; )-&gt;format( &#039;Y-m-d 23:59:59&#039; ),
+			);
+		}
+
+		if ( &#039;last_quarter&#039; === $timeframe ) {
+			switch ( $current_month ) {
+				case $current_month &gt;= 1 &amp;&amp; $current_month &lt;= 3:
+					return array(
+						&#039;start&#039; =&gt; ( $current_year - 1 ) . &#039;-10-01 00:00:00&#039;,
+						&#039;end&#039;   =&gt; ( $current_year - 1 ) . &#039;-12-31 23:59:59&#039;,
+					);
+				case $current_month &gt;= 4 &amp;&amp; $current_month &lt;= 6:
+					return array(
+						&#039;start&#039; =&gt; $current_year . &#039;-01-01 00:00:00&#039;,
+						&#039;end&#039;   =&gt; $current_year . &#039;-03-31 23:59:59&#039;,
+					);
+				case $current_month &gt;= 7 &amp;&amp; $current_month &lt;= 9:
+					return array(
+						&#039;start&#039; =&gt; $current_year . &#039;-04-01 00:00:00&#039;,
+						&#039;end&#039;   =&gt; $current_year . &#039;-06-30 23:59:59&#039;,
+					);
+				case $current_month &gt;= 10 &amp;&amp; $current_month &lt;= 12:
+					return array(
+						&#039;start&#039; =&gt; $current_year . &#039;-07-01 00:00:00&#039;,
+						&#039;end&#039;   =&gt; $current_year . &#039;-09-31 23:59:59&#039;,
+					);
+			}
+		}
+
+		if ( &#039;last_6_months&#039; === $timeframe ) {
+			if ( $current_month &gt;= 1 &amp;&amp; $current_month &lt;= 6 ) {
+				return array(
+					&#039;start&#039; =&gt; ( $current_year - 1 ) . &#039;-07-01 00:00:00&#039;,
+					&#039;end&#039;   =&gt; ( $current_year - 1 ) . &#039;-12-31 23:59:59&#039;,
+				);
+			}
+			return array(
+				&#039;start&#039; =&gt; $current_year . &#039;-01-01 00:00:00&#039;,
+				&#039;end&#039;   =&gt; $current_year . &#039;-06-30 23:59:59&#039;,
+			);
+		}
+
+		if ( &#039;last_year&#039; === $timeframe ) {
+			return array(
+				&#039;start&#039; =&gt; ( $current_year - 1 ) . &#039;-01-01 00:00:00&#039;,
+				&#039;end&#039;   =&gt; ( $current_year - 1 ) . &#039;-12-31 23:59:59&#039;,
+			);
+		}
+
+		return false;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

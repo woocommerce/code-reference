@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866951">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866951">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">DeprecatedNotes.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Define deprecated classes to support changing the naming convention of
+ * admin notes.
+ */
+
+namespace Automattic\WooCommerce\Admin\Notes;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+use Automattic\WooCommerce\Admin\DeprecatedClassFacade;
+
+// phpcs:disable Generic.Files.OneObjectStructurePerFile.MultipleFound
+
+/**
+ * WC_Admin_Note.
+ *
+ * @deprecated since 4.8.0, use Note
+ */
+class WC_Admin_Note extends DeprecatedClassFacade {
+	// These constants must be redeclared as to not break plugins that use them.
+	const E_WC_ADMIN_NOTE_ERROR         = Note::E_WC_ADMIN_NOTE_ERROR;
+	const E_WC_ADMIN_NOTE_WARNING       = Note::E_WC_ADMIN_NOTE_WARNING;
+	const E_WC_ADMIN_NOTE_UPDATE        = Note::E_WC_ADMIN_NOTE_UPDATE;
+	const E_WC_ADMIN_NOTE_INFORMATIONAL = Note::E_WC_ADMIN_NOTE_INFORMATIONAL;
+	const E_WC_ADMIN_NOTE_MARKETING     = Note::E_WC_ADMIN_NOTE_MARKETING;
+	const E_WC_ADMIN_NOTE_SURVEY        = Note::E_WC_ADMIN_NOTE_SURVEY;
+	const E_WC_ADMIN_NOTE_PENDING       = Note::E_WC_ADMIN_NOTE_PENDING;
+	const E_WC_ADMIN_NOTE_UNACTIONED    = Note::E_WC_ADMIN_NOTE_UNACTIONED;
+	const E_WC_ADMIN_NOTE_ACTIONED      = Note::E_WC_ADMIN_NOTE_ACTIONED;
+	const E_WC_ADMIN_NOTE_SNOOZED       = Note::E_WC_ADMIN_NOTE_SNOOZED;
+	const E_WC_ADMIN_NOTE_EMAIL         = Note::E_WC_ADMIN_NOTE_EMAIL;
+
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Admin\Notes\Note&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+
+	/**
+	 * Note constructor. Loads note data.
+	 *
+	 * @param mixed $data Note data, object, or ID.
+	 */
+	public function __construct( $data = &#039;&#039; ) {
+		$this-&gt;instance = new static::$facade_over_classname( $data );
+	}
+}
+
+/**
+ * WC_Admin_Notes.
+ *
+ * @deprecated since 4.8.0, use Notes
+ */
+class WC_Admin_Notes extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Admin\Notes\Notes&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Coupon_Page_Moved.
+ *
+ * @deprecated since 4.8.0, use CouponPageMoved
+ */
+class WC_Admin_Notes_Coupon_Page_Moved extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\CouponPageMoved&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Customize_Store_With_Blocks.
+ *
+ * @deprecated since 4.8.0, use CustomizeStoreWithBlocks
+ */
+class WC_Admin_Notes_Customize_Store_With_Blocks extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\CustomizeStoreWithBlocks&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Edit_Products_On_The_Move.
+ *
+ * @deprecated since 4.8.0, use EditProductsOnTheMove
+ */
+class WC_Admin_Notes_Edit_Products_On_The_Move extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\EditProductsOnTheMove&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_EU_VAT_Number.
+ *
+ * @deprecated since 4.8.0, use EUVATNumber
+ */
+class WC_Admin_Notes_EU_VAT_Number extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\EUVATNumber&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Facebook_Marketing_Expert.
+ *
+ * @deprecated since 4.8.0, use FacebookMarketingExpert
+ */
+class WC_Admin_Notes_Facebook_Marketing_Expert extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Admin\Notes\FacebookMarketingExpert&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_First_Product.
+ *
+ * @deprecated since 4.8.0, use FirstProduct
+ */
+class WC_Admin_Notes_First_Product extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\FirstProduct&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Giving_Feedback_Notes.
+ *
+ * @deprecated since 4.8.0, use GivingFeedbackNotes
+ */
+class WC_Admin_Notes_Giving_Feedback_Notes extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\GivingFeedbackNotes&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Install_JP_And_WCS_Plugins.
+ *
+ * @deprecated since 4.8.0, use InstallJPAndWCSPlugins
+ */
+class WC_Admin_Notes_Install_JP_And_WCS_Plugins extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\InstallJPAndWCSPlugins&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Launch_Checklist.
+ *
+ * @deprecated since 4.8.0, use LaunchChecklist
+ */
+class WC_Admin_Notes_Launch_Checklist extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\LaunchChecklist&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Migrate_From_Shopify.
+ *
+ * @deprecated since 4.8.0, use MigrateFromShopify
+ */
+class WC_Admin_Notes_Migrate_From_Shopify extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\MigrateFromShopify&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Mobile_App.
+ *
+ * @deprecated since 4.8.0, use MobileApp
+ */
+class WC_Admin_Notes_Mobile_App extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\MobileApp&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_New_Sales_Record.
+ *
+ * @deprecated since 4.8.0, use NewSalesRecord
+ */
+class WC_Admin_Notes_New_Sales_Record extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\NewSalesRecord&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Onboarding_Email_Marketing.
+ *
+ * @deprecated since 4.8.0, use OnboardingEmailMarketing
+ */
+class WC_Admin_Notes_Onboarding_Email_Marketing extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Admin\Notes\OnboardingEmailMarketing&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Onboarding_Payments.
+ *
+ * @deprecated since 4.8.0, use OnboardingPayments
+ */
+class WC_Admin_Notes_Onboarding_Payments extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\OnboardingPayments&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Online_Clothing_Store.
+ *
+ * @deprecated since 4.8.0, use OnlineClothingStore
+ */
+class WC_Admin_Notes_Online_Clothing_Store extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\OnlineClothingStore&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Order_Milestones.
+ *
+ * @deprecated since 4.8.0, use OrderMilestones
+ */
+class WC_Admin_Notes_Order_Milestones extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\OrderMilestones&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Performance_On_Mobile.
+ *
+ * @deprecated since 4.8.0, use PerformanceOnMobile
+ */
+class WC_Admin_Notes_Performance_On_Mobile extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\PerformanceOnMobile&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Personalize_Store.
+ *
+ * @deprecated since 4.8.0, use PersonalizeStore
+ */
+class WC_Admin_Notes_Personalize_Store extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\PersonalizeStore&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Real_Time_Order_Alerts.
+ *
+ * @deprecated since 4.8.0, use RealTimeOrderAlerts
+ */
+class WC_Admin_Notes_Real_Time_Order_Alerts extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\RealTimeOrderAlerts&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Selling_Online_Courses.
+ *
+ * @deprecated since 4.8.0, use SellingOnlineCourses
+ */
+class WC_Admin_Notes_Selling_Online_Courses extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\SellingOnlineCourses&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Test_Checkout.
+ *
+ * @deprecated since 4.8.0, use TestCheckout
+ */
+class WC_Admin_Notes_Test_Checkout extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\TestCheckout&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Tracking_Opt_In.
+ *
+ * @deprecated since 4.8.0, use TrackingOptIn
+ */
+class WC_Admin_Notes_Tracking_Opt_In extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\TrackingOptIn&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_Woo_Subscriptions_Notes.
+ *
+ * @deprecated since 4.8.0, use WooSubscriptionsNotes
+ */
+class WC_Admin_Notes_Woo_Subscriptions_Notes extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\WooSubscriptionsNotes&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_WooCommerce_Payments.
+ *
+ * @deprecated since 4.8.0, use WooCommercePayments
+ */
+class WC_Admin_Notes_WooCommerce_Payments extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\WooCommercePayments&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+
+/**
+ * WC_Admin_Notes_WooCommerce_Subscriptions.
+ *
+ * @deprecated since 4.8.0, use WooCommerceSubscriptions
+ */
+class WC_Admin_Notes_WooCommerce_Subscriptions extends DeprecatedClassFacade {
+	/**
+	 * The name of the non-deprecated class that this facade covers.
+	 *
+	 * @var string
+	 */
+	protected static $facade_over_classname = &#039;Automattic\WooCommerce\Internal\Admin\Notes\WooCommerceSubscriptions&#039;;
+
+	/**
+	 * The version that this class was deprecated in.
+	 *
+	 * @var string
+	 */
+	protected static $deprecated_in_version = &#039;4.8.0&#039;;
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

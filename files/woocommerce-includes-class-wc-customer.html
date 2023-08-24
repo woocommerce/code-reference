@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-customer.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * The WooCommerce customer class handles storage of the current customer&#039;s data, such as location.
+ *
+ * @package WooCommerce\Classes
+ * @version 3.0.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+require_once dirname( __FILE__ ) . &#039;/legacy/class-wc-legacy-customer.php&#039;;
+
+/**
+ * Customer class.
+ */
+class WC_Customer extends WC_Legacy_Customer {
+
+	/**
+	 * Stores customer data.
+	 *
+	 * @var array
+	 */
+	protected $data = array(
+		&#039;date_created&#039;       =&gt; null,
+		&#039;date_modified&#039;      =&gt; null,
+		&#039;email&#039;              =&gt; &#039;&#039;,
+		&#039;first_name&#039;         =&gt; &#039;&#039;,
+		&#039;last_name&#039;          =&gt; &#039;&#039;,
+		&#039;display_name&#039;       =&gt; &#039;&#039;,
+		&#039;role&#039;               =&gt; &#039;customer&#039;,
+		&#039;username&#039;           =&gt; &#039;&#039;,
+		&#039;billing&#039;            =&gt; array(
+			&#039;first_name&#039; =&gt; &#039;&#039;,
+			&#039;last_name&#039;  =&gt; &#039;&#039;,
+			&#039;company&#039;    =&gt; &#039;&#039;,
+			&#039;address_1&#039;  =&gt; &#039;&#039;,
+			&#039;address_2&#039;  =&gt; &#039;&#039;,
+			&#039;city&#039;       =&gt; &#039;&#039;,
+			&#039;postcode&#039;   =&gt; &#039;&#039;,
+			&#039;country&#039;    =&gt; &#039;&#039;,
+			&#039;state&#039;      =&gt; &#039;&#039;,
+			&#039;email&#039;      =&gt; &#039;&#039;,
+			&#039;phone&#039;      =&gt; &#039;&#039;,
+		),
+		&#039;shipping&#039;           =&gt; array(
+			&#039;first_name&#039; =&gt; &#039;&#039;,
+			&#039;last_name&#039;  =&gt; &#039;&#039;,
+			&#039;company&#039;    =&gt; &#039;&#039;,
+			&#039;address_1&#039;  =&gt; &#039;&#039;,
+			&#039;address_2&#039;  =&gt; &#039;&#039;,
+			&#039;city&#039;       =&gt; &#039;&#039;,
+			&#039;postcode&#039;   =&gt; &#039;&#039;,
+			&#039;country&#039;    =&gt; &#039;&#039;,
+			&#039;state&#039;      =&gt; &#039;&#039;,
+			&#039;phone&#039;      =&gt; &#039;&#039;,
+		),
+		&#039;is_paying_customer&#039; =&gt; false,
+	);
+
+	/**
+	 * Stores a password if this needs to be changed. Write-only and hidden from _data.
+	 *
+	 * @var string
+	 */
+	protected $password = &#039;&#039;;
+
+	/**
+	 * Stores if user is VAT exempt for this session.
+	 *
+	 * @var string
+	 */
+	protected $is_vat_exempt = false;
+
+	/**
+	 * Stores if user has calculated shipping in this session.
+	 *
+	 * @var string
+	 */
+	protected $calculated_shipping = false;
+
+	/**
+	 * This is the name of this object type.
+	 *
+	 * @since 5.6.0
+	 * @var string
+	 */
+	protected $object_type = &#039;customer&#039;;
+
+	/**
+	 * Load customer data based on how WC_Customer is called.
+	 *
+	 * If $customer is &#039;new&#039;, you can build a new WC_Customer object. If it&#039;s empty, some
+	 * data will be pulled from the session for the current user/customer.
+	 *
+	 * @param WC_Customer|int $data       Customer ID or data.
+	 * @param bool            $is_session True if this is the customer session.
+	 * @throws Exception If customer cannot be read/found and $data is set.
+	 */
+	public function __construct( $data = 0, $is_session = false ) {
+		parent::__construct( $data );
+
+		if ( $data instanceof WC_Customer ) {
+			$this-&gt;set_id( absint( $data-&gt;get_id() ) );
+		} elseif ( is_numeric( $data ) ) {
+			$this-&gt;set_id( $data );
+		}
+
+		$this-&gt;data_store = WC_Data_Store::load( &#039;customer&#039; );
+
+		// If we have an ID, load the user from the DB.
+		if ( $this-&gt;get_id() ) {
+			try {
+				$this-&gt;data_store-&gt;read( $this );
+			} catch ( Exception $e ) {
+				$this-&gt;set_id( 0 );
+				$this-&gt;set_object_read( true );
+			}
+		} else {
+			$this-&gt;set_object_read( true );
+		}
+
+		// If this is a session, set or change the data store to sessions. Changes do not persist in the database.
+		if ( $is_session &amp;&amp; isset( WC()-&gt;session ) ) {
+			$this-&gt;data_store = WC_Data_Store::load( &#039;customer-session&#039; );
+			$this-&gt;data_store-&gt;read( $this );
+		}
+	}
+
+	/**
+	 * Delete a customer and reassign posts..
+	 *
+	 * @param int $reassign Reassign posts and links to new User ID.
+	 * @since 3.0.0
+	 * @return bool
+	 */
+	public function delete_and_reassign( $reassign = null ) {
+		if ( $this-&gt;data_store ) {
+			$this-&gt;data_store-&gt;delete(
+				$this,
+				array(
+					&#039;force_delete&#039; =&gt; true,
+					&#039;reassign&#039;     =&gt; $reassign,
+				)
+			);
+			$this-&gt;set_id( 0 );
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Is customer outside base country (for tax purposes)?
+	 *
+	 * @return bool
+	 */
+	public function is_customer_outside_base() {
+		list( $country, $state ) = $this-&gt;get_taxable_address();
+		if ( $country ) {
+			$default = wc_get_base_location();
+			if ( $default[&#039;country&#039;] !== $country ) {
+				return true;
+			}
+			if ( $default[&#039;state&#039;] &amp;&amp; $default[&#039;state&#039;] !== $state ) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Return this customer&#039;s avatar.
+	 *
+	 * @since 3.0.0
+	 * @return string
+	 */
+	public function get_avatar_url() {
+		return get_avatar_url( $this-&gt;get_email() );
+	}
+
+	/**
+	 * Get taxable address.
+	 *
+	 * @return array
+	 */
+	public function get_taxable_address() {
+		$tax_based_on = get_option( &#039;woocommerce_tax_based_on&#039; );
+
+		// Check shipping method at this point to see if we need special handling.
+		if ( true === apply_filters( &#039;woocommerce_apply_base_tax_for_local_pickup&#039;, true ) &amp;&amp; count( array_intersect( wc_get_chosen_shipping_method_ids(), apply_filters( &#039;woocommerce_local_pickup_methods&#039;, array( &#039;legacy_local_pickup&#039;, &#039;local_pickup&#039; ) ) ) ) &gt; 0 ) {
+			$tax_based_on = &#039;base&#039;;
+		}
+
+		if ( &#039;base&#039; === $tax_based_on ) {
+			$country  = WC()-&gt;countries-&gt;get_base_country();
+			$state    = WC()-&gt;countries-&gt;get_base_state();
+			$postcode = WC()-&gt;countries-&gt;get_base_postcode();
+			$city     = WC()-&gt;countries-&gt;get_base_city();
+		} elseif ( &#039;billing&#039; === $tax_based_on ) {
+			$country  = $this-&gt;get_billing_country();
+			$state    = $this-&gt;get_billing_state();
+			$postcode = $this-&gt;get_billing_postcode();
+			$city     = $this-&gt;get_billing_city();
+		} else {
+			$country  = $this-&gt;get_shipping_country();
+			$state    = $this-&gt;get_shipping_state();
+			$postcode = $this-&gt;get_shipping_postcode();
+			$city     = $this-&gt;get_shipping_city();
+		}
+
+		/**
+		 * Filters the taxable address for a given customer.
+		 *
+		 * @since 3.0.0
+		 *
+		 * @param array  $taxable_address An array of country, state, postcode, and city for the customer&#039;s taxable address.
+		 * @param object $customer        The customer object for which the taxable address is being requested.
+		 *
+		 * @return array The filtered taxable address for the customer.
+		 */
+		return apply_filters( &#039;woocommerce_customer_taxable_address&#039;, array( $country, $state, $postcode, $city ), $this );
+	}
+
+	/**
+	 * Gets a customer&#039;s downloadable products.
+	 *
+	 * @return array Array of downloadable products
+	 */
+	public function get_downloadable_products() {
+		$downloads = array();
+		if ( $this-&gt;get_id() ) {
+			$downloads = wc_get_customer_available_downloads( $this-&gt;get_id() );
+		}
+		return apply_filters( &#039;woocommerce_customer_get_downloadable_products&#039;, $downloads );
+	}
+
+	/**
+	 * Is customer VAT exempt?
+	 *
+	 * @return bool
+	 */
+	public function is_vat_exempt() {
+		return $this-&gt;get_is_vat_exempt();
+	}
+
+	/**
+	 * Has calculated shipping?
+	 *
+	 * @return bool
+	 */
+	public function has_calculated_shipping() {
+		return $this-&gt;get_calculated_shipping();
+	}
+
+	/**
+	 * Indicates if the customer has a non-empty shipping address.
+	 *
+	 * Note that this does not indicate if the customer&#039;s shipping address
+	 * is complete, only that one or more fields are populated.
+	 *
+	 * @since 5.3.0
+	 *
+	 * @return bool
+	 */
+	public function has_shipping_address() {
+		foreach ( $this-&gt;get_shipping() as $address_field ) {
+			// Trim guards against a case where a subset of saved shipping address fields contain whitespace.
+			if ( strlen( trim( $address_field ) ) &gt; 0 ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Get if customer is VAT exempt?
+	 *
+	 * @since 3.0.0
+	 * @return bool
+	 */
+	public function get_is_vat_exempt() {
+		return $this-&gt;is_vat_exempt;
+	}
+
+	/**
+	 * Get password (only used when updating the user object).
+	 *
+	 * @return string
+	 */
+	public function get_password() {
+		return $this-&gt;password;
+	}
+
+	/**
+	 * Has customer calculated shipping?
+	 *
+	 * @return bool
+	 */
+	public function get_calculated_shipping() {
+		return $this-&gt;calculated_shipping;
+	}
+
+	/**
+	 * Set if customer has tax exemption.
+	 *
+	 * @param bool $is_vat_exempt If is vat exempt.
+	 */
+	public function set_is_vat_exempt( $is_vat_exempt ) {
+		$this-&gt;is_vat_exempt = wc_string_to_bool( $is_vat_exempt );
+	}
+
+	/**
+	 * Calculated shipping?
+	 *
+	 * @param bool $calculated If shipping is calculated.
+	 */
+	public function set_calculated_shipping( $calculated = true ) {
+		$this-&gt;calculated_shipping = wc_string_to_bool( $calculated );
+	}
+
+	/**
+	 * Set customer&#039;s password.
+	 *
+	 * @since 3.0.0
+	 * @param string $password Password.
+	 */
+	public function set_password( $password ) {
+		$this-&gt;password = $password;
+	}
+
+	/**
+	 * Gets the customers last order.
+	 *
+	 * @return WC_Order|false
+	 */
+	public function get_last_order() {
+		return $this-&gt;data_store-&gt;get_last_order( $this );
+	}
+
+	/**
+	 * Return the number of orders this customer has.
+	 *
+	 * @return integer
+	 */
+	public function get_order_count() {
+		return $this-&gt;data_store-&gt;get_order_count( $this );
+	}
+
+	/**
+	 * Return how much money this customer has spent.
+	 *
+	 * @return float
+	 */
+	public function get_total_spent() {
+		return $this-&gt;data_store-&gt;get_total_spent( $this );
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Getters
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Return the customer&#039;s username.
+	 *
+	 * @since  3.0.0
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_username( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;username&#039;, $context );
+	}
+
+	/**
+	 * Return the customer&#039;s email.
+	 *
+	 * @since  3.0.0
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_email( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;email&#039;, $context );
+	}
+
+	/**
+	 * Return customer&#039;s first name.
+	 *
+	 * @since  3.0.0
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_first_name( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;first_name&#039;, $context );
+	}
+
+	/**
+	 * Return customer&#039;s last name.
+	 *
+	 * @since  3.0.0
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_last_name( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;last_name&#039;, $context );
+	}
+
+	/**
+	 * Return customer&#039;s display name.
+	 *
+	 * @since  3.1.0
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_display_name( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;display_name&#039;, $context );
+	}
+
+	/**
+	 * Return customer&#039;s user role.
+	 *
+	 * @since  3.0.0
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_role( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;role&#039;, $context );
+	}
+
+	/**
+	 * Return the date this customer was created.
+	 *
+	 * @since  3.0.0
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return WC_DateTime|null object if the date is set or null if there is no date.
+	 */
+	public function get_date_created( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;date_created&#039;, $context );
+	}
+
+	/**
+	 * Return the date this customer was last updated.
+	 *
+	 * @since  3.0.0
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return WC_DateTime|null object if the date is set or null if there is no date.
+	 */
+	public function get_date_modified( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;date_modified&#039;, $context );
+	}
+
+	/**
+	 * Gets a prop for a getter method.
+	 *
+	 * @since  3.0.0
+	 * @param  string $prop Name of prop to get.
+	 * @param  string $address billing or shipping.
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;. What the value is for. Valid values are view and edit.
+	 * @return mixed
+	 */
+	protected function get_address_prop( $prop, $address = &#039;billing&#039;, $context = &#039;view&#039; ) {
+		$value = null;
+
+		if ( array_key_exists( $prop, $this-&gt;data[ $address ] ) ) {
+			$value = isset( $this-&gt;changes[ $address ][ $prop ] ) ? $this-&gt;changes[ $address ][ $prop ] : $this-&gt;data[ $address ][ $prop ];
+
+			if ( &#039;view&#039; === $context ) {
+				$value = apply_filters( $this-&gt;get_hook_prefix() . $address . &#039;_&#039; . $prop, $value, $this );
+			}
+		}
+		return $value;
+	}
+
+	/**
+	 * Get billing.
+	 *
+	 * @since  3.2.0
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return array
+	 */
+	public function get_billing( $context = &#039;view&#039; ) {
+		$value = null;
+		$prop  = &#039;billing&#039;;
+
+		if ( array_key_exists( $prop, $this-&gt;data ) ) {
+			$changes = array_key_exists( $prop, $this-&gt;changes ) ? $this-&gt;changes[ $prop ] : array();
+			$value   = array_merge( $this-&gt;data[ $prop ], $changes );
+
+			if ( &#039;view&#039; === $context ) {
+				$value = apply_filters( $this-&gt;get_hook_prefix() . $prop, $value, $this );
+			}
+		}
+
+		return $value;
+	}
+
+	/**
+	 * Get billing_first_name.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_billing_first_name( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;first_name&#039;, &#039;billing&#039;, $context );
+	}
+
+	/**
+	 * Get billing_last_name.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_billing_last_name( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;last_name&#039;, &#039;billing&#039;, $context );
+	}
+
+	/**
+	 * Get billing_company.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_billing_company( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;company&#039;, &#039;billing&#039;, $context );
+	}
+
+	/**
+	 * Get billing_address_1.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_billing_address( $context = &#039;view&#039; ) {
+		return $this-&gt;get_billing_address_1( $context );
+	}
+
+	/**
+	 * Get billing_address_1.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_billing_address_1( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;address_1&#039;, &#039;billing&#039;, $context );
+	}
+
+	/**
+	 * Get billing_address_2.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string $value
+	 */
+	public function get_billing_address_2( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;address_2&#039;, &#039;billing&#039;, $context );
+	}
+
+	/**
+	 * Get billing_city.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string $value
+	 */
+	public function get_billing_city( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;city&#039;, &#039;billing&#039;, $context );
+	}
+
+	/**
+	 * Get billing_state.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_billing_state( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;state&#039;, &#039;billing&#039;, $context );
+	}
+
+	/**
+	 * Get billing_postcode.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_billing_postcode( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;postcode&#039;, &#039;billing&#039;, $context );
+	}
+
+	/**
+	 * Get billing_country.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_billing_country( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;country&#039;, &#039;billing&#039;, $context );
+	}
+
+	/**
+	 * Get billing_email.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_billing_email( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;email&#039;, &#039;billing&#039;, $context );
+	}
+
+	/**
+	 * Get billing_phone.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_billing_phone( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;phone&#039;, &#039;billing&#039;, $context );
+	}
+
+	/**
+	 * Get shipping.
+	 *
+	 * @since  3.2.0
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return array
+	 */
+	public function get_shipping( $context = &#039;view&#039; ) {
+		$value = null;
+		$prop  = &#039;shipping&#039;;
+
+		if ( array_key_exists( $prop, $this-&gt;data ) ) {
+			$changes = array_key_exists( $prop, $this-&gt;changes ) ? $this-&gt;changes[ $prop ] : array();
+			$value   = array_merge( $this-&gt;data[ $prop ], $changes );
+
+			if ( &#039;view&#039; === $context ) {
+				$value = apply_filters( $this-&gt;get_hook_prefix() . $prop, $value, $this );
+			}
+		}
+
+		return $value;
+	}
+
+	/**
+	 * Get shipping_first_name.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_shipping_first_name( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;first_name&#039;, &#039;shipping&#039;, $context );
+	}
+
+	/**
+	 * Get shipping_last_name.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_shipping_last_name( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;last_name&#039;, &#039;shipping&#039;, $context );
+	}
+
+	/**
+	 * Get shipping_company.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_shipping_company( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;company&#039;, &#039;shipping&#039;, $context );
+	}
+
+	/**
+	 * Get shipping_address_1.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_shipping_address( $context = &#039;view&#039; ) {
+		return $this-&gt;get_shipping_address_1( $context );
+	}
+
+	/**
+	 * Get shipping_address_1.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_shipping_address_1( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;address_1&#039;, &#039;shipping&#039;, $context );
+	}
+
+	/**
+	 * Get shipping_address_2.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_shipping_address_2( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;address_2&#039;, &#039;shipping&#039;, $context );
+	}
+
+	/**
+	 * Get shipping_city.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_shipping_city( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;city&#039;, &#039;shipping&#039;, $context );
+	}
+
+	/**
+	 * Get shipping_state.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_shipping_state( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;state&#039;, &#039;shipping&#039;, $context );
+	}
+
+	/**
+	 * Get shipping_postcode.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_shipping_postcode( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;postcode&#039;, &#039;shipping&#039;, $context );
+	}
+
+	/**
+	 * Get shipping_country.
+	 *
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_shipping_country( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;country&#039;, &#039;shipping&#039;, $context );
+	}
+
+	/**
+	 * Get shipping phone.
+	 *
+	 * @since 5.6.0
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return string
+	 */
+	public function get_shipping_phone( $context = &#039;view&#039; ) {
+		return $this-&gt;get_address_prop( &#039;phone&#039;, &#039;shipping&#039;, $context );
+	}
+
+	/**
+	 * Is the user a paying customer?
+	 *
+	 * @since  3.0.0
+	 * @param  string $context What the value is for. Valid values are &#039;view&#039; and &#039;edit&#039;.
+	 * @return bool
+	 */
+	public function get_is_paying_customer( $context = &#039;view&#039; ) {
+		return $this-&gt;get_prop( &#039;is_paying_customer&#039;, $context );
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Setters
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Set customer&#039;s username.
+	 *
+	 * @since 3.0.0
+	 * @param string $username Username.
+	 */
+	public function set_username( $username ) {
+		$this-&gt;set_prop( &#039;username&#039;, $username );
+	}
+
+	/**
+	 * Set customer&#039;s email.
+	 *
+	 * @since 3.0.0
+	 * @param string $value Email.
+	 */
+	public function set_email( $value ) {
+		if ( $value &amp;&amp; ! is_email( $value ) ) {
+			$this-&gt;error( &#039;customer_invalid_email&#039;, __( &#039;Invalid email address&#039;, &#039;woocommerce&#039; ) );
+		}
+		$this-&gt;set_prop( &#039;email&#039;, sanitize_email( $value ) );
+	}
+
+	/**
+	 * Set customer&#039;s first name.
+	 *
+	 * @since 3.0.0
+	 * @param string $first_name First name.
+	 */
+	public function set_first_name( $first_name ) {
+		$this-&gt;set_prop( &#039;first_name&#039;, $first_name );
+	}
+
+	/**
+	 * Set customer&#039;s last name.
+	 *
+	 * @since 3.0.0
+	 * @param string $last_name Last name.
+	 */
+	public function set_last_name( $last_name ) {
+		$this-&gt;set_prop( &#039;last_name&#039;, $last_name );
+	}
+
+	/**
+	 * Set customer&#039;s display name.
+	 *
+	 * @since 3.1.0
+	 * @param string $display_name Display name.
+	 */
+	public function set_display_name( $display_name ) {
+		/* translators: 1: first name 2: last name */
+		$this-&gt;set_prop( &#039;display_name&#039;, is_email( $display_name ) ? sprintf( _x( &#039;%1$s %2$s&#039;, &#039;display name&#039;, &#039;woocommerce&#039; ), $this-&gt;get_first_name(), $this-&gt;get_last_name() ) : $display_name );
+	}
+
+	/**
+	 * Set customer&#039;s user role(s).
+	 *
+	 * @since 3.0.0
+	 * @param mixed $role User role.
+	 */
+	public function set_role( $role ) {
+		global $wp_roles;
+
+		if ( $role &amp;&amp; ! empty( $wp_roles-&gt;roles ) &amp;&amp; ! in_array( $role, array_keys( $wp_roles-&gt;roles ), true ) ) {
+			$this-&gt;error( &#039;customer_invalid_role&#039;, __( &#039;Invalid role&#039;, &#039;woocommerce&#039; ) );
+		}
+		$this-&gt;set_prop( &#039;role&#039;, $role );
+	}
+
+	/**
+	 * Set the date this customer was last updated.
+	 *
+	 * @since  3.0.0
+	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 */
+	public function set_date_created( $date = null ) {
+		$this-&gt;set_date_prop( &#039;date_created&#039;, $date );
+	}
+
+	/**
+	 * Set the date this customer was last updated.
+	 *
+	 * @since  3.0.0
+	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 */
+	public function set_date_modified( $date = null ) {
+		$this-&gt;set_date_prop( &#039;date_modified&#039;, $date );
+	}
+
+	/**
+	 * Set customer address to match shop base address.
+	 *
+	 * @since 3.0.0
+	 */
+	public function set_billing_address_to_base() {
+		$base = wc_get_customer_default_location();
+		$this-&gt;set_billing_location( $base[&#039;country&#039;], $base[&#039;state&#039;], &#039;&#039;, &#039;&#039; );
+	}
+
+	/**
+	 * Set customer shipping address to base address.
+	 *
+	 * @since 3.0.0
+	 */
+	public function set_shipping_address_to_base() {
+		$base = wc_get_customer_default_location();
+		$this-&gt;set_shipping_location( $base[&#039;country&#039;], $base[&#039;state&#039;], &#039;&#039;, &#039;&#039; );
+	}
+
+	/**
+	 * Sets all address info at once.
+	 *
+	 * @param string $country  Country.
+	 * @param string $state    State.
+	 * @param string $postcode Postcode.
+	 * @param string $city     City.
+	 */
+	public function set_billing_location( $country, $state = &#039;&#039;, $postcode = &#039;&#039;, $city = &#039;&#039; ) {
+		$address_data = $this-&gt;get_prop( &#039;billing&#039;, &#039;edit&#039; );
+
+		$address_data[&#039;address_1&#039;] = &#039;&#039;;
+		$address_data[&#039;address_2&#039;] = &#039;&#039;;
+		$address_data[&#039;city&#039;]      = $city;
+		$address_data[&#039;state&#039;]     = $state;
+		$address_data[&#039;postcode&#039;]  = $postcode;
+		$address_data[&#039;country&#039;]   = $country;
+
+		$this-&gt;set_prop( &#039;billing&#039;, $address_data );
+	}
+
+	/**
+	 * Sets all shipping info at once.
+	 *
+	 * @param string $country  Country.
+	 * @param string $state    State.
+	 * @param string $postcode Postcode.
+	 * @param string $city     City.
+	 */
+	public function set_shipping_location( $country, $state = &#039;&#039;, $postcode = &#039;&#039;, $city = &#039;&#039; ) {
+		$address_data = $this-&gt;get_prop( &#039;shipping&#039;, &#039;edit&#039; );
+
+		$address_data[&#039;address_1&#039;] = &#039;&#039;;
+		$address_data[&#039;address_2&#039;] = &#039;&#039;;
+		$address_data[&#039;city&#039;]      = $city;
+		$address_data[&#039;state&#039;]     = $state;
+		$address_data[&#039;postcode&#039;]  = $postcode;
+		$address_data[&#039;country&#039;]   = $country;
+
+		$this-&gt;set_prop( &#039;shipping&#039;, $address_data );
+	}
+
+	/**
+	 * Sets a prop for a setter method.
+	 *
+	 * @since 3.0.0
+	 * @param string $prop    Name of prop to set.
+	 * @param string $address Name of address to set. billing or shipping.
+	 * @param mixed  $value   Value of the prop.
+	 */
+	protected function set_address_prop( $prop, $address, $value ) {
+		if ( array_key_exists( $prop, $this-&gt;data[ $address ] ) ) {
+			if ( true === $this-&gt;object_read ) {
+				if ( $value !== $this-&gt;data[ $address ][ $prop ] || ( isset( $this-&gt;changes[ $address ] ) &amp;&amp; array_key_exists( $prop, $this-&gt;changes[ $address ] ) ) ) {
+					$this-&gt;changes[ $address ][ $prop ] = $value;
+				}
+			} else {
+				$this-&gt;data[ $address ][ $prop ] = $value;
+			}
+		}
+	}
+
+	/**
+	 * Set billing_first_name.
+	 *
+	 * @param string $value Billing first name.
+	 */
+	public function set_billing_first_name( $value ) {
+		$this-&gt;set_address_prop( &#039;first_name&#039;, &#039;billing&#039;, $value );
+	}
+
+	/**
+	 * Set billing_last_name.
+	 *
+	 * @param string $value Billing last name.
+	 */
+	public function set_billing_last_name( $value ) {
+		$this-&gt;set_address_prop( &#039;last_name&#039;, &#039;billing&#039;, $value );
+	}
+
+	/**
+	 * Set billing_company.
+	 *
+	 * @param string $value Billing company.
+	 */
+	public function set_billing_company( $value ) {
+		$this-&gt;set_address_prop( &#039;company&#039;, &#039;billing&#039;, $value );
+	}
+
+	/**
+	 * Set billing_address_1.
+	 *
+	 * @param string $value Billing address line 1.
+	 */
+	public function set_billing_address( $value ) {
+		$this-&gt;set_billing_address_1( $value );
+	}
+
+	/**
+	 * Set billing_address_1.
+	 *
+	 * @param string $value Billing address line 1.
+	 */
+	public function set_billing_address_1( $value ) {
+		$this-&gt;set_address_prop( &#039;address_1&#039;, &#039;billing&#039;, $value );
+	}
+
+	/**
+	 * Set billing_address_2.
+	 *
+	 * @param string $value Billing address line 2.
+	 */
+	public function set_billing_address_2( $value ) {
+		$this-&gt;set_address_prop( &#039;address_2&#039;, &#039;billing&#039;, $value );
+	}
+
+	/**
+	 * Set billing_city.
+	 *
+	 * @param string $value Billing city.
+	 */
+	public function set_billing_city( $value ) {
+		$this-&gt;set_address_prop( &#039;city&#039;, &#039;billing&#039;, $value );
+	}
+
+	/**
+	 * Set billing_state.
+	 *
+	 * @param string $value Billing state.
+	 */
+	public function set_billing_state( $value ) {
+		$this-&gt;set_address_prop( &#039;state&#039;, &#039;billing&#039;, $value );
+	}
+
+	/**
+	 * Set billing_postcode.
+	 *
+	 * @param string $value Billing postcode.
+	 */
+	public function set_billing_postcode( $value ) {
+		$this-&gt;set_address_prop( &#039;postcode&#039;, &#039;billing&#039;, $value );
+	}
+
+	/**
+	 * Set billing_country.
+	 *
+	 * @param string $value Billing country.
+	 */
+	public function set_billing_country( $value ) {
+		$this-&gt;set_address_prop( &#039;country&#039;, &#039;billing&#039;, $value );
+	}
+
+	/**
+	 * Set billing_email.
+	 *
+	 * @param string $value Billing email.
+	 */
+	public function set_billing_email( $value ) {
+		if ( $value &amp;&amp; ! is_email( $value ) ) {
+			$this-&gt;error( &#039;customer_invalid_billing_email&#039;, __( &#039;Invalid billing email address&#039;, &#039;woocommerce&#039; ) );
+		}
+		$this-&gt;set_address_prop( &#039;email&#039;, &#039;billing&#039;, sanitize_email( $value ) );
+	}
+
+	/**
+	 * Set billing_phone.
+	 *
+	 * @param string $value Billing phone.
+	 */
+	public function set_billing_phone( $value ) {
+		$this-&gt;set_address_prop( &#039;phone&#039;, &#039;billing&#039;, $value );
+	}
+
+	/**
+	 * Set shipping_first_name.
+	 *
+	 * @param string $value Shipping first name.
+	 */
+	public function set_shipping_first_name( $value ) {
+		$this-&gt;set_address_prop( &#039;first_name&#039;, &#039;shipping&#039;, $value );
+	}
+
+	/**
+	 * Set shipping_last_name.
+	 *
+	 * @param string $value Shipping last name.
+	 */
+	public function set_shipping_last_name( $value ) {
+		$this-&gt;set_address_prop( &#039;last_name&#039;, &#039;shipping&#039;, $value );
+	}
+
+	/**
+	 * Set shipping_company.
+	 *
+	 * @param string $value Shipping company.
+	 */
+	public function set_shipping_company( $value ) {
+		$this-&gt;set_address_prop( &#039;company&#039;, &#039;shipping&#039;, $value );
+	}
+
+	/**
+	 * Set shipping_address_1.
+	 *
+	 * @param string $value Shipping address line 1.
+	 */
+	public function set_shipping_address( $value ) {
+		$this-&gt;set_shipping_address_1( $value );
+	}
+
+	/**
+	 * Set shipping_address_1.
+	 *
+	 * @param string $value Shipping address line 1.
+	 */
+	public function set_shipping_address_1( $value ) {
+		$this-&gt;set_address_prop( &#039;address_1&#039;, &#039;shipping&#039;, $value );
+	}
+
+	/**
+	 * Set shipping_address_2.
+	 *
+	 * @param string $value Shipping address line 2.
+	 */
+	public function set_shipping_address_2( $value ) {
+		$this-&gt;set_address_prop( &#039;address_2&#039;, &#039;shipping&#039;, $value );
+	}
+
+	/**
+	 * Set shipping_city.
+	 *
+	 * @param string $value Shipping city.
+	 */
+	public function set_shipping_city( $value ) {
+		$this-&gt;set_address_prop( &#039;city&#039;, &#039;shipping&#039;, $value );
+	}
+
+	/**
+	 * Set shipping_state.
+	 *
+	 * @param string $value Shipping state.
+	 */
+	public function set_shipping_state( $value ) {
+		$this-&gt;set_address_prop( &#039;state&#039;, &#039;shipping&#039;, $value );
+	}
+
+	/**
+	 * Set shipping_postcode.
+	 *
+	 * @param string $value Shipping postcode.
+	 */
+	public function set_shipping_postcode( $value ) {
+		$this-&gt;set_address_prop( &#039;postcode&#039;, &#039;shipping&#039;, $value );
+	}
+
+	/**
+	 * Set shipping_country.
+	 *
+	 * @param string $value Shipping country.
+	 */
+	public function set_shipping_country( $value ) {
+		$this-&gt;set_address_prop( &#039;country&#039;, &#039;shipping&#039;, $value );
+	}
+
+	/**
+	 * Set shipping phone.
+	 *
+	 * @since 5.6.0
+	 * @param string $value Shipping phone.
+	 */
+	public function set_shipping_phone( $value ) {
+		$this-&gt;set_address_prop( &#039;phone&#039;, &#039;shipping&#039;, $value );
+	}
+
+	/**
+	 * Set if the user a paying customer.
+	 *
+	 * @since 3.0.0
+	 * @param bool $is_paying_customer If is a paying customer.
+	 */
+	public function set_is_paying_customer( $is_paying_customer ) {
+		$this-&gt;set_prop( &#039;is_paying_customer&#039;, (bool) $is_paying_customer );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

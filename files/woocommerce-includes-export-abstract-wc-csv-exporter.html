@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">abstract-wc-csv-exporter.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Handles CSV export.
+ *
+ * @package  WooCommerce\Export
+ * @version  3.1.0
+ */
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * WC_CSV_Exporter Class.
+ */
+abstract class WC_CSV_Exporter {
+
+	/**
+	 * Type of export used in filter names.
+	 *
+	 * @var string
+	 */
+	protected $export_type = &#039;&#039;;
+
+	/**
+	 * Filename to export to.
+	 *
+	 * @var string
+	 */
+	protected $filename = &#039;wc-export.csv&#039;;
+
+	/**
+	 * Batch limit.
+	 *
+	 * @var integer
+	 */
+	protected $limit = 50;
+
+	/**
+	 * Number exported.
+	 *
+	 * @var integer
+	 */
+	protected $exported_row_count = 0;
+
+	/**
+	 * Raw data to export.
+	 *
+	 * @var array
+	 */
+	protected $row_data = array();
+
+	/**
+	 * Total rows to export.
+	 *
+	 * @var integer
+	 */
+	protected $total_rows = 0;
+
+	/**
+	 * Columns ids and names.
+	 *
+	 * @var array
+	 */
+	protected $column_names = array();
+
+	/**
+	 * List of columns to export, or empty for all.
+	 *
+	 * @var array
+	 */
+	protected $columns_to_export = array();
+
+	/**
+	 * The delimiter parameter sets the field delimiter (one character only).
+	 *
+	 * @var string
+	 */
+	protected $delimiter = &#039;,&#039;;
+
+	/**
+	 * Prepare data that will be exported.
+	 */
+	abstract public function prepare_data_to_export();
+
+	/**
+	 * Return an array of supported column names and ids.
+	 *
+	 * @since 3.1.0
+	 * @return array
+	 */
+	public function get_column_names() {
+		return apply_filters( &quot;woocommerce_{$this-&gt;export_type}_export_column_names&quot;, $this-&gt;column_names, $this );
+	}
+
+	/**
+	 * Set column names.
+	 *
+	 * @since 3.1.0
+	 * @param array $column_names Column names array.
+	 */
+	public function set_column_names( $column_names ) {
+		$this-&gt;column_names = array();
+
+		foreach ( $column_names as $column_id =&gt; $column_name ) {
+			$this-&gt;column_names[ wc_clean( $column_id ) ] = wc_clean( $column_name );
+		}
+	}
+
+	/**
+	 * Return an array of columns to export.
+	 *
+	 * @since 3.1.0
+	 * @return array
+	 */
+	public function get_columns_to_export() {
+		return $this-&gt;columns_to_export;
+	}
+
+	/**
+	 * Return the delimiter to use in CSV file
+	 *
+	 * @since 3.9.0
+	 * @return string
+	 */
+	public function get_delimiter() {
+		return apply_filters( &quot;woocommerce_{$this-&gt;export_type}_export_delimiter&quot;, $this-&gt;delimiter );
+	}
+
+	/**
+	 * Set columns to export.
+	 *
+	 * @since 3.1.0
+	 * @param array $columns Columns array.
+	 */
+	public function set_columns_to_export( $columns ) {
+		$this-&gt;columns_to_export = array_map( &#039;wc_clean&#039;, $columns );
+	}
+
+	/**
+	 * See if a column is to be exported or not.
+	 *
+	 * @since 3.1.0
+	 * @param  string $column_id ID of the column being exported.
+	 * @return boolean
+	 */
+	public function is_column_exporting( $column_id ) {
+		$column_id         = strstr( $column_id, &#039;:&#039; ) ? current( explode( &#039;:&#039;, $column_id ) ) : $column_id;
+		$columns_to_export = $this-&gt;get_columns_to_export();
+
+		if ( empty( $columns_to_export ) ) {
+			return true;
+		}
+
+		if ( in_array( $column_id, $columns_to_export, true ) || &#039;meta&#039; === $column_id ) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Return default columns.
+	 *
+	 * @since 3.1.0
+	 * @return array
+	 */
+	public function get_default_column_names() {
+		return array();
+	}
+
+	/**
+	 * Do the export.
+	 *
+	 * @since 3.1.0
+	 */
+	public function export() {
+		$this-&gt;prepare_data_to_export();
+		$this-&gt;send_headers();
+		$this-&gt;send_content( chr( 239 ) . chr( 187 ) . chr( 191 ) . $this-&gt;export_column_headers() . $this-&gt;get_csv_data() );
+		die();
+	}
+
+	/**
+	 * Set the export headers.
+	 *
+	 * @since 3.1.0
+	 */
+	public function send_headers() {
+		if ( function_exists( &#039;gc_enable&#039; ) ) {
+			gc_enable(); // phpcs:ignore PHPCompatibility.FunctionUse.NewFunctions.gc_enableFound
+		}
+		if ( function_exists( &#039;apache_setenv&#039; ) ) {
+			@apache_setenv( &#039;no-gzip&#039;, 1 ); // @codingStandardsIgnoreLine
+		}
+		@ini_set( &#039;zlib.output_compression&#039;, &#039;Off&#039; ); // @codingStandardsIgnoreLine
+		@ini_set( &#039;output_buffering&#039;, &#039;Off&#039; ); // @codingStandardsIgnoreLine
+		@ini_set( &#039;output_handler&#039;, &#039;&#039; ); // @codingStandardsIgnoreLine
+		ignore_user_abort( true );
+		wc_set_time_limit( 0 );
+		wc_nocache_headers();
+		header( &#039;Content-Type: text/csv; charset=utf-8&#039; );
+		header( &#039;Content-Disposition: attachment; filename=&#039; . $this-&gt;get_filename() );
+		header( &#039;Pragma: no-cache&#039; );
+		header( &#039;Expires: 0&#039; );
+	}
+
+	/**
+	 * Set filename to export to.
+	 *
+	 * @param  string $filename Filename to export to.
+	 */
+	public function set_filename( $filename ) {
+		$this-&gt;filename = sanitize_file_name( str_replace( &#039;.csv&#039;, &#039;&#039;, $filename ) . &#039;.csv&#039; );
+	}
+
+	/**
+	 * Generate and return a filename.
+	 *
+	 * @return string
+	 */
+	public function get_filename() {
+		return sanitize_file_name( apply_filters( &quot;woocommerce_{$this-&gt;export_type}_export_get_filename&quot;, $this-&gt;filename ) );
+	}
+
+	/**
+	 * Set the export content.
+	 *
+	 * @since 3.1.0
+	 * @param string $csv_data All CSV content.
+	 */
+	public function send_content( $csv_data ) {
+		echo $csv_data; // @codingStandardsIgnoreLine
+	}
+
+	/**
+	 * Get CSV data for this export.
+	 *
+	 * @since 3.1.0
+	 * @return string
+	 */
+	protected function get_csv_data() {
+		return $this-&gt;export_rows();
+	}
+
+	/**
+	 * Export column headers in CSV format.
+	 *
+	 * @since 3.1.0
+	 * @return string
+	 */
+	protected function export_column_headers() {
+		$columns    = $this-&gt;get_column_names();
+		$export_row = array();
+		$buffer     = fopen( &#039;php://output&#039;, &#039;w&#039; ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fopen
+		ob_start();
+
+		foreach ( $columns as $column_id =&gt; $column_name ) {
+			if ( ! $this-&gt;is_column_exporting( $column_id ) ) {
+				continue;
+			}
+			$export_row[] = $this-&gt;format_data( $column_name );
+		}
+
+		$this-&gt;fputcsv( $buffer, $export_row );
+
+		return ob_get_clean();
+	}
+
+	/**
+	 * Get data that will be exported.
+	 *
+	 * @since 3.1.0
+	 * @return array
+	 */
+	protected function get_data_to_export() {
+		return $this-&gt;row_data;
+	}
+
+	/**
+	 * Export rows in CSV format.
+	 *
+	 * @since 3.1.0
+	 * @return string
+	 */
+	protected function export_rows() {
+		$data   = $this-&gt;get_data_to_export();
+		$buffer = fopen( &#039;php://output&#039;, &#039;w&#039; ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fopen
+		ob_start();
+
+		array_walk( $data, array( $this, &#039;export_row&#039; ), $buffer );
+
+		return apply_filters( &quot;woocommerce_{$this-&gt;export_type}_export_rows&quot;, ob_get_clean(), $this );
+	}
+
+	/**
+	 * Export rows to an array ready for the CSV.
+	 *
+	 * @since 3.1.0
+	 * @param array    $row_data Data to export.
+	 * @param string   $key Column being exported.
+	 * @param resource $buffer Output buffer.
+	 */
+	protected function export_row( $row_data, $key, $buffer ) {
+		$columns    = $this-&gt;get_column_names();
+		$export_row = array();
+
+		foreach ( $columns as $column_id =&gt; $column_name ) {
+			if ( ! $this-&gt;is_column_exporting( $column_id ) ) {
+				continue;
+			}
+			if ( isset( $row_data[ $column_id ] ) ) {
+				$export_row[] = $this-&gt;format_data( $row_data[ $column_id ] );
+			} else {
+				$export_row[] = &#039;&#039;;
+			}
+		}
+
+		$this-&gt;fputcsv( $buffer, $export_row );
+
+		++ $this-&gt;exported_row_count;
+	}
+
+	/**
+	 * Get batch limit.
+	 *
+	 * @since 3.1.0
+	 * @return int
+	 */
+	public function get_limit() {
+		return apply_filters( &quot;woocommerce_{$this-&gt;export_type}_export_batch_limit&quot;, $this-&gt;limit, $this );
+	}
+
+	/**
+	 * Set batch limit.
+	 *
+	 * @since 3.1.0
+	 * @param int $limit Limit to export.
+	 */
+	public function set_limit( $limit ) {
+		$this-&gt;limit = absint( $limit );
+	}
+
+	/**
+	 * Get count of records exported.
+	 *
+	 * @since 3.1.0
+	 * @return int
+	 */
+	public function get_total_exported() {
+		return $this-&gt;exported_row_count;
+	}
+
+	/**
+	 * Escape a string to be used in a CSV context
+	 *
+	 * Malicious input can inject formulas into CSV files, opening up the possibility
+	 * for phishing attacks and disclosure of sensitive information.
+	 *
+	 * Additionally, Excel exposes the ability to launch arbitrary commands through
+	 * the DDE protocol.
+	 *
+	 * @see http://www.contextis.com/resources/blog/comma-separated-vulnerabilities/
+	 * @see https://hackerone.com/reports/72785
+	 *
+	 * @since 3.1.0
+	 * @param string $data CSV field to escape.
+	 * @return string
+	 */
+	public function escape_data( $data ) {
+		$active_content_triggers = array( &#039;=&#039;, &#039;+&#039;, &#039;-&#039;, &#039;@&#039; );
+
+		if ( in_array( mb_substr( $data, 0, 1 ), $active_content_triggers, true ) ) {
+			$data = &quot;&#039;&quot; . $data;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Format and escape data ready for the CSV file.
+	 *
+	 * @since 3.1.0
+	 * @param  string $data Data to format.
+	 * @return string
+	 */
+	public function format_data( $data ) {
+		if ( ! is_scalar( $data ) ) {
+			if ( is_a( $data, &#039;WC_Datetime&#039; ) ) {
+				$data = $data-&gt;date( &#039;Y-m-d G:i:s&#039; );
+			} else {
+				$data = &#039;&#039;; // Not supported.
+			}
+		} elseif ( is_bool( $data ) ) {
+			$data = $data ? 1 : 0;
+		}
+
+		$use_mb = function_exists( &#039;mb_convert_encoding&#039; );
+
+		if ( $use_mb ) {
+			$is_valid_utf_8 = mb_check_encoding( $data, &#039;UTF-8&#039; );
+			if ( ! $is_valid_utf_8 ) {
+				$data = mb_convert_encoding( $data, &#039;UTF-8&#039;, &#039;ISO-8859-1&#039; );
+			}
+		}
+
+		return $this-&gt;escape_data( $data );
+	}
+
+	/**
+	 * Format term ids to names.
+	 *
+	 * @since 3.1.0
+	 * @param  array  $term_ids Term IDs to format.
+	 * @param  string $taxonomy Taxonomy name.
+	 * @return string
+	 */
+	public function format_term_ids( $term_ids, $taxonomy ) {
+		$term_ids = wp_parse_id_list( $term_ids );
+
+		if ( ! count( $term_ids ) ) {
+			return &#039;&#039;;
+		}
+
+		$formatted_terms = array();
+
+		if ( is_taxonomy_hierarchical( $taxonomy ) ) {
+			foreach ( $term_ids as $term_id ) {
+				$formatted_term = array();
+				$ancestor_ids   = array_reverse( get_ancestors( $term_id, $taxonomy ) );
+
+				foreach ( $ancestor_ids as $ancestor_id ) {
+					$term = get_term( $ancestor_id, $taxonomy );
+					if ( $term &amp;&amp; ! is_wp_error( $term ) ) {
+						$formatted_term[] = $term-&gt;name;
+					}
+				}
+
+				$term = get_term( $term_id, $taxonomy );
+
+				if ( $term &amp;&amp; ! is_wp_error( $term ) ) {
+					$formatted_term[] = $term-&gt;name;
+				}
+
+				$formatted_terms[] = implode( &#039; &gt; &#039;, $formatted_term );
+			}
+		} else {
+			foreach ( $term_ids as $term_id ) {
+				$term = get_term( $term_id, $taxonomy );
+
+				if ( $term &amp;&amp; ! is_wp_error( $term ) ) {
+					$formatted_terms[] = $term-&gt;name;
+				}
+			}
+		}
+
+		return $this-&gt;implode_values( $formatted_terms );
+	}
+
+	/**
+	 * Implode CSV cell values using commas by default, and wrapping values
+	 * which contain the separator.
+	 *
+	 * @since  3.2.0
+	 * @param  array $values Values to implode.
+	 * @return string
+	 */
+	protected function implode_values( $values ) {
+		$values_to_implode = array();
+
+		foreach ( $values as $value ) {
+			$value               = (string) is_scalar( $value ) ? html_entity_decode( $value, ENT_QUOTES ) : &#039;&#039;;
+			$values_to_implode[] = str_replace( &#039;,&#039;, &#039;\\,&#039;, $value );
+		}
+
+		return implode( &#039;, &#039;, $values_to_implode );
+	}
+
+	/**
+	 * Write to the CSV file, ensuring escaping works across versions of
+	 * PHP.
+	 *
+	 * PHP 5.5.4 uses &#039;\&#039; as the default escape character. This is not RFC-4180 compliant.
+	 * \0 disables the escape character.
+	 *
+	 * @see https://bugs.php.net/bug.php?id=43225
+	 * @see https://bugs.php.net/bug.php?id=50686
+	 * @see https://github.com/woocommerce/woocommerce/issues/19514
+	 * @since 3.4.0
+	 * @see https://github.com/woocommerce/woocommerce/issues/24579
+	 * @since 3.9.0
+	 * @param resource $buffer Resource we are writing to.
+	 * @param array    $export_row Row to export.
+	 */
+	protected function fputcsv( $buffer, $export_row ) {
+
+		if ( version_compare( PHP_VERSION, &#039;5.5.4&#039;, &#039;&lt;&#039; ) ) {
+			ob_start();
+			$temp = fopen( &#039;php://output&#039;, &#039;w&#039; ); // @codingStandardsIgnoreLine
+    		fputcsv( $temp, $export_row, $this-&gt;get_delimiter(), &#039;&quot;&#039; ); // @codingStandardsIgnoreLine
+			fclose( $temp ); // @codingStandardsIgnoreLine
+			$row = ob_get_clean();
+			$row = str_replace( &#039;\\&quot;&#039;, &#039;\\&quot;&quot;&#039;, $row );
+			fwrite( $buffer, $row ); // @codingStandardsIgnoreLine
+		} else {
+			fputcsv( $buffer, $export_row, $this-&gt;get_delimiter(), &#039;&quot;&#039;, &quot;\0&quot; ); // @codingStandardsIgnoreLine
+		}
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

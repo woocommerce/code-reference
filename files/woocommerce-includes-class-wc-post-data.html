@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-post-data.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Post Data
+ *
+ * Standardises certain post data on save.
+ *
+ * @package WooCommerce\Classes\Data
+ * @version 2.2.0
+ */
+
+use Automattic\WooCommerce\Internal\DataStores\Orders\DataSynchronizer;
+use Automattic\WooCommerce\Internal\ProductAttributesLookup\LookupDataStore as ProductAttributesLookupDataStore;
+use Automattic\WooCommerce\Proxies\LegacyProxy;
+use Automattic\WooCommerce\Utilities\OrderUtil;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Post data class.
+ */
+class WC_Post_Data {
+
+	/**
+	 * Editing term.
+	 *
+	 * @var object
+	 */
+	private static $editing_term = null;
+
+	/**
+	 * Hook in methods.
+	 */
+	public static function init() {
+		add_filter( &#039;post_type_link&#039;, array( __CLASS__, &#039;variation_post_link&#039; ), 10, 2 );
+		add_action( &#039;shutdown&#039;, array( __CLASS__, &#039;do_deferred_product_sync&#039; ), 10 );
+		add_action( &#039;set_object_terms&#039;, array( __CLASS__, &#039;force_default_term&#039; ), 10, 5 );
+		add_action( &#039;set_object_terms&#039;, array( __CLASS__, &#039;delete_product_query_transients&#039; ) );
+		add_action( &#039;deleted_term_relationships&#039;, array( __CLASS__, &#039;delete_product_query_transients&#039; ) );
+		add_action( &#039;woocommerce_product_set_stock_status&#039;, array( __CLASS__, &#039;delete_product_query_transients&#039; ) );
+		add_action( &#039;woocommerce_product_set_visibility&#039;, array( __CLASS__, &#039;delete_product_query_transients&#039; ) );
+		add_action( &#039;woocommerce_product_type_changed&#039;, array( __CLASS__, &#039;product_type_changed&#039; ), 10, 3 );
+
+		add_action( &#039;edit_term&#039;, array( __CLASS__, &#039;edit_term&#039; ), 10, 3 );
+		add_action( &#039;edited_term&#039;, array( __CLASS__, &#039;edited_term&#039; ), 10, 3 );
+		add_filter( &#039;update_order_item_metadata&#039;, array( __CLASS__, &#039;update_order_item_metadata&#039; ), 10, 5 );
+		add_filter( &#039;update_post_metadata&#039;, array( __CLASS__, &#039;update_post_metadata&#039; ), 10, 5 );
+		add_filter( &#039;wp_insert_post_data&#039;, array( __CLASS__, &#039;wp_insert_post_data&#039; ) );
+		add_filter( &#039;oembed_response_data&#039;, array( __CLASS__, &#039;filter_oembed_response_data&#039; ), 10, 2 );
+		add_filter( &#039;wp_untrash_post_status&#039;, array( __CLASS__, &#039;wp_untrash_post_status&#039; ), 10, 3 );
+
+		// Status transitions.
+		add_action( &#039;transition_post_status&#039;, array( __CLASS__, &#039;transition_post_status&#039; ), 10, 3 );
+		add_action( &#039;delete_post&#039;, array( __CLASS__, &#039;delete_post&#039; ) );
+		add_action( &#039;wp_trash_post&#039;, array( __CLASS__, &#039;trash_post&#039; ) );
+		add_action( &#039;untrashed_post&#039;, array( __CLASS__, &#039;untrash_post&#039; ) );
+		add_action( &#039;before_delete_post&#039;, array( __CLASS__, &#039;before_delete_order&#039; ) );
+		add_action( &#039;woocommerce_before_delete_order&#039;, array( __CLASS__, &#039;before_delete_order&#039; ) );
+
+		// Meta cache flushing.
+		add_action( &#039;updated_post_meta&#039;, array( __CLASS__, &#039;flush_object_meta_cache&#039; ), 10, 4 );
+		add_action( &#039;updated_order_item_meta&#039;, array( __CLASS__, &#039;flush_object_meta_cache&#039; ), 10, 4 );
+	}
+
+	/**
+	 * Link to parent products when getting permalink for variation.
+	 *
+	 * @param string  $permalink Permalink.
+	 * @param WP_Post $post      Post data.
+	 *
+	 * @return string
+	 */
+	public static function variation_post_link( $permalink, $post ) {
+		if ( isset( $post-&gt;ID, $post-&gt;post_type ) &amp;&amp; &#039;product_variation&#039; === $post-&gt;post_type ) {
+			$variation = wc_get_product( $post-&gt;ID );
+
+			if ( $variation &amp;&amp; $variation-&gt;get_parent_id() ) {
+				return $variation-&gt;get_permalink();
+			}
+		}
+		return $permalink;
+	}
+
+	/**
+	 * Sync products queued to sync.
+	 */
+	public static function do_deferred_product_sync() {
+		global $wc_deferred_product_sync;
+
+		if ( ! empty( $wc_deferred_product_sync ) ) {
+			$wc_deferred_product_sync = wp_parse_id_list( $wc_deferred_product_sync );
+			array_walk( $wc_deferred_product_sync, array( __CLASS__, &#039;deferred_product_sync&#039; ) );
+		}
+	}
+
+	/**
+	 * Sync a product.
+	 *
+	 * @param int $product_id Product ID.
+	 */
+	public static function deferred_product_sync( $product_id ) {
+		$product = wc_get_product( $product_id );
+
+		if ( is_callable( array( $product, &#039;sync&#039; ) ) ) {
+			$product-&gt;sync( $product );
+		}
+	}
+
+	/**
+	 * When a post status changes.
+	 *
+	 * @param string  $new_status New status.
+	 * @param string  $old_status Old status.
+	 * @param WP_Post $post       Post data.
+	 */
+	public static function transition_post_status( $new_status, $old_status, $post ) {
+		if ( ( &#039;publish&#039; === $new_status || &#039;publish&#039; === $old_status ) &amp;&amp; in_array( $post-&gt;post_type, array( &#039;product&#039;, &#039;product_variation&#039; ), true ) ) {
+			self::delete_product_query_transients();
+		}
+	}
+
+	/**
+	 * Delete product view transients when needed e.g. when post status changes, or visibility/stock status is modified.
+	 */
+	public static function delete_product_query_transients() {
+		WC_Cache_Helper::get_transient_version( &#039;product_query&#039;, true );
+	}
+
+	/**
+	 * Handle type changes.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @param WC_Product $product Product data.
+	 * @param string     $from    Origin type.
+	 * @param string     $to      New type.
+	 */
+	public static function product_type_changed( $product, $from, $to ) {
+		/**
+		 * Filter to prevent variations from being deleted while switching from a variable product type to a variable product type.
+		 *
+		 * @since 5.0.0
+		 *
+		 * @param bool       A boolean value of true will delete the variations.
+		 * @param WC_Product $product Product data.
+		 * @return string    $from    Origin type.
+		 * @param string     $to      New type.
+		 */
+		if ( apply_filters( &#039;woocommerce_delete_variations_on_product_type_change&#039;, &#039;variable&#039; === $from &amp;&amp; &#039;variable&#039; !== $to, $product, $from, $to ) ) {
+			// If the product is no longer variable, we should ensure all variations are removed.
+			$data_store = WC_Data_Store::load( &#039;product-variable&#039; );
+			$data_store-&gt;delete_variations( $product-&gt;get_id(), true );
+		}
+	}
+
+	/**
+	 * When editing a term, check for product attributes.
+	 *
+	 * @param  int    $term_id  Term ID.
+	 * @param  int    $tt_id    Term taxonomy ID.
+	 * @param  string $taxonomy Taxonomy slug.
+	 */
+	public static function edit_term( $term_id, $tt_id, $taxonomy ) {
+		if ( strpos( $taxonomy, &#039;pa_&#039; ) === 0 ) {
+			self::$editing_term = get_term_by( &#039;id&#039;, $term_id, $taxonomy );
+		} else {
+			self::$editing_term = null;
+		}
+	}
+
+	/**
+	 * When a term is edited, check for product attributes and update variations.
+	 *
+	 * @param  int    $term_id  Term ID.
+	 * @param  int    $tt_id    Term taxonomy ID.
+	 * @param  string $taxonomy Taxonomy slug.
+	 */
+	public static function edited_term( $term_id, $tt_id, $taxonomy ) {
+		if ( ! is_null( self::$editing_term ) &amp;&amp; strpos( $taxonomy, &#039;pa_&#039; ) === 0 ) {
+			$edited_term = get_term_by( &#039;id&#039;, $term_id, $taxonomy );
+
+			if ( $edited_term-&gt;slug !== self::$editing_term-&gt;slug ) {
+				global $wpdb;
+
+				$wpdb-&gt;query( $wpdb-&gt;prepare( &quot;UPDATE {$wpdb-&gt;postmeta} SET meta_value = %s WHERE meta_key = %s AND meta_value = %s;&quot;, $edited_term-&gt;slug, &#039;attribute_&#039; . sanitize_title( $taxonomy ), self::$editing_term-&gt;slug ) );
+
+				$wpdb-&gt;query(
+					$wpdb-&gt;prepare(
+						&quot;UPDATE {$wpdb-&gt;postmeta} SET meta_value = REPLACE( meta_value, %s, %s ) WHERE meta_key = &#039;_default_attributes&#039;&quot;,
+						serialize( self::$editing_term-&gt;taxonomy ) . serialize( self::$editing_term-&gt;slug ),
+						serialize( $edited_term-&gt;taxonomy ) . serialize( $edited_term-&gt;slug )
+					)
+				);
+			}
+		} else {
+			self::$editing_term = null;
+		}
+	}
+
+	/**
+	 * Ensure floats are correctly converted to strings based on PHP locale.
+	 *
+	 * @param  null   $check      Whether to allow updating metadata for the given type.
+	 * @param  int    $object_id  Object ID.
+	 * @param  string $meta_key   Meta key.
+	 * @param  mixed  $meta_value Meta value. Must be serializable if non-scalar.
+	 * @param  mixed  $prev_value If specified, only update existing metadata entries with the specified value. Otherwise, update all entries.
+	 * @return null|bool
+	 */
+	public static function update_order_item_metadata( $check, $object_id, $meta_key, $meta_value, $prev_value ) {
+		if ( ! empty( $meta_value ) &amp;&amp; is_float( $meta_value ) ) {
+
+			// Convert float to string.
+			$meta_value = wc_float_to_string( $meta_value );
+
+			// Update meta value with new string.
+			update_metadata( &#039;order_item&#039;, $object_id, $meta_key, $meta_value, $prev_value );
+
+			return true;
+		}
+		return $check;
+	}
+
+	/**
+	 * Ensure floats are correctly converted to strings based on PHP locale.
+	 *
+	 * @param  null   $check      Whether to allow updating metadata for the given type.
+	 * @param  int    $object_id  Object ID.
+	 * @param  string $meta_key   Meta key.
+	 * @param  mixed  $meta_value Meta value. Must be serializable if non-scalar.
+	 * @param  mixed  $prev_value If specified, only update existing metadata entries with the specified value. Otherwise, update all entries.
+	 * @return null|bool
+	 */
+	public static function update_post_metadata( $check, $object_id, $meta_key, $meta_value, $prev_value ) {
+		// Delete product cache if someone uses meta directly.
+		if ( in_array( get_post_type( $object_id ), array( &#039;product&#039;, &#039;product_variation&#039; ), true ) ) {
+			wp_cache_delete( &#039;product-&#039; . $object_id, &#039;products&#039; );
+		}
+
+		if ( ! empty( $meta_value ) &amp;&amp; is_float( $meta_value ) &amp;&amp; ! registered_meta_key_exists( &#039;post&#039;, $meta_key ) &amp;&amp; in_array( get_post_type( $object_id ), array_merge( wc_get_order_types(), array( &#039;shop_coupon&#039;, &#039;product&#039;, &#039;product_variation&#039; ) ), true ) ) {
+
+			// Convert float to string.
+			$meta_value = wc_float_to_string( $meta_value );
+
+			// Update meta value with new string.
+			update_metadata( &#039;post&#039;, $object_id, $meta_key, $meta_value, $prev_value );
+
+			return true;
+		}
+		return $check;
+	}
+
+	/**
+	 * Forces the order posts to have a title in a certain format (containing the date).
+	 * Forces certain product data based on the product&#039;s type, e.g. grouped products cannot have a parent.
+	 *
+	 * @param array $data An array of slashed post data.
+	 * @return array
+	 */
+	public static function wp_insert_post_data( $data ) {
+		if ( &#039;shop_order&#039; === $data[&#039;post_type&#039;] &amp;&amp; isset( $data[&#039;post_date&#039;] ) ) {
+			$order_title = &#039;Order&#039;;
+			if ( $data[&#039;post_date&#039;] ) {
+				$order_title .= &#039; &amp;ndash; &#039; . date_i18n( &#039;F j, Y @ h:i A&#039;, strtotime( $data[&#039;post_date&#039;] ) );
+			}
+			$data[&#039;post_title&#039;] = $order_title;
+		} elseif ( &#039;product&#039; === $data[&#039;post_type&#039;] &amp;&amp; isset( $_POST[&#039;product-type&#039;] ) ) { // WPCS: input var ok, CSRF ok.
+			$product_type = wc_clean( wp_unslash( $_POST[&#039;product-type&#039;] ) ); // WPCS: input var ok, CSRF ok.
+			switch ( $product_type ) {
+				case &#039;grouped&#039;:
+				case &#039;variable&#039;:
+					$data[&#039;post_parent&#039;] = 0;
+					break;
+			}
+		} elseif ( &#039;product&#039; === $data[&#039;post_type&#039;] &amp;&amp; &#039;auto-draft&#039; === $data[&#039;post_status&#039;] ) {
+			$data[&#039;post_title&#039;] = &#039;AUTO-DRAFT&#039;;
+		} elseif ( &#039;shop_coupon&#039; === $data[&#039;post_type&#039;] ) {
+			// Coupons should never allow unfiltered HTML.
+			$data[&#039;post_title&#039;] = wp_filter_kses( $data[&#039;post_title&#039;] );
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Change embed data for certain post types.
+	 *
+	 * @since 3.2.0
+	 * @param array   $data The response data.
+	 * @param WP_Post $post The post object.
+	 * @return array
+	 */
+	public static function filter_oembed_response_data( $data, $post ) {
+		if ( in_array( $post-&gt;post_type, array( &#039;shop_order&#039;, &#039;shop_coupon&#039; ), true ) ) {
+			return array();
+		}
+		return $data;
+	}
+
+	/**
+	 * Removes variations etc belonging to a deleted post, and clears transients.
+	 *
+	 * @param mixed $id ID of post being deleted.
+	 */
+	public static function delete_post( $id ) {
+		$container = wc_get_container();
+		if ( ! $container-&gt;get( LegacyProxy::class )-&gt;call_function( &#039;current_user_can&#039;, &#039;delete_posts&#039; ) || ! $id ) {
+			return;
+		}
+
+		$post_type = self::get_post_type( $id );
+		switch ( $post_type ) {
+			case &#039;product&#039;:
+				$data_store = WC_Data_Store::load( &#039;product-variable&#039; );
+				$data_store-&gt;delete_variations( $id, true );
+				$data_store-&gt;delete_from_lookup_table( $id, &#039;wc_product_meta_lookup&#039; );
+				$container-&gt;get( ProductAttributesLookupDataStore::class )-&gt;on_product_deleted( $id );
+
+				$parent_id = wp_get_post_parent_id( $id );
+				if ( $parent_id ) {
+					wc_delete_product_transients( $parent_id );
+				}
+
+				break;
+			case &#039;product_variation&#039;:
+				$data_store = WC_Data_Store::load( &#039;product&#039; );
+				$data_store-&gt;delete_from_lookup_table( $id, &#039;wc_product_meta_lookup&#039; );
+				wc_delete_product_transients( wp_get_post_parent_id( $id ) );
+				$container-&gt;get( ProductAttributesLookupDataStore::class )-&gt;on_product_deleted( $id );
+
+				break;
+			case &#039;shop_order&#039;:
+			case DataSynchronizer::PLACEHOLDER_ORDER_POST_TYPE:
+				global $wpdb;
+
+				$refunds = $wpdb-&gt;get_results( $wpdb-&gt;prepare( &quot;SELECT ID FROM $wpdb-&gt;posts WHERE post_type = &#039;shop_order_refund&#039; AND post_parent = %d&quot;, $id ) );
+
+				if ( ! is_null( $refunds ) ) {
+					foreach ( $refunds as $refund ) {
+						wp_delete_post( $refund-&gt;ID, true );
+					}
+				}
+				break;
+		}
+	}
+
+	/**
+	 * Trash post.
+	 *
+	 * @param mixed $id Post ID.
+	 */
+	public static function trash_post( $id ) {
+		if ( ! $id ) {
+			return;
+		}
+
+		$post_type = self::get_post_type( $id );
+
+		// If this is an order, trash any refunds too.
+		if ( in_array( $post_type, wc_get_order_types( &#039;order-count&#039; ), true ) ) {
+			global $wpdb;
+
+			$refunds = $wpdb-&gt;get_results( $wpdb-&gt;prepare( &quot;SELECT ID FROM $wpdb-&gt;posts WHERE post_type = &#039;shop_order_refund&#039; AND post_parent = %d&quot;, $id ) );
+
+			foreach ( $refunds as $refund ) {
+				$wpdb-&gt;update( $wpdb-&gt;posts, array( &#039;post_status&#039; =&gt; &#039;trash&#039; ), array( &#039;ID&#039; =&gt; $refund-&gt;ID ) );
+			}
+
+			wc_delete_shop_order_transients( $id );
+
+			// If this is a product, trash children variations.
+		} elseif ( &#039;product&#039; === $post_type ) {
+			$data_store = WC_Data_Store::load( &#039;product-variable&#039; );
+			$data_store-&gt;delete_variations( $id, false );
+			wc_get_container()-&gt;get( ProductAttributesLookupDataStore::class )-&gt;on_product_deleted( $id );
+		} elseif ( &#039;product_variation&#039; === $post_type ) {
+			wc_get_container()-&gt;get( ProductAttributesLookupDataStore::class )-&gt;on_product_deleted( $id );
+		}
+	}
+
+	/**
+	 * Untrash post.
+	 *
+	 * @param mixed $id Post ID.
+	 */
+	public static function untrash_post( $id ) {
+		if ( ! $id ) {
+			return;
+		}
+
+		$post_type = self::get_post_type( $id );
+
+		if ( in_array( $post_type, wc_get_order_types( &#039;order-count&#039; ), true ) ) {
+			global $wpdb;
+
+			$refunds = $wpdb-&gt;get_results( $wpdb-&gt;prepare( &quot;SELECT ID FROM $wpdb-&gt;posts WHERE post_type = &#039;shop_order_refund&#039; AND post_parent = %d&quot;, $id ) );
+
+			foreach ( $refunds as $refund ) {
+				$wpdb-&gt;update( $wpdb-&gt;posts, array( &#039;post_status&#039; =&gt; &#039;wc-completed&#039; ), array( &#039;ID&#039; =&gt; $refund-&gt;ID ) );
+			}
+
+			wc_delete_shop_order_transients( $id );
+
+		} elseif ( &#039;product&#039; === $post_type ) {
+			$data_store = WC_Data_Store::load( &#039;product-variable&#039; );
+			$data_store-&gt;untrash_variations( $id );
+
+			wc_product_force_unique_sku( $id );
+
+			wc_get_container()-&gt;get( ProductAttributesLookupDataStore::class )-&gt;on_product_changed( $id );
+		} elseif ( &#039;product_variation&#039; === $post_type ) {
+			wc_get_container()-&gt;get( ProductAttributesLookupDataStore::class )-&gt;on_product_changed( $id );
+		}
+	}
+
+	/**
+	 * Get the post type for a given post.
+	 *
+	 * @param int $id The post id.
+	 * @return string The post type.
+	 */
+	private static function get_post_type( $id ) {
+		return wc_get_container()-&gt;get( LegacyProxy::class )-&gt;call_function( &#039;get_post_type&#039;, $id );
+	}
+
+	/**
+	 * Before deleting an order, do some cleanup.
+	 *
+	 * @since 3.2.0
+	 * @param int $order_id Order ID.
+	 */
+	public static function before_delete_order( $order_id ) {
+		if ( OrderUtil::is_order( $order_id, wc_get_order_types() ) ) {
+			// Clean up user.
+			$order = wc_get_order( $order_id );
+
+			// Check for `get_customer_id`, since this may be e.g. a refund order (which doesn&#039;t implement it).
+			$customer_id = is_callable( array( $order, &#039;get_customer_id&#039; ) ) ? $order-&gt;get_customer_id() : 0;
+
+			if ( $customer_id &gt; 0 &amp;&amp; &#039;shop_order&#039; === $order-&gt;get_type() ) {
+				$customer    = new WC_Customer( $customer_id );
+				$order_count = $customer-&gt;get_order_count();
+				$order_count --;
+
+				if ( 0 === $order_count ) {
+					$customer-&gt;set_is_paying_customer( false );
+					$customer-&gt;save();
+				}
+
+				// Delete order count and last order meta.
+				delete_user_meta( $customer_id, &#039;_order_count&#039; );
+				delete_user_meta( $customer_id, &#039;_last_order&#039; );
+			}
+
+			// Clean up items.
+			self::delete_order_items( $order_id );
+			self::delete_order_downloadable_permissions( $order_id );
+		}
+	}
+
+	/**
+	 * Remove item meta on permanent deletion.
+	 *
+	 * @param int $postid Post ID.
+	 */
+	public static function delete_order_items( $postid ) {
+		global $wpdb;
+
+		if ( OrderUtil::is_order( $postid, wc_get_order_types() ) ) {
+			do_action( &#039;woocommerce_delete_order_items&#039;, $postid );
+
+			$wpdb-&gt;query(
+				&quot;
+				DELETE {$wpdb-&gt;prefix}woocommerce_order_items, {$wpdb-&gt;prefix}woocommerce_order_itemmeta
+				FROM {$wpdb-&gt;prefix}woocommerce_order_items
+				JOIN {$wpdb-&gt;prefix}woocommerce_order_itemmeta ON {$wpdb-&gt;prefix}woocommerce_order_items.order_item_id = {$wpdb-&gt;prefix}woocommerce_order_itemmeta.order_item_id
+				WHERE {$wpdb-&gt;prefix}woocommerce_order_items.order_id = &#039;{$postid}&#039;;
+				&quot;
+			); // WPCS: unprepared SQL ok.
+
+			do_action( &#039;woocommerce_deleted_order_items&#039;, $postid );
+		}
+	}
+
+	/**
+	 * Remove downloadable permissions on permanent order deletion.
+	 *
+	 * @param int $postid Post ID.
+	 */
+	public static function delete_order_downloadable_permissions( $postid ) {
+		if ( OrderUtil::is_order( $postid, wc_get_order_types() ) ) {
+			do_action( &#039;woocommerce_delete_order_downloadable_permissions&#039;, $postid );
+
+			$data_store = WC_Data_Store::load( &#039;customer-download&#039; );
+			$data_store-&gt;delete_by_order_id( $postid );
+
+			do_action( &#039;woocommerce_deleted_order_downloadable_permissions&#039;, $postid );
+		}
+	}
+
+	/**
+	 * Flush meta cache for CRUD objects on direct update.
+	 *
+	 * @param  int    $meta_id    Meta ID.
+	 * @param  int    $object_id  Object ID.
+	 * @param  string $meta_key   Meta key.
+	 * @param  mixed  $meta_value Meta value.
+	 */
+	public static function flush_object_meta_cache( $meta_id, $object_id, $meta_key, $meta_value ) {
+		WC_Cache_Helper::invalidate_cache_group( &#039;object_&#039; . $object_id );
+	}
+
+	/**
+	 * Ensure default category gets set.
+	 *
+	 * @since 3.3.0
+	 * @param int    $object_id Product ID.
+	 * @param array  $terms     Terms array.
+	 * @param array  $tt_ids    Term ids array.
+	 * @param string $taxonomy  Taxonomy name.
+	 * @param bool   $append    Are we appending or setting terms.
+	 */
+	public static function force_default_term( $object_id, $terms, $tt_ids, $taxonomy, $append ) {
+		if ( ! $append &amp;&amp; &#039;product_cat&#039; === $taxonomy &amp;&amp; empty( $tt_ids ) &amp;&amp; &#039;product&#039; === get_post_type( $object_id ) ) {
+			$default_term = absint( get_option( &#039;default_product_cat&#039;, 0 ) );
+			$tt_ids       = array_map( &#039;absint&#039;, $tt_ids );
+
+			if ( $default_term &amp;&amp; ! in_array( $default_term, $tt_ids, true ) ) {
+				wp_set_post_terms( $object_id, array( $default_term ), &#039;product_cat&#039;, true );
+			}
+		}
+	}
+
+	/**
+	 * Ensure statuses are correctly reassigned when restoring orders and products.
+	 *
+	 * @param string $new_status      The new status of the post being restored.
+	 * @param int    $post_id         The ID of the post being restored.
+	 * @param string $previous_status The status of the post at the point where it was trashed.
+	 * @return string
+	 */
+	public static function wp_untrash_post_status( $new_status, $post_id, $previous_status ) {
+		$post_types = array( &#039;shop_order&#039;, &#039;shop_coupon&#039;, &#039;product&#039;, &#039;product_variation&#039; );
+
+		if ( in_array( get_post_type( $post_id ), $post_types, true ) ) {
+			$new_status = $previous_status;
+		}
+
+		return $new_status;
+	}
+
+	/**
+	 * When setting stock level, ensure the stock status is kept in sync.
+	 *
+	 * @param  int    $meta_id    Meta ID.
+	 * @param  int    $object_id  Object ID.
+	 * @param  string $meta_key   Meta key.
+	 * @param  mixed  $meta_value Meta value.
+	 * @deprecated    3.3
+	 */
+	public static function sync_product_stock_status( $meta_id, $object_id, $meta_key, $meta_value ) {}
+
+	/**
+	 * Update changed downloads.
+	 *
+	 * @deprecated  3.3.0 No action is necessary on changes to download paths since download_id is no longer based on file hash.
+	 * @param int   $product_id   Product ID.
+	 * @param int   $variation_id Variation ID. Optional product variation identifier.
+	 * @param array $downloads    Newly set files.
+	 */
+	public static function process_product_file_download_paths( $product_id, $variation_id, $downloads ) {
+		wc_deprecated_function( __FUNCTION__, &#039;3.3&#039; );
+	}
+
+	/**
+	 * Delete transients when terms are set.
+	 *
+	 * @deprecated   3.6
+	 * @param int    $object_id  Object ID.
+	 * @param mixed  $terms      An array of object terms.
+	 * @param array  $tt_ids     An array of term taxonomy IDs.
+	 * @param string $taxonomy   Taxonomy slug.
+	 * @param mixed  $append     Whether to append new terms to the old terms.
+	 * @param array  $old_tt_ids Old array of term taxonomy IDs.
+	 */
+	public static function set_object_terms( $object_id, $terms, $tt_ids, $taxonomy, $append, $old_tt_ids ) {
+		if ( in_array( get_post_type( $object_id ), array( &#039;product&#039;, &#039;product_variation&#039; ), true ) ) {
+			self::delete_product_query_transients();
+		}
+	}
+}
+
+WC_Post_Data::init();
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

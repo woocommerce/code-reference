@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-gateway-paypal.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * PayPal Standard Payment Gateway.
+ *
+ * Provides a PayPal Standard Payment Gateway.
+ *
+ * @class       WC_Gateway_Paypal
+ * @extends     WC_Payment_Gateway
+ * @version     2.3.0
+ * @package     WooCommerce\Classes\Payment
+ */
+
+use Automattic\Jetpack\Constants;
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * WC_Gateway_Paypal Class.
+ */
+class WC_Gateway_Paypal extends WC_Payment_Gateway {
+
+	/**
+	 * Whether or not logging is enabled
+	 *
+	 * @var bool
+	 */
+	public static $log_enabled = false;
+
+	/**
+	 * Logger instance
+	 *
+	 * @var WC_Logger
+	 */
+	public static $log = false;
+
+	/**
+	 * Whether the test mode is enabled.
+	 *
+	 * @var bool
+	 */
+	public $testmode;
+
+	/**
+	 * Whether the debug mode is enabled.
+	 *
+	 * @var bool
+	 */
+	public $debug;
+
+	/**
+	 * Email address to send payments to.
+	 *
+	 * @var string
+	 */
+	public $email;
+
+	/**
+	 * Receiver email.
+	 *
+	 * @var string
+	 */
+	public $receiver_email;
+
+	/**
+	 * Identity token.
+	 *
+	 * @var string
+	 */
+	public $identity_token;
+
+
+	/**
+	 * Constructor for the gateway.
+	 */
+	public function __construct() {
+		$this-&gt;id                = &#039;paypal&#039;;
+		$this-&gt;has_fields        = false;
+		$this-&gt;order_button_text = __( &#039;Proceed to PayPal&#039;, &#039;woocommerce&#039; );
+		$this-&gt;method_title      = __( &#039;PayPal Standard&#039;, &#039;woocommerce&#039; );
+		/* translators: %s: Link to WC system status page */
+		$this-&gt;method_description = __( &#039;PayPal Standard redirects customers to PayPal to enter their payment information.&#039;, &#039;woocommerce&#039; );
+		$this-&gt;supports           = array(
+			&#039;products&#039;,
+			&#039;refunds&#039;,
+		);
+
+		// Load the settings.
+		$this-&gt;init_form_fields();
+		$this-&gt;init_settings();
+
+		// Define user set variables.
+		$this-&gt;title          = $this-&gt;get_option( &#039;title&#039; );
+		$this-&gt;description    = $this-&gt;get_option( &#039;description&#039; );
+		$this-&gt;testmode       = &#039;yes&#039; === $this-&gt;get_option( &#039;testmode&#039;, &#039;no&#039; );
+		$this-&gt;debug          = &#039;yes&#039; === $this-&gt;get_option( &#039;debug&#039;, &#039;no&#039; );
+		$this-&gt;email          = $this-&gt;get_option( &#039;email&#039; );
+		$this-&gt;receiver_email = $this-&gt;get_option( &#039;receiver_email&#039;, $this-&gt;email );
+		$this-&gt;identity_token = $this-&gt;get_option( &#039;identity_token&#039; );
+		self::$log_enabled    = $this-&gt;debug;
+
+		if ( $this-&gt;testmode ) {
+			/* translators: %s: Link to PayPal sandbox testing guide page */
+			$this-&gt;description .= &#039; &#039; . sprintf( __( &#039;SANDBOX ENABLED. You can use sandbox testing accounts only. See the &lt;a href=&quot;%s&quot;&gt;PayPal Sandbox Testing Guide&lt;/a&gt; for more details.&#039;, &#039;woocommerce&#039; ), &#039;https://developer.paypal.com/docs/classic/lifecycle/ug_sandbox/&#039; );
+			$this-&gt;description  = trim( $this-&gt;description );
+		}
+
+		// Actions.
+		add_action( &#039;woocommerce_update_options_payment_gateways_&#039; . $this-&gt;id, array( $this, &#039;process_admin_options&#039; ) );
+		add_action( &#039;woocommerce_order_status_processing&#039;, array( $this, &#039;capture_payment&#039; ) );
+		add_action( &#039;woocommerce_order_status_completed&#039;, array( $this, &#039;capture_payment&#039; ) );
+		add_action( &#039;admin_enqueue_scripts&#039;, array( $this, &#039;admin_scripts&#039; ) );
+
+		if ( ! $this-&gt;is_valid_for_use() ) {
+			$this-&gt;enabled = &#039;no&#039;;
+		} else {
+			include_once dirname( __FILE__ ) . &#039;/includes/class-wc-gateway-paypal-ipn-handler.php&#039;;
+			new WC_Gateway_Paypal_IPN_Handler( $this-&gt;testmode, $this-&gt;receiver_email );
+
+			if ( $this-&gt;identity_token ) {
+				include_once dirname( __FILE__ ) . &#039;/includes/class-wc-gateway-paypal-pdt-handler.php&#039;;
+				$pdt_handler = new WC_Gateway_Paypal_PDT_Handler( $this-&gt;testmode, $this-&gt;identity_token );
+				$pdt_handler-&gt;set_receiver_email( $this-&gt;receiver_email );
+			}
+		}
+
+		if ( &#039;yes&#039; === $this-&gt;enabled ) {
+			add_filter( &#039;woocommerce_thankyou_order_received_text&#039;, array( $this, &#039;order_received_text&#039; ), 10, 2 );
+		}
+	}
+
+	/**
+	 * Return whether or not this gateway still requires setup to function.
+	 *
+	 * When this gateway is toggled on via AJAX, if this returns true a
+	 * redirect will occur to the settings page instead.
+	 *
+	 * @since 3.4.0
+	 * @return bool
+	 */
+	public function needs_setup() {
+		return ! is_email( $this-&gt;email );
+	}
+
+	/**
+	 * Logging method.
+	 *
+	 * @param string $message Log message.
+	 * @param string $level Optional. Default &#039;info&#039;. Possible values:
+	 *                      emergency|alert|critical|error|warning|notice|info|debug.
+	 */
+	public static function log( $message, $level = &#039;info&#039; ) {
+		if ( self::$log_enabled ) {
+			if ( empty( self::$log ) ) {
+				self::$log = wc_get_logger();
+			}
+			self::$log-&gt;log( $level, $message, array( &#039;source&#039; =&gt; &#039;paypal&#039; ) );
+		}
+	}
+
+	/**
+	 * Processes and saves options.
+	 * If there is an error thrown, will continue to save and validate fields, but will leave the erroring field out.
+	 *
+	 * @return bool was anything saved?
+	 */
+	public function process_admin_options() {
+		$saved = parent::process_admin_options();
+
+		// Maybe clear logs.
+		if ( &#039;yes&#039; !== $this-&gt;get_option( &#039;debug&#039;, &#039;no&#039; ) ) {
+			if ( empty( self::$log ) ) {
+				self::$log = wc_get_logger();
+			}
+			self::$log-&gt;clear( &#039;paypal&#039; );
+		}
+
+		return $saved;
+	}
+
+	/**
+	 * Get gateway icon.
+	 *
+	 * @return string
+	 */
+	public function get_icon() {
+		// We need a base country for the link to work, bail if in the unlikely event no country is set.
+		$base_country = WC()-&gt;countries-&gt;get_base_country();
+		if ( empty( $base_country ) ) {
+			return &#039;&#039;;
+		}
+		$icon_html = &#039;&#039;;
+		$icon      = (array) $this-&gt;get_icon_image( $base_country );
+
+		foreach ( $icon as $i ) {
+			$icon_html .= &#039;&lt;img src=&quot;&#039; . esc_attr( $i ) . &#039;&quot; alt=&quot;&#039; . esc_attr__( &#039;PayPal acceptance mark&#039;, &#039;woocommerce&#039; ) . &#039;&quot; /&gt;&#039;;
+		}
+
+		$icon_html .= sprintf( &#039;&lt;a href=&quot;%1$s&quot; class=&quot;about_paypal&quot; onclick=&quot;javascript:window.open(\&#039;%1$s\&#039;,\&#039;WIPaypal\&#039;,\&#039;toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700\&#039;); return false;&quot;&gt;&#039; . esc_attr__( &#039;What is PayPal?&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/a&gt;&#039;, esc_url( $this-&gt;get_icon_url( $base_country ) ) );
+
+		return apply_filters( &#039;woocommerce_gateway_icon&#039;, $icon_html, $this-&gt;id );
+	}
+
+	/**
+	 * Get the link for an icon based on country.
+	 *
+	 * @param  string $country Country two letter code.
+	 * @return string
+	 */
+	protected function get_icon_url( $country ) {
+		$url           = &#039;https://www.paypal.com/&#039; . strtolower( $country );
+		$home_counties = array( &#039;BE&#039;, &#039;CZ&#039;, &#039;DK&#039;, &#039;HU&#039;, &#039;IT&#039;, &#039;JP&#039;, &#039;NL&#039;, &#039;NO&#039;, &#039;ES&#039;, &#039;SE&#039;, &#039;TR&#039;, &#039;IN&#039; );
+		$countries     = array( &#039;DZ&#039;, &#039;AU&#039;, &#039;BH&#039;, &#039;BQ&#039;, &#039;BW&#039;, &#039;CA&#039;, &#039;CN&#039;, &#039;CW&#039;, &#039;FI&#039;, &#039;FR&#039;, &#039;DE&#039;, &#039;GR&#039;, &#039;HK&#039;, &#039;ID&#039;, &#039;JO&#039;, &#039;KE&#039;, &#039;KW&#039;, &#039;LU&#039;, &#039;MY&#039;, &#039;MA&#039;, &#039;OM&#039;, &#039;PH&#039;, &#039;PL&#039;, &#039;PT&#039;, &#039;QA&#039;, &#039;IE&#039;, &#039;RU&#039;, &#039;BL&#039;, &#039;SX&#039;, &#039;MF&#039;, &#039;SA&#039;, &#039;SG&#039;, &#039;SK&#039;, &#039;KR&#039;, &#039;SS&#039;, &#039;TW&#039;, &#039;TH&#039;, &#039;AE&#039;, &#039;GB&#039;, &#039;US&#039;, &#039;VN&#039; );
+
+		if ( in_array( $country, $home_counties, true ) ) {
+			return $url . &#039;/webapps/mpp/home&#039;;
+		} elseif ( in_array( $country, $countries, true ) ) {
+			return $url . &#039;/webapps/mpp/paypal-popup&#039;;
+		} else {
+			return $url . &#039;/cgi-bin/webscr?cmd=xpt/Marketing/general/WIPaypal-outside&#039;;
+		}
+	}
+
+	/**
+	 * Get PayPal images for a country.
+	 *
+	 * @param string $country Country code.
+	 * @return array of image URLs
+	 */
+	protected function get_icon_image( $country ) {
+		switch ( $country ) {
+			case &#039;US&#039;:
+			case &#039;NZ&#039;:
+			case &#039;CZ&#039;:
+			case &#039;HU&#039;:
+			case &#039;MY&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg&#039;;
+				break;
+			case &#039;TR&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/mktg/logo-center/logo_paypal_odeme_secenekleri.jpg&#039;;
+				break;
+			case &#039;GB&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/mktg/Logo/AM_mc_vs_ms_ae_UK.png&#039;;
+				break;
+			case &#039;MX&#039;:
+				$icon = array(
+					&#039;https://www.paypal.com/es_XC/Marketing/i/banner/paypal_visa_mastercard_amex.png&#039;,
+					&#039;https://www.paypal.com/es_XC/Marketing/i/banner/paypal_debit_card_275x60.gif&#039;,
+				);
+				break;
+			case &#039;FR&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/mktg/logo-center/logo_paypal_moyens_paiement_fr.jpg&#039;;
+				break;
+			case &#039;AU&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/en_AU/mktg/logo/Solutions-graphics-1-184x80.jpg&#039;;
+				break;
+			case &#039;DK&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/mktg/logo-center/logo_PayPal_betalingsmuligheder_dk.jpg&#039;;
+				break;
+			case &#039;RU&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/ru_RU/mktg/business/pages/logo-center/AM_mc_vs_dc_ae.jpg&#039;;
+				break;
+			case &#039;NO&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/mktg/logo-center/banner_pl_just_pp_319x110.jpg&#039;;
+				break;
+			case &#039;CA&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/en_CA/mktg/logo-image/AM_mc_vs_dc_ae.jpg&#039;;
+				break;
+			case &#039;HK&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/en_HK/mktg/logo/AM_mc_vs_dc_ae.jpg&#039;;
+				break;
+			case &#039;SG&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/en_SG/mktg/Logos/AM_mc_vs_dc_ae.jpg&#039;;
+				break;
+			case &#039;TW&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/en_TW/mktg/logos/AM_mc_vs_dc_ae.jpg&#039;;
+				break;
+			case &#039;TH&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/en_TH/mktg/Logos/AM_mc_vs_dc_ae.jpg&#039;;
+				break;
+			case &#039;JP&#039;:
+				$icon = &#039;https://www.paypal.com/ja_JP/JP/i/bnr/horizontal_solution_4_jcb.gif&#039;;
+				break;
+			case &#039;IN&#039;:
+				$icon = &#039;https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg&#039;;
+				break;
+			default:
+				$icon = WC_HTTPS::force_https_url( WC()-&gt;plugin_url() . &#039;/includes/gateways/paypal/assets/images/paypal.png&#039; );
+				break;
+		}
+		return apply_filters( &#039;woocommerce_paypal_icon&#039;, $icon );
+	}
+
+	/**
+	 * Check if this gateway is available in the user&#039;s country based on currency.
+	 *
+	 * @return bool
+	 */
+	public function is_valid_for_use() {
+		return in_array(
+			get_woocommerce_currency(),
+			apply_filters(
+				&#039;woocommerce_paypal_supported_currencies&#039;,
+				array( &#039;AUD&#039;, &#039;BRL&#039;, &#039;CAD&#039;, &#039;MXN&#039;, &#039;NZD&#039;, &#039;HKD&#039;, &#039;SGD&#039;, &#039;USD&#039;, &#039;EUR&#039;, &#039;JPY&#039;, &#039;TRY&#039;, &#039;NOK&#039;, &#039;CZK&#039;, &#039;DKK&#039;, &#039;HUF&#039;, &#039;ILS&#039;, &#039;MYR&#039;, &#039;PHP&#039;, &#039;PLN&#039;, &#039;SEK&#039;, &#039;CHF&#039;, &#039;TWD&#039;, &#039;THB&#039;, &#039;GBP&#039;, &#039;RMB&#039;, &#039;RUB&#039;, &#039;INR&#039; )
+			),
+			true
+		);
+	}
+
+	/**
+	 * Admin Panel Options.
+	 * - Options for bits like &#039;title&#039; and availability on a country-by-country basis.
+	 *
+	 * @since 1.0.0
+	 */
+	public function admin_options() {
+		if ( $this-&gt;is_valid_for_use() ) {
+			parent::admin_options();
+		} else {
+			?&gt;
+			&lt;div class=&quot;inline error&quot;&gt;
+				&lt;p&gt;
+					&lt;strong&gt;&lt;?php esc_html_e( &#039;Gateway disabled&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/strong&gt;: &lt;?php esc_html_e( &#039;PayPal Standard does not support your store currency.&#039;, &#039;woocommerce&#039; ); ?&gt;
+				&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;?php
+		}
+	}
+
+	/**
+	 * Initialise Gateway Settings Form Fields.
+	 */
+	public function init_form_fields() {
+		$this-&gt;form_fields = include __DIR__ . &#039;/includes/settings-paypal.php&#039;;
+	}
+
+	/**
+	 * Get the transaction URL.
+	 *
+	 * @param  WC_Order $order Order object.
+	 * @return string
+	 */
+	public function get_transaction_url( $order ) {
+		if ( $this-&gt;testmode ) {
+			$this-&gt;view_transaction_url = &#039;https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_view-a-trans&amp;id=%s&#039;;
+		} else {
+			$this-&gt;view_transaction_url = &#039;https://www.paypal.com/cgi-bin/webscr?cmd=_view-a-trans&amp;id=%s&#039;;
+		}
+		return parent::get_transaction_url( $order );
+	}
+
+	/**
+	 * Process the payment and return the result.
+	 *
+	 * @param  int $order_id Order ID.
+	 * @return array
+	 */
+	public function process_payment( $order_id ) {
+		include_once dirname( __FILE__ ) . &#039;/includes/class-wc-gateway-paypal-request.php&#039;;
+
+		$order          = wc_get_order( $order_id );
+		$paypal_request = new WC_Gateway_Paypal_Request( $this );
+
+		return array(
+			&#039;result&#039;   =&gt; &#039;success&#039;,
+			&#039;redirect&#039; =&gt; $paypal_request-&gt;get_request_url( $order, $this-&gt;testmode ),
+		);
+	}
+
+	/**
+	 * Can the order be refunded via PayPal?
+	 *
+	 * @param  WC_Order $order Order object.
+	 * @return bool
+	 */
+	public function can_refund_order( $order ) {
+		$has_api_creds = false;
+
+		if ( $this-&gt;testmode ) {
+			$has_api_creds = $this-&gt;get_option( &#039;sandbox_api_username&#039; ) &amp;&amp; $this-&gt;get_option( &#039;sandbox_api_password&#039; ) &amp;&amp; $this-&gt;get_option( &#039;sandbox_api_signature&#039; );
+		} else {
+			$has_api_creds = $this-&gt;get_option( &#039;api_username&#039; ) &amp;&amp; $this-&gt;get_option( &#039;api_password&#039; ) &amp;&amp; $this-&gt;get_option( &#039;api_signature&#039; );
+		}
+
+		return $order &amp;&amp; $order-&gt;get_transaction_id() &amp;&amp; $has_api_creds;
+	}
+
+	/**
+	 * Init the API class and set the username/password etc.
+	 */
+	protected function init_api() {
+		include_once dirname( __FILE__ ) . &#039;/includes/class-wc-gateway-paypal-api-handler.php&#039;;
+
+		WC_Gateway_Paypal_API_Handler::$api_username  = $this-&gt;testmode ? $this-&gt;get_option( &#039;sandbox_api_username&#039; ) : $this-&gt;get_option( &#039;api_username&#039; );
+		WC_Gateway_Paypal_API_Handler::$api_password  = $this-&gt;testmode ? $this-&gt;get_option( &#039;sandbox_api_password&#039; ) : $this-&gt;get_option( &#039;api_password&#039; );
+		WC_Gateway_Paypal_API_Handler::$api_signature = $this-&gt;testmode ? $this-&gt;get_option( &#039;sandbox_api_signature&#039; ) : $this-&gt;get_option( &#039;api_signature&#039; );
+		WC_Gateway_Paypal_API_Handler::$sandbox       = $this-&gt;testmode;
+	}
+
+	/**
+	 * Process a refund if supported.
+	 *
+	 * @param  int    $order_id Order ID.
+	 * @param  float  $amount Refund amount.
+	 * @param  string $reason Refund reason.
+	 * @return bool|WP_Error
+	 */
+	public function process_refund( $order_id, $amount = null, $reason = &#039;&#039; ) {
+		$order = wc_get_order( $order_id );
+
+		if ( ! $this-&gt;can_refund_order( $order ) ) {
+			return new WP_Error( &#039;error&#039;, __( &#039;Refund failed.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$this-&gt;init_api();
+
+		$result = WC_Gateway_Paypal_API_Handler::refund_transaction( $order, $amount, $reason );
+
+		if ( is_wp_error( $result ) ) {
+			$this-&gt;log( &#039;Refund Failed: &#039; . $result-&gt;get_error_message(), &#039;error&#039; );
+			return new WP_Error( &#039;error&#039;, $result-&gt;get_error_message() );
+		}
+
+		$this-&gt;log( &#039;Refund Result: &#039; . wc_print_r( $result, true ) );
+
+		switch ( strtolower( $result-&gt;ACK ) ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			case &#039;success&#039;:
+			case &#039;successwithwarning&#039;:
+				$order-&gt;add_order_note(
+					/* translators: 1: Refund amount, 2: Refund ID */
+					sprintf( __( &#039;Refunded %1$s - Refund ID: %2$s&#039;, &#039;woocommerce&#039; ), $result-&gt;GROSSREFUNDAMT, $result-&gt;REFUNDTRANSACTIONID ) // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+				);
+				return true;
+		}
+
+		return isset( $result-&gt;L_LONGMESSAGE0 ) ? new WP_Error( &#039;error&#039;, $result-&gt;L_LONGMESSAGE0 ) : false; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+	}
+
+	/**
+	 * Capture payment when the order is changed from on-hold to complete or processing
+	 *
+	 * @param  int $order_id Order ID.
+	 */
+	public function capture_payment( $order_id ) {
+		$order = wc_get_order( $order_id );
+
+		if ( &#039;paypal&#039; === $order-&gt;get_payment_method() &amp;&amp; &#039;pending&#039; === $order-&gt;get_meta( &#039;_paypal_status&#039;, true ) &amp;&amp; $order-&gt;get_transaction_id() ) {
+			$this-&gt;init_api();
+			$result = WC_Gateway_Paypal_API_Handler::do_capture( $order );
+
+			if ( is_wp_error( $result ) ) {
+				$this-&gt;log( &#039;Capture Failed: &#039; . $result-&gt;get_error_message(), &#039;error&#039; );
+				/* translators: %s: Paypal gateway error message */
+				$order-&gt;add_order_note( sprintf( __( &#039;Payment could not be captured: %s&#039;, &#039;woocommerce&#039; ), $result-&gt;get_error_message() ) );
+				return;
+			}
+
+			$this-&gt;log( &#039;Capture Result: &#039; . wc_print_r( $result, true ) );
+
+			// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			if ( ! empty( $result-&gt;PAYMENTSTATUS ) ) {
+				switch ( $result-&gt;PAYMENTSTATUS ) {
+					case &#039;Completed&#039;:
+						/* translators: 1: Amount, 2: Authorization ID, 3: Transaction ID */
+						$order-&gt;add_order_note( sprintf( __( &#039;Payment of %1$s was captured - Auth ID: %2$s, Transaction ID: %3$s&#039;, &#039;woocommerce&#039; ), $result-&gt;AMT, $result-&gt;AUTHORIZATIONID, $result-&gt;TRANSACTIONID ) );
+						$order-&gt;update_meta_data( &#039;_paypal_status&#039;, $result-&gt;PAYMENTSTATUS );
+						$order-&gt;set_transaction_id( $result-&gt;TRANSACTIONID );
+						$order-&gt;save();
+						break;
+					default:
+						/* translators: 1: Authorization ID, 2: Payment status */
+						$order-&gt;add_order_note( sprintf( __( &#039;Payment could not be captured - Auth ID: %1$s, Status: %2$s&#039;, &#039;woocommerce&#039; ), $result-&gt;AUTHORIZATIONID, $result-&gt;PAYMENTSTATUS ) );
+						break;
+				}
+			}
+			// phpcs:enable
+		}
+	}
+
+	/**
+	 * Load admin scripts.
+	 *
+	 * @since 3.3.0
+	 */
+	public function admin_scripts() {
+		$screen    = get_current_screen();
+		$screen_id = $screen ? $screen-&gt;id : &#039;&#039;;
+
+		if ( &#039;woocommerce_page_wc-settings&#039; !== $screen_id ) {
+			return;
+		}
+
+		$suffix  = Constants::is_true( &#039;SCRIPT_DEBUG&#039; ) ? &#039;&#039; : &#039;.min&#039;;
+		$version = Constants::get_constant( &#039;WC_VERSION&#039; );
+
+		wp_enqueue_script( &#039;woocommerce_paypal_admin&#039;, WC()-&gt;plugin_url() . &#039;/includes/gateways/paypal/assets/js/paypal-admin&#039; . $suffix . &#039;.js&#039;, array(), $version, true );
+	}
+
+	/**
+	 * Custom PayPal order received text.
+	 *
+	 * @since 3.9.0
+	 * @param string   $text Default text.
+	 * @param WC_Order $order Order data.
+	 * @return string
+	 */
+	public function order_received_text( $text, $order ) {
+		if ( $order &amp;&amp; $this-&gt;id === $order-&gt;get_payment_method() ) {
+			return esc_html__( &#039;Thank you for your payment. Your transaction has been completed, and a receipt for your purchase has been emailed to you. Log into your PayPal account to view transaction details.&#039;, &#039;woocommerce&#039; );
+		}
+
+		return $text;
+	}
+
+	/**
+	 * Determines whether PayPal Standard should be loaded or not.
+	 *
+	 * By default PayPal Standard isn&#039;t loaded on new installs or on existing sites which haven&#039;t set up the gateway.
+	 *
+	 * @since 5.5.0
+	 *
+	 * @return bool Whether PayPal Standard should be loaded.
+	 */
+	public function should_load() {
+		$option_key  = &#039;_should_load&#039;;
+		$should_load = $this-&gt;get_option( $option_key );
+
+		if ( &#039;&#039; === $should_load ) {
+
+			// New installs without PayPal Standard enabled don&#039;t load it.
+			if ( &#039;no&#039; === $this-&gt;enabled &amp;&amp; WC_Install::is_new_install() ) {
+				$should_load = false;
+			} else {
+				$should_load = true;
+			}
+
+			$this-&gt;update_option( $option_key, wc_bool_to_string( $should_load ) );
+		} else {
+			$should_load = wc_string_to_bool( $should_load );
+		}
+
+		/**
+		 * Allow third-parties to filter whether PayPal Standard should be loaded or not.
+		 *
+		 * @since 5.5.0
+		 *
+		 * @param bool              $should_load Whether PayPal Standard should be loaded.
+		 * @param WC_Gateway_Paypal $this        The WC_Gateway_Paypal instance.
+		 */
+		return apply_filters( &#039;woocommerce_should_load_paypal_standard&#039;, $should_load, $this );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

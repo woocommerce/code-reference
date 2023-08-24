@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866951">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866951">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">Segmenter.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Class for adding segmenting support without cluttering the data stores.
+ */
+
+namespace Automattic\WooCommerce\Admin\API\Reports\Orders\Stats;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+use Automattic\WooCommerce\Admin\API\Reports\Segmenter as ReportsSegmenter;
+use Automattic\WooCommerce\Admin\API\Reports\ParameterException;
+
+/**
+ * Date &amp; time interval and numeric range handling class for Reporting API.
+ */
+class Segmenter extends ReportsSegmenter {
+
+	/**
+	 * Returns column =&gt; query mapping to be used for product-related product-level segmenting query
+	 * (e.g. products sold, revenue from product X when segmenting by category).
+	 *
+	 * @param string $products_table Name of SQL table containing the product-level segmenting info.
+	 *
+	 * @return array Column =&gt; SELECT query mapping.
+	 */
+	protected function get_segment_selections_product_level( $products_table ) {
+		$columns_mapping = array(
+			&#039;num_items_sold&#039; =&gt; &quot;SUM($products_table.product_qty) as num_items_sold&quot;,
+			&#039;total_sales&#039;    =&gt; &quot;SUM($products_table.product_gross_revenue) AS total_sales&quot;,
+			&#039;coupons&#039;        =&gt; &#039;SUM( coupon_lookup_left_join.discount_amount ) AS coupons&#039;,
+			&#039;coupons_count&#039;  =&gt; &#039;COUNT( DISTINCT( coupon_lookup_left_join.coupon_id ) ) AS coupons_count&#039;,
+			&#039;refunds&#039;        =&gt; &quot;SUM( CASE WHEN $products_table.product_gross_revenue &lt; 0 THEN $products_table.product_gross_revenue ELSE 0 END ) AS refunds&quot;,
+			&#039;taxes&#039;          =&gt; &quot;SUM($products_table.tax_amount) AS taxes&quot;,
+			&#039;shipping&#039;       =&gt; &quot;SUM($products_table.shipping_amount) AS shipping&quot;,
+			&#039;net_revenue&#039;    =&gt; &quot;SUM($products_table.product_net_revenue) AS net_revenue&quot;,
+		);
+
+		return $columns_mapping;
+	}
+
+	/**
+	 * Returns column =&gt; query mapping to be used for order-related product-level segmenting query
+	 * (e.g. avg items per order when segmented by category).
+	 *
+	 * @param string $unique_orders_table Name of SQL table containing the order-level segmenting info.
+	 *
+	 * @return array Column =&gt; SELECT query mapping.
+	 */
+	protected function get_segment_selections_order_level( $unique_orders_table ) {
+		$columns_mapping = array(
+			&#039;orders_count&#039;        =&gt; &quot;COUNT($unique_orders_table.order_id) AS orders_count&quot;,
+			&#039;avg_items_per_order&#039; =&gt; &quot;AVG($unique_orders_table.num_items_sold) AS avg_items_per_order&quot;,
+			&#039;avg_order_value&#039;     =&gt; &quot;SUM($unique_orders_table.net_total) / COUNT($unique_orders_table.order_id) AS avg_order_value&quot;,
+			&#039;total_customers&#039;     =&gt; &quot;COUNT( DISTINCT( $unique_orders_table.customer_id ) ) AS total_customers&quot;,
+		);
+
+		return $columns_mapping;
+	}
+
+	/**
+	 * Returns column =&gt; query mapping to be used for order-level segmenting query
+	 * (e.g. avg items per order or Net sales when segmented by coupons).
+	 *
+	 * @param string $order_stats_table Name of SQL table containing the order-level info.
+	 * @param array  $overrides Array of overrides for default column calculations.
+	 *
+	 * @return array Column =&gt; SELECT query mapping.
+	 */
+	protected function segment_selections_orders( $order_stats_table, $overrides = array() ) {
+		$columns_mapping = array(
+			&#039;num_items_sold&#039;      =&gt; &quot;SUM($order_stats_table.num_items_sold) as num_items_sold&quot;,
+			&#039;total_sales&#039;         =&gt; &quot;SUM($order_stats_table.total_sales) AS total_sales&quot;,
+			&#039;coupons&#039;             =&gt; &quot;SUM($order_stats_table.discount_amount) AS coupons&quot;,
+			&#039;coupons_count&#039;       =&gt; &#039;COUNT( DISTINCT(coupon_lookup_left_join.coupon_id) ) AS coupons_count&#039;,
+			&#039;refunds&#039;             =&gt; &quot;SUM( CASE WHEN $order_stats_table.parent_id != 0 THEN $order_stats_table.total_sales END ) AS refunds&quot;,
+			&#039;taxes&#039;               =&gt; &quot;SUM($order_stats_table.tax_total) AS taxes&quot;,
+			&#039;shipping&#039;            =&gt; &quot;SUM($order_stats_table.shipping_total) AS shipping&quot;,
+			&#039;net_revenue&#039;         =&gt; &quot;SUM($order_stats_table.net_total) AS net_revenue&quot;,
+			&#039;orders_count&#039;        =&gt; &quot;COUNT($order_stats_table.order_id) AS orders_count&quot;,
+			&#039;avg_items_per_order&#039; =&gt; &quot;AVG($order_stats_table.num_items_sold) AS avg_items_per_order&quot;,
+			&#039;avg_order_value&#039;     =&gt; &quot;SUM($order_stats_table.net_total) / COUNT($order_stats_table.order_id) AS avg_order_value&quot;,
+			&#039;total_customers&#039;     =&gt; &quot;COUNT( DISTINCT( $order_stats_table.customer_id ) ) AS total_customers&quot;,
+		);
+
+		if ( $overrides ) {
+			$columns_mapping = array_merge( $columns_mapping, $overrides );
+		}
+
+		return $columns_mapping;
+	}
+
+	/**
+	 * Calculate segments for totals where the segmenting property is bound to product (e.g. category, product_id, variation_id).
+	 *
+	 * @param array  $segmenting_selections SELECT part of segmenting SQL query--one for &#039;product_level&#039; and one for &#039;order_level&#039;.
+	 * @param string $segmenting_from FROM part of segmenting SQL query.
+	 * @param string $segmenting_where WHERE part of segmenting SQL query.
+	 * @param string $segmenting_groupby GROUP BY part of segmenting SQL query.
+	 * @param string $segmenting_dimension_name Name of the segmenting dimension.
+	 * @param string $table_name Name of SQL table which is the stats table for orders.
+	 * @param array  $totals_query Array of SQL clauses for totals query.
+	 * @param string $unique_orders_table Name of temporary SQL table that holds unique orders.
+	 *
+	 * @return array
+	 */
+	protected function get_product_related_totals_segments( $segmenting_selections, $segmenting_from, $segmenting_where, $segmenting_groupby, $segmenting_dimension_name, $table_name, $totals_query, $unique_orders_table ) {
+		global $wpdb;
+
+		$product_segmenting_table = $wpdb-&gt;prefix . &#039;wc_order_product_lookup&#039;;
+
+		// Can&#039;t get all the numbers from one query, so split it into one query for product-level numbers and one for order-level numbers (which first need to have orders uniqued).
+		// Product-level numbers.
+		$segments_products = $wpdb-&gt;get_results(
+			&quot;SELECT
+						$segmenting_groupby AS $segmenting_dimension_name
+						{$segmenting_selections[&#039;product_level&#039;]}
+					FROM
+						$table_name
+						$segmenting_from
+						{$totals_query[&#039;from_clause&#039;]}
+					WHERE
+						1=1
+						{$totals_query[&#039;where_time_clause&#039;]}
+						{$totals_query[&#039;where_clause&#039;]}
+						$segmenting_where
+					GROUP BY
+						$segmenting_groupby&quot;,
+			ARRAY_A
+		); // phpcs:ignore cache ok, DB call ok, unprepared SQL ok.
+
+		// Order level numbers.
+		// As there can be 2 same product ids (or variation ids) per one order, the orders first need to be uniqued before calculating averages, customer counts, etc.
+		$segments_orders = $wpdb-&gt;get_results(
+			&quot;SELECT
+				    $unique_orders_table.$segmenting_dimension_name AS $segmenting_dimension_name
+				    {$segmenting_selections[&#039;order_level&#039;]}
+				FROM
+				(
+					SELECT
+				        $table_name.order_id,
+				        $segmenting_groupby AS $segmenting_dimension_name,
+				        MAX( num_items_sold ) AS num_items_sold,
+				        MAX( net_total ) as net_total,
+				        MAX( returning_customer ) AS returning_customer,
+						MAX( $table_name.customer_id ) as customer_id
+				    FROM
+				        $table_name
+				        $segmenting_from
+				        {$totals_query[&#039;from_clause&#039;]}
+				    WHERE
+				        1=1
+						{$totals_query[&#039;where_time_clause&#039;]}
+						{$totals_query[&#039;where_clause&#039;]}
+						$segmenting_where
+				    GROUP BY
+				        $product_segmenting_table.order_id, $segmenting_groupby
+				) AS $unique_orders_table
+				GROUP BY
+				    $unique_orders_table.$segmenting_dimension_name&quot;,
+			ARRAY_A
+		); // phpcs:ignore cache ok, DB call ok, unprepared SQL ok.
+
+		$totals_segments = $this-&gt;merge_segment_totals_results( $segmenting_dimension_name, $segments_products, $segments_orders );
+		return $totals_segments;
+	}
+
+	/**
+	 * Calculate segments for intervals where the segmenting property is bound to product (e.g. category, product_id, variation_id).
+	 *
+	 * @param array  $segmenting_selections SELECT part of segmenting SQL query--one for &#039;product_level&#039; and one for &#039;order_level&#039;.
+	 * @param string $segmenting_from FROM part of segmenting SQL query.
+	 * @param string $segmenting_where WHERE part of segmenting SQL query.
+	 * @param string $segmenting_groupby GROUP BY part of segmenting SQL query.
+	 * @param string $segmenting_dimension_name Name of the segmenting dimension.
+	 * @param string $table_name Name of SQL table which is the stats table for orders.
+	 * @param array  $intervals_query Array of SQL clauses for intervals query.
+	 * @param string $unique_orders_table Name of temporary SQL table that holds unique orders.
+	 *
+	 * @return array
+	 */
+	protected function get_product_related_intervals_segments( $segmenting_selections, $segmenting_from, $segmenting_where, $segmenting_groupby, $segmenting_dimension_name, $table_name, $intervals_query, $unique_orders_table ) {
+		global $wpdb;
+
+		$product_segmenting_table = $wpdb-&gt;prefix . &#039;wc_order_product_lookup&#039;;
+
+		// LIMIT offset, rowcount needs to be updated to LIMIT offset, rowcount * max number of segments.
+		$limit_parts      = explode( &#039;,&#039;, $intervals_query[&#039;limit&#039;] );
+		$orig_rowcount    = intval( $limit_parts[1] );
+		$segmenting_limit = $limit_parts[0] . &#039;,&#039; . $orig_rowcount * count( $this-&gt;get_all_segments() );
+
+		// Can&#039;t get all the numbers from one query, so split it into one query for product-level numbers and one for order-level numbers (which first need to have orders uniqued).
+		// Product-level numbers.
+		$segments_products = $wpdb-&gt;get_results(
+			&quot;SELECT
+						{$intervals_query[&#039;select_clause&#039;]} AS time_interval,
+						$segmenting_groupby AS $segmenting_dimension_name
+						{$segmenting_selections[&#039;product_level&#039;]}
+					FROM
+						$table_name
+						$segmenting_from
+						{$intervals_query[&#039;from_clause&#039;]}
+					WHERE
+						1=1
+						{$intervals_query[&#039;where_time_clause&#039;]}
+						{$intervals_query[&#039;where_clause&#039;]}
+						$segmenting_where
+					GROUP BY
+						time_interval, $segmenting_groupby
+					$segmenting_limit&quot;,
+			ARRAY_A
+		); // phpcs:ignore cache ok, DB call ok, unprepared SQL ok.
+
+		// Order level numbers.
+		// As there can be 2 same product ids (or variation ids) per one order, the orders first need to be uniqued before calculating averages, customer counts, etc.
+		$segments_orders = $wpdb-&gt;get_results(
+			&quot;SELECT
+					$unique_orders_table.time_interval AS time_interval,
+				    $unique_orders_table.$segmenting_dimension_name AS $segmenting_dimension_name
+				    {$segmenting_selections[&#039;order_level&#039;]}
+				FROM
+				(
+					SELECT
+						MAX( $table_name.date_created ) AS datetime_anchor,
+						{$intervals_query[&#039;select_clause&#039;]} AS time_interval,
+				        $table_name.order_id,
+				        $segmenting_groupby AS $segmenting_dimension_name,
+				        MAX( num_items_sold ) AS num_items_sold,
+				        MAX( net_total ) as net_total,
+				        MAX( returning_customer ) AS returning_customer,
+						MAX( $table_name.customer_id ) as customer_id
+				    FROM
+				        $table_name
+				        $segmenting_from
+				        {$intervals_query[&#039;from_clause&#039;]}
+				    WHERE
+				        1=1
+						{$intervals_query[&#039;where_time_clause&#039;]}
+						{$intervals_query[&#039;where_clause&#039;]}
+						$segmenting_where
+				    GROUP BY
+				        time_interval, $product_segmenting_table.order_id, $segmenting_groupby
+				) AS $unique_orders_table
+				GROUP BY
+				    time_interval, $unique_orders_table.$segmenting_dimension_name
+				$segmenting_limit&quot;,
+			ARRAY_A
+		); // phpcs:ignore cache ok, DB call ok, unprepared SQL ok.
+
+		$intervals_segments = $this-&gt;merge_segment_intervals_results( $segmenting_dimension_name, $segments_products, $segments_orders );
+		return $intervals_segments;
+	}
+
+	/**
+	 * Calculate segments for totals query where the segmenting property is bound to order (e.g. coupon or customer type).
+	 *
+	 * @param string $segmenting_select SELECT part of segmenting SQL query.
+	 * @param string $segmenting_from FROM part of segmenting SQL query.
+	 * @param string $segmenting_where WHERE part of segmenting SQL query.
+	 * @param string $segmenting_groupby GROUP BY part of segmenting SQL query.
+	 * @param string $table_name Name of SQL table which is the stats table for orders.
+	 * @param array  $totals_query Array of SQL clauses for intervals query.
+	 *
+	 * @return array
+	 */
+	protected function get_order_related_totals_segments( $segmenting_select, $segmenting_from, $segmenting_where, $segmenting_groupby, $table_name, $totals_query ) {
+		global $wpdb;
+
+		$totals_segments = $wpdb-&gt;get_results(
+			&quot;SELECT
+						$segmenting_groupby
+						$segmenting_select
+					FROM
+						$table_name
+						$segmenting_from
+						{$totals_query[&#039;from_clause&#039;]}
+					WHERE
+						1=1
+						{$totals_query[&#039;where_time_clause&#039;]}
+						{$totals_query[&#039;where_clause&#039;]}
+						$segmenting_where
+					GROUP BY
+						$segmenting_groupby&quot;,
+			ARRAY_A
+		); // phpcs:ignore cache ok, DB call ok, unprepared SQL ok.
+
+		// Reformat result.
+		$totals_segments = $this-&gt;reformat_totals_segments( $totals_segments, $segmenting_groupby );
+		return $totals_segments;
+	}
+
+	/**
+	 * Calculate segments for intervals query where the segmenting property is bound to order (e.g. coupon or customer type).
+	 *
+	 * @param string $segmenting_select SELECT part of segmenting SQL query.
+	 * @param string $segmenting_from FROM part of segmenting SQL query.
+	 * @param string $segmenting_where WHERE part of segmenting SQL query.
+	 * @param string $segmenting_groupby GROUP BY part of segmenting SQL query.
+	 * @param string $table_name Name of SQL table which is the stats table for orders.
+	 * @param array  $intervals_query Array of SQL clauses for intervals query.
+	 *
+	 * @return array
+	 */
+	protected function get_order_related_intervals_segments( $segmenting_select, $segmenting_from, $segmenting_where, $segmenting_groupby, $table_name, $intervals_query ) {
+		global $wpdb;
+		$segmenting_limit = &#039;&#039;;
+		$limit_parts      = explode( &#039;,&#039;, $intervals_query[&#039;limit&#039;] );
+		if ( 2 === count( $limit_parts ) ) {
+			$orig_rowcount    = intval( $limit_parts[1] );
+			$segmenting_limit = $limit_parts[0] . &#039;,&#039; . $orig_rowcount * count( $this-&gt;get_all_segments() );
+		}
+
+		$intervals_segments = $wpdb-&gt;get_results(
+			&quot;SELECT
+						MAX($table_name.date_created) AS datetime_anchor,
+						{$intervals_query[&#039;select_clause&#039;]} AS time_interval,
+						$segmenting_groupby
+						$segmenting_select
+					FROM
+						$table_name
+						$segmenting_from
+						{$intervals_query[&#039;from_clause&#039;]}
+					WHERE
+						1=1
+						{$intervals_query[&#039;where_time_clause&#039;]}
+						{$intervals_query[&#039;where_clause&#039;]}
+						$segmenting_where
+					GROUP BY
+						time_interval, $segmenting_groupby
+					$segmenting_limit&quot;,
+			ARRAY_A
+		); // phpcs:ignore cache ok, DB call ok, unprepared SQL ok.
+
+		// Reformat result.
+		$intervals_segments = $this-&gt;reformat_intervals_segments( $intervals_segments, $segmenting_groupby );
+		return $intervals_segments;
+	}
+
+	/**
+	 * Return array of segments formatted for REST response.
+	 *
+	 * @param string $type Type of segments to return--&#039;totals&#039; or &#039;intervals&#039;.
+	 * @param array  $query_params SQL query parameter array.
+	 * @param string $table_name Name of main SQL table for the data store (used as basis for JOINS).
+	 *
+	 * @return array
+	 * @throws \Automattic\WooCommerce\Admin\API\Reports\ParameterException In case of segmenting by variations, when no parent product is specified.
+	 */
+	protected function get_segments( $type, $query_params, $table_name ) {
+		global $wpdb;
+		if ( ! isset( $this-&gt;query_args[&#039;segmentby&#039;] ) || &#039;&#039; === $this-&gt;query_args[&#039;segmentby&#039;] ) {
+			return array();
+		}
+
+		$product_segmenting_table = $wpdb-&gt;prefix . &#039;wc_order_product_lookup&#039;;
+		$unique_orders_table      = &#039;uniq_orders&#039;;
+		$segmenting_from          = &quot;LEFT JOIN {$wpdb-&gt;prefix}wc_order_coupon_lookup AS coupon_lookup_left_join ON ($table_name.order_id = coupon_lookup_left_join.order_id) &quot;;
+		$segmenting_where         = &#039;&#039;;
+
+		// Product, variation, and category are bound to product, so here product segmenting table is required,
+		// while coupon and customer are bound to order, so we don&#039;t need the extra JOIN for those.
+		// This also means that segment selections need to be calculated differently.
+		if ( &#039;product&#039; === $this-&gt;query_args[&#039;segmentby&#039;] ) {
+			// @todo How to handle shipping taxes when grouped by product?
+			$product_level_columns     = $this-&gt;get_segment_selections_product_level( $product_segmenting_table );
+			$order_level_columns       = $this-&gt;get_segment_selections_order_level( $unique_orders_table );
+			$segmenting_selections     = array(
+				&#039;product_level&#039; =&gt; $this-&gt;prepare_selections( $product_level_columns ),
+				&#039;order_level&#039;   =&gt; $this-&gt;prepare_selections( $order_level_columns ),
+			);
+			$this-&gt;report_columns      = array_merge( $product_level_columns, $order_level_columns );
+			$segmenting_from          .= &quot;INNER JOIN $product_segmenting_table ON ($table_name.order_id = $product_segmenting_table.order_id)&quot;;
+			$segmenting_groupby        = $product_segmenting_table . &#039;.product_id&#039;;
+			$segmenting_dimension_name = &#039;product_id&#039;;
+
+			$segments = $this-&gt;get_product_related_segments( $type, $segmenting_selections, $segmenting_from, $segmenting_where, $segmenting_groupby, $segmenting_dimension_name, $table_name, $query_params, $unique_orders_table );
+		} elseif ( &#039;variation&#039; === $this-&gt;query_args[&#039;segmentby&#039;] ) {
+			if ( ! isset( $this-&gt;query_args[&#039;product_includes&#039;] ) || count( $this-&gt;query_args[&#039;product_includes&#039;] ) !== 1 ) {
+				throw new ParameterException( &#039;wc_admin_reports_invalid_segmenting_variation&#039;, __( &#039;product_includes parameter need to specify exactly one product when segmenting by variation.&#039;, &#039;woocommerce&#039; ) );
+			}
+
+			$product_level_columns     = $this-&gt;get_segment_selections_product_level( $product_segmenting_table );
+			$order_level_columns       = $this-&gt;get_segment_selections_order_level( $unique_orders_table );
+			$segmenting_selections     = array(
+				&#039;product_level&#039; =&gt; $this-&gt;prepare_selections( $product_level_columns ),
+				&#039;order_level&#039;   =&gt; $this-&gt;prepare_selections( $order_level_columns ),
+			);
+			$this-&gt;report_columns      = array_merge( $product_level_columns, $order_level_columns );
+			$segmenting_from          .= &quot;INNER JOIN $product_segmenting_table ON ($table_name.order_id = $product_segmenting_table.order_id)&quot;;
+			$segmenting_where          = &quot;AND $product_segmenting_table.product_id = {$this-&gt;query_args[&#039;product_includes&#039;][0]}&quot;;
+			$segmenting_groupby        = $product_segmenting_table . &#039;.variation_id&#039;;
+			$segmenting_dimension_name = &#039;variation_id&#039;;
+
+			$segments = $this-&gt;get_product_related_segments( $type, $segmenting_selections, $segmenting_from, $segmenting_where, $segmenting_groupby, $segmenting_dimension_name, $table_name, $query_params, $unique_orders_table );
+		} elseif ( &#039;category&#039; === $this-&gt;query_args[&#039;segmentby&#039;] ) {
+			$product_level_columns     = $this-&gt;get_segment_selections_product_level( $product_segmenting_table );
+			$order_level_columns       = $this-&gt;get_segment_selections_order_level( $unique_orders_table );
+			$segmenting_selections     = array(
+				&#039;product_level&#039; =&gt; $this-&gt;prepare_selections( $product_level_columns ),
+				&#039;order_level&#039;   =&gt; $this-&gt;prepare_selections( $order_level_columns ),
+			);
+			$this-&gt;report_columns      = array_merge( $product_level_columns, $order_level_columns );
+			$segmenting_from          .= &quot;
+			INNER JOIN $product_segmenting_table ON ($table_name.order_id = $product_segmenting_table.order_id)
+			LEFT JOIN {$wpdb-&gt;term_relationships} ON {$product_segmenting_table}.product_id = {$wpdb-&gt;term_relationships}.object_id
+			JOIN {$wpdb-&gt;term_taxonomy} ON {$wpdb-&gt;term_taxonomy}.term_taxonomy_id = {$wpdb-&gt;term_relationships}.term_taxonomy_id
+			LEFT JOIN {$wpdb-&gt;wc_category_lookup} ON {$wpdb-&gt;term_taxonomy}.term_id = {$wpdb-&gt;wc_category_lookup}.category_id
+			&quot;;
+			$segmenting_where          = &quot; AND {$wpdb-&gt;wc_category_lookup}.category_tree_id IS NOT NULL&quot;;
+			$segmenting_groupby        = &quot;{$wpdb-&gt;wc_category_lookup}.category_tree_id&quot;;
+			$segmenting_dimension_name = &#039;category_id&#039;;
+
+			$segments = $this-&gt;get_product_related_segments( $type, $segmenting_selections, $segmenting_from, $segmenting_where, $segmenting_groupby, $segmenting_dimension_name, $table_name, $query_params, $unique_orders_table );
+		} elseif ( &#039;coupon&#039; === $this-&gt;query_args[&#039;segmentby&#039;] ) {
+			// As there can be 2 or more coupons applied per one order, coupon amount needs to be split.
+			$coupon_override       = array(
+				&#039;coupons&#039; =&gt; &#039;SUM(coupon_lookup.discount_amount) AS coupons&#039;,
+			);
+			$coupon_level_columns  = $this-&gt;segment_selections_orders( $table_name, $coupon_override );
+			$segmenting_selections = $this-&gt;prepare_selections( $coupon_level_columns );
+			$this-&gt;report_columns  = $coupon_level_columns;
+			$segmenting_from      .= &quot;
+			INNER JOIN {$wpdb-&gt;prefix}wc_order_coupon_lookup AS coupon_lookup ON ($table_name.order_id = coupon_lookup.order_id)
+            &quot;;
+			$segmenting_groupby    = &#039;coupon_lookup.coupon_id&#039;;
+
+			$segments = $this-&gt;get_order_related_segments( $type, $segmenting_selections, $segmenting_from, $segmenting_where, $segmenting_groupby, $table_name, $query_params );
+		} elseif ( &#039;customer_type&#039; === $this-&gt;query_args[&#039;segmentby&#039;] ) {
+			$customer_level_columns = $this-&gt;segment_selections_orders( $table_name );
+			$segmenting_selections  = $this-&gt;prepare_selections( $customer_level_columns );
+			$this-&gt;report_columns   = $customer_level_columns;
+			$segmenting_groupby     = &quot;$table_name.returning_customer&quot;;
+
+			$segments = $this-&gt;get_order_related_segments( $type, $segmenting_selections, $segmenting_from, $segmenting_where, $segmenting_groupby, $table_name, $query_params );
+		}
+
+		return $segments;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

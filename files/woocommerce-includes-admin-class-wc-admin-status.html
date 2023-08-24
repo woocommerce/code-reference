@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866946">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866946">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-admin-status.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Debug/Status page
+ *
+ * @package WooCommerce\Admin\System Status
+ * @version 2.2.0
+ */
+
+use Automattic\Jetpack\Constants;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * WC_Admin_Status Class.
+ */
+class WC_Admin_Status {
+
+	/**
+	 * Handles output of the reports page in admin.
+	 */
+	public static function output() {
+		include_once __DIR__ . &#039;/views/html-admin-page-status.php&#039;;
+	}
+
+	/**
+	 * Handles output of report.
+	 */
+	public static function status_report() {
+		include_once __DIR__ . &#039;/views/html-admin-page-status-report.php&#039;;
+	}
+
+	/**
+	 * Handles output of tools.
+	 */
+	public static function status_tools() {
+		if ( ! class_exists( &#039;WC_REST_System_Status_Tools_Controller&#039; ) ) {
+			wp_die( &#039;Cannot load the REST API to access WC_REST_System_Status_Tools_Controller.&#039; );
+		}
+
+		$tools                 = self::get_tools();
+		$tool_requires_refresh = false;
+
+		if ( ! empty( $_GET[&#039;action&#039;] ) &amp;&amp; ! empty( $_REQUEST[&#039;_wpnonce&#039;] ) &amp;&amp; wp_verify_nonce( wp_unslash( $_REQUEST[&#039;_wpnonce&#039;] ), &#039;debug_action&#039; ) ) { // WPCS: input var ok, sanitization ok.
+			$tools_controller = new WC_REST_System_Status_Tools_Controller();
+			$action           = wc_clean( wp_unslash( $_GET[&#039;action&#039;] ) ); // WPCS: input var ok.
+
+			if ( array_key_exists( $action, $tools ) ) {
+				$response = $tools_controller-&gt;execute_tool( $action );
+
+				$tool                  = $tools[ $action ];
+				$tool_requires_refresh = $tool[&#039;requires_refresh&#039;] ?? false;
+				$tool                  = array(
+					&#039;id&#039;          =&gt; $action,
+					&#039;name&#039;        =&gt; $tool[&#039;name&#039;],
+					&#039;action&#039;      =&gt; $tool[&#039;button&#039;],
+					&#039;description&#039; =&gt; $tool[&#039;desc&#039;],
+					&#039;disabled&#039;    =&gt; $tool[&#039;disabled&#039;] ?? false,
+				);
+				$tool                  = array_merge( $tool, $response );
+
+				/**
+				 * Fires after a WooCommerce system status tool has been executed.
+				 *
+				 * @param array  $tool  Details about the tool that has been executed.
+				 */
+				do_action( &#039;woocommerce_system_status_tool_executed&#039;, $tool );
+			} else {
+				$response = array(
+					&#039;success&#039; =&gt; false,
+					&#039;message&#039; =&gt; __( &#039;Tool does not exist.&#039;, &#039;woocommerce&#039; ),
+				);
+			}
+
+			if ( $response[&#039;success&#039;] ) {
+				echo &#039;&lt;div class=&quot;updated inline&quot;&gt;&lt;p&gt;&#039; . esc_html( $response[&#039;message&#039;] ) . &#039;&lt;/p&gt;&lt;/div&gt;&#039;;
+			} else {
+				echo &#039;&lt;div class=&quot;error inline&quot;&gt;&lt;p&gt;&#039; . esc_html( $response[&#039;message&#039;] ) . &#039;&lt;/p&gt;&lt;/div&gt;&#039;;
+			}
+		}
+
+		// Display message if settings settings have been saved.
+		if ( isset( $_REQUEST[&#039;settings-updated&#039;] ) ) { // WPCS: input var ok.
+			echo &#039;&lt;div class=&quot;updated inline&quot;&gt;&lt;p&gt;&#039; . esc_html__( &#039;Your changes have been saved.&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/p&gt;&lt;/div&gt;&#039;;
+		}
+
+		if ( $tool_requires_refresh ) {
+			$tools = self::get_tools();
+		}
+
+		include_once __DIR__ . &#039;/views/html-admin-page-status-tools.php&#039;;
+	}
+
+	/**
+	 * Get tools.
+	 *
+	 * @return array of tools
+	 */
+	public static function get_tools() {
+		$tools_controller = new WC_REST_System_Status_Tools_Controller();
+		return $tools_controller-&gt;get_tools();
+	}
+
+	/**
+	 * Show the logs page.
+	 */
+	public static function status_logs() {
+		$log_handler = Constants::get_constant( &#039;WC_LOG_HANDLER&#039; );
+
+		if ( &#039;WC_Log_Handler_DB&#039; === $log_handler ) {
+			self::status_logs_db();
+		} else {
+			self::status_logs_file();
+		}
+	}
+
+	/**
+	 * Show the log page contents for file log handler.
+	 */
+	public static function status_logs_file() {
+		$logs = self::scan_log_files();
+
+		if ( ! empty( $_REQUEST[&#039;log_file&#039;] ) &amp;&amp; isset( $logs[ sanitize_title( wp_unslash( $_REQUEST[&#039;log_file&#039;] ) ) ] ) ) { // WPCS: input var ok, CSRF ok.
+			$viewed_log = $logs[ sanitize_title( wp_unslash( $_REQUEST[&#039;log_file&#039;] ) ) ]; // WPCS: input var ok, CSRF ok.
+		} elseif ( ! empty( $logs ) ) {
+			$viewed_log = current( $logs );
+		}
+
+		$handle = ! empty( $viewed_log ) ? self::get_log_file_handle( $viewed_log ) : &#039;&#039;;
+
+		if ( ! empty( $_REQUEST[&#039;handle&#039;] ) ) { // WPCS: input var ok, CSRF ok.
+			self::remove_log();
+		}
+
+		include_once __DIR__ . &#039;/views/html-admin-page-status-logs.php&#039;;
+	}
+
+	/**
+	 * Show the log page contents for db log handler.
+	 */
+	public static function status_logs_db() {
+		if ( ! empty( $_REQUEST[&#039;flush-logs&#039;] ) ) { // WPCS: input var ok, CSRF ok.
+			self::flush_db_logs();
+		}
+
+		if ( isset( $_REQUEST[&#039;action&#039;] ) &amp;&amp; isset( $_REQUEST[&#039;log&#039;] ) ) { // WPCS: input var ok, CSRF ok.
+			self::log_table_bulk_actions();
+		}
+
+		$log_table_list = new WC_Admin_Log_Table_List();
+		$log_table_list-&gt;prepare_items();
+
+		include_once __DIR__ . &#039;/views/html-admin-page-status-logs-db.php&#039;;
+	}
+
+	/**
+	 * Retrieve metadata from a file. Based on WP Core&#039;s get_file_data function.
+	 *
+	 * @since  2.1.1
+	 * @param  string $file Path to the file.
+	 * @return string
+	 */
+	public static function get_file_version( $file ) {
+
+		// Avoid notices if file does not exist.
+		if ( ! file_exists( $file ) ) {
+			return &#039;&#039;;
+		}
+
+		// We don&#039;t need to write to the file, so just open for reading.
+		$fp = fopen( $file, &#039;r&#039; ); // @codingStandardsIgnoreLine.
+
+		// Pull only the first 8kiB of the file in.
+		$file_data = fread( $fp, 8192 ); // @codingStandardsIgnoreLine.
+
+		// PHP will close file handle, but we are good citizens.
+		fclose( $fp ); // @codingStandardsIgnoreLine.
+
+		// Make sure we catch CR-only line endings.
+		$file_data = str_replace( &quot;\r&quot;, &quot;\n&quot;, $file_data );
+		$version   = &#039;&#039;;
+
+		if ( preg_match( &#039;/^[ \t\/*#@]*&#039; . preg_quote( &#039;@version&#039;, &#039;/&#039; ) . &#039;(.*)$/mi&#039;, $file_data, $match ) &amp;&amp; $match[1] ) {
+			$version = _cleanup_header_comment( $match[1] );
+		}
+
+		return $version;
+	}
+
+	/**
+	 * Return the log file handle.
+	 *
+	 * @param string $filename Filename to get the handle for.
+	 * @return string
+	 */
+	public static function get_log_file_handle( $filename ) {
+		return substr( $filename, 0, strlen( $filename ) &gt; 48 ? strlen( $filename ) - 48 : strlen( $filename ) - 4 );
+	}
+
+	/**
+	 * Scan the template files.
+	 *
+	 * @param  string $template_path Path to the template directory.
+	 * @return array
+	 */
+	public static function scan_template_files( $template_path ) {
+		$files  = @scandir( $template_path ); // @codingStandardsIgnoreLine.
+		$result = array();
+
+		if ( ! empty( $files ) ) {
+
+			foreach ( $files as $key =&gt; $value ) {
+
+				if ( ! in_array( $value, array( &#039;.&#039;, &#039;..&#039; ), true ) ) {
+
+					if ( is_dir( $template_path . DIRECTORY_SEPARATOR . $value ) ) {
+						$sub_files = self::scan_template_files( $template_path . DIRECTORY_SEPARATOR . $value );
+						foreach ( $sub_files as $sub_file ) {
+							$result[] = $value . DIRECTORY_SEPARATOR . $sub_file;
+						}
+					} else {
+						$result[] = $value;
+					}
+				}
+			}
+		}
+		return $result;
+	}
+
+	/**
+	 * Scan the log files.
+	 *
+	 * @return array
+	 */
+	public static function scan_log_files() {
+		return WC_Log_Handler_File::get_log_files();
+	}
+
+	/**
+	 * Get latest version of a theme by slug.
+	 *
+	 * @param  object $theme WP_Theme object.
+	 * @return string Version number if found.
+	 */
+	public static function get_latest_theme_version( $theme ) {
+		include_once ABSPATH . &#039;wp-admin/includes/theme.php&#039;;
+
+		$api = themes_api(
+			&#039;theme_information&#039;,
+			array(
+				&#039;slug&#039;   =&gt; $theme-&gt;get_stylesheet(),
+				&#039;fields&#039; =&gt; array(
+					&#039;sections&#039; =&gt; false,
+					&#039;tags&#039;     =&gt; false,
+				),
+			)
+		);
+
+		$update_theme_version = 0;
+
+		// Check .org for updates.
+		if ( is_object( $api ) &amp;&amp; ! is_wp_error( $api ) &amp;&amp; isset( $api-&gt;version ) ) {
+			$update_theme_version = $api-&gt;version;
+		} elseif ( strstr( $theme-&gt;{&#039;Author URI&#039;}, &#039;woothemes&#039; ) ) { // Check WooThemes Theme Version.
+			$theme_dir          = substr( strtolower( str_replace( &#039; &#039;, &#039;&#039;, $theme-&gt;Name ) ), 0, 45 ); // @codingStandardsIgnoreLine.
+			$theme_version_data = get_transient( $theme_dir . &#039;_version_data&#039; );
+
+			if ( false === $theme_version_data ) {
+				$theme_changelog = wp_safe_remote_get( &#039;http://dzv365zjfbd8v.cloudfront.net/changelogs/&#039; . $theme_dir . &#039;/changelog.txt&#039; );
+				$cl_lines        = explode( &quot;\n&quot;, wp_remote_retrieve_body( $theme_changelog ) );
+				if ( ! empty( $cl_lines ) ) {
+					foreach ( $cl_lines as $line_num =&gt; $cl_line ) {
+						if ( preg_match( &#039;/^[0-9]/&#039;, $cl_line ) ) {
+							$theme_date         = str_replace( &#039;.&#039;, &#039;-&#039;, trim( substr( $cl_line, 0, strpos( $cl_line, &#039;-&#039; ) ) ) );
+							$theme_version      = preg_replace( &#039;~[^0-9,.]~&#039;, &#039;&#039;, stristr( $cl_line, &#039;version&#039; ) );
+							$theme_update       = trim( str_replace( &#039;*&#039;, &#039;&#039;, $cl_lines[ $line_num + 1 ] ) );
+							$theme_version_data = array(
+								&#039;date&#039;      =&gt; $theme_date,
+								&#039;version&#039;   =&gt; $theme_version,
+								&#039;update&#039;    =&gt; $theme_update,
+								&#039;changelog&#039; =&gt; $theme_changelog,
+							);
+							set_transient( $theme_dir . &#039;_version_data&#039;, $theme_version_data, DAY_IN_SECONDS );
+							break;
+						}
+					}
+				}
+			}
+
+			if ( ! empty( $theme_version_data[&#039;version&#039;] ) ) {
+				$update_theme_version = $theme_version_data[&#039;version&#039;];
+			}
+		}
+
+		return $update_theme_version;
+	}
+
+	/**
+	 * Remove/delete the chosen file.
+	 */
+	public static function remove_log() {
+		if ( empty( $_REQUEST[&#039;_wpnonce&#039;] ) || ! wp_verify_nonce( wp_unslash( $_REQUEST[&#039;_wpnonce&#039;] ), &#039;remove_log&#039; ) ) { // WPCS: input var ok, sanitization ok.
+			wp_die( esc_html__( &#039;Action failed. Please refresh the page and retry.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		if ( ! empty( $_REQUEST[&#039;handle&#039;] ) ) {  // WPCS: input var ok.
+			$log_handler = new WC_Log_Handler_File();
+			$log_handler-&gt;remove( wp_unslash( $_REQUEST[&#039;handle&#039;] ) ); // WPCS: input var ok, sanitization ok.
+		}
+
+		wp_safe_redirect( esc_url_raw( admin_url( &#039;admin.php?page=wc-status&amp;tab=logs&#039; ) ) );
+		exit();
+	}
+
+	/**
+	 * Clear DB log table.
+	 *
+	 * @since 3.0.0
+	 */
+	private static function flush_db_logs() {
+		if ( empty( $_REQUEST[&#039;_wpnonce&#039;] ) || ! wp_verify_nonce( $_REQUEST[&#039;_wpnonce&#039;], &#039;woocommerce-status-logs&#039; ) ) { // WPCS: input var ok, sanitization ok.
+			wp_die( esc_html__( &#039;Action failed. Please refresh the page and retry.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		WC_Log_Handler_DB::flush();
+
+		wp_safe_redirect( esc_url_raw( admin_url( &#039;admin.php?page=wc-status&amp;tab=logs&#039; ) ) );
+		exit();
+	}
+
+	/**
+	 * Bulk DB log table actions.
+	 *
+	 * @since 3.0.0
+	 */
+	private static function log_table_bulk_actions() {
+		if ( empty( $_REQUEST[&#039;_wpnonce&#039;] ) || ! wp_verify_nonce( $_REQUEST[&#039;_wpnonce&#039;], &#039;woocommerce-status-logs&#039; ) ) { // WPCS: input var ok, sanitization ok.
+			wp_die( esc_html__( &#039;Action failed. Please refresh the page and retry.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$log_ids = array_map( &#039;absint&#039;, (array) isset( $_REQUEST[&#039;log&#039;] ) ? wp_unslash( $_REQUEST[&#039;log&#039;] ) : array() ); // WPCS: input var ok, sanitization ok.
+
+		if ( ( isset( $_REQUEST[&#039;action&#039;] ) &amp;&amp; &#039;delete&#039; === $_REQUEST[&#039;action&#039;] ) || ( isset( $_REQUEST[&#039;action2&#039;] ) &amp;&amp; &#039;delete&#039; === $_REQUEST[&#039;action2&#039;] ) ) { // WPCS: input var ok, sanitization ok.
+			WC_Log_Handler_DB::delete( $log_ids );
+			wp_safe_redirect( esc_url_raw( admin_url( &#039;admin.php?page=wc-status&amp;tab=logs&#039; ) ) );
+			exit();
+		}
+	}
+
+	/**
+	 * Prints table info if a base table is not present.
+	 */
+	private static function output_tables_info() {
+		$missing_tables = WC_Install::verify_base_tables( false );
+		if ( 0 === count( $missing_tables ) ) {
+			return;
+		}
+		?&gt;
+
+		&lt;br&gt;
+		&lt;strong style=&quot;color:#a00;&quot;&gt;
+			&lt;span class=&quot;dashicons dashicons-warning&quot;&gt;&lt;/span&gt;
+			&lt;?php
+				echo esc_html(
+					sprintf(
+					// translators: Comma separated list of missing tables.
+						__( &#039;Missing base tables: %s. Some WooCommerce functionality may not work as expected.&#039;, &#039;woocommerce&#039; ),
+						implode( &#039;, &#039;, $missing_tables )
+					)
+				);
+			?&gt;
+		&lt;/strong&gt;
+
+		&lt;?php
+	}
+
+	/**
+	 * Prints the information about plugins for the system status report.
+	 * Used for both active and inactive plugins sections.
+	 *
+	 * @param array $plugins List of plugins to display.
+	 * @param array $untested_plugins List of plugins that haven&#039;t been tested with the current WooCommerce version.
+	 * @return void
+	 */
+	private static function output_plugins_info( $plugins, $untested_plugins ) {
+		$wc_version = Constants::get_constant( &#039;WC_VERSION&#039; );
+
+		if ( &#039;major&#039; === Constants::get_constant( &#039;WC_SSR_PLUGIN_UPDATE_RELEASE_VERSION_TYPE&#039; ) ) {
+			// Since we&#039;re only testing against major, we don&#039;t need to show minor and patch version.
+			$wc_version = $wc_version[0] . &#039;.0&#039;;
+		}
+
+		foreach ( $plugins as $plugin ) {
+			if ( ! empty( $plugin[&#039;name&#039;] ) ) {
+				// Link the plugin name to the plugin url if available.
+				$plugin_name = esc_html( $plugin[&#039;name&#039;] );
+				if ( ! empty( $plugin[&#039;url&#039;] ) ) {
+					$plugin_name = &#039;&lt;a href=&quot;&#039; . esc_url( $plugin[&#039;url&#039;] ) . &#039;&quot; aria-label=&quot;&#039; . esc_attr__( &#039;Visit plugin homepage&#039;, &#039;woocommerce&#039; ) . &#039;&quot; target=&quot;_blank&quot;&gt;&#039; . $plugin_name . &#039;&lt;/a&gt;&#039;;
+				}
+
+				$has_newer_version = false;
+				$version_string    = $plugin[&#039;version&#039;];
+				$network_string    = &#039;&#039;;
+				if ( strstr( $plugin[&#039;url&#039;], &#039;woothemes.com&#039; ) || strstr( $plugin[&#039;url&#039;], &#039;woocommerce.com&#039; ) ) {
+					if ( ! empty( $plugin[&#039;version_latest&#039;] ) &amp;&amp; version_compare( $plugin[&#039;version_latest&#039;], $plugin[&#039;version&#039;], &#039;&gt;&#039; ) ) {
+						/* translators: 1: current version. 2: latest version */
+						$version_string = sprintf( __( &#039;%1$s (update to version %2$s is available)&#039;, &#039;woocommerce&#039; ), $plugin[&#039;version&#039;], $plugin[&#039;version_latest&#039;] );
+					}
+
+					if ( false !== $plugin[&#039;network_activated&#039;] ) {
+						$network_string = &#039; &amp;ndash; &lt;strong style=&quot;color: black;&quot;&gt;&#039; . esc_html__( &#039;Network enabled&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/strong&gt;&#039;;
+					}
+				}
+				$untested_string = &#039;&#039;;
+				if ( array_key_exists( $plugin[&#039;plugin&#039;], $untested_plugins ) ) {
+					$untested_string = &#039; &amp;ndash; &lt;strong style=&quot;color: #a00;&quot;&gt;&#039;;
+
+					/* translators: %s: version */
+					$untested_string .= esc_html( sprintf( __( &#039;Installed version not tested with active version of WooCommerce %s&#039;, &#039;woocommerce&#039; ), $wc_version ) );
+
+					$untested_string .= &#039;&lt;/strong&gt;&#039;;
+				}
+				?&gt;
+				&lt;tr&gt;
+					&lt;td&gt;&lt;?php echo wp_kses_post( $plugin_name ); ?&gt;&lt;/td&gt;
+					&lt;td class=&quot;help&quot;&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;td&gt;
+						&lt;?php
+						/* translators: %s: plugin author */
+						printf( esc_html__( &#039;by %s&#039;, &#039;woocommerce&#039; ), esc_html( $plugin[&#039;author_name&#039;] ) );
+						echo &#039; &amp;ndash; &#039; . esc_html( $version_string ) . $untested_string . $network_string; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						?&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;?php
+			}
+		}
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866946"></script>
+    <script src="../js/search.js?updated=1692866946"></script>
+</body>
+</html>

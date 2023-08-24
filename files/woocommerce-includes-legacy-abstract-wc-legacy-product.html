@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866948">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866948">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">abstract-wc-legacy-product.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * Legacy Abstract Product
+ *
+ * Legacy and deprecated functions are here to keep the WC_Abstract_Product
+ * clean.
+ * This class will be removed in future versions.
+ *
+ * @version  3.0.0
+ * @package  WooCommerce\Abstracts
+ * @category Abstract Class
+ * @author   WooThemes
+ */
+abstract class WC_Abstract_Legacy_Product extends WC_Data {
+
+	/**
+	 * Magic __isset method for backwards compatibility. Legacy properties which could be accessed directly in the past.
+	 *
+	 * @param  string $key Key name.
+	 * @return bool
+	 */
+	public function __isset( $key ) {
+		$valid = array(
+			&#039;id&#039;,
+			&#039;product_attributes&#039;,
+			&#039;visibility&#039;,
+			&#039;sale_price_dates_from&#039;,
+			&#039;sale_price_dates_to&#039;,
+			&#039;post&#039;,
+			&#039;download_type&#039;,
+			&#039;product_image_gallery&#039;,
+			&#039;variation_shipping_class&#039;,
+			&#039;shipping_class&#039;,
+			&#039;total_stock&#039;,
+			&#039;crosssell_ids&#039;,
+			&#039;parent&#039;,
+		);
+		if ( $this-&gt;is_type( &#039;variation&#039; ) ) {
+			$valid = array_merge( $valid, array(
+				&#039;variation_id&#039;,
+				&#039;variation_data&#039;,
+				&#039;variation_has_stock&#039;,
+				&#039;variation_shipping_class_id&#039;,
+				&#039;variation_has_sku&#039;,
+				&#039;variation_has_length&#039;,
+				&#039;variation_has_width&#039;,
+				&#039;variation_has_height&#039;,
+				&#039;variation_has_weight&#039;,
+				&#039;variation_has_tax_class&#039;,
+				&#039;variation_has_downloadable_files&#039;,
+			) );
+		}
+		return in_array( $key, array_merge( $valid, array_keys( $this-&gt;data ) ) ) || metadata_exists( &#039;post&#039;, $this-&gt;get_id(), &#039;_&#039; . $key ) || metadata_exists( &#039;post&#039;, $this-&gt;get_parent_id(), &#039;_&#039; . $key );
+	}
+
+	/**
+	 * Magic __get method for backwards compatibility. Maps legacy vars to new getters.
+	 *
+	 * @param  string $key Key name.
+	 * @return mixed
+	 */
+	public function __get( $key ) {
+
+		if ( &#039;post_type&#039; === $key ) {
+			return $this-&gt;post_type;
+		}
+
+		wc_doing_it_wrong( $key, __( &#039;Product properties should not be accessed directly.&#039;, &#039;woocommerce&#039; ), &#039;3.0&#039; );
+
+		switch ( $key ) {
+			case &#039;id&#039; :
+				$value = $this-&gt;is_type( &#039;variation&#039; ) ? $this-&gt;get_parent_id() : $this-&gt;get_id();
+				break;
+			case &#039;product_type&#039; :
+				$value = $this-&gt;get_type();
+				break;
+			case &#039;product_attributes&#039; :
+				$value = isset( $this-&gt;data[&#039;attributes&#039;] ) ? $this-&gt;data[&#039;attributes&#039;] : &#039;&#039;;
+				break;
+			case &#039;visibility&#039; :
+				$value = $this-&gt;get_catalog_visibility();
+				break;
+			case &#039;sale_price_dates_from&#039; :
+				return $this-&gt;get_date_on_sale_from() ? $this-&gt;get_date_on_sale_from()-&gt;getTimestamp() : &#039;&#039;;
+				break;
+			case &#039;sale_price_dates_to&#039; :
+				return $this-&gt;get_date_on_sale_to() ? $this-&gt;get_date_on_sale_to()-&gt;getTimestamp() : &#039;&#039;;
+				break;
+			case &#039;post&#039; :
+				$value = get_post( $this-&gt;get_id() );
+				break;
+			case &#039;download_type&#039; :
+				return &#039;standard&#039;;
+				break;
+			case &#039;product_image_gallery&#039; :
+				$value = $this-&gt;get_gallery_image_ids();
+				break;
+			case &#039;variation_shipping_class&#039; :
+			case &#039;shipping_class&#039; :
+				$value = $this-&gt;get_shipping_class();
+				break;
+			case &#039;total_stock&#039; :
+				$value = $this-&gt;get_total_stock();
+				break;
+			case &#039;downloadable&#039; :
+			case &#039;virtual&#039; :
+			case &#039;manage_stock&#039; :
+			case &#039;featured&#039; :
+			case &#039;sold_individually&#039; :
+				$value = $this-&gt;{&quot;get_$key&quot;}() ? &#039;yes&#039; : &#039;no&#039;;
+				break;
+			case &#039;crosssell_ids&#039; :
+				$value = $this-&gt;get_cross_sell_ids();
+				break;
+			case &#039;upsell_ids&#039; :
+				$value = $this-&gt;get_upsell_ids();
+				break;
+			case &#039;parent&#039; :
+				$value = wc_get_product( $this-&gt;get_parent_id() );
+				break;
+			case &#039;variation_id&#039; :
+				$value = $this-&gt;is_type( &#039;variation&#039; ) ? $this-&gt;get_id() : &#039;&#039;;
+				break;
+			case &#039;variation_data&#039; :
+				$value = $this-&gt;is_type( &#039;variation&#039; ) ? wc_get_product_variation_attributes( $this-&gt;get_id() ) : &#039;&#039;;
+				break;
+			case &#039;variation_has_stock&#039; :
+				$value = $this-&gt;is_type( &#039;variation&#039; ) ? $this-&gt;managing_stock() : &#039;&#039;;
+				break;
+			case &#039;variation_shipping_class_id&#039; :
+				$value = $this-&gt;is_type( &#039;variation&#039; ) ? $this-&gt;get_shipping_class_id() : &#039;&#039;;
+				break;
+			case &#039;variation_has_sku&#039; :
+			case &#039;variation_has_length&#039; :
+			case &#039;variation_has_width&#039; :
+			case &#039;variation_has_height&#039; :
+			case &#039;variation_has_weight&#039; :
+			case &#039;variation_has_tax_class&#039; :
+			case &#039;variation_has_downloadable_files&#039; :
+				$value = true; // These were deprecated in 2.2 and simply returned true in 2.6.x.
+				break;
+			default :
+				if ( in_array( $key, array_keys( $this-&gt;data ) ) ) {
+					$value = $this-&gt;{&quot;get_$key&quot;}();
+				} else {
+					$value = get_post_meta( $this-&gt;id, &#039;_&#039; . $key, true );
+				}
+				break;
+		}
+		return $value;
+	}
+
+	/**
+	 * If set, get the default attributes for a variable product.
+	 *
+	 * @deprecated 3.0.0
+	 * @return array
+	 */
+	public function get_variation_default_attributes() {
+		wc_deprecated_function( &#039;WC_Product_Variable::get_variation_default_attributes&#039;, &#039;3.0&#039;, &#039;WC_Product::get_default_attributes&#039; );
+		return apply_filters( &#039;woocommerce_product_default_attributes&#039;, $this-&gt;get_default_attributes(), $this );
+	}
+
+	/**
+	 * Returns the gallery attachment ids.
+	 *
+	 * @deprecated 3.0.0
+	 * @return array
+	 */
+	public function get_gallery_attachment_ids() {
+		wc_deprecated_function( &#039;WC_Product::get_gallery_attachment_ids&#039;, &#039;3.0&#039;, &#039;WC_Product::get_gallery_image_ids&#039; );
+		return $this-&gt;get_gallery_image_ids();
+	}
+
+	/**
+	 * Set stock level of the product.
+	 *
+	 * @deprecated 3.0.0
+	 *
+	 * @param int $amount
+	 * @param string $mode
+	 *
+	 * @return int
+	 */
+	public function set_stock( $amount = null, $mode = &#039;set&#039; ) {
+		wc_deprecated_function( &#039;WC_Product::set_stock&#039;, &#039;3.0&#039;, &#039;wc_update_product_stock&#039; );
+		return wc_update_product_stock( $this, $amount, $mode );
+	}
+
+	/**
+	 * Reduce stock level of the product.
+	 *
+	 * @deprecated 3.0.0
+	 * @param int $amount Amount to reduce by. Default: 1
+	 * @return int new stock level
+	 */
+	public function reduce_stock( $amount = 1 ) {
+		wc_deprecated_function( &#039;WC_Product::reduce_stock&#039;, &#039;3.0&#039;, &#039;wc_update_product_stock&#039; );
+		return wc_update_product_stock( $this, $amount, &#039;decrease&#039; );
+	}
+
+	/**
+	 * Increase stock level of the product.
+	 *
+	 * @deprecated 3.0.0
+	 * @param int $amount Amount to increase by. Default 1.
+	 * @return int new stock level
+	 */
+	public function increase_stock( $amount = 1 ) {
+		wc_deprecated_function( &#039;WC_Product::increase_stock&#039;, &#039;3.0&#039;, &#039;wc_update_product_stock&#039; );
+		return wc_update_product_stock( $this, $amount, &#039;increase&#039; );
+	}
+
+	/**
+	 * Check if the stock status needs changing.
+	 *
+	 * @deprecated 3.0.0 Sync is done automatically on read/save, so calling this should not be needed any more.
+	 */
+	public function check_stock_status() {
+		wc_deprecated_function( &#039;WC_Product::check_stock_status&#039;, &#039;3.0&#039; );
+	}
+
+	/**
+	 * Get and return related products.
+	 * @deprecated 3.0.0 Use wc_get_related_products instead.
+	 *
+	 * @param int $limit
+	 *
+	 * @return array
+	 */
+	public function get_related( $limit = 5 ) {
+		wc_deprecated_function( &#039;WC_Product::get_related&#039;, &#039;3.0&#039;, &#039;wc_get_related_products&#039; );
+		return wc_get_related_products( $this-&gt;get_id(), $limit );
+	}
+
+	/**
+	 * Retrieves related product terms.
+	 * @deprecated 3.0.0 Use wc_get_product_term_ids instead.
+	 *
+	 * @param $term
+	 *
+	 * @return array
+	 */
+	protected function get_related_terms( $term ) {
+		wc_deprecated_function( &#039;WC_Product::get_related_terms&#039;, &#039;3.0&#039;, &#039;wc_get_product_term_ids&#039; );
+		return array_merge( array( 0 ), wc_get_product_term_ids( $this-&gt;get_id(), $term ) );
+	}
+
+	/**
+	 * Builds the related posts query.
+	 * @deprecated 3.0.0 Use Product Data Store get_related_products_query instead.
+	 *
+	 * @param $cats_array
+	 * @param $tags_array
+	 * @param $exclude_ids
+	 * @param $limit
+	 */
+	protected function build_related_query( $cats_array, $tags_array, $exclude_ids, $limit ) {
+		wc_deprecated_function( &#039;WC_Product::build_related_query&#039;, &#039;3.0&#039;, &#039;Product Data Store get_related_products_query&#039; );
+		$data_store = WC_Data_Store::load( &#039;product&#039; );
+		return $data_store-&gt;get_related_products_query( $cats_array, $tags_array, $exclude_ids, $limit );
+	}
+
+	/**
+	 * Returns the child product.
+	 * @deprecated 3.0.0 Use wc_get_product instead.
+	 * @param mixed $child_id
+	 * @return WC_Product|WC_Product|WC_Product_variation
+	 */
+	public function get_child( $child_id ) {
+		wc_deprecated_function( &#039;WC_Product::get_child&#039;, &#039;3.0&#039;, &#039;wc_get_product&#039; );
+		return wc_get_product( $child_id );
+	}
+
+	/**
+	 * Functions for getting parts of a price, in html, used by get_price_html.
+	 *
+	 * @deprecated 3.0.0
+	 * @return string
+	 */
+	public function get_price_html_from_text() {
+		wc_deprecated_function( &#039;WC_Product::get_price_html_from_text&#039;, &#039;3.0&#039;, &#039;wc_get_price_html_from_text&#039; );
+		return wc_get_price_html_from_text();
+	}
+
+	/**
+	 * Functions for getting parts of a price, in html, used by get_price_html.
+	 *
+	 * @deprecated 3.0.0 Use wc_format_sale_price instead.
+	 * @param  string $from String or float to wrap with &#039;from&#039; text
+	 * @param  mixed $to String or float to wrap with &#039;to&#039; text
+	 * @return string
+	 */
+	public function get_price_html_from_to( $from, $to ) {
+		wc_deprecated_function( &#039;WC_Product::get_price_html_from_to&#039;, &#039;3.0&#039;, &#039;wc_format_sale_price&#039; );
+		return apply_filters( &#039;woocommerce_get_price_html_from_to&#039;, wc_format_sale_price( $from, $to ), $from, $to, $this );
+	}
+
+	/**
+	 * Lists a table of attributes for the product page.
+	 * @deprecated 3.0.0 Use wc_display_product_attributes instead.
+	 */
+	public function list_attributes() {
+		wc_deprecated_function( &#039;WC_Product::list_attributes&#039;, &#039;3.0&#039;, &#039;wc_display_product_attributes&#039; );
+		wc_display_product_attributes( $this );
+	}
+
+	/**
+	 * Returns the price (including tax). Uses customer tax rates. Can work for a specific $qty for more accurate taxes.
+	 *
+	 * @deprecated 3.0.0 Use wc_get_price_including_tax instead.
+	 * @param  int $qty
+	 * @param  string $price to calculate, left blank to just use get_price()
+	 * @return string
+	 */
+	public function get_price_including_tax( $qty = 1, $price = &#039;&#039; ) {
+		wc_deprecated_function( &#039;WC_Product::get_price_including_tax&#039;, &#039;3.0&#039;, &#039;wc_get_price_including_tax&#039; );
+		return wc_get_price_including_tax( $this, array( &#039;qty&#039; =&gt; $qty, &#039;price&#039; =&gt; $price ) );
+	}
+
+	/**
+	 * Returns the price including or excluding tax, based on the &#039;woocommerce_tax_display_shop&#039; setting.
+	 *
+	 * @deprecated 3.0.0 Use wc_get_price_to_display instead.
+	 * @param  string  $price to calculate, left blank to just use get_price()
+	 * @param  integer $qty   passed on to get_price_including_tax() or get_price_excluding_tax()
+	 * @return string
+	 */
+	public function get_display_price( $price = &#039;&#039;, $qty = 1 ) {
+		wc_deprecated_function( &#039;WC_Product::get_display_price&#039;, &#039;3.0&#039;, &#039;wc_get_price_to_display&#039; );
+		return wc_get_price_to_display( $this, array( &#039;qty&#039; =&gt; $qty, &#039;price&#039; =&gt; $price ) );
+	}
+
+	/**
+	 * Returns the price (excluding tax) - ignores tax_class filters since the price may *include* tax and thus needs subtracting.
+	 * Uses store base tax rates. Can work for a specific $qty for more accurate taxes.
+	 *
+	 * @deprecated 3.0.0 Use wc_get_price_excluding_tax instead.
+	 * @param  int $qty
+	 * @param  string $price to calculate, left blank to just use get_price()
+	 * @return string
+	 */
+	public function get_price_excluding_tax( $qty = 1, $price = &#039;&#039; ) {
+		wc_deprecated_function( &#039;WC_Product::get_price_excluding_tax&#039;, &#039;3.0&#039;, &#039;wc_get_price_excluding_tax&#039; );
+		return wc_get_price_excluding_tax( $this, array( &#039;qty&#039; =&gt; $qty, &#039;price&#039; =&gt; $price ) );
+	}
+
+	/**
+	 * Adjust a products price dynamically.
+	 *
+	 * @deprecated 3.0.0
+	 * @param mixed $price
+	 */
+	public function adjust_price( $price ) {
+		wc_deprecated_function( &#039;WC_Product::adjust_price&#039;, &#039;3.0&#039;, &#039;WC_Product::set_price / WC_Product::get_price&#039; );
+		$this-&gt;data[&#039;price&#039;] = $this-&gt;data[&#039;price&#039;] + $price;
+	}
+
+	/**
+	 * Returns the product categories.
+	 *
+	 * @deprecated 3.0.0
+	 * @param string $sep (default: &#039;, &#039;).
+	 * @param string $before (default: &#039;&#039;).
+	 * @param string $after (default: &#039;&#039;).
+	 * @return string
+	 */
+	public function get_categories( $sep = &#039;, &#039;, $before = &#039;&#039;, $after = &#039;&#039; ) {
+		wc_deprecated_function( &#039;WC_Product::get_categories&#039;, &#039;3.0&#039;, &#039;wc_get_product_category_list&#039; );
+		return wc_get_product_category_list( $this-&gt;get_id(), $sep, $before, $after );
+	}
+
+	/**
+	 * Returns the product tags.
+	 *
+	 * @deprecated 3.0.0
+	 * @param string $sep (default: &#039;, &#039;).
+	 * @param string $before (default: &#039;&#039;).
+	 * @param string $after (default: &#039;&#039;).
+	 * @return array
+	 */
+	public function get_tags( $sep = &#039;, &#039;, $before = &#039;&#039;, $after = &#039;&#039; ) {
+		wc_deprecated_function( &#039;WC_Product::get_tags&#039;, &#039;3.0&#039;, &#039;wc_get_product_tag_list&#039; );
+		return wc_get_product_tag_list( $this-&gt;get_id(), $sep, $before, $after );
+	}
+
+	/**
+	 * Get the product&#039;s post data.
+	 *
+	 * @deprecated 3.0.0
+	 * @return WP_Post
+	 */
+	public function get_post_data() {
+		wc_deprecated_function( &#039;WC_Product::get_post_data&#039;, &#039;3.0&#039;, &#039;get_post&#039; );
+
+		// In order to keep backwards compatibility it&#039;s required to use the parent data for variations.
+		if ( $this-&gt;is_type( &#039;variation&#039; ) ) {
+			$post_data = get_post( $this-&gt;get_parent_id() );
+		} else {
+			$post_data = get_post( $this-&gt;get_id() );
+		}
+
+		return $post_data;
+	}
+
+	/**
+	 * Get the parent of the post.
+	 *
+	 * @deprecated 3.0.0
+	 * @return int
+	 */
+	public function get_parent() {
+		wc_deprecated_function( &#039;WC_Product::get_parent&#039;, &#039;3.0&#039;, &#039;WC_Product::get_parent_id&#039; );
+		return apply_filters( &#039;woocommerce_product_parent&#039;, absint( $this-&gt;get_post_data()-&gt;post_parent ), $this );
+	}
+
+	/**
+	 * Returns the upsell product ids.
+	 *
+	 * @deprecated 3.0.0
+	 * @return array
+	 */
+	public function get_upsells() {
+		wc_deprecated_function( &#039;WC_Product::get_upsells&#039;, &#039;3.0&#039;, &#039;WC_Product::get_upsell_ids&#039; );
+		return apply_filters( &#039;woocommerce_product_upsell_ids&#039;, $this-&gt;get_upsell_ids(), $this );
+	}
+
+	/**
+	 * Returns the cross sell product ids.
+	 *
+	 * @deprecated 3.0.0
+	 * @return array
+	 */
+	public function get_cross_sells() {
+		wc_deprecated_function( &#039;WC_Product::get_cross_sells&#039;, &#039;3.0&#039;, &#039;WC_Product::get_cross_sell_ids&#039; );
+		return apply_filters( &#039;woocommerce_product_crosssell_ids&#039;, $this-&gt;get_cross_sell_ids(), $this );
+	}
+
+	/**
+	 * Check if variable product has default attributes set.
+	 *
+	 * @deprecated 3.0.0
+	 * @return bool
+	 */
+	public function has_default_attributes() {
+		wc_deprecated_function( &#039;WC_Product_Variable::has_default_attributes&#039;, &#039;3.0&#039;, &#039;a check against WC_Product::get_default_attributes directly&#039; );
+		if ( ! $this-&gt;get_default_attributes() ) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Get variation ID.
+	 *
+	 * @deprecated 3.0.0
+	 * @return int
+	 */
+	public function get_variation_id() {
+		wc_deprecated_function( &#039;WC_Product::get_variation_id&#039;, &#039;3.0&#039;, &#039;WC_Product::get_id(). It will always be the variation ID if this is a variation.&#039; );
+		return $this-&gt;get_id();
+	}
+
+	/**
+	 * Get product variation description.
+	 *
+	 * @deprecated 3.0.0
+	 * @return string
+	 */
+	public function get_variation_description() {
+		wc_deprecated_function( &#039;WC_Product::get_variation_description&#039;, &#039;3.0&#039;, &#039;WC_Product::get_description()&#039; );
+		return $this-&gt;get_description();
+	}
+
+	/**
+	 * Check if all variation&#039;s attributes are set.
+	 *
+	 * @deprecated 3.0.0
+	 * @return boolean
+	 */
+	public function has_all_attributes_set() {
+		wc_deprecated_function( &#039;WC_Product::has_all_attributes_set&#039;, &#039;3.0&#039;, &#039;an array filter on get_variation_attributes for a quick solution.&#039; );
+		$set = true;
+
+		// undefined attributes have null strings as array values
+		foreach ( $this-&gt;get_variation_attributes() as $att ) {
+			if ( ! $att ) {
+				$set = false;
+				break;
+			}
+		}
+		return $set;
+	}
+
+	/**
+	 * Returns whether or not the variations parent is visible.
+	 *
+	 * @deprecated 3.0.0
+	 * @return bool
+	 */
+	public function parent_is_visible() {
+		wc_deprecated_function( &#039;WC_Product::parent_is_visible&#039;, &#039;3.0&#039; );
+		return $this-&gt;is_visible();
+	}
+
+	/**
+	 * Get total stock - This is the stock of parent and children combined.
+	 *
+	 * @deprecated 3.0.0
+	 * @return int
+	 */
+	public function get_total_stock() {
+		wc_deprecated_function( &#039;WC_Product::get_total_stock&#039;, &#039;3.0&#039;, &#039;get_stock_quantity on each child. Beware of performance issues in doing so.&#039; );
+		if ( sizeof( $this-&gt;get_children() ) &gt; 0 ) {
+			$total_stock = max( 0, $this-&gt;get_stock_quantity() );
+
+			foreach ( $this-&gt;get_children() as $child_id ) {
+				if ( &#039;yes&#039; === get_post_meta( $child_id, &#039;_manage_stock&#039;, true ) ) {
+					$stock = get_post_meta( $child_id, &#039;_stock&#039;, true );
+					$total_stock += max( 0, wc_stock_amount( $stock ) );
+				}
+			}
+		} else {
+			$total_stock = $this-&gt;get_stock_quantity();
+		}
+		return wc_stock_amount( $total_stock );
+	}
+
+	/**
+	 * Get formatted variation data with WC &lt; 2.4 back compat and proper formatting of text-based attribute names.
+	 *
+	 * @deprecated 3.0.0
+	 *
+	 * @param bool $flat
+	 *
+	 * @return string
+	 */
+	public function get_formatted_variation_attributes( $flat = false ) {
+		wc_deprecated_function( &#039;WC_Product::get_formatted_variation_attributes&#039;, &#039;3.0&#039;, &#039;wc_get_formatted_variation&#039; );
+		return wc_get_formatted_variation( $this, $flat );
+	}
+
+	/**
+	 * Sync variable product prices with the children lowest/highest prices.
+	 *
+	 * @deprecated 3.0.0 not used in core.
+	 *
+	 * @param int $product_id
+	 */
+	public function variable_product_sync( $product_id = 0 ) {
+		wc_deprecated_function( &#039;WC_Product::variable_product_sync&#039;, &#039;3.0&#039; );
+		if ( empty( $product_id ) ) {
+			$product_id = $this-&gt;get_id();
+		}
+
+		// Sync prices with children
+		if ( is_callable( array( __CLASS__, &#039;sync&#039; ) ) ) {
+			self::sync( $product_id );
+		}
+	}
+
+	/**
+	 * Sync the variable product&#039;s attributes with the variations.
+	 *
+	 * @param $product
+	 * @param bool $children
+	 */
+	public static function sync_attributes( $product, $children = false ) {
+		if ( ! is_a( $product, &#039;WC_Product&#039; ) ) {
+			$product = wc_get_product( $product );
+		}
+
+		/**
+		 * Pre 2.4 handling where &#039;slugs&#039; were saved instead of the full text attribute.
+		 * Attempt to get full version of the text attribute from the parent and UPDATE meta.
+		 */
+		if ( version_compare( get_post_meta( $product-&gt;get_id(), &#039;_product_version&#039;, true ), &#039;2.4.0&#039;, &#039;&lt;&#039; ) ) {
+			$parent_attributes = array_filter( (array) get_post_meta( $product-&gt;get_id(), &#039;_product_attributes&#039;, true ) );
+
+			if ( ! $children ) {
+				$children = $product-&gt;get_children( &#039;edit&#039; );
+			}
+
+			foreach ( $children as $child_id ) {
+				$all_meta = get_post_meta( $child_id );
+
+				foreach ( $all_meta as $name =&gt; $value ) {
+					if ( 0 !== strpos( $name, &#039;attribute_&#039; ) ) {
+						continue;
+					}
+					if ( sanitize_title( $value[0] ) === $value[0] ) {
+						foreach ( $parent_attributes as $attribute ) {
+							if ( &#039;attribute_&#039; . sanitize_title( $attribute[&#039;name&#039;] ) !== $name ) {
+								continue;
+							}
+							$text_attributes = wc_get_text_attributes( $attribute[&#039;value&#039;] );
+							foreach ( $text_attributes as $text_attribute ) {
+								if ( sanitize_title( $text_attribute ) === $value[0] ) {
+									update_post_meta( $child_id, $name, $text_attribute );
+									break;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/**
+	 * Match a variation to a given set of attributes using a WP_Query.
+	 * @deprecated 3.0.0 in favour of Product data store&#039;s find_matching_product_variation.
+	 *
+	 * @param array $match_attributes
+	 */
+	public function get_matching_variation( $match_attributes = array() ) {
+		wc_deprecated_function( &#039;WC_Product::get_matching_variation&#039;, &#039;3.0&#039;, &#039;Product data store find_matching_product_variation&#039; );
+		$data_store = WC_Data_Store::load( &#039;product&#039; );
+		return $data_store-&gt;find_matching_product_variation( $this, $match_attributes );
+	}
+
+	/**
+	 * Returns whether or not we are showing dimensions on the product page.
+	 * @deprecated 3.0.0 Unused.
+	 * @return bool
+	 */
+	public function enable_dimensions_display() {
+		wc_deprecated_function( &#039;WC_Product::enable_dimensions_display&#039;, &#039;3.0&#039; );
+		return apply_filters( &#039;wc_product_enable_dimensions_display&#039;, true ) &amp;&amp; ( $this-&gt;has_dimensions() || $this-&gt;has_weight() || $this-&gt;child_has_weight() || $this-&gt;child_has_dimensions() );
+	}
+
+	/**
+	 * Returns the product rating in html format.
+	 *
+	 * @deprecated 3.0.0
+	 * @param string $rating (default: &#039;&#039;)
+	 * @return string
+	 */
+	public function get_rating_html( $rating = null ) {
+		wc_deprecated_function( &#039;WC_Product::get_rating_html&#039;, &#039;3.0&#039;, &#039;wc_get_rating_html&#039; );
+		return wc_get_rating_html( $rating );
+	}
+
+	/**
+	 * Sync product rating. Can be called statically.
+	 *
+	 * @deprecated 3.0.0
+	 * @param  int $post_id
+	 */
+	public static function sync_average_rating( $post_id ) {
+		wc_deprecated_function( &#039;WC_Product::sync_average_rating&#039;, &#039;3.0&#039;, &#039;WC_Comments::get_average_rating_for_product or leave to CRUD.&#039; );
+		// See notes in https://github.com/woocommerce/woocommerce/pull/22909#discussion_r262393401.
+		// Sync count first like in the original method https://github.com/woocommerce/woocommerce/blob/2.6.0/includes/abstracts/abstract-wc-product.php#L1101-L1128.
+		self::sync_rating_count( $post_id );
+		$average = WC_Comments::get_average_rating_for_product( wc_get_product( $post_id ) );
+		update_post_meta( $post_id, &#039;_wc_average_rating&#039;, $average );
+	}
+
+	/**
+	 * Sync product rating count. Can be called statically.
+	 *
+	 * @deprecated 3.0.0
+	 * @param  int $post_id
+	 */
+	public static function sync_rating_count( $post_id ) {
+		wc_deprecated_function( &#039;WC_Product::sync_rating_count&#039;, &#039;3.0&#039;, &#039;WC_Comments::get_rating_counts_for_product or leave to CRUD.&#039; );
+		$counts     = WC_Comments::get_rating_counts_for_product( wc_get_product( $post_id ) );
+		update_post_meta( $post_id, &#039;_wc_rating_count&#039;, $counts );
+	}
+
+	/**
+	 * Same as get_downloads in CRUD.
+	 *
+	 * @deprecated 3.0.0
+	 * @return array
+	 */
+	public function get_files() {
+		wc_deprecated_function( &#039;WC_Product::get_files&#039;, &#039;3.0&#039;, &#039;WC_Product::get_downloads&#039; );
+		return $this-&gt;get_downloads();
+	}
+
+	/**
+	 * @deprecated 3.0.0 Sync is taken care of during save - no need to call this directly.
+	 */
+	public function grouped_product_sync() {
+		wc_deprecated_function( &#039;WC_Product::grouped_product_sync&#039;, &#039;3.0&#039; );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866948"></script>
+    <script src="../js/search.js?updated=1692866948"></script>
+</body>
+</html>

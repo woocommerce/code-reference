@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-emails.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Transactional Emails Controller
+ *
+ * WooCommerce Emails Class which handles the sending on transactional emails and email templates. This class loads in available emails.
+ *
+ * @package WooCommerce\Classes\Emails
+ * @version 2.3.0
+ */
+
+use Automattic\Jetpack\Constants;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Emails class.
+ */
+class WC_Emails {
+
+	/**
+	 * Array of email notification classes
+	 *
+	 * @var WC_Email[]
+	 */
+	public $emails = array();
+
+	/**
+	 * The single instance of the class
+	 *
+	 * @var WC_Emails
+	 */
+	protected static $_instance = null;
+
+	/**
+	 * Background emailer class.
+	 *
+	 * @var WC_Background_Emailer
+	 */
+	protected static $background_emailer = null;
+
+	/**
+	 * Main WC_Emails Instance.
+	 *
+	 * Ensures only one instance of WC_Emails is loaded or can be loaded.
+	 *
+	 * @since 2.1
+	 * @static
+	 * @return WC_Emails Main instance
+	 */
+	public static function instance() {
+		if ( is_null( self::$_instance ) ) {
+			self::$_instance = new self();
+		}
+		return self::$_instance;
+	}
+
+	/**
+	 * Cloning is forbidden.
+	 *
+	 * @since 2.1
+	 */
+	public function __clone() {
+		wc_doing_it_wrong( __FUNCTION__, __( &#039;Cloning is forbidden.&#039;, &#039;woocommerce&#039; ), &#039;2.1&#039; );
+	}
+
+	/**
+	 * Unserializing instances of this class is forbidden.
+	 *
+	 * @since 2.1
+	 */
+	public function __wakeup() {
+		wc_doing_it_wrong( __FUNCTION__, __( &#039;Unserializing instances of this class is forbidden.&#039;, &#039;woocommerce&#039; ), &#039;2.1&#039; );
+	}
+
+	/**
+	 * Hook in all transactional emails.
+	 */
+	public static function init_transactional_emails() {
+		$email_actions = apply_filters(
+			&#039;woocommerce_email_actions&#039;,
+			array(
+				&#039;woocommerce_low_stock&#039;,
+				&#039;woocommerce_no_stock&#039;,
+				&#039;woocommerce_product_on_backorder&#039;,
+				&#039;woocommerce_order_status_pending_to_processing&#039;,
+				&#039;woocommerce_order_status_pending_to_completed&#039;,
+				&#039;woocommerce_order_status_processing_to_cancelled&#039;,
+				&#039;woocommerce_order_status_pending_to_failed&#039;,
+				&#039;woocommerce_order_status_pending_to_on-hold&#039;,
+				&#039;woocommerce_order_status_failed_to_processing&#039;,
+				&#039;woocommerce_order_status_failed_to_completed&#039;,
+				&#039;woocommerce_order_status_failed_to_on-hold&#039;,
+				&#039;woocommerce_order_status_cancelled_to_processing&#039;,
+				&#039;woocommerce_order_status_cancelled_to_completed&#039;,
+				&#039;woocommerce_order_status_cancelled_to_on-hold&#039;,
+				&#039;woocommerce_order_status_on-hold_to_processing&#039;,
+				&#039;woocommerce_order_status_on-hold_to_cancelled&#039;,
+				&#039;woocommerce_order_status_on-hold_to_failed&#039;,
+				&#039;woocommerce_order_status_completed&#039;,
+				&#039;woocommerce_order_fully_refunded&#039;,
+				&#039;woocommerce_order_partially_refunded&#039;,
+				&#039;woocommerce_new_customer_note&#039;,
+				&#039;woocommerce_created_customer&#039;,
+			)
+		);
+
+		if ( apply_filters( &#039;woocommerce_defer_transactional_emails&#039;, false ) ) {
+			self::$background_emailer = new WC_Background_Emailer();
+
+			foreach ( $email_actions as $action ) {
+				add_action( $action, array( __CLASS__, &#039;queue_transactional_email&#039; ), 10, 10 );
+			}
+		} else {
+			foreach ( $email_actions as $action ) {
+				add_action( $action, array( __CLASS__, &#039;send_transactional_email&#039; ), 10, 10 );
+			}
+		}
+	}
+
+	/**
+	 * Queues transactional email so it&#039;s not sent in current request if enabled,
+	 * otherwise falls back to send now.
+	 *
+	 * @param mixed ...$args Optional arguments.
+	 */
+	public static function queue_transactional_email( ...$args ) {
+		if ( is_a( self::$background_emailer, &#039;WC_Background_Emailer&#039; ) ) {
+			self::$background_emailer-&gt;push_to_queue(
+				array(
+					&#039;filter&#039; =&gt; current_filter(),
+					&#039;args&#039;   =&gt; func_get_args(),
+				)
+			);
+		} else {
+			self::send_transactional_email( ...$args );
+		}
+	}
+
+	/**
+	 * Init the mailer instance and call the notifications for the current filter.
+	 *
+	 * @internal
+	 *
+	 * @param string $filter Filter name.
+	 * @param array  $args Email args (default: []).
+	 */
+	public static function send_queued_transactional_email( $filter = &#039;&#039;, $args = array() ) {
+		if ( apply_filters( &#039;woocommerce_allow_send_queued_transactional_email&#039;, true, $filter, $args ) ) {
+			self::instance(); // Init self so emails exist.
+
+			// Ensure gateways are loaded in case they need to insert data into the emails.
+			WC()-&gt;payment_gateways();
+			WC()-&gt;shipping();
+
+			do_action_ref_array( $filter . &#039;_notification&#039;, $args );
+		}
+	}
+
+	/**
+	 * Init the mailer instance and call the notifications for the current filter.
+	 *
+	 * @internal
+	 *
+	 * @param array $args Email args (default: []).
+	 */
+	public static function send_transactional_email( $args = array() ) {
+		try {
+			$args = func_get_args();
+			self::instance(); // Init self so emails exist.
+			do_action_ref_array( current_filter() . &#039;_notification&#039;, $args );
+		} catch ( Exception $e ) {
+			$error  = &#039;Transactional email triggered fatal error for callback &#039; . current_filter();
+			$logger = wc_get_logger();
+			$logger-&gt;critical(
+				$error . PHP_EOL,
+				array(
+					&#039;source&#039; =&gt; &#039;transactional-emails&#039;,
+				)
+			);
+			if ( Constants::is_true( &#039;WP_DEBUG&#039; ) ) {
+				trigger_error( $error, E_USER_WARNING ); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+			}
+		}
+	}
+
+	/**
+	 * Constructor for the email class hooks in all emails that can be sent.
+	 */
+	public function __construct() {
+		$this-&gt;init();
+
+		// Email Header, Footer and content hooks.
+		add_action( &#039;woocommerce_email_header&#039;, array( $this, &#039;email_header&#039; ) );
+		add_action( &#039;woocommerce_email_footer&#039;, array( $this, &#039;email_footer&#039; ) );
+		add_action( &#039;woocommerce_email_order_details&#039;, array( $this, &#039;order_downloads&#039; ), 10, 4 );
+		add_action( &#039;woocommerce_email_order_details&#039;, array( $this, &#039;order_details&#039; ), 10, 4 );
+		add_action( &#039;woocommerce_email_order_meta&#039;, array( $this, &#039;order_meta&#039; ), 10, 3 );
+		add_action( &#039;woocommerce_email_customer_details&#039;, array( $this, &#039;customer_details&#039; ), 10, 3 );
+		add_action( &#039;woocommerce_email_customer_details&#039;, array( $this, &#039;email_addresses&#039; ), 20, 3 );
+
+		// Hooks for sending emails during store events.
+		add_action( &#039;woocommerce_low_stock_notification&#039;, array( $this, &#039;low_stock&#039; ) );
+		add_action( &#039;woocommerce_no_stock_notification&#039;, array( $this, &#039;no_stock&#039; ) );
+		add_action( &#039;woocommerce_product_on_backorder_notification&#039;, array( $this, &#039;backorder&#039; ) );
+		add_action( &#039;woocommerce_created_customer_notification&#039;, array( $this, &#039;customer_new_account&#039; ), 10, 3 );
+
+		// Hook for replacing {site_title} in email-footer.
+		add_filter( &#039;woocommerce_email_footer_text&#039;, array( $this, &#039;replace_placeholders&#039; ) );
+
+		// Let 3rd parties unhook the above via this hook.
+		do_action( &#039;woocommerce_email&#039;, $this );
+	}
+
+	/**
+	 * Init email classes.
+	 */
+	public function init() {
+		// Include email classes.
+		include_once dirname( __FILE__ ) . &#039;/emails/class-wc-email.php&#039;;
+
+		$this-&gt;emails[&#039;WC_Email_New_Order&#039;]                 = include __DIR__ . &#039;/emails/class-wc-email-new-order.php&#039;;
+		$this-&gt;emails[&#039;WC_Email_Cancelled_Order&#039;]           = include __DIR__ . &#039;/emails/class-wc-email-cancelled-order.php&#039;;
+		$this-&gt;emails[&#039;WC_Email_Failed_Order&#039;]              = include __DIR__ . &#039;/emails/class-wc-email-failed-order.php&#039;;
+		$this-&gt;emails[&#039;WC_Email_Customer_On_Hold_Order&#039;]    = include __DIR__ . &#039;/emails/class-wc-email-customer-on-hold-order.php&#039;;
+		$this-&gt;emails[&#039;WC_Email_Customer_Processing_Order&#039;] = include __DIR__ . &#039;/emails/class-wc-email-customer-processing-order.php&#039;;
+		$this-&gt;emails[&#039;WC_Email_Customer_Completed_Order&#039;]  = include __DIR__ . &#039;/emails/class-wc-email-customer-completed-order.php&#039;;
+		$this-&gt;emails[&#039;WC_Email_Customer_Refunded_Order&#039;]   = include __DIR__ . &#039;/emails/class-wc-email-customer-refunded-order.php&#039;;
+		$this-&gt;emails[&#039;WC_Email_Customer_Invoice&#039;]          = include __DIR__ . &#039;/emails/class-wc-email-customer-invoice.php&#039;;
+		$this-&gt;emails[&#039;WC_Email_Customer_Note&#039;]             = include __DIR__ . &#039;/emails/class-wc-email-customer-note.php&#039;;
+		$this-&gt;emails[&#039;WC_Email_Customer_Reset_Password&#039;]   = include __DIR__ . &#039;/emails/class-wc-email-customer-reset-password.php&#039;;
+		$this-&gt;emails[&#039;WC_Email_Customer_New_Account&#039;]      = include __DIR__ . &#039;/emails/class-wc-email-customer-new-account.php&#039;;
+
+		$this-&gt;emails = apply_filters( &#039;woocommerce_email_classes&#039;, $this-&gt;emails );
+	}
+
+	/**
+	 * Return the email classes - used in admin to load settings.
+	 *
+	 * @return WC_Email[]
+	 */
+	public function get_emails() {
+		return $this-&gt;emails;
+	}
+
+	/**
+	 * Get from name for email.
+	 *
+	 * @return string
+	 */
+	public function get_from_name() {
+		return wp_specialchars_decode( get_option( &#039;woocommerce_email_from_name&#039; ), ENT_QUOTES );
+	}
+
+	/**
+	 * Get from email address.
+	 *
+	 * @return string
+	 */
+	public function get_from_address() {
+		return sanitize_email( get_option( &#039;woocommerce_email_from_address&#039; ) );
+	}
+
+	/**
+	 * Get the email header.
+	 *
+	 * @param mixed $email_heading Heading for the email.
+	 */
+	public function email_header( $email_heading ) {
+		wc_get_template( &#039;emails/email-header.php&#039;, array( &#039;email_heading&#039; =&gt; $email_heading ) );
+	}
+
+	/**
+	 * Get the email footer.
+	 */
+	public function email_footer() {
+		wc_get_template( &#039;emails/email-footer.php&#039; );
+	}
+
+	/**
+	 * Replace placeholder text in strings.
+	 *
+	 * @since  3.7.0
+	 * @param  string $string Email footer text.
+	 * @return string         Email footer text with any replacements done.
+	 */
+	public function replace_placeholders( $string ) {
+		$domain = wp_parse_url( home_url(), PHP_URL_HOST );
+
+		return str_replace(
+			array(
+				&#039;{site_title}&#039;,
+				&#039;{site_address}&#039;,
+				&#039;{site_url}&#039;,
+				&#039;{woocommerce}&#039;,
+				&#039;{WooCommerce}&#039;,
+			),
+			array(
+				$this-&gt;get_blogname(),
+				$domain,
+				$domain,
+				&#039;&lt;a href=&quot;https://woocommerce.com&quot;&gt;WooCommerce&lt;/a&gt;&#039;,
+				&#039;&lt;a href=&quot;https://woocommerce.com&quot;&gt;WooCommerce&lt;/a&gt;&#039;,
+			),
+			$string
+		);
+	}
+
+	/**
+	 * Filter callback to replace {site_title} in email footer
+	 *
+	 * @since  3.3.0
+	 * @deprecated 3.7.0
+	 * @param  string $string Email footer text.
+	 * @return string         Email footer text with any replacements done.
+	 */
+	public function email_footer_replace_site_title( $string ) {
+		wc_deprecated_function( &#039;WC_Emails::email_footer_replace_site_title&#039;, &#039;3.7.0&#039;, &#039;WC_Emails::replace_placeholders&#039; );
+		return $this-&gt;replace_placeholders( $string );
+	}
+
+	/**
+	 * Wraps a message in the woocommerce mail template.
+	 *
+	 * @param string $email_heading Heading text.
+	 * @param string $message       Email message.
+	 * @param bool   $plain_text    Set true to send as plain text. Default to false.
+	 *
+	 * @return string
+	 */
+	public function wrap_message( $email_heading, $message, $plain_text = false ) {
+		// Buffer.
+		ob_start();
+
+		do_action( &#039;woocommerce_email_header&#039;, $email_heading, null );
+
+		echo wpautop( wptexturize( $message ) ); // WPCS: XSS ok.
+
+		do_action( &#039;woocommerce_email_footer&#039;, null );
+
+		// Get contents.
+		$message = ob_get_clean();
+
+		return $message;
+	}
+
+	/**
+	 * Send the email.
+	 *
+	 * @param mixed  $to          Receiver.
+	 * @param mixed  $subject     Email subject.
+	 * @param mixed  $message     Message.
+	 * @param string $headers     Email headers (default: &quot;Content-Type: text/html\r\n&quot;).
+	 * @param string $attachments Attachments (default: &quot;&quot;).
+	 * @return bool
+	 */
+	public function send( $to, $subject, $message, $headers = &quot;Content-Type: text/html\r\n&quot;, $attachments = &#039;&#039; ) {
+		// Send.
+		$email = new WC_Email();
+		return $email-&gt;send( $to, $subject, $message, $headers, $attachments );
+	}
+
+	/**
+	 * Prepare and send the customer invoice email on demand.
+	 *
+	 * @param int|WC_Order $order Order instance or ID.
+	 */
+	public function customer_invoice( $order ) {
+		$email = $this-&gt;emails[&#039;WC_Email_Customer_Invoice&#039;];
+
+		if ( ! is_object( $order ) ) {
+			$order = wc_get_order( absint( $order ) );
+		}
+
+		$email-&gt;trigger( $order-&gt;get_id(), $order );
+	}
+
+	/**
+	 * Customer new account welcome email.
+	 *
+	 * @param int   $customer_id        Customer ID.
+	 * @param array $new_customer_data  New customer data.
+	 * @param bool  $password_generated If password is generated.
+	 */
+	public function customer_new_account( $customer_id, $new_customer_data = array(), $password_generated = false ) {
+		if ( ! $customer_id ) {
+			return;
+		}
+
+		$user_pass = ! empty( $new_customer_data[&#039;user_pass&#039;] ) ? $new_customer_data[&#039;user_pass&#039;] : &#039;&#039;;
+
+		$email = $this-&gt;emails[&#039;WC_Email_Customer_New_Account&#039;];
+		$email-&gt;trigger( $customer_id, $user_pass, $password_generated );
+	}
+
+	/**
+	 * Show the order details table
+	 *
+	 * @param WC_Order $order         Order instance.
+	 * @param bool     $sent_to_admin If should sent to admin.
+	 * @param bool     $plain_text    If is plain text email.
+	 * @param string   $email         Email address.
+	 */
+	public function order_details( $order, $sent_to_admin = false, $plain_text = false, $email = &#039;&#039; ) {
+		if ( $plain_text ) {
+			wc_get_template(
+				&#039;emails/plain/email-order-details.php&#039;,
+				array(
+					&#039;order&#039;         =&gt; $order,
+					&#039;sent_to_admin&#039; =&gt; $sent_to_admin,
+					&#039;plain_text&#039;    =&gt; $plain_text,
+					&#039;email&#039;         =&gt; $email,
+				)
+			);
+		} else {
+			wc_get_template(
+				&#039;emails/email-order-details.php&#039;,
+				array(
+					&#039;order&#039;         =&gt; $order,
+					&#039;sent_to_admin&#039; =&gt; $sent_to_admin,
+					&#039;plain_text&#039;    =&gt; $plain_text,
+					&#039;email&#039;         =&gt; $email,
+				)
+			);
+		}
+	}
+
+	/**
+	 * Show order downloads in a table.
+	 *
+	 * @since 3.2.0
+	 * @param WC_Order $order         Order instance.
+	 * @param bool     $sent_to_admin If should sent to admin.
+	 * @param bool     $plain_text    If is plain text email.
+	 * @param string   $email         Email address.
+	 */
+	public function order_downloads( $order, $sent_to_admin = false, $plain_text = false, $email = &#039;&#039; ) {
+		$show_downloads = $order-&gt;has_downloadable_item() &amp;&amp; $order-&gt;is_download_permitted() &amp;&amp; ! $sent_to_admin &amp;&amp; ! is_a( $email, &#039;WC_Email_Customer_Refunded_Order&#039; );
+
+		if ( ! $show_downloads ) {
+			return;
+		}
+
+		$downloads = $order-&gt;get_downloadable_items();
+		$columns   = apply_filters(
+			&#039;woocommerce_email_downloads_columns&#039;,
+			array(
+				&#039;download-product&#039; =&gt; __( &#039;Product&#039;, &#039;woocommerce&#039; ),
+				&#039;download-expires&#039; =&gt; __( &#039;Expires&#039;, &#039;woocommerce&#039; ),
+				&#039;download-file&#039;    =&gt; __( &#039;Download&#039;, &#039;woocommerce&#039; ),
+			)
+		);
+
+		if ( $plain_text ) {
+			wc_get_template(
+				&#039;emails/plain/email-downloads.php&#039;,
+				array(
+					&#039;order&#039;         =&gt; $order,
+					&#039;sent_to_admin&#039; =&gt; $sent_to_admin,
+					&#039;plain_text&#039;    =&gt; $plain_text,
+					&#039;email&#039;         =&gt; $email,
+					&#039;downloads&#039;     =&gt; $downloads,
+					&#039;columns&#039;       =&gt; $columns,
+				)
+			);
+		} else {
+			wc_get_template(
+				&#039;emails/email-downloads.php&#039;,
+				array(
+					&#039;order&#039;         =&gt; $order,
+					&#039;sent_to_admin&#039; =&gt; $sent_to_admin,
+					&#039;plain_text&#039;    =&gt; $plain_text,
+					&#039;email&#039;         =&gt; $email,
+					&#039;downloads&#039;     =&gt; $downloads,
+					&#039;columns&#039;       =&gt; $columns,
+				)
+			);
+		}
+	}
+
+	/**
+	 * Add order meta to email templates.
+	 *
+	 * @param WC_Order $order         Order instance.
+	 * @param bool     $sent_to_admin If should sent to admin.
+	 * @param bool     $plain_text    If is plain text email.
+	 */
+	public function order_meta( $order, $sent_to_admin = false, $plain_text = false ) {
+		$fields = apply_filters( &#039;woocommerce_email_order_meta_fields&#039;, array(), $sent_to_admin, $order );
+
+		/**
+		 * Deprecated woocommerce_email_order_meta_keys filter.
+		 *
+		 * @since 2.3.0
+		 */
+		$_fields = apply_filters( &#039;woocommerce_email_order_meta_keys&#039;, array(), $sent_to_admin );
+
+		if ( $_fields ) {
+			foreach ( $_fields as $key =&gt; $field ) {
+				if ( is_numeric( $key ) ) {
+					$key = $field;
+				}
+
+				$fields[ $key ] = array(
+					&#039;label&#039; =&gt; wptexturize( $key ),
+					&#039;value&#039; =&gt; wptexturize( $order-&gt;get_meta( $field ) ),
+				);
+			}
+		}
+
+		if ( $fields ) {
+
+			if ( $plain_text ) {
+
+				foreach ( $fields as $field ) {
+					if ( isset( $field[&#039;label&#039;] ) &amp;&amp; isset( $field[&#039;value&#039;] ) &amp;&amp; $field[&#039;value&#039;] ) {
+						echo $field[&#039;label&#039;] . &#039;: &#039; . $field[&#039;value&#039;] . &quot;\n&quot;; // WPCS: XSS ok.
+					}
+				}
+			} else {
+
+				foreach ( $fields as $field ) {
+					if ( isset( $field[&#039;label&#039;] ) &amp;&amp; isset( $field[&#039;value&#039;] ) &amp;&amp; $field[&#039;value&#039;] ) {
+						echo &#039;&lt;p&gt;&lt;strong&gt;&#039; . $field[&#039;label&#039;] . &#039;:&lt;/strong&gt; &#039; . $field[&#039;value&#039;] . &#039;&lt;/p&gt;&#039;; // WPCS: XSS ok.
+					}
+				}
+			}
+		}
+	}
+
+	/**
+	 * Is customer detail field valid?
+	 *
+	 * @param  array $field Field data to check if is valid.
+	 * @return boolean
+	 */
+	public function customer_detail_field_is_valid( $field ) {
+		return isset( $field[&#039;label&#039;] ) &amp;&amp; ! empty( $field[&#039;value&#039;] );
+	}
+
+	/**
+	 * Allows developers to add additional customer details to templates.
+	 *
+	 * In versions prior to 3.2 this was used for notes, phone and email but this data has moved.
+	 *
+	 * @param WC_Order $order         Order instance.
+	 * @param bool     $sent_to_admin If should sent to admin.
+	 * @param bool     $plain_text    If is plain text email.
+	 */
+	public function customer_details( $order, $sent_to_admin = false, $plain_text = false ) {
+		if ( ! is_a( $order, &#039;WC_Order&#039; ) ) {
+			return;
+		}
+
+		$fields = array_filter( apply_filters( &#039;woocommerce_email_customer_details_fields&#039;, array(), $sent_to_admin, $order ), array( $this, &#039;customer_detail_field_is_valid&#039; ) );
+
+		if ( ! empty( $fields ) ) {
+			if ( $plain_text ) {
+				wc_get_template( &#039;emails/plain/email-customer-details.php&#039;, array( &#039;fields&#039; =&gt; $fields ) );
+			} else {
+				wc_get_template( &#039;emails/email-customer-details.php&#039;, array( &#039;fields&#039; =&gt; $fields ) );
+			}
+		}
+	}
+
+	/**
+	 * Get the email addresses.
+	 *
+	 * @param WC_Order $order         Order instance.
+	 * @param bool     $sent_to_admin If should sent to admin.
+	 * @param bool     $plain_text    If is plain text email.
+	 */
+	public function email_addresses( $order, $sent_to_admin = false, $plain_text = false ) {
+		if ( ! is_a( $order, &#039;WC_Order&#039; ) ) {
+			return;
+		}
+		if ( $plain_text ) {
+			wc_get_template(
+				&#039;emails/plain/email-addresses.php&#039;,
+				array(
+					&#039;order&#039;         =&gt; $order,
+					&#039;sent_to_admin&#039; =&gt; $sent_to_admin,
+				)
+			);
+		} else {
+			wc_get_template(
+				&#039;emails/email-addresses.php&#039;,
+				array(
+					&#039;order&#039;         =&gt; $order,
+					&#039;sent_to_admin&#039; =&gt; $sent_to_admin,
+				)
+			);
+		}
+	}
+
+	/**
+	 * Get blog name formatted for emails.
+	 *
+	 * @return string
+	 */
+	private function get_blogname() {
+		return wp_specialchars_decode( get_option( &#039;blogname&#039; ), ENT_QUOTES );
+	}
+
+	/**
+	 * Low stock notification email.
+	 *
+	 * @param WC_Product $product Product instance.
+	 */
+	public function low_stock( $product ) {
+		if ( &#039;no&#039; === get_option( &#039;woocommerce_notify_low_stock&#039;, &#039;yes&#039; ) ) {
+			return;
+		}
+
+		/**
+		 * Determine if the current product should trigger a low stock notification
+		 *
+		 * @param int $product_id - The low stock product id
+		 *
+		 * @since 4.7.0
+		 */
+		if ( false === apply_filters( &#039;woocommerce_should_send_low_stock_notification&#039;, true, $product-&gt;get_id() ) ) {
+			return;
+		}
+
+		$subject = sprintf( &#039;[%s] %s&#039;, $this-&gt;get_blogname(), __( &#039;Product low in stock&#039;, &#039;woocommerce&#039; ) );
+		$message = sprintf(
+			/* translators: 1: product name 2: items in stock */
+			__( &#039;%1$s is low in stock. There are %2$d left.&#039;, &#039;woocommerce&#039; ),
+			html_entity_decode( wp_strip_all_tags( $product-&gt;get_formatted_name() ), ENT_QUOTES, get_bloginfo( &#039;charset&#039; ) ),
+			html_entity_decode( wp_strip_all_tags( $product-&gt;get_stock_quantity() ) )
+		);
+
+		wp_mail(
+			apply_filters( &#039;woocommerce_email_recipient_low_stock&#039;, get_option( &#039;woocommerce_stock_email_recipient&#039; ), $product, null ),
+			apply_filters( &#039;woocommerce_email_subject_low_stock&#039;, $subject, $product, null ),
+			apply_filters( &#039;woocommerce_email_content_low_stock&#039;, $message, $product ),
+			apply_filters( &#039;woocommerce_email_headers&#039;, &#039;&#039;, &#039;low_stock&#039;, $product, null ),
+			apply_filters( &#039;woocommerce_email_attachments&#039;, array(), &#039;low_stock&#039;, $product, null )
+		);
+	}
+
+	/**
+	 * No stock notification email.
+	 *
+	 * @param WC_Product $product Product instance.
+	 */
+	public function no_stock( $product ) {
+		if ( &#039;no&#039; === get_option( &#039;woocommerce_notify_no_stock&#039;, &#039;yes&#039; ) ) {
+			return;
+		}
+
+		/**
+		 * Determine if the current product should trigger a no stock notification
+		 *
+		 * @param int $product_id - The out of stock product id
+		 *
+		 * @since 4.6.0
+		 */
+		if ( false === apply_filters( &#039;woocommerce_should_send_no_stock_notification&#039;, true, $product-&gt;get_id() ) ) {
+			return;
+		}
+
+		$subject = sprintf( &#039;[%s] %s&#039;, $this-&gt;get_blogname(), __( &#039;Product out of stock&#039;, &#039;woocommerce&#039; ) );
+		/* translators: %s: product name */
+		$message = sprintf( __( &#039;%s is out of stock.&#039;, &#039;woocommerce&#039; ), html_entity_decode( wp_strip_all_tags( $product-&gt;get_formatted_name() ), ENT_QUOTES, get_bloginfo( &#039;charset&#039; ) ) );
+
+		wp_mail(
+			apply_filters( &#039;woocommerce_email_recipient_no_stock&#039;, get_option( &#039;woocommerce_stock_email_recipient&#039; ), $product, null ),
+			apply_filters( &#039;woocommerce_email_subject_no_stock&#039;, $subject, $product, null ),
+			apply_filters( &#039;woocommerce_email_content_no_stock&#039;, $message, $product ),
+			apply_filters( &#039;woocommerce_email_headers&#039;, &#039;&#039;, &#039;no_stock&#039;, $product, null ),
+			apply_filters( &#039;woocommerce_email_attachments&#039;, array(), &#039;no_stock&#039;, $product, null )
+		);
+	}
+
+	/**
+	 * Backorder notification email.
+	 *
+	 * @param array $args Arguments.
+	 */
+	public function backorder( $args ) {
+		$args = wp_parse_args(
+			$args,
+			array(
+				&#039;product&#039;  =&gt; &#039;&#039;,
+				&#039;quantity&#039; =&gt; &#039;&#039;,
+				&#039;order_id&#039; =&gt; &#039;&#039;,
+			)
+		);
+
+		$order = wc_get_order( $args[&#039;order_id&#039;] );
+		if (
+			! $args[&#039;product&#039;] ||
+			! is_object( $args[&#039;product&#039;] ) ||
+			! $args[&#039;quantity&#039;] ||
+			! $order
+		) {
+			return;
+		}
+
+		$subject = sprintf( &#039;[%s] %s&#039;, $this-&gt;get_blogname(), __( &#039;Product backorder&#039;, &#039;woocommerce&#039; ) );
+		/* translators: 1: product quantity 2: product name 3: order number */
+		$message = sprintf( __( &#039;%1$s units of %2$s have been backordered in order #%3$s.&#039;, &#039;woocommerce&#039; ), $args[&#039;quantity&#039;], html_entity_decode( wp_strip_all_tags( $args[&#039;product&#039;]-&gt;get_formatted_name() ), ENT_QUOTES, get_bloginfo( &#039;charset&#039; ) ), $order-&gt;get_order_number() );
+
+		wp_mail(
+			apply_filters( &#039;woocommerce_email_recipient_backorder&#039;, get_option( &#039;woocommerce_stock_email_recipient&#039; ), $args, null ),
+			apply_filters( &#039;woocommerce_email_subject_backorder&#039;, $subject, $args, null ),
+			apply_filters( &#039;woocommerce_email_content_backorder&#039;, $message, $args ),
+			apply_filters( &#039;woocommerce_email_headers&#039;, &#039;&#039;, &#039;backorder&#039;, $args, null ),
+			apply_filters( &#039;woocommerce_email_attachments&#039;, array(), &#039;backorder&#039;, $args, null )
+		);
+	}
+
+	/**
+	 * Adds Schema.org markup for order in JSON-LD format.
+	 *
+	 * @deprecated 3.0.0
+	 * @see WC_Structured_Data::generate_order_data()
+	 *
+	 * @since 2.6.0
+	 * @param WC_Order $order         Order instance.
+	 * @param bool     $sent_to_admin If should sent to admin.
+	 * @param bool     $plain_text    If is plain text email.
+	 */
+	public function order_schema_markup( $order, $sent_to_admin = false, $plain_text = false ) {
+		wc_deprecated_function( &#039;WC_Emails::order_schema_markup&#039;, &#039;3.0&#039;, &#039;WC_Structured_Data::generate_order_data&#039; );
+
+		WC()-&gt;structured_data-&gt;generate_order_data( $order, $sent_to_admin, $plain_text );
+		WC()-&gt;structured_data-&gt;output_structured_data();
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

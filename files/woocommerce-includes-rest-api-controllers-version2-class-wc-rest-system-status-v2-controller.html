@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866948">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866948">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-rest-system-status-v2-controller.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * REST API WC System Status controller
+ *
+ * Handles requests to the /system_status endpoint.
+ *
+ * @package WooCommerce\RestApi
+ * @since   3.0.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+use Automattic\WooCommerce\Internal\WCCom\ConnectionHelper;
+use Automattic\WooCommerce\Internal\ProductDownloads\ApprovedDirectories\Register as Download_Directories;
+use Automattic\WooCommerce\Internal\DataStores\Orders\DataSynchronizer as Order_DataSynchronizer;
+use Automattic\WooCommerce\Utilities\OrderUtil;
+/**
+ * System status controller class.
+ *
+ * @package WooCommerce\RestApi
+ * @extends WC_REST_Controller
+ */
+class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
+
+	/**
+	 * Endpoint namespace.
+	 *
+	 * @var string
+	 */
+	protected $namespace = &#039;wc/v2&#039;;
+
+	/**
+	 * Route base.
+	 *
+	 * @var string
+	 */
+	protected $rest_base = &#039;system_status&#039;;
+
+	/**
+	 * Register cache cleaner
+	 *
+	 * Handles all the cache cleaning for this endpoint. We need to register
+	 * these functions before the routes are registered, so this function gets
+	 * called from Server.php
+	 */
+	public static function register_cache_clean() {
+		// Clear the theme cache if we switch themes or our theme is upgraded.
+		add_action( &#039;switch_theme&#039;, array( __CLASS__, &#039;clean_theme_cache&#039; ) );
+		add_action( &#039;activate_plugin&#039;, array( __CLASS__, &#039;clean_plugin_cache&#039; ) );
+		add_action( &#039;deactivate_plugin&#039;, array( __CLASS__, &#039;clean_plugin_cache&#039; ) );
+		add_action(
+			&#039;upgrader_process_complete&#039;,
+			function( $upgrader, $extra ) {
+				if ( ! $extra || ! $extra[&#039;type&#039;] ) {
+					return;
+				}
+
+				// Clear the cache if woocommerce is updated.
+				if ( &#039;plugin&#039; === $extra[&#039;type&#039;] ) {
+					\WC_REST_System_Status_V2_Controller::clean_theme_cache();
+					\WC_REST_System_Status_V2_Controller::clean_plugin_cache();
+					return;
+				}
+
+				if ( &#039;theme&#039; === $extra[&#039;type&#039;] ) {
+					\WC_REST_System_Status_V2_Controller::clean_theme_cache();
+					return;
+				}
+			},
+			10,
+			2
+		);
+	}
+
+	/**
+	 * Register the route for /system_status
+	 */
+	public function register_routes() {
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_items&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;get_items_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; $this-&gt;get_collection_params(),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+			)
+		);
+	}
+
+	/**
+	 * Check whether a given request has permission to view system status.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function get_items_permissions_check( $request ) {
+		if ( ! wc_rest_check_manager_permissions( &#039;system_status&#039;, &#039;read&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_view&#039;, __( &#039;Sorry, you cannot list resources.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+		return true;
+	}
+
+	/**
+	 * Get a system status info, by section.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function get_items( $request ) {
+		$fields   = $this-&gt;get_fields_for_response( $request );
+		$mappings = $this-&gt;get_item_mappings_per_fields( $fields );
+		$response = $this-&gt;prepare_item_for_response( $mappings, $request );
+
+		return rest_ensure_response( $response );
+	}
+
+	/**
+	 * Get the system status schema, conforming to JSON Schema.
+	 *
+	 * @return array
+	 */
+	public function get_item_schema() {
+		$schema = array(
+			&#039;$schema&#039;    =&gt; &#039;http://json-schema.org/draft-04/schema#&#039;,
+			&#039;title&#039;      =&gt; &#039;system_status&#039;,
+			&#039;type&#039;       =&gt; &#039;object&#039;,
+			&#039;properties&#039; =&gt; array(
+				&#039;environment&#039;        =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Environment.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;object&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+					&#039;properties&#039;  =&gt; array(
+						&#039;home_url&#039;                  =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Home URL.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;format&#039;      =&gt; &#039;uri&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;site_url&#039;                  =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Site URL.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;format&#039;      =&gt; &#039;uri&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;version&#039;                   =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;WooCommerce version.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;log_directory&#039;             =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Log directory.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;log_directory_writable&#039;    =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is log directory writable?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;wp_version&#039;                =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;WordPress version.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;wp_multisite&#039;              =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is WordPress multisite?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;wp_memory_limit&#039;           =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;WordPress memory limit.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;integer&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;wp_debug_mode&#039;             =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is WordPress debug mode active?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;wp_cron&#039;                   =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Are WordPress cron jobs enabled?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;language&#039;                  =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;WordPress language.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;server_info&#039;               =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Server info.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;php_version&#039;               =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;PHP version.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;php_post_max_size&#039;         =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;PHP post max size.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;integer&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;php_max_execution_time&#039;    =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;PHP max execution time.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;integer&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;php_max_input_vars&#039;        =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;PHP max input vars.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;integer&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;curl_version&#039;              =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;cURL version.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;suhosin_installed&#039;         =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is SUHOSIN installed?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;max_upload_size&#039;           =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Max upload size.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;integer&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;mysql_version&#039;             =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;MySQL version.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;mysql_version_string&#039;      =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;MySQL version string.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;default_timezone&#039;          =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Default timezone.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;fsockopen_or_curl_enabled&#039; =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is fsockopen/cURL enabled?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;soapclient_enabled&#039;        =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is SoapClient class enabled?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;domdocument_enabled&#039;       =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is DomDocument class enabled?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;gzip_enabled&#039;              =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is GZip enabled?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;mbstring_enabled&#039;          =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is mbstring enabled?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;remote_post_successful&#039;    =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Remote POST successful?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;remote_post_response&#039;      =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Remote POST response.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;remote_get_successful&#039;     =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Remote GET successful?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;remote_get_response&#039;       =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Remote GET response.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+					),
+				),
+				&#039;database&#039;           =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Database.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;object&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+					&#039;properties&#039;  =&gt; array(
+						&#039;wc_database_version&#039;    =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;WC database version.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;database_prefix&#039;        =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Database prefix.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;maxmind_geoip_database&#039; =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;MaxMind GeoIP database.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;database_tables&#039;        =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Database tables.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;array&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+							&#039;items&#039;       =&gt; array(
+								&#039;type&#039; =&gt; &#039;string&#039;,
+							),
+						),
+					),
+				),
+				&#039;active_plugins&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Active plugins.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039; =&gt; &#039;string&#039;,
+					),
+				),
+				&#039;inactive_plugins&#039;   =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Inactive plugins.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039; =&gt; &#039;string&#039;,
+					),
+				),
+				&#039;dropins_mu_plugins&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Dropins &amp; MU plugins.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039; =&gt; &#039;string&#039;,
+					),
+				),
+				&#039;theme&#039;              =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Theme.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;object&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+					&#039;properties&#039;  =&gt; array(
+						&#039;name&#039;                    =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Theme name.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;version&#039;                 =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Theme version.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;version_latest&#039;          =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Latest version of theme.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;author_url&#039;              =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Theme author URL.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;format&#039;      =&gt; &#039;uri&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;is_child_theme&#039;          =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is this theme a child theme?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;has_woocommerce_support&#039; =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Does the theme declare WooCommerce support?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;has_woocommerce_file&#039;    =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Does the theme have a woocommerce.php file?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;has_outdated_templates&#039;  =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Does this theme have outdated templates?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;overrides&#039;               =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Template overrides.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;array&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+							&#039;items&#039;       =&gt; array(
+								&#039;type&#039; =&gt; &#039;string&#039;,
+							),
+						),
+						&#039;parent_name&#039;             =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Parent theme name.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;parent_version&#039;          =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Parent theme version.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;parent_author_url&#039;       =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Parent theme author URL.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;format&#039;      =&gt; &#039;uri&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+					),
+				),
+				&#039;settings&#039;           =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Settings.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;object&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+					&#039;properties&#039;  =&gt; array(
+						&#039;api_enabled&#039;                    =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;REST API enabled?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;force_ssl&#039;                      =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;SSL forced?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;currency&#039;                       =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Currency.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;currency_symbol&#039;                =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Currency symbol.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;currency_position&#039;              =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Currency position.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;thousand_separator&#039;             =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Thousand separator.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;decimal_separator&#039;              =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Decimal separator.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;number_of_decimals&#039;             =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Number of decimals.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;integer&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;geolocation_enabled&#039;            =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Geolocation enabled?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;taxonomies&#039;                     =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Taxonomy terms for product/order statuses.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;array&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+							&#039;items&#039;       =&gt; array(
+								&#039;type&#039; =&gt; &#039;string&#039;,
+							),
+						),
+						&#039;product_visibility_terms&#039;       =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Terms in the product visibility taxonomy.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;array&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+							&#039;items&#039;       =&gt; array(
+								&#039;type&#039; =&gt; &#039;string&#039;,
+							),
+						),
+						&#039;wccom_connected&#039;                =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is store connected to WooCommerce.com?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;enforce_approved_download_dirs&#039; =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Enforce approved download directories?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;HPOS_feature_screen_enabled&#039;    =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is HPOS feature screen enabled?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;HPOS_enabled&#039;                   =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is HPOS enabled?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;order_datastore&#039;                =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Order datastore.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;HPOS_sync_enabled&#039;              =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is HPOS sync enabled?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+					),
+				),
+				&#039;security&#039;           =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Security.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;object&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+					&#039;properties&#039;  =&gt; array(
+						&#039;secure_connection&#039; =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Is the connection to your store secure?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+						&#039;hide_errors&#039;       =&gt; array(
+							&#039;description&#039; =&gt; __( &#039;Hide errors from visitors?&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;        =&gt; &#039;boolean&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+							&#039;readonly&#039;    =&gt; true,
+						),
+					),
+				),
+				&#039;pages&#039;              =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;WooCommerce pages.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039; =&gt; &#039;string&#039;,
+					),
+				),
+				&#039;post_type_counts&#039;   =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Total post count.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039; =&gt; &#039;string&#039;,
+					),
+				),
+			),
+		);
+
+		return $this-&gt;add_additional_fields_schema( $schema );
+	}
+
+	/**
+	 * Return an array of sections and the data associated with each.
+	 *
+	 * @deprecated 3.9.0
+	 * @return array
+	 */
+	public function get_item_mappings() {
+		return array(
+			&#039;environment&#039;        =&gt; $this-&gt;get_environment_info(),
+			&#039;database&#039;           =&gt; $this-&gt;get_database_info(),
+			&#039;active_plugins&#039;     =&gt; $this-&gt;get_active_plugins(),
+			&#039;inactive_plugins&#039;   =&gt; $this-&gt;get_inactive_plugins(),
+			&#039;dropins_mu_plugins&#039; =&gt; $this-&gt;get_dropins_mu_plugins(),
+			&#039;theme&#039;              =&gt; $this-&gt;get_theme_info(),
+			&#039;settings&#039;           =&gt; $this-&gt;get_settings(),
+			&#039;security&#039;           =&gt; $this-&gt;get_security_info(),
+			&#039;pages&#039;              =&gt; $this-&gt;get_pages(),
+			&#039;post_type_counts&#039;   =&gt; $this-&gt;get_post_type_counts(),
+		);
+	}
+
+	/**
+	 * Return an array of sections and the data associated with each.
+	 *
+	 * @since 3.9.0
+	 * @param array $fields List of fields to be included on the response.
+	 * @return array
+	 */
+	public function get_item_mappings_per_fields( $fields ) {
+		$items = array();
+
+		foreach ( $fields as $field ) {
+			// If we&#039;re looking for a sub-property, like environment.version we need
+			// to extract the first-level property here so we know which function to run.
+			list( $prop ) = explode( &#039;.&#039;, $field, 2 );
+			switch ( $prop ) {
+				case &#039;environment&#039;:
+					$items[&#039;environment&#039;] = $this-&gt;get_environment_info_per_fields( $fields );
+					break;
+				case &#039;database&#039;:
+					$items[&#039;database&#039;] = $this-&gt;get_database_info();
+					break;
+				case &#039;active_plugins&#039;:
+					$items[&#039;active_plugins&#039;] = $this-&gt;get_active_plugins();
+					break;
+				case &#039;inactive_plugins&#039;:
+					$items[&#039;inactive_plugins&#039;] = $this-&gt;get_inactive_plugins();
+					break;
+				case &#039;dropins_mu_plugins&#039;:
+					$items[&#039;dropins_mu_plugins&#039;] = $this-&gt;get_dropins_mu_plugins();
+					break;
+				case &#039;theme&#039;:
+					$items[&#039;theme&#039;] = $this-&gt;get_theme_info();
+					break;
+				case &#039;settings&#039;:
+					$items[&#039;settings&#039;] = $this-&gt;get_settings();
+					break;
+				case &#039;security&#039;:
+					$items[&#039;security&#039;] = $this-&gt;get_security_info();
+					break;
+				case &#039;pages&#039;:
+					$items[&#039;pages&#039;] = $this-&gt;get_pages();
+					break;
+				case &#039;post_type_counts&#039;:
+					$items[&#039;post_type_counts&#039;] = $this-&gt;get_post_type_counts();
+					break;
+			}
+		}
+
+		return $items;
+	}
+
+	/**
+	 * Get array of environment information. Includes thing like software
+	 * versions, and various server settings.
+	 *
+	 * @deprecated 3.9.0
+	 * @return array
+	 */
+	public function get_environment_info() {
+		return $this-&gt;get_environment_info_per_fields( array( &#039;environment&#039; ) );
+	}
+
+	/**
+	 * Check if field item exists.
+	 *
+	 * @since 3.9.0
+	 * @param string $section Fields section.
+	 * @param array  $items List of items to check for.
+	 * @param array  $fields List of fields to be included on the response.
+	 * @return bool
+	 */
+	private function check_if_field_item_exists( $section, $items, $fields ) {
+		if ( ! in_array( $section, $fields, true ) ) {
+			return false;
+		}
+
+		$exclude = array();
+		foreach ( $fields as $field ) {
+			$values = explode( &#039;.&#039;, $field );
+
+			if ( $section !== $values[0] || empty( $values[1] ) ) {
+				continue;
+			}
+
+			$exclude[] = $values[1];
+		}
+
+		return 0 &lt;= count( array_intersect( $items, $exclude ) );
+	}
+
+	/**
+	 * Get array of environment information. Includes thing like software
+	 * versions, and various server settings.
+	 *
+	 * @param array $fields List of fields to be included on the response.
+	 * @return array
+	 */
+	public function get_environment_info_per_fields( $fields ) {
+		global $wpdb;
+
+		$enable_remote_post = $this-&gt;check_if_field_item_exists( &#039;environment&#039;, array( &#039;remote_post_successful&#039;, &#039;remote_post_response&#039; ), $fields );
+		$enable_remote_get  = $this-&gt;check_if_field_item_exists( &#039;environment&#039;, array( &#039;remote_get_successful&#039;, &#039;remote_get_response&#039; ), $fields );
+
+		// Figure out cURL version, if installed.
+		$curl_version = &#039;&#039;;
+		if ( function_exists( &#039;curl_version&#039; ) ) {
+			$curl_version = curl_version();
+			$curl_version = $curl_version[&#039;version&#039;] . &#039;, &#039; . $curl_version[&#039;ssl_version&#039;];
+		} elseif ( extension_loaded( &#039;curl&#039; ) ) {
+			$curl_version = __( &#039;cURL installed but unable to retrieve version.&#039;, &#039;woocommerce&#039; );
+		}
+
+		// WP memory limit.
+		$wp_memory_limit = wc_let_to_num( WP_MEMORY_LIMIT );
+		if ( function_exists( &#039;memory_get_usage&#039; ) ) {
+			$wp_memory_limit = max( $wp_memory_limit, wc_let_to_num( @ini_get( &#039;memory_limit&#039; ) ) ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
+		}
+
+		// Test POST requests.
+		$post_response_successful = null;
+		$post_response_code       = null;
+		if ( $enable_remote_post ) {
+			$post_response_code = get_transient( &#039;woocommerce_test_remote_post&#039; );
+
+			if ( false === $post_response_code || is_wp_error( $post_response_code ) ) {
+				$response = wp_safe_remote_post(
+					&#039;https://www.paypal.com/cgi-bin/webscr&#039;,
+					array(
+						&#039;timeout&#039;     =&gt; 10,
+						&#039;user-agent&#039;  =&gt; &#039;WooCommerce/&#039; . WC()-&gt;version . &#039;; &#039; . get_bloginfo( &#039;url&#039; ),
+						&#039;httpversion&#039; =&gt; &#039;1.1&#039;,
+						&#039;body&#039;        =&gt; array(
+							&#039;cmd&#039; =&gt; &#039;_notify-validate&#039;,
+						),
+					)
+				);
+				if ( ! is_wp_error( $response ) ) {
+					$post_response_code = $response[&#039;response&#039;][&#039;code&#039;];
+				}
+				set_transient( &#039;woocommerce_test_remote_post&#039;, $post_response_code, HOUR_IN_SECONDS );
+			}
+
+			$post_response_successful = ! is_wp_error( $post_response_code ) &amp;&amp; $post_response_code &gt;= 200 &amp;&amp; $post_response_code &lt; 300;
+		}
+
+		// Test GET requests.
+		$get_response_successful = null;
+		$get_response_code       = null;
+		if ( $enable_remote_get ) {
+			$get_response_code = get_transient( &#039;woocommerce_test_remote_get&#039; );
+
+			if ( false === $get_response_code || is_wp_error( $get_response_code ) ) {
+				$response = wp_safe_remote_get(
+					&#039;https://woocommerce.com/wc-api/product-key-api?request=ping&amp;network=&#039; . ( is_multisite() ? &#039;1&#039; : &#039;0&#039; ),
+					array(
+						&#039;user-agent&#039; =&gt; &#039;WooCommerce/&#039; . WC()-&gt;version . &#039;; &#039; . get_bloginfo( &#039;url&#039; ),
+					)
+				);
+				if ( ! is_wp_error( $response ) ) {
+					$get_response_code = $response[&#039;response&#039;][&#039;code&#039;];
+				}
+				set_transient( &#039;woocommerce_test_remote_get&#039;, $get_response_code, HOUR_IN_SECONDS );
+			}
+
+			$get_response_successful = ! is_wp_error( $get_response_code ) &amp;&amp; $get_response_code &gt;= 200 &amp;&amp; $get_response_code &lt; 300;
+		}
+
+		$database_version = wc_get_server_database_version();
+
+		// Return all environment info. Described by JSON Schema.
+		return array(
+			&#039;home_url&#039;                  =&gt; get_option( &#039;home&#039; ),
+			&#039;site_url&#039;                  =&gt; get_option( &#039;siteurl&#039; ),
+			&#039;version&#039;                   =&gt; WC()-&gt;version,
+			&#039;log_directory&#039;             =&gt; WC_LOG_DIR,
+			&#039;log_directory_writable&#039;    =&gt; (bool) @fopen( WC_LOG_DIR . &#039;test-log.log&#039;, &#039;a&#039; ), // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.file_system_read_fopen
+			&#039;wp_version&#039;                =&gt; get_bloginfo( &#039;version&#039; ),
+			&#039;wp_multisite&#039;              =&gt; is_multisite(),
+			&#039;wp_memory_limit&#039;           =&gt; $wp_memory_limit,
+			&#039;wp_debug_mode&#039;             =&gt; ( defined( &#039;WP_DEBUG&#039; ) &amp;&amp; WP_DEBUG ),
+			&#039;wp_cron&#039;                   =&gt; ! ( defined( &#039;DISABLE_WP_CRON&#039; ) &amp;&amp; DISABLE_WP_CRON ),
+			&#039;language&#039;                  =&gt; get_locale(),
+			&#039;external_object_cache&#039;     =&gt; wp_using_ext_object_cache(),
+			&#039;server_info&#039;               =&gt; isset( $_SERVER[&#039;SERVER_SOFTWARE&#039;] ) ? wc_clean( wp_unslash( $_SERVER[&#039;SERVER_SOFTWARE&#039;] ) ) : &#039;&#039;,
+			&#039;php_version&#039;               =&gt; phpversion(),
+			&#039;php_post_max_size&#039;         =&gt; wc_let_to_num( ini_get( &#039;post_max_size&#039; ) ),
+			&#039;php_max_execution_time&#039;    =&gt; (int) ini_get( &#039;max_execution_time&#039; ),
+			&#039;php_max_input_vars&#039;        =&gt; (int) ini_get( &#039;max_input_vars&#039; ),
+			&#039;curl_version&#039;              =&gt; $curl_version,
+			&#039;suhosin_installed&#039;         =&gt; extension_loaded( &#039;suhosin&#039; ),
+			&#039;max_upload_size&#039;           =&gt; wp_max_upload_size(),
+			&#039;mysql_version&#039;             =&gt; $database_version[&#039;number&#039;],
+			&#039;mysql_version_string&#039;      =&gt; $database_version[&#039;string&#039;],
+			&#039;default_timezone&#039;          =&gt; date_default_timezone_get(),
+			&#039;fsockopen_or_curl_enabled&#039; =&gt; ( function_exists( &#039;fsockopen&#039; ) || function_exists( &#039;curl_init&#039; ) ),
+			&#039;soapclient_enabled&#039;        =&gt; class_exists( &#039;SoapClient&#039; ),
+			&#039;domdocument_enabled&#039;       =&gt; class_exists( &#039;DOMDocument&#039; ),
+			&#039;gzip_enabled&#039;              =&gt; is_callable( &#039;gzopen&#039; ),
+			&#039;mbstring_enabled&#039;          =&gt; extension_loaded( &#039;mbstring&#039; ),
+			&#039;remote_post_successful&#039;    =&gt; $post_response_successful,
+			&#039;remote_post_response&#039;      =&gt; is_wp_error( $post_response_code ) ? $post_response_code-&gt;get_error_message() : $post_response_code,
+			&#039;remote_get_successful&#039;     =&gt; $get_response_successful,
+			&#039;remote_get_response&#039;       =&gt; is_wp_error( $get_response_code ) ? $get_response_code-&gt;get_error_message() : $get_response_code,
+		);
+	}
+
+	/**
+	 * Add prefix to table.
+	 *
+	 * @param string $table Table name.
+	 * @return stromg
+	 */
+	protected function add_db_table_prefix( $table ) {
+		global $wpdb;
+		return $wpdb-&gt;prefix . $table;
+	}
+
+	/**
+	 * Get array of database information. Version, prefix, and table existence.
+	 *
+	 * @return array
+	 */
+	public function get_database_info() {
+		global $wpdb;
+
+		$tables        = array();
+		$database_size = array();
+
+		// It is not possible to get the database name from some classes that replace wpdb (e.g., HyperDB)
+		// and that is why this if condition is needed.
+		if ( defined( &#039;DB_NAME&#039; ) ) {
+			$database_table_information = $wpdb-&gt;get_results(
+				$wpdb-&gt;prepare(
+					&quot;SELECT
+					    table_name AS &#039;name&#039;,
+						engine AS &#039;engine&#039;,
+					    round( ( data_length / 1024 / 1024 ), 2 ) &#039;data&#039;,
+					    round( ( index_length / 1024 / 1024 ), 2 ) &#039;index&#039;
+					FROM information_schema.TABLES
+					WHERE table_schema = %s
+					ORDER BY name ASC;&quot;,
+					DB_NAME
+				)
+			);
+
+			// WC Core tables to check existence of.
+			$core_tables = apply_filters(
+				&#039;woocommerce_database_tables&#039;,
+				array(
+					&#039;woocommerce_sessions&#039;,
+					&#039;woocommerce_api_keys&#039;,
+					&#039;woocommerce_attribute_taxonomies&#039;,
+					&#039;woocommerce_downloadable_product_permissions&#039;,
+					&#039;woocommerce_order_items&#039;,
+					&#039;woocommerce_order_itemmeta&#039;,
+					&#039;woocommerce_tax_rates&#039;,
+					&#039;woocommerce_tax_rate_locations&#039;,
+					&#039;woocommerce_shipping_zones&#039;,
+					&#039;woocommerce_shipping_zone_locations&#039;,
+					&#039;woocommerce_shipping_zone_methods&#039;,
+					&#039;woocommerce_payment_tokens&#039;,
+					&#039;woocommerce_payment_tokenmeta&#039;,
+					&#039;woocommerce_log&#039;,
+				)
+			);
+
+			/**
+			 * Adding the prefix to the tables array, for backwards compatibility.
+			 *
+			 * If we changed the tables above to include the prefix, then any filters against that table could break.
+			 */
+			$core_tables = array_map( array( $this, &#039;add_db_table_prefix&#039; ), $core_tables );
+
+			/**
+			 * Organize WooCommerce and non-WooCommerce tables separately for display purposes later.
+			 *
+			 * To ensure we include all WC tables, even if they do not exist, pre-populate the WC array with all the tables.
+			 */
+			$tables = array(
+				&#039;woocommerce&#039; =&gt; array_fill_keys( $core_tables, false ),
+				&#039;other&#039;       =&gt; array(),
+			);
+
+			$database_size = array(
+				&#039;data&#039;  =&gt; 0,
+				&#039;index&#039; =&gt; 0,
+			);
+
+			$site_tables_prefix = $wpdb-&gt;get_blog_prefix( get_current_blog_id() );
+			$global_tables      = $wpdb-&gt;tables( &#039;global&#039;, true );
+			foreach ( $database_table_information as $table ) {
+				// Only include tables matching the prefix of the current site, this is to prevent displaying all tables on a MS install not relating to the current.
+				if ( is_multisite() &amp;&amp; 0 !== strpos( $table-&gt;name, $site_tables_prefix ) &amp;&amp; ! in_array( $table-&gt;name, $global_tables, true ) ) {
+					continue;
+				}
+				$table_type = in_array( $table-&gt;name, $core_tables, true ) ? &#039;woocommerce&#039; : &#039;other&#039;;
+
+				$tables[ $table_type ][ $table-&gt;name ] = array(
+					&#039;data&#039;   =&gt; $table-&gt;data,
+					&#039;index&#039;  =&gt; $table-&gt;index,
+					&#039;engine&#039; =&gt; $table-&gt;engine,
+				);
+
+				$database_size[&#039;data&#039;]  += $table-&gt;data;
+				$database_size[&#039;index&#039;] += $table-&gt;index;
+			}
+		}
+
+		// Return all database info. Described by JSON Schema.
+		return array(
+			&#039;wc_database_version&#039;    =&gt; get_option( &#039;woocommerce_db_version&#039; ),
+			&#039;database_prefix&#039;        =&gt; $wpdb-&gt;prefix,
+			&#039;maxmind_geoip_database&#039; =&gt; &#039;&#039;,
+			&#039;database_tables&#039;        =&gt; $tables,
+			&#039;database_size&#039;          =&gt; $database_size,
+		);
+	}
+
+	/**
+	 * Get array of counts of objects. Orders, products, etc.
+	 *
+	 * @return array
+	 */
+	public function get_post_type_counts() {
+		global $wpdb;
+
+		$post_type_counts = $wpdb-&gt;get_results( &quot;SELECT post_type AS &#039;type&#039;, count(1) AS &#039;count&#039; FROM {$wpdb-&gt;posts} GROUP BY post_type;&quot; );
+
+		return is_array( $post_type_counts ) ? $post_type_counts : array();
+	}
+
+	/**
+	 * Get a list of plugins active on the site.
+	 *
+	 * @return array
+	 */
+	public function get_active_plugins() {
+		$active_plugins_data = get_transient( &#039;wc_system_status_active_plugins&#039; );
+
+		if ( false === $active_plugins_data ) {
+			require_once ABSPATH . &#039;wp-admin/includes/plugin.php&#039;;
+
+			if ( ! function_exists( &#039;get_plugin_data&#039; ) ) {
+				return array();
+			}
+
+			$active_plugins = (array) get_option( &#039;active_plugins&#039;, array() );
+			if ( is_multisite() ) {
+				$network_activated_plugins = array_keys( get_site_option( &#039;active_sitewide_plugins&#039;, array() ) );
+				$active_plugins            = array_merge( $active_plugins, $network_activated_plugins );
+			}
+
+			$active_plugins_data = array();
+
+			foreach ( $active_plugins as $plugin ) {
+				$data                  = get_plugin_data( WP_PLUGIN_DIR . &#039;/&#039; . $plugin );
+				$active_plugins_data[] = $this-&gt;format_plugin_data( $plugin, $data );
+			}
+
+			set_transient( &#039;wc_system_status_active_plugins&#039;, $active_plugins_data, HOUR_IN_SECONDS );
+		}
+
+		return $active_plugins_data;
+	}
+
+	/**
+	 * Get a list of inplugins active on the site.
+	 *
+	 * @return array
+	 */
+	public function get_inactive_plugins() {
+		$plugins_data = get_transient( &#039;wc_system_status_inactive_plugins&#039; );
+
+		if ( false === $plugins_data ) {
+			require_once ABSPATH . &#039;wp-admin/includes/plugin.php&#039;;
+
+			if ( ! function_exists( &#039;get_plugins&#039; ) ) {
+				return array();
+			}
+
+			$plugins        = get_plugins();
+			$active_plugins = (array) get_option( &#039;active_plugins&#039;, array() );
+
+			if ( is_multisite() ) {
+				$network_activated_plugins = array_keys( get_site_option( &#039;active_sitewide_plugins&#039;, array() ) );
+				$active_plugins            = array_merge( $active_plugins, $network_activated_plugins );
+			}
+
+			$plugins_data = array();
+
+			foreach ( $plugins as $plugin =&gt; $data ) {
+				if ( in_array( $plugin, $active_plugins, true ) ) {
+					continue;
+				}
+				$plugins_data[] = $this-&gt;format_plugin_data( $plugin, $data );
+			}
+
+			set_transient( &#039;wc_system_status_inactive_plugins&#039;, $plugins_data, HOUR_IN_SECONDS );
+		}
+
+		return $plugins_data;
+	}
+
+	/**
+	 * Format plugin data, including data on updates, into a standard format.
+	 *
+	 * @since 3.6.0
+	 * @param string $plugin Plugin directory/file.
+	 * @param array  $data Plugin data from WP.
+	 * @return array Formatted data.
+	 */
+	protected function format_plugin_data( $plugin, $data ) {
+		require_once ABSPATH . &#039;wp-admin/includes/update.php&#039;;
+
+		if ( ! function_exists( &#039;get_plugin_updates&#039; ) ) {
+			return array();
+		}
+
+		// Use WP API to lookup latest updates for plugins. WC_Helper injects updates for premium plugins.
+		if ( empty( $this-&gt;available_updates ) ) {
+			$this-&gt;available_updates = get_plugin_updates();
+		}
+
+		$version_latest = $data[&#039;Version&#039;];
+
+		// Find latest version.
+		if ( isset( $this-&gt;available_updates[ $plugin ]-&gt;update-&gt;new_version ) ) {
+			$version_latest = $this-&gt;available_updates[ $plugin ]-&gt;update-&gt;new_version;
+		}
+
+		return array(
+			&#039;plugin&#039;            =&gt; $plugin,
+			&#039;name&#039;              =&gt; $data[&#039;Name&#039;],
+			&#039;version&#039;           =&gt; $data[&#039;Version&#039;],
+			&#039;version_latest&#039;    =&gt; $version_latest,
+			&#039;url&#039;               =&gt; $data[&#039;PluginURI&#039;],
+			&#039;author_name&#039;       =&gt; $data[&#039;AuthorName&#039;],
+			&#039;author_url&#039;        =&gt; esc_url_raw( $data[&#039;AuthorURI&#039;] ),
+			&#039;network_activated&#039; =&gt; $data[&#039;Network&#039;],
+		);
+	}
+
+	/**
+	 * Get a list of Dropins and MU plugins.
+	 *
+	 * @since 3.6.0
+	 * @return array
+	 */
+	public function get_dropins_mu_plugins() {
+		$plugins = get_transient( &#039;wc_system_status_dropins_mu_plugins&#039; );
+
+		if ( false === $plugins ) {
+			$dropins = get_dropins();
+			$plugins = array(
+				&#039;dropins&#039;    =&gt; array(),
+				&#039;mu_plugins&#039; =&gt; array(),
+			);
+			foreach ( $dropins as $key =&gt; $dropin ) {
+				$plugins[&#039;dropins&#039;][] = array(
+					&#039;plugin&#039; =&gt; $key,
+					&#039;name&#039;   =&gt; $dropin[&#039;Name&#039;],
+				);
+			}
+
+			$mu_plugins = get_mu_plugins();
+			foreach ( $mu_plugins as $plugin =&gt; $mu_plugin ) {
+				$plugins[&#039;mu_plugins&#039;][] = array(
+					&#039;plugin&#039;      =&gt; $plugin,
+					&#039;name&#039;        =&gt; $mu_plugin[&#039;Name&#039;],
+					&#039;version&#039;     =&gt; $mu_plugin[&#039;Version&#039;],
+					&#039;url&#039;         =&gt; $mu_plugin[&#039;PluginURI&#039;],
+					&#039;author_name&#039; =&gt; $mu_plugin[&#039;AuthorName&#039;],
+					&#039;author_url&#039;  =&gt; esc_url_raw( $mu_plugin[&#039;AuthorURI&#039;] ),
+				);
+			}
+
+			set_transient( &#039;wc_system_status_dropins_mu_plugins&#039;, $plugins, HOUR_IN_SECONDS );
+		}
+
+		return $plugins;
+	}
+
+	/**
+	 * Get info on the current active theme, info on parent theme (if presnet)
+	 * and a list of template overrides.
+	 *
+	 * @return array
+	 */
+	public function get_theme_info() {
+		$theme_info = get_transient( &#039;wc_system_status_theme_info&#039; );
+
+		if ( false === $theme_info ) {
+			$active_theme = wp_get_theme();
+
+			// Get parent theme info if this theme is a child theme, otherwise
+			// pass empty info in the response.
+			if ( is_child_theme() ) {
+				$parent_theme      = wp_get_theme( $active_theme-&gt;template );
+				$parent_theme_info = array(
+					&#039;parent_name&#039;           =&gt; $parent_theme-&gt;name,
+					&#039;parent_version&#039;        =&gt; $parent_theme-&gt;version,
+					&#039;parent_version_latest&#039; =&gt; WC_Admin_Status::get_latest_theme_version( $parent_theme ),
+					&#039;parent_author_url&#039;     =&gt; $parent_theme-&gt;{&#039;Author URI&#039;},
+				);
+			} else {
+				$parent_theme_info = array(
+					&#039;parent_name&#039;           =&gt; &#039;&#039;,
+					&#039;parent_version&#039;        =&gt; &#039;&#039;,
+					&#039;parent_version_latest&#039; =&gt; &#039;&#039;,
+					&#039;parent_author_url&#039;     =&gt; &#039;&#039;,
+				);
+			}
+
+			/**
+			 * Scan the theme directory for all WC templates to see if our theme
+			 * overrides any of them.
+			 */
+			$override_files     = array();
+			$outdated_templates = false;
+			$scan_files         = WC_Admin_Status::scan_template_files( WC()-&gt;plugin_path() . &#039;/templates/&#039; );
+
+			// Include *-product_&lt;cat|tag&gt; templates for backwards compatibility.
+			$scan_files[] = &#039;content-product_cat.php&#039;;
+			$scan_files[] = &#039;taxonomy-product_cat.php&#039;;
+			$scan_files[] = &#039;taxonomy-product_tag.php&#039;;
+
+			foreach ( $scan_files as $file ) {
+				$located = apply_filters( &#039;wc_get_template&#039;, $file, $file, array(), WC()-&gt;template_path(), WC()-&gt;plugin_path() . &#039;/templates/&#039; );
+
+				if ( file_exists( $located ) ) {
+					$theme_file = $located;
+				} elseif ( file_exists( get_stylesheet_directory() . &#039;/&#039; . $file ) ) {
+					$theme_file = get_stylesheet_directory() . &#039;/&#039; . $file;
+				} elseif ( file_exists( get_stylesheet_directory() . &#039;/&#039; . WC()-&gt;template_path() . $file ) ) {
+					$theme_file = get_stylesheet_directory() . &#039;/&#039; . WC()-&gt;template_path() . $file;
+				} elseif ( file_exists( get_template_directory() . &#039;/&#039; . $file ) ) {
+					$theme_file = get_template_directory() . &#039;/&#039; . $file;
+				} elseif ( file_exists( get_template_directory() . &#039;/&#039; . WC()-&gt;template_path() . $file ) ) {
+					$theme_file = get_template_directory() . &#039;/&#039; . WC()-&gt;template_path() . $file;
+				} else {
+					$theme_file = false;
+				}
+
+				if ( ! empty( $theme_file ) ) {
+					$core_file = $file;
+
+					// Update *-product_&lt;cat|tag&gt; template name before searching in core.
+					if ( false !== strpos( $core_file, &#039;-product_cat&#039; ) || false !== strpos( $core_file, &#039;-product_tag&#039; ) ) {
+						$core_file = str_replace( &#039;_&#039;, &#039;-&#039;, $core_file );
+					}
+
+					$core_version  = WC_Admin_Status::get_file_version( WC()-&gt;plugin_path() . &#039;/templates/&#039; . $core_file );
+					$theme_version = WC_Admin_Status::get_file_version( $theme_file );
+					if ( $core_version &amp;&amp; ( empty( $theme_version ) || version_compare( $theme_version, $core_version, &#039;&lt;&#039; ) ) ) {
+						if ( ! $outdated_templates ) {
+							$outdated_templates = true;
+						}
+					}
+					$override_files[] = array(
+						&#039;file&#039;         =&gt; str_replace( WP_CONTENT_DIR . &#039;/themes/&#039;, &#039;&#039;, $theme_file ),
+						&#039;version&#039;      =&gt; $theme_version,
+						&#039;core_version&#039; =&gt; $core_version,
+					);
+				}
+			}
+
+			$active_theme_info = array(
+				&#039;name&#039;                    =&gt; $active_theme-&gt;name,
+				&#039;version&#039;                 =&gt; $active_theme-&gt;version,
+				&#039;version_latest&#039;          =&gt; WC_Admin_Status::get_latest_theme_version( $active_theme ),
+				&#039;author_url&#039;              =&gt; esc_url_raw( $active_theme-&gt;{&#039;Author URI&#039;} ),
+				&#039;is_child_theme&#039;          =&gt; is_child_theme(),
+				&#039;has_woocommerce_support&#039; =&gt; current_theme_supports( &#039;woocommerce&#039; ),
+				&#039;has_woocommerce_file&#039;    =&gt; ( file_exists( get_stylesheet_directory() . &#039;/woocommerce.php&#039; ) || file_exists( get_template_directory() . &#039;/woocommerce.php&#039; ) ),
+				&#039;has_outdated_templates&#039;  =&gt; $outdated_templates,
+				&#039;overrides&#039;               =&gt; $override_files,
+			);
+
+			$theme_info = array_merge( $active_theme_info, $parent_theme_info );
+			set_transient( &#039;wc_system_status_theme_info&#039;, $theme_info, HOUR_IN_SECONDS );
+		}
+
+		return $theme_info;
+	}
+
+	/**
+	 * Clear the system status theme cache
+	 */
+	public static function clean_theme_cache() {
+		delete_transient( &#039;wc_system_status_theme_info&#039; );
+	}
+
+	/**
+	 * Clear the system status plugin caches
+	 */
+	public static function clean_plugin_cache() {
+		delete_transient( &#039;wc_system_status_active_plugins&#039; );
+		delete_transient( &#039;wc_system_status_inactive_plugins&#039; );
+		delete_transient( &#039;wc_system_status_dropins_mu_plugins&#039; );
+	}
+
+	/**
+	 * Get some setting values for the site that are useful for debugging
+	 * purposes. For full settings access, use the settings api.
+	 *
+	 * @return array
+	 */
+	public function get_settings() {
+		// Get a list of terms used for product/order taxonomies.
+		$term_response = array();
+		$terms         = get_terms( &#039;product_type&#039;, array( &#039;hide_empty&#039; =&gt; 0 ) );
+		foreach ( $terms as $term ) {
+			$term_response[ $term-&gt;slug ] = strtolower( $term-&gt;name );
+		}
+
+		// Get a list of terms used for product visibility.
+		$product_visibility_terms = array();
+		$terms                    = get_terms( &#039;product_visibility&#039;, array( &#039;hide_empty&#039; =&gt; 0 ) );
+		foreach ( $terms as $term ) {
+			$product_visibility_terms[ $term-&gt;slug ] = strtolower( $term-&gt;name );
+		}
+
+		// Return array of useful settings for debugging.
+		return array(
+			&#039;api_enabled&#039;                    =&gt; &#039;yes&#039; === get_option( &#039;woocommerce_api_enabled&#039; ),
+			&#039;force_ssl&#039;                      =&gt; &#039;yes&#039; === get_option( &#039;woocommerce_force_ssl_checkout&#039; ),
+			&#039;currency&#039;                       =&gt; get_woocommerce_currency(),
+			&#039;currency_symbol&#039;                =&gt; get_woocommerce_currency_symbol(),
+			&#039;currency_position&#039;              =&gt; get_option( &#039;woocommerce_currency_pos&#039; ),
+			&#039;thousand_separator&#039;             =&gt; wc_get_price_thousand_separator(),
+			&#039;decimal_separator&#039;              =&gt; wc_get_price_decimal_separator(),
+			&#039;number_of_decimals&#039;             =&gt; wc_get_price_decimals(),
+			&#039;geolocation_enabled&#039;            =&gt; in_array(
+				get_option( &#039;woocommerce_default_customer_address&#039; ),
+				array(
+					&#039;geolocation_ajax&#039;,
+					&#039;geolocation&#039;,
+				),
+				true
+			),
+			&#039;taxonomies&#039;                     =&gt; $term_response,
+			&#039;product_visibility_terms&#039;       =&gt; $product_visibility_terms,
+			&#039;woocommerce_com_connected&#039;      =&gt; ConnectionHelper::is_connected() ? &#039;yes&#039; : &#039;no&#039;,
+			&#039;enforce_approved_download_dirs&#039; =&gt; wc_get_container()-&gt;get( Download_Directories::class )-&gt;get_mode() === Download_Directories::MODE_ENABLED,
+			&#039;order_datastore&#039;                =&gt; WC_Data_Store::load( &#039;order&#039; )-&gt;get_current_class_name(),
+			&#039;HPOS_feature_screen_enabled&#039;    =&gt; wc_get_container()-&gt;get( Automattic\WooCommerce\Internal\Features\FeaturesController::class )-&gt;feature_is_enabled( &#039;custom_order_tables&#039; ),
+			&#039;HPOS_enabled&#039;                   =&gt; OrderUtil::custom_orders_table_usage_is_enabled(),
+			&#039;HPOS_sync_enabled&#039;              =&gt; wc_get_container()-&gt;get( Order_DataSynchronizer::class )-&gt;data_sync_is_enabled(),
+		);
+	}
+
+	/**
+	 * Returns security tips.
+	 *
+	 * @return array
+	 */
+	public function get_security_info() {
+		$check_page = wc_get_page_permalink( &#039;shop&#039; );
+		return array(
+			&#039;secure_connection&#039; =&gt; &#039;https&#039; === substr( $check_page, 0, 5 ),
+			&#039;hide_errors&#039;       =&gt; ! ( defined( &#039;WP_DEBUG&#039; ) &amp;&amp; defined( &#039;WP_DEBUG_DISPLAY&#039; ) &amp;&amp; WP_DEBUG &amp;&amp; WP_DEBUG_DISPLAY ) || 0 === intval( ini_get( &#039;display_errors&#039; ) ),
+		);
+	}
+
+	/**
+	 * Returns a mini-report on WC pages and if they are configured correctly:
+	 * Present, visible, and including the correct shortcode or block.
+	 *
+	 * @return array
+	 */
+	public function get_pages() {
+		// WC pages to check against.
+		$check_pages = array(
+			_x( &#039;Shop base&#039;, &#039;Page setting&#039;, &#039;woocommerce&#039; ) =&gt; array(
+				&#039;option&#039;    =&gt; &#039;woocommerce_shop_page_id&#039;,
+				&#039;shortcode&#039; =&gt; &#039;&#039;,
+				&#039;block&#039;     =&gt; &#039;&#039;,
+			),
+			_x( &#039;Cart&#039;, &#039;Page setting&#039;, &#039;woocommerce&#039; ) =&gt; array(
+				&#039;option&#039;    =&gt; &#039;woocommerce_cart_page_id&#039;,
+				&#039;shortcode&#039; =&gt; &#039;[&#039; . apply_filters( &#039;woocommerce_cart_shortcode_tag&#039;, &#039;woocommerce_cart&#039; ) . &#039;]&#039;,
+				&#039;block&#039;     =&gt; &#039;woocommerce/cart&#039;,
+			),
+			_x( &#039;Checkout&#039;, &#039;Page setting&#039;, &#039;woocommerce&#039; ) =&gt; array(
+				&#039;option&#039;    =&gt; &#039;woocommerce_checkout_page_id&#039;,
+				&#039;shortcode&#039; =&gt; &#039;[&#039; . apply_filters( &#039;woocommerce_checkout_shortcode_tag&#039;, &#039;woocommerce_checkout&#039; ) . &#039;]&#039;,
+				&#039;block&#039;     =&gt; &#039;woocommerce/checkout&#039;,
+			),
+			_x( &#039;My account&#039;, &#039;Page setting&#039;, &#039;woocommerce&#039; ) =&gt; array(
+				&#039;option&#039;    =&gt; &#039;woocommerce_myaccount_page_id&#039;,
+				&#039;shortcode&#039; =&gt; &#039;[&#039; . apply_filters( &#039;woocommerce_my_account_shortcode_tag&#039;, &#039;woocommerce_my_account&#039; ) . &#039;]&#039;,
+				&#039;block&#039;     =&gt; &#039;&#039;,
+			),
+			_x( &#039;Terms and conditions&#039;, &#039;Page setting&#039;, &#039;woocommerce&#039; ) =&gt; array(
+				&#039;option&#039;    =&gt; &#039;woocommerce_terms_page_id&#039;,
+				&#039;shortcode&#039; =&gt; &#039;&#039;,
+				&#039;block&#039;     =&gt; &#039;&#039;,
+			),
+		);
+
+		$pages_output = array();
+		foreach ( $check_pages as $page_name =&gt; $values ) {
+			$page_id            = get_option( $values[&#039;option&#039;] );
+			$page_set           = false;
+			$page_exists        = false;
+			$page_visible       = false;
+			$shortcode_present  = false;
+			$shortcode_required = false;
+			$block_present      = false;
+			$block_required     = false;
+
+			// Page checks.
+			if ( $page_id ) {
+				$page_set = true;
+			}
+			if ( get_post( $page_id ) ) {
+				$page_exists = true;
+			}
+			if ( &#039;publish&#039; === get_post_status( $page_id ) ) {
+				$page_visible = true;
+			}
+
+			// Shortcode checks.
+			if ( $values[&#039;shortcode&#039;] &amp;&amp; get_post( $page_id ) ) {
+				$shortcode_required = true;
+				$page               = get_post( $page_id );
+				if ( strstr( $page-&gt;post_content, $values[&#039;shortcode&#039;] ) ) {
+					$shortcode_present = true;
+				}
+			}
+
+			// Block checks.
+			if ( $values[&#039;block&#039;] &amp;&amp; get_post( $page_id ) ) {
+				$block_required = true;
+				$block_present = WC_Blocks_Utils::has_block_in_page( $page_id, $values[&#039;block&#039;] );
+			}
+
+			// Wrap up our findings into an output array.
+			$pages_output[] = array(
+				&#039;page_name&#039;          =&gt; $page_name,
+				&#039;page_id&#039;            =&gt; $page_id,
+				&#039;page_set&#039;           =&gt; $page_set,
+				&#039;page_exists&#039;        =&gt; $page_exists,
+				&#039;page_visible&#039;       =&gt; $page_visible,
+				&#039;shortcode&#039;          =&gt; $values[&#039;shortcode&#039;],
+				&#039;block&#039;              =&gt; $values[&#039;block&#039;],
+				&#039;shortcode_required&#039; =&gt; $shortcode_required,
+				&#039;shortcode_present&#039;  =&gt; $shortcode_present,
+				&#039;block_present&#039;      =&gt; $block_present,
+				&#039;block_required&#039;     =&gt; $block_required,
+			);
+		}
+
+		return $pages_output;
+	}
+
+	/**
+	 * Get any query params needed.
+	 *
+	 * @return array
+	 */
+	public function get_collection_params() {
+		return array(
+			&#039;context&#039; =&gt; $this-&gt;get_context_param( array( &#039;default&#039; =&gt; &#039;view&#039; ) ),
+		);
+	}
+
+	/**
+	 * Prepare the system status response
+	 *
+	 * @param  array           $system_status System status data.
+	 * @param  WP_REST_Request $request       Request object.
+	 * @return WP_REST_Response
+	 */
+	public function prepare_item_for_response( $system_status, $request ) {
+		$data = $this-&gt;add_additional_fields_to_object( $system_status, $request );
+		$data = $this-&gt;filter_response_by_context( $data, &#039;view&#039; );
+
+		$response = rest_ensure_response( $data );
+
+		/**
+		 * Filter the system status returned from the REST API.
+		 *
+		 * @param WP_REST_Response   $response The response object.
+		 * @param mixed              $system_status System status
+		 * @param WP_REST_Request    $request  Request object.
+		 */
+		return apply_filters( &#039;woocommerce_rest_prepare_system_status&#039;, $response, $system_status, $request );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866948"></script>
+    <script src="../js/search.js?updated=1692866948"></script>
+</body>
+</html>

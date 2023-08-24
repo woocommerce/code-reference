@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866951">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866951">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">DefaultPaymentGateways.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Gets a list of fallback methods if remote fetching is disabled.
+ */
+
+namespace Automattic\WooCommerce\Admin\Features\PaymentGatewaySuggestions;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Default Payment Gateways
+ */
+class DefaultPaymentGateways {
+	/**
+	 * This is the default priority for countries that are not in the $recommendation_priority_map.
+	 * Priority is used to determine which payment gateway to recommend first.
+	 * The lower the number, the higher the priority.
+	 *
+	 * @var array
+	 */
+	private static $recommendation_priority = array(
+		&#039;woocommerce_payments&#039;                            =&gt; 1,
+		&#039;woocommerce_payments:with-in-person-payments&#039;    =&gt; 1,
+		&#039;woocommerce_payments:without-in-person-payments&#039; =&gt; 1,
+		&#039;stripe&#039;                                          =&gt; 2,
+		&#039;woo-mercado-pago-custom&#039;                         =&gt; 3,
+		// PayPal Payments.
+		&#039;ppcp-gateway&#039;                                    =&gt; 4,
+		&#039;mollie_wc_gateway_banktransfer&#039;                  =&gt; 5,
+		&#039;razorpay&#039;                                        =&gt; 5,
+		&#039;payfast&#039;                                         =&gt; 5,
+		&#039;payubiz&#039;                                         =&gt; 6,
+		&#039;square_credit_card&#039;                              =&gt; 6,
+		&#039;klarna_payments&#039;                                 =&gt; 6,
+		// Klarna Checkout.
+		&#039;kco&#039;                                             =&gt; 6,
+		&#039;paystack&#039;                                        =&gt; 6,
+		&#039;eway&#039;                                            =&gt; 7,
+		&#039;amazon_payments_advanced&#039;                        =&gt; 7,
+		&#039;affirm&#039;                                          =&gt; 8,
+		&#039;afterpay&#039;                                        =&gt; 9,
+		&#039;zipmoney&#039;                                        =&gt; 10,
+		&#039;payoneer-checkout&#039;                               =&gt; 11,
+	);
+
+	/**
+	 * Get default specs.
+	 *
+	 * @return array Default specs.
+	 */
+	public static function get_all() {
+		$payment_gateways = array(
+			array(
+				&#039;id&#039;                  =&gt; &#039;affirm&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Affirm&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Affirm’s tailored Buy Now Pay Later programs remove price as a barrier, turning browsers into buyers, increasing average order value, and expanding your customer base.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/affirm.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/affirm.png&#039;,
+				&#039;plugins&#039;             =&gt; array(),
+				&#039;external_link&#039;       =&gt; &#039;https://woocommerce.com/products/woocommerce-gateway-affirm&#039;,
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries(
+						array(
+							&#039;US&#039;,
+							&#039;CA&#039;,
+						)
+					),
+				),
+				&#039;category_other&#039;      =&gt; array(),
+				&#039;category_additional&#039; =&gt; array(
+					&#039;US&#039;,
+					&#039;CA&#039;,
+				),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;afterpay&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Afterpay&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Afterpay allows customers to receive products immediately and pay for purchases over four installments, always interest-free.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/afterpay.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/afterpay.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;afterpay-gateway-for-woocommerce&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries(
+						array(
+							&#039;US&#039;,
+							&#039;CA&#039;,
+							&#039;AU&#039;,
+						)
+					),
+				),
+				&#039;category_other&#039;      =&gt; array(),
+				&#039;category_additional&#039; =&gt; array(
+					&#039;US&#039;,
+					&#039;CA&#039;,
+					&#039;AU&#039;,
+				),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;amazon_payments_advanced&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Amazon Pay&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Enable a familiar, fast checkout for hundreds of millions of active Amazon customers globally.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/amazonpay.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/amazonpay.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;woocommerce-gateway-amazon-payments-advanced&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries(
+						array(
+							&#039;US&#039;,
+							&#039;AT&#039;,
+							&#039;BE&#039;,
+							&#039;CY&#039;,
+							&#039;DK&#039;,
+							&#039;ES&#039;,
+							&#039;FR&#039;,
+							&#039;DE&#039;,
+							&#039;GB&#039;,
+							&#039;HU&#039;,
+							&#039;IE&#039;,
+							&#039;IT&#039;,
+							&#039;LU&#039;,
+							&#039;NL&#039;,
+							&#039;PT&#039;,
+							&#039;SL&#039;,
+							&#039;SE&#039;,
+							&#039;JP&#039;,
+						)
+					),
+				),
+				&#039;category_other&#039;      =&gt; array(),
+				&#039;category_additional&#039; =&gt; array(
+					&#039;US&#039;,
+					&#039;AT&#039;,
+					&#039;BE&#039;,
+					&#039;CY&#039;,
+					&#039;DK&#039;,
+					&#039;ES&#039;,
+					&#039;FR&#039;,
+					&#039;DE&#039;,
+					&#039;GB&#039;,
+					&#039;HU&#039;,
+					&#039;IE&#039;,
+					&#039;IT&#039;,
+					&#039;LU&#039;,
+					&#039;NL&#039;,
+					&#039;PT&#039;,
+					&#039;SL&#039;,
+					&#039;SE&#039;,
+					&#039;JP&#039;,
+				),
+			),
+			array(
+				&#039;id&#039;          =&gt; &#039;bacs&#039;,
+				&#039;title&#039;       =&gt; __( &#039;Direct bank transfer&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;     =&gt; __( &#039;Take payments via bank transfer.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;       =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/bacs.svg&#039;,
+				&#039;image_72x72&#039; =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/bacs.png&#039;,
+				&#039;is_visible&#039;  =&gt; array(
+					self::get_rules_for_cbd( false ),
+				),
+				&#039;is_offline&#039;  =&gt; true,
+			),
+			array(
+				&#039;id&#039;          =&gt; &#039;cod&#039;,
+				&#039;title&#039;       =&gt; __( &#039;Cash on delivery&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;     =&gt; __( &#039;Take payments in cash upon delivery.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;       =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/cod.svg&#039;,
+				&#039;image_72x72&#039; =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/cod.png&#039;,
+				&#039;is_visible&#039;  =&gt; array(
+					self::get_rules_for_cbd( false ),
+				),
+				&#039;is_offline&#039;  =&gt; true,
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;eway&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Eway&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;The Eway extension for WooCommerce allows you to take credit card payments directly on your store without redirecting your customers to a third party site to make payment.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/eway.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/eway.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;woocommerce-gateway-eway&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries(
+						array(
+							&#039;NZ&#039;,
+							&#039;HK&#039;,
+							&#039;SG&#039;,
+							&#039;AU&#039;,
+						)
+					),
+					self::get_rules_for_cbd( false ),
+				),
+				&#039;category_other&#039;      =&gt; array(
+					&#039;NZ&#039;,
+					&#039;HK&#039;,
+					&#039;SG&#039;,
+					&#039;AU&#039;,
+				),
+				&#039;category_additional&#039; =&gt; array(),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;kco&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Klarna Checkout&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Choose the payment that you want, pay now, pay later or slice it. No credit card numbers, no passwords, no worries.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/klarna-black.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/klarna.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;klarna-checkout-for-woocommerce&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries(
+						array(
+							&#039;NO&#039;,
+							&#039;SE&#039;,
+							&#039;FI&#039;,
+						)
+					),
+					self::get_rules_for_cbd( false ),
+				),
+				&#039;category_other&#039;      =&gt; array(
+					&#039;NO&#039;,
+					&#039;SE&#039;,
+					&#039;FI&#039;,
+				),
+				&#039;category_additional&#039; =&gt; array(),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;klarna_payments&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Klarna Payments&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Choose the payment that you want, pay now, pay later or slice it. No credit card numbers, no passwords, no worries.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/klarna-black.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/klarna.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;klarna-payments-for-woocommerce&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries(
+						array(
+							&#039;MX&#039;,
+							&#039;US&#039;,
+							&#039;CA&#039;,
+							&#039;AT&#039;,
+							&#039;BE&#039;,
+							&#039;CH&#039;,
+							&#039;DK&#039;,
+							&#039;ES&#039;,
+							&#039;FI&#039;,
+							&#039;FR&#039;,
+							&#039;DE&#039;,
+							&#039;GB&#039;,
+							&#039;IT&#039;,
+							&#039;NL&#039;,
+							&#039;NO&#039;,
+							&#039;PL&#039;,
+							&#039;SE&#039;,
+							&#039;NZ&#039;,
+							&#039;AU&#039;,
+						)
+					),
+					self::get_rules_for_cbd( false ),
+				),
+				&#039;category_other&#039;      =&gt; array(),
+				&#039;category_additional&#039; =&gt; array(
+					&#039;MX&#039;,
+					&#039;US&#039;,
+					&#039;CA&#039;,
+					&#039;AT&#039;,
+					&#039;BE&#039;,
+					&#039;CH&#039;,
+					&#039;DK&#039;,
+					&#039;ES&#039;,
+					&#039;FI&#039;,
+					&#039;FR&#039;,
+					&#039;DE&#039;,
+					&#039;GB&#039;,
+					&#039;IT&#039;,
+					&#039;NL&#039;,
+					&#039;NO&#039;,
+					&#039;PL&#039;,
+					&#039;SE&#039;,
+					&#039;NZ&#039;,
+					&#039;AU&#039;,
+				),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;mollie_wc_gateway_banktransfer&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Mollie&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Effortless payments by Mollie: Offer global and local payment methods, get onboarded in minutes, and supported in your language.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/mollie.svg&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/mollie.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;mollie-payments-for-woocommerce&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries(
+						array(
+							&#039;AT&#039;,
+							&#039;BE&#039;,
+							&#039;CH&#039;,
+							&#039;ES&#039;,
+							&#039;FI&#039;,
+							&#039;FR&#039;,
+							&#039;DE&#039;,
+							&#039;GB&#039;,
+							&#039;IT&#039;,
+							&#039;NL&#039;,
+							&#039;PL&#039;,
+						)
+					),
+				),
+				&#039;category_other&#039;      =&gt; array(
+					&#039;AT&#039;,
+					&#039;BE&#039;,
+					&#039;CH&#039;,
+					&#039;ES&#039;,
+					&#039;FI&#039;,
+					&#039;FR&#039;,
+					&#039;DE&#039;,
+					&#039;GB&#039;,
+					&#039;IT&#039;,
+					&#039;NL&#039;,
+					&#039;PL&#039;,
+				),
+				&#039;category_additional&#039; =&gt; array(),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;payfast&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Payfast&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;The Payfast extension for WooCommerce enables you to accept payments by Credit Card and EFT via one of South Africa’s most popular payment gateways. No setup fees or monthly subscription costs. Selecting this extension will configure your store to use South African rands as the selected currency.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payfast.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/payfast.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;woocommerce-payfast-gateway&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries( array( &#039;ZA&#039; ) ),
+					self::get_rules_for_cbd( false ),
+				),
+				&#039;category_other&#039;      =&gt; array( &#039;ZA&#039; ),
+				&#039;category_additional&#039; =&gt; array(),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;payoneer-checkout&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Payoneer Checkout&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Payoneer Checkout is the next generation of payment processing platforms, giving merchants around the world the solutions and direction they need to succeed in today’s hyper-competitive global market.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/payoneer.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/payoneer.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;payoneer-checkout&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries(
+						array(
+							&#039;HK&#039;,
+							&#039;CN&#039;,
+						)
+					),
+				),
+				&#039;category_other&#039;      =&gt; array(),
+				&#039;category_additional&#039; =&gt; array(
+					&#039;HK&#039;,
+					&#039;CN&#039;,
+				),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;paystack&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Paystack&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Paystack helps African merchants accept one-time and recurring payments online with a modern, safe, and secure payment gateway.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/paystack.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/paystack.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;woo-paystack&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries( array( &#039;ZA&#039;, &#039;GH&#039;, &#039;NG&#039; ) ),
+					self::get_rules_for_cbd( false ),
+				),
+				&#039;category_other&#039;      =&gt; array( &#039;ZA&#039;, &#039;GH&#039;, &#039;NG&#039; ),
+				&#039;category_additional&#039; =&gt; array(),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;payubiz&#039;,
+				&#039;title&#039;               =&gt; __( &#039;PayU for WooCommerce&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Enable PayU’s exclusive plugin for WooCommerce to start accepting payments in 100+ payment methods available in India including credit cards, debit cards, UPI, &amp; more!&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/payu.svg&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/payu.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;payu-india&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					(object) array(
+						&#039;type&#039;      =&gt; &#039;base_location_country&#039;,
+						&#039;value&#039;     =&gt; &#039;IN&#039;,
+						&#039;operation&#039; =&gt; &#039;=&#039;,
+					),
+					self::get_rules_for_cbd( false ),
+				),
+				&#039;category_other&#039;      =&gt; array( &#039;IN&#039; ),
+				&#039;category_additional&#039; =&gt; array(),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;ppcp-gateway&#039;,
+				&#039;title&#039;               =&gt; __( &#039;PayPal Payments&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &quot;Safe and secure payments using credit cards or your customer&#039;s PayPal account.&quot;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/paypal.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/paypal.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;woocommerce-paypal-payments&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries(
+						array(
+							&#039;US&#039;,
+							&#039;CA&#039;,
+							&#039;MX&#039;,
+							&#039;BR&#039;,
+							&#039;AR&#039;,
+							&#039;CL&#039;,
+							&#039;CO&#039;,
+							&#039;EC&#039;,
+							&#039;PE&#039;,
+							&#039;UY&#039;,
+							&#039;VE&#039;,
+							&#039;AT&#039;,
+							&#039;BE&#039;,
+							&#039;BG&#039;,
+							&#039;HR&#039;,
+							&#039;CH&#039;,
+							&#039;CY&#039;,
+							&#039;CZ&#039;,
+							&#039;DK&#039;,
+							&#039;EE&#039;,
+							&#039;ES&#039;,
+							&#039;FI&#039;,
+							&#039;FR&#039;,
+							&#039;DE&#039;,
+							&#039;GB&#039;,
+							&#039;GR&#039;,
+							&#039;HU&#039;,
+							&#039;IE&#039;,
+							&#039;IT&#039;,
+							&#039;LV&#039;,
+							&#039;LT&#039;,
+							&#039;LU&#039;,
+							&#039;MT&#039;,
+							&#039;NL&#039;,
+							&#039;NO&#039;,
+							&#039;PL&#039;,
+							&#039;PT&#039;,
+							&#039;RO&#039;,
+							&#039;SK&#039;,
+							&#039;SL&#039;,
+							&#039;SE&#039;,
+							&#039;AU&#039;,
+							&#039;NZ&#039;,
+							&#039;HK&#039;,
+							&#039;JP&#039;,
+							&#039;SG&#039;,
+							&#039;CN&#039;,
+							&#039;ID&#039;,
+							&#039;IN&#039;,
+						)
+					),
+					self::get_rules_for_cbd( false ),
+				),
+				&#039;category_other&#039;      =&gt; array(
+					&#039;US&#039;,
+					&#039;CA&#039;,
+					&#039;MX&#039;,
+					&#039;BR&#039;,
+					&#039;AR&#039;,
+					&#039;CL&#039;,
+					&#039;CO&#039;,
+					&#039;EC&#039;,
+					&#039;PE&#039;,
+					&#039;UY&#039;,
+					&#039;VE&#039;,
+					&#039;AT&#039;,
+					&#039;BE&#039;,
+					&#039;BG&#039;,
+					&#039;HR&#039;,
+					&#039;CH&#039;,
+					&#039;CY&#039;,
+					&#039;CZ&#039;,
+					&#039;DK&#039;,
+					&#039;EE&#039;,
+					&#039;ES&#039;,
+					&#039;FI&#039;,
+					&#039;FR&#039;,
+					&#039;DE&#039;,
+					&#039;GB&#039;,
+					&#039;GR&#039;,
+					&#039;HU&#039;,
+					&#039;IE&#039;,
+					&#039;IT&#039;,
+					&#039;LV&#039;,
+					&#039;LT&#039;,
+					&#039;LU&#039;,
+					&#039;MT&#039;,
+					&#039;NL&#039;,
+					&#039;NO&#039;,
+					&#039;PL&#039;,
+					&#039;PT&#039;,
+					&#039;RO&#039;,
+					&#039;SK&#039;,
+					&#039;SL&#039;,
+					&#039;SE&#039;,
+					&#039;AU&#039;,
+					&#039;NZ&#039;,
+					&#039;HK&#039;,
+					&#039;JP&#039;,
+					&#039;SG&#039;,
+					&#039;CN&#039;,
+					&#039;ID&#039;,
+				),
+				&#039;category_additional&#039; =&gt; array(
+					&#039;US&#039;,
+					&#039;CA&#039;,
+					&#039;ZA&#039;,
+					&#039;NG&#039;,
+					&#039;GH&#039;,
+					&#039;EC&#039;,
+					&#039;VE&#039;,
+					&#039;AR&#039;,
+					&#039;CL&#039;,
+					&#039;CO&#039;,
+					&#039;PE&#039;,
+					&#039;UY&#039;,
+					&#039;MX&#039;,
+					&#039;BR&#039;,
+					&#039;AT&#039;,
+					&#039;BE&#039;,
+					&#039;BG&#039;,
+					&#039;HR&#039;,
+					&#039;CH&#039;,
+					&#039;CY&#039;,
+					&#039;CZ&#039;,
+					&#039;DK&#039;,
+					&#039;EE&#039;,
+					&#039;ES&#039;,
+					&#039;FI&#039;,
+					&#039;FR&#039;,
+					&#039;DE&#039;,
+					&#039;GB&#039;,
+					&#039;GR&#039;,
+					&#039;HU&#039;,
+					&#039;IE&#039;,
+					&#039;IT&#039;,
+					&#039;LV&#039;,
+					&#039;LT&#039;,
+					&#039;LU&#039;,
+					&#039;MT&#039;,
+					&#039;NL&#039;,
+					&#039;NO&#039;,
+					&#039;PL&#039;,
+					&#039;PT&#039;,
+					&#039;RO&#039;,
+					&#039;SK&#039;,
+					&#039;SL&#039;,
+					&#039;SE&#039;,
+					&#039;AU&#039;,
+					&#039;NZ&#039;,
+					&#039;HK&#039;,
+					&#039;JP&#039;,
+					&#039;SG&#039;,
+					&#039;CN&#039;,
+					&#039;ID&#039;,
+					&#039;IN&#039;,
+				),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;razorpay&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Razorpay&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;The official Razorpay extension for WooCommerce allows you to accept credit cards, debit cards, netbanking, wallet, and UPI payments.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/razorpay.svg&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/razorpay.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;woo-razorpay&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					(object) array(
+						&#039;type&#039;      =&gt; &#039;base_location_country&#039;,
+						&#039;value&#039;     =&gt; &#039;IN&#039;,
+						&#039;operation&#039; =&gt; &#039;=&#039;,
+					),
+					self::get_rules_for_cbd( false ),
+				),
+				&#039;category_other&#039;      =&gt; array( &#039;IN&#039; ),
+				&#039;category_additional&#039; =&gt; array(),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;square_credit_card&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Square&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Securely accept credit and debit cards with one low rate, no surprise fees (custom rates available). Sell online and in store and track sales and inventory in one place.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/square-black.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/square.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;woocommerce-square&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					(object) array(
+						&#039;type&#039;     =&gt; &#039;or&#039;,
+						&#039;operands&#039; =&gt; (object) array(
+							array(
+								self::get_rules_for_countries( array( &#039;US&#039; ) ),
+								self::get_rules_for_cbd( true ),
+							),
+							array(
+								self::get_rules_for_countries(
+									array(
+										&#039;US&#039;,
+										&#039;CA&#039;,
+										&#039;IE&#039;,
+										&#039;ES&#039;,
+										&#039;FR&#039;,
+										&#039;GB&#039;,
+										&#039;AU&#039;,
+										&#039;JP&#039;,
+									)
+								),
+								(object) array(
+									&#039;type&#039;     =&gt; &#039;or&#039;,
+									&#039;operands&#039; =&gt; (object) array(
+										self::get_rules_for_selling_venues( array( &#039;brick-mortar&#039;, &#039;brick-mortar-other&#039; ) ),
+										self::get_rules_selling_offline(),
+									),
+								),
+							),
+						),
+					),
+				),
+				&#039;category_other&#039;      =&gt; array(
+					&#039;US&#039;,
+					&#039;CA&#039;,
+					&#039;IE&#039;,
+					&#039;ES&#039;,
+					&#039;FR&#039;,
+					&#039;GB&#039;,
+					&#039;AU&#039;,
+					&#039;JP&#039;,
+				),
+				&#039;category_additional&#039; =&gt; array(),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;stripe&#039;,
+				&#039;title&#039;               =&gt; __( &#039; Stripe&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Accept debit and credit cards in 135+ currencies, methods such as Alipay, and one-touch checkout with Apple Pay.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/stripe.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/stripe.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;woocommerce-gateway-stripe&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					// https://stripe.com/global.
+					self::get_rules_for_countries(
+						array(
+							&#039;US&#039;,
+							&#039;CA&#039;,
+							&#039;MX&#039;,
+							&#039;BR&#039;,
+							&#039;AT&#039;,
+							&#039;BE&#039;,
+							&#039;BG&#039;,
+							&#039;CH&#039;,
+							&#039;CY&#039;,
+							&#039;CZ&#039;,
+							&#039;DK&#039;,
+							&#039;EE&#039;,
+							&#039;ES&#039;,
+							&#039;FI&#039;,
+							&#039;FR&#039;,
+							&#039;DE&#039;,
+							&#039;GB&#039;,
+							&#039;GR&#039;,
+							&#039;HU&#039;,
+							&#039;IE&#039;,
+							&#039;IT&#039;,
+							&#039;LV&#039;,
+							&#039;LT&#039;,
+							&#039;LU&#039;,
+							&#039;MT&#039;,
+							&#039;NL&#039;,
+							&#039;NO&#039;,
+							&#039;PL&#039;,
+							&#039;PT&#039;,
+							&#039;RO&#039;,
+							&#039;SK&#039;,
+							&#039;SL&#039;,
+							&#039;SE&#039;,
+							&#039;AU&#039;,
+							&#039;NZ&#039;,
+							&#039;HK&#039;,
+							&#039;JP&#039;,
+							&#039;SG&#039;,
+							&#039;ID&#039;,
+							&#039;IN&#039;,
+						)
+					),
+					self::get_rules_for_cbd( false ),
+				),
+				&#039;category_other&#039;      =&gt; array(
+					&#039;US&#039;,
+					&#039;CA&#039;,
+					&#039;MX&#039;,
+					&#039;BR&#039;,
+					&#039;AT&#039;,
+					&#039;BE&#039;,
+					&#039;BG&#039;,
+					&#039;CH&#039;,
+					&#039;CY&#039;,
+					&#039;CZ&#039;,
+					&#039;DK&#039;,
+					&#039;EE&#039;,
+					&#039;ES&#039;,
+					&#039;FI&#039;,
+					&#039;FR&#039;,
+					&#039;DE&#039;,
+					&#039;GB&#039;,
+					&#039;GR&#039;,
+					&#039;HU&#039;,
+					&#039;IE&#039;,
+					&#039;IT&#039;,
+					&#039;LV&#039;,
+					&#039;LT&#039;,
+					&#039;LU&#039;,
+					&#039;MT&#039;,
+					&#039;NL&#039;,
+					&#039;NO&#039;,
+					&#039;PL&#039;,
+					&#039;PT&#039;,
+					&#039;RO&#039;,
+					&#039;SK&#039;,
+					&#039;SL&#039;,
+					&#039;SE&#039;,
+					&#039;AU&#039;,
+					&#039;NZ&#039;,
+					&#039;HK&#039;,
+					&#039;JP&#039;,
+					&#039;SG&#039;,
+					&#039;ID&#039;,
+					&#039;IN&#039;,
+				),
+				&#039;category_additional&#039; =&gt; array(),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;woo-mercado-pago-custom&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Mercado Pago Checkout Pro &amp; Custom&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Accept credit and debit cards, offline (cash or bank transfer) and logged-in payments with money in Mercado Pago. Safe and secure payments with the leading payment processor in LATAM.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/mercadopago.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/mercadopago.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;woocommerce-mercadopago&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries(
+						array(
+							&#039;AR&#039;,
+							&#039;CL&#039;,
+							&#039;CO&#039;,
+							&#039;EC&#039;,
+							&#039;PE&#039;,
+							&#039;UY&#039;,
+							&#039;MX&#039;,
+							&#039;BR&#039;,
+						)
+					),
+				),
+				&#039;is_local_partner&#039;    =&gt; true,
+				&#039;category_other&#039;      =&gt; array(
+					&#039;AR&#039;,
+					&#039;CL&#039;,
+					&#039;CO&#039;,
+					&#039;EC&#039;,
+					&#039;PE&#039;,
+					&#039;UY&#039;,
+					&#039;MX&#039;,
+					&#039;BR&#039;,
+				),
+				&#039;category_additional&#039; =&gt; array(),
+			),
+			// This is for backwards compatibility only (WC &lt; 5.10.0-dev or WCA &lt; 2.9.0-dev).
+			array(
+				&#039;id&#039;          =&gt; &#039;woocommerce_payments&#039;,
+				&#039;title&#039;       =&gt; __( &#039;WooPayments&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;     =&gt; __(
+					&#039;Manage transactions without leaving your WordPress Dashboard. Only with WooPayments.&#039;,
+					&#039;woocommerce&#039;
+				),
+				&#039;image&#039;       =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/wcpay.svg&#039;,
+				&#039;image_72x72&#039; =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/wcpay.svg&#039;,
+				&#039;plugins&#039;     =&gt; array( &#039;woocommerce-payments&#039; ),
+				&#039;description&#039; =&gt; __( &#039;With WooPayments, you can securely accept major cards, Apple Pay, and payments in over 100 currencies. Track cash flow and manage recurring revenue directly from your store’s dashboard - with no setup costs or monthly fees.&#039;, &#039;woocommerce&#039; ),
+				&#039;is_visible&#039;  =&gt; array(
+					self::get_rules_for_cbd( false ),
+					self::get_rules_for_countries( self::get_wcpay_countries() ),
+					(object) array(
+						&#039;type&#039;     =&gt; &#039;plugin_version&#039;,
+						&#039;plugin&#039;   =&gt; &#039;woocommerce&#039;,
+						&#039;version&#039;  =&gt; &#039;5.10.0-dev&#039;,
+						&#039;operator&#039; =&gt; &#039;&lt;&#039;,
+					),
+					(object) array(
+						&#039;type&#039;     =&gt; &#039;or&#039;,
+						&#039;operands&#039; =&gt; (object) array(
+							(object) array(
+								&#039;type&#039;    =&gt; &#039;not&#039;,
+								&#039;operand&#039; =&gt; [
+									(object) array(
+										&#039;type&#039;    =&gt; &#039;plugins_activated&#039;,
+										&#039;plugins&#039; =&gt; [ &#039;woocommerce-admin&#039; ],
+									),
+								],
+							),
+							(object) array(
+								&#039;type&#039;     =&gt; &#039;plugin_version&#039;,
+								&#039;plugin&#039;   =&gt; &#039;woocommerce-admin&#039;,
+								&#039;version&#039;  =&gt; &#039;2.9.0-dev&#039;,
+								&#039;operator&#039; =&gt; &#039;&lt;&#039;,
+							),
+						),
+					),
+				),
+			),
+			array(
+				&#039;id&#039;          =&gt; &#039;woocommerce_payments:without-in-person-payments&#039;,
+				&#039;title&#039;       =&gt; __( &#039;WooPayments&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;     =&gt; __(
+					&#039;Manage transactions without leaving your WordPress Dashboard. Only with WooPayments.&#039;,
+					&#039;woocommerce&#039;
+				),
+				&#039;image&#039;       =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/wcpay.svg&#039;,
+				&#039;image_72x72&#039; =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/wcpay.svg&#039;,
+				&#039;plugins&#039;     =&gt; array( &#039;woocommerce-payments&#039; ),
+				&#039;description&#039; =&gt; __( &#039;With WooPayments, you can securely accept major cards, Apple Pay, and payments in over 100 currencies. Track cash flow and manage recurring revenue directly from your store’s dashboard - with no setup costs or monthly fees.&#039;, &#039;woocommerce&#039; ),
+				&#039;is_visible&#039;  =&gt; array(
+					self::get_rules_for_cbd( false ),
+					self::get_rules_for_countries( array_diff( self::get_wcpay_countries(), array( &#039;US&#039;, &#039;CA&#039; ) ) ),
+					(object) array(
+						&#039;type&#039;     =&gt; &#039;or&#039;,
+						// Older versions of WooCommerce Admin require the ID to be `woocommerce-payments` to show the suggestion card.
+						&#039;operands&#039; =&gt; (object) array(
+							(object) array(
+								&#039;type&#039;     =&gt; &#039;plugin_version&#039;,
+								&#039;plugin&#039;   =&gt; &#039;woocommerce-admin&#039;,
+								&#039;version&#039;  =&gt; &#039;2.9.0-dev&#039;,
+								&#039;operator&#039; =&gt; &#039;&gt;=&#039;,
+							),
+							(object) array(
+								&#039;type&#039;     =&gt; &#039;plugin_version&#039;,
+								&#039;plugin&#039;   =&gt; &#039;woocommerce&#039;,
+								&#039;version&#039;  =&gt; &#039;5.10.0-dev&#039;,
+								&#039;operator&#039; =&gt; &#039;&gt;=&#039;,
+							),
+						),
+					),
+				),
+			),
+			// This is the same as the above, but with a different description for countries that support in-person payments such as US and CA.
+			array(
+				&#039;id&#039;          =&gt; &#039;woocommerce_payments:with-in-person-payments&#039;,
+				&#039;title&#039;       =&gt; __( &#039;WooPayments&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;     =&gt; __(
+					&#039;Manage transactions without leaving your WordPress Dashboard. Only with WooPayments.&#039;,
+					&#039;woocommerce&#039;
+				),
+				&#039;image&#039;       =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/wcpay.svg&#039;,
+				&#039;image_72x72&#039; =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/wcpay.svg&#039;,
+				&#039;plugins&#039;     =&gt; array( &#039;woocommerce-payments&#039; ),
+				&#039;description&#039; =&gt; __( &#039;With WooPayments, you can securely accept major cards, Apple Pay, and payments in over 100 currencies – with no setup costs or monthly fees – and you can now accept in-person payments with the Woo mobile app.&#039;, &#039;woocommerce&#039; ),
+				&#039;is_visible&#039;  =&gt; array(
+					self::get_rules_for_cbd( false ),
+					self::get_rules_for_countries( array( &#039;US&#039;, &#039;CA&#039; ) ),
+					(object) array(
+						&#039;type&#039;     =&gt; &#039;or&#039;,
+						// Older versions of WooCommerce Admin require the ID to be `woocommerce-payments` to show the suggestion card.
+						&#039;operands&#039; =&gt; (object) array(
+							(object) array(
+								&#039;type&#039;     =&gt; &#039;plugin_version&#039;,
+								&#039;plugin&#039;   =&gt; &#039;woocommerce-admin&#039;,
+								&#039;version&#039;  =&gt; &#039;2.9.0-dev&#039;,
+								&#039;operator&#039; =&gt; &#039;&gt;=&#039;,
+							),
+							(object) array(
+								&#039;type&#039;     =&gt; &#039;plugin_version&#039;,
+								&#039;plugin&#039;   =&gt; &#039;woocommerce&#039;,
+								&#039;version&#039;  =&gt; &#039;5.10.0-dev&#039;,
+								&#039;operator&#039; =&gt; &#039;&gt;=&#039;,
+							),
+						),
+					),
+				),
+			),
+			array(
+				&#039;id&#039;                  =&gt; &#039;zipmoney&#039;,
+				&#039;title&#039;               =&gt; __( &#039;Zip Co - Buy Now, Pay Later&#039;, &#039;woocommerce&#039; ),
+				&#039;content&#039;             =&gt; __( &#039;Give your customers the power to pay later, interest free and watch your sales grow.&#039;, &#039;woocommerce&#039; ),
+				&#039;image&#039;               =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/onboarding/zipco.png&#039;,
+				&#039;image_72x72&#039;         =&gt; WC_ADMIN_IMAGES_FOLDER_URL . &#039;/payment_methods/72x72/zipco.png&#039;,
+				&#039;plugins&#039;             =&gt; array( &#039;zipmoney-payments-woocommerce&#039; ),
+				&#039;is_visible&#039;          =&gt; array(
+					self::get_rules_for_countries(
+						array(
+							&#039;US&#039;,
+							&#039;NZ&#039;,
+							&#039;AU&#039;,
+						)
+					),
+				),
+				&#039;category_other&#039;      =&gt; array(),
+				&#039;category_additional&#039; =&gt; array(
+					&#039;US&#039;,
+					&#039;NZ&#039;,
+					&#039;AU&#039;,
+				),
+			),
+		);
+
+		$base_location = wc_get_base_location();
+		$country       = $base_location[&#039;country&#039;];
+		foreach ( $payment_gateways as $index =&gt; $payment_gateway ) {
+			$payment_gateways[ $index ][&#039;recommendation_priority&#039;] = self::get_recommendation_priority( $payment_gateway[&#039;id&#039;], $country );
+		}
+
+		return $payment_gateways;
+	}
+
+	/**
+	 * Get array of countries supported by WCPay depending on feature flag.
+	 *
+	 * @return array Array of countries.
+	 */
+	public static function get_wcpay_countries() {
+		return array( &#039;US&#039;, &#039;PR&#039;, &#039;AU&#039;, &#039;CA&#039;, &#039;CY&#039;, &#039;DE&#039;, &#039;DK&#039;, &#039;EE&#039;, &#039;ES&#039;, &#039;FI&#039;, &#039;FR&#039;, &#039;GB&#039;, &#039;GR&#039;, &#039;IE&#039;, &#039;IT&#039;, &#039;LU&#039;, &#039;LT&#039;, &#039;LV&#039;, &#039;NO&#039;, &#039;NZ&#039;, &#039;MT&#039;, &#039;AT&#039;, &#039;BE&#039;, &#039;NL&#039;, &#039;PL&#039;, &#039;PT&#039;, &#039;CH&#039;, &#039;HK&#039;, &#039;SI&#039;, &#039;SK&#039;, &#039;SG&#039;, &#039;BG&#039;, &#039;CZ&#039;, &#039;HR&#039;, &#039;HU&#039;, &#039;RO&#039;, &#039;SE&#039; );
+	}
+
+	/**
+	 * Get rules that match the store base location to one of the provided countries.
+	 *
+	 * @param array $countries Array of countries to match.
+	 * @return object Rules to match.
+	 */
+	public static function get_rules_for_countries( $countries ) {
+		$rules = array();
+
+		foreach ( $countries as $country ) {
+			$rules[] = (object) array(
+				&#039;type&#039;      =&gt; &#039;base_location_country&#039;,
+				&#039;value&#039;     =&gt; $country,
+				&#039;operation&#039; =&gt; &#039;=&#039;,
+			);
+		}
+
+		return (object) array(
+			&#039;type&#039;     =&gt; &#039;or&#039;,
+			&#039;operands&#039; =&gt; $rules,
+		);
+	}
+
+	/**
+	 * Get rules that match the store&#039;s selling venues.
+	 *
+	 * @param array $selling_venues Array of venues to match.
+	 * @return object Rules to match.
+	 */
+	public static function get_rules_for_selling_venues( $selling_venues ) {
+		$rules = array();
+
+		foreach ( $selling_venues as $venue ) {
+			$rules[] = (object) array(
+				&#039;type&#039;         =&gt; &#039;option&#039;,
+				&#039;transformers&#039; =&gt; array(
+					(object) array(
+						&#039;use&#039;       =&gt; &#039;dot_notation&#039;,
+						&#039;arguments&#039; =&gt; (object) array(
+							&#039;path&#039; =&gt; &#039;selling_venues&#039;,
+						),
+					),
+				),
+				&#039;option_name&#039;  =&gt; &#039;woocommerce_onboarding_profile&#039;,
+				&#039;operation&#039;    =&gt; &#039;=&#039;,
+				&#039;value&#039;        =&gt; $venue,
+				&#039;default&#039;      =&gt; array(),
+			);
+		}
+
+		return (object) array(
+			&#039;type&#039;     =&gt; &#039;or&#039;,
+			&#039;operands&#039; =&gt; $rules,
+		);
+	}
+
+	/**
+	 * Get rules for when selling offline for core profiler.
+	 *
+	 * @return object Rules to match.
+	 */
+	public static function get_rules_selling_offline() {
+		return (object) array(
+			&#039;type&#039;         =&gt; &#039;option&#039;,
+			&#039;transformers&#039; =&gt; array(
+				(object) array(
+					&#039;use&#039;       =&gt; &#039;dot_notation&#039;,
+					&#039;arguments&#039; =&gt; (object) array(
+						&#039;path&#039; =&gt; &#039;selling_online_answer&#039;,
+					),
+				),
+			),
+			&#039;option_name&#039;  =&gt; &#039;woocommerce_onboarding_profile&#039;,
+			&#039;operation&#039;    =&gt; &#039;contains&#039;,
+			&#039;value&#039;        =&gt; &#039;no_im_selling_offline&#039;,
+			&#039;default&#039;      =&gt; array(),
+		);
+	}
+
+	/**
+	 * Get default rules for CBD based on given argument.
+	 *
+	 * @param bool $should_have Whether or not the store should have CBD as an industry (true) or not (false).
+	 * @return array Rules to match.
+	 */
+	public static function get_rules_for_cbd( $should_have ) {
+		return (object) array(
+			&#039;type&#039;         =&gt; &#039;option&#039;,
+			&#039;transformers&#039; =&gt; array(
+				(object) array(
+					&#039;use&#039;       =&gt; &#039;dot_notation&#039;,
+					&#039;arguments&#039; =&gt; (object) array(
+						&#039;path&#039; =&gt; &#039;industry&#039;,
+					),
+				),
+				(object) array(
+					&#039;use&#039;       =&gt; &#039;array_column&#039;,
+					&#039;arguments&#039; =&gt; (object) array(
+						&#039;key&#039; =&gt; &#039;slug&#039;,
+					),
+				),
+			),
+			&#039;option_name&#039;  =&gt; &#039;woocommerce_onboarding_profile&#039;,
+			&#039;operation&#039;    =&gt; $should_have ? &#039;contains&#039; : &#039;!contains&#039;,
+			&#039;value&#039;        =&gt; &#039;cbd-other-hemp-derived-products&#039;,
+			&#039;default&#039;      =&gt; array(),
+		);
+	}
+
+	/**
+	 * Get recommendation priority for a given payment gateway by id and country.
+	 * If country is not supported, return null.
+	 *
+	 * @param string $gateway_id Payment gateway id.
+	 * @param string $country_code Store country code.
+	 * @return int|null Priority. Priority is 0-indexed, so 0 is the highest priority.
+	 */
+	private static function get_recommendation_priority( $gateway_id, $country_code ) {
+		$recommendation_priority_map = array(
+			&#039;US&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;square_credit_card&#039;,
+				&#039;amazon_payments_advanced&#039;,
+				&#039;affirm&#039;,
+				&#039;afterpay&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;zipmoney&#039;,
+			],
+			&#039;CA&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;square_credit_card&#039;,
+				&#039;affirm&#039;,
+				&#039;afterpay&#039;,
+				&#039;klarna_payments&#039;,
+			],
+			&#039;AT&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;mollie_wc_gateway_banktransfer&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;BE&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;mollie_wc_gateway_banktransfer&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;BG&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;HR&#039; =&gt; [ &#039;ppcp-gateway&#039; ],
+			&#039;CH&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;mollie_wc_gateway_banktransfer&#039;,
+				&#039;klarna_payments&#039;,
+			],
+			&#039;CY&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039;, &#039;amazon_payments_advanced&#039; ],
+			&#039;CZ&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;DK&#039; =&gt; [
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;EE&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;ES&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;mollie_wc_gateway_banktransfer&#039;,
+				&#039;square_credit_card&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;FI&#039; =&gt; [
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;mollie_wc_gateway_banktransfer&#039;,
+				&#039;kco&#039;,
+				&#039;klarna_payments&#039;,
+			],
+			&#039;FR&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;mollie_wc_gateway_banktransfer&#039;,
+				&#039;square_credit_card&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;DE&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;mollie_wc_gateway_banktransfer&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;GB&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;mollie_wc_gateway_banktransfer&#039;,
+				&#039;square_credit_card&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;GR&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;HU&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039;, &#039;amazon_payments_advanced&#039; ],
+			&#039;IE&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;square_credit_card&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;IT&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;mollie_wc_gateway_banktransfer&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;LV&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;LT&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;LU&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039;, &#039;amazon_payments_advanced&#039; ],
+			&#039;MT&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;NL&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;mollie_wc_gateway_banktransfer&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;NO&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039;, &#039;kco&#039;, &#039;klarna_payments&#039; ],
+			&#039;PL&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;mollie_wc_gateway_banktransfer&#039;,
+				&#039;klarna_payments&#039;,
+			],
+			&#039;PT&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;RO&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;SK&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;SL&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039;, &#039;amazon_payments_advanced&#039; ],
+			&#039;SE&#039; =&gt; [
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;kco&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;MX&#039; =&gt; [
+				&#039;stripe&#039;,
+				&#039;woo-mercado-pago-custom&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;klarna_payments&#039;,
+			],
+			&#039;BR&#039; =&gt; [ &#039;stripe&#039;, &#039;woo-mercado-pago-custom&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;AR&#039; =&gt; [ &#039;woo-mercado-pago-custom&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;BO&#039; =&gt; [],
+			&#039;CL&#039; =&gt; [ &#039;woo-mercado-pago-custom&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;CO&#039; =&gt; [ &#039;woo-mercado-pago-custom&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;EC&#039; =&gt; [ &#039;woo-mercado-pago-custom&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;FK&#039; =&gt; [],
+			&#039;GF&#039; =&gt; [],
+			&#039;GY&#039; =&gt; [],
+			&#039;PY&#039; =&gt; [],
+			&#039;PE&#039; =&gt; [ &#039;woo-mercado-pago-custom&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;SR&#039; =&gt; [],
+			&#039;UY&#039; =&gt; [ &#039;woo-mercado-pago-custom&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;VE&#039; =&gt; [ &#039;ppcp-gateway&#039; ],
+			&#039;AU&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;square_credit_card&#039;,
+				&#039;eway&#039;,
+				&#039;afterpay&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;zipmoney&#039;,
+			],
+			&#039;NZ&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;eway&#039;,
+				&#039;klarna_payments&#039;,
+				&#039;zipmoney&#039;,
+			],
+			&#039;HK&#039; =&gt; [
+				&#039;woocommerce_payments&#039;,
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;eway&#039;,
+				&#039;payoneer-checkout&#039;,
+			],
+			&#039;JP&#039; =&gt; [
+				&#039;stripe&#039;,
+				&#039;ppcp-gateway&#039;,
+				&#039;square_credit_card&#039;,
+				&#039;amazon_payments_advanced&#039;,
+			],
+			&#039;SG&#039; =&gt; [ &#039;woocommerce_payments&#039;, &#039;stripe&#039;, &#039;ppcp-gateway&#039;, &#039;eway&#039; ],
+			&#039;CN&#039; =&gt; [ &#039;ppcp-gateway&#039;, &#039;payoneer-checkout&#039; ],
+			&#039;FJ&#039; =&gt; [],
+			&#039;GU&#039; =&gt; [],
+			&#039;ID&#039; =&gt; [ &#039;stripe&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;IN&#039; =&gt; [ &#039;stripe&#039;, &#039;razorpay&#039;, &#039;payubiz&#039;, &#039;ppcp-gateway&#039; ],
+			&#039;ZA&#039; =&gt; [ &#039;payfast&#039;, &#039;paystack&#039; ],
+			&#039;NG&#039; =&gt; [ &#039;paystack&#039; ],
+			&#039;GH&#039; =&gt; [ &#039;paystack&#039; ],
+		);
+
+		// If the country code is not in the list, return default priority.
+		if ( ! isset( $recommendation_priority_map[ $country_code ] ) ) {
+			return self::get_default_recommendation_priority( $gateway_id );
+		}
+
+		$index = array_search( $gateway_id, $recommendation_priority_map[ $country_code ], true );
+
+		// If the gateway is not in the list, return the last index + 1.
+		if ( false === $index ) {
+			return count( $recommendation_priority_map[ $country_code ] );
+		}
+
+		return $index;
+	}
+
+	/**
+	 * Get the default recommendation priority for a payment gateway.
+	 * This is used when a country is not in the $recommendation_priority_map array.
+	 *
+	 * @param string $id Payment gateway id.
+	 * @return int Priority.
+	 */
+	private static function get_default_recommendation_priority( $id ) {
+		if ( ! $id || ! array_key_exists( $id, self::$recommendation_priority ) ) {
+			return null;
+		}
+		return self::$recommendation_priority[ $id ];
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

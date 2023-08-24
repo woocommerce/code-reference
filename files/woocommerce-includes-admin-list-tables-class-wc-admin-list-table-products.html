@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866946">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866946">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-admin-list-table-products.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * List tables: products.
+ *
+ * @package  WooCommerce\Admin
+ * @version  3.3.0
+ */
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+if ( class_exists( &#039;WC_Admin_List_Table_Products&#039;, false ) ) {
+	return;
+}
+
+if ( ! class_exists( &#039;WC_Admin_List_Table&#039;, false ) ) {
+	include_once __DIR__ . &#039;/abstract-class-wc-admin-list-table.php&#039;;
+}
+
+/**
+ * WC_Admin_List_Table_Products Class.
+ */
+class WC_Admin_List_Table_Products extends WC_Admin_List_Table {
+
+	/**
+	 * Post type.
+	 *
+	 * @var string
+	 */
+	protected $list_table_type = &#039;product&#039;;
+
+	/**
+	 * Constructor.
+	 */
+	public function __construct() {
+		parent::__construct();
+		add_filter( &#039;disable_months_dropdown&#039;, &#039;__return_true&#039; );
+		add_filter( &#039;query_vars&#039;, array( $this, &#039;add_custom_query_var&#039; ) );
+		add_filter( &#039;views_edit-product&#039;, array( $this, &#039;product_views&#039; ) );
+		add_filter( &#039;get_search_query&#039;, array( $this, &#039;search_label&#039; ) );
+		add_filter( &#039;posts_clauses&#039;, array( $this, &#039;posts_clauses&#039; ), 10, 2 );
+	}
+
+	/**
+	 * Render blank state.
+	 */
+	protected function render_blank_state() {
+		echo &#039;&lt;div class=&quot;woocommerce-BlankState&quot;&gt;&#039;;
+
+		echo &#039;&lt;h2 class=&quot;woocommerce-BlankState-message&quot;&gt;&#039; . esc_html__( &#039;Ready to start selling something awesome?&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/h2&gt;&#039;;
+
+		echo &#039;&lt;div class=&quot;woocommerce-BlankState-buttons&quot;&gt;&#039;;
+
+		echo &#039;&lt;a class=&quot;woocommerce-BlankState-cta button-primary button&quot; href=&quot;&#039; . esc_url( admin_url( &#039;post-new.php?post_type=product&amp;tutorial=true&#039; ) ) . &#039;&quot;&gt;&#039; . esc_html__( &#039;Create Product&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/a&gt;&#039;;
+		echo &#039;&lt;a class=&quot;woocommerce-BlankState-cta button&quot; href=&quot;&#039; . esc_url( admin_url( &#039;edit.php?post_type=product&amp;page=product_importer&#039; ) ) . &#039;&quot;&gt;&#039; . esc_html__( &#039;Start Import&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/a&gt;&#039;;
+
+		echo &#039;&lt;/div&gt;&#039;;
+
+		do_action( &#039;wc_marketplace_suggestions_products_empty_state&#039; );
+
+		echo &#039;&lt;/div&gt;&#039;;
+	}
+
+	/**
+	 * Define primary column.
+	 *
+	 * @return string
+	 */
+	protected function get_primary_column() {
+		return &#039;name&#039;;
+	}
+
+	/**
+	 * Get row actions to show in the list table.
+	 *
+	 * @param array   $actions Array of actions.
+	 * @param WP_Post $post Current post object.
+	 * @return array
+	 */
+	protected function get_row_actions( $actions, $post ) {
+		/* translators: %d: product ID. */
+		return array_merge( array( &#039;id&#039; =&gt; sprintf( __( &#039;ID: %d&#039;, &#039;woocommerce&#039; ), $post-&gt;ID ) ), $actions );
+	}
+
+	/**
+	 * Define which columns are sortable.
+	 *
+	 * @param array $columns Existing columns.
+	 * @return array
+	 */
+	public function define_sortable_columns( $columns ) {
+		$custom = array(
+			&#039;price&#039; =&gt; &#039;price&#039;,
+			&#039;sku&#039;   =&gt; &#039;sku&#039;,
+			&#039;name&#039;  =&gt; &#039;title&#039;,
+		);
+		return wp_parse_args( $custom, $columns );
+	}
+
+	/**
+	 * Define which columns to show on this screen.
+	 *
+	 * @param array $columns Existing columns.
+	 * @return array
+	 */
+	public function define_columns( $columns ) {
+		if ( empty( $columns ) &amp;&amp; ! is_array( $columns ) ) {
+			$columns = array();
+		}
+
+		unset( $columns[&#039;title&#039;], $columns[&#039;comments&#039;], $columns[&#039;date&#039;] );
+
+		$show_columns          = array();
+		$show_columns[&#039;cb&#039;]    = &#039;&lt;input type=&quot;checkbox&quot; /&gt;&#039;;
+		$show_columns[&#039;thumb&#039;] = &#039;&lt;span class=&quot;wc-image tips&quot; data-tip=&quot;&#039; . esc_attr__( &#039;Image&#039;, &#039;woocommerce&#039; ) . &#039;&quot;&gt;&#039; . __( &#039;Image&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/span&gt;&#039;;
+		$show_columns[&#039;name&#039;]  = __( &#039;Name&#039;, &#039;woocommerce&#039; );
+
+		if ( wc_product_sku_enabled() ) {
+			$show_columns[&#039;sku&#039;] = __( &#039;SKU&#039;, &#039;woocommerce&#039; );
+		}
+
+		if ( &#039;yes&#039; === get_option( &#039;woocommerce_manage_stock&#039; ) ) {
+			$show_columns[&#039;is_in_stock&#039;] = __( &#039;Stock&#039;, &#039;woocommerce&#039; );
+		}
+
+		$show_columns[&#039;price&#039;]       = __( &#039;Price&#039;, &#039;woocommerce&#039; );
+		$show_columns[&#039;product_cat&#039;] = __( &#039;Categories&#039;, &#039;woocommerce&#039; );
+		$show_columns[&#039;product_tag&#039;] = __( &#039;Tags&#039;, &#039;woocommerce&#039; );
+		$show_columns[&#039;featured&#039;]    = &#039;&lt;span class=&quot;wc-featured parent-tips&quot; data-tip=&quot;&#039; . esc_attr__( &#039;Featured&#039;, &#039;woocommerce&#039; ) . &#039;&quot;&gt;&#039; . __( &#039;Featured&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/span&gt;&#039;;
+		$show_columns[&#039;date&#039;]        = __( &#039;Date&#039;, &#039;woocommerce&#039; );
+
+		return array_merge( $show_columns, $columns );
+	}
+
+	/**
+	 * Pre-fetch any data for the row each column has access to it. the_product global is there for bw compat.
+	 *
+	 * @param int $post_id Post ID being shown.
+	 */
+	protected function prepare_row_data( $post_id ) {
+		global $the_product;
+
+		if ( empty( $this-&gt;object ) || $this-&gt;object-&gt;get_id() !== $post_id ) {
+			$the_product  = wc_get_product( $post_id );
+			$this-&gt;object = $the_product;
+		}
+	}
+
+	/**
+	 * Render column: thumb.
+	 */
+	protected function render_thumb_column() {
+		echo &#039;&lt;a href=&quot;&#039; . esc_url( get_edit_post_link( $this-&gt;object-&gt;get_id() ) ) . &#039;&quot;&gt;&#039; . $this-&gt;object-&gt;get_image( &#039;thumbnail&#039; ) . &#039;&lt;/a&gt;&#039;; // WPCS: XSS ok.
+	}
+
+	/**
+	 * Render column: name.
+	 */
+	protected function render_name_column() {
+		global $post;
+
+		$edit_link = get_edit_post_link( $this-&gt;object-&gt;get_id() );
+		$title     = _draft_or_post_title();
+
+		echo &#039;&lt;strong&gt;&lt;a class=&quot;row-title&quot; href=&quot;&#039; . esc_url( $edit_link ) . &#039;&quot;&gt;&#039; . esc_html( $title ) . &#039;&lt;/a&gt;&#039;;
+
+		_post_states( $post );
+
+		echo &#039;&lt;/strong&gt;&#039;;
+
+		if ( $this-&gt;object-&gt;get_parent_id() &gt; 0 ) {
+			echo &#039;&amp;nbsp;&amp;nbsp;&amp;larr; &lt;a href=&quot;&#039; . esc_url( get_edit_post_link( $this-&gt;object-&gt;get_parent_id() ) ) . &#039;&quot;&gt;&#039; . get_the_title( $this-&gt;object-&gt;get_parent_id() ) . &#039;&lt;/a&gt;&#039;; // @codingStandardsIgnoreLine.
+		}
+
+		get_inline_data( $post );
+
+		/* Custom inline data for woocommerce. */
+		echo &#039;
+			&lt;div class=&quot;hidden&quot; id=&quot;woocommerce_inline_&#039; . absint( $this-&gt;object-&gt;get_id() ) . &#039;&quot;&gt;
+				&lt;div class=&quot;menu_order&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_menu_order() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;sku&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_sku() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;regular_price&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_regular_price() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;sale_price&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_sale_price() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;weight&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_weight() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;length&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_length() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;width&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_width() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;height&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_height() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;shipping_class&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_shipping_class() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;visibility&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_catalog_visibility() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;stock_status&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_stock_status() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;stock&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_stock_quantity() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;manage_stock&quot;&gt;&#039; . esc_html( wc_bool_to_string( $this-&gt;object-&gt;get_manage_stock() ) ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;featured&quot;&gt;&#039; . esc_html( wc_bool_to_string( $this-&gt;object-&gt;get_featured() ) ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;product_type&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_type() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;product_is_virtual&quot;&gt;&#039; . esc_html( wc_bool_to_string( $this-&gt;object-&gt;get_virtual() ) ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;tax_status&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_tax_status() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;tax_class&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_tax_class() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;backorders&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_backorders() ) . &#039;&lt;/div&gt;
+				&lt;div class=&quot;low_stock_amount&quot;&gt;&#039; . esc_html( $this-&gt;object-&gt;get_low_stock_amount() ) . &#039;&lt;/div&gt;
+			&lt;/div&gt;
+		&#039;;
+	}
+
+	/**
+	 * Render column: sku.
+	 */
+	protected function render_sku_column() {
+		echo $this-&gt;object-&gt;get_sku() ? esc_html( $this-&gt;object-&gt;get_sku() ) : &#039;&lt;span class=&quot;na&quot;&gt;&amp;ndash;&lt;/span&gt;&#039;;
+	}
+
+	/**
+	 * Render column: price.
+	 */
+	protected function render_price_column() {
+		echo $this-&gt;object-&gt;get_price_html() ? wp_kses_post( $this-&gt;object-&gt;get_price_html() ) : &#039;&lt;span class=&quot;na&quot;&gt;&amp;ndash;&lt;/span&gt;&#039;;
+	}
+
+	/**
+	 * Render column: product_cat.
+	 */
+	protected function render_product_cat_column() {
+		$terms = get_the_terms( $this-&gt;object-&gt;get_id(), &#039;product_cat&#039; );
+		if ( ! $terms ) {
+			echo &#039;&lt;span class=&quot;na&quot;&gt;&amp;ndash;&lt;/span&gt;&#039;;
+		} else {
+			$termlist = array();
+			foreach ( $terms as $term ) {
+				$termlist[] = &#039;&lt;a href=&quot;&#039; . esc_url( admin_url( &#039;edit.php?product_cat=&#039; . $term-&gt;slug . &#039;&amp;post_type=product&#039; ) ) . &#039; &quot;&gt;&#039; . esc_html( $term-&gt;name ) . &#039;&lt;/a&gt;&#039;;
+			}
+
+			echo apply_filters( &#039;woocommerce_admin_product_term_list&#039;, implode( &#039;, &#039;, $termlist ), &#039;product_cat&#039;, $this-&gt;object-&gt;get_id(), $termlist, $terms ); // WPCS: XSS ok.
+		}
+	}
+
+	/**
+	 * Render column: product_tag.
+	 */
+	protected function render_product_tag_column() {
+		$terms = get_the_terms( $this-&gt;object-&gt;get_id(), &#039;product_tag&#039; );
+		if ( ! $terms ) {
+			echo &#039;&lt;span class=&quot;na&quot;&gt;&amp;ndash;&lt;/span&gt;&#039;;
+		} else {
+			$termlist = array();
+			foreach ( $terms as $term ) {
+				$termlist[] = &#039;&lt;a href=&quot;&#039; . esc_url( admin_url( &#039;edit.php?product_tag=&#039; . $term-&gt;slug . &#039;&amp;post_type=product&#039; ) ) . &#039; &quot;&gt;&#039; . esc_html( $term-&gt;name ) . &#039;&lt;/a&gt;&#039;;
+			}
+
+			echo apply_filters( &#039;woocommerce_admin_product_term_list&#039;, implode( &#039;, &#039;, $termlist ), &#039;product_tag&#039;, $this-&gt;object-&gt;get_id(), $termlist, $terms ); // WPCS: XSS ok.
+		}
+	}
+
+	/**
+	 * Render column: featured.
+	 */
+	protected function render_featured_column() {
+		$url = wp_nonce_url( admin_url( &#039;admin-ajax.php?action=woocommerce_feature_product&amp;product_id=&#039; . $this-&gt;object-&gt;get_id() ), &#039;woocommerce-feature-product&#039; );
+		echo &#039;&lt;a href=&quot;&#039; . esc_url( $url ) . &#039;&quot; aria-label=&quot;&#039; . esc_attr__( &#039;Toggle featured&#039;, &#039;woocommerce&#039; ) . &#039;&quot;&gt;&#039;;
+		if ( $this-&gt;object-&gt;is_featured() ) {
+			echo &#039;&lt;span class=&quot;wc-featured tips&quot; data-tip=&quot;&#039; . esc_attr__( &#039;Yes&#039;, &#039;woocommerce&#039; ) . &#039;&quot;&gt;&#039; . esc_html__( &#039;Yes&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/span&gt;&#039;;
+		} else {
+			echo &#039;&lt;span class=&quot;wc-featured not-featured tips&quot; data-tip=&quot;&#039; . esc_attr__( &#039;No&#039;, &#039;woocommerce&#039; ) . &#039;&quot;&gt;&#039; . esc_html__( &#039;No&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/span&gt;&#039;;
+		}
+		echo &#039;&lt;/a&gt;&#039;;
+	}
+
+	/**
+	 * Render column: is_in_stock.
+	 */
+	protected function render_is_in_stock_column() {
+		if ( $this-&gt;object-&gt;is_on_backorder() ) {
+			$stock_html = &#039;&lt;mark class=&quot;onbackorder&quot;&gt;&#039; . __( &#039;On backorder&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/mark&gt;&#039;;
+		} elseif ( $this-&gt;object-&gt;is_in_stock() ) {
+			$stock_html = &#039;&lt;mark class=&quot;instock&quot;&gt;&#039; . __( &#039;In stock&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/mark&gt;&#039;;
+		} else {
+			$stock_html = &#039;&lt;mark class=&quot;outofstock&quot;&gt;&#039; . __( &#039;Out of stock&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/mark&gt;&#039;;
+		}
+
+		if ( $this-&gt;object-&gt;managing_stock() ) {
+			$stock_html .= &#039; (&#039; . wc_stock_amount( $this-&gt;object-&gt;get_stock_quantity() ) . &#039;)&#039;;
+		}
+
+		echo wp_kses_post( apply_filters( &#039;woocommerce_admin_stock_html&#039;, $stock_html, $this-&gt;object ) );
+	}
+
+	/**
+	 * Query vars for custom searches.
+	 *
+	 * @param mixed $public_query_vars Array of query vars.
+	 * @return array
+	 */
+	public function add_custom_query_var( $public_query_vars ) {
+		$public_query_vars[] = &#039;sku&#039;;
+		return $public_query_vars;
+	}
+
+	/**
+	 * Render any custom filters and search inputs for the list table.
+	 */
+	protected function render_filters() {
+		$filters = apply_filters(
+			&#039;woocommerce_products_admin_list_table_filters&#039;,
+			array(
+				&#039;product_category&#039; =&gt; array( $this, &#039;render_products_category_filter&#039; ),
+				&#039;product_type&#039;     =&gt; array( $this, &#039;render_products_type_filter&#039; ),
+				&#039;stock_status&#039;     =&gt; array( $this, &#039;render_products_stock_status_filter&#039; ),
+			)
+		);
+
+		ob_start();
+		foreach ( $filters as $filter_callback ) {
+			call_user_func( $filter_callback );
+		}
+		$output = ob_get_clean();
+
+		echo apply_filters( &#039;woocommerce_product_filters&#039;, $output ); // WPCS: XSS ok.
+	}
+
+	/**
+	 * Render the product category filter for the list table.
+	 *
+	 * @since 3.5.0
+	 */
+	protected function render_products_category_filter() {
+		$categories_count = (int) wp_count_terms( &#039;product_cat&#039; );
+
+		if ( $categories_count &lt;= apply_filters( &#039;woocommerce_product_category_filter_threshold&#039;, 100 ) ) {
+			wc_product_dropdown_categories(
+				array(
+					&#039;option_select_text&#039; =&gt; __( &#039;Filter by category&#039;, &#039;woocommerce&#039; ),
+					&#039;hide_empty&#039;         =&gt; 0,
+				)
+			);
+		} else {
+			$current_category_slug = isset( $_GET[&#039;product_cat&#039;] ) ? wc_clean( wp_unslash( $_GET[&#039;product_cat&#039;] ) ) : false; // WPCS: input var ok, CSRF ok.
+			$current_category      = $current_category_slug ? get_term_by( &#039;slug&#039;, $current_category_slug, &#039;product_cat&#039; ) : false;
+			?&gt;
+			&lt;select class=&quot;wc-category-search&quot; name=&quot;product_cat&quot; data-placeholder=&quot;&lt;?php esc_attr_e( &#039;Filter by category&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; data-allow_clear=&quot;true&quot;&gt;
+				&lt;?php if ( $current_category_slug &amp;&amp; $current_category ) : ?&gt;
+					&lt;option value=&quot;&lt;?php echo esc_attr( $current_category_slug ); ?&gt;&quot; selected=&quot;selected&quot;&gt;&lt;?php echo esc_html( htmlspecialchars( wp_kses_post( $current_category-&gt;name ) ) ); ?&gt;&lt;/option&gt;
+				&lt;?php endif; ?&gt;
+			&lt;/select&gt;
+			&lt;?php
+		}
+	}
+
+	/**
+	 * Render the product type filter for the list table.
+	 *
+	 * @since 3.5.0
+	 */
+	protected function render_products_type_filter() {
+		$current_product_type = isset( $_REQUEST[&#039;product_type&#039;] ) ? wc_clean( wp_unslash( $_REQUEST[&#039;product_type&#039;] ) ) : false; // WPCS: input var ok, sanitization ok.
+		$output               = &#039;&lt;select name=&quot;product_type&quot; id=&quot;dropdown_product_type&quot;&gt;&lt;option value=&quot;&quot;&gt;&#039; . esc_html__( &#039;Filter by product type&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/option&gt;&#039;;
+
+		foreach ( wc_get_product_types() as $value =&gt; $label ) {
+			$output .= &#039;&lt;option value=&quot;&#039; . esc_attr( $value ) . &#039;&quot; &#039;;
+			$output .= selected( $value, $current_product_type, false );
+			$output .= &#039;&gt;&#039; . esc_html( $label ) . &#039;&lt;/option&gt;&#039;;
+
+			if ( &#039;simple&#039; === $value ) {
+
+				$output .= &#039;&lt;option value=&quot;downloadable&quot; &#039;;
+				$output .= selected( &#039;downloadable&#039;, $current_product_type, false );
+				$output .= &#039;&gt; &#039; . ( is_rtl() ? &#039;&amp;larr;&#039; : &#039;&amp;rarr;&#039; ) . &#039; &#039; . esc_html__( &#039;Downloadable&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/option&gt;&#039;;
+
+				$output .= &#039;&lt;option value=&quot;virtual&quot; &#039;;
+				$output .= selected( &#039;virtual&#039;, $current_product_type, false );
+				$output .= &#039;&gt; &#039; . ( is_rtl() ? &#039;&amp;larr;&#039; : &#039;&amp;rarr;&#039; ) . &#039; &#039; . esc_html__( &#039;Virtual&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/option&gt;&#039;;
+			}
+		}
+
+		$output .= &#039;&lt;/select&gt;&#039;;
+		echo $output; // WPCS: XSS ok.
+	}
+
+	/**
+	 * Render the stock status filter for the list table.
+	 *
+	 * @since 3.5.0
+	 */
+	public function render_products_stock_status_filter() {
+		$current_stock_status = isset( $_REQUEST[&#039;stock_status&#039;] ) ? wc_clean( wp_unslash( $_REQUEST[&#039;stock_status&#039;] ) ) : false; // WPCS: input var ok, sanitization ok.
+		$stock_statuses       = wc_get_product_stock_status_options();
+		$output               = &#039;&lt;select name=&quot;stock_status&quot;&gt;&lt;option value=&quot;&quot;&gt;&#039; . esc_html__( &#039;Filter by stock status&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/option&gt;&#039;;
+
+		foreach ( $stock_statuses as $status =&gt; $label ) {
+			$output .= &#039;&lt;option &#039; . selected( $status, $current_stock_status, false ) . &#039; value=&quot;&#039; . esc_attr( $status ) . &#039;&quot;&gt;&#039; . esc_html( $label ) . &#039;&lt;/option&gt;&#039;;
+		}
+
+		$output .= &#039;&lt;/select&gt;&#039;;
+		echo $output; // WPCS: XSS ok.
+	}
+
+	/**
+	 * Search by SKU or ID for products.
+	 *
+	 * @deprecated 4.4.0 Logic moved to query_filters.
+	 * @param string $where Where clause SQL.
+	 * @return string
+	 */
+	public function sku_search( $where ) {
+		wc_deprecated_function( &#039;WC_Admin_List_Table_Products::sku_search&#039;, &#039;4.4.0&#039;, &#039;Logic moved to query_filters.&#039; );
+		return $where;
+	}
+
+	/**
+	 * Change views on the edit product screen.
+	 *
+	 * @param  array $views Array of views.
+	 * @return array
+	 */
+	public function product_views( $views ) {
+		global $wp_query;
+
+		// Products do not have authors.
+		unset( $views[&#039;mine&#039;] );
+
+		// Add sorting link.
+		if ( current_user_can( &#039;edit_others_products&#039; ) ) {
+			$class            = ( isset( $wp_query-&gt;query[&#039;orderby&#039;] ) &amp;&amp; &#039;menu_order title&#039; === $wp_query-&gt;query[&#039;orderby&#039;] ) ? &#039;current&#039; : &#039;&#039;;
+			$query_string     = remove_query_arg( array( &#039;orderby&#039;, &#039;order&#039; ) );
+			$query_string     = add_query_arg( &#039;orderby&#039;, rawurlencode( &#039;menu_order title&#039; ), $query_string );
+			$query_string     = add_query_arg( &#039;order&#039;, rawurlencode( &#039;ASC&#039; ), $query_string );
+			$views[&#039;byorder&#039;] = &#039;&lt;a href=&quot;&#039; . esc_url( $query_string ) . &#039;&quot; class=&quot;&#039; . esc_attr( $class ) . &#039;&quot;&gt;&#039; . __( &#039;Sorting&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/a&gt;&#039;;
+		}
+
+		return $views;
+	}
+
+	/**
+	 * Change the label when searching products
+	 *
+	 * @param string $query Search Query.
+	 * @return string
+	 */
+	public function search_label( $query ) {
+		global $pagenow, $typenow;
+
+		if ( &#039;edit.php&#039; !== $pagenow || &#039;product&#039; !== $typenow || ! get_query_var( &#039;product_search&#039; ) || ! isset( $_GET[&#039;s&#039;] ) ) { // WPCS: input var ok.
+			return $query;
+		}
+
+		return wc_clean( wp_unslash( $_GET[&#039;s&#039;] ) ); // WPCS: input var ok, sanitization ok.
+	}
+
+	/**
+	 * Handle any custom filters.
+	 *
+	 * @param array $query_vars Query vars.
+	 * @return array
+	 */
+	protected function query_filters( $query_vars ) {
+		$this-&gt;remove_ordering_args();
+		// Custom order by arguments.
+		if ( isset( $query_vars[&#039;orderby&#039;] ) ) {
+			$orderby = strtolower( $query_vars[&#039;orderby&#039;] );
+			$order   = isset( $query_vars[&#039;order&#039;] ) ? strtoupper( $query_vars[&#039;order&#039;] ) : &#039;DESC&#039;;
+
+			if ( &#039;price&#039; === $orderby ) {
+				$callback = &#039;DESC&#039; === $order ? &#039;order_by_price_desc_post_clauses&#039; : &#039;order_by_price_asc_post_clauses&#039;;
+				add_filter( &#039;posts_clauses&#039;, array( $this, $callback ) );
+			}
+
+			if ( &#039;sku&#039; === $orderby ) {
+				$callback = &#039;DESC&#039; === $order ? &#039;order_by_sku_desc_post_clauses&#039; : &#039;order_by_sku_asc_post_clauses&#039;;
+				add_filter( &#039;posts_clauses&#039;, array( $this, $callback ) );
+			}
+		}
+
+		// Type filtering.
+		if ( isset( $query_vars[&#039;product_type&#039;] ) ) {
+			if ( &#039;downloadable&#039; === $query_vars[&#039;product_type&#039;] ) {
+				$query_vars[&#039;product_type&#039;] = &#039;&#039;;
+				add_filter( &#039;posts_clauses&#039;, array( $this, &#039;filter_downloadable_post_clauses&#039; ) );
+			} elseif ( &#039;virtual&#039; === $query_vars[&#039;product_type&#039;] ) {
+				$query_vars[&#039;product_type&#039;] = &#039;&#039;;
+				add_filter( &#039;posts_clauses&#039;, array( $this, &#039;filter_virtual_post_clauses&#039; ) );
+			}
+		}
+
+		// Stock status filter.
+		if ( ! empty( $_GET[&#039;stock_status&#039;] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			add_filter( &#039;posts_clauses&#039;, array( $this, &#039;filter_stock_status_post_clauses&#039; ) );
+		}
+
+		// Shipping class taxonomy.
+		if ( ! empty( $_GET[&#039;product_shipping_class&#039;] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$query_vars[&#039;tax_query&#039;][] = array(
+				&#039;taxonomy&#039; =&gt; &#039;product_shipping_class&#039;,
+				&#039;field&#039;    =&gt; &#039;slug&#039;,
+				&#039;terms&#039;    =&gt; sanitize_title( wp_unslash( $_GET[&#039;product_shipping_class&#039;] ) ),
+				&#039;operator&#039; =&gt; &#039;IN&#039;,
+			);
+		}
+
+		// Search using CRUD.
+		if ( ! empty( $query_vars[&#039;s&#039;] ) ) {
+			$data_store                   = WC_Data_Store::load( &#039;product&#039; );
+			$ids                          = $data_store-&gt;search_products( wc_clean( wp_unslash( $query_vars[&#039;s&#039;] ) ), &#039;&#039;, true, true );
+			$query_vars[&#039;post__in&#039;]       = array_merge( $ids, array( 0 ) );
+			$query_vars[&#039;product_search&#039;] = true;
+			unset( $query_vars[&#039;s&#039;] );
+		}
+
+		return $query_vars;
+	}
+
+	/**
+	 * Undocumented function
+	 *
+	 * @param array    $args  Array of SELECT statement pieces (from, where, etc).
+	 * @param WP_Query $query WP_Query instance.
+	 * @return array
+	 */
+	public function posts_clauses( $args, $query ) {
+
+		return $args;
+	}
+
+	/**
+	 * Remove ordering queries.
+	 *
+	 * @param array $posts Posts array, keeping this for backwards compatibility defaulting to empty array.
+	 * @return array
+	 */
+	public function remove_ordering_args( $posts = array() ) {
+		remove_filter( &#039;posts_clauses&#039;, array( $this, &#039;order_by_price_asc_post_clauses&#039; ) );
+		remove_filter( &#039;posts_clauses&#039;, array( $this, &#039;order_by_price_desc_post_clauses&#039; ) );
+		remove_filter( &#039;posts_clauses&#039;, array( $this, &#039;order_by_sku_asc_post_clauses&#039; ) );
+		remove_filter( &#039;posts_clauses&#039;, array( $this, &#039;order_by_sku_desc_post_clauses&#039; ) );
+		remove_filter( &#039;posts_clauses&#039;, array( $this, &#039;filter_downloadable_post_clauses&#039; ) );
+		remove_filter( &#039;posts_clauses&#039;, array( $this, &#039;filter_virtual_post_clauses&#039; ) );
+		remove_filter( &#039;posts_clauses&#039;, array( $this, &#039;filter_stock_status_post_clauses&#039; ) );
+		return $posts; // Keeping this here for backward compatibility.
+	}
+
+	/**
+	 * Handle numeric price sorting.
+	 *
+	 * @param array $args Query args.
+	 * @return array
+	 */
+	public function order_by_price_asc_post_clauses( $args ) {
+		$args[&#039;join&#039;]    = $this-&gt;append_product_sorting_table_join( $args[&#039;join&#039;] );
+		$args[&#039;orderby&#039;] = &#039; wc_product_meta_lookup.min_price ASC, wc_product_meta_lookup.product_id ASC &#039;;
+		return $args;
+	}
+
+	/**
+	 * Handle numeric price sorting.
+	 *
+	 * @param array $args Query args.
+	 * @return array
+	 */
+	public function order_by_price_desc_post_clauses( $args ) {
+		$args[&#039;join&#039;]    = $this-&gt;append_product_sorting_table_join( $args[&#039;join&#039;] );
+		$args[&#039;orderby&#039;] = &#039; wc_product_meta_lookup.max_price DESC, wc_product_meta_lookup.product_id DESC &#039;;
+		return $args;
+	}
+
+	/**
+	 * Handle sku sorting.
+	 *
+	 * @param array $args Query args.
+	 * @return array
+	 */
+	public function order_by_sku_asc_post_clauses( $args ) {
+		$args[&#039;join&#039;]    = $this-&gt;append_product_sorting_table_join( $args[&#039;join&#039;] );
+		$args[&#039;orderby&#039;] = &#039; wc_product_meta_lookup.sku ASC, wc_product_meta_lookup.product_id ASC &#039;;
+		return $args;
+	}
+
+	/**
+	 * Handle sku sorting.
+	 *
+	 * @param array $args Query args.
+	 * @return array
+	 */
+	public function order_by_sku_desc_post_clauses( $args ) {
+		$args[&#039;join&#039;]    = $this-&gt;append_product_sorting_table_join( $args[&#039;join&#039;] );
+		$args[&#039;orderby&#039;] = &#039; wc_product_meta_lookup.sku DESC, wc_product_meta_lookup.product_id DESC &#039;;
+		return $args;
+	}
+
+	/**
+	 * Filter by type.
+	 *
+	 * @param array $args Query args.
+	 * @return array
+	 */
+	public function filter_downloadable_post_clauses( $args ) {
+		$args[&#039;join&#039;]   = $this-&gt;append_product_sorting_table_join( $args[&#039;join&#039;] );
+		$args[&#039;where&#039;] .= &#039; AND wc_product_meta_lookup.downloadable=1 &#039;;
+		return $args;
+	}
+
+	/**
+	 * Filter by type.
+	 *
+	 * @param array $args Query args.
+	 * @return array
+	 */
+	public function filter_virtual_post_clauses( $args ) {
+		$args[&#039;join&#039;]   = $this-&gt;append_product_sorting_table_join( $args[&#039;join&#039;] );
+		$args[&#039;where&#039;] .= &#039; AND wc_product_meta_lookup.virtual=1 &#039;;
+		return $args;
+	}
+
+	/**
+	 * Filter by stock status.
+	 *
+	 * @param array $args Query args.
+	 * @return array
+	 */
+	public function filter_stock_status_post_clauses( $args ) {
+		global $wpdb;
+		if ( ! empty( $_GET[&#039;stock_status&#039;] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$args[&#039;join&#039;]   = $this-&gt;append_product_sorting_table_join( $args[&#039;join&#039;] );
+			$args[&#039;where&#039;] .= $wpdb-&gt;prepare( &#039; AND wc_product_meta_lookup.stock_status=%s &#039;, wc_clean( wp_unslash( $_GET[&#039;stock_status&#039;] ) ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		}
+		return $args;
+	}
+
+	/**
+	 * Join wc_product_meta_lookup to posts if not already joined.
+	 *
+	 * @param string $sql SQL join.
+	 * @return string
+	 */
+	private function append_product_sorting_table_join( $sql ) {
+		global $wpdb;
+
+		if ( ! strstr( $sql, &#039;wc_product_meta_lookup&#039; ) ) {
+			$sql .= &quot; LEFT JOIN {$wpdb-&gt;wc_product_meta_lookup} wc_product_meta_lookup ON $wpdb-&gt;posts.ID = wc_product_meta_lookup.product_id &quot;;
+		}
+		return $sql;
+	}
+
+	/**
+	 * Modifies post query so that it includes parent products whose variations have particular shipping class assigned.
+	 *
+	 * @param array    $pieces   Array of SELECT statement pieces (from, where, etc).
+	 * @param WP_Query $wp_query WP_Query instance.
+	 * @return array             Array of products, including parents of variations.
+	 */
+	public function add_variation_parents_for_shipping_class( $pieces, $wp_query ) {
+		global $wpdb;
+		if ( isset( $_GET[&#039;product_shipping_class&#039;] ) &amp;&amp; &#039;0&#039; !== $_GET[&#039;product_shipping_class&#039;] ) { // WPCS: input var ok.
+			$replaced_where   = str_replace( &quot;.post_type = &#039;product&#039;&quot;, &quot;.post_type = &#039;product_variation&#039;&quot;, $pieces[&#039;where&#039;] );
+			$pieces[&#039;where&#039;] .= &quot; OR {$wpdb-&gt;posts}.ID in (
+				SELECT {$wpdb-&gt;posts}.post_parent FROM
+				{$wpdb-&gt;posts} LEFT JOIN {$wpdb-&gt;term_relationships} ON ({$wpdb-&gt;posts}.ID = {$wpdb-&gt;term_relationships}.object_id)
+				WHERE 1=1 $replaced_where
+			)&quot;;
+			return $pieces;
+		}
+		return $pieces;
+	}
+
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866946"></script>
+    <script src="../js/search.js?updated=1692866946"></script>
+</body>
+</html>

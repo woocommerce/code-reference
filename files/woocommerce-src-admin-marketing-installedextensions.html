@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866951">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866951">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">InstalledExtensions.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * InstalledExtensions class file.
+ */
+
+namespace Automattic\WooCommerce\Admin\Marketing;
+
+use Automattic\WooCommerce\Admin\PluginsHelper;
+
+/**
+ * Installed Marketing Extensions class.
+ */
+class InstalledExtensions {
+
+	/**
+	 * Gets an array of plugin data for the &quot;Installed marketing extensions&quot; card.
+	 *
+	 * Valid extensions statuses are: installed, activated, configured
+	 */
+	public static function get_data() {
+		$data = [];
+
+		$automatewoo   = self::get_automatewoo_extension_data();
+		$aw_referral   = self::get_aw_referral_extension_data();
+		$aw_birthdays  = self::get_aw_birthdays_extension_data();
+		$mailchimp     = self::get_mailchimp_extension_data();
+		$facebook      = self::get_facebook_extension_data();
+		$pinterest     = self::get_pinterest_extension_data();
+		$google        = self::get_google_extension_data();
+		$amazon_ebay   = self::get_amazon_ebay_extension_data();
+		$mailpoet      = self::get_mailpoet_extension_data();
+		$klaviyo       = self::get_klaviyo_extension_data();
+		$creative_mail = self::get_creative_mail_extension_data();
+		$tiktok        = self::get_tiktok_extension_data();
+		$jetpack_crm   = self::get_jetpack_crm_extension_data();
+		$zapier        = self::get_zapier_extension_data();
+		$salesforce    = self::get_salesforce_extension_data();
+		$vimeo         = self::get_vimeo_extension_data();
+		$trustpilot    = self::get_trustpilot_extension_data();
+
+		if ( $automatewoo ) {
+			$data[] = $automatewoo;
+		}
+
+		if ( $aw_referral ) {
+			$data[] = $aw_referral;
+		}
+
+		if ( $aw_birthdays ) {
+			$data[] = $aw_birthdays;
+		}
+
+		if ( $mailchimp ) {
+			$data[] = $mailchimp;
+		}
+
+		if ( $facebook ) {
+			$data[] = $facebook;
+		}
+
+		if ( $pinterest ) {
+			$data[] = $pinterest;
+		}
+
+		if ( $google ) {
+			$data[] = $google;
+		}
+
+		if ( $amazon_ebay ) {
+			$data[] = $amazon_ebay;
+		}
+
+		if ( $mailpoet ) {
+			$data[] = $mailpoet;
+		}
+
+		if ( $klaviyo ) {
+			$data[] = $klaviyo;
+		}
+
+		if ( $creative_mail ) {
+			$data[] = $creative_mail;
+		}
+
+		if ( $tiktok ) {
+			$data[] = $tiktok;
+		}
+
+		if ( $jetpack_crm ) {
+			$data[] = $jetpack_crm;
+		}
+
+		if ( $zapier ) {
+			$data[] = $zapier;
+		}
+
+		if ( $salesforce ) {
+			$data[] = $salesforce;
+		}
+
+		if ( $vimeo ) {
+			$data[] = $vimeo;
+		}
+
+		if ( $trustpilot ) {
+			$data[] = $trustpilot;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get allowed plugins.
+	 *
+	 * @return array
+	 */
+	public static function get_allowed_plugins() {
+		return [
+			&#039;automatewoo&#039;,
+			&#039;mailchimp-for-woocommerce&#039;,
+			&#039;creative-mail-by-constant-contact&#039;,
+			&#039;facebook-for-woocommerce&#039;,
+			&#039;pinterest-for-woocommerce&#039;,
+			&#039;google-listings-and-ads&#039;,
+			&#039;hubspot-for-woocommerce&#039;,
+			&#039;woocommerce-amazon-ebay-integration&#039;,
+			&#039;mailpoet&#039;,
+		];
+	}
+
+	/**
+	 * Get AutomateWoo extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_automatewoo_extension_data() {
+		$slug = &#039;automatewoo&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/automatewoo.svg&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] &amp;&amp; function_exists( &#039;AW&#039; ) ) {
+			$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=automatewoo-settings&#039; );
+			$data[&#039;docsUrl&#039;]     = &#039;https://automatewoo.com/docs/&#039;;
+			$data[&#039;status&#039;]      = &#039;configured&#039;; // Currently no configuration step.
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get AutomateWoo Refer a Friend extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_aw_referral_extension_data() {
+		$slug = &#039;automatewoo-referrals&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/automatewoo.svg&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] ) {
+			$data[&#039;docsUrl&#039;] = &#039;https://automatewoo.com/docs/refer-a-friend/&#039;;
+			$data[&#039;status&#039;]  = &#039;configured&#039;;
+			if ( function_exists( &#039;AW_Referrals&#039; ) ) {
+				$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=automatewoo-settings&amp;tab=referrals&#039; );
+			}
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get AutomateWoo Birthdays extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_aw_birthdays_extension_data() {
+		$slug = &#039;automatewoo-birthdays&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/automatewoo.svg&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] ) {
+			$data[&#039;docsUrl&#039;] = &#039;https://automatewoo.com/docs/getting-started-with-birthdays/&#039;;
+			$data[&#039;status&#039;]  = &#039;configured&#039;;
+			if ( function_exists( &#039;AW_Birthdays&#039; ) ) {
+				$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=automatewoo-settings&amp;tab=birthdays&#039; );
+			}
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get MailChimp extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_mailchimp_extension_data() {
+		$slug = &#039;mailchimp-for-woocommerce&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/mailchimp.svg&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] &amp;&amp; function_exists( &#039;mailchimp_is_configured&#039; ) ) {
+			$data[&#039;docsUrl&#039;]     = &#039;https://mailchimp.com/help/connect-or-disconnect-mailchimp-for-woocommerce/&#039;;
+			$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=mailchimp-woocommerce&#039; );
+
+			if ( mailchimp_is_configured() ) {
+				$data[&#039;status&#039;] = &#039;configured&#039;;
+			}
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get Facebook extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_facebook_extension_data() {
+		$slug = &#039;facebook-for-woocommerce&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/facebook-icon.svg&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] &amp;&amp; function_exists( &#039;facebook_for_woocommerce&#039; ) ) {
+			$integration = facebook_for_woocommerce()-&gt;get_integration();
+
+			if ( $integration-&gt;is_configured() ) {
+				$data[&#039;status&#039;] = &#039;configured&#039;;
+			}
+
+			$data[&#039;settingsUrl&#039;] = facebook_for_woocommerce()-&gt;get_settings_url();
+			$data[&#039;docsUrl&#039;]     = facebook_for_woocommerce()-&gt;get_documentation_url();
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get Pinterest extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_pinterest_extension_data() {
+		$slug = &#039;pinterest-for-woocommerce&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/pinterest.svg&#039;;
+
+		$data[&#039;docsUrl&#039;] = &#039;https://woocommerce.com/document/pinterest-for-woocommerce/?utm_medium=product&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] &amp;&amp; class_exists( &#039;Pinterest_For_Woocommerce&#039; ) ) {
+			$pinterest_onboarding_completed = Pinterest_For_Woocommerce()::is_setup_complete();
+			if ( $pinterest_onboarding_completed ) {
+				$data[&#039;status&#039;]      = &#039;configured&#039;;
+				$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=wc-admin&amp;path=/pinterest/settings&#039; );
+			} else {
+				$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=wc-admin&amp;path=/pinterest/landing&#039; );
+			}
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get Google extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_google_extension_data() {
+		$slug = &#039;google-listings-and-ads&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/google.svg&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] &amp;&amp; function_exists( &#039;woogle_get_container&#039; ) &amp;&amp; class_exists( &#039;\Automattic\WooCommerce\GoogleListingsAndAds\MerchantCenter\MerchantCenterService&#039; ) ) {
+
+			$merchant_center = woogle_get_container()-&gt;get( \Automattic\WooCommerce\GoogleListingsAndAds\MerchantCenter\MerchantCenterService::class );
+
+			if ( $merchant_center-&gt;is_setup_complete() ) {
+				$data[&#039;status&#039;]      = &#039;configured&#039;;
+				$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=wc-admin&amp;path=/google/settings&#039; );
+			} else {
+				$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=wc-admin&amp;path=/google/start&#039; );
+			}
+
+			$data[&#039;docsUrl&#039;] = &#039;https://woocommerce.com/document/google-listings-and-ads/?utm_medium=product&#039;;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get Amazon / Ebay extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_amazon_ebay_extension_data() {
+		$slug = &#039;woocommerce-amazon-ebay-integration&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/amazon-ebay.svg&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] &amp;&amp; class_exists( &#039;\CodistoConnect&#039; ) ) {
+
+			$codisto_merchantid = get_option( &#039;codisto_merchantid&#039; );
+
+			// Use same check as codisto admin tabs.
+			if ( is_numeric( $codisto_merchantid ) ) {
+				$data[&#039;status&#039;] = &#039;configured&#039;;
+			}
+
+			$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=codisto-settings&#039; );
+			$data[&#039;docsUrl&#039;]     = &#039;https://woocommerce.com/document/multichannel-for-woocommerce-google-amazon-ebay-walmart-integration/?utm_medium=product&#039;;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get MailPoet extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_mailpoet_extension_data() {
+		$slug = &#039;mailpoet&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/mailpoet.svg&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] &amp;&amp; class_exists( &#039;\MailPoet\API\API&#039; ) ) {
+			$mailpoet_api = \MailPoet\API\API::MP( &#039;v1&#039; );
+
+			if ( ! method_exists( $mailpoet_api, &#039;isSetupComplete&#039; ) || $mailpoet_api-&gt;isSetupComplete() ) {
+				$data[&#039;status&#039;]      = &#039;configured&#039;;
+				$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=mailpoet-settings&#039; );
+			} else {
+				$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=mailpoet-newsletters&#039; );
+			}
+
+			$data[&#039;docsUrl&#039;]    = &#039;https://kb.mailpoet.com/&#039;;
+			$data[&#039;supportUrl&#039;] = &#039;https://www.mailpoet.com/support/&#039;;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get Klaviyo extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_klaviyo_extension_data() {
+		$slug = &#039;klaviyo&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = plugins_url( &#039;assets/images/marketing/klaviyo.png&#039;, WC_PLUGIN_FILE );
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] ) {
+			$klaviyo_options = get_option( &#039;klaviyo_settings&#039; );
+			if ( isset( $klaviyo_options[&#039;klaviyo_public_api_key&#039;] ) ) {
+				$data[&#039;status&#039;] = &#039;configured&#039;;
+			}
+
+			$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=klaviyo_settings&#039; );
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get Creative Mail for WooCommerce extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_creative_mail_extension_data() {
+		$slug = &#039;creative-mail-by-constant-contact&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/creative-mail-by-constant-contact.png&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] &amp;&amp; class_exists( &#039;\CreativeMail\Helpers\OptionsHelper&#039; ) ) {
+			if ( ! method_exists( &#039;\CreativeMail\Helpers\OptionsHelper&#039;, &#039;get_instance_id&#039; ) || \CreativeMail\Helpers\OptionsHelper::get_instance_id() !== null ) {
+				$data[&#039;status&#039;]      = &#039;configured&#039;;
+				$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=creativemail_settings&#039; );
+			} else {
+				$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=creativemail&#039; );
+			}
+
+			$data[&#039;docsUrl&#039;]    = &#039;https://app.creativemail.com/kb/help/WooCommerce&#039;;
+			$data[&#039;supportUrl&#039;] = &#039;https://app.creativemail.com/kb/help/&#039;;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get TikTok for WooCommerce extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_tiktok_extension_data() {
+		$slug = &#039;tiktok-for-business&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/tiktok.jpg&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] ) {
+			if ( false !== get_option( &#039;tt4b_access_token&#039; ) ) {
+				$data[&#039;status&#039;] = &#039;configured&#039;;
+			}
+
+			$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=tiktok&#039; );
+			$data[&#039;docsUrl&#039;]     = &#039;https://woocommerce.com/document/tiktok-for-woocommerce/&#039;;
+			$data[&#039;supportUrl&#039;]  = &#039;https://ads.tiktok.com/athena/user-feedback/?identify_key=6a1e079024806640c5e1e695d13db80949525168a052299b4970f9c99cb5ac78&#039;;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get Jetpack CRM for WooCommerce extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_jetpack_crm_extension_data() {
+		$slug = &#039;zero-bs-crm&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/jetpack-crm.png&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] ) {
+			$data[&#039;status&#039;]      = &#039;configured&#039;;
+			$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=zerobscrm-plugin-settings&#039; );
+			$data[&#039;docsUrl&#039;]     = &#039;https://kb.jetpackcrm.com/&#039;;
+			$data[&#039;supportUrl&#039;]  = &#039;https://kb.jetpackcrm.com/crm-support/&#039;;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get WooCommerce Zapier extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_zapier_extension_data() {
+		$slug = &#039;woocommerce-zapier&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/zapier.png&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] ) {
+			$data[&#039;status&#039;]      = &#039;configured&#039;;
+			$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=wc-settings&amp;tab=wc_zapier&#039; );
+			$data[&#039;docsUrl&#039;]     = &#039;https://docs.om4.io/woocommerce-zapier/&#039;;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get Salesforce extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_salesforce_extension_data() {
+		$slug = &#039;integration-with-salesforce&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/salesforce.jpg&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] &amp;&amp; class_exists( &#039;\Integration_With_Salesforce_Admin&#039; ) ) {
+			if ( ! method_exists( &#039;\Integration_With_Salesforce_Admin&#039;, &#039;get_connection_status&#039; ) || \Integration_With_Salesforce_Admin::get_connection_status() ) {
+				$data[&#039;status&#039;] = &#039;configured&#039;;
+			}
+
+			$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=integration-with-salesforce&#039; );
+			$data[&#039;docsUrl&#039;]     = &#039;https://woocommerce.com/document/salesforce-integration/&#039;;
+			$data[&#039;supportUrl&#039;]  = &#039;https://wpswings.com/submit-query/&#039;;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get Vimeo extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_vimeo_extension_data() {
+		$slug = &#039;vimeo&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/vimeo.png&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] &amp;&amp; class_exists( &#039;\Tribe\Vimeo_WP\Vimeo\Vimeo_Auth&#039; ) ) {
+			if ( method_exists( &#039;\Tribe\Vimeo_WP\Vimeo\Vimeo_Auth&#039;, &#039;has_access_token&#039; ) ) {
+				$vimeo_auth = new \Tribe\Vimeo_WP\Vimeo\Vimeo_Auth();
+				if ( $vimeo_auth-&gt;has_access_token() ) {
+					$data[&#039;status&#039;] = &#039;configured&#039;;
+				}
+			} else {
+				$data[&#039;status&#039;] = &#039;configured&#039;;
+			}
+
+			$data[&#039;settingsUrl&#039;] = admin_url( &#039;options-general.php?page=vimeo_settings&#039; );
+			$data[&#039;docsUrl&#039;]     = &#039;https://woocommerce.com/document/vimeo/&#039;;
+			$data[&#039;supportUrl&#039;]  = &#039;https://vimeo.com/help/contact&#039;;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get Trustpilot extension data.
+	 *
+	 * @return array|bool
+	 */
+	protected static function get_trustpilot_extension_data() {
+		$slug = &#039;trustpilot-reviews&#039;;
+
+		if ( ! PluginsHelper::is_plugin_installed( $slug ) ) {
+			return false;
+		}
+
+		$data         = self::get_extension_base_data( $slug );
+		$data[&#039;icon&#039;] = WC_ADMIN_IMAGES_FOLDER_URL . &#039;/marketing/trustpilot.png&#039;;
+
+		if ( &#039;activated&#039; === $data[&#039;status&#039;] ) {
+			$data[&#039;status&#039;]      = &#039;configured&#039;;
+			$data[&#039;settingsUrl&#039;] = admin_url( &#039;admin.php?page=woocommerce-trustpilot-settings-page&#039; );
+			$data[&#039;docsUrl&#039;]     = &#039;https://woocommerce.com/document/trustpilot-reviews/&#039;;
+			$data[&#039;supportUrl&#039;]  = &#039;https://support.trustpilot.com/hc/en-us/requests/new&#039;;
+		}
+
+		return $data;
+	}
+
+
+	/**
+	 * Get an array of basic data for a given extension.
+	 *
+	 * @param string $slug Plugin slug.
+	 *
+	 * @return array|false
+	 */
+	protected static function get_extension_base_data( $slug ) {
+		$status      = PluginsHelper::is_plugin_active( $slug ) ? &#039;activated&#039; : &#039;installed&#039;;
+		$plugin_data = PluginsHelper::get_plugin_data( $slug );
+
+		if ( ! $plugin_data ) {
+			return false;
+		}
+
+		return [
+			&#039;slug&#039;        =&gt; $slug,
+			&#039;status&#039;      =&gt; $status,
+			&#039;name&#039;        =&gt; $plugin_data[&#039;Name&#039;],
+			&#039;description&#039; =&gt; html_entity_decode( wp_trim_words( $plugin_data[&#039;Description&#039;], 20 ) ),
+			&#039;supportUrl&#039;  =&gt; &#039;https://woocommerce.com/my-account/create-a-ticket/?utm_medium=product&#039;,
+		];
+	}
+
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

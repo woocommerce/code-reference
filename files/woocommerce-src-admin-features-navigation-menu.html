@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866951">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866951">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">Menu.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WooCommerce Navigation Menu
+ *
+ * @package Woocommerce Navigation
+ */
+
+namespace Automattic\WooCommerce\Admin\Features\Navigation;
+
+use Automattic\WooCommerce\Admin\Features\Navigation\Favorites;
+use Automattic\WooCommerce\Admin\Features\Navigation\Screen;
+use Automattic\WooCommerce\Admin\Features\Navigation\CoreMenu;
+
+/**
+ * Contains logic for the WooCommerce Navigation menu.
+ */
+class Menu {
+	/**
+	 * Class instance.
+	 *
+	 * @var Menu instance
+	 */
+	protected static $instance = null;
+
+	/**
+	 * Array index of menu capability.
+	 *
+	 * @var int
+	 */
+	const CAPABILITY = 1;
+
+	/**
+	 * Array index of menu callback.
+	 *
+	 * @var int
+	 */
+	const CALLBACK = 2;
+
+	/**
+	 * Array index of menu callback.
+	 *
+	 * @var int
+	 */
+	const SLUG = 3;
+
+	/**
+	 * Array index of menu CSS class string.
+	 *
+	 * @var int
+	 */
+	const CSS_CLASSES = 4;
+
+	/**
+	 * Array of usable menu IDs.
+	 */
+	const MENU_IDS = array(
+		&#039;primary&#039;,
+		&#039;favorites&#039;,
+		&#039;plugins&#039;,
+		&#039;secondary&#039;,
+	);
+
+	/**
+	 * Store menu items.
+	 *
+	 * @var array
+	 */
+	protected static $menu_items = array();
+
+	/**
+	 * Store categories with menu item IDs.
+	 *
+	 * @var array
+	 */
+	protected static $categories = array(
+		&#039;woocommerce&#039; =&gt; array(),
+	);
+
+	/**
+	 * Registered callbacks or URLs with migration boolean as key value pairs.
+	 *
+	 * @var array
+	 */
+	protected static $callbacks = array();
+
+	/**
+	 * Get class instance.
+	 */
+	final public static function instance() {
+		if ( ! static::$instance ) {
+			static::$instance = new static();
+		}
+		return static::$instance;
+	}
+
+	/**
+	 * Init.
+	 */
+	public function init() {
+		add_action( &#039;admin_menu&#039;, array( $this, &#039;add_core_items&#039; ), 100 );
+		add_filter( &#039;admin_enqueue_scripts&#039;, array( $this, &#039;enqueue_data&#039; ), 20 );
+
+		add_filter( &#039;admin_menu&#039;, array( $this, &#039;migrate_core_child_items&#039; ), PHP_INT_MAX - 1 );
+		add_filter( &#039;admin_menu&#039;, array( $this, &#039;migrate_menu_items&#039; ), PHP_INT_MAX - 2 );
+	}
+
+	/**
+	 * Convert a WordPress menu callback to a URL.
+	 *
+	 * @param string $callback Menu callback.
+	 * @return string
+	 */
+	public static function get_callback_url( $callback ) {
+		// Return the full URL.
+		if ( strpos( $callback, &#039;http&#039; ) === 0 ) {
+			return $callback;
+		}
+
+		$pos  = strpos( $callback, &#039;?&#039; );
+		$file = $pos &gt; 0 ? substr( $callback, 0, $pos ) : $callback;
+		if ( file_exists( ABSPATH . &quot;/wp-admin/$file&quot; ) ) {
+			return $callback;
+		}
+		return &#039;admin.php?page=&#039; . $callback;
+	}
+
+	/**
+	 * Get the parent key if one exists.
+	 *
+	 * @param string $callback Callback or URL.
+	 * @return string|null
+	 */
+	public static function get_parent_key( $callback ) {
+		global $submenu;
+
+		if ( ! $submenu ) {
+			return null;
+		}
+
+		// This is already a parent item.
+		if ( isset( $submenu[ $callback ] ) ) {
+			return null;
+		}
+
+		foreach ( $submenu as $key =&gt; $menu ) {
+			foreach ( $menu as $item ) {
+				if ( $item[ self::CALLBACK ] === $callback ) {
+					return $key;
+				}
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * Adds a top level menu item to the navigation.
+	 *
+	 * @param array $args Array containing the necessary arguments.
+	 *    $args = array(
+	 *      &#039;id&#039;      =&gt; (string) The unique ID of the menu item. Required.
+	 *      &#039;title&#039;   =&gt; (string) Title of the menu item. Required.
+	 *      &#039;url&#039;     =&gt; (string) URL or callback to be used. Required.
+	 *      &#039;order&#039;   =&gt; (int) Menu item order.
+	 *      &#039;migrate&#039; =&gt; (bool) Whether or not to hide the item in the wp admin menu.
+	 *      &#039;menuId&#039;  =&gt; (string) The ID of the menu to add the category to.
+	 *    ).
+	 */
+	private static function add_category( $args ) {
+		if ( ! isset( $args[&#039;id&#039;] ) || isset( self::$menu_items[ $args[&#039;id&#039;] ] ) ) {
+			return;
+		}
+
+		$defaults           = array(
+			&#039;id&#039;         =&gt; &#039;&#039;,
+			&#039;title&#039;      =&gt; &#039;&#039;,
+			&#039;order&#039;      =&gt; 100,
+			&#039;migrate&#039;    =&gt; true,
+			&#039;menuId&#039;     =&gt; &#039;primary&#039;,
+			&#039;isCategory&#039; =&gt; true,
+		);
+		$menu_item          = wp_parse_args( $args, $defaults );
+		$menu_item[&#039;title&#039;] = wp_strip_all_tags( wp_specialchars_decode( $menu_item[&#039;title&#039;] ) );
+		unset( $menu_item[&#039;url&#039;] );
+		unset( $menu_item[&#039;capability&#039;] );
+
+		if ( ! isset( $menu_item[&#039;parent&#039;] ) ) {
+			$menu_item[&#039;parent&#039;]          = &#039;woocommerce&#039;;
+			$menu_item[&#039;backButtonLabel&#039;] = __(
+				&#039;WooCommerce Home&#039;,
+				&#039;woocommerce&#039;
+			);
+		}
+
+		self::$menu_items[ $menu_item[&#039;id&#039;] ]       = $menu_item;
+		self::$categories[ $menu_item[&#039;id&#039;] ]       = array();
+		self::$categories[ $menu_item[&#039;parent&#039;] ][] = $menu_item[&#039;id&#039;];
+
+		if ( isset( $args[&#039;url&#039;] ) ) {
+			self::$callbacks[ $args[&#039;url&#039;] ] = $menu_item[&#039;migrate&#039;];
+		}
+	}
+
+	/**
+	 * Adds a child menu item to the navigation.
+	 *
+	 * @param array $args Array containing the necessary arguments.
+	 *    $args = array(
+	 *      &#039;id&#039;              =&gt; (string) The unique ID of the menu item. Required.
+	 *      &#039;title&#039;           =&gt; (string) Title of the menu item. Required.
+	 *      &#039;parent&#039;          =&gt; (string) Parent menu item ID.
+	 *      &#039;capability&#039;      =&gt; (string) Capability to view this menu item.
+	 *      &#039;url&#039;             =&gt; (string) URL or callback to be used. Required.
+	 *      &#039;order&#039;           =&gt; (int) Menu item order.
+	 *      &#039;migrate&#039;         =&gt; (bool) Whether or not to hide the item in the wp admin menu.
+	 *      &#039;menuId&#039;          =&gt; (string) The ID of the menu to add the item to.
+	 *      &#039;matchExpression&#039; =&gt; (string) A regular expression used to identify if the menu item is active.
+	 *    ).
+	 */
+	private static function add_item( $args ) {
+		if ( ! isset( $args[&#039;id&#039;] ) ) {
+			return;
+		}
+
+		if ( isset( self::$menu_items[ $args[&#039;id&#039;] ] ) ) {
+			error_log(  // phpcs:ignore
+				sprintf(
+					/* translators: 1: Duplicate menu item path. */
+					esc_html__( &#039;You have attempted to register a duplicate item with WooCommerce Navigation: %1$s&#039;, &#039;woocommerce&#039; ),
+					&#039;`&#039; . $args[&#039;id&#039;] . &#039;`&#039;
+				)
+			);
+			return;
+		}
+
+		$defaults           = array(
+			&#039;id&#039;         =&gt; &#039;&#039;,
+			&#039;title&#039;      =&gt; &#039;&#039;,
+			&#039;capability&#039; =&gt; &#039;manage_woocommerce&#039;,
+			&#039;url&#039;        =&gt; &#039;&#039;,
+			&#039;order&#039;      =&gt; 100,
+			&#039;migrate&#039;    =&gt; true,
+			&#039;menuId&#039;     =&gt; &#039;primary&#039;,
+		);
+		$menu_item          = wp_parse_args( $args, $defaults );
+		$menu_item[&#039;title&#039;] = wp_strip_all_tags( wp_specialchars_decode( $menu_item[&#039;title&#039;] ) );
+		$menu_item[&#039;url&#039;]   = self::get_callback_url( $menu_item[&#039;url&#039;] );
+
+		if ( ! isset( $menu_item[&#039;parent&#039;] ) ) {
+			$menu_item[&#039;parent&#039;] = &#039;woocommerce&#039;;
+		}
+
+		$menu_item[&#039;menuId&#039;] = self::get_item_menu_id( $menu_item );
+
+		self::$menu_items[ $menu_item[&#039;id&#039;] ]       = $menu_item;
+		self::$categories[ $menu_item[&#039;parent&#039;] ][] = $menu_item[&#039;id&#039;];
+
+		if ( isset( $args[&#039;url&#039;] ) ) {
+			self::$callbacks[ $args[&#039;url&#039;] ] = $menu_item[&#039;migrate&#039;];
+		}
+	}
+
+	/**
+	 * Get an item&#039;s menu ID from its parent.
+	 *
+	 * @param array $item Item args.
+	 * @return string
+	 */
+	public static function get_item_menu_id( $item ) {
+		$favorites = Favorites::get_all( get_current_user_id() );
+		if ( is_array( $favorites ) &amp;&amp; ! empty( $favorites ) &amp;&amp; in_array( $item[&#039;id&#039;], $favorites, true ) ) {
+			return &#039;favorites&#039;;
+		}
+
+		if ( isset( $item[&#039;parent&#039;] ) &amp;&amp; isset( self::$menu_items[ $item[&#039;parent&#039;] ] ) ) {
+			$menu_id = self::$menu_items[ $item[&#039;parent&#039;] ][&#039;menuId&#039;];
+			return &#039;favorites&#039; === $menu_id
+				? &#039;plugins&#039;
+				: $menu_id;
+		}
+
+		return $item[&#039;menuId&#039;];
+	}
+
+	/**
+	 * Adds a plugin category.
+	 *
+	 * @param array $args Array containing the necessary arguments.
+	 *    $args = array(
+	 *      &#039;id&#039;      =&gt; (string) The unique ID of the menu item. Required.
+	 *      &#039;title&#039;   =&gt; (string) Title of the menu item. Required.
+	 *      &#039;url&#039;     =&gt; (string) URL or callback to be used. Required.
+	 *      &#039;migrate&#039; =&gt; (bool) Whether or not to hide the item in the wp admin menu.
+	 *      &#039;order&#039;   =&gt; (int) Menu item order.
+	 *    ).
+	 */
+	public static function add_plugin_category( $args ) {
+		$category_args = array_merge(
+			$args,
+			array(
+				&#039;menuId&#039; =&gt; &#039;plugins&#039;,
+			)
+		);
+
+		if ( ! isset( $category_args[&#039;parent&#039;] ) ) {
+			unset( $category_args[&#039;order&#039;] );
+		}
+
+		$menu_id = self::get_item_menu_id( $category_args );
+		if ( ! in_array( $menu_id, array( &#039;plugins&#039;, &#039;favorites&#039; ), true ) ) {
+			return;
+		}
+
+		$category_args[&#039;menuId&#039;] = $menu_id;
+
+		self::add_category( $category_args );
+	}
+
+	/**
+	 * Adds a plugin item.
+	 *
+	 * @param array $args Array containing the necessary arguments.
+	 *    $args = array(
+	 *      &#039;id&#039;              =&gt; (string) The unique ID of the menu item. Required.
+	 *      &#039;title&#039;           =&gt; (string) Title of the menu item. Required.
+	 *      &#039;parent&#039;          =&gt; (string) Parent menu item ID.
+	 *      &#039;capability&#039;      =&gt; (string) Capability to view this menu item.
+	 *      &#039;url&#039;             =&gt; (string) URL or callback to be used. Required.
+	 *      &#039;migrate&#039;         =&gt; (bool) Whether or not to hide the item in the wp admin menu.
+	 *      &#039;order&#039;           =&gt; (int) Menu item order.
+	 *      &#039;matchExpression&#039; =&gt; (string) A regular expression used to identify if the menu item is active.
+	 *    ).
+	 */
+	public static function add_plugin_item( $args ) {
+		if ( ! isset( $args[&#039;parent&#039;] ) ) {
+			unset( $args[&#039;order&#039;] );
+		}
+
+		$item_args = array_merge(
+			$args,
+			array(
+				&#039;menuId&#039; =&gt; &#039;plugins&#039;,
+			)
+		);
+
+		$menu_id = self::get_item_menu_id( $item_args );
+
+		if ( &#039;plugins&#039; !== $menu_id ) {
+			return;
+		}
+
+		self::add_item( $item_args );
+	}
+
+	/**
+	 * Adds a plugin setting item.
+	 *
+	 * @param array $args Array containing the necessary arguments.
+	 *    $args = array(
+	 *      &#039;id&#039;         =&gt; (string) The unique ID of the menu item. Required.
+	 *      &#039;title&#039;      =&gt; (string) Title of the menu item. Required.
+	 *      &#039;capability&#039; =&gt; (string) Capability to view this menu item.
+	 *      &#039;url&#039;        =&gt; (string) URL or callback to be used. Required.
+	 *      &#039;migrate&#039;    =&gt; (bool) Whether or not to hide the item in the wp admin menu.
+	 *    ).
+	 */
+	public static function add_setting_item( $args ) {
+		unset( $args[&#039;order&#039;] );
+
+		if ( isset( $args[&#039;parent&#039;] ) || isset( $args[&#039;menuId&#039;] ) ) {
+			error_log(  // phpcs:ignore
+				sprintf(
+					/* translators: 1: Duplicate menu item path. */
+					esc_html__( &#039;The item ID %1$s attempted to register using an invalid option. The arguments `menuId` and `parent` are not allowed for add_setting_item()&#039;, &#039;woocommerce&#039; ),
+					&#039;`&#039; . $args[&#039;id&#039;] . &#039;`&#039;
+				)
+			);
+		}
+
+		$item_args = array_merge(
+			$args,
+			array(
+				&#039;menuId&#039; =&gt; &#039;secondary&#039;,
+				&#039;parent&#039; =&gt; &#039;woocommerce-settings&#039;,
+			)
+		);
+
+		self::add_item( $item_args );
+	}
+
+
+
+	/**
+	 * Get menu item templates for a given post type.
+	 *
+	 * @param string $post_type Post type to add.
+	 * @param array  $menu_args Arguments merged with the returned menu items.
+	 * @return array
+	 */
+	public static function get_post_type_items( $post_type, $menu_args = array() ) {
+		$post_type_object = get_post_type_object( $post_type );
+
+		if ( ! $post_type_object || ! $post_type_object-&gt;show_in_menu ) {
+			return;
+		}
+
+		$parent           = isset( $menu_args[&#039;parent&#039;] ) ? $menu_args[&#039;parent&#039;] . &#039;-&#039; : &#039;&#039;;
+		$match_expression = isset( $_GET[&#039;post&#039;] ) &amp;&amp; get_post_type( intval( $_GET[&#039;post&#039;] ) ) === $post_type // phpcs:ignore WordPress.Security.NonceVerification
+			? &#039;(edit.php|post.php)&#039;
+			: null;
+
+		return array(
+			&#039;default&#039; =&gt; array_merge(
+				array(
+					&#039;title&#039;           =&gt; esc_attr( $post_type_object-&gt;labels-&gt;menu_name ),
+					&#039;capability&#039;      =&gt; $post_type_object-&gt;cap-&gt;edit_posts,
+					&#039;id&#039;              =&gt; $parent . $post_type,
+					&#039;url&#039;             =&gt; &quot;edit.php?post_type={$post_type}&quot;,
+					&#039;matchExpression&#039; =&gt; $match_expression,
+				),
+				$menu_args
+			),
+			&#039;all&#039;     =&gt; array_merge(
+				array(
+					&#039;title&#039;           =&gt; esc_attr( $post_type_object-&gt;labels-&gt;all_items ),
+					&#039;capability&#039;      =&gt; $post_type_object-&gt;cap-&gt;edit_posts,
+					&#039;id&#039;              =&gt; &quot;{$parent}{$post_type}-all-items&quot;,
+					&#039;url&#039;             =&gt; &quot;edit.php?post_type={$post_type}&quot;,
+					&#039;order&#039;           =&gt; 10,
+					&#039;matchExpression&#039; =&gt; $match_expression,
+				),
+				$menu_args
+			),
+			&#039;new&#039;     =&gt; array_merge(
+				array(
+					&#039;title&#039;      =&gt; esc_attr( $post_type_object-&gt;labels-&gt;add_new ),
+					&#039;capability&#039; =&gt; $post_type_object-&gt;cap-&gt;create_posts,
+					&#039;id&#039;         =&gt; &quot;{$parent}{$post_type}-add-new&quot;,
+					&#039;url&#039;        =&gt; &quot;post-new.php?post_type={$post_type}&quot;,
+					&#039;order&#039;      =&gt; 20,
+				),
+				$menu_args
+			),
+		);
+	}
+
+	/**
+	 * Get menu item templates for a given taxonomy.
+	 *
+	 * @param string $taxonomy Taxonomy to add.
+	 * @param array  $menu_args Arguments merged with the returned menu items.
+	 * @return array
+	 */
+	public static function get_taxonomy_items( $taxonomy, $menu_args = array() ) {
+		$taxonomy_object = get_taxonomy( $taxonomy );
+
+		if ( ! $taxonomy_object || ! $taxonomy_object-&gt;show_in_menu ) {
+			return;
+		}
+
+		$parent             = isset( $menu_args[&#039;parent&#039;] ) ? $menu_args[&#039;parent&#039;] . &#039;-&#039; : &#039;&#039;;
+		$product_type_query = ! empty( $taxonomy_object-&gt;object_type )
+			? &quot;&amp;post_type={$taxonomy_object-&gt;object_type[0]}&quot;
+			: &#039;&#039;;
+		$match_expression   = &#039;term.php&#039;;                               // Match term.php pages.
+		$match_expression  .= &quot;(?=.*[?|&amp;]taxonomy={$taxonomy}(&amp;|$|#))&quot;; // Lookahead to match a taxonomy URL param.
+		$match_expression  .= &#039;|&#039;;                                      // Or.
+		$match_expression  .= &#039;edit-tags.php&#039;;                          // Match edit-tags.php pages.
+		$match_expression  .= &quot;(?=.*[?|&amp;]taxonomy={$taxonomy}(&amp;|$|#))&quot;; // Lookahead to match a taxonomy URL param.
+
+		return array(
+			&#039;default&#039; =&gt; array_merge(
+				array(
+					&#039;title&#039;           =&gt; esc_attr( $taxonomy_object-&gt;labels-&gt;menu_name ),
+					&#039;capability&#039;      =&gt; $taxonomy_object-&gt;cap-&gt;edit_terms,
+					&#039;id&#039;              =&gt; $parent . $taxonomy,
+					&#039;url&#039;             =&gt; &quot;edit-tags.php?taxonomy={$taxonomy}{$product_type_query}&quot;,
+					&#039;matchExpression&#039; =&gt; $match_expression,
+				),
+				$menu_args
+			),
+			&#039;all&#039;     =&gt; array_merge(
+				array(
+					&#039;title&#039;           =&gt; esc_attr( $taxonomy_object-&gt;labels-&gt;all_items ),
+					&#039;capability&#039;      =&gt; $taxonomy_object-&gt;cap-&gt;edit_terms,
+					&#039;id&#039;              =&gt; &quot;{$parent}{$taxonomy}-all-items&quot;,
+					&#039;url&#039;             =&gt; &quot;edit-tags.php?taxonomy={$taxonomy}{$product_type_query}&quot;,
+					&#039;matchExpression&#039; =&gt; $match_expression,
+					&#039;order&#039;           =&gt; 10,
+				),
+				$menu_args
+			),
+
+		);
+	}
+
+	/**
+	 * Add core menu items.
+	 */
+	public function add_core_items() {
+		$categories = CoreMenu::get_categories();
+		foreach ( $categories as $category ) {
+			self::add_category( $category );
+		}
+
+		$items = CoreMenu::get_items();
+		foreach ( $items as $item ) {
+			if ( isset( $item[&#039;is_category&#039;] ) &amp;&amp; $item[&#039;is_category&#039;] ) {
+				self::add_category( $item );
+			} else {
+				self::add_item( $item );
+			}
+		}
+	}
+
+	/**
+	 * Add an item or taxonomy.
+	 *
+	 * @param array $menu_item Menu item.
+	 */
+	public function add_item_and_taxonomy( $menu_item ) {
+		if ( in_array( $menu_item[2], CoreMenu::get_excluded_items(), true ) ) {
+			return;
+		}
+
+		$menu_item[2] = htmlspecialchars_decode( $menu_item[2] );
+
+		// Don&#039;t add already added items.
+		$callbacks = self::get_callbacks();
+		if ( array_key_exists( $menu_item[2], $callbacks ) ) {
+			return;
+		}
+
+		// Don&#039;t add these Product submenus because they are added elsewhere.
+		if ( in_array( $menu_item[2], array( &#039;product_importer&#039;, &#039;product_exporter&#039;, &#039;product_attributes&#039; ), true ) ) {
+			return;
+		}
+
+		self::add_plugin_item(
+			array(
+				&#039;title&#039;      =&gt; $menu_item[0],
+				&#039;capability&#039; =&gt; $menu_item[1],
+				&#039;id&#039;         =&gt; sanitize_title( $menu_item[0] ),
+				&#039;url&#039;        =&gt; $menu_item[2],
+			)
+		);
+
+		// Determine if migrated items are a taxonomy or post_type. If they are, register them.
+		$parsed_url   = wp_parse_url( $menu_item[2] );
+		$query_string = isset( $parsed_url[&#039;query&#039;] ) ? $parsed_url[&#039;query&#039;] : false;
+
+		if ( $query_string ) {
+			$query = array();
+			parse_str( $query_string, $query );
+
+			if ( isset( $query[&#039;taxonomy&#039;] ) ) {
+				Screen::register_taxonomy( $query[&#039;taxonomy&#039;] );
+			} elseif ( isset( $query[&#039;post_type&#039;] ) ) {
+				Screen::register_post_type( $query[&#039;post_type&#039;] );
+			}
+		}
+	}
+
+	/**
+	 * Migrate any remaining WooCommerce child items.
+	 *
+	 * @param array $menu Menu items.
+	 * @return array
+	 */
+	public function migrate_core_child_items( $menu ) {
+		global $submenu;
+
+		if ( ! isset( $submenu[&#039;woocommerce&#039;] ) &amp;&amp; ! isset( $submenu[&#039;edit.php?post_type=product&#039;] ) ) {
+			return $menu;
+		}
+
+		$main_items    = isset( $submenu[&#039;woocommerce&#039;] ) ? $submenu[&#039;woocommerce&#039;] : array();
+		$product_items = isset( $submenu[&#039;edit.php?post_type=product&#039;] ) ? $submenu[&#039;edit.php?post_type=product&#039;] : array();
+
+		foreach ( $main_items as $key =&gt; $menu_item ) {
+			self::add_item_and_taxonomy( $menu_item );
+			// phpcs:disable
+			if ( ! isset( $menu_item[ self::CSS_CLASSES ] ) ) {
+				$submenu[&#039;woocommerce&#039;][ $key ][] .= &#039; hide-if-js&#039;;
+			} else if ( strpos( $submenu[&#039;woocommerce&#039;][ $key ][ self::CSS_CLASSES ], &#039;hide-if-js&#039; ) !== false ) {
+				continue;
+			} else {
+				$submenu[&#039;woocommerce&#039;][ $key ][ self::CSS_CLASSES ] .= &#039; hide-if-js&#039;;
+			}
+			// phpcs:enable
+		}
+
+		foreach ( $product_items as $key =&gt; $menu_item ) {
+			self::add_item_and_taxonomy( $menu_item );
+		}
+
+		return $menu;
+	}
+
+	/**
+	 * Check if a menu item&#039;s callback is registered in the menu.
+	 *
+	 * @param array $menu_item Menu item args.
+	 * @return bool
+	 */
+	public static function has_callback( $menu_item ) {
+		if ( ! $menu_item || ! isset( $menu_item[ self::CALLBACK ] ) ) {
+			return false;
+		}
+
+		$callback = $menu_item[ self::CALLBACK ];
+
+		if (
+			isset( self::$callbacks[ $callback ] ) &amp;&amp;
+			self::$callbacks[ $callback ]
+		) {
+			return true;
+		}
+
+		if (
+			isset( self::$callbacks[ self::get_callback_url( $callback ) ] ) &amp;&amp;
+			self::$callbacks[ self::get_callback_url( $callback ) ]
+		) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Hides all WP admin menus items and adds screen IDs to check for new items.
+	 */
+	public static function migrate_menu_items() {
+		global $menu, $submenu;
+
+		foreach ( $menu as $key =&gt; $menu_item ) {
+			if ( self::has_callback( $menu_item ) ) {
+				// Disable phpcs since we need to override submenu classes.
+				// Note that `phpcs:ignore WordPress.Variables.GlobalVariables.OverrideProhibited` does not work to disable this check.
+				// phpcs:disable
+				$menu[ $key ][ self::CSS_CLASSES ] .= &#039; hide-if-js&#039;;
+				// phps:enable
+				continue;
+			}
+
+			// WordPress core menus make the parent item the same URL as the first child.
+			$has_children = isset( $submenu[ $menu_item[ self::CALLBACK ] ] ) &amp;&amp; isset( $submenu[ $menu_item[ self::CALLBACK ] ][0] );
+			$first_child  = $has_children ? $submenu[ $menu_item[ self::CALLBACK ] ][0] : null;
+			if ( &#039;woocommerce&#039; !== $menu_item[2] &amp;&amp; self::has_callback( $first_child ) ) {
+				// Disable phpcs since we need to override submenu classes.
+				// Note that `phpcs:ignore WordPress.Variables.GlobalVariables.OverrideProhibited` does not work to disable this check.
+				// phpcs:disable
+				$menu[ $key ][ self::CSS_CLASSES ] .= &#039; hide-if-js&#039;;
+				// phps:enable
+			}
+		}
+
+		// Remove excluded submenu items
+		if ( isset( $submenu[&#039;woocommerce&#039;] ) ) {
+			foreach ( $submenu[&#039;woocommerce&#039;] as $key =&gt; $submenu_item ) {
+				if ( in_array( $submenu_item[ self::CALLBACK ], CoreMenu::get_excluded_items(), true ) ) {
+					if ( isset( $submenu[&#039;woocommerce&#039;][ $key ][ self::CSS_CLASSES ] ) ) {
+						$submenu[&#039;woocommerce&#039;][ $key ][ self::CSS_CLASSES ] .= &#039; hide-if-js&#039;;
+					} else {
+						$submenu[&#039;woocommerce&#039;][ $key ][] = &#039;hide-if-js&#039;;
+					}
+				}
+			}
+		}
+
+		foreach ( $submenu as $parent_key =&gt; $parent ) {
+			foreach ( $parent as $key =&gt; $menu_item ) {
+				if ( self::has_callback( $menu_item ) ) {
+					// Disable phpcs since we need to override submenu classes.
+					// Note that `phpcs:ignore WordPress.Variables.GlobalVariables.OverrideProhibited` does not work to disable this check.
+					// phpcs:disable
+					if ( ! isset( $menu_item[ self::SLUG ] ) ) {
+						$submenu[ $parent_key ][ $key ][] = &#039;&#039;;
+					}
+					if ( ! isset( $menu_item[ self::CSS_CLASSES ] ) ) {
+						$submenu[ $parent_key ][ $key ][] .= &#039; hide-if-js&#039;;
+					} else {
+						$submenu[ $parent_key ][ $key ][ self::CSS_CLASSES ] .= &#039; hide-if-js&#039;;
+					}
+					// phps:enable
+				}
+			}
+		}
+
+		foreach ( array_keys( self::$callbacks ) as $callback ) {
+			Screen::add_screen( $callback );
+		}
+	}
+
+	/**
+	 * Add a callback to identify and hide pages in the WP menu.
+	 */
+	public static function hide_wp_menu_item( $callback ) {
+		self::$callbacks[ $callback ] = true;
+	}
+
+	/**
+	 * Get registered menu items.
+	 *
+	 * @return array
+	 */
+	public static function get_items() {
+		return apply_filters( &#039;woocommerce_navigation_menu_items&#039;, self::$menu_items );
+	}
+
+	/**
+	 * Get registered menu items.
+	 *
+	 * @return array
+	 */
+	public static function get_category_items( $category ) {
+		if ( ! isset( self::$categories[ $category ] ) ) {
+			return array();
+		}
+
+		$menu_item_ids = self::$categories[ $category ];
+
+		$category_menu_items = array();
+		foreach ( $menu_item_ids as $id ) {
+			if ( isset( self::$menu_items[ $id ] ) ) {
+				$category_menu_items[] = self::$menu_items[ $id ];
+			}
+		}
+
+		return apply_filters( &#039;woocommerce_navigation_menu_category_items&#039;, $category_menu_items );
+	}
+
+	/**
+	 * Get registered callbacks.
+	 *
+	 * @return array
+	 */
+	public static function get_callbacks() {
+		return apply_filters( &#039;woocommerce_navigation_callbacks&#039;, self::$callbacks );
+	}
+
+	/**
+	 * Gets the menu item data mapped by category and menu ID.
+	 *
+	 * @return array
+	 */
+	public static function get_mapped_menu_items() {
+		$menu_items   = self::get_items();
+		$mapped_items = array();
+
+		// Sort the items by order and title.
+		$order     = array_column( $menu_items, &#039;order&#039; );
+		$title     = array_column( $menu_items, &#039;title&#039; );
+		array_multisort( $order, SORT_ASC, $title, SORT_ASC, $menu_items );
+
+		foreach ( $menu_items as $id =&gt; $menu_item ) {
+			$category_id = $menu_item[ &#039;parent&#039; ];
+			$menu_id     = $menu_item[ &#039;menuId&#039; ];
+			if ( ! isset( $mapped_items[ $category_id ] ) ) {
+				$mapped_items[ $category_id ] = array();
+				foreach ( self::MENU_IDS as $available_menu_id ) {
+					$mapped_items[ $category_id ][ $available_menu_id ] = array();
+				}
+			}
+
+			// Incorrect menu ID.
+			if ( ! isset( $mapped_items[ $category_id ][ $menu_id ] ) ) {
+				continue;
+			}
+
+			// Remove the item if the user cannot access it.
+			if ( isset( $menu_item[ &#039;capability&#039; ] ) &amp;&amp; ! current_user_can( $menu_item[ &#039;capability&#039; ] ) ) {
+				continue;
+			}
+
+			$mapped_items[ $category_id ][ $menu_id ][] = $menu_item;
+		}
+
+		return $mapped_items;
+	}
+
+	/**
+	 * Add the menu to the page output.
+	 *
+	 * @param array $menu Menu items.
+	 * @return array
+	 */
+	public function enqueue_data( $menu ) {
+		$data = array(
+			&#039;menuItems&#039;     =&gt; array_values( self::get_items() ),
+			&#039;rootBackUrl&#039;   =&gt; get_dashboard_url(),
+		);
+
+		wp_add_inline_script( WC_ADMIN_APP, &#039;window.wcNavigation = &#039; . wp_json_encode( $data ), &#039;before&#039; );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

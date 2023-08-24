@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866948">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866948">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-rest-system-status-tools-v2-controller.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * REST API WC System Status Tools Controller
+ *
+ * Handles requests to the /system_status/tools/* endpoints.
+ *
+ * @package WooCommerce\RestApi
+ * @since   3.0.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * System status tools controller.
+ *
+ * @package WooCommerce\RestApi
+ * @extends WC_REST_Controller
+ */
+class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
+
+	/**
+	 * Endpoint namespace.
+	 *
+	 * @var string
+	 */
+	protected $namespace = &#039;wc/v2&#039;;
+
+	/**
+	 * Route base.
+	 *
+	 * @var string
+	 */
+	protected $rest_base = &#039;system_status/tools&#039;;
+
+	/**
+	 * Register the routes for /system_status/tools/*.
+	 */
+	public function register_routes() {
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_items&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;get_items_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; $this-&gt;get_collection_params(),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/(?P&lt;id&gt;[\w-]+)&#039;,
+			array(
+				&#039;args&#039;   =&gt; array(
+					&#039;id&#039; =&gt; array(
+						&#039;description&#039; =&gt; __( &#039;Unique identifier for the resource.&#039;, &#039;woocommerce&#039; ),
+						&#039;type&#039;        =&gt; &#039;string&#039;,
+					),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_item&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;get_item_permissions_check&#039; ),
+				),
+				array(
+					&#039;methods&#039;             =&gt; WP_REST_Server::EDITABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;update_item&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+					&#039;args&#039;                =&gt; $this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::EDITABLE ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+			)
+		);
+	}
+
+	/**
+	 * Check whether a given request has permission to view system status tools.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function get_items_permissions_check( $request ) {
+		if ( ! wc_rest_check_manager_permissions( &#039;system_status&#039;, &#039;read&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_view&#039;, __( &#039;Sorry, you cannot list resources.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+		return true;
+	}
+
+	/**
+	 * Check whether a given request has permission to view a specific system status tool.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function get_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_manager_permissions( &#039;system_status&#039;, &#039;read&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_view&#039;, __( &#039;Sorry, you cannot view this resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+		return true;
+	}
+
+	/**
+	 * Check whether a given request has permission to execute a specific system status tool.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function update_item_permissions_check( $request ) {
+		if ( ! wc_rest_check_manager_permissions( &#039;system_status&#039;, &#039;edit&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_cannot_update&#039;, __( &#039;Sorry, you cannot update resource.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+		return true;
+	}
+
+	/**
+	 * A list of available tools for use in the system status section.
+	 * &#039;button&#039; becomes &#039;action&#039; in the API.
+	 *
+	 * @return array
+	 */
+	public function get_tools() {
+		$tools = array(
+			&#039;clear_transients&#039;                   =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;WooCommerce transients&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Clear transients&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; __( &#039;This tool will clear the product/shop transients cache.&#039;, &#039;woocommerce&#039; ),
+			),
+			&#039;clear_expired_transients&#039;           =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;Expired transients&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Clear transients&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; __( &#039;This tool will clear ALL expired transients from WordPress.&#039;, &#039;woocommerce&#039; ),
+			),
+			&#039;delete_orphaned_variations&#039;         =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;Orphaned variations&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Delete orphaned variations&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; __( &#039;This tool will delete all variations which have no parent.&#039;, &#039;woocommerce&#039; ),
+			),
+			&#039;clear_expired_download_permissions&#039; =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;Used-up download permissions&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Clean up download permissions&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; __( &#039;This tool will delete expired download permissions and permissions with 0 remaining downloads.&#039;, &#039;woocommerce&#039; ),
+			),
+			&#039;regenerate_product_lookup_tables&#039;   =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;Product lookup tables&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Regenerate&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; __( &#039;This tool will regenerate product lookup table data. This process may take a while.&#039;, &#039;woocommerce&#039; ),
+			),
+			&#039;recount_terms&#039;                      =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;Term counts&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Recount terms&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; __( &#039;This tool will recount product terms - useful when changing your settings in a way which hides products from the catalog.&#039;, &#039;woocommerce&#039; ),
+			),
+			&#039;reset_roles&#039;                        =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;Capabilities&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Reset capabilities&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; __( &#039;This tool will reset the admin, customer and shop_manager roles to default. Use this if your users cannot access all of the WooCommerce admin pages.&#039;, &#039;woocommerce&#039; ),
+			),
+			&#039;clear_sessions&#039;                     =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;Clear customer sessions&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Clear&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; sprintf(
+					&#039;&lt;strong class=&quot;red&quot;&gt;%1$s&lt;/strong&gt; %2$s&#039;,
+					__( &#039;Note:&#039;, &#039;woocommerce&#039; ),
+					__( &#039;This tool will delete all customer session data from the database, including current carts and saved carts in the database.&#039;, &#039;woocommerce&#039; )
+				),
+			),
+			&#039;clear_template_cache&#039;               =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;Clear template cache&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Clear&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; sprintf(
+					&#039;&lt;strong class=&quot;red&quot;&gt;%1$s&lt;/strong&gt; %2$s&#039;,
+					__( &#039;Note:&#039;, &#039;woocommerce&#039; ),
+					__( &#039;This tool will empty the template cache.&#039;, &#039;woocommerce&#039; )
+				),
+			),
+			&#039;install_pages&#039;                      =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;Create default WooCommerce pages&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Create pages&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; sprintf(
+					&#039;&lt;strong class=&quot;red&quot;&gt;%1$s&lt;/strong&gt; %2$s&#039;,
+					__( &#039;Note:&#039;, &#039;woocommerce&#039; ),
+					__( &#039;This tool will install all the missing WooCommerce pages. Pages already defined and set up will not be replaced.&#039;, &#039;woocommerce&#039; )
+				),
+			),
+			&#039;delete_taxes&#039;                       =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;Delete WooCommerce tax rates&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Delete tax rates&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; sprintf(
+					&#039;&lt;strong class=&quot;red&quot;&gt;%1$s&lt;/strong&gt; %2$s&#039;,
+					__( &#039;Note:&#039;, &#039;woocommerce&#039; ),
+					__( &#039;This option will delete ALL of your tax rates, use with caution. This action cannot be reversed.&#039;, &#039;woocommerce&#039; )
+				),
+			),
+			&#039;regenerate_thumbnails&#039;              =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;Regenerate shop thumbnails&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Regenerate&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; __( &#039;This will regenerate all shop thumbnails to match your theme and/or image settings.&#039;, &#039;woocommerce&#039; ),
+			),
+			&#039;db_update_routine&#039;                  =&gt; array(
+				&#039;name&#039;   =&gt; __( &#039;Update database&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Update database&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; sprintf(
+					&#039;&lt;strong class=&quot;red&quot;&gt;%1$s&lt;/strong&gt; %2$s&#039;,
+					__( &#039;Note:&#039;, &#039;woocommerce&#039; ),
+					__( &#039;This tool will update your WooCommerce database to the latest version. Please ensure you make sufficient backups before proceeding.&#039;, &#039;woocommerce&#039; )
+				),
+			),
+		);
+		if ( method_exists( &#039;WC_Install&#039;, &#039;verify_base_tables&#039; ) ) {
+			$tools[&#039;verify_db_tables&#039;] = array(
+				&#039;name&#039;   =&gt; __( &#039;Verify base database tables&#039;, &#039;woocommerce&#039; ),
+				&#039;button&#039; =&gt; __( &#039;Verify database&#039;, &#039;woocommerce&#039; ),
+				&#039;desc&#039;   =&gt; sprintf(
+					__( &#039;Verify if all base database tables are present.&#039;, &#039;woocommerce&#039; )
+				),
+			);
+		}
+
+		// Jetpack does the image resizing heavy lifting so you don&#039;t have to.
+		if ( ( class_exists( &#039;Jetpack&#039; ) &amp;&amp; Jetpack::is_module_active( &#039;photon&#039; ) ) || ! apply_filters( &#039;woocommerce_background_image_regeneration&#039;, true ) ) {
+			unset( $tools[&#039;regenerate_thumbnails&#039;] );
+		}
+
+		if ( ! function_exists( &#039;wc_clear_template_cache&#039; ) ) {
+			unset( $tools[&#039;clear_template_cache&#039;] );
+		}
+
+		return apply_filters( &#039;woocommerce_debug_tools&#039;, $tools );
+	}
+
+	/**
+	 * Get a list of system status tools.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function get_items( $request ) {
+		$tools = array();
+		foreach ( $this-&gt;get_tools() as $id =&gt; $tool ) {
+			$tools[] = $this-&gt;prepare_response_for_collection(
+				$this-&gt;prepare_item_for_response(
+					array(
+						&#039;id&#039;          =&gt; $id,
+						&#039;name&#039;        =&gt; $tool[&#039;name&#039;],
+						&#039;action&#039;      =&gt; $tool[&#039;button&#039;],
+						&#039;description&#039; =&gt; $tool[&#039;desc&#039;],
+					),
+					$request
+				)
+			);
+		}
+
+		$response = rest_ensure_response( $tools );
+		return $response;
+	}
+
+	/**
+	 * Return a single tool.
+	 *
+	 * @param  WP_REST_Request $request Request data.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function get_item( $request ) {
+		$tools = $this-&gt;get_tools();
+		if ( empty( $tools[ $request[&#039;id&#039;] ] ) ) {
+			return new WP_Error( &#039;woocommerce_rest_system_status_tool_invalid_id&#039;, __( &#039;Invalid tool ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+		$tool = $tools[ $request[&#039;id&#039;] ];
+		return rest_ensure_response(
+			$this-&gt;prepare_item_for_response(
+				array(
+					&#039;id&#039;          =&gt; $request[&#039;id&#039;],
+					&#039;name&#039;        =&gt; $tool[&#039;name&#039;],
+					&#039;action&#039;      =&gt; $tool[&#039;button&#039;],
+					&#039;description&#039; =&gt; $tool[&#039;desc&#039;],
+				),
+				$request
+			)
+		);
+	}
+
+	/**
+	 * Update (execute) a tool.
+	 *
+	 * @param  WP_REST_Request $request Request data.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function update_item( $request ) {
+		$tools = $this-&gt;get_tools();
+		if ( empty( $tools[ $request[&#039;id&#039;] ] ) ) {
+			return new WP_Error( &#039;woocommerce_rest_system_status_tool_invalid_id&#039;, __( &#039;Invalid tool ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 404 ) );
+		}
+
+		$tool = $tools[ $request[&#039;id&#039;] ];
+		$tool = array(
+			&#039;id&#039;          =&gt; $request[&#039;id&#039;],
+			&#039;name&#039;        =&gt; $tool[&#039;name&#039;],
+			&#039;action&#039;      =&gt; $tool[&#039;button&#039;],
+			&#039;description&#039; =&gt; $tool[&#039;desc&#039;],
+		);
+
+		$execute_return = $this-&gt;execute_tool( $request[&#039;id&#039;] );
+		$tool           = array_merge( $tool, $execute_return );
+
+		/**
+		 * Fires after a WooCommerce REST system status tool has been executed.
+		 *
+		 * @param array           $tool    Details about the tool that has been executed.
+		 * @param WP_REST_Request $request The current WP_REST_Request object.
+		 */
+		do_action( &#039;woocommerce_rest_insert_system_status_tool&#039;, $tool, $request );
+
+		$request-&gt;set_param( &#039;context&#039;, &#039;edit&#039; );
+		$response = $this-&gt;prepare_item_for_response( $tool, $request );
+		return rest_ensure_response( $response );
+	}
+
+	/**
+	 * Prepare a tool item for serialization.
+	 *
+	 * @param  array           $item     Object.
+	 * @param  WP_REST_Request $request  Request object.
+	 * @return WP_REST_Response $response Response data.
+	 */
+	public function prepare_item_for_response( $item, $request ) {
+		$context = empty( $request[&#039;context&#039;] ) ? &#039;view&#039; : $request[&#039;context&#039;];
+		$data    = $this-&gt;add_additional_fields_to_object( $item, $request );
+		$data    = $this-&gt;filter_response_by_context( $data, $context );
+
+		$response = rest_ensure_response( $data );
+
+		$response-&gt;add_links( $this-&gt;prepare_links( $item[&#039;id&#039;] ) );
+
+		return $response;
+	}
+
+	/**
+	 * Get the system status tools schema, conforming to JSON Schema.
+	 *
+	 * @return array
+	 */
+	public function get_item_schema() {
+		$schema = array(
+			&#039;$schema&#039;    =&gt; &#039;http://json-schema.org/draft-04/schema#&#039;,
+			&#039;title&#039;      =&gt; &#039;system_status_tool&#039;,
+			&#039;type&#039;       =&gt; &#039;object&#039;,
+			&#039;properties&#039; =&gt; array(
+				&#039;id&#039;          =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;A unique identifier for the tool.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;arg_options&#039; =&gt; array(
+						&#039;sanitize_callback&#039; =&gt; &#039;sanitize_title&#039;,
+					),
+				),
+				&#039;name&#039;        =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Tool name.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;arg_options&#039; =&gt; array(
+						&#039;sanitize_callback&#039; =&gt; &#039;sanitize_text_field&#039;,
+					),
+				),
+				&#039;action&#039;      =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;What running the tool will do.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;arg_options&#039; =&gt; array(
+						&#039;sanitize_callback&#039; =&gt; &#039;sanitize_text_field&#039;,
+					),
+				),
+				&#039;description&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Tool description.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;arg_options&#039; =&gt; array(
+						&#039;sanitize_callback&#039; =&gt; &#039;sanitize_text_field&#039;,
+					),
+				),
+				&#039;success&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Did the tool run successfully?&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;context&#039;     =&gt; array( &#039;edit&#039; ),
+				),
+				&#039;message&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Tool return message.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;edit&#039; ),
+					&#039;arg_options&#039; =&gt; array(
+						&#039;sanitize_callback&#039; =&gt; &#039;sanitize_text_field&#039;,
+					),
+				),
+			),
+		);
+
+		return $this-&gt;add_additional_fields_schema( $schema );
+	}
+
+	/**
+	 * Prepare links for the request.
+	 *
+	 * @param string $id ID.
+	 * @return array
+	 */
+	protected function prepare_links( $id ) {
+		$base  = &#039;/&#039; . $this-&gt;namespace . &#039;/&#039; . $this-&gt;rest_base;
+		$links = array(
+			&#039;item&#039; =&gt; array(
+				&#039;href&#039;       =&gt; rest_url( trailingslashit( $base ) . $id ),
+				&#039;embeddable&#039; =&gt; true,
+			),
+		);
+
+		return $links;
+	}
+
+	/**
+	 * Get any query params needed.
+	 *
+	 * @return array
+	 */
+	public function get_collection_params() {
+		return array(
+			&#039;context&#039; =&gt; $this-&gt;get_context_param( array( &#039;default&#039; =&gt; &#039;view&#039; ) ),
+		);
+	}
+
+	/**
+	 * Actually executes a tool.
+	 *
+	 * @param  string $tool Tool.
+	 * @return array
+	 */
+	public function execute_tool( $tool ) {
+		global $wpdb;
+		$ran = true;
+		switch ( $tool ) {
+			case &#039;clear_transients&#039;:
+				wc_delete_product_transients();
+				wc_delete_shop_order_transients();
+				delete_transient( &#039;wc_count_comments&#039; );
+				delete_transient( &#039;as_comment_count&#039; );
+
+				$attribute_taxonomies = wc_get_attribute_taxonomies();
+
+				if ( $attribute_taxonomies ) {
+					foreach ( $attribute_taxonomies as $attribute ) {
+						delete_transient( &#039;wc_layered_nav_counts_pa_&#039; . $attribute-&gt;attribute_name );
+					}
+				}
+
+				WC_Cache_Helper::get_transient_version( &#039;shipping&#039;, true );
+				$message = __( &#039;Product transients cleared&#039;, &#039;woocommerce&#039; );
+				break;
+
+			case &#039;clear_expired_transients&#039;:
+				/* translators: %d: amount of expired transients */
+				$message = sprintf( __( &#039;%d transients rows cleared&#039;, &#039;woocommerce&#039; ), wc_delete_expired_transients() );
+				break;
+
+			case &#039;delete_orphaned_variations&#039;:
+				// Delete orphans.
+				$result = absint(
+					$wpdb-&gt;query(
+						&quot;DELETE products
+					FROM {$wpdb-&gt;posts} products
+					LEFT JOIN {$wpdb-&gt;posts} wp ON wp.ID = products.post_parent
+					WHERE wp.ID IS NULL AND products.post_type = &#039;product_variation&#039;;&quot;
+					)
+				);
+				/* translators: %d: amount of orphaned variations */
+				$message = sprintf( __( &#039;%d orphaned variations deleted&#039;, &#039;woocommerce&#039; ), $result );
+				break;
+
+			case &#039;clear_expired_download_permissions&#039;:
+				// Delete related records in wc_download_log (aka ON DELETE CASCADE).
+				$wpdb-&gt;query(
+					$wpdb-&gt;prepare(
+						&quot;DELETE FROM {$wpdb-&gt;prefix}wc_download_log
+						WHERE permission_id IN (
+								    SELECT permission_id FROM {$wpdb-&gt;prefix}woocommerce_downloadable_product_permissions
+									WHERE ( downloads_remaining != &#039;&#039; AND downloads_remaining = 0 ) OR ( access_expires IS NOT NULL AND access_expires &lt; %s )
+								    )&quot;,
+						current_time( &#039;Y-m-d&#039; )
+					)
+				);
+				// Delete expired download permissions and ones with 0 downloads remaining.
+				$result = absint(
+					$wpdb-&gt;query(
+						$wpdb-&gt;prepare(
+							&quot;DELETE FROM {$wpdb-&gt;prefix}woocommerce_downloadable_product_permissions
+							WHERE ( downloads_remaining != &#039;&#039; AND downloads_remaining = 0 ) OR ( access_expires IS NOT NULL AND access_expires &lt; %s )&quot;,
+							current_time( &#039;Y-m-d&#039; )
+						)
+					)
+				);
+				/* translators: %d: amount of permissions */
+				$message = sprintf( __( &#039;%d permissions deleted&#039;, &#039;woocommerce&#039; ), $result );
+				break;
+
+			case &#039;regenerate_product_lookup_tables&#039;:
+				if ( ! wc_update_product_lookup_tables_is_running() ) {
+					wc_update_product_lookup_tables();
+				}
+				$message = __( &#039;Lookup tables are regenerating&#039;, &#039;woocommerce&#039; );
+				break;
+			case &#039;reset_roles&#039;:
+				// Remove then re-add caps and roles.
+				WC_Install::remove_roles();
+				WC_Install::create_roles();
+				$message = __( &#039;Roles successfully reset&#039;, &#039;woocommerce&#039; );
+				break;
+
+			case &#039;recount_terms&#039;:
+				wc_recount_all_terms();
+				$message = __( &#039;Terms successfully recounted&#039;, &#039;woocommerce&#039; );
+				break;
+
+			case &#039;clear_sessions&#039;:
+				$wpdb-&gt;query( &quot;TRUNCATE {$wpdb-&gt;prefix}woocommerce_sessions&quot; );
+				$result = absint( $wpdb-&gt;query( &quot;DELETE FROM {$wpdb-&gt;usermeta} WHERE meta_key=&#039;_woocommerce_persistent_cart_&quot; . get_current_blog_id() . &quot;&#039;;&quot; ) ); // WPCS: unprepared SQL ok.
+				wp_cache_flush();
+				/* translators: %d: amount of sessions */
+				$message = sprintf( __( &#039;Deleted all active sessions, and %d saved carts.&#039;, &#039;woocommerce&#039; ), absint( $result ) );
+				break;
+
+			case &#039;install_pages&#039;:
+				WC_Install::create_pages();
+				$message = __( &#039;All missing WooCommerce pages successfully installed&#039;, &#039;woocommerce&#039; );
+				break;
+
+			case &#039;delete_taxes&#039;:
+				$wpdb-&gt;query( &quot;TRUNCATE TABLE {$wpdb-&gt;prefix}woocommerce_tax_rates;&quot; );
+				$wpdb-&gt;query( &quot;TRUNCATE TABLE {$wpdb-&gt;prefix}woocommerce_tax_rate_locations;&quot; );
+
+				if ( method_exists( &#039;WC_Cache_Helper&#039;, &#039;invalidate_cache_group&#039; ) ) {
+					WC_Cache_Helper::invalidate_cache_group( &#039;taxes&#039; );
+				} else {
+					WC_Cache_Helper::incr_cache_prefix( &#039;taxes&#039; );
+				}
+				$message = __( &#039;Tax rates successfully deleted&#039;, &#039;woocommerce&#039; );
+				break;
+
+			case &#039;regenerate_thumbnails&#039;:
+				WC_Regenerate_Images::queue_image_regeneration();
+				$message = __( &#039;Thumbnail regeneration has been scheduled to run in the background.&#039;, &#039;woocommerce&#039; );
+				break;
+
+			case &#039;db_update_routine&#039;:
+				$blog_id = get_current_blog_id();
+				// Used to fire an action added in WP_Background_Process::_construct() that calls WP_Background_Process::handle_cron_healthcheck().
+				// This method will make sure the database updates are executed even if cron is disabled. Nothing will happen if the updates are already running.
+				do_action( &#039;wp_&#039; . $blog_id . &#039;_wc_updater_cron&#039; );
+				$message = __( &#039;Database upgrade routine has been scheduled to run in the background.&#039;, &#039;woocommerce&#039; );
+				break;
+
+			case &#039;clear_template_cache&#039;:
+				if ( function_exists( &#039;wc_clear_template_cache&#039; ) ) {
+					wc_clear_template_cache();
+					$message = __( &#039;Template cache cleared.&#039;, &#039;woocommerce&#039; );
+				} else {
+					$message = __( &#039;The active version of WooCommerce does not support template cache clearing.&#039;, &#039;woocommerce&#039; );
+					$ran     = false;
+				}
+				break;
+
+			case &#039;verify_db_tables&#039;:
+				if ( ! method_exists( &#039;WC_Install&#039;, &#039;verify_base_tables&#039; ) ) {
+					$message = __( &#039;You need WooCommerce 4.2 or newer to run this tool.&#039;, &#039;woocommerce&#039; );
+					$ran     = false;
+					break;
+				}
+				// Try to manually create table again.
+				$missing_tables = WC_Install::verify_base_tables( true, true );
+				if ( 0 === count( $missing_tables ) ) {
+					$message = __( &#039;Database verified successfully.&#039;, &#039;woocommerce&#039; );
+				} else {
+					$message  = __( &#039;Verifying database... One or more tables are still missing: &#039;, &#039;woocommerce&#039; );
+					$message .= implode( &#039;, &#039;, $missing_tables );
+					$ran      = false;
+				}
+				break;
+
+			default:
+				$tools = $this-&gt;get_tools();
+				if ( isset( $tools[ $tool ][&#039;callback&#039;] ) ) {
+					$callback = $tools[ $tool ][&#039;callback&#039;];
+					try {
+						$return = call_user_func( $callback );
+					} catch ( Exception $exception ) {
+						$return = $exception;
+					}
+					if ( is_a( $return, Exception::class ) ) {
+						$callback_string = $this-&gt;get_printable_callback_name( $callback, $tool );
+						$ran             = false;
+						/* translators: %1$s: callback string, %2$s: error message */
+						$message = sprintf( __( &#039;There was an error calling %1$s: %2$s&#039;, &#039;woocommerce&#039; ), $callback_string, $return-&gt;getMessage() );
+
+						$logger = wc_get_logger();
+						$logger-&gt;error(
+							sprintf(
+								&#039;Error running debug tool %s: %s&#039;,
+								$tool,
+								$return-&gt;getMessage()
+							),
+							array(
+								&#039;source&#039;   =&gt; &#039;run-debug-tool&#039;,
+								&#039;tool&#039;     =&gt; $tool,
+								&#039;callback&#039; =&gt; $callback,
+								&#039;error&#039;    =&gt; $return,
+							)
+						);
+					} elseif ( is_string( $return ) ) {
+						$message = $return;
+					} elseif ( false === $return ) {
+						$callback_string = $this-&gt;get_printable_callback_name( $callback, $tool );
+						$ran             = false;
+						/* translators: %s: callback string */
+						$message = sprintf( __( &#039;There was an error calling %s&#039;, &#039;woocommerce&#039; ), $callback_string );
+					} else {
+						$message = __( &#039;Tool ran.&#039;, &#039;woocommerce&#039; );
+					}
+				} else {
+					$ran     = false;
+					$message = __( &#039;There was an error calling this tool. There is no callback present.&#039;, &#039;woocommerce&#039; );
+				}
+				break;
+		}
+
+		return array(
+			&#039;success&#039; =&gt; $ran,
+			&#039;message&#039; =&gt; $message,
+		);
+	}
+
+	/**
+	 * Get a printable name for a callback.
+	 *
+	 * @param mixed  $callback The callback to get a name for.
+	 * @param string $default The default name, to be returned when the callback is an inline function.
+	 * @return string A printable name for the callback.
+	 */
+	private function get_printable_callback_name( $callback, $default ) {
+		if ( is_array( $callback ) ) {
+			return get_class( $callback[0] ) . &#039;::&#039; . $callback[1];
+		}
+		if ( is_string( $callback ) ) {
+			return $callback;
+		}
+
+		return $default;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866948"></script>
+    <script src="../js/search.js?updated=1692866948"></script>
+</body>
+</html>

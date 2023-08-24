@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-countries.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WooCommerce countries
+ *
+ * @package WooCommerce\l10n
+ * @version 3.3.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * The WooCommerce countries class stores country/state data.
+ */
+class WC_Countries {
+
+	/**
+	 * Locales list.
+	 *
+	 * @var array
+	 */
+	public $locale = array();
+
+	/**
+	 * List of address formats for locales.
+	 *
+	 * @var array
+	 */
+	public $address_formats = array();
+
+	/**
+	 * Cache of geographical regions.
+	 *
+	 * Only to be used by the get_* and load_* methods, as other methods may expect the regions to be
+	 * loaded on demand.
+	 *
+	 * @var array
+	 */
+	private $geo_cache = array();
+
+	/**
+	 * Auto-load in-accessible properties on demand.
+	 *
+	 * @param  mixed $key Key.
+	 * @return mixed
+	 */
+	public function __get( $key ) {
+		if ( &#039;countries&#039; === $key ) {
+			return $this-&gt;get_countries();
+		} elseif ( &#039;states&#039; === $key ) {
+			return $this-&gt;get_states();
+		} elseif ( &#039;continents&#039; === $key ) {
+			return $this-&gt;get_continents();
+		}
+	}
+
+	/**
+	 * Get all countries.
+	 *
+	 * @return array
+	 */
+	public function get_countries() {
+		if ( empty( $this-&gt;geo_cache[&#039;countries&#039;] ) ) {
+			/**
+			 * Allows filtering of the list of countries in WC.
+			 *
+			 * @since 1.5.3
+			 *
+			 * @param array $countries
+			 */
+			$this-&gt;geo_cache[&#039;countries&#039;] = apply_filters( &#039;woocommerce_countries&#039;, include WC()-&gt;plugin_path() . &#039;/i18n/countries.php&#039; );
+			if ( apply_filters( &#039;woocommerce_sort_countries&#039;, true ) ) {
+				wc_asort_by_locale( $this-&gt;geo_cache[&#039;countries&#039;] );
+			}
+		}
+
+		return $this-&gt;geo_cache[&#039;countries&#039;];
+	}
+
+	/**
+	 * Check if a given code represents a valid ISO 3166-1 alpha-2 code for a country known to us.
+	 *
+	 * @since 5.1.0
+	 * @param string $country_code The country code to check as a ISO 3166-1 alpha-2 code.
+	 * @return bool True if the country is known to us, false otherwise.
+	 */
+	public function country_exists( $country_code ) {
+		return isset( $this-&gt;get_countries()[ $country_code ] );
+	}
+
+	/**
+	 * Get all continents.
+	 *
+	 * @return array
+	 */
+	public function get_continents() {
+		if ( empty( $this-&gt;geo_cache[&#039;continents&#039;] ) ) {
+			/**
+			 * Allows filtering of continents in WC.
+			 *
+			 * @since 2.6.0
+			 *
+			 * @param array[array] $continents
+			 */
+			$this-&gt;geo_cache[&#039;continents&#039;] = apply_filters( &#039;woocommerce_continents&#039;, include WC()-&gt;plugin_path() . &#039;/i18n/continents.php&#039; );
+		}
+
+		return $this-&gt;geo_cache[&#039;continents&#039;];
+	}
+
+	/**
+	 * Get continent code for a country code.
+	 *
+	 * @since 2.6.0
+	 * @param string $cc Country code.
+	 * @return string
+	 */
+	public function get_continent_code_for_country( $cc ) {
+		$cc                 = trim( strtoupper( $cc ) );
+		$continents         = $this-&gt;get_continents();
+		$continents_and_ccs = wp_list_pluck( $continents, &#039;countries&#039; );
+		foreach ( $continents_and_ccs as $continent_code =&gt; $countries ) {
+			if ( false !== array_search( $cc, $countries, true ) ) {
+				return $continent_code;
+			}
+		}
+
+		return &#039;&#039;;
+	}
+
+	/**
+	 * Get calling code for a country code.
+	 *
+	 * @since 3.6.0
+	 * @param string $cc Country code.
+	 * @return string|array Some countries have multiple. The code will be stripped of - and spaces and always be prefixed with +.
+	 */
+	public function get_country_calling_code( $cc ) {
+		$codes = wp_cache_get( &#039;calling-codes&#039;, &#039;countries&#039; );
+
+		if ( ! $codes ) {
+			$codes = include WC()-&gt;plugin_path() . &#039;/i18n/phone.php&#039;;
+			wp_cache_set( &#039;calling-codes&#039;, $codes, &#039;countries&#039; );
+		}
+
+		$calling_code = isset( $codes[ $cc ] ) ? $codes[ $cc ] : &#039;&#039;;
+
+		if ( is_array( $calling_code ) ) {
+			$calling_code = $calling_code[0];
+		}
+
+		return $calling_code;
+	}
+
+	/**
+	 * Get continents that the store ships to.
+	 *
+	 * @since 3.6.0
+	 * @return array
+	 */
+	public function get_shipping_continents() {
+		$continents             = $this-&gt;get_continents();
+		$shipping_countries     = $this-&gt;get_shipping_countries();
+		$shipping_country_codes = array_keys( $shipping_countries );
+		$shipping_continents    = array();
+
+		foreach ( $continents as $continent_code =&gt; $continent ) {
+			if ( count( array_intersect( $continent[&#039;countries&#039;], $shipping_country_codes ) ) ) {
+				$shipping_continents[ $continent_code ] = $continent;
+			}
+		}
+
+		return $shipping_continents;
+	}
+
+	/**
+	 * Load the states.
+	 *
+	 * @deprecated 3.6.0 This method was used to load state files, but is no longer needed. @see get_states().
+	 */
+	public function load_country_states() {
+		global $states;
+
+		$states = include WC()-&gt;plugin_path() . &#039;/i18n/states.php&#039;;
+
+		/**
+		 * Allows filtering of country states in WC.
+		 *
+		 * @since 1.5.3
+		 *
+		 * @param array $states
+		 */
+		$this-&gt;geo_cache[&#039;states&#039;] = apply_filters( &#039;woocommerce_states&#039;, $states );
+	}
+
+	/**
+	 * Get the states for a country.
+	 *
+	 * @param  string $cc Country code.
+	 * @return false|array of states
+	 */
+	public function get_states( $cc = null ) {
+		if ( ! isset( $this-&gt;geo_cache[&#039;states&#039;] ) ) {
+			/**
+			 * Allows filtering of country states in WC.
+			 *
+			 * @since 1.5.3
+			 *
+			 * @param array $states
+			 */
+			$this-&gt;geo_cache[&#039;states&#039;] = apply_filters( &#039;woocommerce_states&#039;, include WC()-&gt;plugin_path() . &#039;/i18n/states.php&#039; );
+		}
+
+		if ( ! is_null( $cc ) ) {
+			return isset( $this-&gt;geo_cache[&#039;states&#039;][ $cc ] ) ? $this-&gt;geo_cache[&#039;states&#039;][ $cc ] : false;
+		} else {
+			return $this-&gt;geo_cache[&#039;states&#039;];
+		}
+	}
+
+	/**
+	 * Get the base address (first line) for the store.
+	 *
+	 * @since 3.1.1
+	 * @return string
+	 */
+	public function get_base_address() {
+		$base_address = get_option( &#039;woocommerce_store_address&#039;, &#039;&#039; );
+		return apply_filters( &#039;woocommerce_countries_base_address&#039;, $base_address );
+	}
+
+	/**
+	 * Get the base address (second line) for the store.
+	 *
+	 * @since 3.1.1
+	 * @return string
+	 */
+	public function get_base_address_2() {
+		$base_address_2 = get_option( &#039;woocommerce_store_address_2&#039;, &#039;&#039; );
+		return apply_filters( &#039;woocommerce_countries_base_address_2&#039;, $base_address_2 );
+	}
+
+	/**
+	 * Get the base country for the store.
+	 *
+	 * @return string
+	 */
+	public function get_base_country() {
+		$default = wc_get_base_location();
+		return apply_filters( &#039;woocommerce_countries_base_country&#039;, $default[&#039;country&#039;] );
+	}
+
+	/**
+	 * Get the base state for the store.
+	 *
+	 * @return string
+	 */
+	public function get_base_state() {
+		$default = wc_get_base_location();
+		return apply_filters( &#039;woocommerce_countries_base_state&#039;, $default[&#039;state&#039;] );
+	}
+
+	/**
+	 * Get the base city for the store.
+	 *
+	 * @version 3.1.1
+	 * @return string
+	 */
+	public function get_base_city() {
+		$base_city = get_option( &#039;woocommerce_store_city&#039;, &#039;&#039; );
+		return apply_filters( &#039;woocommerce_countries_base_city&#039;, $base_city );
+	}
+
+	/**
+	 * Get the base postcode for the store.
+	 *
+	 * @since 3.1.1
+	 * @return string
+	 */
+	public function get_base_postcode() {
+		$base_postcode = get_option( &#039;woocommerce_store_postcode&#039;, &#039;&#039; );
+		return apply_filters( &#039;woocommerce_countries_base_postcode&#039;, $base_postcode );
+	}
+
+	/**
+	 * Get countries that the store sells to.
+	 *
+	 * @return array
+	 */
+	public function get_allowed_countries() {
+		if ( &#039;all&#039; === get_option( &#039;woocommerce_allowed_countries&#039; ) ) {
+			return apply_filters( &#039;woocommerce_countries_allowed_countries&#039;, $this-&gt;countries );
+		}
+
+		if ( &#039;all_except&#039; === get_option( &#039;woocommerce_allowed_countries&#039; ) ) {
+			$except_countries = get_option( &#039;woocommerce_all_except_countries&#039;, array() );
+
+			if ( ! $except_countries ) {
+				return $this-&gt;countries;
+			} else {
+				$all_except_countries = $this-&gt;countries;
+				foreach ( $except_countries as $country ) {
+					unset( $all_except_countries[ $country ] );
+				}
+				return apply_filters( &#039;woocommerce_countries_allowed_countries&#039;, $all_except_countries );
+			}
+		}
+
+		$countries = array();
+
+		$raw_countries = get_option( &#039;woocommerce_specific_allowed_countries&#039;, array() );
+
+		if ( $raw_countries ) {
+			foreach ( $raw_countries as $country ) {
+				$countries[ $country ] = $this-&gt;countries[ $country ];
+			}
+		}
+
+		return apply_filters( &#039;woocommerce_countries_allowed_countries&#039;, $countries );
+	}
+
+	/**
+	 * Get countries that the store ships to.
+	 *
+	 * @return array
+	 */
+	public function get_shipping_countries() {
+		if ( &#039;&#039; === get_option( &#039;woocommerce_ship_to_countries&#039; ) ) {
+			return $this-&gt;get_allowed_countries();
+		}
+
+		if ( &#039;all&#039; === get_option( &#039;woocommerce_ship_to_countries&#039; ) ) {
+			return $this-&gt;countries;
+		}
+
+		$countries = array();
+
+		$raw_countries = get_option( &#039;woocommerce_specific_ship_to_countries&#039; );
+
+		if ( $raw_countries ) {
+			foreach ( $raw_countries as $country ) {
+				$countries[ $country ] = $this-&gt;countries[ $country ];
+			}
+		}
+
+		return apply_filters( &#039;woocommerce_countries_shipping_countries&#039;, $countries );
+	}
+
+	/**
+	 * Get allowed country states.
+	 *
+	 * @return array
+	 */
+	public function get_allowed_country_states() {
+		if ( get_option( &#039;woocommerce_allowed_countries&#039; ) !== &#039;specific&#039; ) {
+			return $this-&gt;states;
+		}
+
+		$states = array();
+
+		$raw_countries = get_option( &#039;woocommerce_specific_allowed_countries&#039; );
+
+		if ( $raw_countries ) {
+			foreach ( $raw_countries as $country ) {
+				if ( isset( $this-&gt;states[ $country ] ) ) {
+					$states[ $country ] = $this-&gt;states[ $country ];
+				}
+			}
+		}
+
+		return apply_filters( &#039;woocommerce_countries_allowed_country_states&#039;, $states );
+	}
+
+	/**
+	 * Get shipping country states.
+	 *
+	 * @return array
+	 */
+	public function get_shipping_country_states() {
+		if ( get_option( &#039;woocommerce_ship_to_countries&#039; ) === &#039;&#039; ) {
+			return $this-&gt;get_allowed_country_states();
+		}
+
+		if ( get_option( &#039;woocommerce_ship_to_countries&#039; ) !== &#039;specific&#039; ) {
+			return $this-&gt;states;
+		}
+
+		$states = array();
+
+		$raw_countries = get_option( &#039;woocommerce_specific_ship_to_countries&#039; );
+
+		if ( $raw_countries ) {
+			foreach ( $raw_countries as $country ) {
+				if ( ! empty( $this-&gt;states[ $country ] ) ) {
+					$states[ $country ] = $this-&gt;states[ $country ];
+				}
+			}
+		}
+
+		return apply_filters( &#039;woocommerce_countries_shipping_country_states&#039;, $states );
+	}
+
+	/**
+	 * Gets an array of countries in the EU.
+	 *
+	 * @param  string $type Type of countries to retrieve. Blank for EU member countries. eu_vat for EU VAT countries.
+	 * @return string[]
+	 */
+	public function get_european_union_countries( $type = &#039;&#039; ) {
+		$countries = array( &#039;AT&#039;, &#039;BE&#039;, &#039;BG&#039;, &#039;CY&#039;, &#039;CZ&#039;, &#039;DE&#039;, &#039;DK&#039;, &#039;EE&#039;, &#039;ES&#039;, &#039;FI&#039;, &#039;FR&#039;, &#039;GR&#039;, &#039;HR&#039;, &#039;HU&#039;, &#039;IE&#039;, &#039;IT&#039;, &#039;LT&#039;, &#039;LU&#039;, &#039;LV&#039;, &#039;MT&#039;, &#039;NL&#039;, &#039;PL&#039;, &#039;PT&#039;, &#039;RO&#039;, &#039;SE&#039;, &#039;SI&#039;, &#039;SK&#039; );
+
+		if ( &#039;eu_vat&#039; === $type ) {
+			$countries[] = &#039;MC&#039;;
+		}
+
+		return apply_filters( &#039;woocommerce_european_union_countries&#039;, $countries, $type );
+	}
+
+	/**
+	 * Gets an array of Non-EU countries that use VAT as the Local name for their taxes based on this list - https://en.wikipedia.org/wiki/Value-added_tax#Non-European_Union_countries
+	 *
+	 * @deprecated 4.0.0
+	 * @since 3.9.0
+	 * @return string[]
+	 */
+	public function countries_using_vat() {
+		wc_deprecated_function( &#039;countries_using_vat&#039;, &#039;4.0&#039;, &#039;WC_Countries::get_vat_countries&#039; );
+		$countries = array( &#039;AE&#039;, &#039;AL&#039;, &#039;AR&#039;, &#039;AZ&#039;, &#039;BB&#039;, &#039;BH&#039;, &#039;BO&#039;, &#039;BS&#039;, &#039;BY&#039;, &#039;CL&#039;, &#039;CO&#039;, &#039;EC&#039;, &#039;EG&#039;, &#039;ET&#039;, &#039;FJ&#039;, &#039;GH&#039;, &#039;GM&#039;, &#039;GT&#039;, &#039;IL&#039;, &#039;IN&#039;, &#039;IR&#039;, &#039;KN&#039;, &#039;KR&#039;, &#039;KZ&#039;, &#039;LK&#039;, &#039;MD&#039;, &#039;ME&#039;, &#039;MK&#039;, &#039;MN&#039;, &#039;MU&#039;, &#039;MX&#039;, &#039;NA&#039;, &#039;NG&#039;, &#039;NP&#039;, &#039;PS&#039;, &#039;PY&#039;, &#039;RS&#039;, &#039;RU&#039;, &#039;RW&#039;, &#039;SA&#039;, &#039;SV&#039;, &#039;TH&#039;, &#039;TR&#039;, &#039;UA&#039;, &#039;UY&#039;, &#039;UZ&#039;, &#039;VE&#039;, &#039;VN&#039;, &#039;ZA&#039; );
+
+		return apply_filters( &#039;woocommerce_countries_using_vat&#039;, $countries );
+	}
+
+	/**
+	 * Gets an array of countries using VAT.
+	 *
+	 * @since 4.0.0
+	 * @return string[] of country codes.
+	 */
+	public function get_vat_countries() {
+		$eu_countries  = $this-&gt;get_european_union_countries();
+		$vat_countries = array( &#039;AE&#039;, &#039;AL&#039;, &#039;AR&#039;, &#039;AZ&#039;, &#039;BB&#039;, &#039;BH&#039;, &#039;BO&#039;, &#039;BS&#039;, &#039;BY&#039;, &#039;CL&#039;, &#039;CO&#039;, &#039;EC&#039;, &#039;EG&#039;, &#039;ET&#039;, &#039;FJ&#039;, &#039;GB&#039;, &#039;GH&#039;, &#039;GM&#039;, &#039;GT&#039;, &#039;IL&#039;, &#039;IM&#039;, &#039;IN&#039;, &#039;IR&#039;, &#039;KN&#039;, &#039;KR&#039;, &#039;KZ&#039;, &#039;LK&#039;, &#039;MC&#039;, &#039;MD&#039;, &#039;ME&#039;, &#039;MK&#039;, &#039;MN&#039;, &#039;MU&#039;, &#039;MX&#039;, &#039;NA&#039;, &#039;NG&#039;, &#039;NO&#039;, &#039;NP&#039;, &#039;PS&#039;, &#039;PY&#039;, &#039;RS&#039;, &#039;RU&#039;, &#039;RW&#039;, &#039;SA&#039;, &#039;SV&#039;, &#039;TH&#039;, &#039;TR&#039;, &#039;UA&#039;, &#039;UY&#039;, &#039;UZ&#039;, &#039;VE&#039;, &#039;VN&#039;, &#039;ZA&#039; );
+
+		return apply_filters( &#039;woocommerce_vat_countries&#039;, array_merge( $eu_countries, $vat_countries ) );
+	}
+
+	/**
+	 * Gets the correct string for shipping - either &#039;to the&#039; or &#039;to&#039;.
+	 *
+	 * @param string $country_code Country code.
+	 * @return string
+	 */
+	public function shipping_to_prefix( $country_code = &#039;&#039; ) {
+		$country_code = $country_code ? $country_code : WC()-&gt;customer-&gt;get_shipping_country();
+		$countries    = array( &#039;AE&#039;, &#039;CZ&#039;, &#039;DO&#039;, &#039;GB&#039;, &#039;NL&#039;, &#039;PH&#039;, &#039;US&#039;, &#039;USAF&#039; );
+		$return       = in_array( $country_code, $countries, true ) ? _x( &#039;to the&#039;, &#039;shipping country prefix&#039;, &#039;woocommerce&#039; ) : _x( &#039;to&#039;, &#039;shipping country prefix&#039;, &#039;woocommerce&#039; );
+
+		return apply_filters( &#039;woocommerce_countries_shipping_to_prefix&#039;, $return, $country_code );
+	}
+
+	/**
+	 * Prefix certain countries with &#039;the&#039;.
+	 *
+	 * @param string $country_code Country code.
+	 * @return string
+	 */
+	public function estimated_for_prefix( $country_code = &#039;&#039; ) {
+		$country_code = $country_code ? $country_code : $this-&gt;get_base_country();
+		$countries    = array( &#039;AE&#039;, &#039;CZ&#039;, &#039;DO&#039;, &#039;GB&#039;, &#039;NL&#039;, &#039;PH&#039;, &#039;US&#039;, &#039;USAF&#039; );
+		$return       = in_array( $country_code, $countries, true ) ? __( &#039;the&#039;, &#039;woocommerce&#039; ) . &#039; &#039; : &#039;&#039;;
+
+		return apply_filters( &#039;woocommerce_countries_estimated_for_prefix&#039;, $return, $country_code );
+	}
+
+	/**
+	 * Correctly name tax in some countries VAT on the frontend.
+	 *
+	 * @return string
+	 */
+	public function tax_or_vat() {
+		$return = in_array( $this-&gt;get_base_country(), $this-&gt;get_vat_countries(), true ) ? __( &#039;VAT&#039;, &#039;woocommerce&#039; ) : __( &#039;Tax&#039;, &#039;woocommerce&#039; );
+
+		return apply_filters( &#039;woocommerce_countries_tax_or_vat&#039;, $return );
+	}
+
+	/**
+	 * Include the Inc Tax label.
+	 *
+	 * @return string
+	 */
+	public function inc_tax_or_vat() {
+		$return = in_array( $this-&gt;get_base_country(), $this-&gt;get_vat_countries(), true ) ? __( &#039;(incl. VAT)&#039;, &#039;woocommerce&#039; ) : __( &#039;(incl. tax)&#039;, &#039;woocommerce&#039; );
+
+		return apply_filters( &#039;woocommerce_countries_inc_tax_or_vat&#039;, $return );
+	}
+
+	/**
+	 * Include the Ex Tax label.
+	 *
+	 * @return string
+	 */
+	public function ex_tax_or_vat() {
+		$return = in_array( $this-&gt;get_base_country(), $this-&gt;get_vat_countries(), true ) ? __( &#039;(ex. VAT)&#039;, &#039;woocommerce&#039; ) : __( &#039;(ex. tax)&#039;, &#039;woocommerce&#039; );
+
+		return apply_filters( &#039;woocommerce_countries_ex_tax_or_vat&#039;, $return );
+	}
+
+	/**
+	 * Outputs the list of countries and states for use in dropdown boxes.
+	 *
+	 * @param string $selected_country Selected country.
+	 * @param string $selected_state   Selected state.
+	 * @param bool   $escape           If we should escape HTML.
+	 */
+	public function country_dropdown_options( $selected_country = &#039;&#039;, $selected_state = &#039;&#039;, $escape = false ) {
+		if ( $this-&gt;countries ) {
+			foreach ( $this-&gt;countries as $key =&gt; $value ) {
+				$states = $this-&gt;get_states( $key );
+				if ( $states ) {
+					// Maybe default the selected state as the first one.
+					if ( $selected_country === $key &amp;&amp; &#039;*&#039; === $selected_state ) {
+						$selected_state = key( $states ) ?? &#039;*&#039;;
+					}
+
+					echo &#039;&lt;optgroup label=&quot;&#039; . esc_attr( $value ) . &#039;&quot;&gt;&#039;;
+					foreach ( $states as $state_key =&gt; $state_value ) {
+						echo &#039;&lt;option value=&quot;&#039; . esc_attr( $key ) . &#039;:&#039; . esc_attr( $state_key ) . &#039;&quot;&#039;;
+
+						if ( $selected_country === $key &amp;&amp; $selected_state === $state_key ) {
+							echo &#039; selected=&quot;selected&quot;&#039;;
+						}
+
+						echo &#039;&gt;&#039; . esc_html( $value ) . &#039; &amp;mdash; &#039; . ( $escape ? esc_html( $state_value ) : $state_value ) . &#039;&lt;/option&gt;&#039;; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+					}
+					echo &#039;&lt;/optgroup&gt;&#039;;
+				} else {
+					echo &#039;&lt;option&#039;;
+					if ( $selected_country === $key &amp;&amp; &#039;*&#039; === $selected_state ) {
+						echo &#039; selected=&quot;selected&quot;&#039;;
+					}
+					echo &#039; value=&quot;&#039; . esc_attr( $key ) . &#039;&quot;&gt;&#039; . ( $escape ? esc_html( $value ) : $value ) . &#039;&lt;/option&gt;&#039;; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				}
+			}
+		}
+	}
+
+	/**
+	 * Get country address formats.
+	 *
+	 * These define how addresses are formatted for display in various countries.
+	 *
+	 * @return array
+	 */
+	public function get_address_formats() {
+		if ( empty( $this-&gt;address_formats ) ) {
+			$this-&gt;address_formats = apply_filters(
+				&#039;woocommerce_localisation_address_formats&#039;,
+				array(
+					&#039;default&#039; =&gt; &quot;{name}\n{company}\n{address_1}\n{address_2}\n{city}\n{state}\n{postcode}\n{country}&quot;,
+					&#039;AT&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;AU&#039;      =&gt; &quot;{name}\n{company}\n{address_1}\n{address_2}\n{city} {state} {postcode}\n{country}&quot;,
+					&#039;BE&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;CA&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{city} {state_code} {postcode}\n{country}&quot;,
+					&#039;CH&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;CL&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{state}\n{postcode} {city}\n{country}&quot;,
+					&#039;CN&#039;      =&gt; &quot;{country} {postcode}\n{state}, {city}, {address_2}, {address_1}\n{company}\n{name}&quot;,
+					&#039;CZ&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;DE&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;DK&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;EE&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;ES&#039;      =&gt; &quot;{name}\n{company}\n{address_1}\n{address_2}\n{postcode} {city}\n{state}\n{country}&quot;,
+					&#039;FI&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;FR&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city_upper}\n{country}&quot;,
+					&#039;HK&#039;      =&gt; &quot;{company}\n{first_name} {last_name_upper}\n{address_1}\n{address_2}\n{city_upper}\n{state_upper}\n{country}&quot;,
+					&#039;HU&#039;      =&gt; &quot;{last_name} {first_name}\n{company}\n{city}\n{address_1}\n{address_2}\n{postcode}\n{country}&quot;,
+					&#039;IN&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{city} {postcode}\n{state}, {country}&quot;,
+					&#039;IS&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;IT&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode}\n{city}\n{state_upper}\n{country}&quot;,
+					&#039;JM&#039;      =&gt; &quot;{name}\n{company}\n{address_1}\n{address_2}\n{city}\n{state}\n{postcode_upper}\n{country}&quot;,
+					&#039;JP&#039;      =&gt; &quot;{postcode}\n{state} {city} {address_1}\n{address_2}\n{company}\n{last_name} {first_name}\n{country}&quot;,
+					&#039;LI&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;NL&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;NO&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;NZ&#039;      =&gt; &quot;{name}\n{company}\n{address_1}\n{address_2}\n{city} {postcode}\n{country}&quot;,
+					&#039;PL&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;PR&#039;      =&gt; &quot;{company}\n{name}\n{address_1} {address_2}\n{city} \n{country} {postcode}&quot;,
+					&#039;PT&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;RS&#039;      =&gt; &quot;{name}\n{company}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;SE&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;SI&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;SK&#039;      =&gt; &quot;{company}\n{name}\n{address_1}\n{address_2}\n{postcode} {city}\n{country}&quot;,
+					&#039;TR&#039;      =&gt; &quot;{name}\n{company}\n{address_1}\n{address_2}\n{postcode} {city} {state}\n{country}&quot;,
+					&#039;TW&#039;      =&gt; &quot;{company}\n{last_name} {first_name}\n{address_1}\n{address_2}\n{state}, {city} {postcode}\n{country}&quot;,
+					&#039;UG&#039;      =&gt; &quot;{name}\n{company}\n{address_1}\n{address_2}\n{city}\n{state}, {country}&quot;,
+					&#039;US&#039;      =&gt; &quot;{name}\n{company}\n{address_1}\n{address_2}\n{city}, {state_code} {postcode}\n{country}&quot;,
+					&#039;VN&#039;      =&gt; &quot;{name}\n{company}\n{address_1}\n{city}\n{country}&quot;,
+				)
+			);
+		}
+		return $this-&gt;address_formats;
+	}
+
+	/**
+	 * Get country address format.
+	 *
+	 * @param  array  $args Arguments.
+	 * @param  string $separator How to separate address lines. @since 3.5.0.
+	 * @return string
+	 */
+	public function get_formatted_address( $args = array(), $separator = &#039;&lt;br/&gt;&#039; ) {
+		$default_args = array(
+			&#039;first_name&#039; =&gt; &#039;&#039;,
+			&#039;last_name&#039;  =&gt; &#039;&#039;,
+			&#039;company&#039;    =&gt; &#039;&#039;,
+			&#039;address_1&#039;  =&gt; &#039;&#039;,
+			&#039;address_2&#039;  =&gt; &#039;&#039;,
+			&#039;city&#039;       =&gt; &#039;&#039;,
+			&#039;state&#039;      =&gt; &#039;&#039;,
+			&#039;postcode&#039;   =&gt; &#039;&#039;,
+			&#039;country&#039;    =&gt; &#039;&#039;,
+		);
+
+		$args    = array_map( &#039;trim&#039;, wp_parse_args( $args, $default_args ) );
+		$state   = $args[&#039;state&#039;];
+		$country = $args[&#039;country&#039;];
+
+		// Get all formats.
+		$formats = $this-&gt;get_address_formats();
+
+		// Get format for the address&#039; country.
+		$format = ( $country &amp;&amp; isset( $formats[ $country ] ) ) ? $formats[ $country ] : $formats[&#039;default&#039;];
+
+		// Handle full country name.
+		$full_country = ( isset( $this-&gt;countries[ $country ] ) ) ? $this-&gt;countries[ $country ] : $country;
+
+		// Country is not needed if the same as base.
+		if ( $country === $this-&gt;get_base_country() &amp;&amp; ! apply_filters( &#039;woocommerce_formatted_address_force_country_display&#039;, false ) ) {
+			$format = str_replace( &#039;{country}&#039;, &#039;&#039;, $format );
+		}
+
+		// Handle full state name.
+		$full_state = ( $country &amp;&amp; $state &amp;&amp; isset( $this-&gt;states[ $country ][ $state ] ) ) ? $this-&gt;states[ $country ][ $state ] : $state;
+
+		// Substitute address parts into the string.
+		$replace = array_map(
+			&#039;esc_html&#039;,
+			apply_filters(
+				&#039;woocommerce_formatted_address_replacements&#039;,
+				array(
+					&#039;{first_name}&#039;       =&gt; $args[&#039;first_name&#039;],
+					&#039;{last_name}&#039;        =&gt; $args[&#039;last_name&#039;],
+					&#039;{name}&#039;             =&gt; sprintf(
+						/* translators: 1: first name 2: last name */
+						_x( &#039;%1$s %2$s&#039;, &#039;full name&#039;, &#039;woocommerce&#039; ),
+						$args[&#039;first_name&#039;],
+						$args[&#039;last_name&#039;]
+					),
+					&#039;{company}&#039;          =&gt; $args[&#039;company&#039;],
+					&#039;{address_1}&#039;        =&gt; $args[&#039;address_1&#039;],
+					&#039;{address_2}&#039;        =&gt; $args[&#039;address_2&#039;],
+					&#039;{city}&#039;             =&gt; $args[&#039;city&#039;],
+					&#039;{state}&#039;            =&gt; $full_state,
+					&#039;{postcode}&#039;         =&gt; $args[&#039;postcode&#039;],
+					&#039;{country}&#039;          =&gt; $full_country,
+					&#039;{first_name_upper}&#039; =&gt; wc_strtoupper( $args[&#039;first_name&#039;] ),
+					&#039;{last_name_upper}&#039;  =&gt; wc_strtoupper( $args[&#039;last_name&#039;] ),
+					&#039;{name_upper}&#039;       =&gt; wc_strtoupper(
+						sprintf(
+							/* translators: 1: first name 2: last name */
+							_x( &#039;%1$s %2$s&#039;, &#039;full name&#039;, &#039;woocommerce&#039; ),
+							$args[&#039;first_name&#039;],
+							$args[&#039;last_name&#039;]
+						)
+					),
+					&#039;{company_upper}&#039;    =&gt; wc_strtoupper( $args[&#039;company&#039;] ),
+					&#039;{address_1_upper}&#039;  =&gt; wc_strtoupper( $args[&#039;address_1&#039;] ),
+					&#039;{address_2_upper}&#039;  =&gt; wc_strtoupper( $args[&#039;address_2&#039;] ),
+					&#039;{city_upper}&#039;       =&gt; wc_strtoupper( $args[&#039;city&#039;] ),
+					&#039;{state_upper}&#039;      =&gt; wc_strtoupper( $full_state ),
+					&#039;{state_code}&#039;       =&gt; wc_strtoupper( $state ),
+					&#039;{postcode_upper}&#039;   =&gt; wc_strtoupper( $args[&#039;postcode&#039;] ),
+					&#039;{country_upper}&#039;    =&gt; wc_strtoupper( $full_country ),
+				),
+				$args
+			)
+		);
+
+		$formatted_address = str_replace( array_keys( $replace ), $replace, $format );
+
+		// Clean up white space.
+		$formatted_address = preg_replace( &#039;/  +/&#039;, &#039; &#039;, trim( $formatted_address ) );
+		$formatted_address = preg_replace( &#039;/\n\n+/&#039;, &quot;\n&quot;, $formatted_address );
+
+		// Break newlines apart and remove empty lines/trim commas and white space.
+		$formatted_address = array_filter( array_map( array( $this, &#039;trim_formatted_address_line&#039; ), explode( &quot;\n&quot;, $formatted_address ) ) );
+
+		// Add html breaks.
+		$formatted_address = implode( $separator, $formatted_address );
+
+		// We&#039;re done!
+		return $formatted_address;
+	}
+
+	/**
+	 * Trim white space and commas off a line.
+	 *
+	 * @param  string $line Line.
+	 * @return string
+	 */
+	private function trim_formatted_address_line( $line ) {
+		return trim( $line, &#039;, &#039; );
+	}
+
+	/**
+	 * Returns the fields we show by default. This can be filtered later on.
+	 *
+	 * @return array
+	 */
+	public function get_default_address_fields() {
+		$address_2_label = __( &#039;Apartment, suite, unit, etc.&#039;, &#039;woocommerce&#039; );
+
+		// If necessary, append &#039;(optional)&#039; to the placeholder: we don&#039;t need to worry about the
+		// label, though, as woocommerce_form_field() takes care of that.
+		if ( &#039;optional&#039; === get_option( &#039;woocommerce_checkout_address_2_field&#039;, &#039;optional&#039; ) ) {
+			$address_2_placeholder = __( &#039;Apartment, suite, unit, etc. (optional)&#039;, &#039;woocommerce&#039; );
+		} else {
+			$address_2_placeholder = $address_2_label;
+		}
+
+		$fields = array(
+			&#039;first_name&#039; =&gt; array(
+				&#039;label&#039;        =&gt; __( &#039;First name&#039;, &#039;woocommerce&#039; ),
+				&#039;required&#039;     =&gt; true,
+				&#039;class&#039;        =&gt; array( &#039;form-row-first&#039; ),
+				&#039;autocomplete&#039; =&gt; &#039;given-name&#039;,
+				&#039;priority&#039;     =&gt; 10,
+			),
+			&#039;last_name&#039;  =&gt; array(
+				&#039;label&#039;        =&gt; __( &#039;Last name&#039;, &#039;woocommerce&#039; ),
+				&#039;required&#039;     =&gt; true,
+				&#039;class&#039;        =&gt; array( &#039;form-row-last&#039; ),
+				&#039;autocomplete&#039; =&gt; &#039;family-name&#039;,
+				&#039;priority&#039;     =&gt; 20,
+			),
+			&#039;company&#039;    =&gt; array(
+				&#039;label&#039;        =&gt; __( &#039;Company name&#039;, &#039;woocommerce&#039; ),
+				&#039;class&#039;        =&gt; array( &#039;form-row-wide&#039; ),
+				&#039;autocomplete&#039; =&gt; &#039;organization&#039;,
+				&#039;priority&#039;     =&gt; 30,
+				&#039;required&#039;     =&gt; &#039;required&#039; === get_option( &#039;woocommerce_checkout_company_field&#039;, &#039;optional&#039; ),
+			),
+			&#039;country&#039;    =&gt; array(
+				&#039;type&#039;         =&gt; &#039;country&#039;,
+				&#039;label&#039;        =&gt; __( &#039;Country / Region&#039;, &#039;woocommerce&#039; ),
+				&#039;required&#039;     =&gt; true,
+				&#039;class&#039;        =&gt; array( &#039;form-row-wide&#039;, &#039;address-field&#039;, &#039;update_totals_on_change&#039; ),
+				&#039;autocomplete&#039; =&gt; &#039;country&#039;,
+				&#039;priority&#039;     =&gt; 40,
+			),
+			&#039;address_1&#039;  =&gt; array(
+				&#039;label&#039;        =&gt; __( &#039;Street address&#039;, &#039;woocommerce&#039; ),
+				/* translators: use local order of street name and house number. */
+				&#039;placeholder&#039;  =&gt; esc_attr__( &#039;House number and street name&#039;, &#039;woocommerce&#039; ),
+				&#039;required&#039;     =&gt; true,
+				&#039;class&#039;        =&gt; array( &#039;form-row-wide&#039;, &#039;address-field&#039; ),
+				&#039;autocomplete&#039; =&gt; &#039;address-line1&#039;,
+				&#039;priority&#039;     =&gt; 50,
+			),
+			&#039;address_2&#039;  =&gt; array(
+				&#039;label&#039;        =&gt; $address_2_label,
+				&#039;label_class&#039;  =&gt; array( &#039;screen-reader-text&#039; ),
+				&#039;placeholder&#039;  =&gt; esc_attr( $address_2_placeholder ),
+				&#039;class&#039;        =&gt; array( &#039;form-row-wide&#039;, &#039;address-field&#039; ),
+				&#039;autocomplete&#039; =&gt; &#039;address-line2&#039;,
+				&#039;priority&#039;     =&gt; 60,
+				&#039;required&#039;     =&gt; &#039;required&#039; === get_option( &#039;woocommerce_checkout_address_2_field&#039;, &#039;optional&#039; ),
+			),
+			&#039;city&#039;       =&gt; array(
+				&#039;label&#039;        =&gt; __( &#039;Town / City&#039;, &#039;woocommerce&#039; ),
+				&#039;required&#039;     =&gt; true,
+				&#039;class&#039;        =&gt; array( &#039;form-row-wide&#039;, &#039;address-field&#039; ),
+				&#039;autocomplete&#039; =&gt; &#039;address-level2&#039;,
+				&#039;priority&#039;     =&gt; 70,
+			),
+			&#039;state&#039;      =&gt; array(
+				&#039;type&#039;         =&gt; &#039;state&#039;,
+				&#039;label&#039;        =&gt; __( &#039;State / County&#039;, &#039;woocommerce&#039; ),
+				&#039;required&#039;     =&gt; true,
+				&#039;class&#039;        =&gt; array( &#039;form-row-wide&#039;, &#039;address-field&#039; ),
+				&#039;validate&#039;     =&gt; array( &#039;state&#039; ),
+				&#039;autocomplete&#039; =&gt; &#039;address-level1&#039;,
+				&#039;priority&#039;     =&gt; 80,
+			),
+			&#039;postcode&#039;   =&gt; array(
+				&#039;label&#039;        =&gt; __( &#039;Postcode / ZIP&#039;, &#039;woocommerce&#039; ),
+				&#039;required&#039;     =&gt; true,
+				&#039;class&#039;        =&gt; array( &#039;form-row-wide&#039;, &#039;address-field&#039; ),
+				&#039;validate&#039;     =&gt; array( &#039;postcode&#039; ),
+				&#039;autocomplete&#039; =&gt; &#039;postal-code&#039;,
+				&#039;priority&#039;     =&gt; 90,
+			),
+		);
+
+		if ( &#039;hidden&#039; === get_option( &#039;woocommerce_checkout_company_field&#039;, &#039;optional&#039; ) ) {
+			unset( $fields[&#039;company&#039;] );
+		}
+
+		if ( &#039;hidden&#039; === get_option( &#039;woocommerce_checkout_address_2_field&#039;, &#039;optional&#039; ) ) {
+			unset( $fields[&#039;address_2&#039;] );
+		}
+
+		$default_address_fields = apply_filters( &#039;woocommerce_default_address_fields&#039;, $fields );
+		// Sort each of the fields based on priority.
+		uasort( $default_address_fields, &#039;wc_checkout_fields_uasort_comparison&#039; );
+
+		return $default_address_fields;
+	}
+
+	/**
+	 * Get JS selectors for fields which are shown/hidden depending on the locale.
+	 *
+	 * @return array
+	 */
+	public function get_country_locale_field_selectors() {
+		$locale_fields = array(
+			&#039;address_1&#039; =&gt; &#039;#billing_address_1_field, #shipping_address_1_field&#039;,
+			&#039;address_2&#039; =&gt; &#039;#billing_address_2_field, #shipping_address_2_field&#039;,
+			&#039;state&#039;     =&gt; &#039;#billing_state_field, #shipping_state_field, #calc_shipping_state_field&#039;,
+			&#039;postcode&#039;  =&gt; &#039;#billing_postcode_field, #shipping_postcode_field, #calc_shipping_postcode_field&#039;,
+			&#039;city&#039;      =&gt; &#039;#billing_city_field, #shipping_city_field, #calc_shipping_city_field&#039;,
+		);
+		return apply_filters( &#039;woocommerce_country_locale_field_selectors&#039;, $locale_fields );
+	}
+
+	/**
+	 * Get country locale settings.
+	 *
+	 * These locales override the default country selections after a country is chosen.
+	 *
+	 * @return array
+	 */
+	public function get_country_locale() {
+		if ( empty( $this-&gt;locale ) ) {
+			$this-&gt;locale = apply_filters(
+				&#039;woocommerce_get_country_locale&#039;,
+				array(
+					&#039;AE&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;AF&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;AL&#039; =&gt; array(
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;County&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;AO&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;AT&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;AU&#039; =&gt; array(
+						&#039;city&#039;     =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Suburb&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;postcode&#039; =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Postcode&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;State&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;AX&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;BA&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;Canton&#039;, &#039;woocommerce&#039; ),
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;BD&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;District&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;BE&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;BG&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;BH&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;BI&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;BO&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Department&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;BS&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;BZ&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+						&#039;state&#039; 	=&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;CA&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Postal code&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;CH&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;Canton&#039;, &#039;woocommerce&#039; ),
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;CL&#039; =&gt; array(
+						&#039;city&#039;     =&gt; array(
+							&#039;required&#039; =&gt; true,
+						),
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Region&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;CN&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;CO&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+						&#039;state&#039; =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Department&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;CR&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;CW&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;CZ&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;DE&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;DK&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;DO&#039; =&gt; array(
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;EC&#039; =&gt; array(
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;EE&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;ET&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;FI&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;FR&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;GG&#039; =&gt; array(
+ 						&#039;state&#039; =&gt; array(
+ 							&#039;required&#039; =&gt; false,
+ 							&#039;label&#039; =&gt; __( &#039;Parish&#039;, &#039;woocommerce&#039; ),
+ 						),
+ 					),
+					&#039;GH&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Region&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;GP&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;GF&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;GR&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;GT&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Department&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;HK&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+						&#039;city&#039;     =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Town / District&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Region&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;HN&#039; =&gt; array(
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Department&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;HU&#039; =&gt; array(
+						&#039;last_name&#039;  =&gt; array(
+							&#039;class&#039;    =&gt; array( &#039;form-row-first&#039; ),
+							&#039;priority&#039; =&gt; 10,
+						),
+						&#039;first_name&#039; =&gt; array(
+							&#039;class&#039;    =&gt; array( &#039;form-row-last&#039; ),
+							&#039;priority&#039; =&gt; 20,
+						),
+						&#039;postcode&#039;   =&gt; array(
+							&#039;class&#039;    =&gt; array( &#039;form-row-first&#039;, &#039;address-field&#039; ),
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;city&#039;       =&gt; array(
+							&#039;class&#039; =&gt; array( &#039;form-row-last&#039;, &#039;address-field&#039; ),
+						),
+						&#039;address_1&#039;  =&gt; array(
+							&#039;priority&#039; =&gt; 71,
+						),
+						&#039;address_2&#039;  =&gt; array(
+							&#039;priority&#039; =&gt; 72,
+						),
+						&#039;state&#039;      =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;County&#039;, &#039;woocommerce&#039; ),
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;ID&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;IE&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;label&#039;    =&gt; __( &#039;Eircode&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;County&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;IS&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;IL&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;IM&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;IN&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;PIN Code&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;State&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;IR&#039; =&gt; array(
+						&#039;state&#039;     =&gt; array(
+							&#039;priority&#039; =&gt; 50,
+						),
+						&#039;city&#039;      =&gt; array(
+							&#039;priority&#039; =&gt; 60,
+						),
+						&#039;address_1&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 70,
+						),
+						&#039;address_2&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 80,
+						),
+					),
+					&#039;IT&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; true,
+							&#039;label&#039;    =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;JM&#039; =&gt; array(
+						&#039;city&#039;     =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Town / City / Post Office&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;label&#039;    =&gt; __( &#039;Postal Code&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; true,
+							&#039;label&#039;    =&gt; __( &#039;Parish&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;JP&#039; =&gt; array(
+						&#039;last_name&#039;  =&gt; array(
+							&#039;class&#039;    =&gt; array( &#039;form-row-first&#039; ),
+							&#039;priority&#039; =&gt; 10,
+						),
+						&#039;first_name&#039; =&gt; array(
+							&#039;class&#039;    =&gt; array( &#039;form-row-last&#039; ),
+							&#039;priority&#039; =&gt; 20,
+						),
+						&#039;postcode&#039;   =&gt; array(
+							&#039;class&#039;    =&gt; array( &#039;form-row-first&#039;, &#039;address-field&#039; ),
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;      =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;Prefecture&#039;, &#039;woocommerce&#039; ),
+							&#039;class&#039;    =&gt; array( &#039;form-row-last&#039;, &#039;address-field&#039; ),
+							&#039;priority&#039; =&gt; 66,
+						),
+						&#039;city&#039;       =&gt; array(
+							&#039;priority&#039; =&gt; 67,
+						),
+						&#039;address_1&#039;  =&gt; array(
+							&#039;priority&#039; =&gt; 68,
+						),
+						&#039;address_2&#039;  =&gt; array(
+							&#039;priority&#039; =&gt; 69,
+						),
+					),
+					&#039;KN&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;label&#039;    =&gt; __( &#039;Postal code&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; true,
+							&#039;label&#039;    =&gt; __( &#039;Parish&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;KR&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;KW&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;LV&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;Municipality&#039;, &#039;woocommerce&#039; ),
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;LB&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;MF&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;MQ&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;MT&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;MZ&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;NI&#039; =&gt; array(
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Department&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;NL&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;NG&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;Postcode&#039;, &#039;woocommerce&#039; ),
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;State&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;NZ&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Postcode&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;label&#039;    =&gt; __( &#039;Region&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;NO&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;NP&#039; =&gt; array(
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;State / Zone&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;PA&#039; =&gt; array(
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;PL&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;PR&#039; =&gt; array(
+						&#039;city&#039;  =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Municipality&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;PT&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;PY&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;Department&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;RE&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;RO&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;County&#039;, &#039;woocommerce&#039; ),
+							&#039;required&#039; =&gt; true,
+						),
+					),
+					&#039;RS&#039; =&gt; array(
+						&#039;city&#039;     =&gt; array(
+							&#039;required&#039; =&gt; true,
+						),
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; true,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;District&#039;, &#039;woocommerce&#039; ),
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;RW&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;SG&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+						&#039;city&#039;  =&gt; array(
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;SK&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;SI&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;SR&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;SV&#039; =&gt; array(
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Department&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;ES&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;LI&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;Municipality&#039;, &#039;woocommerce&#039; ),
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;LK&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;LU&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;MD&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Municipality / District&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;SE&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;TR&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;UG&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+						&#039;city&#039;     =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;Town / Village&#039;, &#039;woocommerce&#039; ),
+							&#039;required&#039; =&gt; true,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;District&#039;, &#039;woocommerce&#039; ),
+							&#039;required&#039; =&gt; true,
+						),
+					),
+					&#039;US&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;ZIP Code&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;State&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;UY&#039; =&gt; array(
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Department&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;GB&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Postcode&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039;    =&gt; __( &#039;County&#039;, &#039;woocommerce&#039; ),
+							&#039;required&#039; =&gt; false,
+						),
+					),
+					&#039;ST&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+						&#039;state&#039;    =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;District&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;VN&#039; =&gt; array(
+						&#039;state&#039;     =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+						&#039;postcode&#039;  =&gt; array(
+							&#039;priority&#039; =&gt; 65,
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; false,
+						),
+						&#039;address_2&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; false,
+						),
+					),
+					&#039;WS&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;YT&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+					&#039;ZA&#039; =&gt; array(
+						&#039;state&#039; =&gt; array(
+							&#039;label&#039; =&gt; __( &#039;Province&#039;, &#039;woocommerce&#039; ),
+						),
+					),
+					&#039;ZW&#039; =&gt; array(
+						&#039;postcode&#039; =&gt; array(
+							&#039;required&#039; =&gt; false,
+							&#039;hidden&#039;   =&gt; true,
+						),
+					),
+				)
+			);
+
+			$this-&gt;locale = array_intersect_key( $this-&gt;locale, array_merge( $this-&gt;get_allowed_countries(), $this-&gt;get_shipping_countries() ) );
+
+			// Default Locale Can be filtered to override fields in get_address_fields(). Countries with no specific locale will use default.
+			$this-&gt;locale[&#039;default&#039;] = apply_filters( &#039;woocommerce_get_country_locale_default&#039;, $this-&gt;get_default_address_fields() );
+
+			// Filter default AND shop base locales to allow overrides via a single function. These will be used when changing countries on the checkout.
+			if ( ! isset( $this-&gt;locale[ $this-&gt;get_base_country() ] ) ) {
+				$this-&gt;locale[ $this-&gt;get_base_country() ] = $this-&gt;locale[&#039;default&#039;];
+			}
+
+			$this-&gt;locale[&#039;default&#039;]                   = apply_filters( &#039;woocommerce_get_country_locale_base&#039;, $this-&gt;locale[&#039;default&#039;] );
+			$this-&gt;locale[ $this-&gt;get_base_country() ] = apply_filters( &#039;woocommerce_get_country_locale_base&#039;, $this-&gt;locale[ $this-&gt;get_base_country() ] );
+		}
+
+		return $this-&gt;locale;
+	}
+
+	/**
+	 * Apply locale and get address fields.
+	 *
+	 * @param  mixed  $country Country.
+	 * @param  string $type    Address type, defaults to &#039;billing_&#039;.
+	 * @return array
+	 */
+	public function get_address_fields( $country = &#039;&#039;, $type = &#039;billing_&#039; ) {
+		if ( ! $country ) {
+			$country = $this-&gt;get_base_country();
+		}
+
+		$fields = $this-&gt;get_default_address_fields();
+		$locale = $this-&gt;get_country_locale();
+
+		if ( isset( $locale[ $country ] ) ) {
+			$fields = wc_array_overlay( $fields, $locale[ $country ] );
+		}
+
+		// Prepend field keys.
+		$address_fields = array();
+
+		foreach ( $fields as $key =&gt; $value ) {
+			if ( &#039;state&#039; === $key ) {
+				$value[&#039;country_field&#039;] = $type . &#039;country&#039;;
+				$value[&#039;country&#039;]       = $country;
+			}
+			$address_fields[ $type . $key ] = $value;
+		}
+
+		// Add email and phone fields.
+		if ( &#039;billing_&#039; === $type ) {
+			if ( &#039;hidden&#039; !== get_option( &#039;woocommerce_checkout_phone_field&#039;, &#039;required&#039; ) ) {
+				$address_fields[&#039;billing_phone&#039;] = array(
+					&#039;label&#039;        =&gt; __( &#039;Phone&#039;, &#039;woocommerce&#039; ),
+					&#039;required&#039;     =&gt; &#039;required&#039; === get_option( &#039;woocommerce_checkout_phone_field&#039;, &#039;required&#039; ),
+					&#039;type&#039;         =&gt; &#039;tel&#039;,
+					&#039;class&#039;        =&gt; array( &#039;form-row-wide&#039; ),
+					&#039;validate&#039;     =&gt; array( &#039;phone&#039; ),
+					&#039;autocomplete&#039; =&gt; &#039;tel&#039;,
+					&#039;priority&#039;     =&gt; 100,
+				);
+			}
+			$address_fields[&#039;billing_email&#039;] = array(
+				&#039;label&#039;        =&gt; __( &#039;Email address&#039;, &#039;woocommerce&#039; ),
+				&#039;required&#039;     =&gt; true,
+				&#039;type&#039;         =&gt; &#039;email&#039;,
+				&#039;class&#039;        =&gt; array( &#039;form-row-wide&#039; ),
+				&#039;validate&#039;     =&gt; array( &#039;email&#039; ),
+				&#039;autocomplete&#039; =&gt; &#039;no&#039; === get_option( &#039;woocommerce_registration_generate_username&#039; ) ? &#039;email&#039; : &#039;email username&#039;,
+				&#039;priority&#039;     =&gt; 110,
+			);
+		}
+
+		/**
+		 * Important note on this filter: Changes to address fields can and will be overridden by
+		 * the woocommerce_default_address_fields. The locales/default locales apply on top based
+		 * on country selection. If you want to change things like the required status of an
+		 * address field, filter woocommerce_default_address_fields instead.
+		 */
+		$address_fields = apply_filters( &#039;woocommerce_&#039; . $type . &#039;fields&#039;, $address_fields, $country );
+		// Sort each of the fields based on priority.
+		uasort( $address_fields, &#039;wc_checkout_fields_uasort_comparison&#039; );
+
+		return $address_fields;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

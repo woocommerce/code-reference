@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866950">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866950">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">Plugins.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * REST API Plugins Controller
+ *
+ * Handles requests to install and activate depedent plugins.
+ */
+
+namespace Automattic\WooCommerce\Admin\API;
+
+use Automattic\WooCommerce\Internal\Admin\Onboarding\OnboardingProfile;
+use Automattic\WooCommerce\Admin\PaymentMethodSuggestionsDataSourcePoller;
+use Automattic\WooCommerce\Admin\PluginsHelper;
+use Automattic\WooCommerce\Internal\Admin\Notes\InstallJPAndWCSPlugins;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Plugins Controller.
+ *
+ * @internal
+ * @extends WC_REST_Data_Controller
+ */
+class Plugins extends \WC_REST_Data_Controller {
+	/**
+	 * Endpoint namespace.
+	 *
+	 * @var string
+	 */
+	protected $namespace = &#039;wc-admin&#039;;
+
+	/**
+	 * Route base.
+	 *
+	 * @var string
+	 */
+	protected $rest_base = &#039;plugins&#039;;
+
+	/**
+	 * Register routes.
+	 */
+	public function register_routes() {
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/install&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; \WP_REST_Server::EDITABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;install_plugins&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/install/status&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; \WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_installation_status&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/install/status/(?P&lt;job_id&gt;[a-z0-9_\-]+)&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; \WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_job_installation_status&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/active&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; \WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;active_plugins&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;get_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/installed&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; \WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;installed_plugins&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;get_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/activate&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; \WP_REST_Server::EDITABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;activate_plugins&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/activate/status&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; \WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_activation_status&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/activate/status/(?P&lt;job_id&gt;[a-z0-9_\-]+)&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; \WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;get_job_activation_status&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_item_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/connect-jetpack&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; \WP_REST_Server::READABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;connect_jetpack&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_connect_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/request-wccom-connect&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; &#039;POST&#039;,
+					&#039;callback&#039;            =&gt; array( $this, &#039;request_wccom_connect&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_connect_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/finish-wccom-connect&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; &#039;POST&#039;,
+					&#039;callback&#039;            =&gt; array( $this, &#039;finish_wccom_connect&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_connect_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/connect-wcpay&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; \WP_REST_Server::EDITABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;connect_wcpay&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_connect_schema&#039; ),
+			)
+		);
+
+		register_rest_route(
+			$this-&gt;namespace,
+			&#039;/&#039; . $this-&gt;rest_base . &#039;/connect-square&#039;,
+			array(
+				array(
+					&#039;methods&#039;             =&gt; \WP_REST_Server::EDITABLE,
+					&#039;callback&#039;            =&gt; array( $this, &#039;connect_square&#039; ),
+					&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				),
+				&#039;schema&#039; =&gt; array( $this, &#039;get_connect_schema&#039; ),
+			)
+		);
+	}
+
+	/**
+	 * Check if a given request has access to manage plugins.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|boolean
+	 */
+	public function update_item_permissions_check( $request ) {
+		if ( ! current_user_can( &#039;install_plugins&#039; ) ) {
+			return new \WP_Error( &#039;woocommerce_rest_cannot_update&#039;, __( &#039;Sorry, you cannot manage plugins.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; rest_authorization_required_code() ) );
+		}
+		return true;
+	}
+
+	/**
+	 * Install the requested plugin.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|array Plugin Status
+	 */
+	public function install_plugin( $request ) {
+		wc_deprecated_function( &#039;install_plugin&#039;, &#039;4.3&#039;, &#039;\Automattic\WooCommerce\Admin\API\Plugins()-&gt;install_plugins&#039; );
+		// This method expects a `plugin` argument to be sent, install plugins requires plugins.
+		$request[&#039;plugins&#039;] = $request[&#039;plugin&#039;];
+		return self::install_plugins( $request );
+	}
+
+	/**
+	 * Installs the requested plugins.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|array Plugin Status
+	 */
+	public function install_plugins( $request ) {
+		$plugins = explode( &#039;,&#039;, $request[&#039;plugins&#039;] );
+
+		if ( empty( $request[&#039;plugins&#039;] ) || ! is_array( $plugins ) ) {
+			return new \WP_Error( &#039;woocommerce_rest_invalid_plugins&#039;, __( &#039;Plugins must be a non-empty array.&#039;, &#039;woocommerce&#039; ), 404 );
+		}
+
+		if ( isset( $request[&#039;async&#039;] ) &amp;&amp; $request[&#039;async&#039;] ) {
+			$job_id = PluginsHelper::schedule_install_plugins( $plugins );
+
+			return array(
+				&#039;data&#039;    =&gt; array(
+					&#039;job_id&#039;  =&gt; $job_id,
+					&#039;plugins&#039; =&gt; $plugins,
+				),
+				&#039;message&#039; =&gt; __( &#039;Plugin installation has been scheduled.&#039;, &#039;woocommerce&#039; ),
+			);
+		}
+
+		$data = PluginsHelper::install_plugins( $plugins );
+
+		return array(
+			&#039;data&#039;    =&gt; array(
+				&#039;installed&#039;    =&gt; $data[&#039;installed&#039;],
+				&#039;results&#039;      =&gt; $data[&#039;results&#039;],
+				&#039;install_time&#039; =&gt; $data[&#039;time&#039;],
+			),
+			&#039;errors&#039;  =&gt; $data[&#039;errors&#039;],
+			&#039;success&#039; =&gt; count( $data[&#039;errors&#039;]-&gt;errors ) === 0,
+			&#039;message&#039; =&gt; count( $data[&#039;errors&#039;]-&gt;errors ) === 0
+				? __( &#039;Plugins were successfully installed.&#039;, &#039;woocommerce&#039; )
+				: __( &#039;There was a problem installing some of the requested plugins.&#039;, &#039;woocommerce&#039; ),
+		);
+	}
+
+	/**
+	 * Returns a list of recently scheduled installation jobs.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return array Jobs.
+	 */
+	public function get_installation_status( $request ) {
+		return PluginsHelper::get_installation_status();
+	}
+
+	/**
+	 * Returns a list of recently scheduled installation jobs.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return array Job.
+	 */
+	public function get_job_installation_status( $request ) {
+		$job_id = $request-&gt;get_param( &#039;job_id&#039; );
+		$jobs   = PluginsHelper::get_installation_status( $job_id );
+		return reset( $jobs );
+	}
+
+	/**
+	 * Returns a list of active plugins in API format.
+	 *
+	 * @return array Active plugins
+	 */
+	public static function active_plugins() {
+		return( array(
+			&#039;plugins&#039; =&gt; array_values( PluginsHelper::get_active_plugin_slugs() ),
+		) );
+	}
+	/**
+	 * Returns a list of active plugins.
+	 *
+	 * @internal
+	 * @return array Active plugins
+	 */
+	public static function get_active_plugins() {
+		$data = self::active_plugins();
+		return $data[&#039;plugins&#039;];
+	}
+
+	/**
+	 * Returns a list of installed plugins.
+	 *
+	 * @return array Installed plugins
+	 */
+	public function installed_plugins() {
+		return( array(
+			&#039;plugins&#039; =&gt; PluginsHelper::get_installed_plugin_slugs(),
+		) );
+	}
+
+	/**
+	 * Activate the requested plugin.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|array Plugin Status
+	 */
+	public function activate_plugins( $request ) {
+		$plugins = explode( &#039;,&#039;, $request[&#039;plugins&#039;] );
+
+		if ( empty( $request[&#039;plugins&#039;] ) || ! is_array( $plugins ) ) {
+			return new \WP_Error( &#039;woocommerce_rest_invalid_plugins&#039;, __( &#039;Plugins must be a non-empty array.&#039;, &#039;woocommerce&#039; ), 404 );
+		}
+
+		if ( isset( $request[&#039;async&#039;] ) &amp;&amp; $request[&#039;async&#039;] ) {
+			$job_id = PluginsHelper::schedule_activate_plugins( $plugins );
+
+			return array(
+				&#039;data&#039;    =&gt; array(
+					&#039;job_id&#039;  =&gt; $job_id,
+					&#039;plugins&#039; =&gt; $plugins,
+				),
+				&#039;message&#039; =&gt; __( &#039;Plugin activation has been scheduled.&#039;, &#039;woocommerce&#039; ),
+			);
+		}
+
+		$data = PluginsHelper::activate_plugins( $plugins );
+
+		return( array(
+			&#039;data&#039;    =&gt; array(
+				&#039;activated&#039; =&gt; $data[&#039;activated&#039;],
+				&#039;active&#039;    =&gt; $data[&#039;active&#039;],
+			),
+			&#039;errors&#039;  =&gt; $data[&#039;errors&#039;],
+			&#039;success&#039; =&gt; count( $data[&#039;errors&#039;]-&gt;errors ) === 0,
+			&#039;message&#039; =&gt; count( $data[&#039;errors&#039;]-&gt;errors ) === 0
+				? __( &#039;Plugins were successfully activated.&#039;, &#039;woocommerce&#039; )
+				: __( &#039;There was a problem activating some of the requested plugins.&#039;, &#039;woocommerce&#039; ),
+		) );
+	}
+
+	/**
+	 * Returns a list of recently scheduled activation jobs.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return array Job.
+	 */
+	public function get_activation_status( $request ) {
+		return PluginsHelper::get_activation_status();
+	}
+
+	/**
+	 * Returns a list of recently scheduled activation jobs.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return array Jobs.
+	 */
+	public function get_job_activation_status( $request ) {
+		$job_id = $request-&gt;get_param( &#039;job_id&#039; );
+		$jobs   = PluginsHelper::get_activation_status( $job_id );
+		return reset( $jobs );
+	}
+
+	/**
+	 * Generates a Jetpack Connect URL.
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|array Connection URL for Jetpack
+	 */
+	public function connect_jetpack( $request ) {
+		if ( ! class_exists( &#039;\Jetpack&#039; ) ) {
+			return new \WP_Error( &#039;woocommerce_rest_jetpack_not_active&#039;, __( &#039;Jetpack is not installed or active.&#039;, &#039;woocommerce&#039; ), 404 );
+		}
+
+		$redirect_url = apply_filters( &#039;woocommerce_admin_onboarding_jetpack_connect_redirect_url&#039;, esc_url_raw( $request[&#039;redirect_url&#039;] ) );
+		$connect_url  = \Jetpack::init()-&gt;build_connect_url( true, $redirect_url, &#039;woocommerce-onboarding&#039; );
+
+		$calypso_env = defined( &#039;WOOCOMMERCE_CALYPSO_ENVIRONMENT&#039; ) &amp;&amp; in_array( WOOCOMMERCE_CALYPSO_ENVIRONMENT, array( &#039;development&#039;, &#039;wpcalypso&#039;, &#039;horizon&#039;, &#039;stage&#039; ), true ) ? WOOCOMMERCE_CALYPSO_ENVIRONMENT : &#039;production&#039;;
+		$connect_url = add_query_arg( array( &#039;calypso_env&#039; =&gt; $calypso_env ), $connect_url );
+
+		return( array(
+			&#039;slug&#039;          =&gt; &#039;jetpack&#039;,
+			&#039;name&#039;          =&gt; __( &#039;Jetpack&#039;, &#039;woocommerce&#039; ),
+			&#039;connectAction&#039; =&gt; $connect_url,
+		) );
+	}
+
+	/**
+	 *  Kicks off the WCCOM Connect process.
+	 *
+	 * @return WP_Error|array Connection URL for WooCommerce.com
+	 */
+	public function request_wccom_connect() {
+		include_once WC_ABSPATH . &#039;includes/admin/helper/class-wc-helper-api.php&#039;;
+		if ( ! class_exists( &#039;WC_Helper_API&#039; ) ) {
+			return new \WP_Error( &#039;woocommerce_rest_helper_not_active&#039;, __( &#039;There was an error loading the WooCommerce.com Helper API.&#039;, &#039;woocommerce&#039; ), 404 );
+		}
+
+		$redirect_uri = wc_admin_url( &#039;&amp;task=connect&amp;wccom-connected=1&#039; );
+
+		$request = \WC_Helper_API::post(
+			&#039;oauth/request_token&#039;,
+			array(
+				&#039;body&#039; =&gt; array(
+					&#039;home_url&#039;     =&gt; home_url(),
+					&#039;redirect_uri&#039; =&gt; $redirect_uri,
+				),
+			)
+		);
+
+		$code = wp_remote_retrieve_response_code( $request );
+		if ( 200 !== $code ) {
+			return new \WP_Error( &#039;woocommerce_rest_helper_connect&#039;, __( &#039;There was an error connecting to WooCommerce.com. Please try again.&#039;, &#039;woocommerce&#039; ), 500 );
+		}
+
+		$secret = json_decode( wp_remote_retrieve_body( $request ) );
+		if ( empty( $secret ) ) {
+			return new \WP_Error( &#039;woocommerce_rest_helper_connect&#039;, __( &#039;There was an error connecting to WooCommerce.com. Please try again.&#039;, &#039;woocommerce&#039; ), 500 );
+		}
+
+		do_action( &#039;woocommerce_helper_connect_start&#039; );
+
+		$connect_url = add_query_arg(
+			array(
+				&#039;home_url&#039;     =&gt; rawurlencode( home_url() ),
+				&#039;redirect_uri&#039; =&gt; rawurlencode( $redirect_uri ),
+				&#039;secret&#039;       =&gt; rawurlencode( $secret ),
+				&#039;wccom-from&#039;   =&gt; &#039;onboarding&#039;,
+			),
+			\WC_Helper_API::url( &#039;oauth/authorize&#039; )
+		);
+
+		if ( defined( &#039;WOOCOMMERCE_CALYPSO_ENVIRONMENT&#039; ) &amp;&amp; in_array( WOOCOMMERCE_CALYPSO_ENVIRONMENT, array( &#039;development&#039;, &#039;wpcalypso&#039;, &#039;horizon&#039;, &#039;stage&#039; ), true ) ) {
+			$connect_url = add_query_arg(
+				array(
+					&#039;calypso_env&#039; =&gt; WOOCOMMERCE_CALYPSO_ENVIRONMENT,
+				),
+				$connect_url
+			);
+		}
+
+		return( array(
+			&#039;connectAction&#039; =&gt; $connect_url,
+		) );
+	}
+
+	/**
+	 * Finishes connecting to WooCommerce.com.
+	 *
+	 * @param  object $rest_request Request details.
+	 * @return WP_Error|array Contains success status.
+	 */
+	public function finish_wccom_connect( $rest_request ) {
+		include_once WC_ABSPATH . &#039;includes/admin/helper/class-wc-helper.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/admin/helper/class-wc-helper-api.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/admin/helper/class-wc-helper-updater.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/admin/helper/class-wc-helper-options.php&#039;;
+		if ( ! class_exists( &#039;WC_Helper_API&#039; ) ) {
+			return new \WP_Error( &#039;woocommerce_rest_helper_not_active&#039;, __( &#039;There was an error loading the WooCommerce.com Helper API.&#039;, &#039;woocommerce&#039; ), 404 );
+		}
+
+		// Obtain an access token.
+		$request = \WC_Helper_API::post(
+			&#039;oauth/access_token&#039;,
+			array(
+				&#039;body&#039; =&gt; array(
+					&#039;request_token&#039; =&gt; wp_unslash( $rest_request[&#039;request_token&#039;] ), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+					&#039;home_url&#039;      =&gt; home_url(),
+				),
+			)
+		);
+
+		$code = wp_remote_retrieve_response_code( $request );
+		if ( 200 !== $code ) {
+			return new \WP_Error( &#039;woocommerce_rest_helper_connect&#039;, __( &#039;There was an error connecting to WooCommerce.com. Please try again.&#039;, &#039;woocommerce&#039; ), 500 );
+		}
+
+		$access_token = json_decode( wp_remote_retrieve_body( $request ), true );
+		if ( ! $access_token ) {
+			return new \WP_Error( &#039;woocommerce_rest_helper_connect&#039;, __( &#039;There was an error connecting to WooCommerce.com. Please try again.&#039;, &#039;woocommerce&#039; ), 500 );
+		}
+
+		\WC_Helper_Options::update(
+			&#039;auth&#039;,
+			array(
+				&#039;access_token&#039;        =&gt; $access_token[&#039;access_token&#039;],
+				&#039;access_token_secret&#039; =&gt; $access_token[&#039;access_token_secret&#039;],
+				&#039;site_id&#039;             =&gt; $access_token[&#039;site_id&#039;],
+				&#039;user_id&#039;             =&gt; get_current_user_id(),
+				&#039;updated&#039;             =&gt; time(),
+			)
+		);
+
+		if ( ! \WC_Helper::_flush_authentication_cache() ) {
+			\WC_Helper_Options::update( &#039;auth&#039;, array() );
+			return new \WP_Error( &#039;woocommerce_rest_helper_connect&#039;, __( &#039;There was an error connecting to WooCommerce.com. Please try again.&#039;, &#039;woocommerce&#039; ), 500 );
+		}
+
+		delete_transient( &#039;_woocommerce_helper_subscriptions&#039; );
+		\WC_Helper_Updater::flush_updates_cache();
+
+		do_action( &#039;woocommerce_helper_connected&#039; );
+
+		return array(
+			&#039;success&#039; =&gt; true,
+		);
+	}
+
+
+	/**
+	 * Returns a URL that can be used to connect to Square.
+	 *
+	 * @return WP_Error|array Connect URL.
+	 */
+	public function connect_square() {
+		if ( ! class_exists( &#039;\WooCommerce\Square\Handlers\Connection&#039; ) ) {
+			return new \WP_Error( &#039;woocommerce_rest_helper_connect&#039;, __( &#039;There was an error connecting to Square.&#039;, &#039;woocommerce&#039; ), 500 );
+		}
+
+		if ( &#039;US&#039; === WC()-&gt;countries-&gt;get_base_country() ) {
+			$profile = get_option( OnboardingProfile::DATA_OPTION, array() );
+			if ( ! empty( $profile[&#039;industry&#039;] ) ) {
+				$has_cbd_industry = in_array( &#039;cbd-other-hemp-derived-products&#039;, array_column( $profile[&#039;industry&#039;], &#039;slug&#039; ), true );
+			}
+		}
+
+		if ( $has_cbd_industry ) {
+			$url = &#039;https://squareup.com/t/f_partnerships/d_referrals/p_woocommerce/c_general/o_none/l_us/dt_alldevice/pr_payments/?route=/solutions/cbd&#039;;
+		} else {
+			$url = \WooCommerce\Square\Handlers\Connection::CONNECT_URL_PRODUCTION;
+		}
+
+		$redirect_url = wp_nonce_url( wc_admin_url( &#039;&amp;task=payments&amp;method=square&amp;square-connect-finish=1&#039; ), &#039;wc_square_connected&#039; );
+		$args         = array(
+			&#039;redirect&#039; =&gt; rawurlencode( rawurlencode( $redirect_url ) ),
+			&#039;scopes&#039;   =&gt; implode(
+				&#039;,&#039;,
+				array(
+					&#039;MERCHANT_PROFILE_READ&#039;,
+					&#039;PAYMENTS_READ&#039;,
+					&#039;PAYMENTS_WRITE&#039;,
+					&#039;ORDERS_READ&#039;,
+					&#039;ORDERS_WRITE&#039;,
+					&#039;CUSTOMERS_READ&#039;,
+					&#039;CUSTOMERS_WRITE&#039;,
+					&#039;SETTLEMENTS_READ&#039;,
+					&#039;ITEMS_READ&#039;,
+					&#039;ITEMS_WRITE&#039;,
+					&#039;INVENTORY_READ&#039;,
+					&#039;INVENTORY_WRITE&#039;,
+				)
+			),
+		);
+
+		$connect_url = add_query_arg( $args, $url );
+
+		return( array(
+			&#039;connectUrl&#039; =&gt; $connect_url,
+		) );
+	}
+
+	/**
+	 * Returns a URL that can be used to by WCPay to verify business details with Stripe.
+	 *
+	 * @return WP_Error|array Connect URL.
+	 */
+	public function connect_wcpay() {
+		if ( ! class_exists( &#039;WC_Payments_Account&#039; ) ) {
+			return new \WP_Error( &#039;woocommerce_rest_helper_connect&#039;, __( &#039;There was an error communicating with the WooPayments plugin.&#039;, &#039;woocommerce&#039; ), 500 );
+		}
+
+		$connect_url = add_query_arg(
+			array(
+				&#039;wcpay-connect&#039; =&gt; &#039;WCADMIN_PAYMENT_TASK&#039;,
+				&#039;_wpnonce&#039;      =&gt; wp_create_nonce( &#039;wcpay-connect&#039; ),
+			),
+			admin_url()
+		);
+
+		return( array(
+			&#039;connectUrl&#039; =&gt; $connect_url,
+		) );
+	}
+
+	/**
+	 * Get the schema, conforming to JSON Schema.
+	 *
+	 * @return array
+	 */
+	public function get_item_schema() {
+		$schema = array(
+			&#039;$schema&#039;    =&gt; &#039;http://json-schema.org/draft-04/schema#&#039;,
+			&#039;title&#039;      =&gt; &#039;plugins&#039;,
+			&#039;type&#039;       =&gt; &#039;object&#039;,
+			&#039;properties&#039; =&gt; array(
+				&#039;slug&#039;   =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Plugin slug.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;name&#039;   =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Plugin name.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;status&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Plugin status.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+			),
+		);
+
+		return $this-&gt;add_additional_fields_schema( $schema );
+	}
+
+	/**
+	 * Get the schema, conforming to JSON Schema.
+	 *
+	 * @return array
+	 */
+	public function get_connect_schema() {
+		$schema = $this-&gt;get_item_schema();
+		unset( $schema[&#039;properties&#039;][&#039;status&#039;] );
+		$schema[&#039;properties&#039;][&#039;connectAction&#039;] = array(
+			&#039;description&#039; =&gt; __( &#039;Action that should be completed to connect Jetpack.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;        =&gt; &#039;string&#039;,
+			&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+			&#039;readonly&#039;    =&gt; true,
+		);
+		return $schema;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

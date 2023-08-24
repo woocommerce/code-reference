@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866951">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866951">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">PluginsHelper.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * PluginsHelper
+ *
+ * Helper class for the site&#039;s plugins.
+ */
+
+namespace Automattic\WooCommerce\Admin;
+
+use ActionScheduler;
+use ActionScheduler_DBStore;
+use ActionScheduler_QueueRunner;
+use Automatic_Upgrader_Skin;
+use Automattic\WooCommerce\Admin\PluginsInstallLoggers\AsyncPluginsInstallLogger;
+use Automattic\WooCommerce\Admin\PluginsInstallLoggers\PluginsInstallLogger;
+use Plugin_Upgrader;
+use WP_Error;
+use WP_Upgrader;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+if ( ! function_exists( &#039;get_plugins&#039; ) ) {
+	require_once ABSPATH . &#039;wp-admin/includes/plugin.php&#039;;
+}
+
+/**
+ * Class PluginsHelper
+ */
+class PluginsHelper {
+
+	/**
+	 * Initialize hooks.
+	 */
+	public static function init() {
+		add_action( &#039;woocommerce_plugins_install_callback&#039;, array( __CLASS__, &#039;install_plugins&#039; ), 10, 2 );
+		add_action( &#039;woocommerce_plugins_install_and_activate_async_callback&#039;, array( __CLASS__, &#039;install_and_activate_plugins_async_callback&#039; ), 10, 2 );
+		add_action( &#039;woocommerce_plugins_activate_callback&#039;, array( __CLASS__, &#039;activate_plugins&#039; ), 10, 2 );
+	}
+
+	/**
+	 * Get the path to the plugin file relative to the plugins directory from the plugin slug.
+	 *
+	 * E.g. &#039;woocommerce&#039; returns &#039;woocommerce/woocommerce.php&#039;
+	 *
+	 * @param string $slug Plugin slug to get path for.
+	 *
+	 * @return string|false
+	 */
+	public static function get_plugin_path_from_slug( $slug ) {
+		$plugins = get_plugins();
+
+		if ( strstr( $slug, &#039;/&#039; ) ) {
+			// The slug is already a plugin path.
+			return $slug;
+		}
+
+		foreach ( $plugins as $plugin_path =&gt; $data ) {
+			$path_parts = explode( &#039;/&#039;, $plugin_path );
+			if ( $path_parts[0] === $slug ) {
+				return $plugin_path;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Get an array of installed plugin slugs.
+	 *
+	 * @return array
+	 */
+	public static function get_installed_plugin_slugs() {
+		return array_map(
+			function ( $plugin_path ) {
+				$path_parts = explode( &#039;/&#039;, $plugin_path );
+
+				return $path_parts[0];
+			},
+			array_keys( get_plugins() )
+		);
+	}
+
+	/**
+	 * Get an array of installed plugins with their file paths as a key value pair.
+	 *
+	 * @return array
+	 */
+	public static function get_installed_plugins_paths() {
+		$plugins           = get_plugins();
+		$installed_plugins = array();
+
+		foreach ( $plugins as $path =&gt; $plugin ) {
+			$path_parts                 = explode( &#039;/&#039;, $path );
+			$slug                       = $path_parts[0];
+			$installed_plugins[ $slug ] = $path;
+		}
+
+		return $installed_plugins;
+	}
+
+	/**
+	 * Get an array of active plugin slugs.
+	 *
+	 * @return array
+	 */
+	public static function get_active_plugin_slugs() {
+		return array_map(
+			function ( $plugin_path ) {
+				$path_parts = explode( &#039;/&#039;, $plugin_path );
+
+				return $path_parts[0];
+			},
+			get_option( &#039;active_plugins&#039;, array() )
+		);
+	}
+
+	/**
+	 * Checks if a plugin is installed.
+	 *
+	 * @param string $plugin Path to the plugin file relative to the plugins directory or the plugin directory name.
+	 *
+	 * @return bool
+	 */
+	public static function is_plugin_installed( $plugin ) {
+		$plugin_path = self::get_plugin_path_from_slug( $plugin );
+
+		return $plugin_path ? array_key_exists( $plugin_path, get_plugins() ) : false;
+	}
+
+	/**
+	 * Checks if a plugin is active.
+	 *
+	 * @param string $plugin Path to the plugin file relative to the plugins directory or the plugin directory name.
+	 *
+	 * @return bool
+	 */
+	public static function is_plugin_active( $plugin ) {
+		$plugin_path = self::get_plugin_path_from_slug( $plugin );
+
+		return $plugin_path ? in_array( $plugin_path, get_option( &#039;active_plugins&#039;, array() ), true ) : false;
+	}
+
+	/**
+	 * Get plugin data.
+	 *
+	 * @param string $plugin Path to the plugin file relative to the plugins directory or the plugin directory name.
+	 *
+	 * @return array|false
+	 */
+	public static function get_plugin_data( $plugin ) {
+		$plugin_path = self::get_plugin_path_from_slug( $plugin );
+		$plugins     = get_plugins();
+
+		return isset( $plugins[ $plugin_path ] ) ? $plugins[ $plugin_path ] : false;
+	}
+
+	/**
+	 * Install an array of plugins.
+	 *
+	 * @param array                     $plugins Plugins to install.
+	 * @param PluginsInstallLogger|null $logger an optional logger.
+	 *
+	 * @return array
+	 */
+	public static function install_plugins( $plugins, PluginsInstallLogger $logger = null ) {
+		/**
+		 * Filter the list of plugins to install.
+		 *
+		 * @param array $plugins A list of the plugins to install.
+		 *
+		 * @since 6.4.0
+		 */
+		$plugins = apply_filters( &#039;woocommerce_admin_plugins_pre_install&#039;, $plugins );
+
+		if ( empty( $plugins ) || ! is_array( $plugins ) ) {
+			return new WP_Error(
+				&#039;woocommerce_plugins_invalid_plugins&#039;,
+				__( &#039;Plugins must be a non-empty array.&#039;, &#039;woocommerce&#039; )
+			);
+		}
+
+		require_once ABSPATH . &#039;wp-admin/includes/plugin.php&#039;;
+		include_once ABSPATH . &#039;/wp-admin/includes/admin.php&#039;;
+		include_once ABSPATH . &#039;/wp-admin/includes/plugin-install.php&#039;;
+		include_once ABSPATH . &#039;/wp-admin/includes/plugin.php&#039;;
+		include_once ABSPATH . &#039;/wp-admin/includes/class-wp-upgrader.php&#039;;
+		include_once ABSPATH . &#039;/wp-admin/includes/class-plugin-upgrader.php&#039;;
+
+		$existing_plugins  = self::get_installed_plugins_paths();
+		$installed_plugins = array();
+		$results           = array();
+		$time              = array();
+		$errors            = new WP_Error();
+
+		foreach ( $plugins as $plugin ) {
+			$slug = sanitize_key( $plugin );
+			$logger &amp;&amp; $logger-&gt;install_requested( $plugin );
+
+			if ( isset( $existing_plugins[ $slug ] ) ) {
+				$installed_plugins[] = $plugin;
+				$logger &amp;&amp; $logger-&gt;installed( $plugin, 0 );
+				continue;
+			}
+
+			$start_time = microtime( true );
+
+			$api = plugins_api(
+				&#039;plugin_information&#039;,
+				array(
+					&#039;slug&#039;   =&gt; $slug,
+					&#039;fields&#039; =&gt; array(
+						&#039;sections&#039; =&gt; false,
+					),
+				)
+			);
+
+			if ( is_wp_error( $api ) ) {
+				$properties = array(
+					&#039;error_message&#039;     =&gt; sprintf(
+						// translators: %s: plugin slug (example: woocommerce-services).
+						__(
+							&#039;The requested plugin `%s` could not be installed. Plugin API call failed.&#039;,
+							&#039;woocommerce&#039;
+						),
+						$slug
+					),
+					&#039;api_error_message&#039; =&gt; $api-&gt;get_error_message(),
+					&#039;slug&#039;              =&gt; $slug,
+				);
+				wc_admin_record_tracks_event( &#039;install_plugin_error&#039;, $properties );
+
+				/**
+				 * Action triggered when a plugin API call failed.
+				 *
+				 * @param string $slug The plugin slug.
+				 * @param WP_Error $api The API response.
+				 *
+				 * @since 6.4.0
+				 */
+				do_action( &#039;woocommerce_plugins_install_api_error&#039;, $slug, $api );
+
+				$error_message = sprintf(
+				/* translators: %s: plugin slug (example: woocommerce-services) */
+					__( &#039;The requested plugin `%s` could not be installed. Plugin API call failed.&#039;, &#039;woocommerce&#039; ),
+					$slug
+				);
+
+				$errors-&gt;add( $plugin, $error_message );
+				$logger &amp;&amp; $logger-&gt;add_error( $plugin, $error_message );
+
+				continue;
+			}
+
+			$upgrader = new Plugin_Upgrader( new Automatic_Upgrader_Skin() );
+			$result   = $upgrader-&gt;install( $api-&gt;download_link );
+			// result can be false or WP_Error.
+			$results[ $plugin ] = $result;
+			$time[ $plugin ]    = round( ( microtime( true ) - $start_time ) * 1000 );
+
+			if ( is_wp_error( $result ) || is_null( $result ) ) {
+				$properties = array(
+					&#039;error_message&#039;         =&gt; sprintf(
+						/* translators: %s: plugin slug (example: woocommerce-services) */
+						__(
+							&#039;The requested plugin `%s` could not be installed.&#039;,
+							&#039;woocommerce&#039;
+						),
+						$slug
+					),
+					&#039;slug&#039;                  =&gt; $slug,
+					&#039;api_version&#039;           =&gt; $api-&gt;version,
+					&#039;api_download_link&#039;     =&gt; $api-&gt;download_link,
+					&#039;upgrader_skin_message&#039; =&gt; implode( &#039;,&#039;, $upgrader-&gt;skin-&gt;get_upgrade_messages() ),
+					&#039;result&#039;                =&gt; is_wp_error( $result ) ? $result-&gt;get_error_message() : &#039;null&#039;,
+				);
+				wc_admin_record_tracks_event( &#039;install_plugin_error&#039;, $properties );
+
+				/**
+				 * Action triggered when a plugin installation fails.
+				 *
+				 * @param string $slug The plugin slug.
+				 * @param object $api The plugin API object.
+				 * @param WP_Error|null $result The result of the plugin installation.
+				 * @param Plugin_Upgrader $upgrader The plugin upgrader.
+				 *
+				 * @since 6.4.0
+				 */
+				do_action( &#039;woocommerce_plugins_install_error&#039;, $slug, $api, $result, $upgrader );
+
+				$install_error_message = sprintf(
+				/* translators: %s: plugin slug (example: woocommerce-services) */
+					__( &#039;The requested plugin `%s` could not be installed. Upgrader install failed.&#039;, &#039;woocommerce&#039; ),
+					$slug
+				);
+				$errors-&gt;add(
+					$plugin,
+					$install_error_message
+				);
+				$logger &amp;&amp; $logger-&gt;add_error( $plugin, $install_error_message );
+
+				continue;
+			}
+
+			$installed_plugins[] = $plugin;
+			$logger &amp;&amp; $logger-&gt;installed( $plugin, $time[ $plugin ] );
+		}
+
+		$logger &amp;&amp; $logger-&gt;complete();
+
+		$data = array(
+			&#039;installed&#039; =&gt; $installed_plugins,
+			&#039;results&#039;   =&gt; $results,
+			&#039;errors&#039;    =&gt; $errors,
+			&#039;time&#039;      =&gt; $time,
+		);
+
+		return $data;
+	}
+
+	/**
+	 * Callback regsitered by OnboardingPlugins::install_and_activate_async.
+	 *
+	 * It is used to call install_plugins and activate_plugins with a custom logger.
+	 *
+	 * @param array  $plugins A list of plugins to install.
+	 * @param string $job_id An unique job I.D.
+	 * @return bool
+	 */
+	public static function install_and_activate_plugins_async_callback( array $plugins, string $job_id ) {
+		$option_name = &#039;woocommerce_onboarding_plugins_install_and_activate_async_&#039; . $job_id;
+		$logger      = new AsyncPluginsInstallLogger( $option_name );
+		self::install_plugins( $plugins, $logger );
+		self::activate_plugins( $plugins, $logger );
+		return true;
+	}
+
+	/**
+	 * Schedule plugin installation.
+	 *
+	 * @param array $plugins Plugins to install.
+	 *
+	 * @return string Job ID.
+	 */
+	public static function schedule_install_plugins( $plugins ) {
+		if ( empty( $plugins ) || ! is_array( $plugins ) ) {
+			return new WP_Error(
+				&#039;woocommerce_plugins_invalid_plugins&#039;,
+				__( &#039;Plugins must be a non-empty array.&#039;, &#039;woocommerce&#039; ),
+				404
+			);
+		}
+
+		$job_id = uniqid();
+		WC()-&gt;queue()-&gt;schedule_single( time() + 5, &#039;woocommerce_plugins_install_callback&#039;, array( $plugins ) );
+
+		return $job_id;
+	}
+
+	/**
+	 * Activate the requested plugins.
+	 *
+	 * @param array                     $plugins Plugins.
+	 * @param PluginsInstallLogger|null $logger Logger.
+	 *
+	 * @return WP_Error|array Plugin Status
+	 */
+	public static function activate_plugins( $plugins, PluginsInstallLogger $logger = null ) {
+		if ( empty( $plugins ) || ! is_array( $plugins ) ) {
+			return new WP_Error(
+				&#039;woocommerce_plugins_invalid_plugins&#039;,
+				__( &#039;Plugins must be a non-empty array.&#039;, &#039;woocommerce&#039; ),
+				404
+			);
+		}
+
+		require_once ABSPATH . &#039;wp-admin/includes/plugin.php&#039;;
+
+		// the mollie-payments-for-woocommerce plugin calls `WP_Filesystem()` during it&#039;s activation hook, which crashes without this include.
+		require_once ABSPATH . &#039;wp-admin/includes/file.php&#039;;
+
+		/**
+		 * Filter the list of plugins to activate.
+		 *
+		 * @param array $plugins A list of the plugins to activate.
+		 *
+		 * @since 6.4.0
+		 */
+		$plugins = apply_filters( &#039;woocommerce_admin_plugins_pre_activate&#039;, $plugins );
+
+		$plugin_paths      = self::get_installed_plugins_paths();
+		$errors            = new WP_Error();
+		$activated_plugins = array();
+
+		foreach ( $plugins as $plugin ) {
+			$slug = $plugin;
+			$path = isset( $plugin_paths[ $slug ] ) ? $plugin_paths[ $slug ] : false;
+
+			if ( ! $path ) {
+				/* translators: %s: plugin slug (example: woocommerce-services) */
+				$message = sprintf( __( &#039;The requested plugin `%s`. is not yet installed.&#039;, &#039;woocommerce&#039; ), $slug );
+				$errors-&gt;add(
+					$plugin,
+					$message
+				);
+				$logger &amp;&amp; $logger-&gt;add_error( $plugin, $message );
+				continue;
+			}
+
+			$result = activate_plugin( $path );
+			if ( ! is_plugin_active( $path ) ) {
+				/**
+				 * Action triggered when a plugin activation fails.
+				 *
+				 * @param string $slug The plugin slug.
+				 * @param null|WP_Error $result The result of the plugin activation.
+				 *
+				 * @since 6.4.0
+				 */
+				do_action( &#039;woocommerce_plugins_activate_error&#039;, $slug, $result );
+
+				/* translators: %s: plugin slug (example: woocommerce-services) */
+				$message = sprintf( __( &#039;The requested plugin `%s` could not be activated.&#039;, &#039;woocommerce&#039; ), $slug );
+				$errors-&gt;add(
+					$plugin,
+					$message
+				);
+				$logger &amp;&amp; $logger-&gt;add_error( $plugin, $message );
+
+				continue;
+			}
+
+			$activated_plugins[] = $plugin;
+			$logger &amp;&amp; $logger-&gt;activated( $plugin );
+		}
+
+		$data = array(
+			&#039;activated&#039; =&gt; $activated_plugins,
+			&#039;active&#039;    =&gt; self::get_active_plugin_slugs(),
+			&#039;errors&#039;    =&gt; $errors,
+		);
+
+		return $data;
+	}
+
+	/**
+	 * Schedule plugin activation.
+	 *
+	 * @param array $plugins Plugins to activate.
+	 *
+	 * @return string Job ID.
+	 */
+	public static function schedule_activate_plugins( $plugins ) {
+		if ( empty( $plugins ) || ! is_array( $plugins ) ) {
+			return new WP_Error(
+				&#039;woocommerce_plugins_invalid_plugins&#039;,
+				__( &#039;Plugins must be a non-empty array.&#039;, &#039;woocommerce&#039; ),
+				404
+			);
+		}
+
+		$job_id = uniqid();
+		WC()-&gt;queue()-&gt;schedule_single(
+			time() + 5,
+			&#039;woocommerce_plugins_activate_callback&#039;,
+			array( $plugins, $job_id )
+		);
+
+		return $job_id;
+	}
+
+	/**
+	 * Installation status.
+	 *
+	 * @param int $job_id Job ID.
+	 *
+	 * @return array Job data.
+	 */
+	public static function get_installation_status( $job_id = null ) {
+		$actions = WC()-&gt;queue()-&gt;search(
+			array(
+				&#039;hook&#039;    =&gt; &#039;woocommerce_plugins_install_callback&#039;,
+				&#039;search&#039;  =&gt; $job_id,
+				&#039;orderby&#039; =&gt; &#039;date&#039;,
+				&#039;order&#039;   =&gt; &#039;DESC&#039;,
+			)
+		);
+
+		return self::get_action_data( $actions );
+	}
+
+	/**
+	 * Gets the plugin data for the first action.
+	 *
+	 * @param array $actions Array of AS actions.
+	 *
+	 * @return array Array of action data.
+	 */
+	public static function get_action_data( $actions ) {
+		$data = array();
+
+		foreach ( $actions as $action_id =&gt; $action ) {
+			$store  = new ActionScheduler_DBStore();
+			$args   = $action-&gt;get_args();
+			$data[] = array(
+				&#039;job_id&#039;  =&gt; $args[1],
+				&#039;plugins&#039; =&gt; $args[0],
+				&#039;status&#039;  =&gt; $store-&gt;get_status( $action_id ),
+			);
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Activation status.
+	 *
+	 * @param int $job_id Job ID.
+	 *
+	 * @return array Array of action data.
+	 */
+	public static function get_activation_status( $job_id = null ) {
+		$actions = WC()-&gt;queue()-&gt;search(
+			array(
+				&#039;hook&#039;    =&gt; &#039;woocommerce_plugins_activate_callback&#039;,
+				&#039;search&#039;  =&gt; $job_id,
+				&#039;orderby&#039; =&gt; &#039;date&#039;,
+				&#039;order&#039;   =&gt; &#039;DESC&#039;,
+			)
+		);
+
+		return self::get_action_data( $actions );
+	}
+
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

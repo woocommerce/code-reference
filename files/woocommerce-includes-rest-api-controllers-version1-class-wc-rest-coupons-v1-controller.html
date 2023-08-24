@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866948">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866948">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-rest-coupons-v1-controller.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * REST API Coupons controller
+ *
+ * Handles requests to the /coupons endpoint.
+ *
+ * @author   WooThemes
+ * @category API
+ * @package WooCommerce\RestApi
+ * @since    3.0.0
+ */
+
+use Automattic\WooCommerce\Utilities\StringUtil;
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * REST API Coupons controller class.
+ *
+ * @package WooCommerce\RestApi
+ * @extends WC_REST_Posts_Controller
+ */
+class WC_REST_Coupons_V1_Controller extends WC_REST_Posts_Controller {
+
+	/**
+	 * Endpoint namespace.
+	 *
+	 * @var string
+	 */
+	protected $namespace = &#039;wc/v1&#039;;
+
+	/**
+	 * Route base.
+	 *
+	 * @var string
+	 */
+	protected $rest_base = &#039;coupons&#039;;
+
+	/**
+	 * Post type.
+	 *
+	 * @var string
+	 */
+	protected $post_type = &#039;shop_coupon&#039;;
+
+	/**
+	 * Coupons actions.
+	 */
+	public function __construct() {
+		add_filter( &quot;woocommerce_rest_{$this-&gt;post_type}_query&quot;, array( $this, &#039;query_args&#039; ), 10, 2 );
+	}
+
+	/**
+	 * Register the routes for coupons.
+	 */
+	public function register_routes() {
+		register_rest_route( $this-&gt;namespace, &#039;/&#039; . $this-&gt;rest_base, array(
+			array(
+				&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+				&#039;callback&#039;            =&gt; array( $this, &#039;get_items&#039; ),
+				&#039;permission_callback&#039; =&gt; array( $this, &#039;get_items_permissions_check&#039; ),
+				&#039;args&#039;                =&gt; $this-&gt;get_collection_params(),
+			),
+			array(
+				&#039;methods&#039;             =&gt; WP_REST_Server::CREATABLE,
+				&#039;callback&#039;            =&gt; array( $this, &#039;create_item&#039; ),
+				&#039;permission_callback&#039; =&gt; array( $this, &#039;create_item_permissions_check&#039; ),
+				&#039;args&#039;                =&gt; array_merge( $this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::CREATABLE ), array(
+					&#039;code&#039; =&gt; array(
+						&#039;description&#039; =&gt; __( &#039;Coupon code.&#039;, &#039;woocommerce&#039; ),
+						&#039;required&#039;    =&gt; true,
+						&#039;type&#039;        =&gt; &#039;string&#039;,
+					),
+				) ),
+			),
+			&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+		) );
+
+		register_rest_route( $this-&gt;namespace, &#039;/&#039; . $this-&gt;rest_base . &#039;/(?P&lt;id&gt;[\d]+)&#039;, array(
+			&#039;args&#039; =&gt; array(
+				&#039;id&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Unique identifier for the resource.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+				),
+			),
+			array(
+				&#039;methods&#039;             =&gt; WP_REST_Server::READABLE,
+				&#039;callback&#039;            =&gt; array( $this, &#039;get_item&#039; ),
+				&#039;permission_callback&#039; =&gt; array( $this, &#039;get_item_permissions_check&#039; ),
+				&#039;args&#039;                =&gt; array(
+					&#039;context&#039;         =&gt; $this-&gt;get_context_param( array( &#039;default&#039; =&gt; &#039;view&#039; ) ),
+				),
+			),
+			array(
+				&#039;methods&#039;         =&gt; WP_REST_Server::EDITABLE,
+				&#039;callback&#039;        =&gt; array( $this, &#039;update_item&#039; ),
+				&#039;permission_callback&#039; =&gt; array( $this, &#039;update_item_permissions_check&#039; ),
+				&#039;args&#039;            =&gt; $this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::EDITABLE ),
+			),
+			array(
+				&#039;methods&#039;             =&gt; WP_REST_Server::DELETABLE,
+				&#039;callback&#039;            =&gt; array( $this, &#039;delete_item&#039; ),
+				&#039;permission_callback&#039; =&gt; array( $this, &#039;delete_item_permissions_check&#039; ),
+				&#039;args&#039;                =&gt; array(
+					&#039;force&#039; =&gt; array(
+						&#039;default&#039;     =&gt; false,
+						&#039;type&#039;        =&gt; &#039;boolean&#039;,
+						&#039;description&#039; =&gt; __( &#039;Whether to bypass trash and force deletion.&#039;, &#039;woocommerce&#039; ),
+					),
+				),
+			),
+			&#039;schema&#039; =&gt; array( $this, &#039;get_public_item_schema&#039; ),
+		) );
+
+		register_rest_route( $this-&gt;namespace, &#039;/&#039; . $this-&gt;rest_base . &#039;/batch&#039;, array(
+			array(
+				&#039;methods&#039;             =&gt; WP_REST_Server::EDITABLE,
+				&#039;callback&#039;            =&gt; array( $this, &#039;batch_items&#039; ),
+				&#039;permission_callback&#039; =&gt; array( $this, &#039;batch_items_permissions_check&#039; ),
+				&#039;args&#039;                =&gt; $this-&gt;get_endpoint_args_for_item_schema( WP_REST_Server::EDITABLE ),
+			),
+			&#039;schema&#039; =&gt; array( $this, &#039;get_public_batch_schema&#039; ),
+		) );
+	}
+
+	/**
+	 * Query args.
+	 *
+	 * @param array $args Query args
+	 * @param WP_REST_Request $request Request data.
+	 * @return array
+	 */
+	public function query_args( $args, $request ) {
+		$coupon_code = $request[&#039;code&#039;] ?? null;
+		if ( ! StringUtil::is_null_or_whitespace( $coupon_code ) ) {
+			$id               = wc_get_coupon_id_by_code( $coupon_code );
+			$args[&#039;post__in&#039;] = array( $id );
+		}
+
+		return $args;
+	}
+
+	/**
+	 * Prepare a single coupon output for response.
+	 *
+	 * @param WP_Post $post Post object.
+	 * @param WP_REST_Request $request Request object.
+	 * @return WP_REST_Response $data
+	 */
+	public function prepare_item_for_response( $post, $request ) {
+		$coupon = new WC_Coupon( (int) $post-&gt;ID );
+		$_data  = $coupon-&gt;get_data();
+
+		$format_decimal  = array( &#039;amount&#039;, &#039;minimum_amount&#039;, &#039;maximum_amount&#039; );
+		$format_date     = array( &#039;date_created&#039;, &#039;date_modified&#039; );
+		$format_date_utc = array( &#039;date_expires&#039; );
+		$format_null     = array( &#039;usage_limit&#039;, &#039;usage_limit_per_user&#039; );
+
+		// Format decimal values.
+		foreach ( $format_decimal as $key ) {
+			$_data[ $key ] = wc_format_decimal( $_data[ $key ], 2 );
+		}
+
+		// Format date values.
+		foreach ( $format_date as $key ) {
+			$_data[ $key ] = $_data[ $key ] ? wc_rest_prepare_date_response( $_data[ $key ], false ) : null;
+		}
+		foreach ( $format_date_utc as $key ) {
+			$_data[ $key ] = $_data[ $key ] ? wc_rest_prepare_date_response( $_data[ $key ] ) : null;
+		}
+
+		// Format null values.
+		foreach ( $format_null as $key ) {
+			$_data[ $key ] = $_data[ $key ] ? $_data[ $key ] : null;
+		}
+
+		$data = array(
+			&#039;id&#039;                          =&gt; $_data[&#039;id&#039;],
+			&#039;code&#039;                        =&gt; $_data[&#039;code&#039;],
+			&#039;date_created&#039;                =&gt; $_data[&#039;date_created&#039;],
+			&#039;date_modified&#039;               =&gt; $_data[&#039;date_modified&#039;],
+			&#039;discount_type&#039;               =&gt; $_data[&#039;discount_type&#039;],
+			&#039;description&#039;                 =&gt; $_data[&#039;description&#039;],
+			&#039;amount&#039;                      =&gt; $_data[&#039;amount&#039;],
+			&#039;expiry_date&#039;                 =&gt; $_data[&#039;date_expires&#039;],
+			&#039;usage_count&#039;                 =&gt; $_data[&#039;usage_count&#039;],
+			&#039;individual_use&#039;              =&gt; $_data[&#039;individual_use&#039;],
+			&#039;product_ids&#039;                 =&gt; $_data[&#039;product_ids&#039;],
+			&#039;exclude_product_ids&#039;         =&gt; $_data[&#039;excluded_product_ids&#039;],
+			&#039;usage_limit&#039;                 =&gt; $_data[&#039;usage_limit&#039;],
+			&#039;usage_limit_per_user&#039;        =&gt; $_data[&#039;usage_limit_per_user&#039;],
+			&#039;limit_usage_to_x_items&#039;      =&gt; $_data[&#039;limit_usage_to_x_items&#039;],
+			&#039;free_shipping&#039;               =&gt; $_data[&#039;free_shipping&#039;],
+			&#039;product_categories&#039;          =&gt; $_data[&#039;product_categories&#039;],
+			&#039;excluded_product_categories&#039; =&gt; $_data[&#039;excluded_product_categories&#039;],
+			&#039;exclude_sale_items&#039;          =&gt; $_data[&#039;exclude_sale_items&#039;],
+			&#039;minimum_amount&#039;              =&gt; $_data[&#039;minimum_amount&#039;],
+			&#039;maximum_amount&#039;              =&gt; $_data[&#039;maximum_amount&#039;],
+			&#039;email_restrictions&#039;          =&gt; $_data[&#039;email_restrictions&#039;],
+			&#039;used_by&#039;                     =&gt; $_data[&#039;used_by&#039;],
+		);
+
+		$context  = ! empty( $request[&#039;context&#039;] ) ? $request[&#039;context&#039;] : &#039;view&#039;;
+		$data     = $this-&gt;add_additional_fields_to_object( $data, $request );
+		$data     = $this-&gt;filter_response_by_context( $data, $context );
+		$response = rest_ensure_response( $data );
+		$response-&gt;add_links( $this-&gt;prepare_links( $post, $request ) );
+
+		/**
+		 * Filter the data for a response.
+		 *
+		 * The dynamic portion of the hook name, $this-&gt;post_type, refers to post_type of the post being
+		 * prepared for the response.
+		 *
+		 * @param WP_REST_Response   $response   The response object.
+		 * @param WP_Post            $post       Post object.
+		 * @param WP_REST_Request    $request    Request object.
+		 */
+		return apply_filters( &quot;woocommerce_rest_prepare_{$this-&gt;post_type}&quot;, $response, $post, $request );
+	}
+
+	/**
+	 * Only return writable props from schema.
+	 * @param  array $schema
+	 * @return bool
+	 */
+	protected function filter_writable_props( $schema ) {
+		return empty( $schema[&#039;readonly&#039;] );
+	}
+
+	/**
+	 * Prepare a single coupon for create or update.
+	 *
+	 * @param WP_REST_Request $request Request object.
+	 * @return WP_Error|stdClass $data Post object.
+	 */
+	protected function prepare_item_for_database( $request ) {
+		$id        = isset( $request[&#039;id&#039;] ) ? absint( $request[&#039;id&#039;] ) : 0;
+		$coupon    = new WC_Coupon( $id );
+		$schema    = $this-&gt;get_item_schema();
+		$data_keys = array_keys( array_filter( $schema[&#039;properties&#039;], array( $this, &#039;filter_writable_props&#039; ) ) );
+
+		// Update to schema to make compatible with CRUD schema.
+		if ( $request[&#039;exclude_product_ids&#039;] ) {
+			$request[&#039;excluded_product_ids&#039;] = $request[&#039;exclude_product_ids&#039;];
+		}
+		if ( $request[&#039;expiry_date&#039;] ) {
+			$request[&#039;date_expires&#039;] = $request[&#039;expiry_date&#039;];
+		}
+
+		// Validate required POST fields.
+		if ( &#039;POST&#039; === $request-&gt;get_method() &amp;&amp; 0 === $coupon-&gt;get_id() ) {
+			if ( StringUtil::is_null_or_whitespace( $request[&#039;code&#039;] ?? null ) ) {
+				return new WP_Error( &#039;woocommerce_rest_empty_coupon_code&#039;, sprintf( __( &#039;The coupon code cannot be empty.&#039;, &#039;woocommerce&#039; ), &#039;code&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+			}
+		}
+
+		// Handle all writable props.
+		foreach ( $data_keys as $key ) {
+			$value = $request[ $key ];
+
+			if ( ! is_null( $value ) ) {
+				switch ( $key ) {
+					case &#039;code&#039; :
+						$coupon_code = wc_format_coupon_code( $value );
+						$id          = $coupon-&gt;get_id() ? $coupon-&gt;get_id() : 0;
+						$id_from_code = wc_get_coupon_id_by_code( $coupon_code, $id );
+
+						if ( $id_from_code ) {
+							return new WP_Error( &#039;woocommerce_rest_coupon_code_already_exists&#039;, __( &#039;The coupon code already exists&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+						}
+
+						$coupon-&gt;set_code( $coupon_code );
+						break;
+					case &#039;description&#039; :
+						$coupon-&gt;set_description( wp_filter_post_kses( $value ) );
+						break;
+					case &#039;expiry_date&#039; :
+						$coupon-&gt;set_date_expires( $value );
+						break;
+					default :
+						if ( is_callable( array( $coupon, &quot;set_{$key}&quot; ) ) ) {
+							$coupon-&gt;{&quot;set_{$key}&quot;}( $value );
+						}
+						break;
+				}
+			}
+		}
+
+		/**
+		 * Filter the query_vars used in `get_items` for the constructed query.
+		 *
+		 * The dynamic portion of the hook name, $this-&gt;post_type, refers to post_type of the post being
+		 * prepared for insertion.
+		 *
+		 * @param WC_Coupon       $coupon        The coupon object.
+		 * @param WP_REST_Request $request       Request object.
+		 */
+		return apply_filters( &quot;woocommerce_rest_pre_insert_{$this-&gt;post_type}&quot;, $coupon, $request );
+	}
+
+	/**
+	 * Create a single item.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function create_item( $request ) {
+		if ( ! empty( $request[&#039;id&#039;] ) ) {
+			/* translators: %s: post type */
+			return new WP_Error( &quot;woocommerce_rest_{$this-&gt;post_type}_exists&quot;, sprintf( __( &#039;Cannot create existing %s.&#039;, &#039;woocommerce&#039; ), $this-&gt;post_type ), array( &#039;status&#039; =&gt; 400 ) );
+		}
+
+		$coupon_id = $this-&gt;save_coupon( $request );
+		if ( is_wp_error( $coupon_id ) ) {
+			return $coupon_id;
+		}
+
+		$post = get_post( $coupon_id );
+		$this-&gt;update_additional_fields_for_object( $post, $request );
+
+		$this-&gt;add_post_meta_fields( $post, $request );
+
+		/**
+		 * Fires after a single item is created or updated via the REST API.
+		 *
+		 * @param WP_Post         $post      Post object.
+		 * @param WP_REST_Request $request   Request object.
+		 * @param boolean         $creating  True when creating item, false when updating.
+		 */
+		do_action( &quot;woocommerce_rest_insert_{$this-&gt;post_type}&quot;, $post, $request, true );
+		$request-&gt;set_param( &#039;context&#039;, &#039;edit&#039; );
+		$response = $this-&gt;prepare_item_for_response( $post, $request );
+		$response = rest_ensure_response( $response );
+		$response-&gt;set_status( 201 );
+		$response-&gt;header( &#039;Location&#039;, rest_url( sprintf( &#039;/%s/%s/%d&#039;, $this-&gt;namespace, $this-&gt;rest_base, $post-&gt;ID ) ) );
+
+		return $response;
+	}
+
+	/**
+	 * Update a single coupon.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function update_item( $request ) {
+		try {
+			$post_id = (int) $request[&#039;id&#039;];
+
+			if ( empty( $post_id ) || get_post_type( $post_id ) !== $this-&gt;post_type ) {
+				return new WP_Error( &quot;woocommerce_rest_{$this-&gt;post_type}_invalid_id&quot;, __( &#039;ID is invalid.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+			}
+
+			$coupon_id = $this-&gt;save_coupon( $request );
+			if ( is_wp_error( $coupon_id ) ) {
+				return $coupon_id;
+			}
+
+			$post = get_post( $coupon_id );
+			$this-&gt;update_additional_fields_for_object( $post, $request );
+
+			/**
+			 * Fires after a single item is created or updated via the REST API.
+			 *
+			 * @param WP_Post         $post      Post object.
+			 * @param WP_REST_Request $request   Request object.
+			 * @param boolean         $creating  True when creating item, false when updating.
+			 */
+			do_action( &quot;woocommerce_rest_insert_{$this-&gt;post_type}&quot;, $post, $request, false );
+			$request-&gt;set_param( &#039;context&#039;, &#039;edit&#039; );
+			$response = $this-&gt;prepare_item_for_response( $post, $request );
+			return rest_ensure_response( $response );
+
+		} catch ( Exception $e ) {
+			return new WP_Error( $e-&gt;getErrorCode(), $e-&gt;getMessage(), array( &#039;status&#039; =&gt; $e-&gt;getCode() ) );
+		}
+	}
+
+	/**
+	 * Saves a coupon to the database.
+	 *
+	 * @since 3.0.0
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|int
+	 */
+	protected function save_coupon( $request ) {
+		try {
+			$coupon = $this-&gt;prepare_item_for_database( $request );
+
+			if ( is_wp_error( $coupon ) ) {
+				return $coupon;
+			}
+
+			$coupon-&gt;save();
+			return $coupon-&gt;get_id();
+		} catch ( WC_Data_Exception $e ) {
+			return new WP_Error( $e-&gt;getErrorCode(), $e-&gt;getMessage(), $e-&gt;getErrorData() );
+		} catch ( WC_REST_Exception $e ) {
+			return new WP_Error( $e-&gt;getErrorCode(), $e-&gt;getMessage(), array( &#039;status&#039; =&gt; $e-&gt;getCode() ) );
+		}
+	}
+
+	/**
+	 * Get the Coupon&#039;s schema, conforming to JSON Schema.
+	 *
+	 * @return array
+	 */
+	public function get_item_schema() {
+		$schema = array(
+			&#039;$schema&#039;    =&gt; &#039;http://json-schema.org/draft-04/schema#&#039;,
+			&#039;title&#039;      =&gt; $this-&gt;post_type,
+			&#039;type&#039;       =&gt; &#039;object&#039;,
+			&#039;properties&#039; =&gt; array(
+				&#039;id&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Unique identifier for the object.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;code&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Coupon code.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;date_created&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;The date the coupon was created, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;date_modified&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;The date the coupon was last modified, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;description&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Coupon description.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;discount_type&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Determines the type of discount that will be applied.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;default&#039;     =&gt; &#039;fixed_cart&#039;,
+					&#039;enum&#039;        =&gt; array_keys( wc_get_coupon_types() ),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;amount&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;The amount of discount. Should always be numeric, even if setting a percentage.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;expiry_date&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;UTC DateTime when the coupon expires.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;usage_count&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Number of times the coupon has been used already.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;individual_use&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;If true, the coupon can only be used individually. Other applied coupons will be removed from the cart.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;default&#039;     =&gt; false,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;product_ids&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;List of product IDs the coupon can be used on.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;    =&gt; &#039;integer&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;exclude_product_ids&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;List of product IDs the coupon cannot be used on.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;    =&gt; &#039;integer&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;usage_limit&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;How many times the coupon can be used in total.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;usage_limit_per_user&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;How many times the coupon can be used per customer.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;limit_usage_to_x_items&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Max number of items in the cart the coupon can be applied to.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;free_shipping&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;If true and if the free shipping method requires a coupon, this coupon will enable free shipping.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;default&#039;     =&gt; false,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;product_categories&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;List of category IDs the coupon applies to.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;    =&gt; &#039;integer&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;excluded_product_categories&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;List of category IDs the coupon does not apply to.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;    =&gt; &#039;integer&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;exclude_sale_items&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;If true, this coupon will not be applied to items that have sale prices.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;default&#039;     =&gt; false,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;minimum_amount&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Minimum order amount that needs to be in the cart before coupon applies.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;maximum_amount&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Maximum order amount allowed when using the coupon.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;email_restrictions&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;List of email addresses that can use this coupon.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;    =&gt; &#039;string&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;used_by&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;List of user IDs (or guest email addresses) that have used the coupon.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;    =&gt; &#039;integer&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+			),
+		);
+
+		return $this-&gt;add_additional_fields_schema( $schema );
+	}
+
+	/**
+	 * Get the query params for collections of attachments.
+	 *
+	 * @return array
+	 */
+	public function get_collection_params() {
+		$params = parent::get_collection_params();
+
+		$params[&#039;code&#039;] = array(
+			&#039;description&#039;       =&gt; __( &#039;Limit result set to resources with a specific code.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;string&#039;,
+			&#039;sanitize_callback&#039; =&gt; &#039;sanitize_text_field&#039;,
+			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
+		);
+
+		return $params;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866948"></script>
+    <script src="../js/search.js?updated=1692866948"></script>
+</body>
+</html>

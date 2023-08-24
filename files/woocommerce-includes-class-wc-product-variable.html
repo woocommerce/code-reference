@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-product-variable.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Variable Product
+ *
+ * The WooCommerce product class handles individual product data.
+ *
+ * @version 3.0.0
+ * @package WooCommerce\Classes\Products
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Variable product class.
+ */
+class WC_Product_Variable extends WC_Product {
+
+	/**
+	 * Array of children variation IDs. Determined by children.
+	 *
+	 * @var array
+	 */
+	protected $children = null;
+
+	/**
+	 * Array of visible children variation IDs. Determined by children.
+	 *
+	 * @var array
+	 */
+	protected $visible_children = null;
+
+	/**
+	 * Array of variation attributes IDs. Determined by children.
+	 *
+	 * @var array
+	 */
+	protected $variation_attributes = null;
+
+	/**
+	 * Get internal type.
+	 *
+	 * @return string
+	 */
+	public function get_type() {
+		return &#039;variable&#039;;
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Getters
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Get the aria-describedby description for the add to cart button.
+	 *
+	 * @return string
+	 */
+	public function add_to_cart_aria_describedby() {
+		/**
+		 * This filter is documented in includes/abstracts/abstract-wc-product.php.
+		 *
+		 * @since 7.8.0
+		 */
+		return apply_filters( &#039;woocommerce_product_add_to_cart_aria_describedby&#039;, $this-&gt;is_purchasable() ? __( &#039;This product has multiple variants. The options may be chosen on the product page&#039;, &#039;woocommerce&#039; ) : &#039;&#039;, $this );
+	}
+
+	/**
+	 * Get the add to cart button text.
+	 *
+	 * @return string
+	 */
+	public function add_to_cart_text() {
+		return apply_filters( &#039;woocommerce_product_add_to_cart_text&#039;, $this-&gt;is_purchasable() ? __( &#039;Select options&#039;, &#039;woocommerce&#039; ) : __( &#039;Read more&#039;, &#039;woocommerce&#039; ), $this );
+	}
+
+	/**
+	 * Get the add to cart button text description - used in aria tags.
+	 *
+	 * @since 3.3.0
+	 * @return string
+	 */
+	public function add_to_cart_description() {
+		/* translators: %s: Product title */
+		return apply_filters( &#039;woocommerce_product_add_to_cart_description&#039;, sprintf( __( &#039;Select options for &amp;ldquo;%s&amp;rdquo;&#039;, &#039;woocommerce&#039; ), $this-&gt;get_name() ), $this );
+	}
+
+	/**
+	 * Get an array of all sale and regular prices from all variations. This is used for example when displaying the price range at variable product level or seeing if the variable product is on sale.
+	 *
+	 * @param  bool $for_display If true, prices will be adapted for display based on the `woocommerce_tax_display_shop` setting (including or excluding taxes).
+	 * @return array Array of RAW prices, regular prices, and sale prices with keys set to variation ID.
+	 */
+	public function get_variation_prices( $for_display = false ) {
+		$prices = $this-&gt;data_store-&gt;read_price_data( $this, $for_display );
+
+		foreach ( $prices as $price_key =&gt; $variation_prices ) {
+			$prices[ $price_key ] = $this-&gt;sort_variation_prices( $variation_prices );
+		}
+
+		return $prices;
+	}
+
+	/**
+	 * Get the min or max variation regular price.
+	 *
+	 * @param  string  $min_or_max Min or max price.
+	 * @param  boolean $for_display If true, prices will be adapted for display based on the `woocommerce_tax_display_shop` setting (including or excluding taxes).
+	 * @return string
+	 */
+	public function get_variation_regular_price( $min_or_max = &#039;min&#039;, $for_display = false ) {
+		$prices = $this-&gt;get_variation_prices( $for_display );
+		$price  = &#039;min&#039; === $min_or_max ? current( $prices[&#039;regular_price&#039;] ) : end( $prices[&#039;regular_price&#039;] );
+
+		return apply_filters( &#039;woocommerce_get_variation_regular_price&#039;, $price, $this, $min_or_max, $for_display );
+	}
+
+	/**
+	 * Get the min or max variation sale price.
+	 *
+	 * @param  string  $min_or_max Min or max price.
+	 * @param  boolean $for_display If true, prices will be adapted for display based on the `woocommerce_tax_display_shop` setting (including or excluding taxes).
+	 * @return string
+	 */
+	public function get_variation_sale_price( $min_or_max = &#039;min&#039;, $for_display = false ) {
+		$prices = $this-&gt;get_variation_prices( $for_display );
+		$price  = &#039;min&#039; === $min_or_max ? current( $prices[&#039;sale_price&#039;] ) : end( $prices[&#039;sale_price&#039;] );
+
+		return apply_filters( &#039;woocommerce_get_variation_sale_price&#039;, $price, $this, $min_or_max, $for_display );
+	}
+
+	/**
+	 * Get the min or max variation (active) price.
+	 *
+	 * @param  string  $min_or_max Min or max price.
+	 * @param  boolean $for_display If true, prices will be adapted for display based on the `woocommerce_tax_display_shop` setting (including or excluding taxes).
+	 * @return string
+	 */
+	public function get_variation_price( $min_or_max = &#039;min&#039;, $for_display = false ) {
+		$prices = $this-&gt;get_variation_prices( $for_display );
+		$price  = &#039;min&#039; === $min_or_max ? current( $prices[&#039;price&#039;] ) : end( $prices[&#039;price&#039;] );
+
+		return apply_filters( &#039;woocommerce_get_variation_price&#039;, $price, $this, $min_or_max, $for_display );
+	}
+
+	/**
+	 * Returns the price in html format.
+	 *
+	 * Note: Variable prices do not show suffixes like other product types. This
+	 * is due to some things like tax classes being set at variation level which
+	 * could differ from the parent price. The only way to show accurate prices
+	 * would be to load the variation and get it&#039;s price, which adds extra
+	 * overhead and still has edge cases where the values would be inaccurate.
+	 *
+	 * Additionally, ranges of prices no longer show &#039;striked out&#039; sale prices
+	 * due to the strings being very long and unclear/confusing. A single range
+	 * is shown instead.
+	 *
+	 * @param string $price Price (default: &#039;&#039;).
+	 * @return string
+	 */
+	public function get_price_html( $price = &#039;&#039; ) {
+		$prices = $this-&gt;get_variation_prices( true );
+
+		if ( empty( $prices[&#039;price&#039;] ) ) {
+			$price = apply_filters( &#039;woocommerce_variable_empty_price_html&#039;, &#039;&#039;, $this );
+		} else {
+			$min_price     = current( $prices[&#039;price&#039;] );
+			$max_price     = end( $prices[&#039;price&#039;] );
+			$min_reg_price = current( $prices[&#039;regular_price&#039;] );
+			$max_reg_price = end( $prices[&#039;regular_price&#039;] );
+
+			if ( $min_price !== $max_price ) {
+				$price = wc_format_price_range( $min_price, $max_price );
+			} elseif ( $this-&gt;is_on_sale() &amp;&amp; $min_reg_price === $max_reg_price ) {
+				$price = wc_format_sale_price( wc_price( $max_reg_price ), wc_price( $min_price ) );
+			} else {
+				$price = wc_price( $min_price );
+			}
+
+			$price = apply_filters( &#039;woocommerce_variable_price_html&#039;, $price . $this-&gt;get_price_suffix(), $this );
+		}
+
+		return apply_filters( &#039;woocommerce_get_price_html&#039;, $price, $this );
+	}
+
+	/**
+	 * Get the suffix to display after prices &gt; 0.
+	 *
+	 * This is skipped if the suffix
+	 * has dynamic values such as {price_excluding_tax} for variable products.
+	 *
+	 * @see get_price_html for an explanation as to why.
+	 * @param  string  $price Price to calculate, left blank to just use get_price().
+	 * @param  integer $qty   Quantity passed on to get_price_including_tax() or get_price_excluding_tax().
+	 * @return string
+	 */
+	public function get_price_suffix( $price = &#039;&#039;, $qty = 1 ) {
+		$suffix = get_option( &#039;woocommerce_price_display_suffix&#039; );
+
+		if ( strstr( $suffix, &#039;{&#039; ) ) {
+			return apply_filters( &#039;woocommerce_get_price_suffix&#039;, &#039;&#039;, $this, $price, $qty );
+		} else {
+			return parent::get_price_suffix( $price, $qty );
+		}
+	}
+
+	/**
+	 * Return a products child ids.
+	 *
+	 * This is lazy loaded as it&#039;s not used often and does require several queries.
+	 *
+	 * @param bool|string $visible_only Visible only.
+	 * @return array Children ids
+	 */
+	public function get_children( $visible_only = &#039;&#039; ) {
+		if ( is_bool( $visible_only ) ) {
+			wc_deprecated_argument( &#039;visible_only&#039;, &#039;3.0&#039;, &#039;WC_Product_Variable::get_visible_children&#039; );
+
+			return $visible_only ? $this-&gt;get_visible_children() : $this-&gt;get_children();
+		}
+
+		if ( null === $this-&gt;children ) {
+			$children = $this-&gt;data_store-&gt;read_children( $this );
+			$this-&gt;set_children( $children[&#039;all&#039;] );
+			$this-&gt;set_visible_children( $children[&#039;visible&#039;] );
+		}
+
+		return apply_filters( &#039;woocommerce_get_children&#039;, $this-&gt;children, $this, false );
+	}
+
+	/**
+	 * Return a products child ids - visible only.
+	 *
+	 * This is lazy loaded as it&#039;s not used often and does require several queries.
+	 *
+	 * @since 3.0.0
+	 * @return array Children ids
+	 */
+	public function get_visible_children() {
+		if ( null === $this-&gt;visible_children ) {
+			$children = $this-&gt;data_store-&gt;read_children( $this );
+			$this-&gt;set_children( $children[&#039;all&#039;] );
+			$this-&gt;set_visible_children( $children[&#039;visible&#039;] );
+		}
+		return apply_filters( &#039;woocommerce_get_children&#039;, $this-&gt;visible_children, $this, true );
+	}
+
+	/**
+	 * Return an array of attributes used for variations, as well as their possible values.
+	 *
+	 * This is lazy loaded as it&#039;s not used often and does require several queries.
+	 *
+	 * @return array Attributes and their available values
+	 */
+	public function get_variation_attributes() {
+		if ( null === $this-&gt;variation_attributes ) {
+			$this-&gt;variation_attributes = $this-&gt;data_store-&gt;read_variation_attributes( $this );
+		}
+		return $this-&gt;variation_attributes;
+	}
+
+	/**
+	 * If set, get the default attributes for a variable product.
+	 *
+	 * @param string $attribute_name Attribute name.
+	 * @return string
+	 */
+	public function get_variation_default_attribute( $attribute_name ) {
+		$defaults       = $this-&gt;get_default_attributes();
+		$attribute_name = sanitize_title( $attribute_name );
+
+		return isset( $defaults[ $attribute_name ] ) ? $defaults[ $attribute_name ] : &#039;&#039;;
+	}
+
+	/**
+	 * Variable products themselves cannot be downloadable.
+	 *
+	 * @param string $context What the value is for. Valid values are view and edit.
+	 * @return bool
+	 */
+	public function get_downloadable( $context = &#039;view&#039; ) {
+		return false;
+	}
+
+	/**
+	 * Variable products themselves cannot be virtual.
+	 *
+	 * @param string $context What the value is for. Valid values are view and edit.
+	 * @return bool
+	 */
+	public function get_virtual( $context = &#039;view&#039; ) {
+		return false;
+	}
+
+	/**
+	 * Get an array of available variations for the current product.
+	 *
+	 * @param string $return Optional. The format to return the results in. Can be &#039;array&#039; to return an array of variation data or &#039;objects&#039; for the product objects. Default &#039;array&#039;.
+	 *
+	 * @return array[]|WC_Product_Variation[]
+	 */
+	public function get_available_variations( $return = &#039;array&#039; ) {
+		$variation_ids        = $this-&gt;get_children();
+		$available_variations = array();
+
+		if ( is_callable( &#039;_prime_post_caches&#039; ) ) {
+			_prime_post_caches( $variation_ids );
+		}
+
+		foreach ( $variation_ids as $variation_id ) {
+
+			$variation = wc_get_product( $variation_id );
+
+			// Hide out of stock variations if &#039;Hide out of stock items from the catalog&#039; is checked.
+			if ( ! $variation || ! $variation-&gt;exists() || ( &#039;yes&#039; === get_option( &#039;woocommerce_hide_out_of_stock_items&#039; ) &amp;&amp; ! $variation-&gt;is_in_stock() ) ) {
+				continue;
+			}
+
+			// Filter &#039;woocommerce_hide_invisible_variations&#039; to optionally hide invisible variations (disabled variations and variations with empty price).
+			if ( apply_filters( &#039;woocommerce_hide_invisible_variations&#039;, true, $this-&gt;get_id(), $variation ) &amp;&amp; ! $variation-&gt;variation_is_visible() ) {
+				continue;
+			}
+
+			if ( &#039;array&#039; === $return ) {
+				$available_variations[] = $this-&gt;get_available_variation( $variation );
+			} else {
+				$available_variations[] = $variation;
+			}
+		}
+
+		if ( &#039;array&#039; === $return ) {
+			$available_variations = array_values( array_filter( $available_variations ) );
+		}
+
+		return $available_variations;
+	}
+
+	/**
+	 * Check if a given variation is currently available.
+	 *
+	 * @param WC_Product_Variation $variation Variation to check.
+	 *
+	 * @return bool True if the variation is available, false otherwise.
+	 */
+	private function variation_is_available( WC_Product_Variation $variation ) {
+		// Hide out of stock variations if &#039;Hide out of stock items from the catalog&#039; is checked.
+		if ( ! $variation || ! $variation-&gt;exists() || ( &#039;yes&#039; === get_option( &#039;woocommerce_hide_out_of_stock_items&#039; ) &amp;&amp; ! $variation-&gt;is_in_stock() ) ) {
+			return false;
+		}
+
+		// Filter &#039;woocommerce_hide_invisible_variations&#039; to optionally hide invisible variations (disabled variations and variations with empty price).
+		if ( apply_filters( &#039;woocommerce_hide_invisible_variations&#039;, true, $this-&gt;get_id(), $variation ) &amp;&amp; ! $variation-&gt;variation_is_visible() ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Returns an array of data for a variation. Used in the add to cart form.
+	 *
+	 * @since  2.4.0
+	 * @param  WC_Product $variation Variation product object or ID.
+	 * @return array|bool
+	 */
+	public function get_available_variation( $variation ) {
+		if ( is_numeric( $variation ) ) {
+			$variation = wc_get_product( $variation );
+		}
+		if ( ! $variation instanceof WC_Product_Variation ) {
+			return false;
+		}
+		// See if prices should be shown for each variation after selection.
+		$show_variation_price = apply_filters( &#039;woocommerce_show_variation_price&#039;, $variation-&gt;get_price() === &#039;&#039; || $this-&gt;get_variation_sale_price( &#039;min&#039; ) !== $this-&gt;get_variation_sale_price( &#039;max&#039; ) || $this-&gt;get_variation_regular_price( &#039;min&#039; ) !== $this-&gt;get_variation_regular_price( &#039;max&#039; ), $this, $variation );
+
+		return apply_filters(
+			&#039;woocommerce_available_variation&#039;,
+			array(
+				&#039;attributes&#039;            =&gt; $variation-&gt;get_variation_attributes(),
+				&#039;availability_html&#039;     =&gt; wc_get_stock_html( $variation ),
+				&#039;backorders_allowed&#039;    =&gt; $variation-&gt;backorders_allowed(),
+				&#039;dimensions&#039;            =&gt; $variation-&gt;get_dimensions( false ),
+				&#039;dimensions_html&#039;       =&gt; wc_format_dimensions( $variation-&gt;get_dimensions( false ) ),
+				&#039;display_price&#039;         =&gt; wc_get_price_to_display( $variation ),
+				&#039;display_regular_price&#039; =&gt; wc_get_price_to_display( $variation, array( &#039;price&#039; =&gt; $variation-&gt;get_regular_price() ) ),
+				&#039;image&#039;                 =&gt; wc_get_product_attachment_props( $variation-&gt;get_image_id() ),
+				&#039;image_id&#039;              =&gt; $variation-&gt;get_image_id(),
+				&#039;is_downloadable&#039;       =&gt; $variation-&gt;is_downloadable(),
+				&#039;is_in_stock&#039;           =&gt; $variation-&gt;is_in_stock(),
+				&#039;is_purchasable&#039;        =&gt; $variation-&gt;is_purchasable(),
+				&#039;is_sold_individually&#039;  =&gt; $variation-&gt;is_sold_individually() ? &#039;yes&#039; : &#039;no&#039;,
+				&#039;is_virtual&#039;            =&gt; $variation-&gt;is_virtual(),
+				&#039;max_qty&#039;               =&gt; 0 &lt; $variation-&gt;get_max_purchase_quantity() ? $variation-&gt;get_max_purchase_quantity() : &#039;&#039;,
+				&#039;min_qty&#039;               =&gt; $variation-&gt;get_min_purchase_quantity(),
+				&#039;price_html&#039;            =&gt; $show_variation_price ? &#039;&lt;span class=&quot;price&quot;&gt;&#039; . $variation-&gt;get_price_html() . &#039;&lt;/span&gt;&#039; : &#039;&#039;,
+				&#039;sku&#039;                   =&gt; $variation-&gt;get_sku(),
+				&#039;variation_description&#039; =&gt; wc_format_content( $variation-&gt;get_description() ),
+				&#039;variation_id&#039;          =&gt; $variation-&gt;get_id(),
+				&#039;variation_is_active&#039;   =&gt; $variation-&gt;variation_is_active(),
+				&#039;variation_is_visible&#039;  =&gt; $variation-&gt;variation_is_visible(),
+				&#039;weight&#039;                =&gt; $variation-&gt;get_weight(),
+				&#039;weight_html&#039;           =&gt; wc_format_weight( $variation-&gt;get_weight() ),
+			),
+			$this,
+			$variation
+		);
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Setters
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Sets an array of variation attributes.
+	 *
+	 * @since 3.0.0
+	 * @param array $variation_attributes Attributes list.
+	 */
+	public function set_variation_attributes( $variation_attributes ) {
+		$this-&gt;variation_attributes = $variation_attributes;
+	}
+
+	/**
+	 * Sets an array of children for the product.
+	 *
+	 * @since 3.0.0
+	 * @param array $children Children products.
+	 */
+	public function set_children( $children ) {
+		$this-&gt;children = array_filter( wp_parse_id_list( (array) $children ) );
+	}
+
+	/**
+	 * Sets an array of visible children only.
+	 *
+	 * @since 3.0.0
+	 * @param array $visible_children List of visible children products.
+	 */
+	public function set_visible_children( $visible_children ) {
+		$this-&gt;visible_children = array_filter( wp_parse_id_list( (array) $visible_children ) );
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| CRUD methods
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Ensure properties are set correctly before save.
+	 *
+	 * @since 3.0.0
+	 */
+	public function validate_props() {
+		parent::validate_props();
+
+		if ( ! $this-&gt;get_manage_stock() ) {
+			$this-&gt;data_store-&gt;sync_stock_status( $this );
+		}
+	}
+
+	/**
+	 * Do any extra processing needed before the actual product save
+	 * (but after triggering the &#039;woocommerce_before_..._object_save&#039; action)
+	 *
+	 * @return mixed A state value that will be passed to after_data_store_save_or_update.
+	 */
+	protected function before_data_store_save_or_update() {
+		// Get names before save.
+		$previous_name = $this-&gt;data[&#039;name&#039;];
+		$new_name      = $this-&gt;get_name( &#039;edit&#039; );
+
+		return array(
+			&#039;previous_name&#039; =&gt; $previous_name,
+			&#039;new_name&#039;      =&gt; $new_name,
+		);
+	}
+
+	/**
+	 * Do any extra processing needed after the actual product save
+	 * (but before triggering the &#039;woocommerce_after_..._object_save&#039; action)
+	 *
+	 * @param mixed $state The state object that was returned by before_data_store_save_or_update.
+	 */
+	protected function after_data_store_save_or_update( $state ) {
+		$this-&gt;data_store-&gt;sync_variation_names( $this, $state[&#039;previous_name&#039;], $state[&#039;new_name&#039;] );
+		$this-&gt;data_store-&gt;sync_managed_variation_stock_status( $this );
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Conditionals
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Returns whether or not the product is on sale.
+	 *
+	 * @param  string $context What the value is for. Valid values are view and edit. What the value is for. Valid values are view and edit.
+	 * @return bool
+	 */
+	public function is_on_sale( $context = &#039;view&#039; ) {
+		$prices  = $this-&gt;get_variation_prices();
+		$on_sale = $prices[&#039;regular_price&#039;] !== $prices[&#039;sale_price&#039;] &amp;&amp; $prices[&#039;sale_price&#039;] === $prices[&#039;price&#039;];
+
+		return &#039;view&#039; === $context ? apply_filters( &#039;woocommerce_product_is_on_sale&#039;, $on_sale, $this ) : $on_sale;
+	}
+
+	/**
+	 * Is a child in stock?
+	 *
+	 * @return boolean
+	 */
+	public function child_is_in_stock() {
+		return $this-&gt;data_store-&gt;child_is_in_stock( $this );
+	}
+
+	/**
+	 * Is a child on backorder?
+	 *
+	 * @since 3.3.0
+	 * @return boolean
+	 */
+	public function child_is_on_backorder() {
+		return $this-&gt;data_store-&gt;child_has_stock_status( $this, &#039;onbackorder&#039; );
+	}
+
+	/**
+	 * Does a child have a weight set?
+	 *
+	 * @return boolean
+	 */
+	public function child_has_weight() {
+		$transient_name = &#039;wc_child_has_weight_&#039; . $this-&gt;get_id();
+		$has_weight     = get_transient( $transient_name );
+
+		if ( false === $has_weight ) {
+			$has_weight = $this-&gt;data_store-&gt;child_has_weight( $this );
+			set_transient( $transient_name, (int) $has_weight, DAY_IN_SECONDS * 30 );
+		}
+
+		return (bool) $has_weight;
+	}
+
+	/**
+	 * Does a child have dimensions set?
+	 *
+	 * @return boolean
+	 */
+	public function child_has_dimensions() {
+		$transient_name = &#039;wc_child_has_dimensions_&#039; . $this-&gt;get_id();
+		$has_dimension  = get_transient( $transient_name );
+
+		if ( false === $has_dimension ) {
+			$has_dimension = $this-&gt;data_store-&gt;child_has_dimensions( $this );
+			set_transient( $transient_name, (int) $has_dimension, DAY_IN_SECONDS * 30 );
+		}
+
+		return (bool) $has_dimension;
+	}
+
+	/**
+	 * Returns whether or not the product has dimensions set.
+	 *
+	 * @return bool
+	 */
+	public function has_dimensions() {
+		return parent::has_dimensions() || $this-&gt;child_has_dimensions();
+	}
+
+	/**
+	 * Returns whether or not the product has weight set.
+	 *
+	 * @return bool
+	 */
+	public function has_weight() {
+		return parent::has_weight() || $this-&gt;child_has_weight();
+	}
+
+	/**
+	 * Returns whether or not the product has additional options that need
+	 * selecting before adding to cart.
+	 *
+	 * @since  3.0.0
+	 * @return boolean
+	 */
+	public function has_options() {
+		return apply_filters( &#039;woocommerce_product_has_options&#039;, true, $this );
+	}
+
+
+	/*
+	|--------------------------------------------------------------------------
+	| Sync with child variations.
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Sync a variable product with it&#039;s children. These sync functions sync
+	 * upwards (from child to parent) when the variation is saved.
+	 *
+	 * @param WC_Product|int $product Product object or ID for which you wish to sync.
+	 * @param bool           $save If true, the product object will be saved to the DB before returning it.
+	 * @return WC_Product Synced product object.
+	 */
+	public static function sync( $product, $save = true ) {
+		if ( ! is_a( $product, &#039;WC_Product&#039; ) ) {
+			$product = wc_get_product( $product );
+		}
+		if ( is_a( $product, &#039;WC_Product_Variable&#039; ) ) {
+			$data_store = WC_Data_Store::load( &#039;product-&#039; . $product-&gt;get_type() );
+			$data_store-&gt;sync_price( $product );
+			$data_store-&gt;sync_stock_status( $product );
+			self::sync_attributes( $product ); // Legacy update of attributes.
+
+			do_action( &#039;woocommerce_variable_product_sync_data&#039;, $product );
+
+			if ( $save ) {
+				$product-&gt;save();
+			}
+
+			wc_do_deprecated_action(
+				&#039;woocommerce_variable_product_sync&#039;,
+				array(
+					$product-&gt;get_id(),
+					$product-&gt;get_visible_children(),
+				),
+				&#039;3.0&#039;,
+				&#039;woocommerce_variable_product_sync_data, woocommerce_new_product or woocommerce_update_product&#039;
+			);
+		}
+
+		return $product;
+	}
+
+	/**
+	 * Sync parent stock status with the status of all children and save.
+	 *
+	 * @param WC_Product|int $product Product object or ID for which you wish to sync.
+	 * @param bool           $save If true, the product object will be saved to the DB before returning it.
+	 * @return WC_Product Synced product object.
+	 */
+	public static function sync_stock_status( $product, $save = true ) {
+		if ( ! is_a( $product, &#039;WC_Product&#039; ) ) {
+			$product = wc_get_product( $product );
+		}
+		if ( is_a( $product, &#039;WC_Product_Variable&#039; ) ) {
+			$data_store = WC_Data_Store::load( &#039;product-&#039; . $product-&gt;get_type() );
+			$data_store-&gt;sync_stock_status( $product );
+
+			if ( $save ) {
+				$product-&gt;save();
+			}
+		}
+
+		return $product;
+	}
+
+	/**
+	 * Sort an associative array of $variation_id =&gt; $price pairs in order of min and max prices.
+	 *
+	 * @param array $prices associative array of $variation_id =&gt; $price pairs.
+	 * @return array
+	 */
+	protected function sort_variation_prices( $prices ) {
+		asort( $prices );
+
+		return $prices;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

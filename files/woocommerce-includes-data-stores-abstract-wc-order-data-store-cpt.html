@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">abstract-wc-order-data-store-cpt.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Abstract_WC_Order_Data_Store_CPT class file.
+ *
+ * @package WooCommerce\Classes
+ */
+
+use Automattic\Jetpack\Constants;
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * Abstract Order Data Store: Stored in CPT.
+ *
+ * @version  3.0.0
+ */
+abstract class Abstract_WC_Order_Data_Store_CPT extends WC_Data_Store_WP implements WC_Abstract_Order_Data_Store_Interface, WC_Object_Data_Store_Interface {
+
+	/**
+	 * Internal meta type used to store order data.
+	 *
+	 * @var string
+	 */
+	protected $meta_type = &#039;post&#039;;
+
+	/**
+	 * Data stored in meta keys, but not considered &quot;meta&quot; for an order.
+	 *
+	 * @since 3.0.0
+	 * @var array
+	 */
+	protected $internal_meta_keys = array(
+		&#039;_order_currency&#039;,
+		&#039;_cart_discount&#039;,
+		&#039;_cart_discount_tax&#039;,
+		&#039;_order_shipping&#039;,
+		&#039;_order_shipping_tax&#039;,
+		&#039;_order_tax&#039;,
+		&#039;_order_total&#039;,
+		&#039;_order_version&#039;,
+		&#039;_prices_include_tax&#039;,
+		&#039;_payment_tokens&#039;,
+	);
+
+	/**
+	 * Custom setters for props. Add key here if it has corresponding set_ and get_ method present.
+	 *
+	 * @var string[]
+	 */
+	protected $internal_data_store_key_getters = array();
+
+	/**
+	 * Return internal key getters name.
+	 *
+	 * @return string[]
+	 */
+	public function get_internal_data_store_key_getters() {
+		return $this-&gt;internal_data_store_key_getters;
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| CRUD Methods
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Method to create a new order in the database.
+	 *
+	 * @param WC_Order $order Order object.
+	 */
+	public function create( &amp;$order ) {
+		$order-&gt;set_version( Constants::get_constant( &#039;WC_VERSION&#039; ) );
+		$order-&gt;set_currency( $order-&gt;get_currency() ? $order-&gt;get_currency() : get_woocommerce_currency() );
+		if ( ! $order-&gt;get_date_created( &#039;edit&#039; ) ) {
+			$order-&gt;set_date_created( time() );
+		}
+
+		$id = wp_insert_post(
+			apply_filters(
+				&#039;woocommerce_new_order_data&#039;,
+				array(
+					&#039;post_date&#039;     =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $order-&gt;get_date_created( &#039;edit&#039; )-&gt;getOffsetTimestamp() ),
+					&#039;post_date_gmt&#039; =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $order-&gt;get_date_created( &#039;edit&#039; )-&gt;getTimestamp() ),
+					&#039;post_type&#039;     =&gt; $order-&gt;get_type( &#039;edit&#039; ),
+					&#039;post_status&#039;   =&gt; $this-&gt;get_post_status( $order ),
+					&#039;ping_status&#039;   =&gt; &#039;closed&#039;,
+					&#039;post_author&#039;   =&gt; 1,
+					&#039;post_title&#039;    =&gt; $this-&gt;get_post_title(),
+					&#039;post_password&#039; =&gt; $this-&gt;get_order_key( $order ),
+					&#039;post_parent&#039;   =&gt; $order-&gt;get_parent_id( &#039;edit&#039; ),
+					&#039;post_excerpt&#039;  =&gt; $this-&gt;get_post_excerpt( $order ),
+				)
+			),
+			true
+		);
+
+		if ( $id &amp;&amp; ! is_wp_error( $id ) ) {
+			$order-&gt;set_id( $id );
+			$this-&gt;update_post_meta( $order );
+			$order-&gt;save_meta_data();
+			$order-&gt;apply_changes();
+			$this-&gt;clear_caches( $order );
+		}
+	}
+
+	/**
+	 * Check if an order exists by id.
+	 *
+	 * @since 8.0.0
+	 *
+	 * @param int $order_id The order id to check.
+	 * @return bool True if an order exists with the given name.
+	 */
+	public function order_exists( $order_id ) : bool {
+		if ( ! $order_id ) {
+			return false;
+		}
+
+		$post_object = get_post( $order_id );
+		return ! is_null( $post_object ) &amp;&amp; in_array( $post_object-&gt;post_type, wc_get_order_types(), true );
+	}
+
+	/**
+	 * Method to read an order from the database.
+	 *
+	 * @param WC_Order $order Order object.
+	 *
+	 * @throws Exception If passed order is invalid.
+	 */
+	public function read( &amp;$order ) {
+		$order-&gt;set_defaults();
+		$post_object = get_post( $order-&gt;get_id() );
+		if ( ! $order-&gt;get_id() || ! $post_object || ! in_array( $post_object-&gt;post_type, wc_get_order_types(), true ) ) {
+			throw new Exception( __( &#039;Invalid order.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$this-&gt;set_order_props(
+			$order,
+			array(
+				&#039;parent_id&#039;     =&gt; $post_object-&gt;post_parent,
+				&#039;date_created&#039;  =&gt; $this-&gt;string_to_timestamp( $post_object-&gt;post_date_gmt ),
+				&#039;date_modified&#039; =&gt; $this-&gt;string_to_timestamp( $post_object-&gt;post_modified_gmt ),
+				&#039;status&#039;        =&gt; $post_object-&gt;post_status,
+			)
+		);
+
+		$this-&gt;read_order_data( $order, $post_object );
+		$order-&gt;read_meta_data();
+		$order-&gt;set_object_read( true );
+
+		/**
+		 * In older versions, discounts may have been stored differently.
+		 * Update them now so if the object is saved, the correct values are
+		 * stored.
+		 */
+		if ( version_compare( $order-&gt;get_version( &#039;edit&#039; ), &#039;2.3.7&#039;, &#039;&lt;&#039; ) &amp;&amp; $order-&gt;get_prices_include_tax( &#039;edit&#039; ) ) {
+			$order-&gt;set_discount_total( (float) get_post_meta( $order-&gt;get_id(), &#039;_cart_discount&#039;, true ) - (float) get_post_meta( $order-&gt;get_id(), &#039;_cart_discount_tax&#039;, true ) );
+		}
+	}
+
+	/**
+	 * Set the properties of an object and log the first error found while doing so.
+	 *
+	 * @param $order WC_Order $order Order object.
+	 * @param array          $props The properties to set.
+	 */
+	private function set_order_props( &amp;$order, array $props ) {
+		$errors = $order-&gt;set_props( $props );
+
+		if ( ! $errors instanceof WP_Error ) {
+			return;
+		}
+
+		$order_id = $order-&gt;get_id();
+		$logger   = WC()-&gt;call_function( &#039;wc_get_logger&#039; );
+
+		foreach ( $errors-&gt;get_error_codes() as $error_code ) {
+			$property_name = $errors-&gt;get_error_data( $error_code )[&#039;property_name&#039;] ?? &#039;&#039;;
+			$error_message = $errors-&gt;get_error_message( $error_code );
+			$logger-&gt;warning(
+				sprintf(
+				/* translators: %1$s = order ID, %2$s = order id, %3$s = error message. */
+					__( &#039;Error when setting property \&#039;%1$s\&#039; for order %2$d: %3$s&#039;, &#039;woocommerce&#039; ),
+					$property_name,
+					$order_id,
+					$error_message
+				),
+				array(
+					&#039;error_code&#039;    =&gt; $error_code,
+					&#039;error_message&#039; =&gt; $error_message,
+					&#039;order_id&#039;      =&gt; $order_id,
+					&#039;property_name&#039; =&gt; $property_name,
+				)
+			);
+		}
+	}
+
+	/**
+	 * Method to update an order in the database.
+	 *
+	 * @param WC_Order $order Order object.
+	 */
+	public function update( &amp;$order ) {
+		$order-&gt;save_meta_data();
+		$order-&gt;set_version( Constants::get_constant( &#039;WC_VERSION&#039; ) );
+
+		if ( null === $order-&gt;get_date_created( &#039;edit&#039; ) ) {
+			$order-&gt;set_date_created( time() );
+		}
+
+		$changes = $order-&gt;get_changes();
+
+		// Only update the post when the post data changes.
+		if ( array_intersect( array( &#039;date_created&#039;, &#039;date_modified&#039;, &#039;status&#039;, &#039;parent_id&#039;, &#039;post_excerpt&#039; ), array_keys( $changes ) ) ) {
+			$post_data = array(
+				&#039;post_date&#039;         =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $order-&gt;get_date_created( &#039;edit&#039; )-&gt;getOffsetTimestamp() ),
+				&#039;post_date_gmt&#039;     =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $order-&gt;get_date_created( &#039;edit&#039; )-&gt;getTimestamp() ),
+				&#039;post_status&#039;       =&gt; $this-&gt;get_post_status( $order ),
+				&#039;post_parent&#039;       =&gt; $order-&gt;get_parent_id(),
+				&#039;post_excerpt&#039;      =&gt; $this-&gt;get_post_excerpt( $order ),
+				&#039;post_modified&#039;     =&gt; isset( $changes[&#039;date_modified&#039;] ) ? gmdate( &#039;Y-m-d H:i:s&#039;, $order-&gt;get_date_modified( &#039;edit&#039; )-&gt;getOffsetTimestamp() ) : current_time( &#039;mysql&#039; ),
+				&#039;post_modified_gmt&#039; =&gt; isset( $changes[&#039;date_modified&#039;] ) ? gmdate( &#039;Y-m-d H:i:s&#039;, $order-&gt;get_date_modified( &#039;edit&#039; )-&gt;getTimestamp() ) : current_time( &#039;mysql&#039;, 1 ),
+			);
+
+			/**
+			 * When updating this object, to prevent infinite loops, use $wpdb
+			 * to update data, since wp_update_post spawns more calls to the
+			 * save_post action.
+			 *
+			 * This ensures hooks are fired by either WP itself (admin screen save),
+			 * or an update purely from CRUD.
+			 */
+			if ( doing_action( &#039;save_post&#039; ) ) {
+				$GLOBALS[&#039;wpdb&#039;]-&gt;update( $GLOBALS[&#039;wpdb&#039;]-&gt;posts, $post_data, array( &#039;ID&#039; =&gt; $order-&gt;get_id() ) );
+				clean_post_cache( $order-&gt;get_id() );
+			} else {
+				wp_update_post( array_merge( array( &#039;ID&#039; =&gt; $order-&gt;get_id() ), $post_data ) );
+			}
+			$order-&gt;read_meta_data( true ); // Refresh internal meta data, in case things were hooked into `save_post` or another WP hook.
+		}
+		$this-&gt;update_post_meta( $order );
+		$order-&gt;apply_changes();
+		$this-&gt;clear_caches( $order );
+	}
+
+	/**
+	 * Method to delete an order from the database.
+	 *
+	 * @param WC_Order $order Order object.
+	 * @param array    $args Array of args to pass to the delete method.
+	 *
+	 * @return void
+	 */
+	public function delete( &amp;$order, $args = array() ) {
+		$id   = $order-&gt;get_id();
+		$args = wp_parse_args(
+			$args,
+			array(
+				&#039;force_delete&#039;     =&gt; false,
+				&#039;suppress_filters&#039; =&gt; false,
+			)
+		);
+
+		if ( ! $id ) {
+			return;
+		}
+
+		$do_filters = ! $args[&#039;suppress_filters&#039;];
+
+		if ( $args[&#039;force_delete&#039;] ) {
+			if ( $do_filters ) {
+				/**
+				 * Fires immediately before an order is deleted from the database.
+				 *
+				 * @since 8.0.0
+				 *
+				 * @param int      $order_id ID of the order about to be deleted.
+				 * @param WC_Order $order    Instance of the order that is about to be deleted.
+				 */
+				do_action( &#039;woocommerce_before_delete_order&#039;, $id, $order );
+			}
+
+			wp_delete_post( $id );
+			$order-&gt;set_id( 0 );
+
+			if ( $do_filters ) {
+				/**
+				 * Fires immediately after an order is deleted.
+				 *
+				 * @since
+				 *
+				 * @param int $order_id ID of the order that has been deleted.
+				 */
+				do_action( &#039;woocommerce_delete_order&#039;, $id );
+			}
+		} else {
+			if ( $do_filters ) {
+				/**
+				 * Fires immediately before an order is trashed.
+				 *
+				 * @since 8.0.0
+				 *
+				 * @param int      $order_id ID of the order about to be trashed.
+				 * @param WC_Order $order    Instance of the order that is about to be trashed.
+				 */
+				do_action( &#039;woocommerce_before_trash_order&#039;, $id, $order );
+			}
+
+			wp_trash_post( $id );
+			$order-&gt;set_status( &#039;trash&#039; );
+
+			if ( $do_filters ) {
+				/**
+				 * Fires immediately after an order is trashed.
+				 *
+				 * @since
+				 *
+				 * @param int      $order_id ID of the order that has been trashed.
+				 */
+				do_action( &#039;woocommerce_trash_order&#039;, $id );
+			}
+		}
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| Additional Methods
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Get the status to save to the post object.
+	 *
+	 * Plugins extending the order classes can override this to change the stored status/add prefixes etc.
+	 *
+	 * @since 3.6.0
+	 * @param  WC_order $order Order object.
+	 * @return string
+	 */
+	protected function get_post_status( $order ) {
+		$order_status = $order-&gt;get_status( &#039;edit&#039; );
+
+		if ( ! $order_status ) {
+			$order_status = apply_filters( &#039;woocommerce_default_order_status&#039;, &#039;pending&#039; );
+		}
+
+		$post_status    = $order_status;
+		$valid_statuses = get_post_stati();
+
+		// Add a wc- prefix to the status, but exclude some core statuses which should not be prefixed.
+		// @todo In the future this should only happen based on `wc_is_order_status`, but in order to
+		// preserve back-compatibility this happens to all statuses except a select few. A doing_it_wrong
+		// Notice will be needed here, followed by future removal.
+		if ( ! in_array( $post_status, array( &#039;auto-draft&#039;, &#039;draft&#039;, &#039;trash&#039; ), true ) &amp;&amp; in_array( &#039;wc-&#039; . $post_status, $valid_statuses, true ) ) {
+			$post_status = &#039;wc-&#039; . $post_status;
+		}
+
+		return $post_status;
+	}
+
+	/**
+	 * Excerpt for post.
+	 *
+	 * @param  WC_order $order Order object.
+	 * @return string
+	 */
+	protected function get_post_excerpt( $order ) {
+		return &#039;&#039;;
+	}
+
+	/**
+	 * Get a title for the new post type.
+	 *
+	 * @return string
+	 */
+	protected function get_post_title() {
+		// @codingStandardsIgnoreStart
+		/* translators: %s: Order date */
+		return sprintf( __( &#039;Order &amp;ndash; %s&#039;, &#039;woocommerce&#039; ), (new DateTime(&#039;now&#039;))-&gt;format( _x( &#039;M d, Y @ h:i A&#039;, &#039;Order date parsed by DateTime::format&#039;, &#039;woocommerce&#039; ) ) );
+		// @codingStandardsIgnoreEnd
+	}
+
+	/**
+	 * Get order key.
+	 *
+	 * @since 4.3.0
+	 * @param WC_order $order Order object.
+	 * @return string
+	 */
+	protected function get_order_key( $order ) {
+		return wc_generate_order_key();
+	}
+
+	/**
+	 * Read order data. Can be overridden by child classes to load other props.
+	 *
+	 * @param WC_Order $order Order object.
+	 * @param object   $post_object Post object.
+	 * @since 3.0.0
+	 */
+	protected function read_order_data( &amp;$order, $post_object ) {
+		$id = $order-&gt;get_id();
+
+		$this-&gt;set_order_props(
+			$order,
+			array(
+				&#039;currency&#039;           =&gt; get_post_meta( $id, &#039;_order_currency&#039;, true ),
+				&#039;discount_total&#039;     =&gt; get_post_meta( $id, &#039;_cart_discount&#039;, true ),
+				&#039;discount_tax&#039;       =&gt; get_post_meta( $id, &#039;_cart_discount_tax&#039;, true ),
+				&#039;shipping_total&#039;     =&gt; get_post_meta( $id, &#039;_order_shipping&#039;, true ),
+				&#039;shipping_tax&#039;       =&gt; get_post_meta( $id, &#039;_order_shipping_tax&#039;, true ),
+				&#039;cart_tax&#039;           =&gt; get_post_meta( $id, &#039;_order_tax&#039;, true ),
+				&#039;total&#039;              =&gt; get_post_meta( $id, &#039;_order_total&#039;, true ),
+				&#039;version&#039;            =&gt; get_post_meta( $id, &#039;_order_version&#039;, true ),
+				&#039;prices_include_tax&#039; =&gt; metadata_exists( &#039;post&#039;, $id, &#039;_prices_include_tax&#039; ) ? &#039;yes&#039; === get_post_meta( $id, &#039;_prices_include_tax&#039;, true ) : &#039;yes&#039; === get_option( &#039;woocommerce_prices_include_tax&#039; ),
+			)
+		);
+
+		// Gets extra data associated with the order if needed.
+		foreach ( $order-&gt;get_extra_data_keys() as $key ) {
+			$function = &#039;set_&#039; . $key;
+			if ( is_callable( array( $order, $function ) ) ) {
+				$order-&gt;{$function}( get_post_meta( $order-&gt;get_id(), &#039;_&#039; . $key, true ) );
+			}
+		}
+	}
+
+	/**
+	 * Helper method that updates all the post meta for an order based on it&#039;s settings in the WC_Order class.
+	 *
+	 * @param WC_Order $order Order object.
+	 * @since 3.0.0
+	 */
+	protected function update_post_meta( &amp;$order ) {
+		$updated_props     = array();
+		$meta_key_to_props = array(
+			&#039;_order_currency&#039;     =&gt; &#039;currency&#039;,
+			&#039;_cart_discount&#039;      =&gt; &#039;discount_total&#039;,
+			&#039;_cart_discount_tax&#039;  =&gt; &#039;discount_tax&#039;,
+			&#039;_order_shipping&#039;     =&gt; &#039;shipping_total&#039;,
+			&#039;_order_shipping_tax&#039; =&gt; &#039;shipping_tax&#039;,
+			&#039;_order_tax&#039;          =&gt; &#039;cart_tax&#039;,
+			&#039;_order_total&#039;        =&gt; &#039;total&#039;,
+			&#039;_order_version&#039;      =&gt; &#039;version&#039;,
+			&#039;_prices_include_tax&#039; =&gt; &#039;prices_include_tax&#039;,
+		);
+
+		$props_to_update = $this-&gt;get_props_to_update( $order, $meta_key_to_props );
+
+		foreach ( $props_to_update as $meta_key =&gt; $prop ) {
+			$value = $order-&gt;{&quot;get_$prop&quot;}( &#039;edit&#039; );
+			$value = is_string( $value ) ? wp_slash( $value ) : $value;
+
+			if ( &#039;prices_include_tax&#039; === $prop ) {
+				$value = $value ? &#039;yes&#039; : &#039;no&#039;;
+			}
+
+			$updated = $this-&gt;update_or_delete_post_meta( $order, $meta_key, $value );
+
+			if ( $updated ) {
+				$updated_props[] = $prop;
+			}
+		}
+
+		do_action( &#039;woocommerce_order_object_updated_props&#039;, $order, $updated_props );
+	}
+
+	/**
+	 * Clear any caches.
+	 *
+	 * @param WC_Order $order Order object.
+	 * @since 3.0.0
+	 */
+	protected function clear_caches( &amp;$order ) {
+		clean_post_cache( $order-&gt;get_id() );
+		wc_delete_shop_order_transients( $order );
+		wp_cache_delete( &#039;order-items-&#039; . $order-&gt;get_id(), &#039;orders&#039; );
+	}
+
+	/**
+	 * Read order items of a specific type from the database for this order.
+	 *
+	 * @param  WC_Order $order Order object.
+	 * @param  string   $type Order item type.
+	 * @return array
+	 */
+	public function read_items( $order, $type ) {
+		global $wpdb;
+
+		// Get from cache if available.
+		$items = 0 &lt; $order-&gt;get_id() ? wp_cache_get( &#039;order-items-&#039; . $order-&gt;get_id(), &#039;orders&#039; ) : false;
+
+		if ( false === $items ) {
+			$items = $wpdb-&gt;get_results(
+				$wpdb-&gt;prepare( &quot;SELECT order_item_type, order_item_id, order_id, order_item_name FROM {$wpdb-&gt;prefix}woocommerce_order_items WHERE order_id = %d ORDER BY order_item_id;&quot;, $order-&gt;get_id() )
+			);
+			foreach ( $items as $item ) {
+				wp_cache_set( &#039;item-&#039; . $item-&gt;order_item_id, $item, &#039;order-items&#039; );
+			}
+			if ( 0 &lt; $order-&gt;get_id() ) {
+				wp_cache_set( &#039;order-items-&#039; . $order-&gt;get_id(), $items, &#039;orders&#039; );
+			}
+		}
+
+		$items = wp_list_filter( $items, array( &#039;order_item_type&#039; =&gt; $type ) );
+
+		if ( ! empty( $items ) ) {
+			$items = array_map( array( &#039;WC_Order_Factory&#039;, &#039;get_order_item&#039; ), array_combine( wp_list_pluck( $items, &#039;order_item_id&#039; ), $items ) );
+		} else {
+			$items = array();
+		}
+
+		return $items;
+	}
+
+	/**
+	 * Return the order type of a given item which belongs to WC_Order.
+	 *
+	 * @since  3.2.0
+	 * @param  WC_Order $order Order Object.
+	 * @param  int      $order_item_id Order item id.
+	 * @return string Order Item type
+	 */
+	public function get_order_item_type( $order, $order_item_id ) {
+		global $wpdb;
+		return $wpdb-&gt;get_var( $wpdb-&gt;prepare( &quot;SELECT DISTINCT order_item_type FROM {$wpdb-&gt;prefix}woocommerce_order_items WHERE order_id = %d and order_item_id = %d;&quot;, $order-&gt;get_id(), $order_item_id ) );
+	}
+
+	/**
+	 * Prime following caches:
+	 *  1. item-$order_item_id   For individual items.
+	 *  2. order-items-$order-id For fetching items associated with an order.
+	 *  3. order-item meta.
+	 *
+	 * @param array $order_ids  Order Ids to prime cache for.
+	 * @param array $query_vars Query vars for the query.
+	 */
+	protected function prime_order_item_caches_for_orders( $order_ids, $query_vars ) {
+		global $wpdb;
+		if ( isset( $query_vars[&#039;fields&#039;] ) &amp;&amp; &#039;all&#039; !== $query_vars[&#039;fields&#039;] ) {
+			$line_items = array(
+				&#039;line_items&#039;,
+				&#039;shipping_lines&#039;,
+				&#039;fee_lines&#039;,
+				&#039;coupon_lines&#039;,
+			);
+
+			if ( is_array( $query_vars[&#039;fields&#039;] ) &amp;&amp; 0 === count( array_intersect( $line_items, $query_vars[&#039;fields&#039;] ) ) ) {
+				return;
+			}
+		}
+		$cache_keys     = array_map(
+			function ( $order_id ) {
+				return &#039;order-items-&#039; . $order_id;
+			},
+			$order_ids
+		);
+		$cache_values   = wc_cache_get_multiple( $cache_keys, &#039;orders&#039; );
+		$non_cached_ids = array();
+		foreach ( $order_ids as $order_id ) {
+			if ( false === $cache_values[ &#039;order-items-&#039; . $order_id ] ) {
+				$non_cached_ids[] = $order_id;
+			}
+		}
+		if ( empty( $non_cached_ids ) ) {
+			return;
+		}
+
+		$non_cached_ids        = esc_sql( $non_cached_ids );
+		$non_cached_ids_string = implode( &#039;,&#039;, $non_cached_ids );
+		$order_items           = $wpdb-&gt;get_results(
+		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			&quot;SELECT order_item_type, order_item_id, order_id, order_item_name FROM {$wpdb-&gt;prefix}woocommerce_order_items WHERE order_id in ( $non_cached_ids_string ) ORDER BY order_item_id;&quot;
+		);
+		if ( empty( $order_items ) ) {
+			return;
+		}
+
+		$order_items_for_all_orders = array_reduce(
+			$order_items,
+			function ( $order_items_collection, $order_item ) {
+				if ( ! isset( $order_items_collection[ $order_item-&gt;order_id ] ) ) {
+					$order_items_collection[ $order_item-&gt;order_id ] = array();
+				}
+				$order_items_collection[ $order_item-&gt;order_id ][] = $order_item;
+				return $order_items_collection;
+			}
+		);
+		foreach ( $order_items_for_all_orders as $order_id =&gt; $items ) {
+			wp_cache_set( &#039;order-items-&#039; . $order_id, $items, &#039;orders&#039; );
+		}
+		foreach ( $order_items as $item ) {
+			wp_cache_set( &#039;item-&#039; . $item-&gt;order_item_id, $item, &#039;order-items&#039; );
+		}
+		$order_item_ids = wp_list_pluck( $order_items, &#039;order_item_id&#039; );
+		update_meta_cache( &#039;order_item&#039;, $order_item_ids );
+	}
+
+	/**
+	 * Remove all line items (products, coupons, shipping, taxes) from the order.
+	 *
+	 * @param WC_Order $order Order object.
+	 * @param string   $type Order item type. Default null.
+	 */
+	public function delete_items( $order, $type = null ) {
+		global $wpdb;
+		if ( ! empty( $type ) ) {
+			$wpdb-&gt;query( $wpdb-&gt;prepare( &quot;DELETE FROM itemmeta USING {$wpdb-&gt;prefix}woocommerce_order_itemmeta itemmeta INNER JOIN {$wpdb-&gt;prefix}woocommerce_order_items items WHERE itemmeta.order_item_id = items.order_item_id AND items.order_id = %d AND items.order_item_type = %s&quot;, $order-&gt;get_id(), $type ) );
+			$wpdb-&gt;query( $wpdb-&gt;prepare( &quot;DELETE FROM {$wpdb-&gt;prefix}woocommerce_order_items WHERE order_id = %d AND order_item_type = %s&quot;, $order-&gt;get_id(), $type ) );
+		} else {
+			$wpdb-&gt;query( $wpdb-&gt;prepare( &quot;DELETE FROM itemmeta USING {$wpdb-&gt;prefix}woocommerce_order_itemmeta itemmeta INNER JOIN {$wpdb-&gt;prefix}woocommerce_order_items items WHERE itemmeta.order_item_id = items.order_item_id and items.order_id = %d&quot;, $order-&gt;get_id() ) );
+			$wpdb-&gt;query( $wpdb-&gt;prepare( &quot;DELETE FROM {$wpdb-&gt;prefix}woocommerce_order_items WHERE order_id = %d&quot;, $order-&gt;get_id() ) );
+		}
+		$this-&gt;clear_caches( $order );
+	}
+
+	/**
+	 * Get token ids for an order.
+	 *
+	 * @param WC_Order $order Order object.
+	 * @return array
+	 */
+	public function get_payment_token_ids( $order ) {
+		$token_ids = array_filter( (array) get_post_meta( $order-&gt;get_id(), &#039;_payment_tokens&#039;, true ) );
+		return $token_ids;
+	}
+
+	/**
+	 * Update token ids for an order.
+	 *
+	 * @param WC_Order $order Order object.
+	 * @param array    $token_ids Payment token ids.
+	 */
+	public function update_payment_token_ids( $order, $token_ids ) {
+		update_post_meta( $order-&gt;get_id(), &#039;_payment_tokens&#039;, $token_ids );
+	}
+
+	/**
+	 * Get the order&#039;s title.
+	 *
+	 * @param WC_Order $order Order object.
+	 *
+	 * @return string Order title.
+	 */
+	public function get_title( WC_Order $order ) {
+		return get_the_title( $order-&gt;get_id() );
+	}
+
+	/**
+	 * Given an initialized order object, update the post/postmeta records.
+	 *
+	 * @param WC_Abstract_Order $order Order object.
+	 *
+	 * @return bool Whether the order was updated.
+	 */
+	public function update_order_from_object( $order ) {
+		if ( ! $order-&gt;get_id() ) {
+			return false;
+		}
+		$this-&gt;update_order_meta_from_object( $order );
+
+		// Add hook to update post_modified date so that it&#039;s the same as order. Without this hook, WP will set the modified date to current date, and we will think that posts and orders are out of sync again.
+		add_filter( &#039;wp_insert_post_data&#039;, array( $this, &#039;update_post_modified_data&#039; ), 10, 2 );
+		$post_data = array(
+			&#039;ID&#039;                 =&gt; $order-&gt;get_id(),
+			&#039;post_date&#039;          =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $order-&gt;get_date_created( &#039;edit&#039; )-&gt;getOffsetTimestamp() ),
+			&#039;post_date_gmt&#039;      =&gt; gmdate( &#039;Y-m-d H:i:s&#039;, $order-&gt;get_date_created( &#039;edit&#039; )-&gt;getTimestamp() ),
+			&#039;post_status&#039;        =&gt; $this-&gt;get_post_status( $order ),
+			&#039;post_parent&#039;        =&gt; $order-&gt;get_parent_id(),
+			&#039;edit_date&#039;          =&gt; true,
+			&#039;post_excerpt&#039;       =&gt; method_exists( $order, &#039;get_customer_note&#039; ) ? $order-&gt;get_customer_note() : &#039;&#039;,
+			&#039;post_type&#039;          =&gt; $order-&gt;get_type(),
+			&#039;order_modified&#039;     =&gt; ! is_null( $order-&gt;get_date_modified() ) ? gmdate( &#039;Y-m-d H:i:s&#039;, $order-&gt;get_date_modified( &#039;edit&#039; )-&gt;getOffsetTimestamp() ) : &#039;&#039;,
+			&#039;order_modified_gmt&#039; =&gt; ! is_null( $order-&gt;get_date_modified() ) ? gmdate( &#039;Y-m-d H:i:s&#039;, $order-&gt;get_date_modified( &#039;edit&#039; )-&gt;getTimestamp() ) : &#039;&#039;,
+		);
+		$updated   = wp_update_post( $post_data );
+		remove_filter( &#039;wp_insert_post_data&#039;, array( $this, &#039;update_post_modified_data&#039; ) );
+		return $updated;
+	}
+
+	/**
+	 * Change the modified date of the post to match the order&#039;s modified date if passed.
+	 *
+	 * @hooked wp_insert_post_data See function update_order_from_object.
+	 *
+	 * @param array $data An array of slashed, sanitized, and processed post data.
+	 * @param array $postarr An array of sanitized (and slashed) but otherwise unmodified post data.
+	 *
+	 * @return array Data with updated modified date.
+	 */
+	public function update_post_modified_data( $data, $postarr ) {
+		if ( ! isset( $postarr[&#039;order_modified&#039;] ) || ! isset( $postarr[&#039;order_modified_gmt&#039;] ) ) {
+			return $data;
+		}
+
+		$data[&#039;post_modified&#039;]     = $postarr[&#039;order_modified&#039;];
+		$data[&#039;post_modified_gmt&#039;] = $postarr[&#039;order_modified_gmt&#039;];
+		return $data;
+	}
+
+	/**
+	 * Helper method to update order metadata from initialized order object.
+	 *
+	 * @param WC_Abstract_Order $order Order object.
+	 */
+	private function update_order_meta_from_object( $order ) {
+		if ( is_null( $order-&gt;get_meta() ) ) {
+			return;
+		}
+
+		$existing_meta_data = get_post_meta( $order-&gt;get_id() );
+
+		foreach ( $order-&gt;get_meta_data() as $meta_data ) {
+			if ( isset( $existing_meta_data[ $meta_data-&gt;key ] ) ) {
+				if ( $existing_meta_data[ $meta_data-&gt;key ] === $meta_data-&gt;value ) {
+					unset( $existing_meta_data[ $meta_data-&gt;key ] );
+					continue;
+				}
+
+				unset( $existing_meta_data[ $meta_data-&gt;key ] );
+				delete_post_meta( $order-&gt;get_id(), $meta_data-&gt;key );
+			}
+			add_post_meta( $order-&gt;get_id(), $meta_data-&gt;key, $meta_data-&gt;value, false );
+		}
+
+		// Find remaining meta that was deleted from the order but still present in the associated post.
+		// Post meta corresponding to order props is excluded (as it shouldn&#039;t be deleted).
+		$keys_to_delete = array_diff(
+			array_keys( $existing_meta_data ),
+			$this-&gt;internal_meta_keys,
+			array_keys( $this-&gt;get_internal_data_store_key_getters() )
+		);
+
+		foreach ( $keys_to_delete as $meta_key ) {
+			delete_post_meta( $order-&gt;get_id(), $meta_key );
+		}
+
+		$this-&gt;update_post_meta( $order );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

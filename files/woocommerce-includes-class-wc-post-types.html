@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-post-types.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Post Types
+ *
+ * Registers post types and taxonomies.
+ *
+ * @package WooCommerce\Classes\Products
+ * @version 2.5.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+use Automattic\WooCommerce\Internal\DataStores\Orders\CustomOrdersTableController;
+
+/**
+ * Post types Class.
+ */
+class WC_Post_Types {
+
+	/**
+	 * Hook in methods.
+	 */
+	public static function init() {
+		add_action( &#039;init&#039;, array( __CLASS__, &#039;register_taxonomies&#039; ), 5 );
+		add_action( &#039;init&#039;, array( __CLASS__, &#039;register_post_types&#039; ), 5 );
+		add_action( &#039;init&#039;, array( __CLASS__, &#039;register_post_status&#039; ), 9 );
+		add_action( &#039;init&#039;, array( __CLASS__, &#039;support_jetpack_omnisearch&#039; ) );
+		add_filter( &#039;term_updated_messages&#039;, array( __CLASS__, &#039;updated_term_messages&#039; ) );
+		add_filter( &#039;rest_api_allowed_post_types&#039;, array( __CLASS__, &#039;rest_api_allowed_post_types&#039; ) );
+		add_action( &#039;woocommerce_after_register_post_type&#039;, array( __CLASS__, &#039;maybe_flush_rewrite_rules&#039; ) );
+		add_action( &#039;woocommerce_flush_rewrite_rules&#039;, array( __CLASS__, &#039;flush_rewrite_rules&#039; ) );
+		add_filter( &#039;gutenberg_can_edit_post_type&#039;, array( __CLASS__, &#039;gutenberg_can_edit_post_type&#039; ), 10, 2 );
+		add_filter( &#039;use_block_editor_for_post_type&#039;, array( __CLASS__, &#039;gutenberg_can_edit_post_type&#039; ), 10, 2 );
+	}
+
+	/**
+	 * Register core taxonomies.
+	 */
+	public static function register_taxonomies() {
+
+		if ( ! is_blog_installed() ) {
+			return;
+		}
+
+		if ( taxonomy_exists( &#039;product_type&#039; ) ) {
+			return;
+		}
+
+		do_action( &#039;woocommerce_register_taxonomy&#039; );
+
+		$permalinks = wc_get_permalink_structure();
+
+		register_taxonomy(
+			&#039;product_type&#039;,
+			apply_filters( &#039;woocommerce_taxonomy_objects_product_type&#039;, array( &#039;product&#039; ) ),
+			apply_filters(
+				&#039;woocommerce_taxonomy_args_product_type&#039;,
+				array(
+					&#039;hierarchical&#039;      =&gt; false,
+					&#039;show_ui&#039;           =&gt; false,
+					&#039;show_in_nav_menus&#039; =&gt; false,
+					&#039;query_var&#039;         =&gt; is_admin(),
+					&#039;rewrite&#039;           =&gt; false,
+					&#039;public&#039;            =&gt; false,
+					&#039;label&#039;             =&gt; _x( &#039;Product type&#039;, &#039;Taxonomy name&#039;, &#039;woocommerce&#039; ),
+				)
+			)
+		);
+
+		register_taxonomy(
+			&#039;product_visibility&#039;,
+			apply_filters( &#039;woocommerce_taxonomy_objects_product_visibility&#039;, array( &#039;product&#039;, &#039;product_variation&#039; ) ),
+			apply_filters(
+				&#039;woocommerce_taxonomy_args_product_visibility&#039;,
+				array(
+					&#039;hierarchical&#039;      =&gt; false,
+					&#039;show_ui&#039;           =&gt; false,
+					&#039;show_in_nav_menus&#039; =&gt; false,
+					&#039;query_var&#039;         =&gt; is_admin(),
+					&#039;rewrite&#039;           =&gt; false,
+					&#039;public&#039;            =&gt; false,
+					&#039;label&#039;             =&gt; _x( &#039;Product visibility&#039;, &#039;Taxonomy name&#039;, &#039;woocommerce&#039; ),
+				)
+			)
+		);
+
+		register_taxonomy(
+			&#039;product_cat&#039;,
+			apply_filters( &#039;woocommerce_taxonomy_objects_product_cat&#039;, array( &#039;product&#039; ) ),
+			apply_filters(
+				&#039;woocommerce_taxonomy_args_product_cat&#039;,
+				array(
+					&#039;hierarchical&#039;          =&gt; true,
+					&#039;update_count_callback&#039; =&gt; &#039;_wc_term_recount&#039;,
+					&#039;label&#039;                 =&gt; __( &#039;Categories&#039;, &#039;woocommerce&#039; ),
+					&#039;labels&#039;                =&gt; array(
+						&#039;name&#039;                  =&gt; __( &#039;Product categories&#039;, &#039;woocommerce&#039; ),
+						&#039;singular_name&#039;         =&gt; __( &#039;Category&#039;, &#039;woocommerce&#039; ),
+						&#039;menu_name&#039;             =&gt; _x( &#039;Categories&#039;, &#039;Admin menu name&#039;, &#039;woocommerce&#039; ),
+						&#039;search_items&#039;          =&gt; __( &#039;Search categories&#039;, &#039;woocommerce&#039; ),
+						&#039;all_items&#039;             =&gt; __( &#039;All categories&#039;, &#039;woocommerce&#039; ),
+						&#039;parent_item&#039;           =&gt; __( &#039;Parent category&#039;, &#039;woocommerce&#039; ),
+						&#039;parent_item_colon&#039;     =&gt; __( &#039;Parent category:&#039;, &#039;woocommerce&#039; ),
+						&#039;edit_item&#039;             =&gt; __( &#039;Edit category&#039;, &#039;woocommerce&#039; ),
+						&#039;update_item&#039;           =&gt; __( &#039;Update category&#039;, &#039;woocommerce&#039; ),
+						&#039;add_new_item&#039;          =&gt; __( &#039;Add new category&#039;, &#039;woocommerce&#039; ),
+						&#039;new_item_name&#039;         =&gt; __( &#039;New category name&#039;, &#039;woocommerce&#039; ),
+						&#039;not_found&#039;             =&gt; __( &#039;No categories found&#039;, &#039;woocommerce&#039; ),
+						&#039;item_link&#039;             =&gt; __( &#039;Product Category Link&#039;, &#039;woocommerce&#039; ),
+						&#039;item_link_description&#039; =&gt; __( &#039;A link to a product category.&#039;, &#039;woocommerce&#039; ),
+					),
+					&#039;show_in_rest&#039;          =&gt; true,
+					&#039;show_ui&#039;               =&gt; true,
+					&#039;query_var&#039;             =&gt; true,
+					&#039;capabilities&#039;          =&gt; array(
+						&#039;manage_terms&#039; =&gt; &#039;manage_product_terms&#039;,
+						&#039;edit_terms&#039;   =&gt; &#039;edit_product_terms&#039;,
+						&#039;delete_terms&#039; =&gt; &#039;delete_product_terms&#039;,
+						&#039;assign_terms&#039; =&gt; &#039;assign_product_terms&#039;,
+					),
+					&#039;rewrite&#039;               =&gt; array(
+						&#039;slug&#039;         =&gt; $permalinks[&#039;category_rewrite_slug&#039;],
+						&#039;with_front&#039;   =&gt; false,
+						&#039;hierarchical&#039; =&gt; true,
+					),
+				)
+			)
+		);
+
+		register_taxonomy(
+			&#039;product_tag&#039;,
+			apply_filters( &#039;woocommerce_taxonomy_objects_product_tag&#039;, array( &#039;product&#039; ) ),
+			apply_filters(
+				&#039;woocommerce_taxonomy_args_product_tag&#039;,
+				array(
+					&#039;hierarchical&#039;          =&gt; false,
+					&#039;update_count_callback&#039; =&gt; &#039;_wc_term_recount&#039;,
+					&#039;label&#039;                 =&gt; __( &#039;Product tags&#039;, &#039;woocommerce&#039; ),
+					&#039;labels&#039;                =&gt; array(
+						&#039;name&#039;                       =&gt; __( &#039;Product tags&#039;, &#039;woocommerce&#039; ),
+						&#039;singular_name&#039;              =&gt; __( &#039;Tag&#039;, &#039;woocommerce&#039; ),
+						&#039;menu_name&#039;                  =&gt; _x( &#039;Tags&#039;, &#039;Admin menu name&#039;, &#039;woocommerce&#039; ),
+						&#039;search_items&#039;               =&gt; __( &#039;Search tags&#039;, &#039;woocommerce&#039; ),
+						&#039;all_items&#039;                  =&gt; __( &#039;All tags&#039;, &#039;woocommerce&#039; ),
+						&#039;edit_item&#039;                  =&gt; __( &#039;Edit tag&#039;, &#039;woocommerce&#039; ),
+						&#039;update_item&#039;                =&gt; __( &#039;Update tag&#039;, &#039;woocommerce&#039; ),
+						&#039;add_new_item&#039;               =&gt; __( &#039;Add new tag&#039;, &#039;woocommerce&#039; ),
+						&#039;new_item_name&#039;              =&gt; __( &#039;New tag name&#039;, &#039;woocommerce&#039; ),
+						&#039;popular_items&#039;              =&gt; __( &#039;Popular tags&#039;, &#039;woocommerce&#039; ),
+						&#039;separate_items_with_commas&#039; =&gt; __( &#039;Separate tags with commas&#039;, &#039;woocommerce&#039; ),
+						&#039;add_or_remove_items&#039;        =&gt; __( &#039;Add or remove tags&#039;, &#039;woocommerce&#039; ),
+						&#039;choose_from_most_used&#039;      =&gt; __( &#039;Choose from the most used tags&#039;, &#039;woocommerce&#039; ),
+						&#039;not_found&#039;                  =&gt; __( &#039;No tags found&#039;, &#039;woocommerce&#039; ),
+						&#039;item_link&#039;                  =&gt; __( &#039;Product Tag Link&#039;, &#039;woocommerce&#039; ),
+						&#039;item_link_description&#039;      =&gt; __( &#039;A link to a product tag.&#039;, &#039;woocommerce&#039; ),
+					),
+					&#039;show_in_rest&#039;          =&gt; true,
+					&#039;show_ui&#039;               =&gt; true,
+					&#039;query_var&#039;             =&gt; true,
+					&#039;capabilities&#039;          =&gt; array(
+						&#039;manage_terms&#039; =&gt; &#039;manage_product_terms&#039;,
+						&#039;edit_terms&#039;   =&gt; &#039;edit_product_terms&#039;,
+						&#039;delete_terms&#039; =&gt; &#039;delete_product_terms&#039;,
+						&#039;assign_terms&#039; =&gt; &#039;assign_product_terms&#039;,
+					),
+					&#039;rewrite&#039;               =&gt; array(
+						&#039;slug&#039;       =&gt; $permalinks[&#039;tag_rewrite_slug&#039;],
+						&#039;with_front&#039; =&gt; false,
+					),
+				)
+			)
+		);
+
+		register_taxonomy(
+			&#039;product_shipping_class&#039;,
+			apply_filters( &#039;woocommerce_taxonomy_objects_product_shipping_class&#039;, array( &#039;product&#039;, &#039;product_variation&#039; ) ),
+			apply_filters(
+				&#039;woocommerce_taxonomy_args_product_shipping_class&#039;,
+				array(
+					&#039;hierarchical&#039;          =&gt; false,
+					&#039;update_count_callback&#039; =&gt; &#039;_update_post_term_count&#039;,
+					&#039;label&#039;                 =&gt; __( &#039;Shipping classes&#039;, &#039;woocommerce&#039; ),
+					&#039;labels&#039;                =&gt; array(
+						&#039;name&#039;              =&gt; __( &#039;Product shipping classes&#039;, &#039;woocommerce&#039; ),
+						&#039;singular_name&#039;     =&gt; __( &#039;Shipping class&#039;, &#039;woocommerce&#039; ),
+						&#039;menu_name&#039;         =&gt; _x( &#039;Shipping classes&#039;, &#039;Admin menu name&#039;, &#039;woocommerce&#039; ),
+						&#039;search_items&#039;      =&gt; __( &#039;Search shipping classes&#039;, &#039;woocommerce&#039; ),
+						&#039;all_items&#039;         =&gt; __( &#039;All shipping classes&#039;, &#039;woocommerce&#039; ),
+						&#039;parent_item&#039;       =&gt; __( &#039;Parent shipping class&#039;, &#039;woocommerce&#039; ),
+						&#039;parent_item_colon&#039; =&gt; __( &#039;Parent shipping class:&#039;, &#039;woocommerce&#039; ),
+						&#039;edit_item&#039;         =&gt; __( &#039;Edit shipping class&#039;, &#039;woocommerce&#039; ),
+						&#039;update_item&#039;       =&gt; __( &#039;Update shipping class&#039;, &#039;woocommerce&#039; ),
+						&#039;add_new_item&#039;      =&gt; __( &#039;Add new shipping class&#039;, &#039;woocommerce&#039; ),
+						&#039;new_item_name&#039;     =&gt; __( &#039;New shipping class Name&#039;, &#039;woocommerce&#039; ),
+					),
+					&#039;show_ui&#039;               =&gt; false,
+					&#039;show_in_quick_edit&#039;    =&gt; false,
+					&#039;show_in_nav_menus&#039;     =&gt; false,
+					&#039;query_var&#039;             =&gt; is_admin(),
+					&#039;capabilities&#039;          =&gt; array(
+						&#039;manage_terms&#039; =&gt; &#039;manage_product_terms&#039;,
+						&#039;edit_terms&#039;   =&gt; &#039;edit_product_terms&#039;,
+						&#039;delete_terms&#039; =&gt; &#039;delete_product_terms&#039;,
+						&#039;assign_terms&#039; =&gt; &#039;assign_product_terms&#039;,
+					),
+					&#039;rewrite&#039;               =&gt; false,
+				)
+			)
+		);
+
+		global $wc_product_attributes;
+
+		$wc_product_attributes = array();
+		$attribute_taxonomies  = wc_get_attribute_taxonomies();
+
+		if ( $attribute_taxonomies ) {
+			foreach ( $attribute_taxonomies as $tax ) {
+				$name = wc_attribute_taxonomy_name( $tax-&gt;attribute_name );
+
+				if ( $name ) {
+					$tax-&gt;attribute_public          = absint( isset( $tax-&gt;attribute_public ) ? $tax-&gt;attribute_public : 1 );
+					$label                          = ! empty( $tax-&gt;attribute_label ) ? $tax-&gt;attribute_label : $tax-&gt;attribute_name;
+					$wc_product_attributes[ $name ] = $tax;
+					$taxonomy_data                  = array(
+						&#039;hierarchical&#039;          =&gt; false,
+						&#039;update_count_callback&#039; =&gt; &#039;_update_post_term_count&#039;,
+						&#039;labels&#039;                =&gt; array(
+							/* translators: %s: attribute name */
+							&#039;name&#039;              =&gt; sprintf( _x( &#039;Product %s&#039;, &#039;Product Attribute&#039;, &#039;woocommerce&#039; ), $label ),
+							&#039;singular_name&#039;     =&gt; $label,
+							/* translators: %s: attribute name */
+							&#039;search_items&#039;      =&gt; sprintf( __( &#039;Search %s&#039;, &#039;woocommerce&#039; ), $label ),
+							/* translators: %s: attribute name */
+							&#039;all_items&#039;         =&gt; sprintf( __( &#039;All %s&#039;, &#039;woocommerce&#039; ), $label ),
+							/* translators: %s: attribute name */
+							&#039;parent_item&#039;       =&gt; sprintf( __( &#039;Parent %s&#039;, &#039;woocommerce&#039; ), $label ),
+							/* translators: %s: attribute name */
+							&#039;parent_item_colon&#039; =&gt; sprintf( __( &#039;Parent %s:&#039;, &#039;woocommerce&#039; ), $label ),
+							/* translators: %s: attribute name */
+							&#039;edit_item&#039;         =&gt; sprintf( __( &#039;Edit %s&#039;, &#039;woocommerce&#039; ), $label ),
+							/* translators: %s: attribute name */
+							&#039;update_item&#039;       =&gt; sprintf( __( &#039;Update %s&#039;, &#039;woocommerce&#039; ), $label ),
+							/* translators: %s: attribute name */
+							&#039;add_new_item&#039;      =&gt; sprintf( __( &#039;Add new %s&#039;, &#039;woocommerce&#039; ), $label ),
+							/* translators: %s: attribute name */
+							&#039;new_item_name&#039;     =&gt; sprintf( __( &#039;New %s&#039;, &#039;woocommerce&#039; ), $label ),
+							/* translators: %s: attribute name */
+							&#039;not_found&#039;         =&gt; sprintf( __( &#039;No &amp;quot;%s&amp;quot; found&#039;, &#039;woocommerce&#039; ), $label ),
+							/* translators: %s: attribute name */
+							&#039;back_to_items&#039;     =&gt; sprintf( __( &#039;&amp;larr; Back to &quot;%s&quot; attributes&#039;, &#039;woocommerce&#039; ), $label ),
+						),
+						&#039;show_ui&#039;               =&gt; true,
+						&#039;show_in_quick_edit&#039;    =&gt; false,
+						&#039;show_in_menu&#039;          =&gt; false,
+						&#039;meta_box_cb&#039;           =&gt; false,
+						&#039;query_var&#039;             =&gt; 1 === $tax-&gt;attribute_public,
+						&#039;rewrite&#039;               =&gt; false,
+						&#039;sort&#039;                  =&gt; false,
+						&#039;public&#039;                =&gt; 1 === $tax-&gt;attribute_public,
+						&#039;show_in_nav_menus&#039;     =&gt; 1 === $tax-&gt;attribute_public &amp;&amp; apply_filters( &#039;woocommerce_attribute_show_in_nav_menus&#039;, false, $name ),
+						&#039;capabilities&#039;          =&gt; array(
+							&#039;manage_terms&#039; =&gt; &#039;manage_product_terms&#039;,
+							&#039;edit_terms&#039;   =&gt; &#039;edit_product_terms&#039;,
+							&#039;delete_terms&#039; =&gt; &#039;delete_product_terms&#039;,
+							&#039;assign_terms&#039; =&gt; &#039;assign_product_terms&#039;,
+						),
+					);
+
+					if ( 1 === $tax-&gt;attribute_public &amp;&amp; sanitize_title( $tax-&gt;attribute_name ) ) {
+						$taxonomy_data[&#039;rewrite&#039;] = array(
+							&#039;slug&#039;         =&gt; trailingslashit( $permalinks[&#039;attribute_rewrite_slug&#039;] ) . urldecode( sanitize_title( $tax-&gt;attribute_name ) ),
+							&#039;with_front&#039;   =&gt; false,
+							&#039;hierarchical&#039; =&gt; true,
+						);
+					}
+
+					register_taxonomy( $name, apply_filters( &quot;woocommerce_taxonomy_objects_{$name}&quot;, array( &#039;product&#039; ) ), apply_filters( &quot;woocommerce_taxonomy_args_{$name}&quot;, $taxonomy_data ) );
+				}
+			}
+		}
+
+		do_action( &#039;woocommerce_after_register_taxonomy&#039; );
+	}
+
+	/**
+	 * Register core post types.
+	 */
+	public static function register_post_types() {
+		if ( ! is_blog_installed() || post_type_exists( &#039;product&#039; ) ) {
+			return;
+		}
+
+		do_action( &#039;woocommerce_register_post_type&#039; );
+
+		$permalinks = wc_get_permalink_structure();
+		$supports   = array( &#039;title&#039;, &#039;editor&#039;, &#039;excerpt&#039;, &#039;thumbnail&#039;, &#039;custom-fields&#039;, &#039;publicize&#039;, &#039;wpcom-markdown&#039; );
+
+		if ( &#039;yes&#039; === get_option( &#039;woocommerce_enable_reviews&#039;, &#039;yes&#039; ) ) {
+			$supports[] = &#039;comments&#039;;
+		}
+
+		$shop_page_id = wc_get_page_id( &#039;shop&#039; );
+
+		if ( wc_current_theme_supports_woocommerce_or_fse() ) {
+			$has_archive = $shop_page_id &amp;&amp; get_post( $shop_page_id ) ? urldecode( get_page_uri( $shop_page_id ) ) : &#039;shop&#039;;
+		} else {
+			$has_archive = false;
+		}
+
+		// If theme support changes, we may need to flush permalinks since some are changed based on this flag.
+		$theme_support = wc_current_theme_supports_woocommerce_or_fse() ? &#039;yes&#039; : &#039;no&#039;;
+		if ( get_option( &#039;current_theme_supports_woocommerce&#039; ) !== $theme_support &amp;&amp; update_option( &#039;current_theme_supports_woocommerce&#039;, $theme_support ) ) {
+			update_option( &#039;woocommerce_queue_flush_rewrite_rules&#039;, &#039;yes&#039; );
+		}
+
+		register_post_type(
+			&#039;product&#039;,
+			apply_filters(
+				&#039;woocommerce_register_post_type_product&#039;,
+				array(
+					&#039;labels&#039;              =&gt; array(
+						&#039;name&#039;                  =&gt; __( &#039;Products&#039;, &#039;woocommerce&#039; ),
+						&#039;singular_name&#039;         =&gt; __( &#039;Product&#039;, &#039;woocommerce&#039; ),
+						&#039;all_items&#039;             =&gt; __( &#039;All Products&#039;, &#039;woocommerce&#039; ),
+						&#039;menu_name&#039;             =&gt; _x( &#039;Products&#039;, &#039;Admin menu name&#039;, &#039;woocommerce&#039; ),
+						&#039;add_new&#039;               =&gt; __( &#039;Add New&#039;, &#039;woocommerce&#039; ),
+						&#039;add_new_item&#039;          =&gt; __( &#039;Add new product&#039;, &#039;woocommerce&#039; ),
+						&#039;edit&#039;                  =&gt; __( &#039;Edit&#039;, &#039;woocommerce&#039; ),
+						&#039;edit_item&#039;             =&gt; __( &#039;Edit product&#039;, &#039;woocommerce&#039; ),
+						&#039;new_item&#039;              =&gt; __( &#039;New product&#039;, &#039;woocommerce&#039; ),
+						&#039;view_item&#039;             =&gt; __( &#039;View product&#039;, &#039;woocommerce&#039; ),
+						&#039;view_items&#039;            =&gt; __( &#039;View products&#039;, &#039;woocommerce&#039; ),
+						&#039;search_items&#039;          =&gt; __( &#039;Search products&#039;, &#039;woocommerce&#039; ),
+						&#039;not_found&#039;             =&gt; __( &#039;No products found&#039;, &#039;woocommerce&#039; ),
+						&#039;not_found_in_trash&#039;    =&gt; __( &#039;No products found in trash&#039;, &#039;woocommerce&#039; ),
+						&#039;parent&#039;                =&gt; __( &#039;Parent product&#039;, &#039;woocommerce&#039; ),
+						&#039;featured_image&#039;        =&gt; __( &#039;Product image&#039;, &#039;woocommerce&#039; ),
+						&#039;set_featured_image&#039;    =&gt; __( &#039;Set product image&#039;, &#039;woocommerce&#039; ),
+						&#039;remove_featured_image&#039; =&gt; __( &#039;Remove product image&#039;, &#039;woocommerce&#039; ),
+						&#039;use_featured_image&#039;    =&gt; __( &#039;Use as product image&#039;, &#039;woocommerce&#039; ),
+						&#039;insert_into_item&#039;      =&gt; __( &#039;Insert into product&#039;, &#039;woocommerce&#039; ),
+						&#039;uploaded_to_this_item&#039; =&gt; __( &#039;Uploaded to this product&#039;, &#039;woocommerce&#039; ),
+						&#039;filter_items_list&#039;     =&gt; __( &#039;Filter products&#039;, &#039;woocommerce&#039; ),
+						&#039;items_list_navigation&#039; =&gt; __( &#039;Products navigation&#039;, &#039;woocommerce&#039; ),
+						&#039;items_list&#039;            =&gt; __( &#039;Products list&#039;, &#039;woocommerce&#039; ),
+						&#039;item_link&#039;             =&gt; __( &#039;Product Link&#039;, &#039;woocommerce&#039; ),
+						&#039;item_link_description&#039; =&gt; __( &#039;A link to a product.&#039;, &#039;woocommerce&#039; ),
+					),
+					&#039;description&#039;         =&gt; __( &#039;This is where you can browse products in this store.&#039;, &#039;woocommerce&#039; ),
+					&#039;public&#039;              =&gt; true,
+					&#039;show_ui&#039;             =&gt; true,
+					&#039;menu_icon&#039;           =&gt; &#039;dashicons-archive&#039;,
+					&#039;capability_type&#039;     =&gt; &#039;product&#039;,
+					&#039;map_meta_cap&#039;        =&gt; true,
+					&#039;publicly_queryable&#039;  =&gt; true,
+					&#039;exclude_from_search&#039; =&gt; false,
+					&#039;hierarchical&#039;        =&gt; false, // Hierarchical causes memory issues - WP loads all records!
+					&#039;rewrite&#039;             =&gt; $permalinks[&#039;product_rewrite_slug&#039;] ? array(
+						&#039;slug&#039;       =&gt; $permalinks[&#039;product_rewrite_slug&#039;],
+						&#039;with_front&#039; =&gt; false,
+						&#039;feeds&#039;      =&gt; true,
+					) : false,
+					&#039;query_var&#039;           =&gt; true,
+					&#039;supports&#039;            =&gt; $supports,
+					&#039;has_archive&#039;         =&gt; $has_archive,
+					&#039;show_in_nav_menus&#039;   =&gt; true,
+					&#039;show_in_rest&#039;        =&gt; true,
+				)
+			)
+		);
+
+		register_post_type(
+			&#039;product_variation&#039;,
+			apply_filters(
+				&#039;woocommerce_register_post_type_product_variation&#039;,
+				array(
+					&#039;label&#039;           =&gt; __( &#039;Variations&#039;, &#039;woocommerce&#039; ),
+					&#039;public&#039;          =&gt; false,
+					&#039;hierarchical&#039;    =&gt; false,
+					&#039;supports&#039;        =&gt; false,
+					&#039;capability_type&#039; =&gt; &#039;product&#039;,
+					&#039;rewrite&#039;         =&gt; false,
+				)
+			)
+		);
+
+		wc_register_order_type(
+			&#039;shop_order&#039;,
+			apply_filters(
+				&#039;woocommerce_register_post_type_shop_order&#039;,
+				array(
+					&#039;labels&#039;              =&gt; array(
+						&#039;name&#039;                  =&gt; __( &#039;Orders&#039;, &#039;woocommerce&#039; ),
+						&#039;singular_name&#039;         =&gt; _x( &#039;Order&#039;, &#039;shop_order post type singular name&#039;, &#039;woocommerce&#039; ),
+						&#039;add_new&#039;               =&gt; __( &#039;Add order&#039;, &#039;woocommerce&#039; ),
+						&#039;add_new_item&#039;          =&gt; __( &#039;Add new order&#039;, &#039;woocommerce&#039; ),
+						&#039;edit&#039;                  =&gt; __( &#039;Edit&#039;, &#039;woocommerce&#039; ),
+						&#039;edit_item&#039;             =&gt; __( &#039;Edit order&#039;, &#039;woocommerce&#039; ),
+						&#039;new_item&#039;              =&gt; __( &#039;New order&#039;, &#039;woocommerce&#039; ),
+						&#039;view_item&#039;             =&gt; __( &#039;View order&#039;, &#039;woocommerce&#039; ),
+						&#039;search_items&#039;          =&gt; __( &#039;Search orders&#039;, &#039;woocommerce&#039; ),
+						&#039;not_found&#039;             =&gt; __( &#039;No orders found&#039;, &#039;woocommerce&#039; ),
+						&#039;not_found_in_trash&#039;    =&gt; __( &#039;No orders found in trash&#039;, &#039;woocommerce&#039; ),
+						&#039;parent&#039;                =&gt; __( &#039;Parent orders&#039;, &#039;woocommerce&#039; ),
+						&#039;menu_name&#039;             =&gt; _x( &#039;Orders&#039;, &#039;Admin menu name&#039;, &#039;woocommerce&#039; ),
+						&#039;filter_items_list&#039;     =&gt; __( &#039;Filter orders&#039;, &#039;woocommerce&#039; ),
+						&#039;items_list_navigation&#039; =&gt; __( &#039;Orders navigation&#039;, &#039;woocommerce&#039; ),
+						&#039;items_list&#039;            =&gt; __( &#039;Orders list&#039;, &#039;woocommerce&#039; ),
+					),
+					&#039;description&#039;         =&gt; __( &#039;This is where store orders are stored.&#039;, &#039;woocommerce&#039; ),
+					&#039;public&#039;              =&gt; false,
+					&#039;show_ui&#039;             =&gt; true,
+					&#039;capability_type&#039;     =&gt; &#039;shop_order&#039;,
+					&#039;map_meta_cap&#039;        =&gt; true,
+					&#039;publicly_queryable&#039;  =&gt; false,
+					&#039;exclude_from_search&#039; =&gt; true,
+					&#039;show_in_menu&#039;        =&gt; current_user_can( &#039;edit_others_shop_orders&#039; ) ? &#039;woocommerce&#039; : true,
+					&#039;hierarchical&#039;        =&gt; false,
+					&#039;show_in_nav_menus&#039;   =&gt; false,
+					&#039;rewrite&#039;             =&gt; false,
+					&#039;query_var&#039;           =&gt; false,
+					&#039;supports&#039;            =&gt; array( &#039;title&#039;, &#039;comments&#039;, &#039;custom-fields&#039; ),
+					&#039;has_archive&#039;         =&gt; false,
+				)
+			)
+		);
+
+		wc_register_order_type(
+			&#039;shop_order_refund&#039;,
+			apply_filters(
+				&#039;woocommerce_register_post_type_shop_order_refund&#039;,
+				array(
+					&#039;label&#039;                            =&gt; __( &#039;Refunds&#039;, &#039;woocommerce&#039; ),
+					&#039;capability_type&#039;                  =&gt; &#039;shop_order&#039;,
+					&#039;public&#039;                           =&gt; false,
+					&#039;hierarchical&#039;                     =&gt; false,
+					&#039;supports&#039;                         =&gt; false,
+					&#039;exclude_from_orders_screen&#039;       =&gt; false,
+					&#039;add_order_meta_boxes&#039;             =&gt; false,
+					&#039;exclude_from_order_count&#039;         =&gt; true,
+					&#039;exclude_from_order_views&#039;         =&gt; false,
+					&#039;exclude_from_order_reports&#039;       =&gt; false,
+					&#039;exclude_from_order_sales_reports&#039; =&gt; true,
+					&#039;class_name&#039;                       =&gt; &#039;WC_Order_Refund&#039;,
+					&#039;rewrite&#039;                          =&gt; false,
+				)
+			)
+		);
+
+		if ( &#039;yes&#039; === get_option( &#039;woocommerce_enable_coupons&#039; ) ) {
+			register_post_type(
+				&#039;shop_coupon&#039;,
+				apply_filters(
+					&#039;woocommerce_register_post_type_shop_coupon&#039;,
+					array(
+						&#039;labels&#039;              =&gt; array(
+							&#039;name&#039;                  =&gt; __( &#039;Coupons&#039;, &#039;woocommerce&#039; ),
+							&#039;singular_name&#039;         =&gt; __( &#039;Coupon&#039;, &#039;woocommerce&#039; ),
+							&#039;menu_name&#039;             =&gt; _x( &#039;Coupons&#039;, &#039;Admin menu name&#039;, &#039;woocommerce&#039; ),
+							&#039;add_new&#039;               =&gt; __( &#039;Add coupon&#039;, &#039;woocommerce&#039; ),
+							&#039;add_new_item&#039;          =&gt; __( &#039;Add new coupon&#039;, &#039;woocommerce&#039; ),
+							&#039;edit&#039;                  =&gt; __( &#039;Edit&#039;, &#039;woocommerce&#039; ),
+							&#039;edit_item&#039;             =&gt; __( &#039;Edit coupon&#039;, &#039;woocommerce&#039; ),
+							&#039;new_item&#039;              =&gt; __( &#039;New coupon&#039;, &#039;woocommerce&#039; ),
+							&#039;view_item&#039;             =&gt; __( &#039;View coupon&#039;, &#039;woocommerce&#039; ),
+							&#039;search_items&#039;          =&gt; __( &#039;Search coupons&#039;, &#039;woocommerce&#039; ),
+							&#039;not_found&#039;             =&gt; __( &#039;No coupons found&#039;, &#039;woocommerce&#039; ),
+							&#039;not_found_in_trash&#039;    =&gt; __( &#039;No coupons found in trash&#039;, &#039;woocommerce&#039; ),
+							&#039;parent&#039;                =&gt; __( &#039;Parent coupon&#039;, &#039;woocommerce&#039; ),
+							&#039;filter_items_list&#039;     =&gt; __( &#039;Filter coupons&#039;, &#039;woocommerce&#039; ),
+							&#039;items_list_navigation&#039; =&gt; __( &#039;Coupons navigation&#039;, &#039;woocommerce&#039; ),
+							&#039;items_list&#039;            =&gt; __( &#039;Coupons list&#039;, &#039;woocommerce&#039; ),
+						),
+						&#039;description&#039;         =&gt; __( &#039;This is where you can add new coupons that customers can use in your store.&#039;, &#039;woocommerce&#039; ),
+						&#039;public&#039;              =&gt; false,
+						&#039;show_ui&#039;             =&gt; true,
+						&#039;capability_type&#039;     =&gt; &#039;shop_coupon&#039;,
+						&#039;map_meta_cap&#039;        =&gt; true,
+						&#039;publicly_queryable&#039;  =&gt; false,
+						&#039;exclude_from_search&#039; =&gt; true,
+						&#039;show_in_menu&#039;        =&gt; current_user_can( &#039;edit_others_shop_orders&#039; ) ? &#039;woocommerce&#039; : true,
+						&#039;hierarchical&#039;        =&gt; false,
+						&#039;rewrite&#039;             =&gt; false,
+						&#039;query_var&#039;           =&gt; false,
+						&#039;supports&#039;            =&gt; array( &#039;title&#039; ),
+						&#039;show_in_nav_menus&#039;   =&gt; false,
+						&#039;show_in_admin_bar&#039;   =&gt; true,
+					)
+				)
+			);
+		}
+
+		do_action( &#039;woocommerce_after_register_post_type&#039; );
+	}
+
+	/**
+	 * Customize taxonomies update messages.
+	 *
+	 * @param array $messages The list of available messages.
+	 * @since 4.4.0
+	 * @return bool
+	 */
+	public static function updated_term_messages( $messages ) {
+		$messages[&#039;product_cat&#039;] = array(
+			0 =&gt; &#039;&#039;,
+			1 =&gt; __( &#039;Category added.&#039;, &#039;woocommerce&#039; ),
+			2 =&gt; __( &#039;Category deleted.&#039;, &#039;woocommerce&#039; ),
+			3 =&gt; __( &#039;Category updated.&#039;, &#039;woocommerce&#039; ),
+			4 =&gt; __( &#039;Category not added.&#039;, &#039;woocommerce&#039; ),
+			5 =&gt; __( &#039;Category not updated.&#039;, &#039;woocommerce&#039; ),
+			6 =&gt; __( &#039;Categories deleted.&#039;, &#039;woocommerce&#039; ),
+		);
+
+		$messages[&#039;product_tag&#039;] = array(
+			0 =&gt; &#039;&#039;,
+			1 =&gt; __( &#039;Tag added.&#039;, &#039;woocommerce&#039; ),
+			2 =&gt; __( &#039;Tag deleted.&#039;, &#039;woocommerce&#039; ),
+			3 =&gt; __( &#039;Tag updated.&#039;, &#039;woocommerce&#039; ),
+			4 =&gt; __( &#039;Tag not added.&#039;, &#039;woocommerce&#039; ),
+			5 =&gt; __( &#039;Tag not updated.&#039;, &#039;woocommerce&#039; ),
+			6 =&gt; __( &#039;Tags deleted.&#039;, &#039;woocommerce&#039; ),
+		);
+
+		$wc_product_attributes = array();
+		$attribute_taxonomies  = wc_get_attribute_taxonomies();
+
+		if ( $attribute_taxonomies ) {
+			foreach ( $attribute_taxonomies as $tax ) {
+				$name = wc_attribute_taxonomy_name( $tax-&gt;attribute_name );
+
+				if ( $name ) {
+					$label = ! empty( $tax-&gt;attribute_label ) ? $tax-&gt;attribute_label : $tax-&gt;attribute_name;
+
+					$messages[ $name ] = array(
+						0 =&gt; &#039;&#039;,
+						/* translators: %s: taxonomy label */
+						1 =&gt; sprintf( _x( &#039;%s added&#039;, &#039;taxonomy term messages&#039;, &#039;woocommerce&#039; ), $label ),
+						/* translators: %s: taxonomy label */
+						2 =&gt; sprintf( _x( &#039;%s deleted&#039;, &#039;taxonomy term messages&#039;, &#039;woocommerce&#039; ), $label ),
+						/* translators: %s: taxonomy label */
+						3 =&gt; sprintf( _x( &#039;%s updated&#039;, &#039;taxonomy term messages&#039;, &#039;woocommerce&#039; ), $label ),
+						/* translators: %s: taxonomy label */
+						4 =&gt; sprintf( _x( &#039;%s not added&#039;, &#039;taxonomy term messages&#039;, &#039;woocommerce&#039; ), $label ),
+						/* translators: %s: taxonomy label */
+						5 =&gt; sprintf( _x( &#039;%s not updated&#039;, &#039;taxonomy term messages&#039;, &#039;woocommerce&#039; ), $label ),
+						/* translators: %s: taxonomy label */
+						6 =&gt; sprintf( _x( &#039;%s deleted&#039;, &#039;taxonomy term messages&#039;, &#039;woocommerce&#039; ), $label ),
+					);
+				}
+			}
+		}
+
+		return $messages;
+	}
+
+	/**
+	 * Register our custom post statuses, used for order status.
+	 */
+	public static function register_post_status() {
+
+		$order_statuses = apply_filters(
+			&#039;woocommerce_register_shop_order_post_statuses&#039;,
+			array(
+				&#039;wc-pending&#039;    =&gt; array(
+					&#039;label&#039;                     =&gt; _x( &#039;Pending payment&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+					&#039;public&#039;                    =&gt; false,
+					&#039;exclude_from_search&#039;       =&gt; false,
+					&#039;show_in_admin_all_list&#039;    =&gt; true,
+					&#039;show_in_admin_status_list&#039; =&gt; true,
+					/* translators: %s: number of orders */
+					&#039;label_count&#039;               =&gt; _n_noop( &#039;Pending payment &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;Pending payment &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;woocommerce&#039; ),
+				),
+				&#039;wc-processing&#039; =&gt; array(
+					&#039;label&#039;                     =&gt; _x( &#039;Processing&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+					&#039;public&#039;                    =&gt; false,
+					&#039;exclude_from_search&#039;       =&gt; false,
+					&#039;show_in_admin_all_list&#039;    =&gt; true,
+					&#039;show_in_admin_status_list&#039; =&gt; true,
+					/* translators: %s: number of orders */
+					&#039;label_count&#039;               =&gt; _n_noop( &#039;Processing &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;Processing &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;woocommerce&#039; ),
+				),
+				&#039;wc-on-hold&#039;    =&gt; array(
+					&#039;label&#039;                     =&gt; _x( &#039;On hold&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+					&#039;public&#039;                    =&gt; false,
+					&#039;exclude_from_search&#039;       =&gt; false,
+					&#039;show_in_admin_all_list&#039;    =&gt; true,
+					&#039;show_in_admin_status_list&#039; =&gt; true,
+					/* translators: %s: number of orders */
+					&#039;label_count&#039;               =&gt; _n_noop( &#039;On hold &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;On hold &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;woocommerce&#039; ),
+				),
+				&#039;wc-completed&#039;  =&gt; array(
+					&#039;label&#039;                     =&gt; _x( &#039;Completed&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+					&#039;public&#039;                    =&gt; false,
+					&#039;exclude_from_search&#039;       =&gt; false,
+					&#039;show_in_admin_all_list&#039;    =&gt; true,
+					&#039;show_in_admin_status_list&#039; =&gt; true,
+					/* translators: %s: number of orders */
+					&#039;label_count&#039;               =&gt; _n_noop( &#039;Completed &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;Completed &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;woocommerce&#039; ),
+				),
+				&#039;wc-cancelled&#039;  =&gt; array(
+					&#039;label&#039;                     =&gt; _x( &#039;Cancelled&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+					&#039;public&#039;                    =&gt; false,
+					&#039;exclude_from_search&#039;       =&gt; false,
+					&#039;show_in_admin_all_list&#039;    =&gt; true,
+					&#039;show_in_admin_status_list&#039; =&gt; true,
+					/* translators: %s: number of orders */
+					&#039;label_count&#039;               =&gt; _n_noop( &#039;Cancelled &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;Cancelled &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;woocommerce&#039; ),
+				),
+				&#039;wc-refunded&#039;   =&gt; array(
+					&#039;label&#039;                     =&gt; _x( &#039;Refunded&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+					&#039;public&#039;                    =&gt; false,
+					&#039;exclude_from_search&#039;       =&gt; false,
+					&#039;show_in_admin_all_list&#039;    =&gt; true,
+					&#039;show_in_admin_status_list&#039; =&gt; true,
+					/* translators: %s: number of orders */
+					&#039;label_count&#039;               =&gt; _n_noop( &#039;Refunded &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;Refunded &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;woocommerce&#039; ),
+				),
+				&#039;wc-failed&#039;     =&gt; array(
+					&#039;label&#039;                     =&gt; _x( &#039;Failed&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+					&#039;public&#039;                    =&gt; false,
+					&#039;exclude_from_search&#039;       =&gt; false,
+					&#039;show_in_admin_all_list&#039;    =&gt; true,
+					&#039;show_in_admin_status_list&#039; =&gt; true,
+					/* translators: %s: number of orders */
+					&#039;label_count&#039;               =&gt; _n_noop( &#039;Failed &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;Failed &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#039;, &#039;woocommerce&#039; ),
+				),
+			)
+		);
+
+		foreach ( $order_statuses as $order_status =&gt; $values ) {
+			register_post_status( $order_status, $values );
+		}
+	}
+
+	/**
+	 * Flush rules if the event is queued.
+	 *
+	 * @since 3.3.0
+	 */
+	public static function maybe_flush_rewrite_rules() {
+		if ( &#039;yes&#039; === get_option( &#039;woocommerce_queue_flush_rewrite_rules&#039; ) ) {
+			update_option( &#039;woocommerce_queue_flush_rewrite_rules&#039;, &#039;no&#039; );
+			self::flush_rewrite_rules();
+		}
+	}
+
+	/**
+	 * Flush rewrite rules.
+	 */
+	public static function flush_rewrite_rules() {
+		flush_rewrite_rules();
+	}
+
+	/**
+	 * Disable Gutenberg for products.
+	 *
+	 * @param bool   $can_edit Whether the post type can be edited or not.
+	 * @param string $post_type The post type being checked.
+	 * @return bool
+	 */
+	public static function gutenberg_can_edit_post_type( $can_edit, $post_type ) {
+		return &#039;product&#039; === $post_type ? false : $can_edit;
+	}
+
+	/**
+	 * Add Product Support to Jetpack Omnisearch.
+	 */
+	public static function support_jetpack_omnisearch() {
+		if ( class_exists( &#039;Jetpack_Omnisearch_Posts&#039; ) ) {
+			new Jetpack_Omnisearch_Posts( &#039;product&#039; );
+		}
+	}
+
+	/**
+	 * Added product for Jetpack related posts.
+	 *
+	 * @param  array $post_types Post types.
+	 * @return array
+	 */
+	public static function rest_api_allowed_post_types( $post_types ) {
+		$post_types[] = &#039;product&#039;;
+
+		return $post_types;
+	}
+}
+
+WC_Post_types::init();
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-download-handler.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Download handler
+ *
+ * Handle digital downloads.
+ *
+ * @package WooCommerce\Classes
+ * @version 2.2.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Download handler class.
+ */
+class WC_Download_Handler {
+
+	/**
+	 * Hook in methods.
+	 */
+	public static function init() {
+		if ( isset( $_GET[&#039;download_file&#039;], $_GET[&#039;order&#039;] ) &amp;&amp; ( isset( $_GET[&#039;email&#039;] ) || isset( $_GET[&#039;uid&#039;] ) ) ) { // WPCS: input var ok, CSRF ok.
+			add_action( &#039;init&#039;, array( __CLASS__, &#039;download_product&#039; ) );
+		}
+		add_action( &#039;woocommerce_download_file_redirect&#039;, array( __CLASS__, &#039;download_file_redirect&#039; ), 10, 2 );
+		add_action( &#039;woocommerce_download_file_xsendfile&#039;, array( __CLASS__, &#039;download_file_xsendfile&#039; ), 10, 2 );
+		add_action( &#039;woocommerce_download_file_force&#039;, array( __CLASS__, &#039;download_file_force&#039; ), 10, 2 );
+	}
+
+	/**
+	 * Check if we need to download a file and check validity.
+	 */
+	public static function download_product() {
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		$product_id = absint( $_GET[&#039;download_file&#039;] ); // phpcs:ignore WordPress.VIP.SuperGlobalInputUsage.AccessDetected, WordPress.VIP.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+		$product    = wc_get_product( $product_id );
+		$downloads  = $product ? $product-&gt;get_downloads() : array();
+		$data_store = WC_Data_Store::load( &#039;customer-download&#039; );
+
+		$key = empty( $_GET[&#039;key&#039;] ) ? &#039;&#039; : sanitize_text_field( wp_unslash( $_GET[&#039;key&#039;] ) );
+
+		if (
+			! $product
+			|| empty( $key )
+			|| empty( $_GET[&#039;order&#039;] )
+			|| ! isset( $downloads[ $key ] )
+			|| ! $downloads[ $key ]-&gt;get_enabled()
+		) {
+			self::download_error( __( &#039;Invalid download link.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		// Fallback, accept email address if it&#039;s passed.
+		if ( empty( $_GET[&#039;email&#039;] ) &amp;&amp; empty( $_GET[&#039;uid&#039;] ) ) { // WPCS: input var ok, CSRF ok.
+			self::download_error( __( &#039;Invalid download link.&#039;, &#039;woocommerce&#039; ) );
+		}
+		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+
+		$order_id = wc_get_order_id_by_order_key( wc_clean( wp_unslash( $_GET[&#039;order&#039;] ) ) ); // WPCS: input var ok, CSRF ok.
+		$order    = wc_get_order( $order_id );
+
+		if ( isset( $_GET[&#039;email&#039;] ) ) { // WPCS: input var ok, CSRF ok.
+			$email_address = wp_unslash( $_GET[&#039;email&#039;] ); // WPCS: input var ok, CSRF ok, sanitization ok.
+		} else {
+			// Get email address from order to verify hash.
+			$email_address = is_a( $order, &#039;WC_Order&#039; ) ? $order-&gt;get_billing_email() : null;
+
+			// Prepare email address hash.
+			$email_hash = function_exists( &#039;hash&#039; ) ? hash( &#039;sha256&#039;, $email_address ) : sha1( $email_address );
+
+			if ( is_null( $email_address ) || ! hash_equals( wp_unslash( $_GET[&#039;uid&#039;] ), $email_hash ) ) { // WPCS: input var ok, CSRF ok, sanitization ok.
+				self::download_error( __( &#039;Invalid download link.&#039;, &#039;woocommerce&#039; ) );
+			}
+		}
+
+		$download_ids = $data_store-&gt;get_downloads(
+			array(
+				&#039;user_email&#039;  =&gt; sanitize_email( str_replace( &#039; &#039;, &#039;+&#039;, $email_address ) ),
+				&#039;order_key&#039;   =&gt; wc_clean( wp_unslash( $_GET[&#039;order&#039;] ) ), // WPCS: input var ok, CSRF ok.
+				&#039;product_id&#039;  =&gt; $product_id,
+				&#039;download_id&#039; =&gt; wc_clean( preg_replace( &#039;/\s+/&#039;, &#039; &#039;, wp_unslash( $_GET[&#039;key&#039;] ) ) ), // WPCS: input var ok, CSRF ok, sanitization ok.
+				&#039;orderby&#039;     =&gt; &#039;downloads_remaining&#039;,
+				&#039;order&#039;       =&gt; &#039;DESC&#039;,
+				&#039;limit&#039;       =&gt; 1,
+				&#039;return&#039;      =&gt; &#039;ids&#039;,
+			)
+		);
+
+		if ( empty( $download_ids ) ) {
+			self::download_error( __( &#039;Invalid download link.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$download = new WC_Customer_Download( current( $download_ids ) );
+
+		/**
+		 * Filter download filepath.
+		 *
+		 * @since 4.0.0
+		 * @param string $file_path File path.
+		 * @param string $email_address Email address.
+		 * @param WC_Order|bool $order Order object or false.
+		 * @param WC_Product $product Product object.
+		 * @param WC_Customer_Download $download Download data.
+		 */
+		$file_path = apply_filters(
+			&#039;woocommerce_download_product_filepath&#039;,
+			$product-&gt;get_file_download_path( $download-&gt;get_download_id() ),
+			$email_address,
+			$order,
+			$product,
+			$download
+		);
+
+		$parsed_file_path = self::parse_file_path( $file_path );
+		$download_range   = self::get_download_range( @filesize( $parsed_file_path[&#039;file_path&#039;] ) );  // @codingStandardsIgnoreLine.
+
+		self::check_order_is_valid( $download );
+		if ( ! $download_range[&#039;is_range_request&#039;] ) {
+			// If the remaining download count goes to 0, allow range requests to be able to finish streaming from iOS devices.
+			self::check_downloads_remaining( $download );
+		}
+		self::check_download_expiry( $download );
+		self::check_download_login_required( $download );
+
+		do_action(
+			&#039;woocommerce_download_product&#039;,
+			$download-&gt;get_user_email(),
+			$download-&gt;get_order_key(),
+			$download-&gt;get_product_id(),
+			$download-&gt;get_user_id(),
+			$download-&gt;get_download_id(),
+			$download-&gt;get_order_id()
+		);
+		$download-&gt;save();
+
+		// Track the download in logs and change remaining/counts.
+		$current_user_id = get_current_user_id();
+		$ip_address      = WC_Geolocation::get_ip_address();
+		if ( ! $download_range[&#039;is_range_request&#039;] ) {
+			$download-&gt;track_download( $current_user_id &gt; 0 ? $current_user_id : null, ! empty( $ip_address ) ? $ip_address : null );
+		}
+
+		self::download( $file_path, $download-&gt;get_product_id() );
+	}
+
+	/**
+	 * Check if an order is valid for downloading from.
+	 *
+	 * @param WC_Customer_Download $download Download instance.
+	 */
+	private static function check_order_is_valid( $download ) {
+		if ( $download-&gt;get_order_id() ) {
+			$order = wc_get_order( $download-&gt;get_order_id() );
+
+			if ( $order &amp;&amp; ! $order-&gt;is_download_permitted() ) {
+				self::download_error( __( &#039;Invalid order.&#039;, &#039;woocommerce&#039; ), &#039;&#039;, 403 );
+			}
+		}
+	}
+
+	/**
+	 * Check if there are downloads remaining.
+	 *
+	 * @param WC_Customer_Download $download Download instance.
+	 */
+	private static function check_downloads_remaining( $download ) {
+		if ( &#039;&#039; !== $download-&gt;get_downloads_remaining() &amp;&amp; 0 &gt;= $download-&gt;get_downloads_remaining() ) {
+			self::download_error( __( &#039;Sorry, you have reached your download limit for this file&#039;, &#039;woocommerce&#039; ), &#039;&#039;, 403 );
+		}
+	}
+
+	/**
+	 * Check if the download has expired.
+	 *
+	 * @param WC_Customer_Download $download Download instance.
+	 */
+	private static function check_download_expiry( $download ) {
+		if ( ! is_null( $download-&gt;get_access_expires() ) &amp;&amp; $download-&gt;get_access_expires()-&gt;getTimestamp() &lt; strtotime( &#039;midnight&#039;, time() ) ) {
+			self::download_error( __( &#039;Sorry, this download has expired&#039;, &#039;woocommerce&#039; ), &#039;&#039;, 403 );
+		}
+	}
+
+	/**
+	 * Check if a download requires the user to login first.
+	 *
+	 * @param WC_Customer_Download $download Download instance.
+	 */
+	private static function check_download_login_required( $download ) {
+		if ( $download-&gt;get_user_id() &amp;&amp; &#039;yes&#039; === get_option( &#039;woocommerce_downloads_require_login&#039; ) ) {
+			if ( ! is_user_logged_in() ) {
+				if ( wc_get_page_id( &#039;myaccount&#039; ) ) {
+					wp_safe_redirect( add_query_arg( &#039;wc_error&#039;, rawurlencode( __( &#039;You must be logged in to download files.&#039;, &#039;woocommerce&#039; ) ), wc_get_page_permalink( &#039;myaccount&#039; ) ) );
+					exit;
+				} else {
+					self::download_error( __( &#039;You must be logged in to download files.&#039;, &#039;woocommerce&#039; ) . &#039; &lt;a href=&quot;&#039; . esc_url( wp_login_url( wc_get_page_permalink( &#039;myaccount&#039; ) ) ) . &#039;&quot; class=&quot;wc-forward&quot;&gt;&#039; . __( &#039;Login&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/a&gt;&#039;, __( &#039;Log in to Download Files&#039;, &#039;woocommerce&#039; ), 403 );
+				}
+			} elseif ( ! current_user_can( &#039;download_file&#039;, $download ) ) {
+				self::download_error( __( &#039;This is not your download link.&#039;, &#039;woocommerce&#039; ), &#039;&#039;, 403 );
+			}
+		}
+	}
+
+	/**
+	 * Count download.
+	 *
+	 * @deprecated 4.4.0
+	 * @param array $download_data Download data.
+	 */
+	public static function count_download( $download_data ) {
+		wc_deprecated_function( &#039;WC_Download_Handler::count_download&#039;, &#039;4.4.0&#039;, &#039;&#039; );
+	}
+
+	/**
+	 * Download a file - hook into init function.
+	 *
+	 * @param string  $file_path  URL to file.
+	 * @param integer $product_id Product ID of the product being downloaded.
+	 */
+	public static function download( $file_path, $product_id ) {
+		if ( ! $file_path ) {
+			self::download_error( __( &#039;No file defined&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$filename = basename( $file_path );
+
+		if ( strstr( $filename, &#039;?&#039; ) ) {
+			$filename = current( explode( &#039;?&#039;, $filename ) );
+		}
+
+		$filename = apply_filters( &#039;woocommerce_file_download_filename&#039;, $filename, $product_id );
+
+		/**
+		 * Filter download method.
+		 *
+		 * @since 4.5.0
+		 * @param string $method     Download method.
+		 * @param int    $product_id Product ID.
+		 * @param string $file_path  URL to file.
+		 */
+		$file_download_method = apply_filters( &#039;woocommerce_file_download_method&#039;, get_option( &#039;woocommerce_file_download_method&#039;, &#039;force&#039; ), $product_id, $file_path );
+
+		// Add action to prevent issues in IE.
+		add_action( &#039;nocache_headers&#039;, array( __CLASS__, &#039;ie_nocache_headers_fix&#039; ) );
+
+		// Trigger download via one of the methods.
+		do_action( &#039;woocommerce_download_file_&#039; . $file_download_method, $file_path, $filename );
+	}
+
+	/**
+	 * Redirect to a file to start the download.
+	 *
+	 * @param string $file_path File path.
+	 * @param string $filename  File name.
+	 */
+	public static function download_file_redirect( $file_path, $filename = &#039;&#039; ) {
+		header( &#039;Location: &#039; . $file_path );
+		exit;
+	}
+
+	/**
+	 * Parse file path and see if its remote or local.
+	 *
+	 * @param  string $file_path File path.
+	 * @return array
+	 */
+	public static function parse_file_path( $file_path ) {
+		$wp_uploads     = wp_upload_dir();
+		$wp_uploads_dir = $wp_uploads[&#039;basedir&#039;];
+		$wp_uploads_url = $wp_uploads[&#039;baseurl&#039;];
+
+		/**
+		 * Replace uploads dir, site url etc with absolute counterparts if we can.
+		 * Note the str_replace on site_url is on purpose, so if https is forced
+		 * via filters we can still do the string replacement on a HTTP file.
+		 */
+		$replacements = array(
+			$wp_uploads_url                                                   =&gt; $wp_uploads_dir,
+			network_site_url( &#039;/&#039;, &#039;https&#039; )                                  =&gt; ABSPATH,
+			str_replace( &#039;https:&#039;, &#039;http:&#039;, network_site_url( &#039;/&#039;, &#039;http&#039; ) ) =&gt; ABSPATH,
+			site_url( &#039;/&#039;, &#039;https&#039; )                                          =&gt; ABSPATH,
+			str_replace( &#039;https:&#039;, &#039;http:&#039;, site_url( &#039;/&#039;, &#039;http&#039; ) )         =&gt; ABSPATH,
+		);
+
+		$count            = 0;
+		$file_path        = str_replace( array_keys( $replacements ), array_values( $replacements ), $file_path, $count );
+		$parsed_file_path = wp_parse_url( $file_path );
+		$remote_file      = null === $count || 0 === $count; // Remote file only if there were no replacements.
+
+		// Paths that begin with &#039;//&#039; are always remote URLs.
+		if ( &#039;//&#039; === substr( $file_path, 0, 2 ) ) {
+			$file_path = ( is_ssl() ? &#039;https:&#039; : &#039;http:&#039; ) . $file_path;
+
+			/**
+			 * Filter the remote filepath for download.
+			 *
+			 * @since 6.5.0
+			 * @param string $file_path File path.
+			 */
+			return array(
+				&#039;remote_file&#039; =&gt; true,
+				&#039;file_path&#039;   =&gt; apply_filters( &#039;woocommerce_download_parse_remote_file_path&#039;, $file_path ),
+			);
+		}
+
+		// See if path needs an abspath prepended to work.
+		if ( file_exists( ABSPATH . $file_path ) ) {
+			$remote_file = false;
+			$file_path   = ABSPATH . $file_path;
+
+		} elseif ( &#039;/wp-content&#039; === substr( $file_path, 0, 11 ) ) {
+			$remote_file = false;
+			$file_path   = realpath( WP_CONTENT_DIR . substr( $file_path, 11 ) );
+
+			// Check if we have an absolute path.
+		} elseif ( ( ! isset( $parsed_file_path[&#039;scheme&#039;] ) || ! in_array( $parsed_file_path[&#039;scheme&#039;], array( &#039;http&#039;, &#039;https&#039;, &#039;ftp&#039; ), true ) ) &amp;&amp; isset( $parsed_file_path[&#039;path&#039;] ) ) {
+			$remote_file = false;
+			$file_path   = $parsed_file_path[&#039;path&#039;];
+		}
+
+		/**
+		* Filter the filepath for download.
+		*
+		* @since 6.5.0
+		* @param string  $file_path File path.
+		* @param bool $remote_file Remote File Indicator.
+		*/
+		return array(
+			&#039;remote_file&#039; =&gt; $remote_file,
+			&#039;file_path&#039;   =&gt; apply_filters( &#039;woocommerce_download_parse_file_path&#039;, $file_path, $remote_file ),
+		);
+	}
+
+	/**
+	 * Download a file using X-Sendfile, X-Lighttpd-Sendfile, or X-Accel-Redirect if available.
+	 *
+	 * @param string $file_path File path.
+	 * @param string $filename  File name.
+	 */
+	public static function download_file_xsendfile( $file_path, $filename ) {
+		$parsed_file_path = self::parse_file_path( $file_path );
+
+		/**
+		 * Fallback on force download method for remote files. This is because:
+		 * 1. xsendfile needs proxy configuration to work for remote files, which cannot be assumed to be available on most hosts.
+		 * 2. Force download method is more secure than redirect method if `allow_url_fopen` is enabled in `php.ini`.
+		 */
+		if ( $parsed_file_path[&#039;remote_file&#039;] &amp;&amp; ! apply_filters( &#039;woocommerce_use_xsendfile_for_remote&#039;, false ) ) {
+			do_action( &#039;woocommerce_download_file_force&#039;, $file_path, $filename );
+			return;
+		}
+
+		if ( function_exists( &#039;apache_get_modules&#039; ) &amp;&amp; in_array( &#039;mod_xsendfile&#039;, apache_get_modules(), true ) ) {
+			self::download_headers( $parsed_file_path[&#039;file_path&#039;], $filename );
+			$filepath = apply_filters( &#039;woocommerce_download_file_xsendfile_file_path&#039;, $parsed_file_path[&#039;file_path&#039;], $file_path, $filename, $parsed_file_path );
+			header( &#039;X-Sendfile: &#039; . $filepath );
+			exit;
+		} elseif ( stristr( getenv( &#039;SERVER_SOFTWARE&#039; ), &#039;lighttpd&#039; ) ) {
+			self::download_headers( $parsed_file_path[&#039;file_path&#039;], $filename );
+			$filepath = apply_filters( &#039;woocommerce_download_file_xsendfile_lighttpd_file_path&#039;, $parsed_file_path[&#039;file_path&#039;], $file_path, $filename, $parsed_file_path );
+			header( &#039;X-Lighttpd-Sendfile: &#039; . $filepath );
+			exit;
+		} elseif ( stristr( getenv( &#039;SERVER_SOFTWARE&#039; ), &#039;nginx&#039; ) || stristr( getenv( &#039;SERVER_SOFTWARE&#039; ), &#039;cherokee&#039; ) ) {
+			self::download_headers( $parsed_file_path[&#039;file_path&#039;], $filename );
+			$xsendfile_path = trim( preg_replace( &#039;`^&#039; . str_replace( &#039;\\&#039;, &#039;/&#039;, getcwd() ) . &#039;`&#039;, &#039;&#039;, $parsed_file_path[&#039;file_path&#039;] ), &#039;/&#039; );
+			$xsendfile_path = apply_filters( &#039;woocommerce_download_file_xsendfile_x_accel_redirect_file_path&#039;, $xsendfile_path, $file_path, $filename, $parsed_file_path );
+			header( &quot;X-Accel-Redirect: /$xsendfile_path&quot; );
+			exit;
+		}
+
+		// Fallback.
+		wc_get_logger()-&gt;warning(
+			sprintf(
+				/* translators: %1$s contains the filepath of the digital asset. */
+				__( &#039;%1$s could not be served using the X-Accel-Redirect/X-Sendfile method. A Force Download will be used instead.&#039;, &#039;woocommerce&#039; ),
+				$file_path
+			)
+		);
+		self::download_file_force( $file_path, $filename );
+	}
+
+	/**
+	 * Parse the HTTP_RANGE request from iOS devices.
+	 * Does not support multi-range requests.
+	 *
+	 * @param int $file_size Size of file in bytes.
+	 * @return array {
+	 *     Information about range download request: beginning and length of
+	 *     file chunk, whether the range is valid/supported and whether the request is a range request.
+	 *
+	 *     @type int  $start            Byte offset of the beginning of the range. Default 0.
+	 *     @type int  $length           Length of the requested file chunk in bytes. Optional.
+	 *     @type bool $is_range_valid   Whether the requested range is a valid and supported range.
+	 *     @type bool $is_range_request Whether the request is a range request.
+	 * }
+	 */
+	protected static function get_download_range( $file_size ) {
+		$start          = 0;
+		$download_range = array(
+			&#039;start&#039;            =&gt; $start,
+			&#039;is_range_valid&#039;   =&gt; false,
+			&#039;is_range_request&#039; =&gt; false,
+		);
+
+		if ( ! $file_size ) {
+			return $download_range;
+		}
+
+		$end                      = $file_size - 1;
+		$download_range[&#039;length&#039;] = $file_size;
+
+		if ( isset( $_SERVER[&#039;HTTP_RANGE&#039;] ) ) { // @codingStandardsIgnoreLine.
+			$http_range                         = sanitize_text_field( wp_unslash( $_SERVER[&#039;HTTP_RANGE&#039;] ) ); // WPCS: input var ok.
+			$download_range[&#039;is_range_request&#039;] = true;
+
+			$c_start = $start;
+			$c_end   = $end;
+			// Extract the range string.
+			list( , $range ) = explode( &#039;=&#039;, $http_range, 2 );
+			// Make sure the client hasn&#039;t sent us a multibyte range.
+			if ( strpos( $range, &#039;,&#039; ) !== false ) {
+				return $download_range;
+			}
+
+			/*
+			 * If the range starts with an &#039;-&#039; we start from the beginning.
+			 * If not, we forward the file pointer
+			 * and make sure to get the end byte if specified.
+			 */
+			if ( &#039;-&#039; === $range[0] ) {
+				// The n-number of the last bytes is requested.
+				$c_start = $file_size - substr( $range, 1 );
+			} else {
+				$range   = explode( &#039;-&#039;, $range );
+				$c_start = ( isset( $range[0] ) &amp;&amp; is_numeric( $range[0] ) ) ? (int) $range[0] : 0;
+				$c_end   = ( isset( $range[1] ) &amp;&amp; is_numeric( $range[1] ) ) ? (int) $range[1] : $file_size;
+			}
+
+			/*
+			 * Check the range and make sure it&#039;s treated according to the specs: http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html.
+			 * End bytes can not be larger than $end.
+			 */
+			$c_end = ( $c_end &gt; $end ) ? $end : $c_end;
+			// Validate the requested range and return an error if it&#039;s not correct.
+			if ( $c_start &gt; $c_end || $c_start &gt; $file_size - 1 || $c_end &gt;= $file_size ) {
+				return $download_range;
+			}
+			$start  = $c_start;
+			$end    = $c_end;
+			$length = $end - $start + 1;
+
+			$download_range[&#039;start&#039;]          = $start;
+			$download_range[&#039;length&#039;]         = $length;
+			$download_range[&#039;is_range_valid&#039;] = true;
+		}
+		return $download_range;
+	}
+
+	/**
+	 * Force download - this is the default method.
+	 *
+	 * @param string $file_path File path.
+	 * @param string $filename  File name.
+	 */
+	public static function download_file_force( $file_path, $filename ) {
+		$parsed_file_path = self::parse_file_path( $file_path );
+		$download_range   = self::get_download_range( @filesize( $parsed_file_path[&#039;file_path&#039;] ) ); // @codingStandardsIgnoreLine.
+
+		self::download_headers( $parsed_file_path[&#039;file_path&#039;], $filename, $download_range );
+
+		$start  = isset( $download_range[&#039;start&#039;] ) ? $download_range[&#039;start&#039;] : 0;
+		$length = isset( $download_range[&#039;length&#039;] ) ? $download_range[&#039;length&#039;] : 0;
+		if ( ! self::readfile_chunked( $parsed_file_path[&#039;file_path&#039;], $start, $length ) ) {
+			if ( $parsed_file_path[&#039;remote_file&#039;] &amp;&amp; &#039;yes&#039; === get_option( &#039;woocommerce_downloads_redirect_fallback_allowed&#039; ) ) {
+				wc_get_logger()-&gt;warning(
+					sprintf(
+						/* translators: %1$s contains the filepath of the digital asset. */
+						__( &#039;%1$s could not be served using the Force Download method. A redirect will be used instead.&#039;, &#039;woocommerce&#039; ),
+						$file_path
+					)
+				);
+				self::download_file_redirect( $file_path );
+			} else {
+				self::download_error( __( &#039;File not found&#039;, &#039;woocommerce&#039; ) );
+			}
+		}
+
+		exit;
+	}
+
+	/**
+	 * Get content type of a download.
+	 *
+	 * @param  string $file_path File path.
+	 * @return string
+	 */
+	private static function get_download_content_type( $file_path ) {
+		$file_extension = strtolower( substr( strrchr( $file_path, &#039;.&#039; ), 1 ) );
+		$ctype          = &#039;application/force-download&#039;;
+
+		foreach ( get_allowed_mime_types() as $mime =&gt; $type ) {
+			$mimes = explode( &#039;|&#039;, $mime );
+			if ( in_array( $file_extension, $mimes, true ) ) {
+				$ctype = $type;
+				break;
+			}
+		}
+
+		return $ctype;
+	}
+
+	/**
+	 * Set headers for the download.
+	 *
+	 * @param string $file_path      File path.
+	 * @param string $filename       File name.
+	 * @param array  $download_range Array containing info about range download request (see {@see get_download_range} for structure).
+	 */
+	private static function download_headers( $file_path, $filename, $download_range = array() ) {
+		self::check_server_config();
+		self::clean_buffers();
+		wc_nocache_headers();
+
+		header( &#039;X-Robots-Tag: noindex, nofollow&#039;, true );
+		header( &#039;Content-Type: &#039; . self::get_download_content_type( $file_path ) );
+		header( &#039;Content-Description: File Transfer&#039; );
+		header( &#039;Content-Disposition: &#039; . self::get_content_disposition() . &#039;; filename=&quot;&#039; . $filename . &#039;&quot;;&#039; );
+		header( &#039;Content-Transfer-Encoding: binary&#039; );
+
+		$file_size = @filesize( $file_path ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+		if ( ! $file_size ) {
+			return;
+		}
+
+		if ( isset( $download_range[&#039;is_range_request&#039;] ) &amp;&amp; true === $download_range[&#039;is_range_request&#039;] ) {
+			if ( false === $download_range[&#039;is_range_valid&#039;] ) {
+				header( &#039;HTTP/1.1 416 Requested Range Not Satisfiable&#039; );
+				header( &#039;Content-Range: bytes 0-&#039; . ( $file_size - 1 ) . &#039;/&#039; . $file_size );
+				exit;
+			}
+
+			$start  = $download_range[&#039;start&#039;];
+			$end    = $download_range[&#039;start&#039;] + $download_range[&#039;length&#039;] - 1;
+			$length = $download_range[&#039;length&#039;];
+
+			header( &#039;HTTP/1.1 206 Partial Content&#039; );
+			header( &quot;Accept-Ranges: 0-$file_size&quot; );
+			header( &quot;Content-Range: bytes $start-$end/$file_size&quot; );
+			header( &quot;Content-Length: $length&quot; );
+		} else {
+			header( &#039;Content-Length: &#039; . $file_size );
+		}
+	}
+
+	/**
+	 * Check and set certain server config variables to ensure downloads work as intended.
+	 */
+	private static function check_server_config() {
+		wc_set_time_limit( 0 );
+		if ( function_exists( &#039;apache_setenv&#039; ) ) {
+			@apache_setenv( &#039;no-gzip&#039;, 1 ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_apache_setenv
+		}
+		@ini_set( &#039;zlib.output_compression&#039;, &#039;Off&#039; ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_ini_set
+		@session_write_close(); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.VIP.SessionFunctionsUsage.session_session_write_close
+	}
+
+	/**
+	 * Clean all output buffers.
+	 *
+	 * Can prevent errors, for example: transfer closed with 3 bytes remaining to read.
+	 */
+	private static function clean_buffers() {
+		if ( ob_get_level() ) {
+			$levels = ob_get_level();
+			for ( $i = 0; $i &lt; $levels; $i++ ) {
+				@ob_end_clean(); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+			}
+		} else {
+			@ob_end_clean(); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+		}
+	}
+
+	/**
+	 *
+	 * Get selected content disposition
+	 *
+	 * Defaults to attachment if `woocommerce_downloads_deliver_inline` setting is not selected.
+	 *
+	 * @return string Content disposition value.
+	 */
+	private static function get_content_disposition() : string {
+		$disposition = &#039;attachment&#039;;
+		if ( &#039;yes&#039; === get_option( &#039;woocommerce_downloads_deliver_inline&#039; ) ) {
+			$disposition = &#039;inline&#039;;
+		}
+		return $disposition;
+	}
+
+	/**
+	 * Read file chunked.
+	 *
+	 * Reads file in chunks so big downloads are possible without changing PHP.INI - http://codeigniter.com/wiki/Download_helper_for_large_files/.
+	 *
+	 * @param  string $file   File.
+	 * @param  int    $start  Byte offset/position of the beginning from which to read from the file.
+	 * @param  int    $length Length of the chunk to be read from the file in bytes, 0 means full file.
+	 * @return bool Success or fail
+	 */
+	public static function readfile_chunked( $file, $start = 0, $length = 0 ) {
+		if ( ! defined( &#039;WC_CHUNK_SIZE&#039; ) ) {
+			define( &#039;WC_CHUNK_SIZE&#039;, 1024 * 1024 );
+		}
+		$handle = @fopen( $file, &#039;r&#039; ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.file_system_read_fopen
+
+		if ( false === $handle ) {
+			return false;
+		}
+
+		if ( ! $length ) {
+			$length = @filesize( $file ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+		}
+
+		$read_length = (int) WC_CHUNK_SIZE;
+
+		if ( $length ) {
+			$end = $start + $length - 1;
+
+			@fseek( $handle, $start ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+			$p = @ftell( $handle ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+
+			while ( ! @feof( $handle ) &amp;&amp; $p &lt;= $end ) { // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+				// Don&#039;t run past the end of file.
+				if ( $p + $read_length &gt; $end ) {
+					$read_length = $end - $p + 1;
+				}
+
+				echo @fread( $handle, $read_length ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.XSS.EscapeOutput.OutputNotEscaped, WordPress.WP.AlternativeFunctions.file_system_read_fread
+				$p = @ftell( $handle ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+
+				if ( ob_get_length() ) {
+					ob_flush();
+					flush();
+				}
+			}
+		} else {
+			while ( ! @feof( $handle ) ) { // @codingStandardsIgnoreLine.
+				echo @fread( $handle, $read_length ); // @codingStandardsIgnoreLine.
+				if ( ob_get_length() ) {
+					ob_flush();
+					flush();
+				}
+			}
+		}
+
+		return @fclose( $handle ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.file_system_read_fclose
+	}
+
+	/**
+	 * Filter headers for IE to fix issues over SSL.
+	 *
+	 * IE bug prevents download via SSL when Cache Control and Pragma no-cache headers set.
+	 *
+	 * @param array $headers HTTP headers.
+	 * @return array
+	 */
+	public static function ie_nocache_headers_fix( $headers ) {
+		if ( is_ssl() &amp;&amp; ! empty( $GLOBALS[&#039;is_IE&#039;] ) ) {
+			$headers[&#039;Cache-Control&#039;] = &#039;private&#039;;
+			unset( $headers[&#039;Pragma&#039;] );
+		}
+		return $headers;
+	}
+
+	/**
+	 * Die with an error message if the download fails.
+	 *
+	 * @param string  $message Error message.
+	 * @param string  $title   Error title.
+	 * @param integer $status  Error status.
+	 */
+	private static function download_error( $message, $title = &#039;&#039;, $status = 404 ) {
+		/*
+		 * Since we will now render a message instead of serving a download, we should unwind some of the previously set
+		 * headers.
+		 */
+		if ( headers_sent() ) {
+			wc_get_logger()-&gt;log( &#039;warning&#039;, __( &#039;Headers already sent when generating download error message.&#039;, &#039;woocommerce&#039; ) );
+		} else {
+			header( &#039;Content-Type: &#039; . get_option( &#039;html_type&#039; ) . &#039;; charset=&#039; . get_option( &#039;blog_charset&#039; ) );
+			header_remove( &#039;Content-Description;&#039; );
+			header_remove( &#039;Content-Disposition&#039; );
+			header_remove( &#039;Content-Transfer-Encoding&#039; );
+		}
+
+		if ( ! strstr( $message, &#039;&lt;a &#039; ) ) {
+			$message .= &#039; &lt;a href=&quot;&#039; . esc_url( wc_get_page_permalink( &#039;shop&#039; ) ) . &#039;&quot; class=&quot;wc-forward&quot;&gt;&#039; . esc_html__( &#039;Go to shop&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/a&gt;&#039;;
+		}
+		wp_die( $message, $title, array( &#039;response&#039; =&gt; $status ) ); // WPCS: XSS ok.
+	}
+}
+
+WC_Download_Handler::init();
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

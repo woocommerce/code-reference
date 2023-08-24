@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866946">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866946">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-meta-box-coupon-data.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Coupon Data
+ *
+ * Display the coupon data meta box.
+ *
+ * @author      WooThemes
+ * @category    Admin
+ * @package     WooCommerce\Admin\Meta Boxes
+ * @version     2.1.0
+ */
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit; // Exit if accessed directly
+}
+
+/**
+ * WC_Meta_Box_Coupon_Data Class.
+ */
+class WC_Meta_Box_Coupon_Data {
+
+	/**
+	 * Output the metabox.
+	 *
+	 * @param WP_Post $post
+	 */
+	public static function output( $post ) {
+		wp_nonce_field( &#039;woocommerce_save_data&#039;, &#039;woocommerce_meta_nonce&#039; );
+
+		$coupon_id = absint( $post-&gt;ID );
+		$coupon    = new WC_Coupon( $coupon_id );
+
+		?&gt;
+
+		&lt;style type=&quot;text/css&quot;&gt;
+			#edit-slug-box, #minor-publishing-actions { display:none }
+		&lt;/style&gt;
+		&lt;div id=&quot;coupon_options&quot; class=&quot;panel-wrap coupon_data&quot;&gt;
+
+			&lt;div class=&quot;wc-tabs-back&quot;&gt;&lt;/div&gt;
+
+			&lt;ul class=&quot;coupon_data_tabs wc-tabs&quot; style=&quot;display:none;&quot;&gt;
+				&lt;?php
+				$coupon_data_tabs = apply_filters(
+					&#039;woocommerce_coupon_data_tabs&#039;,
+					array(
+						&#039;general&#039;           =&gt; array(
+							&#039;label&#039;  =&gt; __( &#039;General&#039;, &#039;woocommerce&#039; ),
+							&#039;target&#039; =&gt; &#039;general_coupon_data&#039;,
+							&#039;class&#039;  =&gt; &#039;general_coupon_data&#039;,
+						),
+						&#039;usage_restriction&#039; =&gt; array(
+							&#039;label&#039;  =&gt; __( &#039;Usage restriction&#039;, &#039;woocommerce&#039; ),
+							&#039;target&#039; =&gt; &#039;usage_restriction_coupon_data&#039;,
+							&#039;class&#039;  =&gt; &#039;&#039;,
+						),
+						&#039;usage_limit&#039;       =&gt; array(
+							&#039;label&#039;  =&gt; __( &#039;Usage limits&#039;, &#039;woocommerce&#039; ),
+							&#039;target&#039; =&gt; &#039;usage_limit_coupon_data&#039;,
+							&#039;class&#039;  =&gt; &#039;&#039;,
+						),
+					)
+				);
+
+				foreach ( $coupon_data_tabs as $key =&gt; $tab ) :
+					?&gt;
+					&lt;li class=&quot;&lt;?php echo $key; ?&gt;_options &lt;?php echo $key; ?&gt;_tab &lt;?php echo implode( &#039; &#039;, (array) $tab[&#039;class&#039;] ); ?&gt;&quot;&gt;
+						&lt;a href=&quot;#&lt;?php echo $tab[&#039;target&#039;]; ?&gt;&quot;&gt;
+							&lt;span&gt;&lt;?php echo esc_html( $tab[&#039;label&#039;] ); ?&gt;&lt;/span&gt;
+						&lt;/a&gt;
+					&lt;/li&gt;
+				&lt;?php endforeach; ?&gt;
+			&lt;/ul&gt;
+			&lt;div id=&quot;general_coupon_data&quot; class=&quot;panel woocommerce_options_panel&quot;&gt;
+				&lt;?php
+
+				// Type.
+				woocommerce_wp_select(
+					array(
+						&#039;id&#039;      =&gt; &#039;discount_type&#039;,
+						&#039;label&#039;   =&gt; __( &#039;Discount type&#039;, &#039;woocommerce&#039; ),
+						&#039;options&#039; =&gt; wc_get_coupon_types(),
+						&#039;value&#039;   =&gt; $coupon-&gt;get_discount_type( &#039;edit&#039; ),
+					)
+				);
+
+				// Amount.
+				woocommerce_wp_text_input(
+					array(
+						&#039;id&#039;          =&gt; &#039;coupon_amount&#039;,
+						&#039;label&#039;       =&gt; __( &#039;Coupon amount&#039;, &#039;woocommerce&#039; ),
+						&#039;placeholder&#039; =&gt; wc_format_localized_price( 0 ),
+						&#039;description&#039; =&gt; __( &#039;Value of the coupon.&#039;, &#039;woocommerce&#039; ),
+						&#039;data_type&#039;   =&gt; &#039;percent&#039; === $coupon-&gt;get_discount_type( &#039;edit&#039; ) ? &#039;decimal&#039; : &#039;price&#039;,
+						&#039;desc_tip&#039;    =&gt; true,
+						&#039;value&#039;       =&gt; $coupon-&gt;get_amount( &#039;edit&#039; ),
+					)
+				);
+
+				// Free Shipping.
+				if ( wc_shipping_enabled() ) {
+					woocommerce_wp_checkbox(
+						array(
+							&#039;id&#039;          =&gt; &#039;free_shipping&#039;,
+							&#039;label&#039;       =&gt; __( &#039;Allow free shipping&#039;, &#039;woocommerce&#039; ),
+							&#039;description&#039; =&gt; sprintf( __( &#039;Check this box if the coupon grants free shipping. A &lt;a href=&quot;%s&quot; target=&quot;_blank&quot;&gt;free shipping method&lt;/a&gt; must be enabled in your shipping zone and be set to require &quot;a valid free shipping coupon&quot; (see the &quot;Free Shipping Requires&quot; setting).&#039;, &#039;woocommerce&#039; ), &#039;https://docs.woocommerce.com/document/free-shipping/&#039; ),
+							&#039;value&#039;       =&gt; wc_bool_to_string( $coupon-&gt;get_free_shipping( &#039;edit&#039; ) ),
+						)
+					);
+				}
+
+				// Expiry date.
+				$expiry_date = $coupon-&gt;get_date_expires( &#039;edit&#039; ) ? $coupon-&gt;get_date_expires( &#039;edit&#039; )-&gt;date( &#039;Y-m-d&#039; ) : &#039;&#039;;
+				woocommerce_wp_text_input(
+					array(
+						&#039;id&#039;                =&gt; &#039;expiry_date&#039;,
+						&#039;value&#039;             =&gt; esc_attr( $expiry_date ),
+						&#039;label&#039;             =&gt; __( &#039;Coupon expiry date&#039;, &#039;woocommerce&#039; ),
+						&#039;placeholder&#039;       =&gt; &#039;YYYY-MM-DD&#039;,
+						&#039;description&#039;       =&gt; __( &#039;The coupon will expire at 00:00:00 of this date.&#039;, &#039;woocommerce&#039; ),
+						&#039;desc_tip&#039;          =&gt; true,
+						&#039;class&#039;             =&gt; &#039;date-picker&#039;,
+						&#039;custom_attributes&#039; =&gt; array(
+							&#039;pattern&#039; =&gt; apply_filters( &#039;woocommerce_date_input_html_pattern&#039;, &#039;[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])&#039; ),
+						),
+					)
+				);
+
+				do_action( &#039;woocommerce_coupon_options&#039;, $coupon-&gt;get_id(), $coupon );
+
+				?&gt;
+			&lt;/div&gt;
+			&lt;div id=&quot;usage_restriction_coupon_data&quot; class=&quot;panel woocommerce_options_panel&quot;&gt;
+				&lt;?php
+
+				echo &#039;&lt;div class=&quot;options_group&quot;&gt;&#039;;
+
+				// minimum spend.
+				woocommerce_wp_text_input(
+					array(
+						&#039;id&#039;          =&gt; &#039;minimum_amount&#039;,
+						&#039;label&#039;       =&gt; __( &#039;Minimum spend&#039;, &#039;woocommerce&#039; ),
+						&#039;placeholder&#039; =&gt; __( &#039;No minimum&#039;, &#039;woocommerce&#039; ),
+						&#039;description&#039; =&gt; __( &#039;This field allows you to set the minimum spend (subtotal) allowed to use the coupon.&#039;, &#039;woocommerce&#039; ),
+						&#039;data_type&#039;   =&gt; &#039;price&#039;,
+						&#039;desc_tip&#039;    =&gt; true,
+						&#039;value&#039;       =&gt; $coupon-&gt;get_minimum_amount( &#039;edit&#039; ),
+					)
+				);
+
+				// maximum spend.
+				woocommerce_wp_text_input(
+					array(
+						&#039;id&#039;          =&gt; &#039;maximum_amount&#039;,
+						&#039;label&#039;       =&gt; __( &#039;Maximum spend&#039;, &#039;woocommerce&#039; ),
+						&#039;placeholder&#039; =&gt; __( &#039;No maximum&#039;, &#039;woocommerce&#039; ),
+						&#039;description&#039; =&gt; __( &#039;This field allows you to set the maximum spend (subtotal) allowed when using the coupon.&#039;, &#039;woocommerce&#039; ),
+						&#039;data_type&#039;   =&gt; &#039;price&#039;,
+						&#039;desc_tip&#039;    =&gt; true,
+						&#039;value&#039;       =&gt; $coupon-&gt;get_maximum_amount( &#039;edit&#039; ),
+					)
+				);
+
+				// Individual use.
+				woocommerce_wp_checkbox(
+					array(
+						&#039;id&#039;          =&gt; &#039;individual_use&#039;,
+						&#039;label&#039;       =&gt; __( &#039;Individual use only&#039;, &#039;woocommerce&#039; ),
+						&#039;description&#039; =&gt; __( &#039;Check this box if the coupon cannot be used in conjunction with other coupons.&#039;, &#039;woocommerce&#039; ),
+						&#039;value&#039;       =&gt; wc_bool_to_string( $coupon-&gt;get_individual_use( &#039;edit&#039; ) ),
+					)
+				);
+
+				// Exclude Sale Products.
+				woocommerce_wp_checkbox(
+					array(
+						&#039;id&#039;          =&gt; &#039;exclude_sale_items&#039;,
+						&#039;label&#039;       =&gt; __( &#039;Exclude sale items&#039;, &#039;woocommerce&#039; ),
+						&#039;description&#039; =&gt; __( &#039;Check this box if the coupon should not apply to items on sale. Per-item coupons will only work if the item is not on sale. Per-cart coupons will only work if there are items in the cart that are not on sale.&#039;, &#039;woocommerce&#039; ),
+						&#039;value&#039;       =&gt; wc_bool_to_string( $coupon-&gt;get_exclude_sale_items( &#039;edit&#039; ) ),
+					)
+				);
+
+				echo &#039;&lt;/div&gt;&lt;div class=&quot;options_group&quot;&gt;&#039;;
+
+				// Product ids.
+				?&gt;
+				&lt;p class=&quot;form-field&quot;&gt;
+					&lt;label&gt;&lt;?php _e( &#039;Products&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/label&gt;
+					&lt;select class=&quot;wc-product-search&quot; multiple=&quot;multiple&quot; style=&quot;width: 50%;&quot; name=&quot;product_ids[]&quot; data-placeholder=&quot;&lt;?php esc_attr_e( &#039;Search for a product&amp;hellip;&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; data-action=&quot;woocommerce_json_search_products_and_variations&quot;&gt;
+						&lt;?php
+						$product_ids = $coupon-&gt;get_product_ids( &#039;edit&#039; );
+
+						foreach ( $product_ids as $product_id ) {
+							$product = wc_get_product( $product_id );
+							if ( is_object( $product ) ) {
+								echo &#039;&lt;option value=&quot;&#039; . esc_attr( $product_id ) . &#039;&quot;&#039; . selected( true, true, false ) . &#039;&gt;&#039; . esc_html( wp_strip_all_tags( $product-&gt;get_formatted_name() ) ) . &#039;&lt;/option&gt;&#039;;
+							}
+						}
+						?&gt;
+					&lt;/select&gt;
+					&lt;?php echo wc_help_tip( __( &#039;Products that the coupon will be applied to, or that need to be in the cart in order for the &quot;Fixed cart discount&quot; to be applied.&#039;, &#039;woocommerce&#039; ) ); ?&gt;
+				&lt;/p&gt;
+
+				&lt;?php // Exclude Product ids. ?&gt;
+				&lt;p class=&quot;form-field&quot;&gt;
+					&lt;label&gt;&lt;?php _e( &#039;Exclude products&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/label&gt;
+					&lt;select class=&quot;wc-product-search&quot; multiple=&quot;multiple&quot; style=&quot;width: 50%;&quot; name=&quot;exclude_product_ids[]&quot; data-placeholder=&quot;&lt;?php esc_attr_e( &#039;Search for a product&amp;hellip;&#039;, &#039;woocommerce&#039; ); ?&gt;&quot; data-action=&quot;woocommerce_json_search_products_and_variations&quot;&gt;
+						&lt;?php
+						$product_ids = $coupon-&gt;get_excluded_product_ids( &#039;edit&#039; );
+
+						foreach ( $product_ids as $product_id ) {
+							$product = wc_get_product( $product_id );
+							if ( is_object( $product ) ) {
+								echo &#039;&lt;option value=&quot;&#039; . esc_attr( $product_id ) . &#039;&quot;&#039; . selected( true, true, false ) . &#039;&gt;&#039; . esc_html( wp_strip_all_tags( $product-&gt;get_formatted_name() ) ) . &#039;&lt;/option&gt;&#039;;
+							}
+						}
+						?&gt;
+					&lt;/select&gt;
+					&lt;?php echo wc_help_tip( __( &#039;Products that the coupon will not be applied to, or that cannot be in the cart in order for the &quot;Fixed cart discount&quot; to be applied.&#039;, &#039;woocommerce&#039; ) ); ?&gt;
+				&lt;/p&gt;
+				&lt;?php
+
+				echo &#039;&lt;/div&gt;&lt;div class=&quot;options_group&quot;&gt;&#039;;
+
+				// Categories.
+				?&gt;
+				&lt;p class=&quot;form-field&quot;&gt;
+					&lt;label for=&quot;product_categories&quot;&gt;&lt;?php _e( &#039;Product categories&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/label&gt;
+					&lt;select id=&quot;product_categories&quot; name=&quot;product_categories[]&quot; style=&quot;width: 50%;&quot;  class=&quot;wc-enhanced-select&quot; multiple=&quot;multiple&quot; data-placeholder=&quot;&lt;?php esc_attr_e( &#039;Any category&#039;, &#039;woocommerce&#039; ); ?&gt;&quot;&gt;
+						&lt;?php
+						$category_ids = $coupon-&gt;get_product_categories( &#039;edit&#039; );
+						$categories   = get_terms( &#039;product_cat&#039;, &#039;orderby=name&amp;hide_empty=0&#039; );
+
+						if ( $categories ) {
+							foreach ( $categories as $cat ) {
+								echo &#039;&lt;option value=&quot;&#039; . esc_attr( $cat-&gt;term_id ) . &#039;&quot;&#039; . wc_selected( $cat-&gt;term_id, $category_ids ) . &#039;&gt;&#039; . esc_html( $cat-&gt;name ) . &#039;&lt;/option&gt;&#039;;
+							}
+						}
+						?&gt;
+					&lt;/select&gt; &lt;?php echo wc_help_tip( __( &#039;Product categories that the coupon will be applied to, or that need to be in the cart in order for the &quot;Fixed cart discount&quot; to be applied.&#039;, &#039;woocommerce&#039; ) ); ?&gt;
+				&lt;/p&gt;
+
+				&lt;?php // Exclude Categories. ?&gt;
+				&lt;p class=&quot;form-field&quot;&gt;
+					&lt;label for=&quot;exclude_product_categories&quot;&gt;&lt;?php _e( &#039;Exclude categories&#039;, &#039;woocommerce&#039; ); ?&gt;&lt;/label&gt;
+					&lt;select id=&quot;exclude_product_categories&quot; name=&quot;exclude_product_categories[]&quot; style=&quot;width: 50%;&quot;  class=&quot;wc-enhanced-select&quot; multiple=&quot;multiple&quot; data-placeholder=&quot;&lt;?php esc_attr_e( &#039;No categories&#039;, &#039;woocommerce&#039; ); ?&gt;&quot;&gt;
+						&lt;?php
+						$category_ids = $coupon-&gt;get_excluded_product_categories( &#039;edit&#039; );
+						$categories   = get_terms( &#039;product_cat&#039;, &#039;orderby=name&amp;hide_empty=0&#039; );
+
+						if ( $categories ) {
+							foreach ( $categories as $cat ) {
+								echo &#039;&lt;option value=&quot;&#039; . esc_attr( $cat-&gt;term_id ) . &#039;&quot;&#039; . wc_selected( $cat-&gt;term_id, $category_ids ) . &#039;&gt;&#039; . esc_html( $cat-&gt;name ) . &#039;&lt;/option&gt;&#039;;
+							}
+						}
+						?&gt;
+					&lt;/select&gt;
+					&lt;?php echo wc_help_tip( __( &#039;Product categories that the coupon will not be applied to, or that cannot be in the cart in order for the &quot;Fixed cart discount&quot; to be applied.&#039;, &#039;woocommerce&#039; ) ); ?&gt;
+				&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;options_group&quot;&gt;
+				&lt;?php
+				// Customers.
+				woocommerce_wp_text_input(
+					array(
+						&#039;id&#039;                =&gt; &#039;customer_email&#039;,
+						&#039;label&#039;             =&gt; __( &#039;Allowed emails&#039;, &#039;woocommerce&#039; ),
+						&#039;placeholder&#039;       =&gt; __( &#039;No restrictions&#039;, &#039;woocommerce&#039; ),
+						&#039;description&#039;       =&gt; __( &#039;List of allowed billing emails to check against when an order is placed. Separate email addresses with commas. You can also use an asterisk (*) to match parts of an email. For example &quot;*@gmail.com&quot; would match all gmail addresses.&#039;, &#039;woocommerce&#039; ),
+						&#039;value&#039;             =&gt; implode( &#039;, &#039;, (array) $coupon-&gt;get_email_restrictions( &#039;edit&#039; ) ),
+						&#039;desc_tip&#039;          =&gt; true,
+						&#039;type&#039;              =&gt; &#039;email&#039;,
+						&#039;class&#039;             =&gt; &#039;&#039;,
+						&#039;custom_attributes&#039; =&gt; array(
+							&#039;multiple&#039; =&gt; &#039;multiple&#039;,
+						),
+					)
+				);
+				?&gt;
+			&lt;/div&gt;
+			&lt;?php do_action( &#039;woocommerce_coupon_options_usage_restriction&#039;, $coupon-&gt;get_id(), $coupon ); ?&gt;
+			&lt;/div&gt;
+			&lt;div id=&quot;usage_limit_coupon_data&quot; class=&quot;panel woocommerce_options_panel&quot;&gt;
+				&lt;div class=&quot;options_group&quot;&gt;
+					&lt;?php
+					// Usage limit per coupons.
+					woocommerce_wp_text_input(
+						array(
+							&#039;id&#039;                =&gt; &#039;usage_limit&#039;,
+							&#039;label&#039;             =&gt; __( &#039;Usage limit per coupon&#039;, &#039;woocommerce&#039; ),
+							&#039;placeholder&#039;       =&gt; esc_attr__( &#039;Unlimited usage&#039;, &#039;woocommerce&#039; ),
+							&#039;description&#039;       =&gt; __( &#039;How many times this coupon can be used before it is void.&#039;, &#039;woocommerce&#039; ),
+							&#039;type&#039;              =&gt; &#039;number&#039;,
+							&#039;desc_tip&#039;          =&gt; true,
+							&#039;class&#039;             =&gt; &#039;short&#039;,
+							&#039;custom_attributes&#039; =&gt; array(
+								&#039;step&#039; =&gt; 1,
+								&#039;min&#039;  =&gt; 0,
+							),
+							&#039;value&#039;             =&gt; $coupon-&gt;get_usage_limit( &#039;edit&#039; ) ? $coupon-&gt;get_usage_limit( &#039;edit&#039; ) : &#039;&#039;,
+						)
+					);
+
+					// Usage limit per product.
+					woocommerce_wp_text_input(
+						array(
+							&#039;id&#039;                =&gt; &#039;limit_usage_to_x_items&#039;,
+							&#039;label&#039;             =&gt; __( &#039;Limit usage to X items&#039;, &#039;woocommerce&#039; ),
+							&#039;placeholder&#039;       =&gt; esc_attr__( &#039;Apply to all qualifying items in cart&#039;, &#039;woocommerce&#039; ),
+							&#039;description&#039;       =&gt; __( &#039;The maximum number of individual items this coupon can apply to when using product discounts. Leave blank to apply to all qualifying items in cart.&#039;, &#039;woocommerce&#039; ),
+							&#039;desc_tip&#039;          =&gt; true,
+							&#039;class&#039;             =&gt; &#039;short&#039;,
+							&#039;type&#039;              =&gt; &#039;number&#039;,
+							&#039;custom_attributes&#039; =&gt; array(
+								&#039;step&#039; =&gt; 1,
+								&#039;min&#039;  =&gt; 0,
+							),
+							&#039;value&#039;             =&gt; $coupon-&gt;get_limit_usage_to_x_items( &#039;edit&#039; ) ? $coupon-&gt;get_limit_usage_to_x_items( &#039;edit&#039; ) : &#039;&#039;,
+						)
+					);
+
+					// Usage limit per users.
+					woocommerce_wp_text_input(
+						array(
+							&#039;id&#039;                =&gt; &#039;usage_limit_per_user&#039;,
+							&#039;label&#039;             =&gt; __( &#039;Usage limit per user&#039;, &#039;woocommerce&#039; ),
+							&#039;placeholder&#039;       =&gt; esc_attr__( &#039;Unlimited usage&#039;, &#039;woocommerce&#039; ),
+							&#039;description&#039;       =&gt; __( &#039;How many times this coupon can be used by an individual user. Uses billing email for guests, and user ID for logged in users.&#039;, &#039;woocommerce&#039; ),
+							&#039;desc_tip&#039;          =&gt; true,
+							&#039;class&#039;             =&gt; &#039;short&#039;,
+							&#039;type&#039;              =&gt; &#039;number&#039;,
+							&#039;custom_attributes&#039; =&gt; array(
+								&#039;step&#039; =&gt; 1,
+								&#039;min&#039;  =&gt; 0,
+							),
+							&#039;value&#039;             =&gt; $coupon-&gt;get_usage_limit_per_user( &#039;edit&#039; ) ? $coupon-&gt;get_usage_limit_per_user( &#039;edit&#039; ) : &#039;&#039;,
+						)
+					);
+					?&gt;
+				&lt;/div&gt;
+				&lt;?php do_action( &#039;woocommerce_coupon_options_usage_limit&#039;, $coupon-&gt;get_id(), $coupon ); ?&gt;
+			&lt;/div&gt;
+			&lt;?php do_action( &#039;woocommerce_coupon_data_panels&#039;, $coupon-&gt;get_id(), $coupon ); ?&gt;
+			&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;?php
+	}
+
+	/**
+	 * Save meta box data.
+	 *
+	 * @param int     $post_id
+	 * @param WP_Post $post
+	 */
+	public static function save( $post_id, $post ) {
+		// Check for dupe coupons.
+		$coupon_code  = wc_format_coupon_code( $post-&gt;post_title );
+		$id_from_code = wc_get_coupon_id_by_code( $coupon_code, $post_id );
+
+		if ( $id_from_code ) {
+			WC_Admin_Meta_Boxes::add_error( __( &#039;Coupon code already exists - customers will use the latest coupon with this code.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$product_categories         = isset( $_POST[&#039;product_categories&#039;] ) ? (array) $_POST[&#039;product_categories&#039;] : array();
+		$exclude_product_categories = isset( $_POST[&#039;exclude_product_categories&#039;] ) ? (array) $_POST[&#039;exclude_product_categories&#039;] : array();
+
+		$coupon = new WC_Coupon( $post_id );
+		$coupon-&gt;set_props(
+			array(
+				&#039;code&#039;                        =&gt; $post-&gt;post_title,
+				&#039;discount_type&#039;               =&gt; wc_clean( $_POST[&#039;discount_type&#039;] ),
+				&#039;amount&#039;                      =&gt; wc_format_decimal( $_POST[&#039;coupon_amount&#039;] ),
+				&#039;date_expires&#039;                =&gt; wc_clean( $_POST[&#039;expiry_date&#039;] ),
+				&#039;individual_use&#039;              =&gt; isset( $_POST[&#039;individual_use&#039;] ),
+				&#039;product_ids&#039;                 =&gt; isset( $_POST[&#039;product_ids&#039;] ) ? array_filter( array_map( &#039;intval&#039;, (array) $_POST[&#039;product_ids&#039;] ) ) : array(),
+				&#039;excluded_product_ids&#039;        =&gt; isset( $_POST[&#039;exclude_product_ids&#039;] ) ? array_filter( array_map( &#039;intval&#039;, (array) $_POST[&#039;exclude_product_ids&#039;] ) ) : array(),
+				&#039;usage_limit&#039;                 =&gt; absint( $_POST[&#039;usage_limit&#039;] ),
+				&#039;usage_limit_per_user&#039;        =&gt; absint( $_POST[&#039;usage_limit_per_user&#039;] ),
+				&#039;limit_usage_to_x_items&#039;      =&gt; absint( $_POST[&#039;limit_usage_to_x_items&#039;] ),
+				&#039;free_shipping&#039;               =&gt; isset( $_POST[&#039;free_shipping&#039;] ),
+				&#039;product_categories&#039;          =&gt; array_filter( array_map( &#039;intval&#039;, $product_categories ) ),
+				&#039;excluded_product_categories&#039; =&gt; array_filter( array_map( &#039;intval&#039;, $exclude_product_categories ) ),
+				&#039;exclude_sale_items&#039;          =&gt; isset( $_POST[&#039;exclude_sale_items&#039;] ),
+				&#039;minimum_amount&#039;              =&gt; wc_format_decimal( $_POST[&#039;minimum_amount&#039;] ),
+				&#039;maximum_amount&#039;              =&gt; wc_format_decimal( $_POST[&#039;maximum_amount&#039;] ),
+				&#039;email_restrictions&#039;          =&gt; array_filter( array_map( &#039;trim&#039;, explode( &#039;,&#039;, wc_clean( $_POST[&#039;customer_email&#039;] ) ) ) ),
+			)
+		);
+		$coupon-&gt;save();
+		do_action( &#039;woocommerce_coupon_options_save&#039;, $post_id, $coupon );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866946"></script>
+    <script src="../js/search.js?updated=1692866946"></script>
+</body>
+</html>

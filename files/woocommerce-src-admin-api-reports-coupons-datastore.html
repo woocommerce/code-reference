@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866951">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866951">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">DataStore.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * API\Reports\Coupons\DataStore class file.
+ */
+
+namespace Automattic\WooCommerce\Admin\API\Reports\Coupons;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+use Automattic\WooCommerce\Admin\API\Reports\DataStore as ReportsDataStore;
+use Automattic\WooCommerce\Admin\API\Reports\DataStoreInterface;
+use Automattic\WooCommerce\Admin\API\Reports\TimeInterval;
+use Automattic\WooCommerce\Admin\API\Reports\SqlQuery;
+use Automattic\WooCommerce\Admin\API\Reports\Cache as ReportsCache;
+
+/**
+ * API\Reports\Coupons\DataStore.
+ */
+class DataStore extends ReportsDataStore implements DataStoreInterface {
+
+	/**
+	 * Table used to get the data.
+	 *
+	 * @var string
+	 */
+	protected static $table_name = &#039;wc_order_coupon_lookup&#039;;
+
+	/**
+	 * Cache identifier.
+	 *
+	 * @var string
+	 */
+	protected $cache_key = &#039;coupons&#039;;
+
+	/**
+	 * Mapping columns to data type to return correct response types.
+	 *
+	 * @var array
+	 */
+	protected $column_types = array(
+		&#039;coupon_id&#039;    =&gt; &#039;intval&#039;,
+		&#039;amount&#039;       =&gt; &#039;floatval&#039;,
+		&#039;orders_count&#039; =&gt; &#039;intval&#039;,
+	);
+
+	/**
+	 * Data store context used to pass to filters.
+	 *
+	 * @var string
+	 */
+	protected $context = &#039;coupons&#039;;
+
+	/**
+	 * Assign report columns once full table name has been assigned.
+	 */
+	protected function assign_report_columns() {
+		$table_name           = self::get_db_table_name();
+		$this-&gt;report_columns = array(
+			&#039;coupon_id&#039;    =&gt; &#039;coupon_id&#039;,
+			&#039;amount&#039;       =&gt; &#039;SUM(discount_amount) as amount&#039;,
+			&#039;orders_count&#039; =&gt; &quot;COUNT(DISTINCT {$table_name}.order_id) as orders_count&quot;,
+		);
+	}
+
+	/**
+	 * Set up all the hooks for maintaining and populating table data.
+	 */
+	public static function init() {
+		add_action( &#039;woocommerce_analytics_delete_order_stats&#039;, array( __CLASS__, &#039;sync_on_order_delete&#039; ), 5 );
+	}
+
+	/**
+	 * Returns an array of ids of included coupons, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return array
+	 */
+	protected function get_included_coupons_array( $query_args ) {
+		if ( isset( $query_args[&#039;coupons&#039;] ) &amp;&amp; is_array( $query_args[&#039;coupons&#039;] ) &amp;&amp; count( $query_args[&#039;coupons&#039;] ) &gt; 0 ) {
+			return $query_args[&#039;coupons&#039;];
+		}
+		return array();
+	}
+
+	/**
+	 * Updates the database query with parameters used for Products report: categories and order status.
+	 *
+	 * @param array $query_args Query arguments supplied by the user.
+	 */
+	protected function add_sql_query_params( $query_args ) {
+		global $wpdb;
+		$order_coupon_lookup_table = self::get_db_table_name();
+
+		$this-&gt;add_time_period_sql_params( $query_args, $order_coupon_lookup_table );
+		$this-&gt;get_limit_sql_params( $query_args );
+
+		$included_coupons = $this-&gt;get_included_coupons( $query_args, &#039;coupons&#039; );
+		if ( $included_coupons ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;where&#039;, &quot;AND {$order_coupon_lookup_table}.coupon_id IN ({$included_coupons})&quot; );
+
+			$this-&gt;add_order_by_params( $query_args, &#039;outer&#039;, &#039;default_results.coupon_id&#039; );
+		} else {
+			$this-&gt;add_order_by_params( $query_args, &#039;inner&#039;, &quot;{$order_coupon_lookup_table}.coupon_id&quot; );
+		}
+
+		$this-&gt;add_order_status_clause( $query_args, $order_coupon_lookup_table, $this-&gt;subquery );
+	}
+
+	/**
+	 * Fills ORDER BY clause of SQL request based on user supplied parameters.
+	 *
+	 * @param array  $query_args Parameters supplied by the user.
+	 * @param string $from_arg   Target of the JOIN sql param.
+	 * @param string $id_cell    ID cell identifier, like `table_name.id_column_name`.
+	 */
+	protected function add_order_by_params( $query_args, $from_arg, $id_cell ) {
+		global $wpdb;
+
+		// Sanitize input: guarantee that the id cell in the join is quoted with backticks.
+		$id_cell_segments   = explode( &#039;.&#039;, str_replace( &#039;`&#039;, &#039;&#039;, $id_cell ) );
+		$id_cell_identifier = &#039;`&#039; . implode( &#039;`.`&#039;, $id_cell_segments ) . &#039;`&#039;;
+
+		$lookup_table    = self::get_db_table_name();
+		$order_by_clause = $this-&gt;add_order_by_clause( $query_args, $this );
+		$join            = &quot;JOIN {$wpdb-&gt;posts} AS _coupons ON {$id_cell_identifier} = _coupons.ID&quot;;
+		$this-&gt;add_orderby_order_clause( $query_args, $this );
+
+		if ( &#039;inner&#039; === $from_arg ) {
+			$this-&gt;subquery-&gt;clear_sql_clause( &#039;join&#039; );
+			if ( false !== strpos( $order_by_clause, &#039;_coupons&#039; ) ) {
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, $join );
+			}
+		} else {
+			$this-&gt;clear_sql_clause( &#039;join&#039; );
+			if ( false !== strpos( $order_by_clause, &#039;_coupons&#039; ) ) {
+				$this-&gt;add_sql_clause( &#039;join&#039;, $join );
+			}
+		}
+	}
+
+	/**
+	 * Maps ordering specified by the user to columns in the database/fields in the data.
+	 *
+	 * @param string $order_by Sorting criterion.
+	 * @return string
+	 */
+	protected function normalize_order_by( $order_by ) {
+		if ( &#039;date&#039; === $order_by ) {
+			return &#039;time_interval&#039;;
+		}
+		if ( &#039;code&#039; === $order_by ) {
+			return &#039;_coupons.post_title&#039;;
+		}
+		return $order_by;
+	}
+
+	/**
+	 * Enriches the coupon data with extra attributes.
+	 *
+	 * @param array $coupon_data Coupon data.
+	 * @param array $query_args Query parameters.
+	 */
+	protected function include_extended_info( &amp;$coupon_data, $query_args ) {
+		foreach ( $coupon_data as $idx =&gt; $coupon_datum ) {
+			$extended_info = new \ArrayObject();
+			if ( $query_args[&#039;extended_info&#039;] ) {
+				$coupon_id = $coupon_datum[&#039;coupon_id&#039;];
+				$coupon    = new \WC_Coupon( $coupon_id );
+
+				if ( 0 === $coupon-&gt;get_id() ) {
+					// Deleted or otherwise invalid coupon.
+					$extended_info = array(
+						&#039;code&#039;             =&gt; __( &#039;(Deleted)&#039;, &#039;woocommerce&#039; ),
+						&#039;date_created&#039;     =&gt; &#039;&#039;,
+						&#039;date_created_gmt&#039; =&gt; &#039;&#039;,
+						&#039;date_expires&#039;     =&gt; &#039;&#039;,
+						&#039;date_expires_gmt&#039; =&gt; &#039;&#039;,
+						&#039;discount_type&#039;    =&gt; __( &#039;N/A&#039;, &#039;woocommerce&#039; ),
+					);
+				} else {
+					$gmt_timzone = new \DateTimeZone( &#039;UTC&#039; );
+
+					$date_expires = $coupon-&gt;get_date_expires();
+					if ( is_a( $date_expires, &#039;DateTime&#039; ) ) {
+						$date_expires     = $date_expires-&gt;format( TimeInterval::$iso_datetime_format );
+						$date_expires_gmt = new \DateTime( $date_expires );
+						$date_expires_gmt-&gt;setTimezone( $gmt_timzone );
+						$date_expires_gmt = $date_expires_gmt-&gt;format( TimeInterval::$iso_datetime_format );
+					} else {
+						$date_expires     = &#039;&#039;;
+						$date_expires_gmt = &#039;&#039;;
+					}
+
+					$date_created = $coupon-&gt;get_date_created();
+					if ( is_a( $date_created, &#039;DateTime&#039; ) ) {
+						$date_created     = $date_created-&gt;format( TimeInterval::$iso_datetime_format );
+						$date_created_gmt = new \DateTime( $date_created );
+						$date_created_gmt-&gt;setTimezone( $gmt_timzone );
+						$date_created_gmt = $date_created_gmt-&gt;format( TimeInterval::$iso_datetime_format );
+					} else {
+						$date_created     = &#039;&#039;;
+						$date_created_gmt = &#039;&#039;;
+					}
+
+					$extended_info = array(
+						&#039;code&#039;             =&gt; $coupon-&gt;get_code(),
+						&#039;date_created&#039;     =&gt; $date_created,
+						&#039;date_created_gmt&#039; =&gt; $date_created_gmt,
+						&#039;date_expires&#039;     =&gt; $date_expires,
+						&#039;date_expires_gmt&#039; =&gt; $date_expires_gmt,
+						&#039;discount_type&#039;    =&gt; $coupon-&gt;get_discount_type(),
+					);
+				}
+			}
+			$coupon_data[ $idx ][&#039;extended_info&#039;] = $extended_info;
+		}
+	}
+
+	/**
+	 * Returns the report data based on parameters supplied by the user.
+	 *
+	 * @param array $query_args  Query parameters.
+	 * @return stdClass|WP_Error Data.
+	 */
+	public function get_data( $query_args ) {
+		global $wpdb;
+
+		$table_name = self::get_db_table_name();
+
+		// These defaults are only partially applied when used via REST API, as that has its own defaults.
+		$defaults   = array(
+			&#039;per_page&#039;      =&gt; get_option( &#039;posts_per_page&#039; ),
+			&#039;page&#039;          =&gt; 1,
+			&#039;order&#039;         =&gt; &#039;DESC&#039;,
+			&#039;orderby&#039;       =&gt; &#039;coupon_id&#039;,
+			&#039;before&#039;        =&gt; TimeInterval::default_before(),
+			&#039;after&#039;         =&gt; TimeInterval::default_after(),
+			&#039;fields&#039;        =&gt; &#039;*&#039;,
+			&#039;coupons&#039;       =&gt; array(),
+			&#039;extended_info&#039; =&gt; false,
+		);
+		$query_args = wp_parse_args( $query_args, $defaults );
+		$this-&gt;normalize_timezones( $query_args, $defaults );
+
+		/*
+		 * We need to get the cache key here because
+		 * parent::update_intervals_sql_params() modifies $query_args.
+		 */
+		$cache_key = $this-&gt;get_cache_key( $query_args );
+		$data      = $this-&gt;get_cached_data( $cache_key );
+
+		if ( false === $data ) {
+			$this-&gt;initialize_queries();
+
+			$data = (object) array(
+				&#039;data&#039;    =&gt; array(),
+				&#039;total&#039;   =&gt; 0,
+				&#039;pages&#039;   =&gt; 0,
+				&#039;page_no&#039; =&gt; 0,
+			);
+
+			$selections       = $this-&gt;selected_columns( $query_args );
+			$included_coupons = $this-&gt;get_included_coupons_array( $query_args );
+			$limit_params     = $this-&gt;get_limit_params( $query_args );
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;select&#039;, $selections );
+			$this-&gt;add_sql_query_params( $query_args );
+
+			if ( count( $included_coupons ) &gt; 0 ) {
+				$total_results = count( $included_coupons );
+				$total_pages   = (int) ceil( $total_results / $limit_params[&#039;per_page&#039;] );
+
+				$fields    = $this-&gt;get_fields( $query_args );
+				$ids_table = $this-&gt;get_ids_table( $included_coupons, &#039;coupon_id&#039; );
+
+				$this-&gt;add_sql_clause( &#039;select&#039;, $this-&gt;format_join_selections( $fields, array( &#039;coupon_id&#039; ) ) );
+				$this-&gt;add_sql_clause( &#039;from&#039;, &#039;(&#039; );
+				$this-&gt;add_sql_clause( &#039;from&#039;, $this-&gt;subquery-&gt;get_query_statement() );
+				$this-&gt;add_sql_clause( &#039;from&#039;, &quot;) AS {$table_name}&quot; );
+				$this-&gt;add_sql_clause(
+					&#039;right_join&#039;,
+					&quot;RIGHT JOIN ( {$ids_table} ) AS default_results
+					ON default_results.coupon_id = {$table_name}.coupon_id&quot;
+				);
+
+				$coupons_query = $this-&gt;get_query_statement();
+			} else {
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;order_by&#039;, $this-&gt;get_sql_clause( &#039;order_by&#039; ) );
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;limit&#039;, $this-&gt;get_sql_clause( &#039;limit&#039; ) );
+				$coupons_query = $this-&gt;subquery-&gt;get_query_statement();
+
+				$this-&gt;subquery-&gt;clear_sql_clause( array( &#039;select&#039;, &#039;order_by&#039;, &#039;limit&#039; ) );
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;select&#039;, &#039;coupon_id&#039; );
+				$coupon_subquery = &quot;SELECT COUNT(*) FROM (
+					{$this-&gt;subquery-&gt;get_query_statement()}
+				) AS tt&quot;;
+
+				$db_records_count = (int) $wpdb-&gt;get_var(
+					$coupon_subquery // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				);
+
+				$total_results = $db_records_count;
+				$total_pages   = (int) ceil( $db_records_count / $limit_params[&#039;per_page&#039;] );
+				if ( $query_args[&#039;page&#039;] &lt; 1 || $query_args[&#039;page&#039;] &gt; $total_pages ) {
+					return $data;
+				}
+			}
+
+			$coupon_data = $wpdb-&gt;get_results(
+				$coupons_query, // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				ARRAY_A
+			);
+			if ( null === $coupon_data ) {
+				return $data;
+			}
+
+			$this-&gt;include_extended_info( $coupon_data, $query_args );
+
+			$coupon_data = array_map( array( $this, &#039;cast_numbers&#039; ), $coupon_data );
+			$data        = (object) array(
+				&#039;data&#039;    =&gt; $coupon_data,
+				&#039;total&#039;   =&gt; $total_results,
+				&#039;pages&#039;   =&gt; $total_pages,
+				&#039;page_no&#039; =&gt; (int) $query_args[&#039;page&#039;],
+			);
+
+			$this-&gt;set_cached_data( $cache_key, $data );
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Get coupon ID for an order.
+	 *
+	 * Tries to get the ID from order item meta, then falls back to a query of published coupons.
+	 *
+	 * @param \WC_Order_Item_Coupon $coupon_item The coupon order item object.
+	 * @return int Coupon ID on success, 0 on failure.
+	 */
+	public static function get_coupon_id( \WC_Order_Item_Coupon $coupon_item ) {
+		// First attempt to get coupon ID from order item data.
+		$coupon_data = $coupon_item-&gt;get_meta( &#039;coupon_data&#039;, true );
+
+		// Normal checkout orders should have this data.
+		// See: https://github.com/woocommerce/woocommerce/blob/3dc7df7af9f7ca0c0aa34ede74493e856f276abe/includes/abstracts/abstract-wc-order.php#L1206.
+		if ( isset( $coupon_data[&#039;id&#039;] ) ) {
+			return $coupon_data[&#039;id&#039;];
+		}
+
+		// Try to get the coupon ID using the code.
+		return wc_get_coupon_id_by_code( $coupon_item-&gt;get_code() );
+	}
+
+	/**
+	 * Create or update an an entry in the wc_order_coupon_lookup table for an order.
+	 *
+	 * @since 3.5.0
+	 * @param int $order_id Order ID.
+	 * @return int|bool Returns -1 if order won&#039;t be processed, or a boolean indicating processing success.
+	 */
+	public static function sync_order_coupons( $order_id ) {
+		global $wpdb;
+
+		$order = wc_get_order( $order_id );
+
+		if ( ! $order ) {
+			return -1;
+		}
+
+		// Refunds don&#039;t affect coupon stats so return successfully if one is called here.
+		if ( &#039;shop_order_refund&#039; === $order-&gt;get_type() ) {
+			return true;
+		}
+
+		$table_name     = self::get_db_table_name();
+		$existing_items = $wpdb-&gt;get_col(
+			$wpdb-&gt;prepare(
+				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				&quot;SELECT coupon_id FROM {$table_name} WHERE order_id = %d&quot;,
+				$order_id
+			)
+		);
+		$existing_items     = array_flip( $existing_items );
+		$coupon_items       = $order-&gt;get_items( &#039;coupon&#039; );
+		$coupon_items_count = count( $coupon_items );
+		$num_updated        = 0;
+		$num_deleted        = 0;
+
+		foreach ( $coupon_items as $coupon_item ) {
+			$coupon_id = self::get_coupon_id( $coupon_item );
+			unset( $existing_items[ $coupon_id ] );
+
+			if ( ! $coupon_id ) {
+				// Insert a unique, but obviously invalid ID for this deleted coupon.
+				$num_deleted++;
+				$coupon_id = -1 * $num_deleted;
+			}
+
+			$result = $wpdb-&gt;replace(
+				self::get_db_table_name(),
+				array(
+					&#039;order_id&#039;        =&gt; $order_id,
+					&#039;coupon_id&#039;       =&gt; $coupon_id,
+					&#039;discount_amount&#039; =&gt; $coupon_item-&gt;get_discount(),
+					&#039;date_created&#039;    =&gt; $order-&gt;get_date_created( &#039;edit&#039; )-&gt;date( TimeInterval::$sql_datetime_format ),
+				),
+				array(
+					&#039;%d&#039;,
+					&#039;%d&#039;,
+					&#039;%f&#039;,
+					&#039;%s&#039;,
+				)
+			);
+
+			/**
+			 * Fires when coupon&#039;s reports are updated.
+			 *
+			 * @param int $coupon_id Coupon ID.
+			 * @param int $order_id  Order ID.
+			 */
+			do_action( &#039;woocommerce_analytics_update_coupon&#039;, $coupon_id, $order_id );
+
+			// Sum the rows affected. Using REPLACE can affect 2 rows if the row already exists.
+			$num_updated += 2 === intval( $result ) ? 1 : intval( $result );
+		}
+
+		if ( ! empty( $existing_items ) ) {
+			$existing_items = array_flip( $existing_items );
+			$format         = array_fill( 0, count( $existing_items ), &#039;%d&#039; );
+			$format         = implode( &#039;,&#039;, $format );
+			array_unshift( $existing_items, $order_id );
+			$wpdb-&gt;query(
+				$wpdb-&gt;prepare(
+					// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+					&quot;DELETE FROM {$table_name} WHERE order_id = %d AND coupon_id in ({$format})&quot;,
+					$existing_items
+				)
+			);
+		}
+
+		return ( $coupon_items_count === $num_updated );
+	}
+
+	/**
+	 * Clean coupons data when an order is deleted.
+	 *
+	 * @param int $order_id Order ID.
+	 */
+	public static function sync_on_order_delete( $order_id ) {
+		global $wpdb;
+
+		$wpdb-&gt;delete( self::get_db_table_name(), array( &#039;order_id&#039; =&gt; $order_id ) );
+		/**
+		 * Fires when coupon&#039;s reports are removed from database.
+		 *
+		 * @param int $coupon_id Coupon ID.
+		 * @param int $order_id  Order ID.
+		 */
+		do_action( &#039;woocommerce_analytics_delete_coupon&#039;, 0, $order_id );
+
+		ReportsCache::invalidate();
+	}
+
+	/**
+	 * Gets coupons based on the provided arguments.
+	 *
+	 * @todo Upon core merge, including this in core&#039;s `class-wc-coupon-data-store-cpt.php` might make more sense.
+	 * @param array $args Array of args to filter the query by. Supports `include`.
+	 * @return array Array of results.
+	 */
+	public function get_coupons( $args ) {
+		global $wpdb;
+		$query = &quot;SELECT ID, post_title FROM {$wpdb-&gt;posts} WHERE post_type=&#039;shop_coupon&#039;&quot;;
+
+		$included_coupons = $this-&gt;get_included_coupons( $args, &#039;include&#039; );
+		if ( ! empty( $included_coupons ) ) {
+			$query .= &quot; AND ID IN ({$included_coupons})&quot;;
+		}
+
+		return $wpdb-&gt;get_results( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+	}
+
+	/**
+	 * Initialize query objects.
+	 */
+	protected function initialize_queries() {
+		$this-&gt;clear_all_clauses();
+		$this-&gt;subquery = new SqlQuery( $this-&gt;context . &#039;_subquery&#039; );
+		$this-&gt;subquery-&gt;add_sql_clause( &#039;from&#039;, self::get_db_table_name() );
+		$this-&gt;subquery-&gt;add_sql_clause( &#039;group_by&#039;, &#039;coupon_id&#039; );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

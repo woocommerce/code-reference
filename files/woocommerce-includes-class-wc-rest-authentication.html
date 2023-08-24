@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-rest-authentication.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * REST API Authentication
+ *
+ * @package  WooCommerce\RestApi
+ * @since    2.6.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * REST API authentication class.
+ */
+class WC_REST_Authentication {
+
+	/**
+	 * Authentication error.
+	 *
+	 * @var WP_Error
+	 */
+	protected $error = null;
+
+	/**
+	 * Logged in user data.
+	 *
+	 * @var stdClass
+	 */
+	protected $user = null;
+
+	/**
+	 * Current auth method.
+	 *
+	 * @var string
+	 */
+	protected $auth_method = &#039;&#039;;
+
+	/**
+	 * Initialize authentication actions.
+	 */
+	public function __construct() {
+		add_filter( &#039;determine_current_user&#039;, array( $this, &#039;authenticate&#039; ), 15 );
+		add_filter( &#039;rest_authentication_errors&#039;, array( $this, &#039;authentication_fallback&#039; ) );
+		add_filter( &#039;rest_authentication_errors&#039;, array( $this, &#039;check_authentication_error&#039; ), 15 );
+		add_filter( &#039;rest_post_dispatch&#039;, array( $this, &#039;send_unauthorized_headers&#039; ), 50 );
+		add_filter( &#039;rest_pre_dispatch&#039;, array( $this, &#039;check_user_permissions&#039; ), 10, 3 );
+	}
+
+	/**
+	 * Check if is request to our REST API.
+	 *
+	 * @return bool
+	 */
+	protected function is_request_to_rest_api() {
+		if ( empty( $_SERVER[&#039;REQUEST_URI&#039;] ) ) {
+			return false;
+		}
+
+		$rest_prefix = trailingslashit( rest_get_url_prefix() );
+		$request_uri = esc_url_raw( wp_unslash( $_SERVER[&#039;REQUEST_URI&#039;] ) );
+
+		// Check if the request is to the WC API endpoints.
+		$woocommerce = ( false !== strpos( $request_uri, $rest_prefix . &#039;wc/&#039; ) );
+
+		// Allow third party plugins use our authentication methods.
+		$third_party = ( false !== strpos( $request_uri, $rest_prefix . &#039;wc-&#039; ) );
+
+		return apply_filters( &#039;woocommerce_rest_is_request_to_rest_api&#039;, $woocommerce || $third_party );
+	}
+
+	/**
+	 * Authenticate user.
+	 *
+	 * @param int|false $user_id User ID if one has been determined, false otherwise.
+	 * @return int|false
+	 */
+	public function authenticate( $user_id ) {
+		// Do not authenticate twice and check if is a request to our endpoint in the WP REST API.
+		if ( ! empty( $user_id ) || ! $this-&gt;is_request_to_rest_api() ) {
+			return $user_id;
+		}
+
+		if ( is_ssl() ) {
+			$user_id = $this-&gt;perform_basic_authentication();
+		}
+
+		if ( $user_id ) {
+			return $user_id;
+		}
+
+		return $this-&gt;perform_oauth_authentication();
+	}
+
+	/**
+	 * Authenticate the user if authentication wasn&#039;t performed during the
+	 * determine_current_user action.
+	 *
+	 * Necessary in cases where wp_get_current_user() is called before WooCommerce is loaded.
+	 *
+	 * @see https://github.com/woocommerce/woocommerce/issues/26847
+	 *
+	 * @param WP_Error|null|bool $error Error data.
+	 * @return WP_Error|null|bool
+	 */
+	public function authentication_fallback( $error ) {
+		if ( ! empty( $error ) ) {
+			// Another plugin has already declared a failure.
+			return $error;
+		}
+		if ( empty( $this-&gt;error ) &amp;&amp; empty( $this-&gt;auth_method ) &amp;&amp; empty( $this-&gt;user ) &amp;&amp; 0 === get_current_user_id() ) {
+			// Authentication hasn&#039;t occurred during `determine_current_user`, so check auth.
+			$user_id = $this-&gt;authenticate( false );
+			if ( $user_id ) {
+				wp_set_current_user( $user_id );
+				return true;
+			}
+		}
+		return $error;
+	}
+
+	/**
+	 * Check for authentication error.
+	 *
+	 * @param WP_Error|null|bool $error Error data.
+	 * @return WP_Error|null|bool
+	 */
+	public function check_authentication_error( $error ) {
+		// Pass through other errors.
+		if ( ! empty( $error ) ) {
+			return $error;
+		}
+
+		return $this-&gt;get_error();
+	}
+
+	/**
+	 * Set authentication error.
+	 *
+	 * @param WP_Error $error Authentication error data.
+	 */
+	protected function set_error( $error ) {
+		// Reset user.
+		$this-&gt;user = null;
+
+		$this-&gt;error = $error;
+	}
+
+	/**
+	 * Get authentication error.
+	 *
+	 * @return WP_Error|null.
+	 */
+	protected function get_error() {
+		return $this-&gt;error;
+	}
+
+	/**
+	 * Basic Authentication.
+	 *
+	 * SSL-encrypted requests are not subject to sniffing or man-in-the-middle
+	 * attacks, so the request can be authenticated by simply looking up the user
+	 * associated with the given consumer key and confirming the consumer secret
+	 * provided is valid.
+	 *
+	 * @return int|bool
+	 */
+	private function perform_basic_authentication() {
+		$this-&gt;auth_method = &#039;basic_auth&#039;;
+		$consumer_key      = &#039;&#039;;
+		$consumer_secret   = &#039;&#039;;
+
+		// If the $_GET parameters are present, use those first.
+		if ( ! empty( $_GET[&#039;consumer_key&#039;] ) &amp;&amp; ! empty( $_GET[&#039;consumer_secret&#039;] ) ) { // WPCS: CSRF ok.
+			$consumer_key    = $_GET[&#039;consumer_key&#039;]; // WPCS: CSRF ok, sanitization ok.
+			$consumer_secret = $_GET[&#039;consumer_secret&#039;]; // WPCS: CSRF ok, sanitization ok.
+		}
+
+		// If the above is not present, we will do full basic auth.
+		if ( ! $consumer_key &amp;&amp; ! empty( $_SERVER[&#039;PHP_AUTH_USER&#039;] ) &amp;&amp; ! empty( $_SERVER[&#039;PHP_AUTH_PW&#039;] ) ) {
+			$consumer_key    = $_SERVER[&#039;PHP_AUTH_USER&#039;]; // WPCS: CSRF ok, sanitization ok.
+			$consumer_secret = $_SERVER[&#039;PHP_AUTH_PW&#039;]; // WPCS: CSRF ok, sanitization ok.
+		}
+
+		// Stop if don&#039;t have any key.
+		if ( ! $consumer_key || ! $consumer_secret ) {
+			return false;
+		}
+
+		// Get user data.
+		$this-&gt;user = $this-&gt;get_user_data_by_consumer_key( $consumer_key );
+		if ( empty( $this-&gt;user ) ) {
+			return false;
+		}
+
+		// Validate user secret.
+		if ( ! hash_equals( $this-&gt;user-&gt;consumer_secret, $consumer_secret ) ) { // @codingStandardsIgnoreLine
+			$this-&gt;set_error( new WP_Error( &#039;woocommerce_rest_authentication_error&#039;, __( &#039;Consumer secret is invalid.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 401 ) ) );
+
+			return false;
+		}
+
+		return $this-&gt;user-&gt;user_id;
+	}
+
+	/**
+	 * Parse the Authorization header into parameters.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @param string $header Authorization header value (not including &quot;Authorization: &quot; prefix).
+	 *
+	 * @return array Map of parameter values.
+	 */
+	public function parse_header( $header ) {
+		if ( &#039;OAuth &#039; !== substr( $header, 0, 6 ) ) {
+			return array();
+		}
+
+		// From OAuth PHP library, used under MIT license.
+		$params = array();
+		if ( preg_match_all( &#039;/(oauth_[a-z_-]*)=(:?&quot;([^&quot;]*)&quot;|([^,]*))/&#039;, $header, $matches ) ) {
+			foreach ( $matches[1] as $i =&gt; $h ) {
+				$params[ $h ] = urldecode( empty( $matches[3][ $i ] ) ? $matches[4][ $i ] : $matches[3][ $i ] );
+			}
+			if ( isset( $params[&#039;realm&#039;] ) ) {
+				unset( $params[&#039;realm&#039;] );
+			}
+		}
+
+		return $params;
+	}
+
+	/**
+	 * Get the authorization header.
+	 *
+	 * On certain systems and configurations, the Authorization header will be
+	 * stripped out by the server or PHP. Typically this is then used to
+	 * generate `PHP_AUTH_USER`/`PHP_AUTH_PASS` but not passed on. We use
+	 * `getallheaders` here to try and grab it out instead.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @return string Authorization header if set.
+	 */
+	public function get_authorization_header() {
+		if ( ! empty( $_SERVER[&#039;HTTP_AUTHORIZATION&#039;] ) ) {
+			return wp_unslash( $_SERVER[&#039;HTTP_AUTHORIZATION&#039;] ); // WPCS: sanitization ok.
+		}
+
+		if ( function_exists( &#039;getallheaders&#039; ) ) {
+			$headers = getallheaders();
+			// Check for the authoization header case-insensitively.
+			foreach ( $headers as $key =&gt; $value ) {
+				if ( &#039;authorization&#039; === strtolower( $key ) ) {
+					return $value;
+				}
+			}
+		}
+
+		return &#039;&#039;;
+	}
+
+	/**
+	 * Get oAuth parameters from $_GET, $_POST or request header.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @return array|WP_Error
+	 */
+	public function get_oauth_parameters() {
+		$params = array_merge( $_GET, $_POST ); // WPCS: CSRF ok.
+		$params = wp_unslash( $params );
+		$header = $this-&gt;get_authorization_header();
+
+		if ( ! empty( $header ) ) {
+			// Trim leading spaces.
+			$header        = trim( $header );
+			$header_params = $this-&gt;parse_header( $header );
+
+			if ( ! empty( $header_params ) ) {
+				$params = array_merge( $params, $header_params );
+			}
+		}
+
+		$param_names = array(
+			&#039;oauth_consumer_key&#039;,
+			&#039;oauth_timestamp&#039;,
+			&#039;oauth_nonce&#039;,
+			&#039;oauth_signature&#039;,
+			&#039;oauth_signature_method&#039;,
+		);
+
+		$errors   = array();
+		$have_one = false;
+
+		// Check for required OAuth parameters.
+		foreach ( $param_names as $param_name ) {
+			if ( empty( $params[ $param_name ] ) ) {
+				$errors[] = $param_name;
+			} else {
+				$have_one = true;
+			}
+		}
+
+		// All keys are missing, so we&#039;re probably not even trying to use OAuth.
+		if ( ! $have_one ) {
+			return array();
+		}
+
+		// If we have at least one supplied piece of data, and we have an error,
+		// then it&#039;s a failed authentication.
+		if ( ! empty( $errors ) ) {
+			$message = sprintf(
+				/* translators: %s: amount of errors */
+				_n( &#039;Missing OAuth parameter %s&#039;, &#039;Missing OAuth parameters %s&#039;, count( $errors ), &#039;woocommerce&#039; ),
+				implode( &#039;, &#039;, $errors )
+			);
+
+			$this-&gt;set_error( new WP_Error( &#039;woocommerce_rest_authentication_missing_parameter&#039;, $message, array( &#039;status&#039; =&gt; 401 ) ) );
+
+			return array();
+		}
+
+		return $params;
+	}
+
+	/**
+	 * Perform OAuth 1.0a &quot;one-legged&quot; (http://oauthbible.com/#oauth-10a-one-legged) authentication for non-SSL requests.
+	 *
+	 * This is required so API credentials cannot be sniffed or intercepted when making API requests over plain HTTP.
+	 *
+	 * This follows the spec for simple OAuth 1.0a authentication (RFC 5849) as closely as possible, with two exceptions:
+	 *
+	 * 1) There is no token associated with request/responses, only consumer keys/secrets are used.
+	 *
+	 * 2) The OAuth parameters are included as part of the request query string instead of part of the Authorization header,
+	 *    This is because there is no cross-OS function within PHP to get the raw Authorization header.
+	 *
+	 * @link http://tools.ietf.org/html/rfc5849 for the full spec.
+	 *
+	 * @return int|bool
+	 */
+	private function perform_oauth_authentication() {
+		$this-&gt;auth_method = &#039;oauth1&#039;;
+
+		$params = $this-&gt;get_oauth_parameters();
+		if ( empty( $params ) ) {
+			return false;
+		}
+
+		// Fetch WP user by consumer key.
+		$this-&gt;user = $this-&gt;get_user_data_by_consumer_key( $params[&#039;oauth_consumer_key&#039;] );
+
+		if ( empty( $this-&gt;user ) ) {
+			$this-&gt;set_error( new WP_Error( &#039;woocommerce_rest_authentication_error&#039;, __( &#039;Consumer key is invalid.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 401 ) ) );
+
+			return false;
+		}
+
+		// Perform OAuth validation.
+		$signature = $this-&gt;check_oauth_signature( $this-&gt;user, $params );
+		if ( is_wp_error( $signature ) ) {
+			$this-&gt;set_error( $signature );
+			return false;
+		}
+
+		$timestamp_and_nonce = $this-&gt;check_oauth_timestamp_and_nonce( $this-&gt;user, $params[&#039;oauth_timestamp&#039;], $params[&#039;oauth_nonce&#039;] );
+		if ( is_wp_error( $timestamp_and_nonce ) ) {
+			$this-&gt;set_error( $timestamp_and_nonce );
+			return false;
+		}
+
+		return $this-&gt;user-&gt;user_id;
+	}
+
+	/**
+	 * Verify that the consumer-provided request signature matches our generated signature,
+	 * this ensures the consumer has a valid key/secret.
+	 *
+	 * @param stdClass $user   User data.
+	 * @param array    $params The request parameters.
+	 * @return true|WP_Error
+	 */
+	private function check_oauth_signature( $user, $params ) {
+		$http_method  = isset( $_SERVER[&#039;REQUEST_METHOD&#039;] ) ? strtoupper( $_SERVER[&#039;REQUEST_METHOD&#039;] ) : &#039;&#039;; // WPCS: sanitization ok.
+		$request_path = isset( $_SERVER[&#039;REQUEST_URI&#039;] ) ? wp_parse_url( $_SERVER[&#039;REQUEST_URI&#039;], PHP_URL_PATH ) : &#039;&#039;; // WPCS: sanitization ok.
+		$wp_base      = get_home_url( null, &#039;/&#039;, &#039;relative&#039; );
+		if ( substr( $request_path, 0, strlen( $wp_base ) ) === $wp_base ) {
+			$request_path = substr( $request_path, strlen( $wp_base ) );
+		}
+		$base_request_uri = rawurlencode( get_home_url( null, $request_path, is_ssl() ? &#039;https&#039; : &#039;http&#039; ) );
+
+		// Get the signature provided by the consumer and remove it from the parameters prior to checking the signature.
+		$consumer_signature = rawurldecode( str_replace( &#039; &#039;, &#039;+&#039;, $params[&#039;oauth_signature&#039;] ) );
+		unset( $params[&#039;oauth_signature&#039;] );
+
+		// Sort parameters.
+		if ( ! uksort( $params, &#039;strcmp&#039; ) ) {
+			return new WP_Error( &#039;woocommerce_rest_authentication_error&#039;, __( &#039;Invalid signature - failed to sort parameters.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 401 ) );
+		}
+
+		// Normalize parameter key/values.
+		$params         = $this-&gt;normalize_parameters( $params );
+		$query_string   = implode( &#039;%26&#039;, $this-&gt;join_with_equals_sign( $params ) ); // Join with ampersand.
+		$string_to_sign = $http_method . &#039;&amp;&#039; . $base_request_uri . &#039;&amp;&#039; . $query_string;
+
+		if ( &#039;HMAC-SHA1&#039; !== $params[&#039;oauth_signature_method&#039;] &amp;&amp; &#039;HMAC-SHA256&#039; !== $params[&#039;oauth_signature_method&#039;] ) {
+			return new WP_Error( &#039;woocommerce_rest_authentication_error&#039;, __( &#039;Invalid signature - signature method is invalid.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 401 ) );
+		}
+
+		$hash_algorithm = strtolower( str_replace( &#039;HMAC-&#039;, &#039;&#039;, $params[&#039;oauth_signature_method&#039;] ) );
+		$secret         = $user-&gt;consumer_secret . &#039;&amp;&#039;;
+		$signature      = base64_encode( hash_hmac( $hash_algorithm, $string_to_sign, $secret, true ) );
+
+		if ( ! hash_equals( $signature, $consumer_signature ) ) { // @codingStandardsIgnoreLine
+			return new WP_Error( &#039;woocommerce_rest_authentication_error&#039;, __( &#039;Invalid signature - provided signature does not match.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 401 ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Creates an array of urlencoded strings out of each array key/value pairs.
+	 *
+	 * @param  array  $params       Array of parameters to convert.
+	 * @param  array  $query_params Array to extend.
+	 * @param  string $key          Optional Array key to append.
+	 * @return string               Array of urlencoded strings.
+	 */
+	private function join_with_equals_sign( $params, $query_params = array(), $key = &#039;&#039; ) {
+		foreach ( $params as $param_key =&gt; $param_value ) {
+			if ( $key ) {
+				$param_key = $key . &#039;%5B&#039; . $param_key . &#039;%5D&#039;; // Handle multi-dimensional array.
+			}
+
+			if ( is_array( $param_value ) ) {
+				$query_params = $this-&gt;join_with_equals_sign( $param_value, $query_params, $param_key );
+			} else {
+				$string         = $param_key . &#039;=&#039; . $param_value; // Join with equals sign.
+				$query_params[] = wc_rest_urlencode_rfc3986( $string );
+			}
+		}
+
+		return $query_params;
+	}
+
+	/**
+	 * Normalize each parameter by assuming each parameter may have already been
+	 * encoded, so attempt to decode, and then re-encode according to RFC 3986.
+	 *
+	 * Note both the key and value is normalized so a filter param like:
+	 *
+	 * &#039;filter[period]&#039; =&gt; &#039;week&#039;
+	 *
+	 * is encoded to:
+	 *
+	 * &#039;filter%255Bperiod%255D&#039; =&gt; &#039;week&#039;
+	 *
+	 * This conforms to the OAuth 1.0a spec which indicates the entire query string
+	 * should be URL encoded.
+	 *
+	 * @see rawurlencode()
+	 * @param array $parameters Un-normalized parameters.
+	 * @return array Normalized parameters.
+	 */
+	private function normalize_parameters( $parameters ) {
+		$keys       = wc_rest_urlencode_rfc3986( array_keys( $parameters ) );
+		$values     = wc_rest_urlencode_rfc3986( array_values( $parameters ) );
+		$parameters = array_combine( $keys, $values );
+
+		return $parameters;
+	}
+
+	/**
+	 * Verify that the timestamp and nonce provided with the request are valid. This prevents replay attacks where
+	 * an attacker could attempt to re-send an intercepted request at a later time.
+	 *
+	 * - A timestamp is valid if it is within 15 minutes of now.
+	 * - A nonce is valid if it has not been used within the last 15 minutes.
+	 *
+	 * @param stdClass $user      User data.
+	 * @param int      $timestamp The unix timestamp for when the request was made.
+	 * @param string   $nonce     A unique (for the given user) 32 alphanumeric string, consumer-generated.
+	 * @return bool|WP_Error
+	 */
+	private function check_oauth_timestamp_and_nonce( $user, $timestamp, $nonce ) {
+		global $wpdb;
+
+		$valid_window = 15 * 60; // 15 minute window.
+
+		if ( ( $timestamp &lt; time() - $valid_window ) || ( $timestamp &gt; time() + $valid_window ) ) {
+			return new WP_Error( &#039;woocommerce_rest_authentication_error&#039;, __( &#039;Invalid timestamp.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 401 ) );
+		}
+
+		$used_nonces = maybe_unserialize( $user-&gt;nonces );
+
+		if ( empty( $used_nonces ) ) {
+			$used_nonces = array();
+		}
+
+		if ( in_array( $nonce, $used_nonces, true ) ) {
+			return new WP_Error( &#039;woocommerce_rest_authentication_error&#039;, __( &#039;Invalid nonce - nonce has already been used.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 401 ) );
+		}
+
+		$used_nonces[ $timestamp ] = $nonce;
+
+		// Remove expired nonces.
+		foreach ( $used_nonces as $nonce_timestamp =&gt; $nonce ) {
+			if ( $nonce_timestamp &lt; ( time() - $valid_window ) ) {
+				unset( $used_nonces[ $nonce_timestamp ] );
+			}
+		}
+
+		$used_nonces = maybe_serialize( $used_nonces );
+
+		$wpdb-&gt;update(
+			$wpdb-&gt;prefix . &#039;woocommerce_api_keys&#039;,
+			array( &#039;nonces&#039; =&gt; $used_nonces ),
+			array( &#039;key_id&#039; =&gt; $user-&gt;key_id ),
+			array( &#039;%s&#039; ),
+			array( &#039;%d&#039; )
+		);
+
+		return true;
+	}
+
+	/**
+	 * Return the user data for the given consumer_key.
+	 *
+	 * @param string $consumer_key Consumer key.
+	 * @return array
+	 */
+	private function get_user_data_by_consumer_key( $consumer_key ) {
+		global $wpdb;
+
+		$consumer_key = wc_api_hash( sanitize_text_field( $consumer_key ) );
+		$user         = $wpdb-&gt;get_row(
+			$wpdb-&gt;prepare(
+				&quot;
+			SELECT key_id, user_id, permissions, consumer_key, consumer_secret, nonces
+			FROM {$wpdb-&gt;prefix}woocommerce_api_keys
+			WHERE consumer_key = %s
+		&quot;,
+				$consumer_key
+			)
+		);
+
+		return $user;
+	}
+
+	/**
+	 * Check that the API keys provided have the proper key-specific permissions to either read or write API resources.
+	 *
+	 * @param string $method Request method.
+	 * @return bool|WP_Error
+	 */
+	private function check_permissions( $method ) {
+		$permissions = $this-&gt;user-&gt;permissions;
+
+		switch ( $method ) {
+			case &#039;HEAD&#039;:
+			case &#039;GET&#039;:
+				if ( &#039;read&#039; !== $permissions &amp;&amp; &#039;read_write&#039; !== $permissions ) {
+					return new WP_Error( &#039;woocommerce_rest_authentication_error&#039;, __( &#039;The API key provided does not have read permissions.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 401 ) );
+				}
+				break;
+			case &#039;POST&#039;:
+			case &#039;PUT&#039;:
+			case &#039;PATCH&#039;:
+			case &#039;DELETE&#039;:
+				if ( &#039;write&#039; !== $permissions &amp;&amp; &#039;read_write&#039; !== $permissions ) {
+					return new WP_Error( &#039;woocommerce_rest_authentication_error&#039;, __( &#039;The API key provided does not have write permissions.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 401 ) );
+				}
+				break;
+			case &#039;OPTIONS&#039;:
+				return true;
+
+			default:
+				return new WP_Error( &#039;woocommerce_rest_authentication_error&#039;, __( &#039;Unknown request method.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 401 ) );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Updated API Key last access datetime.
+	 */
+	private function update_last_access() {
+		global $wpdb;
+
+		/**
+		 * This filter enables the exclusion of the most recent access time from being logged for REST API calls.
+		 *
+		 * @param bool $result  Default value.
+		 * @param int  $key_id  Key ID associated with REST API request.
+		 * @param int  $user_id User ID associated with REST API request.
+		 *
+		 * @since 7.7.0
+		 */
+		if ( apply_filters( &#039;woocommerce_disable_rest_api_access_log&#039;, false, $this-&gt;user-&gt;key_id, $this-&gt;user-&gt;user_id ) ) {
+			return;
+		}
+
+		$wpdb-&gt;update(
+			$wpdb-&gt;prefix . &#039;woocommerce_api_keys&#039;,
+			array( &#039;last_access&#039; =&gt; current_time( &#039;mysql&#039; ) ),
+			array( &#039;key_id&#039; =&gt; $this-&gt;user-&gt;key_id ),
+			array( &#039;%s&#039; ),
+			array( &#039;%d&#039; )
+		);
+	}
+
+	/**
+	 * If the consumer_key and consumer_secret $_GET parameters are NOT provided
+	 * and the Basic auth headers are either not present or the consumer secret does not match the consumer
+	 * key provided, then return the correct Basic headers and an error message.
+	 *
+	 * @param WP_REST_Response $response Current response being served.
+	 * @return WP_REST_Response
+	 */
+	public function send_unauthorized_headers( $response ) {
+		if ( is_wp_error( $this-&gt;get_error() ) &amp;&amp; &#039;basic_auth&#039; === $this-&gt;auth_method ) {
+			$auth_message = __( &#039;WooCommerce API. Use a consumer key in the username field and a consumer secret in the password field.&#039;, &#039;woocommerce&#039; );
+			$response-&gt;header( &#039;WWW-Authenticate&#039;, &#039;Basic realm=&quot;&#039; . $auth_message . &#039;&quot;&#039;, true );
+		}
+
+		return $response;
+	}
+
+	/**
+	 * Check for user permissions and register last access.
+	 *
+	 * @param mixed           $result  Response to replace the requested version with.
+	 * @param WP_REST_Server  $server  Server instance.
+	 * @param WP_REST_Request $request Request used to generate the response.
+	 * @return mixed
+	 */
+	public function check_user_permissions( $result, $server, $request ) {
+		if ( $this-&gt;user ) {
+			// Check API Key permissions.
+			$allowed = $this-&gt;check_permissions( $request-&gt;get_method() );
+			if ( is_wp_error( $allowed ) ) {
+				return $allowed;
+			}
+
+			// Register last access.
+			$this-&gt;update_last_access();
+		}
+
+		return $result;
+	}
+}
+
+new WC_REST_Authentication();
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

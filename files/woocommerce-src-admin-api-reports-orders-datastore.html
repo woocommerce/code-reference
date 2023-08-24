@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866951">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866951">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">DataStore.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * API\Reports\Orders\DataStore class file.
+ */
+
+namespace Automattic\WooCommerce\Admin\API\Reports\Orders;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+use Automattic\WooCommerce\Admin\API\Reports\DataStore as ReportsDataStore;
+use Automattic\WooCommerce\Admin\API\Reports\DataStoreInterface;
+use Automattic\WooCommerce\Admin\API\Reports\SqlQuery;
+use Automattic\WooCommerce\Admin\API\Reports\Cache;
+use Automattic\WooCommerce\Admin\API\Reports\TimeInterval;
+
+
+/**
+ * API\Reports\Orders\DataStore.
+ */
+class DataStore extends ReportsDataStore implements DataStoreInterface {
+
+	/**
+	 * Dynamically sets the date column name based on configuration
+	 */
+	public function __construct() {
+		$this-&gt;date_column_name = get_option( &#039;woocommerce_date_type&#039;, &#039;date_paid&#039; );
+		parent::__construct();
+	}
+
+	/**
+	 * Table used to get the data.
+	 *
+	 * @var string
+	 */
+	protected static $table_name = &#039;wc_order_stats&#039;;
+
+	/**
+	 * Cache identifier.
+	 *
+	 * @var string
+	 */
+	protected $cache_key = &#039;orders&#039;;
+
+	/**
+	 * Mapping columns to data type to return correct response types.
+	 *
+	 * @var array
+	 */
+	protected $column_types = array(
+		&#039;order_id&#039;         =&gt; &#039;intval&#039;,
+		&#039;parent_id&#039;        =&gt; &#039;intval&#039;,
+		&#039;date_created&#039;     =&gt; &#039;strval&#039;,
+		&#039;date_created_gmt&#039; =&gt; &#039;strval&#039;,
+		&#039;status&#039;           =&gt; &#039;strval&#039;,
+		&#039;customer_id&#039;      =&gt; &#039;intval&#039;,
+		&#039;net_total&#039;        =&gt; &#039;floatval&#039;,
+		&#039;total_sales&#039;      =&gt; &#039;floatval&#039;,
+		&#039;num_items_sold&#039;   =&gt; &#039;intval&#039;,
+		&#039;customer_type&#039;    =&gt; &#039;strval&#039;,
+	);
+
+	/**
+	 * Data store context used to pass to filters.
+	 *
+	 * @var string
+	 */
+	protected $context = &#039;orders&#039;;
+
+	/**
+	 * Assign report columns once full table name has been assigned.
+	 */
+	protected function assign_report_columns() {
+		$table_name = self::get_db_table_name();
+		// Avoid ambigious columns in SQL query.
+		$this-&gt;report_columns = array(
+			&#039;order_id&#039;         =&gt; &quot;DISTINCT {$table_name}.order_id&quot;,
+			&#039;parent_id&#039;        =&gt; &quot;{$table_name}.parent_id&quot;,
+			// Add &#039;date&#039; field based on date type setting.
+			&#039;date&#039;             =&gt; &quot;{$table_name}.{$this-&gt;date_column_name} AS date&quot;,
+			&#039;date_created&#039;     =&gt; &quot;{$table_name}.date_created&quot;,
+			&#039;date_created_gmt&#039; =&gt; &quot;{$table_name}.date_created_gmt&quot;,
+			&#039;status&#039;           =&gt; &quot;REPLACE({$table_name}.status, &#039;wc-&#039;, &#039;&#039;) as status&quot;,
+			&#039;customer_id&#039;      =&gt; &quot;{$table_name}.customer_id&quot;,
+			&#039;net_total&#039;        =&gt; &quot;{$table_name}.net_total&quot;,
+			&#039;total_sales&#039;      =&gt; &quot;{$table_name}.total_sales&quot;,
+			&#039;num_items_sold&#039;   =&gt; &quot;{$table_name}.num_items_sold&quot;,
+			&#039;customer_type&#039;    =&gt; &quot;(CASE WHEN {$table_name}.returning_customer = 0 THEN &#039;new&#039; ELSE &#039;returning&#039; END) as customer_type&quot;,
+		);
+	}
+
+	/**
+	 * Updates the database query with parameters used for orders report: coupons and products filters.
+	 *
+	 * @param array $query_args Query arguments supplied by the user.
+	 */
+	protected function add_sql_query_params( $query_args ) {
+		global $wpdb;
+		$order_stats_lookup_table   = self::get_db_table_name();
+		$order_coupon_lookup_table  = $wpdb-&gt;prefix . &#039;wc_order_coupon_lookup&#039;;
+		$order_product_lookup_table = $wpdb-&gt;prefix . &#039;wc_order_product_lookup&#039;;
+		$order_tax_lookup_table     = $wpdb-&gt;prefix . &#039;wc_order_tax_lookup&#039;;
+		$operator                   = $this-&gt;get_match_operator( $query_args );
+		$where_subquery             = array();
+		$have_joined_products_table = false;
+
+		$this-&gt;add_time_period_sql_params( $query_args, $order_stats_lookup_table );
+		$this-&gt;get_limit_sql_params( $query_args );
+		$this-&gt;add_order_by_sql_params( $query_args );
+
+		$status_subquery = $this-&gt;get_status_subquery( $query_args );
+		if ( $status_subquery ) {
+			if ( empty( $query_args[&#039;status_is&#039;] ) &amp;&amp; empty( $query_args[&#039;status_is_not&#039;] ) ) {
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;where&#039;, &quot;AND {$status_subquery}&quot; );
+			} else {
+				$where_subquery[] = $status_subquery;
+			}
+		}
+
+		$included_orders = $this-&gt;get_included_orders( $query_args );
+		if ( $included_orders ) {
+			$where_subquery[] = &quot;{$order_stats_lookup_table}.order_id IN ({$included_orders})&quot;;
+		}
+
+		$excluded_orders = $this-&gt;get_excluded_orders( $query_args );
+		if ( $excluded_orders ) {
+			$where_subquery[] = &quot;{$order_stats_lookup_table}.order_id NOT IN ({$excluded_orders})&quot;;
+		}
+
+		if ( $query_args[&#039;customer_type&#039;] ) {
+			$returning_customer = &#039;returning&#039; === $query_args[&#039;customer_type&#039;] ? 1 : 0;
+			$where_subquery[]   = &quot;{$order_stats_lookup_table}.returning_customer = {$returning_customer}&quot;;
+		}
+
+		$refund_subquery = $this-&gt;get_refund_subquery( $query_args );
+		$this-&gt;subquery-&gt;add_sql_clause( &#039;from&#039;, $refund_subquery[&#039;from_clause&#039;] );
+		if ( $refund_subquery[&#039;where_clause&#039;] ) {
+			$where_subquery[] = $refund_subquery[&#039;where_clause&#039;];
+		}
+
+		$included_coupons = $this-&gt;get_included_coupons( $query_args );
+		$excluded_coupons = $this-&gt;get_excluded_coupons( $query_args );
+		if ( $included_coupons || $excluded_coupons ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;LEFT JOIN {$order_coupon_lookup_table} ON {$order_stats_lookup_table}.order_id = {$order_coupon_lookup_table}.order_id&quot; );
+		}
+		if ( $included_coupons ) {
+			$where_subquery[] = &quot;{$order_coupon_lookup_table}.coupon_id IN ({$included_coupons})&quot;;
+		}
+		if ( $excluded_coupons ) {
+			$where_subquery[] = &quot;({$order_coupon_lookup_table}.coupon_id IS NULL OR {$order_coupon_lookup_table}.coupon_id NOT IN ({$excluded_coupons}))&quot;;
+		}
+
+		$included_products = $this-&gt;get_included_products( $query_args );
+		$excluded_products = $this-&gt;get_excluded_products( $query_args );
+		if ( $included_products || $excluded_products ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;LEFT JOIN {$order_product_lookup_table} product_lookup&quot; );
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;ON {$order_stats_lookup_table}.order_id = product_lookup.order_id&quot; );
+		}
+		if ( $included_products ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;AND product_lookup.product_id IN ({$included_products})&quot; );
+			$where_subquery[] = &#039;product_lookup.order_id IS NOT NULL&#039;;
+		}
+		if ( $excluded_products ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;AND product_lookup.product_id IN ({$excluded_products})&quot; );
+			$where_subquery[] = &#039;product_lookup.order_id IS NULL&#039;;
+		}
+
+		$included_variations = $this-&gt;get_included_variations( $query_args );
+		$excluded_variations = $this-&gt;get_excluded_variations( $query_args );
+		if ( $included_variations || $excluded_variations ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;LEFT JOIN {$order_product_lookup_table} variation_lookup&quot; );
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;ON {$order_stats_lookup_table}.order_id = variation_lookup.order_id&quot; );
+		}
+		if ( $included_variations ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;AND variation_lookup.variation_id IN ({$included_variations})&quot; );
+			$where_subquery[] = &#039;variation_lookup.order_id IS NOT NULL&#039;;
+		}
+		if ( $excluded_variations ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;AND variation_lookup.variation_id IN ({$excluded_variations})&quot; );
+			$where_subquery[] = &#039;variation_lookup.order_id IS NULL&#039;;
+		}
+
+		$included_tax_rates = ! empty( $query_args[&#039;tax_rate_includes&#039;] ) ? implode( &#039;,&#039;, array_map( &#039;esc_sql&#039;, $query_args[&#039;tax_rate_includes&#039;] ) ) : false;
+		$excluded_tax_rates = ! empty( $query_args[&#039;tax_rate_excludes&#039;] ) ? implode( &#039;,&#039;, array_map( &#039;esc_sql&#039;, $query_args[&#039;tax_rate_excludes&#039;] ) ) : false;
+		if ( $included_tax_rates || $excluded_tax_rates ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;LEFT JOIN {$order_tax_lookup_table} ON {$order_stats_lookup_table}.order_id = {$order_tax_lookup_table}.order_id&quot; );
+		}
+		if ( $included_tax_rates ) {
+			$where_subquery[] = &quot;{$order_tax_lookup_table}.tax_rate_id IN ({$included_tax_rates})&quot;;
+		}
+		if ( $excluded_tax_rates ) {
+			$where_subquery[] = &quot;{$order_tax_lookup_table}.tax_rate_id NOT IN ({$excluded_tax_rates}) OR {$order_tax_lookup_table}.tax_rate_id IS NULL&quot;;
+		}
+
+		$attribute_subqueries = $this-&gt;get_attribute_subqueries( $query_args );
+		if ( $attribute_subqueries[&#039;join&#039;] &amp;&amp; $attribute_subqueries[&#039;where&#039;] ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$order_product_lookup_table} ON {$order_stats_lookup_table}.order_id = {$order_product_lookup_table}.order_id&quot; );
+
+			// Add JOINs for matching attributes.
+			foreach ( $attribute_subqueries[&#039;join&#039;] as $attribute_join ) {
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;join&#039;, $attribute_join );
+			}
+			// Add WHEREs for matching attributes.
+			$where_subquery = array_merge( $where_subquery, $attribute_subqueries[&#039;where&#039;] );
+		}
+
+		if ( 0 &lt; count( $where_subquery ) ) {
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;where&#039;, &#039;AND (&#039; . implode( &quot; {$operator} &quot;, $where_subquery ) . &#039;)&#039; );
+		}
+	}
+
+	/**
+	 * Returns the report data based on parameters supplied by the user.
+	 *
+	 * @param array $query_args  Query parameters.
+	 * @return stdClass|WP_Error Data.
+	 */
+	public function get_data( $query_args ) {
+		global $wpdb;
+
+		// These defaults are only partially applied when used via REST API, as that has its own defaults.
+		$defaults   = array(
+			&#039;per_page&#039;          =&gt; get_option( &#039;posts_per_page&#039; ),
+			&#039;page&#039;              =&gt; 1,
+			&#039;order&#039;             =&gt; &#039;DESC&#039;,
+			&#039;orderby&#039;           =&gt; $this-&gt;date_column_name,
+			&#039;before&#039;            =&gt; TimeInterval::default_before(),
+			&#039;after&#039;             =&gt; TimeInterval::default_after(),
+			&#039;fields&#039;            =&gt; &#039;*&#039;,
+			&#039;product_includes&#039;  =&gt; array(),
+			&#039;product_excludes&#039;  =&gt; array(),
+			&#039;coupon_includes&#039;   =&gt; array(),
+			&#039;coupon_excludes&#039;   =&gt; array(),
+			&#039;tax_rate_includes&#039; =&gt; array(),
+			&#039;tax_rate_excludes&#039; =&gt; array(),
+			&#039;customer_type&#039;     =&gt; null,
+			&#039;status_is&#039;         =&gt; array(),
+			&#039;extended_info&#039;     =&gt; false,
+			&#039;refunds&#039;           =&gt; null,
+			&#039;order_includes&#039;    =&gt; array(),
+			&#039;order_excludes&#039;    =&gt; array(),
+		);
+		$query_args = wp_parse_args( $query_args, $defaults );
+		$this-&gt;normalize_timezones( $query_args, $defaults );
+
+		/*
+		 * We need to get the cache key here because
+		 * parent::update_intervals_sql_params() modifies $query_args.
+		 */
+		$cache_key = $this-&gt;get_cache_key( $query_args );
+		$data      = $this-&gt;get_cached_data( $cache_key );
+
+		if ( false === $data ) {
+			$this-&gt;initialize_queries();
+
+			$data = (object) array(
+				&#039;data&#039;    =&gt; array(),
+				&#039;total&#039;   =&gt; 0,
+				&#039;pages&#039;   =&gt; 0,
+				&#039;page_no&#039; =&gt; 0,
+			);
+
+			$selections = $this-&gt;selected_columns( $query_args );
+			$params     = $this-&gt;get_limit_params( $query_args );
+			$this-&gt;add_sql_query_params( $query_args );
+			/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+			$db_records_count = (int) $wpdb-&gt;get_var(
+				&quot;SELECT COUNT( DISTINCT tt.order_id ) FROM (
+					{$this-&gt;subquery-&gt;get_query_statement()}
+				) AS tt&quot;
+			);
+			/* phpcs:enable */
+
+			if ( 0 === $params[&#039;per_page&#039;] ) {
+				$total_pages = 0;
+			} else {
+				$total_pages = (int) ceil( $db_records_count / $params[&#039;per_page&#039;] );
+			}
+			if ( $query_args[&#039;page&#039;] &lt; 1 || $query_args[&#039;page&#039;] &gt; $total_pages ) {
+				$data = (object) array(
+					&#039;data&#039;    =&gt; array(),
+					&#039;total&#039;   =&gt; $db_records_count,
+					&#039;pages&#039;   =&gt; 0,
+					&#039;page_no&#039; =&gt; 0,
+				);
+				return $data;
+			}
+
+			$this-&gt;subquery-&gt;clear_sql_clause( &#039;select&#039; );
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;select&#039;, $selections );
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;order_by&#039;, $this-&gt;get_sql_clause( &#039;order_by&#039; ) );
+			$this-&gt;subquery-&gt;add_sql_clause( &#039;limit&#039;, $this-&gt;get_sql_clause( &#039;limit&#039; ) );
+			/* phpcs:disable WordPress.DB.PreparedSQL.NotPrepared */
+			$orders_data = $wpdb-&gt;get_results(
+				$this-&gt;subquery-&gt;get_query_statement(),
+				ARRAY_A
+			);
+			/* phpcs:enable */
+
+			if ( null === $orders_data ) {
+				return $data;
+			}
+
+			if ( $query_args[&#039;extended_info&#039;] ) {
+				$this-&gt;include_extended_info( $orders_data, $query_args );
+			}
+
+			$orders_data = array_map( array( $this, &#039;cast_numbers&#039; ), $orders_data );
+			$data        = (object) array(
+				&#039;data&#039;    =&gt; $orders_data,
+				&#039;total&#039;   =&gt; $db_records_count,
+				&#039;pages&#039;   =&gt; $total_pages,
+				&#039;page_no&#039; =&gt; (int) $query_args[&#039;page&#039;],
+			);
+
+			$this-&gt;set_cached_data( $cache_key, $data );
+		}
+		return $data;
+	}
+
+	/**
+	 * Normalizes order_by clause to match to SQL query.
+	 *
+	 * @param string $order_by Order by option requeste by user.
+	 * @return string
+	 */
+	protected function normalize_order_by( $order_by ) {
+		if ( &#039;date&#039; === $order_by ) {
+			return $this-&gt;date_column_name;
+		}
+
+		return $order_by;
+	}
+
+	/**
+	 * Enriches the order data.
+	 *
+	 * @param array $orders_data Orders data.
+	 * @param array $query_args  Query parameters.
+	 */
+	protected function include_extended_info( &amp;$orders_data, $query_args ) {
+		$mapped_orders    = $this-&gt;map_array_by_key( $orders_data, &#039;order_id&#039; );
+		$related_orders   = $this-&gt;get_orders_with_parent_id( $mapped_orders );
+		$order_ids        = array_merge( array_keys( $mapped_orders ), array_keys( $related_orders ) );
+		$products         = $this-&gt;get_products_by_order_ids( $order_ids );
+		$coupons          = $this-&gt;get_coupons_by_order_ids( array_keys( $mapped_orders ) );
+		$customers        = $this-&gt;get_customers_by_orders( $orders_data );
+		$mapped_customers = $this-&gt;map_array_by_key( $customers, &#039;customer_id&#039; );
+
+		$mapped_data = array();
+		foreach ( $products as $product ) {
+			if ( ! isset( $mapped_data[ $product[&#039;order_id&#039;] ] ) ) {
+				$mapped_data[ $product[&#039;order_id&#039;] ][&#039;products&#039;] = array();
+			}
+
+			$is_variation = &#039;0&#039; !== $product[&#039;variation_id&#039;];
+			$product_data = array(
+				&#039;id&#039;       =&gt; $is_variation ? $product[&#039;variation_id&#039;] : $product[&#039;product_id&#039;],
+				&#039;name&#039;     =&gt; $product[&#039;product_name&#039;],
+				&#039;quantity&#039; =&gt; $product[&#039;product_quantity&#039;],
+			);
+
+			if ( $is_variation ) {
+				$variation = wc_get_product( $product_data[&#039;id&#039;] );
+				/**
+				 * Used to determine the separator for products and their variations titles.
+				 *
+				 * @since 4.0.0
+				 */
+				$separator = apply_filters( &#039;woocommerce_product_variation_title_attributes_separator&#039;, &#039; - &#039;, $variation );
+
+				if ( false === strpos( $product_data[&#039;name&#039;], $separator ) ) {
+					$attributes            = wc_get_formatted_variation( $variation, true, false );
+					$product_data[&#039;name&#039;] .= $separator . $attributes;
+				}
+			}
+
+			$mapped_data[ $product[&#039;order_id&#039;] ][&#039;products&#039;][] = $product_data;
+
+			// If this product&#039;s order has another related order, it will be added to our mapped_data.
+			if ( isset( $related_orders [ $product[&#039;order_id&#039;] ] ) ) {
+				$mapped_data[ $related_orders[ $product[&#039;order_id&#039;] ][&#039;order_id&#039;] ] [&#039;products&#039;] [] = $product_data;
+			}
+		}
+
+		foreach ( $coupons as $coupon ) {
+			if ( ! isset( $mapped_data[ $coupon[&#039;order_id&#039;] ] ) ) {
+				$mapped_data[ $product[&#039;order_id&#039;] ][&#039;coupons&#039;] = array();
+			}
+
+			$mapped_data[ $coupon[&#039;order_id&#039;] ][&#039;coupons&#039;][] = array(
+				&#039;id&#039;   =&gt; $coupon[&#039;coupon_id&#039;],
+				&#039;code&#039; =&gt; wc_format_coupon_code( $coupon[&#039;coupon_code&#039;] ),
+			);
+		}
+
+		foreach ( $orders_data as $key =&gt; $order_data ) {
+			$defaults                             = array(
+				&#039;products&#039; =&gt; array(),
+				&#039;coupons&#039;  =&gt; array(),
+				&#039;customer&#039; =&gt; array(),
+			);
+			$orders_data[ $key ][&#039;extended_info&#039;] = isset( $mapped_data[ $order_data[&#039;order_id&#039;] ] ) ? array_merge( $defaults, $mapped_data[ $order_data[&#039;order_id&#039;] ] ) : $defaults;
+			if ( $order_data[&#039;customer_id&#039;] &amp;&amp; isset( $mapped_customers[ $order_data[&#039;customer_id&#039;] ] ) ) {
+				$orders_data[ $key ][&#039;extended_info&#039;][&#039;customer&#039;] = $mapped_customers[ $order_data[&#039;customer_id&#039;] ];
+			}
+		}
+	}
+
+	/**
+	 * Returns oreders that have a parent id
+	 *
+	 * @param array $orders Orders array.
+	 * @return array
+	 */
+	protected function get_orders_with_parent_id( $orders ) {
+		$related_orders = array();
+		foreach ( $orders as $order ) {
+			if ( &#039;0&#039; !== $order[&#039;parent_id&#039;] ) {
+				$related_orders[ $order[&#039;parent_id&#039;] ] = $order;
+			}
+		}
+		return $related_orders;
+	}
+
+	/**
+	 * Returns the same array index by a given key
+	 *
+	 * @param array  $array Array to be looped over.
+	 * @param string $key Key of values used for new array.
+	 * @return array
+	 */
+	protected function map_array_by_key( $array, $key ) {
+		$mapped = array();
+		foreach ( $array as $item ) {
+			$mapped[ $item[ $key ] ] = $item;
+		}
+		return $mapped;
+	}
+
+	/**
+	 * Get product IDs, names, and quantity from order IDs.
+	 *
+	 * @param array $order_ids Array of order IDs.
+	 * @return array
+	 */
+	protected function get_products_by_order_ids( $order_ids ) {
+		global $wpdb;
+		$order_product_lookup_table = $wpdb-&gt;prefix . &#039;wc_order_product_lookup&#039;;
+		$included_order_ids         = implode( &#039;,&#039;, $order_ids );
+
+		/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+		$products = $wpdb-&gt;get_results(
+			&quot;SELECT
+				order_id,
+				product_id,
+				variation_id,
+				post_title as product_name,
+				product_qty as product_quantity
+			FROM {$wpdb-&gt;posts}
+			JOIN
+				{$order_product_lookup_table}
+				ON {$wpdb-&gt;posts}.ID = (
+					CASE WHEN variation_id &gt; 0
+						THEN variation_id
+						ELSE product_id
+					END
+				)
+			WHERE
+				order_id IN ({$included_order_ids})
+			&quot;,
+			ARRAY_A
+		);
+		/* phpcs:enable */
+
+		return $products;
+	}
+
+	/**
+	 * Get customer data from Order data.
+	 *
+	 * @param array $orders Array of orders data.
+	 * @return array
+	 */
+	protected function get_customers_by_orders( $orders ) {
+		global $wpdb;
+
+		$customer_lookup_table = $wpdb-&gt;prefix . &#039;wc_customer_lookup&#039;;
+		$customer_ids          = array();
+
+		foreach ( $orders as $order ) {
+			if ( $order[&#039;customer_id&#039;] ) {
+				$customer_ids[] = intval( $order[&#039;customer_id&#039;] );
+			}
+		}
+
+		if ( empty( $customer_ids ) ) {
+			return array();
+		}
+
+		/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+		$customer_ids = implode( &#039;,&#039;, $customer_ids );
+		$customers    = $wpdb-&gt;get_results(
+			&quot;SELECT * FROM {$customer_lookup_table} WHERE customer_id IN ({$customer_ids})&quot;,
+			ARRAY_A
+		);
+		/* phpcs:enable */
+
+		return $customers;
+	}
+
+	/**
+	 * Get coupon information from order IDs.
+	 *
+	 * @param array $order_ids Array of order IDs.
+	 * @return array
+	 */
+	protected function get_coupons_by_order_ids( $order_ids ) {
+		global $wpdb;
+		$order_coupon_lookup_table = $wpdb-&gt;prefix . &#039;wc_order_coupon_lookup&#039;;
+		$included_order_ids        = implode( &#039;,&#039;, $order_ids );
+
+		/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+		$coupons = $wpdb-&gt;get_results(
+			&quot;SELECT order_id, coupon_id, post_title as coupon_code
+				FROM {$wpdb-&gt;posts}
+				JOIN {$order_coupon_lookup_table} ON {$order_coupon_lookup_table}.coupon_id = {$wpdb-&gt;posts}.ID
+				WHERE
+					order_id IN ({$included_order_ids})
+				&quot;,
+			ARRAY_A
+		);
+		/* phpcs:enable */
+
+		return $coupons;
+	}
+
+	/**
+	 * Get all statuses that have been synced.
+	 *
+	 * @return array Unique order statuses.
+	 */
+	public static function get_all_statuses() {
+		global $wpdb;
+
+		$cache_key = &#039;orders-all-statuses&#039;;
+		$statuses  = Cache::get( $cache_key );
+
+		if ( false === $statuses ) {
+			/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+			$table_name = self::get_db_table_name();
+			$statuses   = $wpdb-&gt;get_col(
+				&quot;SELECT DISTINCT status FROM {$table_name}&quot;
+			);
+			/* phpcs:enable */
+
+			Cache::set( $cache_key, $statuses );
+		}
+
+		return $statuses;
+	}
+
+	/**
+	 * Initialize query objects.
+	 */
+	protected function initialize_queries() {
+		$this-&gt;clear_all_clauses();
+		$this-&gt;subquery = new SqlQuery( $this-&gt;context . &#039;_subquery&#039; );
+		$this-&gt;subquery-&gt;add_sql_clause( &#039;select&#039;, self::get_db_table_name() . &#039;.order_id&#039; );
+		$this-&gt;subquery-&gt;add_sql_clause( &#039;from&#039;, self::get_db_table_name() );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

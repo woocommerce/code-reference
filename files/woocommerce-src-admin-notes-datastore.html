@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866951">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866951">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">DataStore.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WC Admin Note Data_Store class file.
+ */
+
+namespace Automattic\WooCommerce\Admin\Notes;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * WC Admin Note Data Store (Custom Tables)
+ */
+class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Interface {
+	// Extensions should define their own contexts and use them to avoid applying woocommerce_note_where_clauses when not needed.
+	const WC_ADMIN_NOTE_OPER_GLOBAL = &#039;global&#039;;
+
+	/**
+	 * Method to create a new note in the database.
+	 *
+	 * @param Note $note Admin note.
+	 */
+	public function create( &amp;$note ) {
+		$date_created = time();
+		$note-&gt;set_date_created( $date_created );
+
+		global $wpdb;
+
+		$note_to_be_inserted = array(
+			&#039;name&#039;         =&gt; $note-&gt;get_name(),
+			&#039;type&#039;         =&gt; $note-&gt;get_type(),
+			&#039;locale&#039;       =&gt; $note-&gt;get_locale(),
+			&#039;title&#039;        =&gt; $note-&gt;get_title(),
+			&#039;content&#039;      =&gt; $note-&gt;get_content(),
+			&#039;status&#039;       =&gt; $note-&gt;get_status(),
+			&#039;source&#039;       =&gt; $note-&gt;get_source(),
+			&#039;is_snoozable&#039; =&gt; (int) $note-&gt;get_is_snoozable(),
+			&#039;layout&#039;       =&gt; $note-&gt;get_layout(),
+			&#039;image&#039;        =&gt; $note-&gt;get_image(),
+			&#039;is_deleted&#039;   =&gt; (int) $note-&gt;get_is_deleted(),
+		);
+
+		$note_to_be_inserted[&#039;content_data&#039;]  = wp_json_encode( $note-&gt;get_content_data() );
+		$note_to_be_inserted[&#039;date_created&#039;]  = gmdate( &#039;Y-m-d H:i:s&#039;, $date_created );
+		$note_to_be_inserted[&#039;date_reminder&#039;] = null;
+
+		$wpdb-&gt;insert( $wpdb-&gt;prefix . &#039;wc_admin_notes&#039;, $note_to_be_inserted );
+		$note_id = $wpdb-&gt;insert_id;
+		$note-&gt;set_id( $note_id );
+		$this-&gt;save_actions( $note );
+		$note-&gt;apply_changes();
+
+		/**
+		 * Fires when an admin note is created.
+		 *
+		 * @param int $note_id Note ID.
+		 */
+		do_action( &#039;woocommerce_note_created&#039;, $note_id );
+	}
+
+	/**
+	 * Method to read a note.
+	 *
+	 * @param Note $note Admin note.
+	 * @throws \Exception Throws exception when invalid data is found.
+	 */
+	public function read( &amp;$note ) {
+		global $wpdb;
+
+		$note-&gt;set_defaults();
+		$note_row = false;
+
+		$note_id = $note-&gt;get_id();
+		if ( 0 !== $note_id || &#039;0&#039; !== $note_id ) {
+			$note_row = $wpdb-&gt;get_row(
+				$wpdb-&gt;prepare(
+					&quot;SELECT * FROM {$wpdb-&gt;prefix}wc_admin_notes WHERE note_id = %d LIMIT 1&quot;,
+					$note-&gt;get_id()
+				)
+			);
+		}
+
+		if ( 0 === $note-&gt;get_id() || &#039;0&#039; === $note-&gt;get_id() ) {
+			$this-&gt;read_actions( $note );
+			$note-&gt;set_object_read( true );
+
+			/**
+			 * Fires when an admin note is loaded.
+			 *
+			 * @param int $note_id Note ID.
+			 */
+			do_action( &#039;woocommerce_note_loaded&#039;, $note );
+		} elseif ( $note_row ) {
+			$note-&gt;set_name( $note_row-&gt;name );
+			$note-&gt;set_type( $note_row-&gt;type );
+			$note-&gt;set_locale( $note_row-&gt;locale );
+			$note-&gt;set_title( $note_row-&gt;title );
+			$note-&gt;set_content( $note_row-&gt;content );
+
+			// The default for &#039;content_value&#039; used to be an array, so there might be rows with invalid data!
+			$content_data = json_decode( $note_row-&gt;content_data );
+			if ( ! $content_data ) {
+				$content_data = new \stdClass();
+			} elseif ( is_array( $content_data ) ) {
+				$content_data = (object) $content_data;
+			}
+			$note-&gt;set_content_data( $content_data );
+
+			$note-&gt;set_status( $note_row-&gt;status );
+			$note-&gt;set_source( $note_row-&gt;source );
+			$note-&gt;set_date_created( $note_row-&gt;date_created );
+			$note-&gt;set_date_reminder( $note_row-&gt;date_reminder );
+			$note-&gt;set_is_snoozable( $note_row-&gt;is_snoozable );
+			$note-&gt;set_is_deleted( (bool) $note_row-&gt;is_deleted );
+			isset( $note_row-&gt;is_read ) &amp;&amp; $note-&gt;set_is_read( (bool) $note_row-&gt;is_read );
+			$note-&gt;set_layout( $note_row-&gt;layout );
+			$note-&gt;set_image( $note_row-&gt;image );
+			$this-&gt;read_actions( $note );
+			$note-&gt;set_object_read( true );
+
+			/**
+			 * Fires when an admin note is loaded.
+			 *
+			 * @param int $note_id Note ID.
+			 */
+			do_action( &#039;woocommerce_note_loaded&#039;, $note );
+		} else {
+			throw new \Exception( __( &#039;Invalid admin note&#039;, &#039;woocommerce&#039; ) );
+		}
+	}
+
+	/**
+	 * Updates a note in the database.
+	 *
+	 * @param Note $note Admin note.
+	 */
+	public function update( &amp;$note ) {
+		global $wpdb;
+
+		if ( $note-&gt;get_id() ) {
+			$date_created           = $note-&gt;get_date_created();
+			$date_created_timestamp = $date_created-&gt;getTimestamp();
+			$date_created_to_db     = gmdate( &#039;Y-m-d H:i:s&#039;, $date_created_timestamp );
+
+			$date_reminder = $note-&gt;get_date_reminder();
+			if ( is_null( $date_reminder ) ) {
+				$date_reminder_to_db = null;
+			} else {
+				$date_reminder_timestamp = $date_reminder-&gt;getTimestamp();
+				$date_reminder_to_db     = gmdate( &#039;Y-m-d H:i:s&#039;, $date_reminder_timestamp );
+			}
+
+			$wpdb-&gt;update(
+				$wpdb-&gt;prefix . &#039;wc_admin_notes&#039;,
+				array(
+					&#039;name&#039;          =&gt; $note-&gt;get_name(),
+					&#039;type&#039;          =&gt; $note-&gt;get_type(),
+					&#039;locale&#039;        =&gt; $note-&gt;get_locale(),
+					&#039;title&#039;         =&gt; $note-&gt;get_title(),
+					&#039;content&#039;       =&gt; $note-&gt;get_content(),
+					&#039;content_data&#039;  =&gt; wp_json_encode( $note-&gt;get_content_data() ),
+					&#039;status&#039;        =&gt; $note-&gt;get_status(),
+					&#039;source&#039;        =&gt; $note-&gt;get_source(),
+					&#039;date_created&#039;  =&gt; $date_created_to_db,
+					&#039;date_reminder&#039; =&gt; $date_reminder_to_db,
+					&#039;is_snoozable&#039;  =&gt; $note-&gt;get_is_snoozable(),
+					&#039;layout&#039;        =&gt; $note-&gt;get_layout(),
+					&#039;image&#039;         =&gt; $note-&gt;get_image(),
+					&#039;is_deleted&#039;    =&gt; $note-&gt;get_is_deleted(),
+					&#039;is_read&#039;       =&gt; $note-&gt;get_is_read(),
+				),
+				array( &#039;note_id&#039; =&gt; $note-&gt;get_id() )
+			);
+		}
+
+		$this-&gt;save_actions( $note );
+		$note-&gt;apply_changes();
+
+		/**
+		 * Fires when an admin note is updated.
+		 *
+		 * @param int $note_id Note ID.
+		 */
+		do_action( &#039;woocommerce_note_updated&#039;, $note-&gt;get_id() );
+	}
+
+	/**
+	 * Deletes a note from the database.
+	 *
+	 * @param Note  $note Admin note.
+	 * @param array $args Array of args to pass to the delete method (not used).
+	 */
+	public function delete( &amp;$note, $args = array() ) {
+		$note_id = $note-&gt;get_id();
+		if ( $note_id ) {
+			global $wpdb;
+			$wpdb-&gt;delete( $wpdb-&gt;prefix . &#039;wc_admin_notes&#039;, array( &#039;note_id&#039; =&gt; $note_id ) );
+			$wpdb-&gt;delete( $wpdb-&gt;prefix . &#039;wc_admin_note_actions&#039;, array( &#039;note_id&#039; =&gt; $note_id ) );
+			$note-&gt;set_id( null );
+		}
+
+		/**
+		 * Fires when an admin note is deleted.
+		 *
+		 * @param int $note_id Note ID.
+		 */
+		do_action( &#039;woocommerce_note_deleted&#039;, $note_id );
+	}
+
+	/**
+	 * Read actions from the database.
+	 *
+	 * @param Note $note Admin note.
+	 */
+	private function read_actions( &amp;$note ) {
+		global $wpdb;
+
+		$db_actions = $wpdb-&gt;get_results(
+			$wpdb-&gt;prepare(
+				&quot;SELECT action_id, name, label, query, status, actioned_text, nonce_action, nonce_name
+				FROM {$wpdb-&gt;prefix}wc_admin_note_actions
+				WHERE note_id = %d&quot;,
+				$note-&gt;get_id()
+			)
+		);
+
+		$note_actions = array();
+
+		if ( $db_actions ) {
+			foreach ( $db_actions as $action ) {
+				$note_actions[] = (object) array(
+					&#039;id&#039;            =&gt; (int) $action-&gt;action_id,
+					&#039;name&#039;          =&gt; $action-&gt;name,
+					&#039;label&#039;         =&gt; $action-&gt;label,
+					&#039;query&#039;         =&gt; $action-&gt;query,
+					&#039;status&#039;        =&gt; $action-&gt;status,
+					&#039;actioned_text&#039; =&gt; $action-&gt;actioned_text,
+					&#039;nonce_action&#039;  =&gt; $action-&gt;nonce_action,
+					&#039;nonce_name&#039;    =&gt; $action-&gt;nonce_name,
+				);
+			}
+		}
+
+		$note-&gt;set_actions( $note_actions );
+	}
+
+	/**
+	 * Save actions to the database.
+	 * This function clears old actions, then re-inserts new if any changes are found.
+	 *
+	 * @param Note $note Note object.
+	 *
+	 * @return bool|void
+	 */
+	private function save_actions( &amp;$note ) {
+		global $wpdb;
+
+		$changed_props = array_keys( $note-&gt;get_changes() );
+
+		if ( ! in_array( &#039;actions&#039;, $changed_props, true ) ) {
+			return false;
+		}
+
+		// Process action removal. Actions are removed from
+		// the note if they aren&#039;t part of the changeset.
+		// See Note::add_action().
+		$changed_actions = $note-&gt;get_actions( &#039;edit&#039; );
+		$actions_to_keep = array();
+
+		foreach ( $changed_actions as $action ) {
+			if ( ! empty( $action-&gt;id ) ) {
+				$actions_to_keep[] = (int) $action-&gt;id;
+			}
+		}
+
+		$clear_actions_query = $wpdb-&gt;prepare(
+			&quot;DELETE FROM {$wpdb-&gt;prefix}wc_admin_note_actions WHERE note_id = %d&quot;,
+			$note-&gt;get_id()
+		);
+
+		if ( $actions_to_keep ) {
+			$clear_actions_query .= sprintf( &#039; AND action_id NOT IN (%s)&#039;, implode( &#039;,&#039;, $actions_to_keep ) );
+		}
+
+		$wpdb-&gt;query( $clear_actions_query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+
+		// Update/insert the actions in this changeset.
+		foreach ( $changed_actions as $action ) {
+			$action_data = array(
+				&#039;note_id&#039;       =&gt; $note-&gt;get_id(),
+				&#039;name&#039;          =&gt; $action-&gt;name,
+				&#039;label&#039;         =&gt; $action-&gt;label,
+				&#039;query&#039;         =&gt; $action-&gt;query,
+				&#039;status&#039;        =&gt; $action-&gt;status,
+				&#039;actioned_text&#039; =&gt; $action-&gt;actioned_text,
+				&#039;nonce_action&#039;  =&gt; $action-&gt;nonce_action,
+				&#039;nonce_name&#039;    =&gt; $action-&gt;nonce_name,
+			);
+
+			$data_format = array(
+				&#039;%d&#039;,
+				&#039;%s&#039;,
+				&#039;%s&#039;,
+				&#039;%s&#039;,
+				&#039;%s&#039;,
+				&#039;%s&#039;,
+				&#039;%s&#039;,
+				&#039;%s&#039;,
+			);
+
+			if ( ! empty( $action-&gt;id ) ) {
+				$action_data[&#039;action_id&#039;] = $action-&gt;id;
+				$data_format[]            = &#039;%d&#039;;
+			}
+
+			$wpdb-&gt;replace(
+				$wpdb-&gt;prefix . &#039;wc_admin_note_actions&#039;,
+				$action_data,
+				$data_format
+			);
+		}
+
+		// Update actions from DB (to grab new IDs).
+		$this-&gt;read_actions( $note );
+	}
+
+	/**
+	 * Return an ordered list of notes.
+	 *
+	 * @param array  $args Query arguments.
+	 * @param string $context Optional argument that the woocommerce_note_where_clauses filter can use to determine whether to apply extra conditions. Extensions should define their own contexts and use them to avoid adding to notes where clauses when not needed.
+	 * @return array An array of objects containing a note id.
+	 */
+	public function get_notes( $args = array(), $context = self::WC_ADMIN_NOTE_OPER_GLOBAL ) {
+		global $wpdb;
+
+		$defaults = array(
+			&#039;per_page&#039; =&gt; get_option( &#039;posts_per_page&#039; ),
+			&#039;page&#039;     =&gt; 1,
+			&#039;order&#039;    =&gt; &#039;DESC&#039;,
+			&#039;orderby&#039;  =&gt; &#039;date_created&#039;,
+		);
+		$args     = wp_parse_args( $args, $defaults );
+
+		$offset        = $args[&#039;per_page&#039;] * ( $args[&#039;page&#039;] - 1 );
+		$where_clauses = $this-&gt;get_notes_where_clauses( $args, $context );
+
+		// sanitize order and orderby.
+		$order_by  = &#039;`&#039; . str_replace( &#039;`&#039;, &#039;&#039;, $args[&#039;orderby&#039;] ) . &#039;`&#039;;
+		$order_dir = &#039;asc&#039; === strtolower( $args[&#039;order&#039;] ) ? &#039;ASC&#039; : &#039;DESC&#039;;
+
+		$query = $wpdb-&gt;prepare(
+			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			&quot;SELECT * FROM {$wpdb-&gt;prefix}wc_admin_notes WHERE 1=1{$where_clauses} ORDER BY {$order_by} {$order_dir} LIMIT %d, %d&quot;,
+			$offset,
+			$args[&#039;per_page&#039;]
+		);
+
+		return $wpdb-&gt;get_results( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+	}
+
+	/**
+	 * Return an ordered list of notes, without paging or applying the &#039;woocommerce_note_where_clauses&#039; filter.
+	 * INTERNAL: This method is not intended to be used by external code, and may change without notice.
+	 *
+	 * @param array $args Query arguments.
+	 * @return array An array of database records.
+	 */
+	public function lookup_notes( $args = array() ) {
+		global $wpdb;
+
+		$defaults = array(
+			&#039;order&#039;   =&gt; &#039;DESC&#039;,
+			&#039;orderby&#039; =&gt; &#039;date_created&#039;,
+		);
+		$args     = wp_parse_args( $args, $defaults );
+
+		$where_clauses = $this-&gt;args_to_where_clauses( $args );
+
+		// sanitize order and orderby.
+		$order_by  = &#039;`&#039; . str_replace( &#039;`&#039;, &#039;&#039;, $args[&#039;orderby&#039;] ) . &#039;`&#039;;
+		$order_dir = &#039;asc&#039; === strtolower( $args[&#039;order&#039;] ) ? &#039;ASC&#039; : &#039;DESC&#039;;
+
+		$query = &quot;SELECT * FROM {$wpdb-&gt;prefix}wc_admin_notes WHERE 1=1{$where_clauses} ORDER BY {$order_by} {$order_dir}&quot;;
+
+		return $wpdb-&gt;get_results( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+	}
+
+	/**
+	 * Return a count of notes.
+	 *
+	 * @param string $type Comma separated list of note types.
+	 * @param string $status Comma separated list of statuses.
+	 * @param string $context Optional argument that the woocommerce_note_where_clauses filter can use to determine whether to apply extra conditions. Extensions should define their own contexts and use them to avoid adding to notes where clauses when not needed.
+	 * @return string Count of objects with given type, status and context.
+	 */
+	public function get_notes_count( $type = array(), $status = array(), $context = self::WC_ADMIN_NOTE_OPER_GLOBAL ) {
+		global $wpdb;
+
+		$where_clauses = $this-&gt;get_notes_where_clauses(
+			array(
+				&#039;type&#039;   =&gt; $type,
+				&#039;status&#039; =&gt; $status,
+			),
+			$context
+		);
+
+		if ( ! empty( $where_clauses ) ) {
+			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			return $wpdb-&gt;get_var( &quot;SELECT COUNT(*) FROM {$wpdb-&gt;prefix}wc_admin_notes WHERE 1=1{$where_clauses}&quot; );
+		}
+
+		return $wpdb-&gt;get_var( &quot;SELECT COUNT(*) FROM {$wpdb-&gt;prefix}wc_admin_notes&quot; );
+	}
+
+	/**
+	 * Parses the query arguments passed in as arrays and escapes the values.
+	 *
+	 * @param array      $args the query arguments.
+	 * @param string     $key the key of the specific argument.
+	 * @param array|null $allowed_types optional allowed_types if only a specific set is allowed.
+	 * @return array the escaped array of argument values.
+	 */
+	private function get_escaped_arguments_array_by_key( $args = array(), $key = &#039;&#039;, $allowed_types = null ) {
+		$arg_array = array();
+		if ( isset( $args[ $key ] ) ) {
+			foreach ( $args[ $key ] as $args_type ) {
+				$args_type = trim( $args_type );
+				$allowed   = is_null( $allowed_types ) || in_array( $args_type, $allowed_types, true );
+				if ( $allowed ) {
+					$arg_array[] = sprintf( &quot;&#039;%s&#039;&quot;, esc_sql( $args_type ) );
+				}
+			}
+		}
+		return $arg_array;
+	}
+
+	/**
+	 * Return where clauses for getting notes by status and type. For use in both the count and listing queries.
+	 * Applies woocommerce_note_where_clauses filter.
+	 *
+	 * @uses args_to_where_clauses
+	 * @param array  $args Array of args to pass.
+	 * @param string $context Optional argument that the woocommerce_note_where_clauses filter can use to determine whether to apply extra conditions. Extensions should define their own contexts and use them to avoid adding to notes where clauses when not needed.
+	 * @return string Where clauses for the query.
+	 */
+	public function get_notes_where_clauses( $args = array(), $context = self::WC_ADMIN_NOTE_OPER_GLOBAL ) {
+		$where_clauses = $this-&gt;args_to_where_clauses( $args );
+
+		/**
+		 * Filter the notes WHERE clause before retrieving the data.
+		 *
+		 * Allows modification of the notes select criterial.
+		 *
+		 * @param string $where_clauses The generated WHERE clause.
+		 * @param array  $args          The original arguments for the request.
+		 * @param string $context Optional argument that the woocommerce_note_where_clauses filter can use to determine whether to apply extra conditions. Extensions should define their own contexts and use them to avoid adding to notes where clauses when not needed.
+		 */
+		return apply_filters( &#039;woocommerce_note_where_clauses&#039;, $where_clauses, $args, $context );
+	}
+
+	/**
+	 * Return where clauses for notes queries without applying woocommerce_note_where_clauses filter.
+	 * INTERNAL: This method is not intended to be used by external code, and may change without notice.
+	 *
+	 * @param array $args Array of arguments for query conditionals.
+	 * @return string Where clauses.
+	 */
+	protected function args_to_where_clauses( $args = array() ) {
+		$allowed_types    = Note::get_allowed_types();
+		$where_type_array = $this-&gt;get_escaped_arguments_array_by_key( $args, &#039;type&#039;, $allowed_types );
+
+		$allowed_statuses   = Note::get_allowed_statuses();
+		$where_status_array = $this-&gt;get_escaped_arguments_array_by_key( $args, &#039;status&#039;, $allowed_statuses );
+
+		$escaped_is_deleted = &#039;&#039;;
+		if ( isset( $args[&#039;is_deleted&#039;] ) ) {
+			$escaped_is_deleted = esc_sql( $args[&#039;is_deleted&#039;] );
+		}
+
+		$where_name_array          = $this-&gt;get_escaped_arguments_array_by_key( $args, &#039;name&#039; );
+		$where_excluded_name_array = $this-&gt;get_escaped_arguments_array_by_key( $args, &#039;excluded_name&#039; );
+		$where_source_array        = $this-&gt;get_escaped_arguments_array_by_key( $args, &#039;source&#039; );
+
+		$escaped_where_types          = implode( &#039;,&#039;, $where_type_array );
+		$escaped_where_status         = implode( &#039;,&#039;, $where_status_array );
+		$escaped_where_names          = implode( &#039;,&#039;, $where_name_array );
+		$escaped_where_excluded_names = implode( &#039;,&#039;, $where_excluded_name_array );
+		$escaped_where_source         = implode( &#039;,&#039;, $where_source_array );
+		$where_clauses                = &#039;&#039;;
+
+		if ( ! empty( $escaped_where_types ) ) {
+			$where_clauses .= &quot; AND type IN ($escaped_where_types)&quot;;
+		}
+
+		if ( ! empty( $escaped_where_status ) ) {
+			$where_clauses .= &quot; AND status IN ($escaped_where_status)&quot;;
+		}
+
+		if ( ! empty( $escaped_where_names ) ) {
+			$where_clauses .= &quot; AND name IN ($escaped_where_names)&quot;;
+		}
+
+		if ( ! empty( $escaped_where_excluded_names ) ) {
+			$where_clauses .= &quot; AND name NOT IN ($escaped_where_excluded_names)&quot;;
+		}
+
+		if ( ! empty( $escaped_where_source ) ) {
+			$where_clauses .= &quot; AND source IN ($escaped_where_source)&quot;;
+		}
+
+		if ( isset( $args[&#039;is_read&#039;] ) ) {
+			$where_clauses .= $args[&#039;is_read&#039;] ? &#039; AND is_read = 1&#039; : &#039; AND is_read = 0&#039;;
+		}
+
+		$where_clauses .= $escaped_is_deleted ? &#039; AND is_deleted = 1&#039; : &#039; AND is_deleted = 0&#039;;
+
+		return $where_clauses;
+	}
+
+	/**
+	 * Find all the notes with a given name.
+	 *
+	 * @param string $name Name to search for.
+	 * @return array An array of matching note ids.
+	 */
+	public function get_notes_with_name( $name ) {
+		global $wpdb;
+		return $wpdb-&gt;get_col(
+			$wpdb-&gt;prepare(
+				&quot;SELECT note_id FROM {$wpdb-&gt;prefix}wc_admin_notes WHERE name = %s ORDER BY note_id ASC&quot;,
+				$name
+			)
+		);
+	}
+
+	/**
+	 * Find the ids of all notes with a given type.
+	 *
+	 * @param string $note_type Type to search for.
+	 * @return array An array of matching note ids.
+	 */
+	public function get_note_ids_by_type( $note_type ) {
+		global $wpdb;
+		return $wpdb-&gt;get_col(
+			$wpdb-&gt;prepare(
+				&quot;SELECT note_id FROM {$wpdb-&gt;prefix}wc_admin_notes WHERE type = %s ORDER BY note_id ASC&quot;,
+				$note_type
+			)
+		);
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

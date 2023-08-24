@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866951">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866951">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">DataStore.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Admin\API\Reports\DataStore class file.
+ */
+
+namespace Automattic\WooCommerce\Admin\API\Reports;
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+use Automattic\WooCommerce\Admin\API\Reports\TimeInterval;
+
+/**
+ * Admin\API\Reports\DataStore: Common parent for custom report data stores.
+ */
+class DataStore extends SqlQuery {
+
+	/**
+	 * Cache group for the reports.
+	 *
+	 * @var string
+	 */
+	protected $cache_group = &#039;reports&#039;;
+
+	/**
+	 * Time out for the cache.
+	 *
+	 * @var int
+	 */
+	protected $cache_timeout = 3600;
+
+	/**
+	 * Table used as a data store for this report.
+	 *
+	 * @var string
+	 */
+	protected static $table_name = &#039;&#039;;
+
+	/**
+	 * Date field name.
+	 *
+	 * @var string
+	 */
+	protected $date_column_name = &#039;date_created&#039;;
+
+	/**
+	 * Mapping columns to data type to return correct response types.
+	 *
+	 * @var array
+	 */
+	protected $column_types = array();
+
+	/**
+	 * SQL columns to select in the db query.
+	 *
+	 * @var array
+	 */
+	protected $report_columns = array();
+
+	// @todo This does not really belong here, maybe factor out the comparison as separate class?
+	/**
+	 * Order by property, used in the cmp function.
+	 *
+	 * @var string
+	 */
+	private $order_by = &#039;&#039;;
+
+	/**
+	 * Order property, used in the cmp function.
+	 *
+	 * @var string
+	 */
+	private $order = &#039;&#039;;
+
+	/**
+	 * Query limit parameters.
+	 *
+	 * @var array
+	 */
+	private $limit_parameters = array();
+
+	/**
+	 * Data store context used to pass to filters.
+	 *
+	 * @var string
+	 */
+	protected $context = &#039;reports&#039;;
+
+	/**
+	 * Subquery object for query nesting.
+	 *
+	 * @var SqlQuery
+	 */
+	protected $subquery;
+
+	/**
+	 * Totals query object.
+	 *
+	 * @var SqlQuery
+	 */
+	protected $total_query;
+
+	/**
+	 * Intervals query object.
+	 *
+	 * @var SqlQuery
+	 */
+	protected $interval_query;
+
+	/**
+	 * Refresh the cache for the current query when true.
+	 *
+	 * @var bool
+	 */
+	protected $force_cache_refresh = false;
+
+	/**
+	 * Include debugging information in the returned data when true.
+	 *
+	 * @var bool
+	 */
+	protected $debug_cache = true;
+
+	/**
+	 * Debugging information to include in the returned data.
+	 *
+	 * @var array
+	 */
+	protected $debug_cache_data = array();
+
+	/**
+	 * Class constructor.
+	 */
+	public function __construct() {
+		self::set_db_table_name();
+		$this-&gt;assign_report_columns();
+
+		if ( $this-&gt;report_columns ) {
+			$this-&gt;report_columns = apply_filters(
+				&#039;woocommerce_admin_report_columns&#039;,
+				$this-&gt;report_columns,
+				$this-&gt;context,
+				self::get_db_table_name()
+			);
+		}
+
+		// Utilize enveloped responses to include debugging info.
+		// See https://querymonitor.com/blog/2021/05/debugging-wordpress-rest-api-requests/
+		if ( isset( $_GET[&#039;_envelope&#039;] ) ) {
+			$this-&gt;debug_cache = true;
+			add_filter( &#039;rest_envelope_response&#039;, array( $this, &#039;add_debug_cache_to_envelope&#039; ), 999, 2 );
+		}
+	}
+
+	/**
+	 * Get table name from database class.
+	 */
+	public static function get_db_table_name() {
+		global $wpdb;
+		return isset( $wpdb-&gt;{static::$table_name} ) ? $wpdb-&gt;{static::$table_name} : $wpdb-&gt;prefix . static::$table_name;
+	}
+
+	/**
+	 * Set table name from database class.
+	 */
+	protected static function set_db_table_name() {
+		global $wpdb;
+		if ( static::$table_name &amp;&amp; ! isset( $wpdb-&gt;{static::$table_name} ) ) {
+			$wpdb-&gt;{static::$table_name} = $wpdb-&gt;prefix . static::$table_name;
+		}
+	}
+
+	/**
+	 * Whether or not the report should use the caching layer.
+	 *
+	 * Provides an opportunity for plugins to prevent reports from using cache.
+	 *
+	 * @return boolean Whether or not to utilize caching.
+	 */
+	protected function should_use_cache() {
+		/**
+		 * Determines if a report will utilize caching.
+		 *
+		 * @param bool $use_cache Whether or not to use cache.
+		 * @param string $cache_key The report&#039;s cache key. Used to identify the report.
+		 */
+		return (bool) apply_filters( &#039;woocommerce_analytics_report_should_use_cache&#039;, true, $this-&gt;cache_key );
+	}
+
+	/**
+	 * Returns string to be used as cache key for the data.
+	 *
+	 * @param array $params Query parameters.
+	 * @return string
+	 */
+	protected function get_cache_key( $params ) {
+		if ( isset( $params[&#039;force_cache_refresh&#039;] ) ) {
+			if ( true === $params[&#039;force_cache_refresh&#039;] ) {
+				$this-&gt;force_cache_refresh = true;
+			}
+
+			// We don&#039;t want this param in the key.
+			unset( $params[&#039;force_cache_refresh&#039;] );
+		}
+
+		if ( true === $this-&gt;debug_cache ) {
+			$this-&gt;debug_cache_data[&#039;query_args&#039;] = $params;
+		}
+
+		return implode(
+			&#039;_&#039;,
+			array(
+				&#039;wc_report&#039;,
+				$this-&gt;cache_key,
+				md5( wp_json_encode( $params ) ),
+			)
+		);
+	}
+
+	/**
+	 * Wrapper around Cache::get().
+	 *
+	 * @param string $cache_key Cache key.
+	 * @return mixed
+	 */
+	protected function get_cached_data( $cache_key ) {
+		if ( true === $this-&gt;debug_cache ) {
+			$this-&gt;debug_cache_data[&#039;should_use_cache&#039;]    = $this-&gt;should_use_cache();
+			$this-&gt;debug_cache_data[&#039;force_cache_refresh&#039;] = $this-&gt;force_cache_refresh;
+			$this-&gt;debug_cache_data[&#039;cache_hit&#039;]           = false;
+		}
+
+		if ( $this-&gt;should_use_cache() &amp;&amp; false === $this-&gt;force_cache_refresh ) {
+			$cached_data = Cache::get( $cache_key );
+
+			$cache_hit = false !== $cached_data;
+			if ( true === $this-&gt;debug_cache ) {
+				$this-&gt;debug_cache_data[&#039;cache_hit&#039;] = $cache_hit;
+			}
+
+			return $cached_data;
+		}
+
+		// Cached item has now functionally been refreshed. Reset the option.
+		$this-&gt;force_cache_refresh = false;
+
+		return false;
+	}
+
+	/**
+	 * Wrapper around Cache::set().
+	 *
+	 * @param string $cache_key Cache key.
+	 * @param mixed  $value     New value.
+	 * @return bool
+	 */
+	protected function set_cached_data( $cache_key, $value ) {
+		if ( $this-&gt;should_use_cache() ) {
+			return Cache::set( $cache_key, $value );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Add cache debugging information to an enveloped API response.
+	 *
+	 * @param array             $envelope
+	 * @param \WP_REST_Response $response
+	 *
+	 * @return array
+	 */
+	public function add_debug_cache_to_envelope( $envelope, $response ) {
+		if ( 0 !== strncmp( &#039;/wc-analytics&#039;, $response-&gt;get_matched_route(), 13 ) ) {
+			return $envelope;
+		}
+
+		if ( ! empty( $this-&gt;debug_cache_data ) ) {
+			$envelope[&#039;debug_cache&#039;] = $this-&gt;debug_cache_data;
+		}
+
+		return $envelope;
+	}
+
+	/**
+	 * Compares two report data objects by pre-defined object property and ASC/DESC ordering.
+	 *
+	 * @param stdClass $a Object a.
+	 * @param stdClass $b Object b.
+	 * @return string
+	 */
+	private function interval_cmp( $a, $b ) {
+		if ( &#039;&#039; === $this-&gt;order_by || &#039;&#039; === $this-&gt;order ) {
+			return 0;
+			// @todo Should return WP_Error here perhaps?
+		}
+		if ( $a[ $this-&gt;order_by ] === $b[ $this-&gt;order_by ] ) {
+			// As relative order is undefined in case of equality in usort, second-level sorting by date needs to be enforced
+			// so that paging is stable.
+			if ( $a[&#039;time_interval&#039;] === $b[&#039;time_interval&#039;] ) {
+				return 0; // This should never happen.
+			} elseif ( $a[&#039;time_interval&#039;] &gt; $b[&#039;time_interval&#039;] ) {
+				return 1;
+			} elseif ( $a[&#039;time_interval&#039;] &lt; $b[&#039;time_interval&#039;] ) {
+				return -1;
+			}
+		} elseif ( $a[ $this-&gt;order_by ] &gt; $b[ $this-&gt;order_by ] ) {
+			return strtolower( $this-&gt;order ) === &#039;desc&#039; ? -1 : 1;
+		} elseif ( $a[ $this-&gt;order_by ] &lt; $b[ $this-&gt;order_by ] ) {
+			return strtolower( $this-&gt;order ) === &#039;desc&#039; ? 1 : -1;
+		}
+	}
+
+	/**
+	 * Sorts intervals according to user&#039;s request.
+	 *
+	 * They are pre-sorted in SQL, but after adding gaps, they need to be sorted including the added ones.
+	 *
+	 * @param stdClass $data      Data object, must contain an array under $data-&gt;intervals.
+	 * @param string   $sort_by   Ordering property.
+	 * @param string   $direction DESC/ASC.
+	 */
+	protected function sort_intervals( &amp;$data, $sort_by, $direction ) {
+		$this-&gt;sort_array( $data-&gt;intervals, $sort_by, $direction );
+	}
+
+	/**
+	 * Sorts array of arrays based on subarray key $sort_by.
+	 *
+	 * @param array  $arr       Array to sort.
+	 * @param string $sort_by   Ordering property.
+	 * @param string $direction DESC/ASC.
+	 */
+	protected function sort_array( &amp;$arr, $sort_by, $direction ) {
+		$this-&gt;order_by = $this-&gt;normalize_order_by( $sort_by );
+		$this-&gt;order    = $direction;
+		usort( $arr, array( $this, &#039;interval_cmp&#039; ) );
+	}
+
+	/**
+	 * Fills in interval gaps from DB with 0-filled objects.
+	 *
+	 * @param array    $db_intervals   Array of all intervals present in the db.
+	 * @param DateTime $start_datetime Start date.
+	 * @param DateTime $end_datetime   End date.
+	 * @param string   $time_interval  Time interval, e.g. day, week, month.
+	 * @param stdClass $data           Data with SQL extracted intervals.
+	 * @return stdClass
+	 */
+	protected function fill_in_missing_intervals( $db_intervals, $start_datetime, $end_datetime, $time_interval, &amp;$data ) {
+		// @todo This is ugly and messy.
+		$local_tz = new \DateTimeZone( wc_timezone_string() );
+		// At this point, we don&#039;t know when we can stop iterating, as the ordering can be based on any value.
+		$time_ids     = array_flip( wp_list_pluck( $data-&gt;intervals, &#039;time_interval&#039; ) );
+		$db_intervals = array_flip( $db_intervals );
+		// Totals object used to get all needed properties.
+		$totals_arr = get_object_vars( $data-&gt;totals );
+		foreach ( $totals_arr as $key =&gt; $val ) {
+			$totals_arr[ $key ] = 0;
+		}
+		// @todo Should &#039;products&#039; be in intervals?
+		unset( $totals_arr[&#039;products&#039;] );
+		while ( $start_datetime &lt;= $end_datetime ) {
+			$next_start = TimeInterval::iterate( $start_datetime, $time_interval );
+			$time_id    = TimeInterval::time_interval_id( $time_interval, $start_datetime );
+			// Either create fill-zero interval or use data from db.
+			if ( $next_start &gt; $end_datetime ) {
+				$interval_end = $end_datetime-&gt;format( &#039;Y-m-d H:i:s&#039; );
+			} else {
+				$prev_end_timestamp = (int) $next_start-&gt;format( &#039;U&#039; ) - 1;
+				$prev_end           = new \DateTime();
+				$prev_end-&gt;setTimestamp( $prev_end_timestamp );
+				$prev_end-&gt;setTimezone( $local_tz );
+				$interval_end = $prev_end-&gt;format( &#039;Y-m-d H:i:s&#039; );
+			}
+			if ( array_key_exists( $time_id, $time_ids ) ) {
+				// For interval present in the db for this time frame, just fill in dates.
+				$record               = &amp;$data-&gt;intervals[ $time_ids[ $time_id ] ];
+				$record[&#039;date_start&#039;] = $start_datetime-&gt;format( &#039;Y-m-d H:i:s&#039; );
+				$record[&#039;date_end&#039;]   = $interval_end;
+			} elseif ( ! array_key_exists( $time_id, $db_intervals ) ) {
+				// For intervals present in the db outside of this time frame, do nothing.
+				// For intervals not present in the db, fabricate it.
+				$record_arr                  = array();
+				$record_arr[&#039;time_interval&#039;] = $time_id;
+				$record_arr[&#039;date_start&#039;]    = $start_datetime-&gt;format( &#039;Y-m-d H:i:s&#039; );
+				$record_arr[&#039;date_end&#039;]      = $interval_end;
+				$data-&gt;intervals[]           = array_merge( $record_arr, $totals_arr );
+			}
+			$start_datetime = $next_start;
+		}
+		return $data;
+	}
+
+	/**
+	 * Converts input datetime parameters to local timezone. If there are no inputs from the user in query_args,
+	 * uses default from $defaults.
+	 *
+	 * @param array $query_args Array of query arguments.
+	 * @param array $defaults Array of default values.
+	 */
+	protected function normalize_timezones( &amp;$query_args, $defaults ) {
+		$local_tz = new \DateTimeZone( wc_timezone_string() );
+		foreach ( array( &#039;before&#039;, &#039;after&#039; ) as $query_arg_key ) {
+			if ( isset( $query_args[ $query_arg_key ] ) &amp;&amp; is_string( $query_args[ $query_arg_key ] ) ) {
+				// Assume that unspecified timezone is a local timezone.
+				$datetime = new \DateTime( $query_args[ $query_arg_key ], $local_tz );
+				// In case timezone was forced by using +HH:MM, convert to local timezone.
+				$datetime-&gt;setTimezone( $local_tz );
+				$query_args[ $query_arg_key ] = $datetime;
+			} elseif ( isset( $query_args[ $query_arg_key ] ) &amp;&amp; is_a( $query_args[ $query_arg_key ], &#039;DateTime&#039; ) ) {
+				// In case timezone is in other timezone, convert to local timezone.
+				$query_args[ $query_arg_key ]-&gt;setTimezone( $local_tz );
+			} else {
+				$query_args[ $query_arg_key ] = isset( $defaults[ $query_arg_key ] ) ? $defaults[ $query_arg_key ] : null;
+			}
+		}
+	}
+
+	/**
+	 * Removes extra records from intervals so that only requested number of records get returned.
+	 *
+	 * @param stdClass $data           Data from whose intervals the records get removed.
+	 * @param int      $page_no        Offset requested by the user.
+	 * @param int      $items_per_page Number of records requested by the user.
+	 * @param int      $db_interval_count Database interval count.
+	 * @param int      $expected_interval_count Expected interval count on the output.
+	 * @param string   $order_by Order by field.
+	 * @param string   $order ASC or DESC.
+	 */
+	protected function remove_extra_records( &amp;$data, $page_no, $items_per_page, $db_interval_count, $expected_interval_count, $order_by, $order ) {
+		if ( &#039;date&#039; === strtolower( $order_by ) ) {
+			$offset = 0;
+		} else {
+			if ( &#039;asc&#039; === strtolower( $order ) ) {
+				$offset = ( $page_no - 1 ) * $items_per_page;
+			} else {
+				$offset = ( $page_no - 1 ) * $items_per_page - $db_interval_count;
+			}
+			$offset = $offset &lt; 0 ? 0 : $offset;
+		}
+		$count = $expected_interval_count - ( $page_no - 1 ) * $items_per_page;
+		if ( $count &lt; 0 ) {
+			$count = 0;
+		} elseif ( $count &gt; $items_per_page ) {
+			$count = $items_per_page;
+		}
+		$data-&gt;intervals = array_slice( $data-&gt;intervals, $offset, $count );
+	}
+
+	/**
+	 * Returns expected number of items on the page in case of date ordering.
+	 *
+	 * @param int $expected_interval_count Expected number of intervals in total.
+	 * @param int $items_per_page          Number of items per page.
+	 * @param int $page_no                 Page number.
+	 *
+	 * @return float|int
+	 */
+	protected function expected_intervals_on_page( $expected_interval_count, $items_per_page, $page_no ) {
+		$total_pages = (int) ceil( $expected_interval_count / $items_per_page );
+		if ( $page_no &lt; $total_pages ) {
+			return $items_per_page;
+		} elseif ( $page_no === $total_pages ) {
+			return $expected_interval_count - ( $page_no - 1 ) * $items_per_page;
+		} else {
+			return 0;
+		}
+	}
+
+	/**
+	 * Returns true if there are any intervals that need to be filled in the response.
+	 *
+	 * @param int    $expected_interval_count Expected number of intervals in total.
+	 * @param int    $db_records              Total number of records for given period in the database.
+	 * @param int    $items_per_page          Number of items per page.
+	 * @param int    $page_no                 Page number.
+	 * @param string $order                   asc or desc.
+	 * @param string $order_by                Column by which the result will be sorted.
+	 * @param int    $intervals_count         Number of records for given (possibly shortened) time interval.
+	 *
+	 * @return bool
+	 */
+	protected function intervals_missing( $expected_interval_count, $db_records, $items_per_page, $page_no, $order, $order_by, $intervals_count ) {
+		if ( $expected_interval_count &lt;= $db_records ) {
+			return false;
+		}
+		if ( &#039;date&#039; === $order_by ) {
+			$expected_intervals_on_page = $this-&gt;expected_intervals_on_page( $expected_interval_count, $items_per_page, $page_no );
+			return $intervals_count &lt; $expected_intervals_on_page;
+		}
+		if ( &#039;desc&#039; === $order ) {
+			return $page_no &gt; floor( $db_records / $items_per_page );
+		}
+		if ( &#039;asc&#039; === $order ) {
+			return $page_no &lt;= ceil( ( $expected_interval_count - $db_records ) / $items_per_page );
+		}
+		// Invalid ordering.
+		return false;
+	}
+
+	/**
+	 * Updates the LIMIT query part for Intervals query of the report.
+	 *
+	 * If there are less records in the database than time intervals, then we need to remap offset in SQL query
+	 * to fetch correct records.
+	 *
+	 * @param array  $query_args Query arguments.
+	 * @param int    $db_interval_count Database interval count.
+	 * @param int    $expected_interval_count Expected interval count on the output.
+	 * @param string $table_name Name of the db table relevant for the date constraint.
+	 */
+	protected function update_intervals_sql_params( &amp;$query_args, $db_interval_count, $expected_interval_count, $table_name ) {
+		if ( $db_interval_count === $expected_interval_count ) {
+			return;
+		}
+
+		$params   = $this-&gt;get_limit_params( $query_args );
+		$local_tz = new \DateTimeZone( wc_timezone_string() );
+		if ( &#039;date&#039; === strtolower( $query_args[&#039;orderby&#039;] ) ) {
+			// page X in request translates to slightly different dates in the db, in case some
+			// records are missing from the db.
+			$start_iteration = 0;
+			$end_iteration   = 0;
+			if ( &#039;asc&#039; === strtolower( $query_args[&#039;order&#039;] ) ) {
+				// ORDER BY date ASC.
+				$new_start_date    = $query_args[&#039;after&#039;];
+				$intervals_to_skip = ( $query_args[&#039;page&#039;] - 1 ) * $params[&#039;per_page&#039;];
+				$latest_end_date   = $query_args[&#039;before&#039;];
+				for ( $i = 0; $i &lt; $intervals_to_skip; $i++ ) {
+					if ( $new_start_date &gt; $latest_end_date ) {
+						$new_start_date  = $latest_end_date;
+						$start_iteration = 0;
+						break;
+					}
+					$new_start_date = TimeInterval::iterate( $new_start_date, $query_args[&#039;interval&#039;] );
+					$start_iteration ++;
+				}
+
+				$new_end_date = clone $new_start_date;
+				for ( $i = 0; $i &lt; $params[&#039;per_page&#039;]; $i++ ) {
+					if ( $new_end_date &gt; $latest_end_date ) {
+						break;
+					}
+					$new_end_date = TimeInterval::iterate( $new_end_date, $query_args[&#039;interval&#039;] );
+					$end_iteration ++;
+				}
+				if ( $new_end_date &gt; $latest_end_date ) {
+					$new_end_date  = $latest_end_date;
+					$end_iteration = 0;
+				}
+				if ( $end_iteration ) {
+					$new_end_date_timestamp = (int) $new_end_date-&gt;format( &#039;U&#039; ) - 1;
+					$new_end_date-&gt;setTimestamp( $new_end_date_timestamp );
+				}
+			} else {
+				// ORDER BY date DESC.
+				$new_end_date        = $query_args[&#039;before&#039;];
+				$intervals_to_skip   = ( $query_args[&#039;page&#039;] - 1 ) * $params[&#039;per_page&#039;];
+				$earliest_start_date = $query_args[&#039;after&#039;];
+				for ( $i = 0; $i &lt; $intervals_to_skip; $i++ ) {
+					if ( $new_end_date &lt; $earliest_start_date ) {
+						$new_end_date  = $earliest_start_date;
+						$end_iteration = 0;
+						break;
+					}
+					$new_end_date = TimeInterval::iterate( $new_end_date, $query_args[&#039;interval&#039;], true );
+					$end_iteration ++;
+				}
+
+				$new_start_date = clone $new_end_date;
+				for ( $i = 0; $i &lt; $params[&#039;per_page&#039;]; $i++ ) {
+					if ( $new_start_date &lt; $earliest_start_date ) {
+						break;
+					}
+					$new_start_date = TimeInterval::iterate( $new_start_date, $query_args[&#039;interval&#039;], true );
+					$start_iteration ++;
+				}
+				if ( $new_start_date &lt; $earliest_start_date ) {
+					$new_start_date  = $earliest_start_date;
+					$start_iteration = 0;
+				}
+				if ( $start_iteration ) {
+					// @todo Is this correct? should it only be added if iterate runs? other two iterate instances, too?
+					$new_start_date_timestamp = (int) $new_start_date-&gt;format( &#039;U&#039; ) + 1;
+					$new_start_date-&gt;setTimestamp( $new_start_date_timestamp );
+				}
+			}
+			// @todo - Do this without modifying $query_args?
+			$query_args[&#039;adj_after&#039;]  = $new_start_date;
+			$query_args[&#039;adj_before&#039;] = $new_end_date;
+			$adj_after                = $new_start_date-&gt;format( TimeInterval::$sql_datetime_format );
+			$adj_before               = $new_end_date-&gt;format( TimeInterval::$sql_datetime_format );
+			$this-&gt;interval_query-&gt;clear_sql_clause( array( &#039;where_time&#039;, &#039;limit&#039; ) );
+			$this-&gt;interval_query-&gt;add_sql_clause( &#039;where_time&#039;, &quot;AND {$table_name}.`{$this-&gt;date_column_name}` &lt;= &#039;$adj_before&#039;&quot; );
+			$this-&gt;interval_query-&gt;add_sql_clause( &#039;where_time&#039;, &quot;AND {$table_name}.`{$this-&gt;date_column_name}` &gt;= &#039;$adj_after&#039;&quot; );
+			$this-&gt;clear_sql_clause( &#039;limit&#039; );
+			$this-&gt;add_sql_clause( &#039;limit&#039;, &#039;LIMIT 0,&#039; . $params[&#039;per_page&#039;] );
+		} else {
+			if ( &#039;asc&#039; === $query_args[&#039;order&#039;] ) {
+				$offset = ( ( $query_args[&#039;page&#039;] - 1 ) * $params[&#039;per_page&#039;] ) - ( $expected_interval_count - $db_interval_count );
+				$offset = $offset &lt; 0 ? 0 : $offset;
+				$count  = $query_args[&#039;page&#039;] * $params[&#039;per_page&#039;] - ( $expected_interval_count - $db_interval_count );
+				if ( $count &lt; 0 ) {
+					$count = 0;
+				} elseif ( $count &gt; $params[&#039;per_page&#039;] ) {
+					$count = $params[&#039;per_page&#039;];
+				}
+
+				$this-&gt;clear_sql_clause( &#039;limit&#039; );
+				$this-&gt;add_sql_clause( &#039;limit&#039;, &#039;LIMIT &#039; . $offset . &#039;,&#039; . $count );
+			}
+			// Otherwise no change in limit clause.
+			// @todo - Do this without modifying $query_args?
+			$query_args[&#039;adj_after&#039;]  = $query_args[&#039;after&#039;];
+			$query_args[&#039;adj_before&#039;] = $query_args[&#039;before&#039;];
+		}
+	}
+
+	/**
+	 * Casts strings returned from the database to appropriate data types for output.
+	 *
+	 * @param array $array Associative array of values extracted from the database.
+	 * @return array|WP_Error
+	 */
+	protected function cast_numbers( $array ) {
+		$retyped_array = array();
+		$column_types  = apply_filters( &#039;woocommerce_rest_reports_column_types&#039;, $this-&gt;column_types, $array );
+		foreach ( $array as $column_name =&gt; $value ) {
+			if ( is_array( $value ) ) {
+				$value = $this-&gt;cast_numbers( $value );
+			}
+
+			if ( isset( $column_types[ $column_name ] ) ) {
+				$retyped_array[ $column_name ] = $column_types[ $column_name ]( $value );
+			} else {
+				$retyped_array[ $column_name ] = $value;
+			}
+		}
+		return $retyped_array;
+	}
+
+	/**
+	 * Returns a list of columns selected by the query_args formatted as a comma separated string.
+	 *
+	 * @param array $query_args User-supplied options.
+	 * @return string
+	 */
+	protected function selected_columns( $query_args ) {
+		$selections = $this-&gt;report_columns;
+
+		if ( isset( $query_args[&#039;fields&#039;] ) &amp;&amp; is_array( $query_args[&#039;fields&#039;] ) ) {
+			$keep = array();
+			foreach ( $query_args[&#039;fields&#039;] as $field ) {
+				if ( isset( $selections[ $field ] ) ) {
+					$keep[ $field ] = $selections[ $field ];
+				}
+			}
+			$selections = implode( &#039;, &#039;, $keep );
+		} else {
+			$selections = implode( &#039;, &#039;, $selections );
+		}
+		return $selections;
+	}
+
+	/**
+	 * Get the excluded order statuses used when calculating reports.
+	 *
+	 * @return array
+	 */
+	protected static function get_excluded_report_order_statuses() {
+		$excluded_statuses = \WC_Admin_Settings::get_option( &#039;woocommerce_excluded_report_order_statuses&#039;, array( &#039;pending&#039;, &#039;failed&#039;, &#039;cancelled&#039; ) );
+		$excluded_statuses = array_merge( array( &#039;auto-draft&#039;, &#039;trash&#039; ), array_map( &#039;esc_sql&#039;, $excluded_statuses ) );
+		return apply_filters( &#039;woocommerce_analytics_excluded_order_statuses&#039;, $excluded_statuses );
+	}
+
+	/**
+	 * Maps order status provided by the user to the one used in the database.
+	 *
+	 * @param string $status Order status.
+	 * @return string
+	 */
+	protected static function normalize_order_status( $status ) {
+		$status = trim( $status );
+		return &#039;wc-&#039; . $status;
+	}
+
+	/**
+	 * Normalizes order_by clause to match to SQL query.
+	 *
+	 * @param string $order_by Order by option requested by user.
+	 * @return string
+	 */
+	protected function normalize_order_by( $order_by ) {
+		if ( &#039;date&#039; === $order_by ) {
+			return &#039;time_interval&#039;;
+		}
+
+		return $order_by;
+	}
+
+	/**
+	 * Updates start and end dates for intervals so that they represent intervals&#039; borders, not times when data in db were recorded.
+	 *
+	 * E.g. if there are db records for only Tuesday and Thursday this week, the actual week interval is [Mon, Sun], not [Tue, Thu].
+	 *
+	 * @param DateTime $start_datetime Start date.
+	 * @param DateTime $end_datetime End date.
+	 * @param string   $time_interval Time interval, e.g. day, week, month.
+	 * @param array    $intervals Array of intervals extracted from SQL db.
+	 */
+	protected function update_interval_boundary_dates( $start_datetime, $end_datetime, $time_interval, &amp;$intervals ) {
+		$local_tz = new \DateTimeZone( wc_timezone_string() );
+		foreach ( $intervals as $key =&gt; $interval ) {
+			$datetime = new \DateTime( $interval[&#039;datetime_anchor&#039;], $local_tz );
+
+			$prev_start = TimeInterval::iterate( $datetime, $time_interval, true );
+			// @todo Not sure if the +1/-1 here are correct, especially as they are applied before the ?: below.
+			$prev_start_timestamp = (int) $prev_start-&gt;format( &#039;U&#039; ) + 1;
+			$prev_start-&gt;setTimestamp( $prev_start_timestamp );
+			if ( $start_datetime ) {
+				$date_start                      = $prev_start &lt; $start_datetime ? $start_datetime : $prev_start;
+				$intervals[ $key ][&#039;date_start&#039;] = $date_start-&gt;format( &#039;Y-m-d H:i:s&#039; );
+			} else {
+				$intervals[ $key ][&#039;date_start&#039;] = $prev_start-&gt;format( &#039;Y-m-d H:i:s&#039; );
+			}
+
+			$next_end           = TimeInterval::iterate( $datetime, $time_interval );
+			$next_end_timestamp = (int) $next_end-&gt;format( &#039;U&#039; ) - 1;
+			$next_end-&gt;setTimestamp( $next_end_timestamp );
+			if ( $end_datetime ) {
+				$date_end                      = $next_end &gt; $end_datetime ? $end_datetime : $next_end;
+				$intervals[ $key ][&#039;date_end&#039;] = $date_end-&gt;format( &#039;Y-m-d H:i:s&#039; );
+			} else {
+				$intervals[ $key ][&#039;date_end&#039;] = $next_end-&gt;format( &#039;Y-m-d H:i:s&#039; );
+			}
+
+			$intervals[ $key ][&#039;interval&#039;] = $time_interval;
+		}
+	}
+
+	/**
+	 * Change structure of intervals to form a correct response.
+	 *
+	 * Also converts local datetimes to GMT and adds them to the intervals.
+	 *
+	 * @param array $intervals Time interval, e.g. day, week, month.
+	 */
+	protected function create_interval_subtotals( &amp;$intervals ) {
+		foreach ( $intervals as $key =&gt; $interval ) {
+			$start_gmt = TimeInterval::convert_local_datetime_to_gmt( $interval[&#039;date_start&#039;] );
+			$end_gmt   = TimeInterval::convert_local_datetime_to_gmt( $interval[&#039;date_end&#039;] );
+			// Move intervals result to subtotals object.
+			$intervals[ $key ] = array(
+				&#039;interval&#039;       =&gt; $interval[&#039;time_interval&#039;],
+				&#039;date_start&#039;     =&gt; $interval[&#039;date_start&#039;],
+				&#039;date_start_gmt&#039; =&gt; $start_gmt-&gt;format( TimeInterval::$sql_datetime_format ),
+				&#039;date_end&#039;       =&gt; $interval[&#039;date_end&#039;],
+				&#039;date_end_gmt&#039;   =&gt; $end_gmt-&gt;format( TimeInterval::$sql_datetime_format ),
+			);
+
+			unset( $interval[&#039;interval&#039;] );
+			unset( $interval[&#039;date_start&#039;] );
+			unset( $interval[&#039;date_end&#039;] );
+			unset( $interval[&#039;datetime_anchor&#039;] );
+			unset( $interval[&#039;time_interval&#039;] );
+			$intervals[ $key ][&#039;subtotals&#039;] = (object) $this-&gt;cast_numbers( $interval );
+		}
+	}
+
+	/**
+	 * Fills WHERE clause of SQL request with date-related constraints.
+	 *
+	 * @param array  $query_args Parameters supplied by the user.
+	 * @param string $table_name Name of the db table relevant for the date constraint.
+	 */
+	protected function add_time_period_sql_params( $query_args, $table_name ) {
+		$this-&gt;clear_sql_clause( array( &#039;from&#039;, &#039;where_time&#039;, &#039;where&#039; ) );
+		if ( isset( $this-&gt;subquery ) ) {
+			$this-&gt;subquery-&gt;clear_sql_clause( &#039;where_time&#039; );
+		}
+
+		if ( isset( $query_args[&#039;before&#039;] ) &amp;&amp; &#039;&#039; !== $query_args[&#039;before&#039;] ) {
+			if ( is_a( $query_args[&#039;before&#039;], &#039;WC_DateTime&#039; ) ) {
+				$datetime_str = $query_args[&#039;before&#039;]-&gt;date( TimeInterval::$sql_datetime_format );
+			} else {
+				$datetime_str = $query_args[&#039;before&#039;]-&gt;format( TimeInterval::$sql_datetime_format );
+			}
+			if ( isset( $this-&gt;subquery ) ) {
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;where_time&#039;, &quot;AND {$table_name}.`{$this-&gt;date_column_name}` &lt;= &#039;$datetime_str&#039;&quot; );
+			} else {
+				$this-&gt;add_sql_clause( &#039;where_time&#039;, &quot;AND {$table_name}.`{$this-&gt;date_column_name}` &lt;= &#039;$datetime_str&#039;&quot; );
+			}
+		}
+
+		if ( isset( $query_args[&#039;after&#039;] ) &amp;&amp; &#039;&#039; !== $query_args[&#039;after&#039;] ) {
+			if ( is_a( $query_args[&#039;after&#039;], &#039;WC_DateTime&#039; ) ) {
+				$datetime_str = $query_args[&#039;after&#039;]-&gt;date( TimeInterval::$sql_datetime_format );
+			} else {
+				$datetime_str = $query_args[&#039;after&#039;]-&gt;format( TimeInterval::$sql_datetime_format );
+			}
+			if ( isset( $this-&gt;subquery ) ) {
+				$this-&gt;subquery-&gt;add_sql_clause( &#039;where_time&#039;, &quot;AND {$table_name}.`{$this-&gt;date_column_name}` &gt;= &#039;$datetime_str&#039;&quot; );
+			} else {
+				$this-&gt;add_sql_clause( &#039;where_time&#039;, &quot;AND {$table_name}.`{$this-&gt;date_column_name}` &gt;= &#039;$datetime_str&#039;&quot; );
+			}
+		}
+	}
+
+	/**
+	 * Fills LIMIT clause of SQL request based on user supplied parameters.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return array
+	 */
+	protected function get_limit_sql_params( $query_args ) {
+		global $wpdb;
+		$params = $this-&gt;get_limit_params( $query_args );
+
+		$this-&gt;clear_sql_clause( &#039;limit&#039; );
+		$this-&gt;add_sql_clause( &#039;limit&#039;, $wpdb-&gt;prepare( &#039;LIMIT %d, %d&#039;, $params[&#039;offset&#039;], $params[&#039;per_page&#039;] ) );
+		return $params;
+	}
+
+	/**
+	 * Fills LIMIT parameters of SQL request based on user supplied parameters.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return array
+	 */
+	protected function get_limit_params( $query_args = array() ) {
+		if ( isset( $query_args[&#039;per_page&#039;] ) &amp;&amp; is_numeric( $query_args[&#039;per_page&#039;] ) ) {
+			$this-&gt;limit_parameters[&#039;per_page&#039;] = (int) $query_args[&#039;per_page&#039;];
+		} else {
+			$this-&gt;limit_parameters[&#039;per_page&#039;] = get_option( &#039;posts_per_page&#039; );
+		}
+
+		$this-&gt;limit_parameters[&#039;offset&#039;] = 0;
+		if ( isset( $query_args[&#039;page&#039;] ) ) {
+			$this-&gt;limit_parameters[&#039;offset&#039;] = ( (int) $query_args[&#039;page&#039;] - 1 ) * $this-&gt;limit_parameters[&#039;per_page&#039;];
+		}
+
+		return $this-&gt;limit_parameters;
+	}
+
+	/**
+	 * Generates a virtual table given a list of IDs.
+	 *
+	 * @param array $ids          Array of IDs.
+	 * @param array $id_field     Name of the ID field.
+	 * @param array $other_values Other values that must be contained in the virtual table.
+	 * @return array
+	 */
+	protected function get_ids_table( $ids, $id_field, $other_values = array() ) {
+		global $wpdb;
+		$selects = array();
+		foreach ( $ids as $id ) {
+			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$new_select = $wpdb-&gt;prepare( &quot;SELECT %s AS {$id_field}&quot;, $id );
+			foreach ( $other_values as $key =&gt; $value ) {
+				$new_select .= $wpdb-&gt;prepare( &quot;, %s AS {$key}&quot;, $value );
+			}
+			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			array_push( $selects, $new_select );
+		}
+		return join( &#039; UNION &#039;, $selects );
+	}
+
+	/**
+	 * Returns a comma separated list of the fields in the `query_args`, if there aren&#039;t, returns `report_columns` keys.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return array
+	 */
+	protected function get_fields( $query_args ) {
+		if ( isset( $query_args[&#039;fields&#039;] ) &amp;&amp; is_array( $query_args[&#039;fields&#039;] ) ) {
+			return $query_args[&#039;fields&#039;];
+		}
+		return array_keys( $this-&gt;report_columns );
+	}
+
+	/**
+	 * Returns a comma separated list of the field names prepared to be used for a selection after a join with `default_results`.
+	 *
+	 * @param array $fields                 Array of fields name.
+	 * @param array $default_results_fields Fields to load from `default_results` table.
+	 * @param array $outer_selections       Array of fields that are not selected in the inner query.
+	 * @return string
+	 */
+	protected function format_join_selections( $fields, $default_results_fields, $outer_selections = array() ) {
+		foreach ( $fields as $i =&gt; $field ) {
+			foreach ( $default_results_fields as $default_results_field ) {
+				if ( $field === $default_results_field ) {
+					$field        = esc_sql( $field );
+					$fields[ $i ] = &quot;default_results.{$field} AS {$field}&quot;;
+				}
+			}
+			if ( in_array( $field, $outer_selections, true ) &amp;&amp; array_key_exists( $field, $this-&gt;report_columns ) ) {
+				$fields[ $i ] = $this-&gt;report_columns[ $field ];
+			}
+		}
+		return implode( &#039;, &#039;, $fields );
+	}
+
+	/**
+	 * Fills ORDER BY clause of SQL request based on user supplied parameters.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 */
+	protected function add_order_by_sql_params( $query_args ) {
+		if ( isset( $query_args[&#039;orderby&#039;] ) ) {
+			$order_by_clause = $this-&gt;normalize_order_by( esc_sql( $query_args[&#039;orderby&#039;] ) );
+		} else {
+			$order_by_clause = &#039;&#039;;
+		}
+
+		$this-&gt;clear_sql_clause( &#039;order_by&#039; );
+		$this-&gt;add_sql_clause( &#039;order_by&#039;, $order_by_clause );
+		$this-&gt;add_orderby_order_clause( $query_args, $this );
+	}
+
+	/**
+	 * Fills FROM and WHERE clauses of SQL request for &#039;Intervals&#039; section of data response based on user supplied parameters.
+	 *
+	 * @param array  $query_args Parameters supplied by the user.
+	 * @param string $table_name Name of the db table relevant for the date constraint.
+	 */
+	protected function add_intervals_sql_params( $query_args, $table_name ) {
+		$this-&gt;clear_sql_clause( array( &#039;from&#039;, &#039;where_time&#039;, &#039;where&#039; ) );
+
+		$this-&gt;add_time_period_sql_params( $query_args, $table_name );
+
+		if ( isset( $query_args[&#039;interval&#039;] ) &amp;&amp; &#039;&#039; !== $query_args[&#039;interval&#039;] ) {
+			$interval = $query_args[&#039;interval&#039;];
+			$this-&gt;clear_sql_clause( &#039;select&#039; );
+			$this-&gt;add_sql_clause( &#039;select&#039;, TimeInterval::db_datetime_format( $interval, $table_name, $this-&gt;date_column_name ) );
+		}
+	}
+
+	/**
+	 * Get join and where clauses for refunds based on user supplied parameters.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return array
+	 */
+	protected function get_refund_subquery( $query_args ) {
+		global $wpdb;
+		$table_name = $wpdb-&gt;prefix . &#039;wc_order_stats&#039;;
+		$sql_query  = array(
+			&#039;where_clause&#039; =&gt; &#039;&#039;,
+			&#039;from_clause&#039;  =&gt; &#039;&#039;,
+		);
+
+		if ( ! isset( $query_args[&#039;refunds&#039;] ) ) {
+			return $sql_query;
+		}
+
+		if ( &#039;all&#039; === $query_args[&#039;refunds&#039;] ) {
+			$sql_query[&#039;where_clause&#039;] .= &#039;parent_id != 0&#039;;
+		}
+
+		if ( &#039;none&#039; === $query_args[&#039;refunds&#039;] ) {
+			$sql_query[&#039;where_clause&#039;] .= &#039;parent_id = 0&#039;;
+		}
+
+		if ( &#039;full&#039; === $query_args[&#039;refunds&#039;] || &#039;partial&#039; === $query_args[&#039;refunds&#039;] ) {
+			$operator                   = &#039;full&#039; === $query_args[&#039;refunds&#039;] ? &#039;=&#039; : &#039;!=&#039;;
+			$sql_query[&#039;from_clause&#039;]  .= &quot; JOIN {$table_name} parent_order_stats ON {$table_name}.parent_id = parent_order_stats.order_id&quot;;
+			$sql_query[&#039;where_clause&#039;] .= &quot;parent_order_stats.status {$operator} &#039;{$this-&gt;normalize_order_status( &#039;refunded&#039; )}&#039;&quot;;
+		}
+
+		return $sql_query;
+	}
+
+	/**
+	 * Returns an array of products belonging to given categories.
+	 *
+	 * @param array $categories List of categories IDs.
+	 * @return array|stdClass
+	 */
+	protected function get_products_by_cat_ids( $categories ) {
+		$terms = get_terms(
+			array(
+				&#039;taxonomy&#039; =&gt; &#039;product_cat&#039;,
+				&#039;include&#039;  =&gt; $categories,
+			)
+		);
+
+		if ( is_wp_error( $terms ) || empty( $terms ) ) {
+			return array();
+		}
+
+		$args = array(
+			&#039;category&#039; =&gt; wc_list_pluck( $terms, &#039;slug&#039; ),
+			&#039;limit&#039;    =&gt; -1,
+			&#039;return&#039;   =&gt; &#039;ids&#039;,
+		);
+		return wc_get_products( $args );
+	}
+
+	/**
+	 * Get WHERE filter by object ids subquery.
+	 *
+	 * @param string $select_table Select table name.
+	 * @param string $select_field Select table object ID field name.
+	 * @param string $filter_table Lookup table name.
+	 * @param string $filter_field Lookup table object ID field name.
+	 * @param string $compare      Comparison string (IN|NOT IN).
+	 * @param string $id_list      Comma separated ID list.
+	 *
+	 * @return string
+	 */
+	protected function get_object_where_filter( $select_table, $select_field, $filter_table, $filter_field, $compare, $id_list ) {
+		global $wpdb;
+		if ( empty( $id_list ) ) {
+			return &#039;&#039;;
+		}
+
+		$lookup_name = isset( $wpdb-&gt;$filter_table ) ? $wpdb-&gt;$filter_table : $wpdb-&gt;prefix . $filter_table;
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		return &quot; {$select_table}.{$select_field} {$compare} (
+			SELECT
+				DISTINCT {$filter_table}.{$select_field}
+			FROM
+				{$filter_table}
+			WHERE
+				{$filter_table}.{$filter_field} IN ({$id_list})
+		)&quot;;
+		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+	}
+
+	/**
+	 * Returns an array of ids of allowed products, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return array
+	 */
+	protected function get_included_products_array( $query_args ) {
+		$included_products = array();
+		$operator          = $this-&gt;get_match_operator( $query_args );
+
+		if ( isset( $query_args[&#039;category_includes&#039;] ) &amp;&amp; is_array( $query_args[&#039;category_includes&#039;] ) &amp;&amp; count( $query_args[&#039;category_includes&#039;] ) &gt; 0 ) {
+			$included_products = $this-&gt;get_products_by_cat_ids( $query_args[&#039;category_includes&#039;] );
+
+			// If no products were found in the specified categories, we will force an empty set
+			// by matching a product ID of -1, unless the filters are OR/any and products are specified.
+			if ( empty( $included_products ) ) {
+				$included_products = array( &#039;-1&#039; );
+			}
+		}
+
+		if ( isset( $query_args[&#039;product_includes&#039;] ) &amp;&amp; is_array( $query_args[&#039;product_includes&#039;] ) &amp;&amp; count( $query_args[&#039;product_includes&#039;] ) &gt; 0 ) {
+			if ( count( $included_products ) &gt; 0 ) {
+				if ( &#039;AND&#039; === $operator ) {
+					// AND results in an intersection between products from selected categories and manually included products.
+					$included_products = array_intersect( $included_products, $query_args[&#039;product_includes&#039;] );
+				} elseif ( &#039;OR&#039; === $operator ) {
+					// OR results in a union of products from selected categories and manually included products.
+					$included_products = array_merge( $included_products, $query_args[&#039;product_includes&#039;] );
+				}
+			} else {
+				$included_products = $query_args[&#039;product_includes&#039;];
+			}
+		}
+
+		return $included_products;
+	}
+
+	/**
+	 * Returns comma separated ids of allowed products, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_included_products( $query_args ) {
+		$included_products = $this-&gt;get_included_products_array( $query_args );
+		return implode( &#039;,&#039;, $included_products );
+	}
+
+	/**
+	 * Returns comma separated ids of allowed variations, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_included_variations( $query_args ) {
+		return $this-&gt;get_filtered_ids( $query_args, &#039;variation_includes&#039; );
+	}
+
+	/**
+	 * Returns comma separated ids of excluded variations, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_excluded_variations( $query_args ) {
+		return $this-&gt;get_filtered_ids( $query_args, &#039;variation_excludes&#039; );
+	}
+
+	/**
+	 * Returns an array of ids of disallowed products, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return array
+	 */
+	protected function get_excluded_products_array( $query_args ) {
+		$excluded_products = array();
+		$operator          = $this-&gt;get_match_operator( $query_args );
+
+		if ( isset( $query_args[&#039;category_excludes&#039;] ) &amp;&amp; is_array( $query_args[&#039;category_excludes&#039;] ) &amp;&amp; count( $query_args[&#039;category_excludes&#039;] ) &gt; 0 ) {
+			$excluded_products = $this-&gt;get_products_by_cat_ids( $query_args[&#039;category_excludes&#039;] );
+		}
+
+		if ( isset( $query_args[&#039;product_excludes&#039;] ) &amp;&amp; is_array( $query_args[&#039;product_excludes&#039;] ) &amp;&amp; count( $query_args[&#039;product_excludes&#039;] ) &gt; 0 ) {
+			$excluded_products = array_merge( $excluded_products, $query_args[&#039;product_excludes&#039;] );
+		}
+
+		return $excluded_products;
+	}
+
+	/**
+	 * Returns comma separated ids of excluded products, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_excluded_products( $query_args ) {
+		$excluded_products = $this-&gt;get_excluded_products_array( $query_args );
+		return implode( &#039;,&#039;, $excluded_products );
+	}
+
+	/**
+	 * Returns comma separated ids of included categories, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_included_categories( $query_args ) {
+		return $this-&gt;get_filtered_ids( $query_args, &#039;category_includes&#039; );
+	}
+
+	/**
+	 * Returns comma separated ids of included coupons, based on query arguments from the user.
+	 *
+	 * @param array  $query_args Parameters supplied by the user.
+	 * @param string $field      Field name in the parameter list.
+	 * @return string
+	 */
+	protected function get_included_coupons( $query_args, $field = &#039;coupon_includes&#039; ) {
+		return $this-&gt;get_filtered_ids( $query_args, $field );
+	}
+
+	/**
+	 * Returns comma separated ids of excluded coupons, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_excluded_coupons( $query_args ) {
+		return $this-&gt;get_filtered_ids( $query_args, &#039;coupon_excludes&#039; );
+	}
+
+	/**
+	 * Returns comma separated ids of included orders, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_included_orders( $query_args ) {
+		return $this-&gt;get_filtered_ids( $query_args, &#039;order_includes&#039; );
+	}
+
+	/**
+	 * Returns comma separated ids of excluded orders, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_excluded_orders( $query_args ) {
+		return $this-&gt;get_filtered_ids( $query_args, &#039;order_excludes&#039; );
+	}
+
+	/**
+	 * Returns comma separated ids of included users, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_included_users( $query_args ) {
+		return $this-&gt;get_filtered_ids( $query_args, &#039;user_includes&#039; );
+	}
+
+	/**
+	 * Returns comma separated ids of excluded users, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_excluded_users( $query_args ) {
+		return $this-&gt;get_filtered_ids( $query_args, &#039;user_excludes&#039; );
+	}
+
+	/**
+	 * Returns order status subquery to be used in WHERE SQL query, based on query arguments from the user.
+	 *
+	 * @param array  $query_args Parameters supplied by the user.
+	 * @param string $operator   AND or OR, based on match query argument.
+	 * @return string
+	 */
+	protected function get_status_subquery( $query_args, $operator = &#039;AND&#039; ) {
+		global $wpdb;
+
+		$subqueries        = array();
+		$excluded_statuses = array();
+		if ( isset( $query_args[&#039;status_is&#039;] ) &amp;&amp; is_array( $query_args[&#039;status_is&#039;] ) &amp;&amp; count( $query_args[&#039;status_is&#039;] ) &gt; 0 ) {
+			$allowed_statuses = array_map( array( $this, &#039;normalize_order_status&#039; ), esc_sql( $query_args[&#039;status_is&#039;] ) );
+			if ( $allowed_statuses ) {
+				$subqueries[] = &quot;{$wpdb-&gt;prefix}wc_order_stats.status IN ( &#039;&quot; . implode( &quot;&#039;,&#039;&quot;, $allowed_statuses ) . &quot;&#039; )&quot;;
+			}
+		}
+
+		if ( isset( $query_args[&#039;status_is_not&#039;] ) &amp;&amp; is_array( $query_args[&#039;status_is_not&#039;] ) &amp;&amp; count( $query_args[&#039;status_is_not&#039;] ) &gt; 0 ) {
+			$excluded_statuses = array_map( array( $this, &#039;normalize_order_status&#039; ), $query_args[&#039;status_is_not&#039;] );
+		}
+
+		if ( ( ! isset( $query_args[&#039;status_is&#039;] ) || empty( $query_args[&#039;status_is&#039;] ) )
+			&amp;&amp; ( ! isset( $query_args[&#039;status_is_not&#039;] ) || empty( $query_args[&#039;status_is_not&#039;] ) )
+		) {
+			$excluded_statuses = array_map( array( $this, &#039;normalize_order_status&#039; ), $this-&gt;get_excluded_report_order_statuses() );
+		}
+
+		if ( $excluded_statuses ) {
+			$subqueries[] = &quot;{$wpdb-&gt;prefix}wc_order_stats.status NOT IN ( &#039;&quot; . implode( &quot;&#039;,&#039;&quot;, $excluded_statuses ) . &quot;&#039; )&quot;;
+		}
+
+		return implode( &quot; $operator &quot;, $subqueries );
+	}
+
+	/**
+	 * Add order status SQL clauses if included in query.
+	 *
+	 * @param array    $query_args Parameters supplied by the user.
+	 * @param string   $table_name Database table name.
+	 * @param SqlQuery $sql_query  Query object.
+	 */
+	protected function add_order_status_clause( $query_args, $table_name, &amp;$sql_query ) {
+		global $wpdb;
+		$order_status_filter = $this-&gt;get_status_subquery( $query_args );
+		if ( $order_status_filter ) {
+			$sql_query-&gt;add_sql_clause( &#039;join&#039;, &quot;JOIN {$wpdb-&gt;prefix}wc_order_stats ON {$table_name}.order_id = {$wpdb-&gt;prefix}wc_order_stats.order_id&quot; );
+			$sql_query-&gt;add_sql_clause( &#039;where&#039;, &quot;AND ( {$order_status_filter} )&quot; );
+		}
+	}
+
+	/**
+	 * Add order by SQL clause if included in query.
+	 *
+	 * @param array    $query_args Parameters supplied by the user.
+	 * @param SqlQuery $sql_query  Query object.
+	 * @return string Order by clause.
+	 */
+	protected function add_order_by_clause( $query_args, &amp;$sql_query ) {
+		$order_by_clause = &#039;&#039;;
+
+		$sql_query-&gt;clear_sql_clause( array( &#039;order_by&#039; ) );
+		if ( isset( $query_args[&#039;orderby&#039;] ) ) {
+			$order_by_clause = $this-&gt;normalize_order_by( esc_sql( $query_args[&#039;orderby&#039;] ) );
+			$sql_query-&gt;add_sql_clause( &#039;order_by&#039;, $order_by_clause );
+		}
+
+		// Return ORDER BY clause to allow adding the sort field(s) to query via a JOIN.
+		return $order_by_clause;
+	}
+
+	/**
+	 * Add order by order SQL clause.
+	 *
+	 * @param array    $query_args Parameters supplied by the user.
+	 * @param SqlQuery $sql_query  Query object.
+	 */
+	protected function add_orderby_order_clause( $query_args, &amp;$sql_query ) {
+		if ( isset( $query_args[&#039;order&#039;] ) ) {
+			$sql_query-&gt;add_sql_clause( &#039;order_by&#039;, esc_sql( $query_args[&#039;order&#039;] ) );
+		} else {
+			$sql_query-&gt;add_sql_clause( &#039;order_by&#039;, &#039;DESC&#039; );
+		}
+	}
+
+	/**
+	 * Returns customer subquery to be used in WHERE SQL query, based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_customer_subquery( $query_args ) {
+		global $wpdb;
+
+		$customer_filter = &#039;&#039;;
+		if ( isset( $query_args[&#039;customer_type&#039;] ) ) {
+			if ( &#039;new&#039; === strtolower( $query_args[&#039;customer_type&#039;] ) ) {
+				$customer_filter = &quot; {$wpdb-&gt;prefix}wc_order_stats.returning_customer = 0&quot;;
+			} elseif ( &#039;returning&#039; === strtolower( $query_args[&#039;customer_type&#039;] ) ) {
+				$customer_filter = &quot; {$wpdb-&gt;prefix}wc_order_stats.returning_customer = 1&quot;;
+			}
+		}
+
+		return $customer_filter;
+	}
+
+	/**
+	 * Returns product attribute subquery elements used in JOIN and WHERE clauses,
+	 * based on query arguments from the user.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return array
+	 */
+	protected function get_attribute_subqueries( $query_args ) {
+		global $wpdb;
+
+		$sql_clauses           = array(
+			&#039;join&#039;  =&gt; array(),
+			&#039;where&#039; =&gt; array(),
+		);
+		$match_operator        = $this-&gt;get_match_operator( $query_args );
+		$post_meta_comparators = array(
+			&#039;=&#039;  =&gt; &#039;attribute_is&#039;,
+			&#039;!=&#039; =&gt; &#039;attribute_is_not&#039;,
+		);
+
+		foreach ( $post_meta_comparators as $comparator =&gt; $arg ) {
+			if ( ! isset( $query_args[ $arg ] ) || ! is_array( $query_args[ $arg ] ) ) {
+				continue;
+			}
+			foreach ( $query_args[ $arg ] as $attribute_term ) {
+				// We expect tuples.
+				if ( ! is_array( $attribute_term ) || 2 !== count( $attribute_term ) ) {
+					continue;
+				}
+
+				// If the tuple is numeric, assume these are IDs.
+				if ( is_numeric( $attribute_term[0] ) &amp;&amp; is_numeric( $attribute_term[1] ) ) {
+					$attribute_id = intval( $attribute_term[0] );
+					$term_id      = intval( $attribute_term[1] );
+
+					// Invalid IDs.
+					if ( 0 === $attribute_id || 0 === $term_id ) {
+						continue;
+					}
+
+					// @todo: Use wc_get_attribute () instead ?
+					$attr_taxonomy = wc_attribute_taxonomy_name_by_id( $attribute_id );
+					// Invalid attribute ID.
+					if ( empty( $attr_taxonomy ) ) {
+						continue;
+					}
+
+					$attr_term = get_term_by( &#039;id&#039;, $term_id, $attr_taxonomy );
+					// Invalid term ID.
+					if ( false === $attr_term ) {
+						continue;
+					}
+
+					$meta_key   = sanitize_title( $attr_taxonomy );
+					$meta_value = $attr_term-&gt;slug;
+				} else {
+					// Assume these are a custom attribute slug/value pair.
+					$meta_key   = esc_sql( $attribute_term[0] );
+					$meta_value = esc_sql( $attribute_term[1] );
+				}
+
+				$join_alias       = &#039;orderitemmeta1&#039;;
+				$table_to_join_on = &quot;{$wpdb-&gt;prefix}wc_order_product_lookup&quot;;
+
+				if ( empty( $sql_clauses[&#039;join&#039;] ) ) {
+					$sql_clauses[&#039;join&#039;][] = &quot;JOIN {$wpdb-&gt;prefix}woocommerce_order_items orderitems ON orderitems.order_id = {$table_to_join_on}.order_id&quot;;
+				}
+
+				// If we&#039;re matching all filters (AND), we&#039;ll need multiple JOINs on postmeta.
+				// If not, just one.
+				if ( &#039;AND&#039; === $match_operator || 1 === count( $sql_clauses[&#039;join&#039;] ) ) {
+					$join_idx              = count( $sql_clauses[&#039;join&#039;] );
+					$join_alias            = &#039;orderitemmeta&#039; . $join_idx;
+					$sql_clauses[&#039;join&#039;][] = &quot;JOIN {$wpdb-&gt;prefix}woocommerce_order_itemmeta as {$join_alias} ON {$join_alias}.order_item_id = {$table_to_join_on}.order_item_id&quot;;
+				}
+
+				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				$sql_clauses[&#039;where&#039;][] = $wpdb-&gt;prepare( &quot;( {$join_alias}.meta_key = %s AND {$join_alias}.meta_value {$comparator} %s )&quot;, $meta_key, $meta_value );
+			}
+		}
+
+		// If we&#039;re matching multiple attributes and all filters (AND), make sure
+		// we&#039;re matching attributes on the same product.
+		$num_attribute_filters = count( $sql_clauses[&#039;join&#039;] );
+
+		for ( $i = 2; $i &lt; $num_attribute_filters; $i++ ) {
+			$join_alias            = &#039;orderitemmeta&#039; . $i;
+			$sql_clauses[&#039;join&#039;][] = &quot;AND orderitemmeta1.order_item_id = {$join_alias}.order_item_id&quot;;
+		}
+
+		return $sql_clauses;
+	}
+
+	/**
+	 * Returns logic operator for WHERE subclause based on &#039;match&#039; query argument.
+	 *
+	 * @param array $query_args Parameters supplied by the user.
+	 * @return string
+	 */
+	protected function get_match_operator( $query_args ) {
+		$operator = &#039;AND&#039;;
+
+		if ( ! isset( $query_args[&#039;match&#039;] ) ) {
+			return $operator;
+		}
+
+		if ( &#039;all&#039; === strtolower( $query_args[&#039;match&#039;] ) ) {
+			$operator = &#039;AND&#039;;
+		} elseif ( &#039;any&#039; === strtolower( $query_args[&#039;match&#039;] ) ) {
+			$operator = &#039;OR&#039;;
+		}
+		return $operator;
+	}
+
+	/**
+	 * Returns filtered comma separated ids, based on query arguments from the user.
+	 *
+	 * @param array  $query_args Parameters supplied by the user.
+	 * @param string $field      Query field to filter.
+	 * @param string $separator  Field separator.
+	 * @return string
+	 */
+	protected function get_filtered_ids( $query_args, $field, $separator = &#039;,&#039; ) {
+		global $wpdb;
+
+		$ids_str = &#039;&#039;;
+		$ids     = isset( $query_args[ $field ] ) &amp;&amp; is_array( $query_args[ $field ] ) ? $query_args[ $field ] : array();
+
+		/**
+		 * Filter the IDs before retrieving report data.
+		 *
+		 * Allows filtering of the objects included or excluded from reports.
+		 *
+		 * @param array  $ids        List of object Ids.
+		 * @param array  $query_args The original arguments for the request.
+		 * @param string $field      The object type.
+		 * @param string $context    The data store context.
+		 */
+		$ids = apply_filters( &#039;woocommerce_analytics_&#039; . $field, $ids, $query_args, $field, $this-&gt;context );
+
+		if ( ! empty( $ids ) ) {
+			$placeholders = implode( $separator, array_fill( 0, count( $ids ), &#039;%d&#039; ) );
+			/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+			$ids_str = $wpdb-&gt;prepare( &quot;{$placeholders}&quot;, $ids );
+			/* phpcs:enable */
+		}
+		return $ids_str;
+	}
+
+	/**
+	 * Assign report columns once full table name has been assigned.
+	 */
+	protected function assign_report_columns() {}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866951"></script>
+    <script src="../js/search.js?updated=1692866951"></script>
+</body>
+</html>

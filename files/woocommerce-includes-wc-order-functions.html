@@ -1,0 +1,2994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866949">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866949">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">wc-order-functions.php</h2>
+
+                
+
+            <section class="phpdocumentor-functions">
+        <h3 class="phpdocumentor-elements__header" id="functions">
+            Functions
+            <a href="#functions" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_orders">
+        wc_get_orders()
+        <a href="#function_wc_get_orders" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.29">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">29</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Standard way of retrieving orders based on certain parameters.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_orders</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$args</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a>&gt;|<abbr title="\stdClass">stdClass</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>This function should be used for order retrieval so that when we move to
+custom tables, functions still work.</p>
+<p>Args and usage: https://github.com/woocommerce/woocommerce/wiki/wc_get_orders-and-WC_Order_Query</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$args</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Array of args (above).</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_order">
+        wc_get_order()
+        <a href="#function_wc_get_order" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.81">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">81</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Main function for returning orders, uses the WC_Order_Factory class.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_order</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$the_order</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|<a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a>|<a href="../classes/WC-Order-Refund.html"><abbr title="\WC_Order_Refund">WC_Order_Refund</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$the_order</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Post object or post ID of the order.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.2</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_order_statuses">
+        wc_get_order_statuses()
+        <a href="#function_wc_get_order_statuses" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.96">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">96</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get all order statuses.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_order_statuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.2</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">used-by</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>WC_Order::set_status</p>
+</section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_is_order_status">
+        wc_is_order_status()
+        <a href="#function_wc_is_order_status" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.115">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">115</span>
+</aside>
+
+        <p class="phpdocumentor-summary">See if a string is an order status.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_is_order_status</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$maybe_status</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$maybe_status</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Status, including any wc- prefix.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_is_paid_statuses">
+        wc_get_is_paid_statuses()
+        <a href="#function_wc_get_is_paid_statuses" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.126">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">126</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get list of statuses which are consider &#039;paid&#039;.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_is_paid_statuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.0.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_is_pending_statuses">
+        wc_get_is_pending_statuses()
+        <a href="#function_wc_get_is_pending_statuses" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.136">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">136</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get list of statuses which are consider &#039;pending payment&#039;.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_is_pending_statuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_order_status_name">
+        wc_get_order_status_name()
+        <a href="#function_wc_get_order_status_name" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.147">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">147</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get the nice name for an order status.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_order_status_name</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$status</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$status</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Status.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.2</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_generate_order_key">
+        wc_generate_order_key()
+        <a href="#function_wc_generate_order_key" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.161">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">161</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Generate an order key with prefix.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_generate_order_key</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order key without a prefix. By default generates a 13 digit secret.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.5.4</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_order_id_by_order_key">
+        wc_get_order_id_by_order_key()
+        <a href="#function_wc_get_order_id_by_order_key" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.175">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">175</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Finds an Order ID based on an order key.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_order_id_by_order_key</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order_key</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order_key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>An order key has generated by.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_order_types">
+        wc_get_order_types()
+        <a href="#function_wc_get_order_types" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.189">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">189</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get all registered order types.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_order_types</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$for</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$for</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Optionally define what you are getting order types for so
+only relevant types are returned.
+e.g. for 'order-meta-boxes', 'order-count'.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.2</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_order_type">
+        wc_get_order_type()
+        <a href="#function_wc_get_order_type" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.273">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">273</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get an order type by post type name.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_order_type</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$type</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Post type name.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_register_order_type">
+        wc_register_order_type()
+        <a href="#function_wc_register_order_type" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.305">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">305</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Register order type. Do not use before init.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_register_order_type</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$args</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">array()</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"><p>Wrapper for register post type, as well as a method of telling WC which.
+post types are types of orders, and having them treated as such.</p>
+<p>$args are passed to register_post_type, but there are a few specific to this function:
+- exclude_from_orders_screen (bool) Whether or not this order type also get shown in the main.
+orders screen.
+- add_order_meta_boxes (bool) Whether or not the order type gets shop_order meta boxes.
+- exclude_from_order_count (bool) Whether or not this order type is excluded from counts.
+- exclude_from_order_views (bool) Whether or not this order type is visible by customers when.
+viewing orders e.g. on the my account page.
+- exclude_from_order_reports (bool) Whether or not to exclude this type from core reports.
+- exclude_from_order_sales_reports (bool) Whether or not to exclude this type from core sales reports.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$type</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Post type. (max. 20 characters, can not contain capital letters or spaces).</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$args</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">array()</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>An array of arguments.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.2</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\register_post_type">register_post_type</abbr></span>
+                                                                <section class="phpdocumentor-description"><p>for $args used in that function</p>
+</section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_processing_order_count">
+        wc_processing_order_count()
+        <a href="#function_wc_processing_order_count" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.345">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">345</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Return the count of processing orders.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_processing_order_count</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_orders_count">
+        wc_orders_count()
+        <a href="#function_wc_orders_count" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.356">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">356</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Return the orders count of a specific order status.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_orders_count</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$status</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$status</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Status.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$type</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>(Optional) Order type. Leave empty to include all 'for order-count' order types. @{see wc_get_order_types()}.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_downloadable_file_permission">
+        wc_downloadable_file_permission()
+        <a href="#function_wc_downloadable_file_permission" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.399">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">399</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Grant downloadable product access to the file identified by $download_id.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_downloadable_file_permission</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$download_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int|<a href="../classes/WC-Product.html"><abbr title="\WC_Product">WC_Product</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$product</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$qty</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">1</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Order-Item.html"><abbr title="\WC_Order_Item">WC_Order_Item</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$item</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$download_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File identifier.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$product</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|<a href="../classes/WC-Product.html"><abbr title="\WC_Product">WC_Product</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Product instance or ID.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order data.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$qty</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">1</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Quantity purchased.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$item</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Order-Item.html"><abbr title="\WC_Order_Item">WC_Order_Item</abbr></a></span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Item of the order.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_downloadable_product_permissions">
+        wc_downloadable_product_permissions()
+        <a href="#function_wc_downloadable_product_permissions" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.432">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">432</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Order Status completed - give downloadable product access to customer.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_downloadable_product_permissions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order_id</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$force</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order ID.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$force</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Force downloadable permissions.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_delete_shop_order_transients">
+        wc_delete_shop_order_transients()
+        <a href="#function_wc_delete_shop_order_transients" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.468">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">468</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Clear all transients cache for order data.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_delete_shop_order_transients</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|<a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|<a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order instance or ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_ship_to_billing_address_only">
+        wc_ship_to_billing_address_only()
+        <a href="#function_wc_ship_to_billing_address_only" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.511">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">511</span>
+</aside>
+
+        <p class="phpdocumentor-summary">See if we only ship to billing addresses.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_ship_to_billing_address_only</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_create_refund">
+        wc_create_refund()
+        <a href="#function_wc_create_refund" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.525">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">525</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Create a new order refund programmatically.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_create_refund</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$args</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">array()</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="../classes/WC-Order-Refund.html"><abbr title="\WC_Order_Refund">WC_Order_Refund</abbr></a>|<abbr title="\WP_Error">WP_Error</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>Returns a new refund object on success which can then be used to add additional data.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$args</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">array()</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>New refund arguments.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.2</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                                                    <section class="phpdocumentor-description"><p>Throws exceptions when fail to create, but returns WP_Error instead.</p>
+</section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_refund_payment">
+        wc_refund_payment()
+        <a href="#function_wc_refund_payment" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.689">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">689</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Try to refund the payment for an order via the gateway.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_refund_payment</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$amount</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$reason</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|<abbr title="\WP_Error">WP_Error</abbr></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order instance.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$amount</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Amount to refund.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$reason</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Refund reason.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.0.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                                                    <section class="phpdocumentor-description"><p>Throws exceptions when fail to refund, but returns WP_Error instead.</p>
+</section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_restock_refunded_items">
+        wc_restock_refunded_items()
+        <a href="#function_wc_restock_refunded_items" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.732">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">732</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Restock items during refund.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_restock_refunded_items</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$refunded_line_items</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order instance.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$refunded_line_items</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Refunded items list.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.0.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_tax_class_by_tax_id">
+        wc_get_tax_class_by_tax_id()
+        <a href="#function_wc_get_tax_class_by_tax_id" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.795">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">795</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get tax class by tax id.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_tax_class_by_tax_id</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$tax_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$tax_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Tax ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.2</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_payment_gateway_by_order">
+        wc_get_payment_gateway_by_order()
+        <a href="#function_wc_get_payment_gateway_by_order" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.807">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">807</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get payment gateway class by order data.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_payment_gateway_by_order</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|<a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="../classes/WC-Payment-Gateway.html"><abbr title="\WC_Payment_Gateway">WC_Payment_Gateway</abbr></a>|bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|<a href="../classes/WC-Order.html"><abbr title="\WC_Order">WC_Order</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order instance.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.2</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_order_fully_refunded">
+        wc_order_fully_refunded()
+        <a href="#function_wc_order_fully_refunded" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.830">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">830</span>
+</aside>
+
+        <p class="phpdocumentor-summary">When refunding an order, create a refund line item if the partial refunds do not match order total.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_order_fully_refunded</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"><p>This is manual; no gateway refund will be performed.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.4</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_order_search">
+        wc_order_search()
+        <a href="#function_wc_order_search" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.861">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">861</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Search orders.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_order_search</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$term</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$term</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Term to search.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_update_total_sales_counts">
+        wc_update_total_sales_counts()
+        <a href="#function_wc_update_total_sales_counts" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.872">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">872</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Update total sales amount for each product within a paid order.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_update_total_sales_counts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.0.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_update_coupon_usage_counts">
+        wc_update_coupon_usage_counts()
+        <a href="#function_wc_update_coupon_usage_counts" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.932">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">932</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Update used coupon amount for each coupon within an order.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_update_coupon_usage_counts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.0.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_cancel_unpaid_orders">
+        wc_cancel_unpaid_orders()
+        <a href="#function_wc_cancel_unpaid_orders" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.988">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">988</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Cancel all unpaid orders after held duration to prevent stock lock for those products.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_cancel_unpaid_orders</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_sanitize_order_id">
+        wc_sanitize_order_id()
+        <a href="#function_wc_sanitize_order_id" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.1025">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1025</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sanitize order id removing unwanted characters.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_sanitize_order_id</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"><p>E.g Users can sometimes try to track an order id using # with no success.
+This function will fix this.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.1.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_order_note">
+        wc_get_order_note()
+        <a href="#function_wc_get_order_note" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.1037">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1037</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get an order note.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_order_note</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|<abbr title="\WP_Comment">WP_Comment</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$data</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\stdClass">stdClass</abbr>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$data</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|<abbr title="\WP_Comment">WP_Comment</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Note ID (or WP_Comment instance for internal use only).</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.2.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_order_notes">
+        wc_get_order_notes()
+        <a href="#function_wc_get_order_notes" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.1086">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1086</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get order notes.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_order_notes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$args</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <abbr title="\stdClass">stdClass</abbr>&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$args</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Query arguments {
+Array of query parameters.</p>
+<pre class="prettyprint"><code class="prettyprint">@type string $limit         Maximum number of notes to retrieve.
+                            Default empty (no limit).
+@type int    $order_id      Limit results to those affiliated with a given order ID.
+                            Default 0.
+@type array  $order__in     Array of order IDs to include affiliated notes for.
+                            Default empty.
+@type array  $order__not_in Array of order IDs to exclude affiliated notes for.
+                            Default empty.
+@type string $orderby       Define how should sort notes.
+                            Accepts 'date_created', 'date_created_gmt' or 'id'.
+                            Default: 'id'.
+@type string $order         How to order retrieved notes.
+                            Accepts 'ASC' or 'DESC'.
+                            Default: 'DESC'.
+@type string $type          Define what type of note should retrieve.
+                            Accepts 'customer', 'internal' or empty for both.
+                            Default empty.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.2.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_create_order_note">
+        wc_create_order_note()
+        <a href="#function_wc_create_order_note" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.1156">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1156</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Create an order note.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_create_order_note</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$order_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$note</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$is_customer_note</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$added_by_user</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|<abbr title="\WP_Error">WP_Error</abbr></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$order_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order ID.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$note</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Note to add.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$is_customer_note</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>If is a costumer note.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$added_by_user</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>If note is create by an user.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.2.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_delete_order_note">
+        wc_delete_order_note()
+        <a href="#function_wc_delete_order_note" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-order-functions.php"><a href="../files/woocommerce-includes-wc-order-functions.html#source-view.1173">includes/wc-order-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1173</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Delete an order note.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_delete_order_note</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$note_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$note_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Order note.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.2.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+            </section>
+
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WooCommerce Order Functions
+ *
+ * Functions for order specific things.
+ *
+ * @package WooCommerce\Functions
+ * @version 3.4.0
+ */
+
+use Automattic\WooCommerce\Internal\DataStores\Orders\DataSynchronizer;
+use Automattic\WooCommerce\Utilities\StringUtil;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Standard way of retrieving orders based on certain parameters.
+ *
+ * This function should be used for order retrieval so that when we move to
+ * custom tables, functions still work.
+ *
+ * Args and usage: https://github.com/woocommerce/woocommerce/wiki/wc_get_orders-and-WC_Order_Query
+ *
+ * @since  2.6.0
+ * @param  array $args Array of args (above).
+ * @return WC_Order[]|stdClass Number of pages and an array of order objects if
+ *                             paginate is true, or just an array of values.
+ */
+function wc_get_orders( $args ) {
+	$map_legacy = array(
+		&#039;numberposts&#039;    =&gt; &#039;limit&#039;,
+		&#039;post_type&#039;      =&gt; &#039;type&#039;,
+		&#039;post_status&#039;    =&gt; &#039;status&#039;,
+		&#039;post_parent&#039;    =&gt; &#039;parent&#039;,
+		&#039;author&#039;         =&gt; &#039;customer&#039;,
+		&#039;email&#039;          =&gt; &#039;billing_email&#039;,
+		&#039;posts_per_page&#039; =&gt; &#039;limit&#039;,
+		&#039;paged&#039;          =&gt; &#039;page&#039;,
+	);
+
+	foreach ( $map_legacy as $from =&gt; $to ) {
+		if ( isset( $args[ $from ] ) ) {
+			$args[ $to ] = $args[ $from ];
+		}
+	}
+
+	// Map legacy date args to modern date args.
+	$date_before = false;
+	$date_after  = false;
+
+	if ( ! empty( $args[&#039;date_before&#039;] ) ) {
+		$datetime    = wc_string_to_datetime( $args[&#039;date_before&#039;] );
+		$date_before = strpos( $args[&#039;date_before&#039;], &#039;:&#039; ) ? $datetime-&gt;getOffsetTimestamp() : $datetime-&gt;date( &#039;Y-m-d&#039; );
+	}
+	if ( ! empty( $args[&#039;date_after&#039;] ) ) {
+		$datetime   = wc_string_to_datetime( $args[&#039;date_after&#039;] );
+		$date_after = strpos( $args[&#039;date_after&#039;], &#039;:&#039; ) ? $datetime-&gt;getOffsetTimestamp() : $datetime-&gt;date( &#039;Y-m-d&#039; );
+	}
+
+	if ( $date_before &amp;&amp; $date_after ) {
+		$args[&#039;date_created&#039;] = $date_after . &#039;...&#039; . $date_before;
+	} elseif ( $date_before ) {
+		$args[&#039;date_created&#039;] = &#039;&lt;&#039; . $date_before;
+	} elseif ( $date_after ) {
+		$args[&#039;date_created&#039;] = &#039;&gt;&#039; . $date_after;
+	}
+
+	$query = new WC_Order_Query( $args );
+	return $query-&gt;get_orders();
+}
+
+/**
+ * Main function for returning orders, uses the WC_Order_Factory class.
+ *
+ * @since  2.2
+ *
+ * @param mixed $the_order       Post object or post ID of the order.
+ *
+ * @return bool|WC_Order|WC_Order_Refund
+ */
+function wc_get_order( $the_order = false ) {
+	if ( ! did_action( &#039;woocommerce_after_register_post_type&#039; ) ) {
+		wc_doing_it_wrong( __FUNCTION__, &#039;wc_get_order should not be called before post types are registered (woocommerce_after_register_post_type action)&#039;, &#039;2.5&#039; );
+		return false;
+	}
+	return WC()-&gt;order_factory-&gt;get_order( $the_order );
+}
+
+/**
+ * Get all order statuses.
+ *
+ * @since 2.2
+ * @used-by WC_Order::set_status
+ * @return array
+ */
+function wc_get_order_statuses() {
+	$order_statuses = array(
+		&#039;wc-pending&#039;    =&gt; _x( &#039;Pending payment&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+		&#039;wc-processing&#039; =&gt; _x( &#039;Processing&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+		&#039;wc-on-hold&#039;    =&gt; _x( &#039;On hold&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+		&#039;wc-completed&#039;  =&gt; _x( &#039;Completed&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+		&#039;wc-cancelled&#039;  =&gt; _x( &#039;Cancelled&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+		&#039;wc-refunded&#039;   =&gt; _x( &#039;Refunded&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+		&#039;wc-failed&#039;     =&gt; _x( &#039;Failed&#039;, &#039;Order status&#039;, &#039;woocommerce&#039; ),
+	);
+	return apply_filters( &#039;wc_order_statuses&#039;, $order_statuses );
+}
+
+/**
+ * See if a string is an order status.
+ *
+ * @param  string $maybe_status Status, including any wc- prefix.
+ * @return bool
+ */
+function wc_is_order_status( $maybe_status ) {
+	$order_statuses = wc_get_order_statuses();
+	return isset( $order_statuses[ $maybe_status ] );
+}
+
+/**
+ * Get list of statuses which are consider &#039;paid&#039;.
+ *
+ * @since  3.0.0
+ * @return array
+ */
+function wc_get_is_paid_statuses() {
+	return apply_filters( &#039;woocommerce_order_is_paid_statuses&#039;, array( &#039;processing&#039;, &#039;completed&#039; ) );
+}
+
+/**
+ * Get list of statuses which are consider &#039;pending payment&#039;.
+ *
+ * @since  3.6.0
+ * @return array
+ */
+function wc_get_is_pending_statuses() {
+	return apply_filters( &#039;woocommerce_order_is_pending_statuses&#039;, array( &#039;pending&#039; ) );
+}
+
+/**
+ * Get the nice name for an order status.
+ *
+ * @since  2.2
+ * @param  string $status Status.
+ * @return string
+ */
+function wc_get_order_status_name( $status ) {
+	$statuses = wc_get_order_statuses();
+	$status   = &#039;wc-&#039; === substr( $status, 0, 3 ) ? substr( $status, 3 ) : $status;
+	$status   = isset( $statuses[ &#039;wc-&#039; . $status ] ) ? $statuses[ &#039;wc-&#039; . $status ] : $status;
+	return $status;
+}
+
+/**
+ * Generate an order key with prefix.
+ *
+ * @since 3.5.4
+ * @param string $key Order key without a prefix. By default generates a 13 digit secret.
+ * @return string The order key.
+ */
+function wc_generate_order_key( $key = &#039;&#039; ) {
+	if ( &#039;&#039; === $key ) {
+		$key = wp_generate_password( 13, false );
+	}
+
+	return &#039;wc_&#039; . apply_filters( &#039;woocommerce_generate_order_key&#039;, &#039;order_&#039; . $key );
+}
+
+/**
+ * Finds an Order ID based on an order key.
+ *
+ * @param string $order_key An order key has generated by.
+ * @return int The ID of an order, or 0 if the order could not be found.
+ */
+function wc_get_order_id_by_order_key( $order_key ) {
+	$data_store = WC_Data_Store::load( &#039;order&#039; );
+	return $data_store-&gt;get_order_id_by_order_key( $order_key );
+}
+
+/**
+ * Get all registered order types.
+ *
+ * @since  2.2
+ * @param  string $for Optionally define what you are getting order types for so
+ *                     only relevant types are returned.
+ *                     e.g. for &#039;order-meta-boxes&#039;, &#039;order-count&#039;.
+ * @return array
+ */
+function wc_get_order_types( $for = &#039;&#039; ) {
+	global $wc_order_types;
+
+	if ( ! is_array( $wc_order_types ) ) {
+		$wc_order_types = array();
+	}
+
+	$order_types = array();
+
+	switch ( $for ) {
+		case &#039;order-count&#039;:
+			foreach ( $wc_order_types as $type =&gt; $args ) {
+				if ( ! $args[&#039;exclude_from_order_count&#039;] ) {
+					$order_types[] = $type;
+				}
+			}
+			break;
+		case &#039;order-meta-boxes&#039;:
+			foreach ( $wc_order_types as $type =&gt; $args ) {
+				if ( $args[&#039;add_order_meta_boxes&#039;] ) {
+					$order_types[] = $type;
+				}
+			}
+			break;
+		case &#039;view-orders&#039;:
+			foreach ( $wc_order_types as $type =&gt; $args ) {
+				if ( ! $args[&#039;exclude_from_order_views&#039;] ) {
+					$order_types[] = $type;
+				}
+			}
+			break;
+		case &#039;reports&#039;:
+			foreach ( $wc_order_types as $type =&gt; $args ) {
+				if ( ! $args[&#039;exclude_from_order_reports&#039;] ) {
+					$order_types[] = $type;
+				}
+			}
+			break;
+		case &#039;sales-reports&#039;:
+			foreach ( $wc_order_types as $type =&gt; $args ) {
+				if ( ! $args[&#039;exclude_from_order_sales_reports&#039;] ) {
+					$order_types[] = $type;
+				}
+			}
+			break;
+		case &#039;order-webhooks&#039;:
+			foreach ( $wc_order_types as $type =&gt; $args ) {
+				if ( ! $args[&#039;exclude_from_order_webhooks&#039;] ) {
+					$order_types[] = $type;
+				}
+			}
+			break;
+		case &#039;cot-migration&#039;:
+			foreach ( $wc_order_types as $type =&gt; $args ) {
+				if ( DataSynchronizer::PLACEHOLDER_ORDER_POST_TYPE !== $type ) {
+					$order_types[] = $type;
+				}
+			}
+			break;
+		case &#039;admin-menu&#039;:
+			$order_types = array_intersect(
+				array_keys( $wc_order_types ),
+				get_post_types(
+					array(
+						&#039;show_ui&#039;      =&gt; true,
+						&#039;show_in_menu&#039; =&gt; &#039;woocommerce&#039;,
+					)
+				)
+			);
+			break;
+		default:
+			$order_types = array_keys( $wc_order_types );
+			break;
+	}
+
+	return apply_filters( &#039;wc_order_types&#039;, $order_types, $for );
+}
+
+/**
+ * Get an order type by post type name.
+ *
+ * @param  string $type Post type name.
+ * @return bool|array Details about the order type.
+ */
+function wc_get_order_type( $type ) {
+	global $wc_order_types;
+
+	if ( isset( $wc_order_types[ $type ] ) ) {
+		return $wc_order_types[ $type ];
+	}
+
+	return false;
+}
+
+/**
+ * Register order type. Do not use before init.
+ *
+ * Wrapper for register post type, as well as a method of telling WC which.
+ * post types are types of orders, and having them treated as such.
+ *
+ * $args are passed to register_post_type, but there are a few specific to this function:
+ *      - exclude_from_orders_screen (bool) Whether or not this order type also get shown in the main.
+ *      orders screen.
+ *      - add_order_meta_boxes (bool) Whether or not the order type gets shop_order meta boxes.
+ *      - exclude_from_order_count (bool) Whether or not this order type is excluded from counts.
+ *      - exclude_from_order_views (bool) Whether or not this order type is visible by customers when.
+ *      viewing orders e.g. on the my account page.
+ *      - exclude_from_order_reports (bool) Whether or not to exclude this type from core reports.
+ *      - exclude_from_order_sales_reports (bool) Whether or not to exclude this type from core sales reports.
+ *
+ * @since  2.2
+ * @see    register_post_type for $args used in that function
+ * @param  string $type Post type. (max. 20 characters, can not contain capital letters or spaces).
+ * @param  array  $args An array of arguments.
+ * @return bool Success or failure
+ */
+function wc_register_order_type( $type, $args = array() ) {
+	if ( post_type_exists( $type ) ) {
+		return false;
+	}
+
+	global $wc_order_types;
+
+	if ( ! is_array( $wc_order_types ) ) {
+		$wc_order_types = array();
+	}
+
+	// Register as a post type.
+	if ( is_wp_error( register_post_type( $type, $args ) ) ) {
+		return false;
+	}
+
+	// Register for WC usage.
+	$order_type_args = array(
+		&#039;exclude_from_orders_screen&#039;       =&gt; false,
+		&#039;add_order_meta_boxes&#039;             =&gt; true,
+		&#039;exclude_from_order_count&#039;         =&gt; false,
+		&#039;exclude_from_order_views&#039;         =&gt; false,
+		&#039;exclude_from_order_webhooks&#039;      =&gt; false,
+		&#039;exclude_from_order_reports&#039;       =&gt; false,
+		&#039;exclude_from_order_sales_reports&#039; =&gt; false,
+		&#039;class_name&#039;                       =&gt; &#039;WC_Order&#039;,
+	);
+
+	$args                    = array_intersect_key( $args, $order_type_args );
+	$args                    = wp_parse_args( $args, $order_type_args );
+	$wc_order_types[ $type ] = $args;
+
+	return true;
+}
+
+/**
+ * Return the count of processing orders.
+ *
+ * @return int
+ */
+function wc_processing_order_count() {
+	return wc_orders_count( &#039;processing&#039; );
+}
+
+/**
+ * Return the orders count of a specific order status.
+ *
+ * @param string $status Status.
+ * @param string $type   (Optional) Order type. Leave empty to include all &#039;for order-count&#039; order types. @{see wc_get_order_types()}.
+ * @return int
+ */
+function wc_orders_count( $status, string $type = &#039;&#039; ) {
+	$count           = 0;
+	$legacy_statuses = array( &#039;draft&#039;, &#039;trash&#039; );
+	$valid_statuses  = array_merge( array_keys( wc_get_order_statuses() ), $legacy_statuses );
+	$status          = ( ! in_array( $status, $legacy_statuses, true ) &amp;&amp; 0 !== strpos( $status, &#039;wc-&#039; ) ) ? &#039;wc-&#039; . $status : $status;
+	$valid_types     = wc_get_order_types( &#039;order-count&#039; );
+	$type            = trim( $type );
+
+	if ( ! in_array( $status, $valid_statuses, true ) || ( $type &amp;&amp; ! in_array( $type, $valid_types, true ) ) ) {
+		return 0;
+	}
+
+	$cache_key    = WC_Cache_Helper::get_cache_prefix( &#039;orders&#039; ) . $status . $type;
+	$cached_count = wp_cache_get( $cache_key, &#039;counts&#039; );
+
+	if ( false !== $cached_count ) {
+		return $cached_count;
+	}
+
+	$types_for_count = $type ? array( $type ) : $valid_types;
+
+	foreach ( $types_for_count as $type ) {
+		$data_store = WC_Data_Store::load( &#039;shop_order&#039; === $type ? &#039;order&#039; : $type );
+		if ( $data_store ) {
+			$count += $data_store-&gt;get_order_count( $status );
+		}
+	}
+
+	wp_cache_set( $cache_key, $count, &#039;counts&#039; );
+
+	return $count;
+}
+
+/**
+ * Grant downloadable product access to the file identified by $download_id.
+ *
+ * @param  string         $download_id File identifier.
+ * @param  int|WC_Product $product     Product instance or ID.
+ * @param  WC_Order       $order       Order data.
+ * @param  int            $qty         Quantity purchased.
+ * @param  WC_Order_Item  $item        Item of the order.
+ * @return int|bool insert id or false on failure.
+ */
+function wc_downloadable_file_permission( $download_id, $product, $order, $qty = 1, $item = null ) {
+	if ( is_numeric( $product ) ) {
+		$product = wc_get_product( $product );
+	}
+	$download = new WC_Customer_Download();
+	$download-&gt;set_download_id( $download_id );
+	$download-&gt;set_product_id( $product-&gt;get_id() );
+	$download-&gt;set_user_id( $order-&gt;get_customer_id() );
+	$download-&gt;set_order_id( $order-&gt;get_id() );
+	$download-&gt;set_user_email( $order-&gt;get_billing_email() );
+	$download-&gt;set_order_key( $order-&gt;get_order_key() );
+	$download-&gt;set_downloads_remaining( 0 &gt; $product-&gt;get_download_limit() ? &#039;&#039; : $product-&gt;get_download_limit() * $qty );
+	$download-&gt;set_access_granted( time() );
+	$download-&gt;set_download_count( 0 );
+
+	$expiry = $product-&gt;get_download_expiry();
+
+	if ( $expiry &gt; 0 ) {
+		$from_date = $order-&gt;get_date_completed() ? $order-&gt;get_date_completed()-&gt;format( &#039;Y-m-d&#039; ) : current_time( &#039;mysql&#039;, true );
+		$download-&gt;set_access_expires( strtotime( $from_date . &#039; + &#039; . $expiry . &#039; DAY&#039; ) );
+	}
+
+	$download = apply_filters( &#039;woocommerce_downloadable_file_permission&#039;, $download, $product, $order, $qty, $item );
+
+	return $download-&gt;save();
+}
+
+/**
+ * Order Status completed - give downloadable product access to customer.
+ *
+ * @param int  $order_id Order ID.
+ * @param bool $force    Force downloadable permissions.
+ */
+function wc_downloadable_product_permissions( $order_id, $force = false ) {
+	$order = wc_get_order( $order_id );
+
+	if ( ! $order || ( $order-&gt;get_data_store()-&gt;get_download_permissions_granted( $order ) &amp;&amp; ! $force ) ) {
+		return;
+	}
+
+	if ( $order-&gt;has_status( &#039;processing&#039; ) &amp;&amp; &#039;no&#039; === get_option( &#039;woocommerce_downloads_grant_access_after_payment&#039; ) ) {
+		return;
+	}
+
+	if ( count( $order-&gt;get_items() ) &gt; 0 ) {
+		foreach ( $order-&gt;get_items() as $item ) {
+			$product = $item-&gt;get_product();
+
+			if ( $product &amp;&amp; $product-&gt;exists() &amp;&amp; $product-&gt;is_downloadable() ) {
+				$downloads = $product-&gt;get_downloads();
+
+				foreach ( array_keys( $downloads ) as $download_id ) {
+					wc_downloadable_file_permission( $download_id, $product, $order, $item-&gt;get_quantity(), $item );
+				}
+			}
+		}
+	}
+
+	$order-&gt;get_data_store()-&gt;set_download_permissions_granted( $order, true );
+	do_action( &#039;woocommerce_grant_product_download_permissions&#039;, $order_id );
+}
+add_action( &#039;woocommerce_order_status_completed&#039;, &#039;wc_downloadable_product_permissions&#039; );
+add_action( &#039;woocommerce_order_status_processing&#039;, &#039;wc_downloadable_product_permissions&#039; );
+
+/**
+ * Clear all transients cache for order data.
+ *
+ * @param int|WC_Order $order Order instance or ID.
+ */
+function wc_delete_shop_order_transients( $order = 0 ) {
+	if ( is_numeric( $order ) ) {
+		$order = wc_get_order( $order );
+	}
+	$reports             = WC_Admin_Reports::get_reports();
+	$transients_to_clear = array(
+		&#039;wc_admin_report&#039;,
+	);
+
+	foreach ( $reports as $report_group ) {
+		foreach ( $report_group[&#039;reports&#039;] as $report_key =&gt; $report ) {
+			$transients_to_clear[] = &#039;wc_report_&#039; . $report_key;
+		}
+	}
+
+	foreach ( $transients_to_clear as $transient ) {
+		delete_transient( $transient );
+	}
+
+	// Clear customer&#039;s order related caches.
+	if ( is_a( $order, &#039;WC_Order&#039; ) ) {
+		$order_id = $order-&gt;get_id();
+		delete_user_meta( $order-&gt;get_customer_id(), &#039;_money_spent&#039; );
+		delete_user_meta( $order-&gt;get_customer_id(), &#039;_order_count&#039; );
+		delete_user_meta( $order-&gt;get_customer_id(), &#039;_last_order&#039; );
+	} else {
+		$order_id = 0;
+	}
+
+	// Increments the transient version to invalidate cache.
+	WC_Cache_Helper::get_transient_version( &#039;orders&#039;, true );
+
+	// Do the same for regular cache.
+	WC_Cache_Helper::invalidate_cache_group( &#039;orders&#039; );
+
+	do_action( &#039;woocommerce_delete_shop_order_transients&#039;, $order_id );
+}
+
+/**
+ * See if we only ship to billing addresses.
+ *
+ * @return bool
+ */
+function wc_ship_to_billing_address_only() {
+	return &#039;billing_only&#039; === get_option( &#039;woocommerce_ship_to_destination&#039; );
+}
+
+/**
+ * Create a new order refund programmatically.
+ *
+ * Returns a new refund object on success which can then be used to add additional data.
+ *
+ * @since 2.2
+ * @throws Exception Throws exceptions when fail to create, but returns WP_Error instead.
+ * @param array $args New refund arguments.
+ * @return WC_Order_Refund|WP_Error
+ */
+function wc_create_refund( $args = array() ) {
+	$default_args = array(
+		&#039;amount&#039;         =&gt; 0,
+		&#039;reason&#039;         =&gt; null,
+		&#039;order_id&#039;       =&gt; 0,
+		&#039;refund_id&#039;      =&gt; 0,
+		&#039;line_items&#039;     =&gt; array(),
+		&#039;refund_payment&#039; =&gt; false,
+		&#039;restock_items&#039;  =&gt; false,
+	);
+
+	try {
+		$args  = wp_parse_args( $args, $default_args );
+		$order = wc_get_order( $args[&#039;order_id&#039;] );
+
+		if ( ! $order ) {
+			throw new Exception( __( &#039;Invalid order ID.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$remaining_refund_amount = $order-&gt;get_remaining_refund_amount();
+		$remaining_refund_items  = $order-&gt;get_remaining_refund_items();
+		$refund_item_count       = 0;
+		$refund                  = new WC_Order_Refund( $args[&#039;refund_id&#039;] );
+
+		if ( 0 &gt; $args[&#039;amount&#039;] || $args[&#039;amount&#039;] &gt; $remaining_refund_amount ) {
+			throw new Exception( __( &#039;Invalid refund amount.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$refund-&gt;set_currency( $order-&gt;get_currency() );
+		$refund-&gt;set_amount( $args[&#039;amount&#039;] );
+		$refund-&gt;set_parent_id( absint( $args[&#039;order_id&#039;] ) );
+		$refund-&gt;set_refunded_by( get_current_user_id() ? get_current_user_id() : 1 );
+		$refund-&gt;set_prices_include_tax( $order-&gt;get_prices_include_tax() );
+
+		if ( ! is_null( $args[&#039;reason&#039;] ) ) {
+			$refund-&gt;set_reason( $args[&#039;reason&#039;] );
+		}
+
+		// Negative line items.
+		if ( count( $args[&#039;line_items&#039;] ) &gt; 0 ) {
+			$items = $order-&gt;get_items( array( &#039;line_item&#039;, &#039;fee&#039;, &#039;shipping&#039; ) );
+
+			foreach ( $items as $item_id =&gt; $item ) {
+				if ( ! isset( $args[&#039;line_items&#039;][ $item_id ] ) ) {
+					continue;
+				}
+
+				$qty          = isset( $args[&#039;line_items&#039;][ $item_id ][&#039;qty&#039;] ) ? $args[&#039;line_items&#039;][ $item_id ][&#039;qty&#039;] : 0;
+				$refund_total = $args[&#039;line_items&#039;][ $item_id ][&#039;refund_total&#039;];
+				$refund_tax   = isset( $args[&#039;line_items&#039;][ $item_id ][&#039;refund_tax&#039;] ) ? array_filter( (array) $args[&#039;line_items&#039;][ $item_id ][&#039;refund_tax&#039;] ) : array();
+
+				if ( empty( $qty ) &amp;&amp; empty( $refund_total ) &amp;&amp; empty( $args[&#039;line_items&#039;][ $item_id ][&#039;refund_tax&#039;] ) ) {
+					continue;
+				}
+
+				$class         = get_class( $item );
+				$refunded_item = new $class( $item );
+				$refunded_item-&gt;set_id( 0 );
+				$refunded_item-&gt;add_meta_data( &#039;_refunded_item_id&#039;, $item_id, true );
+				$refunded_item-&gt;set_total( wc_format_refund_total( $refund_total ) );
+				$refunded_item-&gt;set_taxes(
+					array(
+						&#039;total&#039;    =&gt; array_map( &#039;wc_format_refund_total&#039;, $refund_tax ),
+						&#039;subtotal&#039; =&gt; array_map( &#039;wc_format_refund_total&#039;, $refund_tax ),
+					)
+				);
+
+				if ( is_callable( array( $refunded_item, &#039;set_subtotal&#039; ) ) ) {
+					$refunded_item-&gt;set_subtotal( wc_format_refund_total( $refund_total ) );
+				}
+
+				if ( is_callable( array( $refunded_item, &#039;set_quantity&#039; ) ) ) {
+					$refunded_item-&gt;set_quantity( $qty * -1 );
+				}
+
+				$refund-&gt;add_item( $refunded_item );
+				$refund_item_count += $qty;
+			}
+		}
+
+		$refund-&gt;update_taxes();
+		$refund-&gt;calculate_totals( false );
+		$refund-&gt;set_total( $args[&#039;amount&#039;] * -1 );
+
+		// this should remain after update_taxes(), as this will save the order, and write the current date to the db
+		// so we must wait until the order is persisted to set the date.
+		if ( isset( $args[&#039;date_created&#039;] ) ) {
+			$refund-&gt;set_date_created( $args[&#039;date_created&#039;] );
+		}
+
+		/**
+		 * Action hook to adjust refund before save.
+		 *
+		 * @since 3.0.0
+		 */
+		do_action( &#039;woocommerce_create_refund&#039;, $refund, $args );
+
+		if ( $refund-&gt;save() ) {
+			if ( $args[&#039;refund_payment&#039;] ) {
+				$result = wc_refund_payment( $order, $refund-&gt;get_amount(), $refund-&gt;get_reason() );
+
+				if ( is_wp_error( $result ) ) {
+					$refund-&gt;delete();
+					return $result;
+				}
+
+				$refund-&gt;set_refunded_payment( true );
+				$refund-&gt;save();
+			}
+
+			if ( $args[&#039;restock_items&#039;] ) {
+				wc_restock_refunded_items( $order, $args[&#039;line_items&#039;] );
+			}
+
+			/**
+			 * Trigger notification emails.
+			 *
+			 * Filter hook to modify the partially-refunded status conditions.
+			 *
+			 * @since 6.7.0
+			 *
+			 * @param bool $is_partially_refunded Whether the order is partially refunded.
+			 * @param int  $order_id The order id.
+			 * @param int  $refund_id The refund id.
+			 */
+			if ( (bool) apply_filters( &#039;woocommerce_order_is_partially_refunded&#039;, ( $remaining_refund_amount - $args[&#039;amount&#039;] ) &gt; 0 || ( $order-&gt;has_free_item() &amp;&amp; ( $remaining_refund_items - $refund_item_count ) &gt; 0 ), $order-&gt;get_id(), $refund-&gt;get_id() ) ) {
+				do_action( &#039;woocommerce_order_partially_refunded&#039;, $order-&gt;get_id(), $refund-&gt;get_id() );
+			} else {
+				do_action( &#039;woocommerce_order_fully_refunded&#039;, $order-&gt;get_id(), $refund-&gt;get_id() );
+
+				$parent_status = apply_filters( &#039;woocommerce_order_fully_refunded_status&#039;, &#039;refunded&#039;, $order-&gt;get_id(), $refund-&gt;get_id() );
+
+				if ( $parent_status ) {
+					$order-&gt;update_status( $parent_status );
+				}
+			}
+		}
+
+		$order-&gt;set_date_modified( time() );
+		$order-&gt;save();
+
+		do_action( &#039;woocommerce_refund_created&#039;, $refund-&gt;get_id(), $args );
+		do_action( &#039;woocommerce_order_refunded&#039;, $order-&gt;get_id(), $refund-&gt;get_id() );
+
+	} catch ( Exception $e ) {
+		if ( isset( $refund ) &amp;&amp; is_a( $refund, &#039;WC_Order_Refund&#039; ) ) {
+			$refund-&gt;delete( true );
+		}
+		return new WP_Error( &#039;error&#039;, $e-&gt;getMessage() );
+	}
+
+	return $refund;
+}
+
+/**
+ * Try to refund the payment for an order via the gateway.
+ *
+ * @since 3.0.0
+ * @throws Exception Throws exceptions when fail to refund, but returns WP_Error instead.
+ * @param WC_Order $order  Order instance.
+ * @param string   $amount Amount to refund.
+ * @param string   $reason Refund reason.
+ * @return bool|WP_Error
+ */
+function wc_refund_payment( $order, $amount, $reason = &#039;&#039; ) {
+	try {
+		if ( ! is_a( $order, &#039;WC_Order&#039; ) ) {
+			throw new Exception( __( &#039;Invalid order.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$gateway_controller = WC_Payment_Gateways::instance();
+		$all_gateways       = $gateway_controller-&gt;payment_gateways();
+		$payment_method     = $order-&gt;get_payment_method();
+		$gateway            = isset( $all_gateways[ $payment_method ] ) ? $all_gateways[ $payment_method ] : false;
+
+		if ( ! $gateway ) {
+			throw new Exception( __( &#039;The payment gateway for this order does not exist.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		if ( ! $gateway-&gt;supports( &#039;refunds&#039; ) ) {
+			throw new Exception( __( &#039;The payment gateway for this order does not support automatic refunds.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$result = $gateway-&gt;process_refund( $order-&gt;get_id(), $amount, $reason );
+
+		if ( ! $result ) {
+			throw new Exception( __( &#039;An error occurred while attempting to create the refund using the payment gateway API.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		if ( is_wp_error( $result ) ) {
+			throw new Exception( $result-&gt;get_error_message() );
+		}
+
+		return true;
+
+	} catch ( Exception $e ) {
+		return new WP_Error( &#039;error&#039;, $e-&gt;getMessage() );
+	}
+}
+
+/**
+ * Restock items during refund.
+ *
+ * @since 3.0.0
+ * @param WC_Order $order               Order instance.
+ * @param array    $refunded_line_items Refunded items list.
+ */
+function wc_restock_refunded_items( $order, $refunded_line_items ) {
+	if ( ! apply_filters( &#039;woocommerce_can_restock_refunded_items&#039;, true, $order, $refunded_line_items ) ) {
+		return;
+	}
+
+	$line_items = $order-&gt;get_items();
+
+	foreach ( $line_items as $item_id =&gt; $item ) {
+		if ( ! isset( $refunded_line_items[ $item_id ], $refunded_line_items[ $item_id ][&#039;qty&#039;] ) ) {
+			continue;
+		}
+		$product                = $item-&gt;get_product();
+		$item_stock_reduced     = $item-&gt;get_meta( &#039;_reduced_stock&#039;, true );
+		$restock_refunded_items = (int) $item-&gt;get_meta( &#039;_restock_refunded_items&#039;, true );
+		$qty_to_refund          = $refunded_line_items[ $item_id ][&#039;qty&#039;];
+
+		if ( ! $item_stock_reduced || ! $qty_to_refund || ! $product || ! $product-&gt;managing_stock() ) {
+			continue;
+		}
+
+		$old_stock = $product-&gt;get_stock_quantity();
+		$new_stock = wc_update_product_stock( $product, $qty_to_refund, &#039;increase&#039; );
+
+		// Update _reduced_stock meta to track changes.
+		$item_stock_reduced = $item_stock_reduced - $qty_to_refund;
+
+		// Keeps track of total running tally of reduced stock.
+		$item-&gt;update_meta_data( &#039;_reduced_stock&#039;, $item_stock_reduced );
+
+		// Keeps track of only refunded items that needs restock.
+		$item-&gt;update_meta_data( &#039;_restock_refunded_items&#039;, $qty_to_refund + $restock_refunded_items );
+
+		/* translators: 1: product ID 2: old stock level 3: new stock level */
+		$restock_note = sprintf( __( &#039;Item #%1$s stock increased from %2$s to %3$s.&#039;, &#039;woocommerce&#039; ), $product-&gt;get_id(), $old_stock, $new_stock );
+
+		/**
+		 * Allow the restock note to be modified.
+		 *
+		 * @since 6.4.0
+		 *
+		 * @param string $restock_note The original note.
+		 * @param int $old_stock The old stock.
+		 * @param bool|int|null $new_stock The new stock.
+		 * @param WC_Order $order The order the refund was done for.
+		 * @param bool|WC_Product $product The product the refund was done for.
+		 */
+		$restock_note = apply_filters( &#039;woocommerce_refund_restock_note&#039;, $restock_note, $old_stock, $new_stock, $order, $product );
+
+		$order-&gt;add_order_note( $restock_note );
+
+		$item-&gt;save();
+
+		do_action( &#039;woocommerce_restock_refunded_item&#039;, $product-&gt;get_id(), $old_stock, $new_stock, $order, $product );
+	}
+}
+
+/**
+ * Get tax class by tax id.
+ *
+ * @since 2.2
+ * @param int $tax_id Tax ID.
+ * @return string
+ */
+function wc_get_tax_class_by_tax_id( $tax_id ) {
+	global $wpdb;
+	return $wpdb-&gt;get_var( $wpdb-&gt;prepare( &quot;SELECT tax_rate_class FROM {$wpdb-&gt;prefix}woocommerce_tax_rates WHERE tax_rate_id = %d&quot;, $tax_id ) );
+}
+
+/**
+ * Get payment gateway class by order data.
+ *
+ * @since 2.2
+ * @param int|WC_Order $order Order instance.
+ * @return WC_Payment_Gateway|bool
+ */
+function wc_get_payment_gateway_by_order( $order ) {
+	if ( WC()-&gt;payment_gateways() ) {
+		$payment_gateways = WC()-&gt;payment_gateways()-&gt;payment_gateways();
+	} else {
+		$payment_gateways = array();
+	}
+
+	if ( ! is_object( $order ) ) {
+		$order_id = absint( $order );
+		$order    = wc_get_order( $order_id );
+	}
+
+	return is_a( $order, &#039;WC_Order&#039; ) &amp;&amp; isset( $payment_gateways[ $order-&gt;get_payment_method() ] ) ? $payment_gateways[ $order-&gt;get_payment_method() ] : false;
+}
+
+/**
+ * When refunding an order, create a refund line item if the partial refunds do not match order total.
+ *
+ * This is manual; no gateway refund will be performed.
+ *
+ * @since 2.4
+ * @param int $order_id Order ID.
+ */
+function wc_order_fully_refunded( $order_id ) {
+	$order      = wc_get_order( $order_id );
+	$max_refund = wc_format_decimal( $order-&gt;get_total() - $order-&gt;get_total_refunded() );
+
+	if ( ! $max_refund ) {
+		return;
+	}
+
+	// Create the refund object.
+	wc_switch_to_site_locale();
+	wc_create_refund(
+		array(
+			&#039;amount&#039;     =&gt; $max_refund,
+			&#039;reason&#039;     =&gt; __( &#039;Order fully refunded.&#039;, &#039;woocommerce&#039; ),
+			&#039;order_id&#039;   =&gt; $order_id,
+			&#039;line_items&#039; =&gt; array(),
+		)
+	);
+	wc_restore_locale();
+
+	$order-&gt;add_order_note( __( &#039;Order status set to refunded. To return funds to the customer you will need to issue a refund through your payment gateway.&#039;, &#039;woocommerce&#039; ) );
+}
+add_action( &#039;woocommerce_order_status_refunded&#039;, &#039;wc_order_fully_refunded&#039; );
+
+/**
+ * Search orders.
+ *
+ * @since  2.6.0
+ * @param  string $term Term to search.
+ * @return array List of orders ID.
+ */
+function wc_order_search( $term ) {
+	$data_store = WC_Data_Store::load( &#039;order&#039; );
+	return $data_store-&gt;search_orders( str_replace( &#039;Order #&#039;, &#039;&#039;, wc_clean( $term ) ) );
+}
+
+/**
+ * Update total sales amount for each product within a paid order.
+ *
+ * @since 3.0.0
+ * @param int $order_id Order ID.
+ */
+function wc_update_total_sales_counts( $order_id ) {
+	$order = wc_get_order( $order_id );
+
+	if ( ! $order ) {
+		return;
+	}
+
+	$recorded_sales  = $order-&gt;get_data_store()-&gt;get_recorded_sales( $order );
+	$reflected_order = in_array( $order-&gt;get_status(), array( &#039;cancelled&#039;, &#039;trash&#039; ), true );
+
+	if ( ! $reflected_order &amp;&amp; &#039;woocommerce_before_delete_order&#039; === current_action() ) {
+		$reflected_order = true;
+	}
+
+	if ( $recorded_sales xor $reflected_order ) {
+		return;
+	}
+
+	$operation = $recorded_sales &amp;&amp; $reflected_order ? &#039;decrease&#039; : &#039;increase&#039;;
+
+	if ( count( $order-&gt;get_items() ) &gt; 0 ) {
+		foreach ( $order-&gt;get_items() as $item ) {
+			$product_id = $item-&gt;get_product_id();
+
+			if ( $product_id ) {
+				$data_store = WC_Data_Store::load( &#039;product&#039; );
+				$data_store-&gt;update_product_sales( $product_id, absint( $item-&gt;get_quantity() ), $operation );
+			}
+		}
+	}
+
+	if ( &#039;decrease&#039; === $operation ) {
+		$order-&gt;get_data_store()-&gt;set_recorded_sales( $order, false );
+	} else {
+		$order-&gt;get_data_store()-&gt;set_recorded_sales( $order, true );
+	}
+
+	/**
+	 * Called when sales for an order are recorded
+	 *
+	 * @param int $order_id order id
+	 */
+	do_action( &#039;woocommerce_recorded_sales&#039;, $order_id );
+}
+add_action( &#039;woocommerce_order_status_completed&#039;, &#039;wc_update_total_sales_counts&#039; );
+add_action( &#039;woocommerce_order_status_processing&#039;, &#039;wc_update_total_sales_counts&#039; );
+add_action( &#039;woocommerce_order_status_on-hold&#039;, &#039;wc_update_total_sales_counts&#039; );
+add_action( &#039;woocommerce_order_status_completed_to_cancelled&#039;, &#039;wc_update_total_sales_counts&#039; );
+add_action( &#039;woocommerce_order_status_processing_to_cancelled&#039;, &#039;wc_update_total_sales_counts&#039; );
+add_action( &#039;woocommerce_order_status_on-hold_to_cancelled&#039;, &#039;wc_update_total_sales_counts&#039; );
+add_action( &#039;woocommerce_trash_order&#039;, &#039;wc_update_total_sales_counts&#039; );
+add_action( &#039;woocommerce_untrash_order&#039;, &#039;wc_update_total_sales_counts&#039; );
+add_action( &#039;woocommerce_before_delete_order&#039;, &#039;wc_update_total_sales_counts&#039; );
+
+/**
+ * Update used coupon amount for each coupon within an order.
+ *
+ * @since 3.0.0
+ * @param int $order_id Order ID.
+ */
+function wc_update_coupon_usage_counts( $order_id ) {
+	$order = wc_get_order( $order_id );
+
+	if ( ! $order ) {
+		return;
+	}
+
+	$has_recorded = $order-&gt;get_data_store()-&gt;get_recorded_coupon_usage_counts( $order );
+
+	if ( $order-&gt;has_status( &#039;cancelled&#039; ) &amp;&amp; $has_recorded ) {
+		$action = &#039;reduce&#039;;
+		$order-&gt;get_data_store()-&gt;set_recorded_coupon_usage_counts( $order, false );
+	} elseif ( ! $order-&gt;has_status( &#039;cancelled&#039; ) &amp;&amp; ! $has_recorded ) {
+		$action = &#039;increase&#039;;
+		$order-&gt;get_data_store()-&gt;set_recorded_coupon_usage_counts( $order, true );
+	} elseif ( $order-&gt;has_status( &#039;cancelled&#039; ) ) {
+		$order-&gt;get_data_store()-&gt;release_held_coupons( $order, true );
+		return;
+	} else {
+		return;
+	}
+
+	if ( count( $order-&gt;get_coupon_codes() ) &gt; 0 ) {
+		foreach ( $order-&gt;get_coupon_codes() as $code ) {
+			if ( StringUtil::is_null_or_whitespace( $code ) ) {
+				continue;
+			}
+
+			$coupon  = new WC_Coupon( $code );
+			$used_by = $order-&gt;get_user_id();
+
+			if ( ! $used_by ) {
+				$used_by = $order-&gt;get_billing_email();
+			}
+
+			switch ( $action ) {
+				case &#039;reduce&#039;:
+					$coupon-&gt;decrease_usage_count( $used_by );
+					break;
+				case &#039;increase&#039;:
+					$coupon-&gt;increase_usage_count( $used_by, $order );
+					break;
+			}
+		}
+		$order-&gt;get_data_store()-&gt;release_held_coupons( $order, true );
+	}
+}
+add_action( &#039;woocommerce_order_status_pending&#039;, &#039;wc_update_coupon_usage_counts&#039; );
+add_action( &#039;woocommerce_order_status_completed&#039;, &#039;wc_update_coupon_usage_counts&#039; );
+add_action( &#039;woocommerce_order_status_processing&#039;, &#039;wc_update_coupon_usage_counts&#039; );
+add_action( &#039;woocommerce_order_status_on-hold&#039;, &#039;wc_update_coupon_usage_counts&#039; );
+add_action( &#039;woocommerce_order_status_cancelled&#039;, &#039;wc_update_coupon_usage_counts&#039; );
+
+/**
+ * Cancel all unpaid orders after held duration to prevent stock lock for those products.
+ */
+function wc_cancel_unpaid_orders() {
+	$held_duration = get_option( &#039;woocommerce_hold_stock_minutes&#039; );
+
+	// Re-schedule the event before cancelling orders
+	// this way in case of a DB timeout or (plugin) crash the event is always scheduled for retry.
+	wp_clear_scheduled_hook( &#039;woocommerce_cancel_unpaid_orders&#039; );
+	$cancel_unpaid_interval = apply_filters( &#039;woocommerce_cancel_unpaid_orders_interval_minutes&#039;, absint( $held_duration ) );
+	wp_schedule_single_event( time() + ( absint( $cancel_unpaid_interval ) * 60 ), &#039;woocommerce_cancel_unpaid_orders&#039; );
+
+	if ( $held_duration &lt; 1 || &#039;yes&#039; !== get_option( &#039;woocommerce_manage_stock&#039; ) ) {
+		return;
+	}
+
+	$data_store    = WC_Data_Store::load( &#039;order&#039; );
+	$unpaid_orders = $data_store-&gt;get_unpaid_orders( strtotime( &#039;-&#039; . absint( $held_duration ) . &#039; MINUTES&#039;, current_time( &#039;timestamp&#039; ) ) );
+
+	if ( $unpaid_orders ) {
+		foreach ( $unpaid_orders as $unpaid_order ) {
+			$order = wc_get_order( $unpaid_order );
+
+			if ( apply_filters( &#039;woocommerce_cancel_unpaid_order&#039;, &#039;checkout&#039; === $order-&gt;get_created_via(), $order ) ) {
+				$order-&gt;update_status( &#039;cancelled&#039;, __( &#039;Unpaid order cancelled - time limit reached.&#039;, &#039;woocommerce&#039; ) );
+			}
+		}
+	}
+}
+add_action( &#039;woocommerce_cancel_unpaid_orders&#039;, &#039;wc_cancel_unpaid_orders&#039; );
+
+/**
+ * Sanitize order id removing unwanted characters.
+ *
+ * E.g Users can sometimes try to track an order id using # with no success.
+ * This function will fix this.
+ *
+ * @since 3.1.0
+ * @param int $order_id Order ID.
+ */
+function wc_sanitize_order_id( $order_id ) {
+	return (int) filter_var( $order_id, FILTER_SANITIZE_NUMBER_INT );
+}
+add_filter( &#039;woocommerce_shortcode_order_tracking_order_id&#039;, &#039;wc_sanitize_order_id&#039; );
+
+/**
+ * Get an order note.
+ *
+ * @since  3.2.0
+ * @param  int|WP_Comment $data Note ID (or WP_Comment instance for internal use only).
+ * @return stdClass|null        Object with order note details or null when does not exists.
+ */
+function wc_get_order_note( $data ) {
+	if ( is_numeric( $data ) ) {
+		$data = get_comment( $data );
+	}
+
+	if ( ! is_a( $data, &#039;WP_Comment&#039; ) ) {
+		return null;
+	}
+
+	return (object) apply_filters(
+		&#039;woocommerce_get_order_note&#039;,
+		array(
+			&#039;id&#039;            =&gt; (int) $data-&gt;comment_ID,
+			&#039;date_created&#039;  =&gt; wc_string_to_datetime( $data-&gt;comment_date ),
+			&#039;content&#039;       =&gt; $data-&gt;comment_content,
+			&#039;customer_note&#039; =&gt; (bool) get_comment_meta( $data-&gt;comment_ID, &#039;is_customer_note&#039;, true ),
+			&#039;added_by&#039;      =&gt; __( &#039;WooCommerce&#039;, &#039;woocommerce&#039; ) === $data-&gt;comment_author ? &#039;system&#039; : $data-&gt;comment_author,
+		),
+		$data
+	);
+}
+
+/**
+ * Get order notes.
+ *
+ * @since  3.2.0
+ * @param  array $args Query arguments {
+ *     Array of query parameters.
+ *
+ *     @type string $limit         Maximum number of notes to retrieve.
+ *                                 Default empty (no limit).
+ *     @type int    $order_id      Limit results to those affiliated with a given order ID.
+ *                                 Default 0.
+ *     @type array  $order__in     Array of order IDs to include affiliated notes for.
+ *                                 Default empty.
+ *     @type array  $order__not_in Array of order IDs to exclude affiliated notes for.
+ *                                 Default empty.
+ *     @type string $orderby       Define how should sort notes.
+ *                                 Accepts &#039;date_created&#039;, &#039;date_created_gmt&#039; or &#039;id&#039;.
+ *                                 Default: &#039;id&#039;.
+ *     @type string $order         How to order retrieved notes.
+ *                                 Accepts &#039;ASC&#039; or &#039;DESC&#039;.
+ *                                 Default: &#039;DESC&#039;.
+ *     @type string $type          Define what type of note should retrieve.
+ *                                 Accepts &#039;customer&#039;, &#039;internal&#039; or empty for both.
+ *                                 Default empty.
+ * }
+ * @return stdClass[]              Array of stdClass objects with order notes details.
+ */
+function wc_get_order_notes( $args ) {
+	$key_mapping = array(
+		&#039;limit&#039;         =&gt; &#039;number&#039;,
+		&#039;order_id&#039;      =&gt; &#039;post_id&#039;,
+		&#039;order__in&#039;     =&gt; &#039;post__in&#039;,
+		&#039;order__not_in&#039; =&gt; &#039;post__not_in&#039;,
+	);
+
+	foreach ( $key_mapping as $query_key =&gt; $db_key ) {
+		if ( isset( $args[ $query_key ] ) ) {
+			$args[ $db_key ] = $args[ $query_key ];
+			unset( $args[ $query_key ] );
+		}
+	}
+
+	// Define orderby.
+	$orderby_mapping = array(
+		&#039;date_created&#039;     =&gt; &#039;comment_date&#039;,
+		&#039;date_created_gmt&#039; =&gt; &#039;comment_date_gmt&#039;,
+		&#039;id&#039;               =&gt; &#039;comment_ID&#039;,
+	);
+
+	$args[&#039;orderby&#039;] = ! empty( $args[&#039;orderby&#039;] ) &amp;&amp; in_array( $args[&#039;orderby&#039;], array( &#039;date_created&#039;, &#039;date_created_gmt&#039;, &#039;id&#039; ), true ) ? $orderby_mapping[ $args[&#039;orderby&#039;] ] : &#039;comment_ID&#039;;
+
+	// Set WooCommerce order type.
+	if ( isset( $args[&#039;type&#039;] ) &amp;&amp; &#039;customer&#039; === $args[&#039;type&#039;] ) {
+		$args[&#039;meta_query&#039;] = array( // WPCS: slow query ok.
+			array(
+				&#039;key&#039;     =&gt; &#039;is_customer_note&#039;,
+				&#039;value&#039;   =&gt; 1,
+				&#039;compare&#039; =&gt; &#039;=&#039;,
+			),
+		);
+	} elseif ( isset( $args[&#039;type&#039;] ) &amp;&amp; &#039;internal&#039; === $args[&#039;type&#039;] ) {
+		$args[&#039;meta_query&#039;] = array( // WPCS: slow query ok.
+			array(
+				&#039;key&#039;     =&gt; &#039;is_customer_note&#039;,
+				&#039;compare&#039; =&gt; &#039;NOT EXISTS&#039;,
+			),
+		);
+	}
+
+	// Set correct comment type.
+	$args[&#039;type&#039;] = &#039;order_note&#039;;
+
+	// Always approved.
+	$args[&#039;status&#039;] = &#039;approve&#039;;
+
+	// Does not support &#039;count&#039; or &#039;fields&#039;.
+	unset( $args[&#039;count&#039;], $args[&#039;fields&#039;] );
+
+	remove_filter( &#039;comments_clauses&#039;, array( &#039;WC_Comments&#039;, &#039;exclude_order_comments&#039; ), 10, 1 );
+
+	$notes = get_comments( $args );
+
+	add_filter( &#039;comments_clauses&#039;, array( &#039;WC_Comments&#039;, &#039;exclude_order_comments&#039; ), 10, 1 );
+
+	return array_filter( array_map( &#039;wc_get_order_note&#039;, $notes ) );
+}
+
+/**
+ * Create an order note.
+ *
+ * @since  3.2.0
+ * @param  int    $order_id         Order ID.
+ * @param  string $note             Note to add.
+ * @param  bool   $is_customer_note If is a costumer note.
+ * @param  bool   $added_by_user    If note is create by an user.
+ * @return int|WP_Error             Integer when created or WP_Error when found an error.
+ */
+function wc_create_order_note( $order_id, $note, $is_customer_note = false, $added_by_user = false ) {
+	$order = wc_get_order( $order_id );
+
+	if ( ! $order ) {
+		return new WP_Error( &#039;invalid_order_id&#039;, __( &#039;Invalid order ID.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+	}
+
+	return $order-&gt;add_order_note( $note, (int) $is_customer_note, $added_by_user );
+}
+
+/**
+ * Delete an order note.
+ *
+ * @since  3.2.0
+ * @param  int $note_id Order note.
+ * @return bool         True on success, false on failure.
+ */
+function wc_delete_order_note( $note_id ) {
+	return wp_delete_comment( $note_id, true );
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866949"></script>
+    <script src="../js/search.js?updated=1692866949"></script>
+</body>
+</html>

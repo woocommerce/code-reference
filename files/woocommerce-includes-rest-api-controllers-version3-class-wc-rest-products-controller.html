@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866948">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866948">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-rest-products-controller.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * REST API Products controller
+ *
+ * Handles requests to the /products endpoint.
+ *
+ * @package WooCommerce\RestApi
+ * @since   2.6.0
+ */
+
+use Automattic\WooCommerce\Utilities\I18nUtil;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * REST API Products controller class.
+ *
+ * @package WooCommerce\RestApi
+ * @extends WC_REST_Products_V2_Controller
+ */
+class WC_REST_Products_Controller extends WC_REST_Products_V2_Controller {
+
+	/**
+	 * Endpoint namespace.
+	 *
+	 * @var string
+	 */
+	protected $namespace = &#039;wc/v3&#039;;
+
+	/**
+	 * A string to inject into a query to do a partial match SKU search.
+	 *
+	 * See prepare_objects_query()
+	 *
+	 * @var string
+	 */
+	private $search_sku_in_product_lookup_table = &#039;&#039;;
+
+	/**
+	 * Get the images for a product or product variation.
+	 *
+	 * @param WC_Product|WC_Product_Variation $product Product instance.
+	 * @return array
+	 */
+	protected function get_images( $product ) {
+		$images         = array();
+		$attachment_ids = array();
+
+		// Add featured image.
+		if ( $product-&gt;get_image_id() ) {
+			$attachment_ids[] = $product-&gt;get_image_id();
+		}
+
+		// Add gallery images.
+		$attachment_ids = array_merge( $attachment_ids, $product-&gt;get_gallery_image_ids() );
+
+		// Build image data.
+		foreach ( $attachment_ids as $attachment_id ) {
+			$attachment_post = get_post( $attachment_id );
+			if ( is_null( $attachment_post ) ) {
+				continue;
+			}
+
+			$attachment = wp_get_attachment_image_src( $attachment_id, &#039;full&#039; );
+			if ( ! is_array( $attachment ) ) {
+				continue;
+			}
+
+			$images[] = array(
+				&#039;id&#039;                =&gt; (int) $attachment_id,
+				&#039;date_created&#039;      =&gt; wc_rest_prepare_date_response( $attachment_post-&gt;post_date, false ),
+				&#039;date_created_gmt&#039;  =&gt; wc_rest_prepare_date_response( strtotime( $attachment_post-&gt;post_date_gmt ) ),
+				&#039;date_modified&#039;     =&gt; wc_rest_prepare_date_response( $attachment_post-&gt;post_modified, false ),
+				&#039;date_modified_gmt&#039; =&gt; wc_rest_prepare_date_response( strtotime( $attachment_post-&gt;post_modified_gmt ) ),
+				&#039;src&#039;               =&gt; current( $attachment ),
+				&#039;name&#039;              =&gt; get_the_title( $attachment_id ),
+				&#039;alt&#039;               =&gt; get_post_meta( $attachment_id, &#039;_wp_attachment_image_alt&#039;, true ),
+			);
+		}
+
+		return $images;
+	}
+
+	/**
+	 * Make extra product orderby features supported by WooCommerce available to the WC API.
+	 * This includes &#039;price&#039;, &#039;popularity&#039;, and &#039;rating&#039;.
+	 *
+	 * @param WP_REST_Request $request Request data.
+	 * @return array
+	 */
+	protected function prepare_objects_query( $request ) {
+		$args = WC_REST_CRUD_Controller::prepare_objects_query( $request );
+
+		// Set post_status.
+		$args[&#039;post_status&#039;] = $request[&#039;status&#039;];
+
+		// Taxonomy query to filter products by type, category,
+		// tag, shipping class, and attribute.
+		$tax_query = array();
+
+		// Map between taxonomy name and arg&#039;s key.
+		$taxonomies = array(
+			&#039;product_cat&#039;            =&gt; &#039;category&#039;,
+			&#039;product_tag&#039;            =&gt; &#039;tag&#039;,
+			&#039;product_shipping_class&#039; =&gt; &#039;shipping_class&#039;,
+		);
+
+		// Set tax_query for each passed arg.
+		foreach ( $taxonomies as $taxonomy =&gt; $key ) {
+			if ( ! empty( $request[ $key ] ) ) {
+				$tax_query[] = array(
+					&#039;taxonomy&#039; =&gt; $taxonomy,
+					&#039;field&#039;    =&gt; &#039;term_id&#039;,
+					&#039;terms&#039;    =&gt; $request[ $key ],
+				);
+			}
+		}
+
+		// Filter product type by slug.
+		if ( ! empty( $request[&#039;type&#039;] ) ) {
+			$tax_query[] = array(
+				&#039;taxonomy&#039; =&gt; &#039;product_type&#039;,
+				&#039;field&#039;    =&gt; &#039;slug&#039;,
+				&#039;terms&#039;    =&gt; $request[&#039;type&#039;],
+			);
+		}
+
+		// Filter by attribute and term.
+		if ( ! empty( $request[&#039;attribute&#039;] ) &amp;&amp; ! empty( $request[&#039;attribute_term&#039;] ) ) {
+			if ( in_array( $request[&#039;attribute&#039;], wc_get_attribute_taxonomy_names(), true ) ) {
+				$tax_query[] = array(
+					&#039;taxonomy&#039; =&gt; $request[&#039;attribute&#039;],
+					&#039;field&#039;    =&gt; &#039;term_id&#039;,
+					&#039;terms&#039;    =&gt; $request[&#039;attribute_term&#039;],
+				);
+			}
+		}
+
+		// Build tax_query if taxonomies are set.
+		if ( ! empty( $tax_query ) ) {
+			if ( ! empty( $args[&#039;tax_query&#039;] ) ) {
+				$args[&#039;tax_query&#039;] = array_merge( $tax_query, $args[&#039;tax_query&#039;] ); // WPCS: slow query ok.
+			} else {
+				$args[&#039;tax_query&#039;] = $tax_query; // WPCS: slow query ok.
+			}
+		}
+
+		// Filter featured.
+		if ( is_bool( $request[&#039;featured&#039;] ) ) {
+			$args[&#039;tax_query&#039;][] = array(
+				&#039;taxonomy&#039; =&gt; &#039;product_visibility&#039;,
+				&#039;field&#039;    =&gt; &#039;name&#039;,
+				&#039;terms&#039;    =&gt; &#039;featured&#039;,
+				&#039;operator&#039; =&gt; true === $request[&#039;featured&#039;] ? &#039;IN&#039; : &#039;NOT IN&#039;,
+			);
+		}
+
+		if ( wc_product_sku_enabled() ) {
+			// Do a partial match for a sku. Supercedes sku parameter that does exact matching.
+			if ( ! empty( $request[&#039;search_sku&#039;] ) ) {
+				// Store this for use in the query clause filters.
+				$this-&gt;search_sku_in_product_lookup_table = $request[&#039;search_sku&#039;];
+
+				unset( $request[&#039;sku&#039;] );
+			}
+
+			// Filter by sku.
+			if ( ! empty( $request[&#039;sku&#039;] ) ) {
+				$skus = explode( &#039;,&#039;, $request[&#039;sku&#039;] );
+				// Include the current string as a SKU too.
+				if ( 1 &lt; count( $skus ) ) {
+					$skus[] = $request[&#039;sku&#039;];
+				}
+
+				$args[&#039;meta_query&#039;] = $this-&gt;add_meta_query( // WPCS: slow query ok.
+					$args,
+					array(
+						&#039;key&#039;     =&gt; &#039;_sku&#039;,
+						&#039;value&#039;   =&gt; $skus,
+						&#039;compare&#039; =&gt; &#039;IN&#039;,
+					)
+				);
+			}
+		}
+
+		// Filter by tax class.
+		if ( ! empty( $request[&#039;tax_class&#039;] ) ) {
+			$args[&#039;meta_query&#039;] = $this-&gt;add_meta_query( // WPCS: slow query ok.
+				$args,
+				array(
+					&#039;key&#039;   =&gt; &#039;_tax_class&#039;,
+					&#039;value&#039; =&gt; &#039;standard&#039; !== $request[&#039;tax_class&#039;] ? $request[&#039;tax_class&#039;] : &#039;&#039;,
+				)
+			);
+		}
+
+		// Price filter.
+		if ( ! empty( $request[&#039;min_price&#039;] ) || ! empty( $request[&#039;max_price&#039;] ) ) {
+			$args[&#039;meta_query&#039;] = $this-&gt;add_meta_query( $args, wc_get_min_max_price_meta_query( $request ) );  // WPCS: slow query ok.
+		}
+
+		// Filter product by stock_status.
+		if ( ! empty( $request[&#039;stock_status&#039;] ) ) {
+			$args[&#039;meta_query&#039;] = $this-&gt;add_meta_query( // WPCS: slow query ok.
+				$args,
+				array(
+					&#039;key&#039;   =&gt; &#039;_stock_status&#039;,
+					&#039;value&#039; =&gt; $request[&#039;stock_status&#039;],
+				)
+			);
+		}
+
+		// Filter by on sale products.
+		if ( is_bool( $request[&#039;on_sale&#039;] ) ) {
+			$on_sale_key = $request[&#039;on_sale&#039;] ? &#039;post__in&#039; : &#039;post__not_in&#039;;
+			$on_sale_ids = wc_get_product_ids_on_sale();
+
+			// Use 0 when there&#039;s no on sale products to avoid return all products.
+			$on_sale_ids = empty( $on_sale_ids ) ? array( 0 ) : $on_sale_ids;
+
+			$args[ $on_sale_key ] += $on_sale_ids;
+		}
+
+		// Force the post_type argument, since it&#039;s not a user input variable.
+		if ( ! empty( $request[&#039;sku&#039;] ) || ! empty( $request[&#039;search_sku&#039;] ) ) {
+			$args[&#039;post_type&#039;] = array( &#039;product&#039;, &#039;product_variation&#039; );
+		} else {
+			$args[&#039;post_type&#039;] = $this-&gt;post_type;
+		}
+
+		$ordering_args   = WC()-&gt;query-&gt;get_catalog_ordering_args( $args[&#039;orderby&#039;], $args[&#039;order&#039;] );
+		$args[&#039;orderby&#039;] = $ordering_args[&#039;orderby&#039;];
+		$args[&#039;order&#039;]   = $ordering_args[&#039;order&#039;];
+		if ( $ordering_args[&#039;meta_key&#039;] ) {
+			$args[&#039;meta_key&#039;] = $ordering_args[&#039;meta_key&#039;]; // WPCS: slow query ok.
+		}
+
+		return $args;
+	}
+
+	/**
+	 * Get objects.
+	 *
+	 * @param array $query_args Query args.
+	 * @return array
+	 */
+	protected function get_objects( $query_args ) {
+		// Add filters for search criteria in product postmeta via the lookup table.
+		if ( ! empty( $this-&gt;search_sku_in_product_lookup_table ) ) {
+			add_filter( &#039;posts_join&#039;, array( $this, &#039;add_search_criteria_to_wp_query_join&#039; ) );
+			add_filter( &#039;posts_where&#039;, array( $this, &#039;add_search_criteria_to_wp_query_where&#039; ) );
+		}
+
+		$result = parent::get_objects( $query_args );
+
+		// Remove filters for search criteria in product postmeta via the lookup table.
+		if ( ! empty( $this-&gt;search_sku_in_product_lookup_table ) ) {
+			remove_filter( &#039;posts_join&#039;, array( $this, &#039;add_search_criteria_to_wp_query_join&#039; ) );
+			remove_filter( &#039;posts_where&#039;, array( $this, &#039;add_search_criteria_to_wp_query_where&#039; ) );
+
+			$this-&gt;search_sku_in_product_lookup_table = &#039;&#039;;
+		}
+		return $result;
+	}
+
+	/**
+	 * Join `wc_product_meta_lookup` table when SKU search query is present.
+	 *
+	 * @param string $join Join clause used to search posts.
+	 * @return string
+	 */
+	public function add_search_criteria_to_wp_query_join( $join ) {
+		global $wpdb;
+		if ( ! empty( $this-&gt;search_sku_in_product_lookup_table ) &amp;&amp; ! strstr( $join, &#039;wc_product_meta_lookup&#039; ) ) {
+			$join .= &quot; LEFT JOIN $wpdb-&gt;wc_product_meta_lookup wc_product_meta_lookup
+						ON $wpdb-&gt;posts.ID = wc_product_meta_lookup.product_id &quot;;
+		}
+		return $join;
+	}
+
+	/**
+	 * Add a where clause for matching the SKU field.
+	 *
+	 * @param string $where Where clause used to search posts.
+	 * @return string
+	 */
+	public function add_search_criteria_to_wp_query_where( $where ) {
+		global $wpdb;
+		if ( ! empty( $this-&gt;search_sku_in_product_lookup_table ) ) {
+			$like_search = &#039;%&#039; . $wpdb-&gt;esc_like( $this-&gt;search_sku_in_product_lookup_table ) . &#039;%&#039;;
+			$where .= &#039; AND &#039; . $wpdb-&gt;prepare( &#039;(wc_product_meta_lookup.sku LIKE %s)&#039;, $like_search );
+		}
+		return $where;
+	}
+
+	/**
+	 * Set product images.
+	 *
+	 * @throws WC_REST_Exception REST API exceptions.
+	 * @param WC_Product $product Product instance.
+	 * @param array      $images  Images data.
+	 * @return WC_Product
+	 */
+	protected function set_product_images( $product, $images ) {
+		$images = is_array( $images ) ? array_filter( $images ) : array();
+
+		if ( ! empty( $images ) ) {
+			$gallery = array();
+
+			foreach ( $images as $index =&gt; $image ) {
+				$attachment_id = isset( $image[&#039;id&#039;] ) ? absint( $image[&#039;id&#039;] ) : 0;
+
+				if ( 0 === $attachment_id &amp;&amp; isset( $image[&#039;src&#039;] ) ) {
+					$upload = wc_rest_upload_image_from_url( esc_url_raw( $image[&#039;src&#039;] ) );
+
+					if ( is_wp_error( $upload ) ) {
+						if ( ! apply_filters( &#039;woocommerce_rest_suppress_image_upload_error&#039;, false, $upload, $product-&gt;get_id(), $images ) ) {
+							throw new WC_REST_Exception( &#039;woocommerce_product_image_upload_error&#039;, $upload-&gt;get_error_message(), 400 );
+						} else {
+							continue;
+						}
+					}
+
+					$attachment_id = wc_rest_set_uploaded_image_as_attachment( $upload, $product-&gt;get_id() );
+				}
+
+				if ( ! wp_attachment_is_image( $attachment_id ) ) {
+					/* translators: %s: image ID */
+					throw new WC_REST_Exception( &#039;woocommerce_product_invalid_image_id&#039;, sprintf( __( &#039;#%s is an invalid image ID.&#039;, &#039;woocommerce&#039; ), $attachment_id ), 400 );
+				}
+
+				$featured_image = $product-&gt;get_image_id();
+
+				if ( 0 === $index ) {
+					$product-&gt;set_image_id( $attachment_id );
+				} else {
+					$gallery[] = $attachment_id;
+				}
+
+				// Set the image alt if present.
+				if ( ! empty( $image[&#039;alt&#039;] ) ) {
+					update_post_meta( $attachment_id, &#039;_wp_attachment_image_alt&#039;, wc_clean( $image[&#039;alt&#039;] ) );
+				}
+
+				// Set the image name if present.
+				if ( ! empty( $image[&#039;name&#039;] ) ) {
+					wp_update_post(
+						array(
+							&#039;ID&#039;         =&gt; $attachment_id,
+							&#039;post_title&#039; =&gt; $image[&#039;name&#039;],
+						)
+					);
+				}
+			}
+
+			$product-&gt;set_gallery_image_ids( $gallery );
+		} else {
+			$product-&gt;set_image_id( &#039;&#039; );
+			$product-&gt;set_gallery_image_ids( array() );
+		}
+
+		return $product;
+	}
+
+	/**
+	 * Prepare a single product for create or update.
+	 *
+	 * @param  WP_REST_Request $request Request object.
+	 * @param  bool            $creating If is creating a new object.
+	 * @return WP_Error|WC_Data
+	 */
+	protected function prepare_object_for_database( $request, $creating = false ) {
+		$id = isset( $request[&#039;id&#039;] ) ? absint( $request[&#039;id&#039;] ) : 0;
+
+		// Type is the most important part here because we need to be using the correct class and methods.
+		if ( isset( $request[&#039;type&#039;] ) ) {
+			$classname = WC_Product_Factory::get_classname_from_product_type( $request[&#039;type&#039;] );
+
+			if ( ! class_exists( $classname ) ) {
+				$classname = &#039;WC_Product_Simple&#039;;
+			}
+
+			$product = new $classname( $id );
+		} elseif ( isset( $request[&#039;id&#039;] ) ) {
+			$product = wc_get_product( $id );
+		} else {
+			$product = new WC_Product_Simple();
+		}
+
+		if ( &#039;variation&#039; === $product-&gt;get_type() ) {
+			return new WP_Error(
+				&quot;woocommerce_rest_invalid_{$this-&gt;post_type}_id&quot;,
+				__( &#039;To manipulate product variations you should use the /products/&amp;lt;product_id&amp;gt;/variations/&amp;lt;id&amp;gt; endpoint.&#039;, &#039;woocommerce&#039; ),
+				array(
+					&#039;status&#039; =&gt; 404,
+				)
+			);
+		}
+
+		// Post title.
+		if ( isset( $request[&#039;name&#039;] ) ) {
+			$product-&gt;set_name( wp_filter_post_kses( $request[&#039;name&#039;] ) );
+		}
+
+		// Post content.
+		if ( isset( $request[&#039;description&#039;] ) ) {
+			$product-&gt;set_description( wp_filter_post_kses( $request[&#039;description&#039;] ) );
+		}
+
+		// Post excerpt.
+		if ( isset( $request[&#039;short_description&#039;] ) ) {
+			$product-&gt;set_short_description( wp_filter_post_kses( $request[&#039;short_description&#039;] ) );
+		}
+
+		// Post status.
+		if ( isset( $request[&#039;status&#039;] ) ) {
+			$product-&gt;set_status( get_post_status_object( $request[&#039;status&#039;] ) ? $request[&#039;status&#039;] : &#039;draft&#039; );
+		}
+
+		// Post slug.
+		if ( isset( $request[&#039;slug&#039;] ) ) {
+			$product-&gt;set_slug( $request[&#039;slug&#039;] );
+		}
+
+		// Menu order.
+		if ( isset( $request[&#039;menu_order&#039;] ) ) {
+			$product-&gt;set_menu_order( $request[&#039;menu_order&#039;] );
+		}
+
+		// Comment status.
+		if ( isset( $request[&#039;reviews_allowed&#039;] ) ) {
+			$product-&gt;set_reviews_allowed( $request[&#039;reviews_allowed&#039;] );
+		}
+
+		// Virtual.
+		if ( isset( $request[&#039;virtual&#039;] ) ) {
+			$product-&gt;set_virtual( $request[&#039;virtual&#039;] );
+		}
+
+		// Tax status.
+		if ( isset( $request[&#039;tax_status&#039;] ) ) {
+			$product-&gt;set_tax_status( $request[&#039;tax_status&#039;] );
+		}
+
+		// Tax Class.
+		if ( isset( $request[&#039;tax_class&#039;] ) ) {
+			$product-&gt;set_tax_class( $request[&#039;tax_class&#039;] );
+		}
+
+		// Catalog Visibility.
+		if ( isset( $request[&#039;catalog_visibility&#039;] ) ) {
+			$product-&gt;set_catalog_visibility( $request[&#039;catalog_visibility&#039;] );
+		}
+
+		// Purchase Note.
+		if ( isset( $request[&#039;purchase_note&#039;] ) ) {
+			$product-&gt;set_purchase_note( wp_kses_post( wp_unslash( $request[&#039;purchase_note&#039;] ) ) );
+		}
+
+		// Featured Product.
+		if ( isset( $request[&#039;featured&#039;] ) ) {
+			$product-&gt;set_featured( $request[&#039;featured&#039;] );
+		}
+
+		// Shipping data.
+		$product = $this-&gt;save_product_shipping_data( $product, $request );
+
+		// SKU.
+		if ( isset( $request[&#039;sku&#039;] ) ) {
+			$product-&gt;set_sku( wc_clean( $request[&#039;sku&#039;] ) );
+		}
+
+		// Attributes.
+		if ( isset( $request[&#039;attributes&#039;] ) ) {
+			$attributes = array();
+
+			foreach ( $request[&#039;attributes&#039;] as $attribute ) {
+				$attribute_id   = 0;
+				$attribute_name = &#039;&#039;;
+
+				// Check ID for global attributes or name for product attributes.
+				if ( ! empty( $attribute[&#039;id&#039;] ) ) {
+					$attribute_id   = absint( $attribute[&#039;id&#039;] );
+					$attribute_name = wc_attribute_taxonomy_name_by_id( $attribute_id );
+				} elseif ( ! empty( $attribute[&#039;name&#039;] ) ) {
+					$attribute_name = wc_clean( $attribute[&#039;name&#039;] );
+				}
+
+				if ( ! $attribute_id &amp;&amp; ! $attribute_name ) {
+					continue;
+				}
+
+				if ( $attribute_id ) {
+
+					if ( isset( $attribute[&#039;options&#039;] ) ) {
+						$options = $attribute[&#039;options&#039;];
+
+						if ( ! is_array( $attribute[&#039;options&#039;] ) ) {
+							// Text based attributes - Posted values are term names.
+							$options = explode( WC_DELIMITER, $options );
+						}
+
+						$values = array_map( &#039;wc_sanitize_term_text_based&#039;, $options );
+						$values = array_filter( $values, &#039;strlen&#039; );
+					} else {
+						$values = array();
+					}
+
+					if ( ! empty( $values ) ) {
+						// Add attribute to array, but don&#039;t set values.
+						$attribute_object = new WC_Product_Attribute();
+						$attribute_object-&gt;set_id( $attribute_id );
+						$attribute_object-&gt;set_name( $attribute_name );
+						$attribute_object-&gt;set_options( $values );
+						$attribute_object-&gt;set_position( isset( $attribute[&#039;position&#039;] ) ? (string) absint( $attribute[&#039;position&#039;] ) : &#039;0&#039; );
+						$attribute_object-&gt;set_visible( ( isset( $attribute[&#039;visible&#039;] ) &amp;&amp; $attribute[&#039;visible&#039;] ) ? 1 : 0 );
+						$attribute_object-&gt;set_variation( ( isset( $attribute[&#039;variation&#039;] ) &amp;&amp; $attribute[&#039;variation&#039;] ) ? 1 : 0 );
+						$attributes[] = $attribute_object;
+					}
+				} elseif ( isset( $attribute[&#039;options&#039;] ) ) {
+					// Custom attribute - Add attribute to array and set the values.
+					if ( is_array( $attribute[&#039;options&#039;] ) ) {
+						$values = $attribute[&#039;options&#039;];
+					} else {
+						$values = explode( WC_DELIMITER, $attribute[&#039;options&#039;] );
+					}
+					$attribute_object = new WC_Product_Attribute();
+					$attribute_object-&gt;set_name( $attribute_name );
+					$attribute_object-&gt;set_options( $values );
+					$attribute_object-&gt;set_position( isset( $attribute[&#039;position&#039;] ) ? (string) absint( $attribute[&#039;position&#039;] ) : &#039;0&#039; );
+					$attribute_object-&gt;set_visible( ( isset( $attribute[&#039;visible&#039;] ) &amp;&amp; $attribute[&#039;visible&#039;] ) ? 1 : 0 );
+					$attribute_object-&gt;set_variation( ( isset( $attribute[&#039;variation&#039;] ) &amp;&amp; $attribute[&#039;variation&#039;] ) ? 1 : 0 );
+					$attributes[] = $attribute_object;
+				}
+			}
+			$product-&gt;set_attributes( $attributes );
+		}
+
+		// Sales and prices.
+		if ( in_array( $product-&gt;get_type(), array( &#039;variable&#039;, &#039;grouped&#039; ), true ) ) {
+			$product-&gt;set_regular_price( &#039;&#039; );
+			$product-&gt;set_sale_price( &#039;&#039; );
+			$product-&gt;set_date_on_sale_to( &#039;&#039; );
+			$product-&gt;set_date_on_sale_from( &#039;&#039; );
+			$product-&gt;set_price( &#039;&#039; );
+		} else {
+			// Regular Price.
+			if ( isset( $request[&#039;regular_price&#039;] ) ) {
+				$product-&gt;set_regular_price( $request[&#039;regular_price&#039;] );
+			}
+
+			// Sale Price.
+			if ( isset( $request[&#039;sale_price&#039;] ) ) {
+				$product-&gt;set_sale_price( $request[&#039;sale_price&#039;] );
+			}
+
+			if ( isset( $request[&#039;date_on_sale_from&#039;] ) ) {
+				$product-&gt;set_date_on_sale_from( $request[&#039;date_on_sale_from&#039;] );
+			}
+
+			if ( isset( $request[&#039;date_on_sale_from_gmt&#039;] ) ) {
+				$product-&gt;set_date_on_sale_from( $request[&#039;date_on_sale_from_gmt&#039;] ? strtotime( $request[&#039;date_on_sale_from_gmt&#039;] ) : null );
+			}
+
+			if ( isset( $request[&#039;date_on_sale_to&#039;] ) ) {
+				$product-&gt;set_date_on_sale_to( $request[&#039;date_on_sale_to&#039;] );
+			}
+
+			if ( isset( $request[&#039;date_on_sale_to_gmt&#039;] ) ) {
+				$product-&gt;set_date_on_sale_to( $request[&#039;date_on_sale_to_gmt&#039;] ? strtotime( $request[&#039;date_on_sale_to_gmt&#039;] ) : null );
+			}
+		}
+
+		// Product parent ID.
+		if ( isset( $request[&#039;parent_id&#039;] ) ) {
+			$product-&gt;set_parent_id( $request[&#039;parent_id&#039;] );
+		}
+
+		// Sold individually.
+		if ( isset( $request[&#039;sold_individually&#039;] ) ) {
+			$product-&gt;set_sold_individually( $request[&#039;sold_individually&#039;] );
+		}
+
+		// Stock status; stock_status has priority over in_stock.
+		if ( isset( $request[&#039;stock_status&#039;] ) ) {
+			$stock_status = $request[&#039;stock_status&#039;];
+		} else {
+			$stock_status = $product-&gt;get_stock_status();
+		}
+
+		// Stock data.
+		if ( &#039;yes&#039; === get_option( &#039;woocommerce_manage_stock&#039; ) ) {
+			// Manage stock.
+			if ( isset( $request[&#039;manage_stock&#039;] ) ) {
+				$product-&gt;set_manage_stock( $request[&#039;manage_stock&#039;] );
+			}
+
+			// Backorders.
+			if ( isset( $request[&#039;backorders&#039;] ) ) {
+				$product-&gt;set_backorders( $request[&#039;backorders&#039;] );
+			}
+
+			if ( $product-&gt;is_type( &#039;grouped&#039; ) ) {
+				$product-&gt;set_manage_stock( &#039;no&#039; );
+				$product-&gt;set_backorders( &#039;no&#039; );
+				$product-&gt;set_stock_quantity( &#039;&#039; );
+				$product-&gt;set_stock_status( $stock_status );
+			} elseif ( $product-&gt;is_type( &#039;external&#039; ) ) {
+				$product-&gt;set_manage_stock( &#039;no&#039; );
+				$product-&gt;set_backorders( &#039;no&#039; );
+				$product-&gt;set_stock_quantity( &#039;&#039; );
+				$product-&gt;set_stock_status( &#039;instock&#039; );
+			} elseif ( $product-&gt;get_manage_stock() ) {
+				// Stock status is always determined by children so sync later.
+				if ( ! $product-&gt;is_type( &#039;variable&#039; ) ) {
+					$product-&gt;set_stock_status( $stock_status );
+				}
+
+				// Stock quantity.
+				if ( isset( $request[&#039;stock_quantity&#039;] ) ) {
+					$product-&gt;set_stock_quantity( wc_stock_amount( $request[&#039;stock_quantity&#039;] ) );
+				} elseif ( isset( $request[&#039;inventory_delta&#039;] ) ) {
+					$stock_quantity  = wc_stock_amount( $product-&gt;get_stock_quantity() );
+					$stock_quantity += wc_stock_amount( $request[&#039;inventory_delta&#039;] );
+					$product-&gt;set_stock_quantity( wc_stock_amount( $stock_quantity ) );
+				}
+
+				// Low stock amount.
+				// isset() returns false for value null, thus we need to check whether the value has been sent by the request.
+				if ( array_key_exists( &#039;low_stock_amount&#039;, $request-&gt;get_params() ) ) {
+					if ( null === $request[&#039;low_stock_amount&#039;] ) {
+						$product-&gt;set_low_stock_amount( &#039;&#039; );
+					} else {
+						$product-&gt;set_low_stock_amount( wc_stock_amount( $request[&#039;low_stock_amount&#039;] ) );
+					}
+				}
+			} else {
+				// Don&#039;t manage stock.
+				$product-&gt;set_manage_stock( &#039;no&#039; );
+				$product-&gt;set_stock_quantity( &#039;&#039; );
+				$product-&gt;set_stock_status( $stock_status );
+				$product-&gt;set_low_stock_amount( &#039;&#039; );
+			}
+		} elseif ( ! $product-&gt;is_type( &#039;variable&#039; ) ) {
+			$product-&gt;set_stock_status( $stock_status );
+		}
+
+		// Upsells.
+		if ( isset( $request[&#039;upsell_ids&#039;] ) ) {
+			$upsells = array();
+			$ids     = $request[&#039;upsell_ids&#039;];
+
+			if ( ! empty( $ids ) ) {
+				foreach ( $ids as $id ) {
+					if ( $id &amp;&amp; $id &gt; 0 ) {
+						$upsells[] = $id;
+					}
+				}
+			}
+
+			$product-&gt;set_upsell_ids( $upsells );
+		}
+
+		// Cross sells.
+		if ( isset( $request[&#039;cross_sell_ids&#039;] ) ) {
+			$crosssells = array();
+			$ids        = $request[&#039;cross_sell_ids&#039;];
+
+			if ( ! empty( $ids ) ) {
+				foreach ( $ids as $id ) {
+					if ( $id &amp;&amp; $id &gt; 0 ) {
+						$crosssells[] = $id;
+					}
+				}
+			}
+
+			$product-&gt;set_cross_sell_ids( $crosssells );
+		}
+
+		// Product categories.
+		if ( isset( $request[&#039;categories&#039;] ) &amp;&amp; is_array( $request[&#039;categories&#039;] ) ) {
+			$product = $this-&gt;save_taxonomy_terms( $product, $request[&#039;categories&#039;] );
+		}
+
+		// Product tags.
+		if ( isset( $request[&#039;tags&#039;] ) &amp;&amp; is_array( $request[&#039;tags&#039;] ) ) {
+			$new_tags = array();
+
+			foreach ( $request[&#039;tags&#039;] as $tag ) {
+				if ( ! isset( $tag[&#039;name&#039;] ) ) {
+					$new_tags[] = $tag;
+					continue;
+				}
+
+				if ( ! term_exists( $tag[&#039;name&#039;], &#039;product_tag&#039; ) ) {
+					// Create the tag if it doesn&#039;t exist.
+					$term = wp_insert_term( $tag[&#039;name&#039;], &#039;product_tag&#039; );
+
+					if ( ! is_wp_error( $term ) ) {
+						$new_tags[] = array(
+							&#039;id&#039; =&gt; $term[&#039;term_id&#039;],
+						);
+
+						continue;
+					}
+				} else {
+					// Tag exists, assume user wants to set the product with this tag.
+					$new_tags[] = array(
+						&#039;id&#039; =&gt; get_term_by( &#039;name&#039;, $tag[&#039;name&#039;], &#039;product_tag&#039; )-&gt;term_id,
+					);
+				}
+			}
+
+			$product = $this-&gt;save_taxonomy_terms( $product, $new_tags, &#039;tag&#039; );
+		}
+
+		// Downloadable.
+		if ( isset( $request[&#039;downloadable&#039;] ) ) {
+			$product-&gt;set_downloadable( $request[&#039;downloadable&#039;] );
+		}
+
+		// Downloadable options.
+		if ( $product-&gt;get_downloadable() ) {
+
+			// Downloadable files.
+			if ( isset( $request[&#039;downloads&#039;] ) &amp;&amp; is_array( $request[&#039;downloads&#039;] ) ) {
+				$product = $this-&gt;save_downloadable_files( $product, $request[&#039;downloads&#039;] );
+			}
+
+			// Download limit.
+			if ( isset( $request[&#039;download_limit&#039;] ) ) {
+				$product-&gt;set_download_limit( $request[&#039;download_limit&#039;] );
+			}
+
+			// Download expiry.
+			if ( isset( $request[&#039;download_expiry&#039;] ) ) {
+				$product-&gt;set_download_expiry( $request[&#039;download_expiry&#039;] );
+			}
+		}
+
+		// Product url and button text for external products.
+		if ( $product-&gt;is_type( &#039;external&#039; ) ) {
+			if ( isset( $request[&#039;external_url&#039;] ) ) {
+				$product-&gt;set_product_url( $request[&#039;external_url&#039;] );
+			}
+
+			if ( isset( $request[&#039;button_text&#039;] ) ) {
+				$product-&gt;set_button_text( $request[&#039;button_text&#039;] );
+			}
+		}
+
+		// Save default attributes for variable products.
+		if ( $product-&gt;is_type( &#039;variable&#039; ) ) {
+			$product = $this-&gt;save_default_attributes( $product, $request );
+		}
+
+		// Set children for a grouped product.
+		if ( $product-&gt;is_type( &#039;grouped&#039; ) &amp;&amp; isset( $request[&#039;grouped_products&#039;] ) ) {
+			$product-&gt;set_children( $request[&#039;grouped_products&#039;] );
+		}
+
+		// Check for featured/gallery images, upload it and set it.
+		if ( isset( $request[&#039;images&#039;] ) ) {
+			$product = $this-&gt;set_product_images( $product, $request[&#039;images&#039;] );
+		}
+
+		// Allow set meta_data.
+		if ( is_array( $request[&#039;meta_data&#039;] ) ) {
+			foreach ( $request[&#039;meta_data&#039;] as $meta ) {
+				$product-&gt;update_meta_data( $meta[&#039;key&#039;], $meta[&#039;value&#039;], isset( $meta[&#039;id&#039;] ) ? $meta[&#039;id&#039;] : &#039;&#039; );
+			}
+		}
+
+		if ( ! empty( $request[&#039;date_created&#039;] ) ) {
+			$date = rest_parse_date( $request[&#039;date_created&#039;] );
+
+			if ( $date ) {
+				$product-&gt;set_date_created( $date );
+			}
+		}
+
+		if ( ! empty( $request[&#039;date_created_gmt&#039;] ) ) {
+			$date = rest_parse_date( $request[&#039;date_created_gmt&#039;], true );
+
+			if ( $date ) {
+				$product-&gt;set_date_created( $date );
+			}
+		}
+
+		/**
+		 * Filters an object before it is inserted via the REST API.
+		 *
+		 * The dynamic portion of the hook name, `$this-&gt;post_type`,
+		 * refers to the object type slug.
+		 *
+		 * @param WC_Data         $product  Object object.
+		 * @param WP_REST_Request $request  Request object.
+		 * @param bool            $creating If is creating a new object.
+		 */
+		return apply_filters( &quot;woocommerce_rest_pre_insert_{$this-&gt;post_type}_object&quot;, $product, $request, $creating );
+	}
+
+	/**
+	 * Get the Product&#039;s schema, conforming to JSON Schema.
+	 *
+	 * @return array
+	 */
+	public function get_item_schema() {
+		$weight_unit_label    = I18nUtil::get_weight_unit_label( get_option( &#039;woocommerce_weight_unit&#039;, &#039;kg&#039; ) );
+		$dimension_unit_label = I18nUtil::get_dimensions_unit_label( get_option( &#039;woocommerce_dimension_unit&#039;, &#039;cm&#039; ) );
+		$schema               = array(
+			&#039;$schema&#039;    =&gt; &#039;http://json-schema.org/draft-04/schema#&#039;,
+			&#039;title&#039;      =&gt; $this-&gt;post_type,
+			&#039;type&#039;       =&gt; &#039;object&#039;,
+			&#039;properties&#039; =&gt; array(
+				&#039;id&#039;                    =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Unique identifier for the resource.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;name&#039;                  =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product name.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;slug&#039;                  =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product slug.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;permalink&#039;             =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product URL.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;format&#039;      =&gt; &#039;uri&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;date_created&#039;          =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;The date the product was created, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;date_created_gmt&#039;      =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;The date the product was created, as GMT.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;date_modified&#039;         =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;The date the product was last modified, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;date_modified_gmt&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;The date the product was last modified, as GMT.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;type&#039;                  =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product type.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;default&#039;     =&gt; &#039;simple&#039;,
+					&#039;enum&#039;        =&gt; array_keys( wc_get_product_types() ),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;status&#039;                =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product status (post status).&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;default&#039;     =&gt; &#039;publish&#039;,
+					&#039;enum&#039;        =&gt; array_merge( array_keys( get_post_statuses() ), array( &#039;future&#039;, &#039;auto-draft&#039;, &#039;trash&#039; ) ),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;featured&#039;              =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Featured product.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;default&#039;     =&gt; false,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;catalog_visibility&#039;    =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Catalog visibility.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;default&#039;     =&gt; &#039;visible&#039;,
+					&#039;enum&#039;        =&gt; array( &#039;visible&#039;, &#039;catalog&#039;, &#039;search&#039;, &#039;hidden&#039; ),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;description&#039;           =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product description.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;short_description&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product short description.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;sku&#039;                   =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Unique identifier.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;price&#039;                 =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Current product price.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;regular_price&#039;         =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product regular price.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;sale_price&#039;            =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product sale price.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;date_on_sale_from&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;Start date of sale price, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;date_on_sale_from_gmt&#039; =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Start date of sale price, as GMT.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;date_on_sale_to&#039;       =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;End date of sale price, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;date_on_sale_to_gmt&#039;   =&gt; array(
+					&#039;description&#039; =&gt; __( &quot;End date of sale price, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;date-time&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;price_html&#039;            =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Price formatted in HTML.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;on_sale&#039;               =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Shows if the product is on sale.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;purchasable&#039;           =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Shows if the product can be bought.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;total_sales&#039;           =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Amount of sales.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;virtual&#039;               =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;If the product is virtual.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;default&#039;     =&gt; false,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;downloadable&#039;          =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;If the product is downloadable.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;default&#039;     =&gt; false,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;downloads&#039;             =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;List of downloadable files.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;       =&gt; &#039;object&#039;,
+						&#039;properties&#039; =&gt; array(
+							&#039;id&#039;   =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;File ID.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;name&#039; =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;File name.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;file&#039; =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;File URL.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+						),
+					),
+				),
+				&#039;download_limit&#039;        =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Number of times downloadable files can be downloaded after purchase.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;default&#039;     =&gt; -1,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;download_expiry&#039;       =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Number of days until access to downloadable files expires.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;default&#039;     =&gt; -1,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;external_url&#039;          =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product external URL. Only for external products.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;format&#039;      =&gt; &#039;uri&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;button_text&#039;           =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product external button text. Only for external products.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;tax_status&#039;            =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Tax status.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;default&#039;     =&gt; &#039;taxable&#039;,
+					&#039;enum&#039;        =&gt; array( &#039;taxable&#039;, &#039;shipping&#039;, &#039;none&#039; ),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;tax_class&#039;             =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Tax class.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;manage_stock&#039;          =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Stock management at product level.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;default&#039;     =&gt; false,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;stock_quantity&#039;        =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Stock quantity.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;stock_status&#039;          =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Controls the stock status of the product.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;default&#039;     =&gt; &#039;instock&#039;,
+					&#039;enum&#039;        =&gt; array_keys( wc_get_product_stock_status_options() ),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;backorders&#039;            =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;If managing stock, this controls if backorders are allowed.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;default&#039;     =&gt; &#039;no&#039;,
+					&#039;enum&#039;        =&gt; array( &#039;no&#039;, &#039;notify&#039;, &#039;yes&#039; ),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;backorders_allowed&#039;    =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Shows if backorders are allowed.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;backordered&#039;           =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Shows if the product is on backordered.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;low_stock_amount&#039;       =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Low Stock amount for the product.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; array( &#039;integer&#039;, &#039;null&#039; ),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;sold_individually&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Allow one item to be bought in a single order.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;default&#039;     =&gt; false,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;weight&#039;                =&gt; array(
+					/* translators: %s: weight unit */
+					&#039;description&#039; =&gt; sprintf( __( &#039;Product weight (%s).&#039;, &#039;woocommerce&#039; ), $weight_unit_label ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;dimensions&#039;            =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product dimensions.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;object&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;properties&#039;  =&gt; array(
+						&#039;length&#039; =&gt; array(
+							/* translators: %s: dimension unit */
+							&#039;description&#039; =&gt; sprintf( __( &#039;Product length (%s).&#039;, &#039;woocommerce&#039; ), $dimension_unit_label ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+						),
+						&#039;width&#039;  =&gt; array(
+							/* translators: %s: dimension unit */
+							&#039;description&#039; =&gt; sprintf( __( &#039;Product width (%s).&#039;, &#039;woocommerce&#039; ), $dimension_unit_label ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+						),
+						&#039;height&#039; =&gt; array(
+							/* translators: %s: dimension unit */
+							&#039;description&#039; =&gt; sprintf( __( &#039;Product height (%s).&#039;, &#039;woocommerce&#039; ), $dimension_unit_label ),
+							&#039;type&#039;        =&gt; &#039;string&#039;,
+							&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+						),
+					),
+				),
+				&#039;shipping_required&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Shows if the product need to be shipped.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;shipping_taxable&#039;      =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Shows whether or not the product shipping is taxable.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;shipping_class&#039;        =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Shipping class slug.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;shipping_class_id&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Shipping class ID.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;reviews_allowed&#039;       =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Allow reviews.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;default&#039;     =&gt; true,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;average_rating&#039;        =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Reviews average rating.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;rating_count&#039;          =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Amount of reviews that the product have.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;related_ids&#039;           =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;List of related products IDs.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039; =&gt; &#039;integer&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;upsell_ids&#039;            =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;List of up-sell products IDs.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039; =&gt; &#039;integer&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;cross_sell_ids&#039;        =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;List of cross-sell products IDs.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039; =&gt; &#039;integer&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;parent_id&#039;             =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Product parent ID.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;purchase_note&#039;         =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Optional note to send the customer after purchase.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;string&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;categories&#039;            =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;List of categories.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;       =&gt; &#039;object&#039;,
+						&#039;properties&#039; =&gt; array(
+							&#039;id&#039;   =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Category ID.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;integer&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;name&#039; =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Category name.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+								&#039;readonly&#039;    =&gt; true,
+							),
+							&#039;slug&#039; =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Category slug.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+								&#039;readonly&#039;    =&gt; true,
+							),
+						),
+					),
+				),
+				&#039;tags&#039;                  =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;List of tags.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;       =&gt; &#039;object&#039;,
+						&#039;properties&#039; =&gt; array(
+							&#039;id&#039;   =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Tag ID.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;integer&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;name&#039; =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Tag name.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+								&#039;readonly&#039;    =&gt; true,
+							),
+							&#039;slug&#039; =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Tag slug.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+								&#039;readonly&#039;    =&gt; true,
+							),
+						),
+					),
+				),
+				&#039;images&#039;                =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;List of images.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;       =&gt; &#039;object&#039;,
+						&#039;properties&#039; =&gt; array(
+							&#039;id&#039;                =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Image ID.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;integer&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;date_created&#039;      =&gt; array(
+								&#039;description&#039; =&gt; __( &quot;The date the image was created, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;date-time&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+								&#039;readonly&#039;    =&gt; true,
+							),
+							&#039;date_created_gmt&#039;  =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;The date the image was created, as GMT.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;date-time&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+								&#039;readonly&#039;    =&gt; true,
+							),
+							&#039;date_modified&#039;     =&gt; array(
+								&#039;description&#039; =&gt; __( &quot;The date the image was last modified, in the site&#039;s timezone.&quot;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;date-time&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+								&#039;readonly&#039;    =&gt; true,
+							),
+							&#039;date_modified_gmt&#039; =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;The date the image was last modified, as GMT.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;date-time&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+								&#039;readonly&#039;    =&gt; true,
+							),
+							&#039;src&#039;               =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Image URL.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;format&#039;      =&gt; &#039;uri&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;name&#039;              =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Image name.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;alt&#039;               =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Image alternative text.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+						),
+					),
+				),
+				&#039;has_options&#039;     =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Shows if the product needs to be configured before it can be bought.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;boolean&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;attributes&#039;            =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;List of attributes.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;       =&gt; &#039;object&#039;,
+						&#039;properties&#039; =&gt; array(
+							&#039;id&#039;        =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Attribute ID.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;integer&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;name&#039;      =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Attribute name.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;position&#039;  =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Attribute position.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;integer&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;visible&#039;   =&gt; array(
+								&#039;description&#039; =&gt; __( &quot;Define if the attribute is visible on the \&quot;Additional information\&quot; tab in the product&#039;s page.&quot;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;boolean&#039;,
+								&#039;default&#039;     =&gt; false,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;variation&#039; =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Define if the attribute can be used as variation.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;boolean&#039;,
+								&#039;default&#039;     =&gt; false,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;options&#039;   =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;List of available term names of the attribute.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;array&#039;,
+								&#039;items&#039;       =&gt; array(
+									&#039;type&#039; =&gt; &#039;string&#039;,
+								),
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+						),
+					),
+				),
+				&#039;default_attributes&#039;    =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Defaults variation attributes.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;       =&gt; &#039;object&#039;,
+						&#039;properties&#039; =&gt; array(
+							&#039;id&#039;     =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Attribute ID.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;integer&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;name&#039;   =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Attribute name.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;option&#039; =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Selected attribute term name.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+						),
+					),
+				),
+				&#039;variations&#039;            =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;List of variations IDs.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039; =&gt; &#039;integer&#039;,
+					),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;grouped_products&#039;      =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;List of grouped products ID.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039; =&gt; &#039;integer&#039;,
+					),
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;readonly&#039;    =&gt; true,
+				),
+				&#039;menu_order&#039;            =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Menu order, used to custom sort products.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;integer&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+				),
+				&#039;meta_data&#039;             =&gt; array(
+					&#039;description&#039; =&gt; __( &#039;Meta data.&#039;, &#039;woocommerce&#039; ),
+					&#039;type&#039;        =&gt; &#039;array&#039;,
+					&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+					&#039;items&#039;       =&gt; array(
+						&#039;type&#039;       =&gt; &#039;object&#039;,
+						&#039;properties&#039; =&gt; array(
+							&#039;id&#039;    =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Meta ID.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;integer&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+								&#039;readonly&#039;    =&gt; true,
+							),
+							&#039;key&#039;   =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Meta key.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;string&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+							&#039;value&#039; =&gt; array(
+								&#039;description&#039; =&gt; __( &#039;Meta value.&#039;, &#039;woocommerce&#039; ),
+								&#039;type&#039;        =&gt; &#039;mixed&#039;,
+								&#039;context&#039;     =&gt; array( &#039;view&#039;, &#039;edit&#039; ),
+							),
+						),
+					),
+				),
+			),
+		);
+
+		$post_type_obj = get_post_type_object( $this-&gt;post_type );
+		if ( is_post_type_viewable( $post_type_obj ) &amp;&amp; $post_type_obj-&gt;public ) {
+			$schema[&#039;properties&#039;][&#039;permalink_template&#039;] = array(
+				&#039;description&#039; =&gt; __( &#039;Permalink template for the product.&#039;, &#039;woocommerce&#039; ),
+				&#039;type&#039;        =&gt; &#039;string&#039;,
+				&#039;context&#039;     =&gt; array( &#039;edit&#039; ),
+				&#039;readonly&#039;    =&gt; true,
+			);
+
+			$schema[&#039;properties&#039;][&#039;generated_slug&#039;] = array(
+				&#039;description&#039; =&gt; __( &#039;Slug automatically generated from the product name.&#039;, &#039;woocommerce&#039; ),
+				&#039;type&#039;        =&gt; &#039;string&#039;,
+				&#039;context&#039;     =&gt; array( &#039;edit&#039; ),
+				&#039;readonly&#039;    =&gt; true,
+			);
+		}
+
+		return $this-&gt;add_additional_fields_schema( $schema );
+	}
+
+	/**
+	 * Add new options for &#039;orderby&#039; to the collection params.
+	 *
+	 * @return array
+	 */
+	public function get_collection_params() {
+		$params                    = parent::get_collection_params();
+		$params[&#039;orderby&#039;][&#039;enum&#039;] = array_merge( $params[&#039;orderby&#039;][&#039;enum&#039;], array( &#039;price&#039;, &#039;popularity&#039;, &#039;rating&#039; ) );
+
+		unset( $params[&#039;in_stock&#039;] );
+		$params[&#039;stock_status&#039;] = array(
+			&#039;description&#039;       =&gt; __( &#039;Limit result set to products with specified stock status.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;string&#039;,
+			&#039;enum&#039;              =&gt; array_keys( wc_get_product_stock_status_options() ),
+			&#039;sanitize_callback&#039; =&gt; &#039;sanitize_text_field&#039;,
+			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
+		);
+
+		$params[&#039;search_sku&#039;] = array(
+			&#039;description&#039;       =&gt; __( &#039;Limit results to those with a SKU that partial matches a string.&#039;, &#039;woocommerce&#039; ),
+			&#039;type&#039;              =&gt; &#039;string&#039;,
+			&#039;sanitize_callback&#039; =&gt; &#039;sanitize_text_field&#039;,
+			&#039;validate_callback&#039; =&gt; &#039;rest_validate_request_arg&#039;,
+		);
+
+		return $params;
+	}
+
+	/**
+	 * Get product data.
+	 *
+	 * @param WC_Product $product Product instance.
+	 * @param string     $context Request context. Options: &#039;view&#039; and &#039;edit&#039;.
+	 *
+	 * @return array
+	 */
+	protected function get_product_data( $product, $context = &#039;view&#039; ) {
+		$data = parent::get_product_data( ...func_get_args() );
+
+		if ( isset( $this-&gt;request ) ) {
+			$fields = $this-&gt;get_fields_for_response( $this-&gt;request );
+
+			// Add stock_status if needed.
+			if ( in_array( &#039;stock_status&#039;, $fields, true ) ) {
+				$data[&#039;stock_status&#039;] = $product-&gt;get_stock_status( $context );
+			}
+
+			// Add has_options if needed.
+			if ( in_array( &#039;has_options&#039;, $fields, true ) ) {
+				$data[&#039;has_options&#039;] = $product-&gt;has_options( $context );
+			}
+
+			$post_type_obj = get_post_type_object( $this-&gt;post_type );
+			if ( is_post_type_viewable( $post_type_obj ) &amp;&amp; $post_type_obj-&gt;public ) {
+				$permalink_template_requested = in_array( &#039;permalink_template&#039;, $fields, true );
+				$generated_slug_requested     = in_array( &#039;generated_slug&#039;, $fields, true );
+
+				if ( $permalink_template_requested || $generated_slug_requested ) {
+					if ( ! function_exists( &#039;get_sample_permalink&#039; ) ) {
+						require_once ABSPATH . &#039;wp-admin/includes/post.php&#039;;
+					}
+
+					$sample_permalink = get_sample_permalink( $product-&gt;get_id(), $product-&gt;get_name(), &#039;&#039; );
+
+					// Add permalink_template if needed.
+					if ( $permalink_template_requested ) {
+						$data[&#039;permalink_template&#039;] = $sample_permalink[0];
+					}
+
+					// Add generated_slug if needed.
+					if ( $generated_slug_requested ) {
+						$data[&#039;generated_slug&#039;] = $sample_permalink[1];
+					}
+				}
+			}
+		}
+
+		return $data;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866948"></script>
+    <script src="../js/search.js?updated=1692866948"></script>
+</body>
+</html>

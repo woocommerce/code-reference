@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866949">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866949">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">wc-attribute-functions.php</h2>
+
+                
+
+            <section class="phpdocumentor-functions">
+        <h3 class="phpdocumentor-elements__header" id="functions">
+            Functions
+            <a href="#functions" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_text_attributes">
+        wc_get_text_attributes()
+        <a href="#function_wc_get_text_attributes" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.18">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">18</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets text attributes from a string.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_text_attributes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$raw_attributes</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$raw_attributes</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Raw attributes.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.4</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_text_attributes_filter_callback">
+        wc_get_text_attributes_filter_callback()
+        <a href="#function_wc_get_text_attributes_filter_callback" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.29">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">29</span>
+</aside>
+
+        <p class="phpdocumentor-summary">See if an attribute is actually valid.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_text_attributes_filter_callback</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Value.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.0.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_implode_text_attributes">
+        wc_implode_text_attributes()
+        <a href="#function_wc_implode_text_attributes" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.40">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Implode an array of attributes using WC_DELIMITER.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_implode_text_attributes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$attributes</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$attributes</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attributes list.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.0.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_attribute_taxonomies">
+        wc_get_attribute_taxonomies()
+        <a href="#function_wc_get_attribute_taxonomies" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.49">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">49</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get attribute taxonomies.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_attribute_taxonomies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_attribute_taxonomy_ids">
+        wc_get_attribute_taxonomy_ids()
+        <a href="#function_wc_get_attribute_taxonomy_ids" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.93">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">93</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get (cached) attribute taxonomy ID and name pairs.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_attribute_taxonomy_ids</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_attribute_taxonomy_labels">
+        wc_get_attribute_taxonomy_labels()
+        <a href="#function_wc_get_attribute_taxonomy_labels" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.115">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">115</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get (cached) attribute taxonomy label and name pairs.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_attribute_taxonomy_labels</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_attribute_taxonomy_name">
+        wc_attribute_taxonomy_name()
+        <a href="#function_wc_attribute_taxonomy_name" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.137">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">137</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get a product attribute name.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_attribute_taxonomy_name</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$attribute_name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$attribute_name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute name.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_variation_attribute_name">
+        wc_variation_attribute_name()
+        <a href="#function_wc_variation_attribute_name" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.148">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">148</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get the attribute name used when storing values in post meta.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_variation_attribute_name</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$attribute_name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$attribute_name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute name.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_attribute_taxonomy_name_by_id">
+        wc_attribute_taxonomy_name_by_id()
+        <a href="#function_wc_attribute_taxonomy_name_by_id" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.159">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">159</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get a product attribute name by ID.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_attribute_taxonomy_name_by_id</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$attribute_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$attribute_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.4.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_attribute_taxonomy_id_by_name">
+        wc_attribute_taxonomy_id_by_name()
+        <a href="#function_wc_attribute_taxonomy_id_by_name" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.172">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">172</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get a product attribute ID by name.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_attribute_taxonomy_id_by_name</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute name.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_attribute_label">
+        wc_attribute_label()
+        <a href="#function_wc_attribute_label" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.186">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">186</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get a product attributes label.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_attribute_label</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Product.html"><abbr title="\WC_Product">WC_Product</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$product</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute name.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$product</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Product.html"><abbr title="\WC_Product">WC_Product</abbr></a></span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Product data.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_attribute_orderby">
+        wc_attribute_orderby()
+        <a href="#function_wc_attribute_orderby" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.220">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">220</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get a product attributes orderby setting.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_attribute_orderby</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute name.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_attribute_taxonomy_names">
+        wc_get_attribute_taxonomy_names()
+        <a href="#function_wc_get_attribute_taxonomy_names" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.233">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">233</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get an array of product attribute taxonomies.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_attribute_taxonomy_names</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_attribute_types">
+        wc_get_attribute_types()
+        <a href="#function_wc_get_attribute_types" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.250">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">250</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get attribute types.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_attribute_types</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.4.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_has_custom_attribute_types">
+        wc_has_custom_attribute_types()
+        <a href="#function_wc_has_custom_attribute_types" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.265">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">265</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Check if there are custom attribute types.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_has_custom_attribute_types</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.3.2</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_attribute_type_label">
+        wc_get_attribute_type_label()
+        <a href="#function_wc_get_attribute_type_label" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.278">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">278</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get attribute type label.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_attribute_type_label</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$type</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute type slug.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.0.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_check_if_attribute_name_is_reserved">
+        wc_check_if_attribute_name_is_reserved()
+        <a href="#function_wc_check_if_attribute_name_is_reserved" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.292">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">292</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Check if attribute name is reserved.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_check_if_attribute_name_is_reserved</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$attribute_name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"><p>https://codex.wordpress.org/Function_Reference/register_taxonomy#Reserved_Terms.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$attribute_name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute name.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">2.4.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_attributes_array_filter_visible">
+        wc_attributes_array_filter_visible()
+        <a href="#function_wc_attributes_array_filter_visible" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.381">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">381</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Callback for array filter to get visible only.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_attributes_array_filter_visible</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Product-Attribute.html"><abbr title="\WC_Product_Attribute">WC_Product_Attribute</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$attribute</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$attribute</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Product-Attribute.html"><abbr title="\WC_Product_Attribute">WC_Product_Attribute</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute data.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.0.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_attributes_array_filter_variation">
+        wc_attributes_array_filter_variation()
+        <a href="#function_wc_attributes_array_filter_variation" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.392">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">392</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Callback for array filter to get variation attributes only.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_attributes_array_filter_variation</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Product-Attribute.html"><abbr title="\WC_Product_Attribute">WC_Product_Attribute</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$attribute</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$attribute</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/WC-Product-Attribute.html"><abbr title="\WC_Product_Attribute">WC_Product_Attribute</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute data.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.0.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_is_attribute_in_product_name">
+        wc_is_attribute_in_product_name()
+        <a href="#function_wc_is_attribute_in_product_name" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.404">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">404</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Check if an attribute is included in the attributes area of a variation name.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_is_attribute_in_product_name</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$attribute</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$attribute</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute value to check for.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Product name to check in.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.0.2</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_array_filter_default_attributes">
+        wc_array_filter_default_attributes()
+        <a href="#function_wc_array_filter_default_attributes" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.417">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">417</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Callback for array filter to get default attributes.  Will allow for &#039;0&#039; string values, but regard all other
+class PHP FALSE equivalents normally.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_array_filter_default_attributes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$attribute</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$attribute</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute being considered for exclusion from parent array.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.1.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_get_attribute">
+        wc_get_attribute()
+        <a href="#function_wc_get_attribute" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.428">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">428</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get attribute data by ID.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_get_attribute</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\stdClass">stdClass</abbr>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.2.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_create_attribute">
+        wc_create_attribute()
+        <a href="#function_wc_create_attribute" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.466">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">466</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Create attribute.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_create_attribute</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$args</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|<abbr title="\WP_Error">WP_Error</abbr></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$args</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute arguments {
+Array of attribute parameters.</p>
+<pre class="prettyprint"><code class="prettyprint">@type int    $id           Unique identifier, used to update an attribute.
+@type string $name         Attribute name. Always required.
+@type string $slug         Attribute alphanumeric identifier.
+@type string $type         Type of attribute.
+                           Core by default accepts: 'select' and 'text'.
+                           Default to 'select'.
+@type string $order_by     Sort order.
+                           Accepts: 'menu_order', 'name', 'name_num' and 'id'.
+                           Default to 'menu_order'.
+@type bool   $has_archives Enable or disable attribute archives. False by default.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.2.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_update_attribute">
+        wc_update_attribute()
+        <a href="#function_wc_update_attribute" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.629">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">629</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Update an attribute.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_update_attribute</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$args</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|<abbr title="\WP_Error">WP_Error</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>For available args see wc_create_attribute().</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute ID.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$args</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute arguments.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.2.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_delete_attribute">
+        wc_delete_attribute()
+        <a href="#function_wc_delete_attribute" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.661">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">661</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Delete attribute by ID.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_delete_attribute</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute ID.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.2.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_wc_attribute_taxonomy_slug">
+        wc_attribute_taxonomy_slug()
+        <a href="#function_wc_attribute_taxonomy_slug" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/includes/wc-attribute-functions.php"><a href="../files/woocommerce-includes-wc-attribute-functions.html#source-view.720">includes/wc-attribute-functions.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">720</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get an unprefixed product attribute name.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">wc_attribute_taxonomy_slug</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$attribute_name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$attribute_name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Attribute name.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">3.6.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+    
+</article>
+            </section>
+
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WooCommerce Attribute Functions
+ *
+ * @package WooCommerce\Functions
+ * @version 2.1.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+/**
+ * Gets text attributes from a string.
+ *
+ * @since  2.4
+ * @param string $raw_attributes Raw attributes.
+ * @return array
+ */
+function wc_get_text_attributes( $raw_attributes ) {
+	return array_filter( array_map( &#039;trim&#039;, explode( WC_DELIMITER, html_entity_decode( $raw_attributes, ENT_QUOTES, get_bloginfo( &#039;charset&#039; ) ) ) ), &#039;wc_get_text_attributes_filter_callback&#039; );
+}
+
+/**
+ * See if an attribute is actually valid.
+ *
+ * @since  3.0.0
+ * @param  string $value Value.
+ * @return bool
+ */
+function wc_get_text_attributes_filter_callback( $value ) {
+	return &#039;&#039; !== $value;
+}
+
+/**
+ * Implode an array of attributes using WC_DELIMITER.
+ *
+ * @since  3.0.0
+ * @param  array $attributes Attributes list.
+ * @return string
+ */
+function wc_implode_text_attributes( $attributes ) {
+	return implode( &#039; &#039; . WC_DELIMITER . &#039; &#039;, $attributes );
+}
+
+/**
+ * Get attribute taxonomies.
+ *
+ * @return array of objects, @since 3.6.0 these are also indexed by ID.
+ */
+function wc_get_attribute_taxonomies() {
+	$prefix      = WC_Cache_Helper::get_cache_prefix( &#039;woocommerce-attributes&#039; );
+	$cache_key   = $prefix . &#039;attributes&#039;;
+	$cache_value = wp_cache_get( $cache_key, &#039;woocommerce-attributes&#039; );
+
+	if ( false !== $cache_value ) {
+		return $cache_value;
+	}
+
+	$raw_attribute_taxonomies = get_transient( &#039;wc_attribute_taxonomies&#039; );
+
+	if ( false === $raw_attribute_taxonomies ) {
+		global $wpdb;
+
+		$raw_attribute_taxonomies = $wpdb-&gt;get_results( &quot;SELECT * FROM {$wpdb-&gt;prefix}woocommerce_attribute_taxonomies WHERE attribute_name != &#039;&#039; ORDER BY attribute_name ASC;&quot; );
+
+		set_transient( &#039;wc_attribute_taxonomies&#039;, $raw_attribute_taxonomies );
+	}
+
+	/**
+	 * Filter attribute taxonomies.
+	 *
+	 * @param array $attribute_taxonomies Results of the DB query. Each taxonomy is an object.
+	 */
+	$raw_attribute_taxonomies = (array) array_filter( apply_filters( &#039;woocommerce_attribute_taxonomies&#039;, $raw_attribute_taxonomies ) );
+
+	// Index by ID for easier lookups.
+	$attribute_taxonomies = array();
+
+	foreach ( $raw_attribute_taxonomies as $result ) {
+		$attribute_taxonomies[ &#039;id:&#039; . $result-&gt;attribute_id ] = $result;
+	}
+
+	wp_cache_set( $cache_key, $attribute_taxonomies, &#039;woocommerce-attributes&#039; );
+
+	return $attribute_taxonomies;
+}
+
+/**
+ * Get (cached) attribute taxonomy ID and name pairs.
+ *
+ * @since 3.6.0
+ * @return array
+ */
+function wc_get_attribute_taxonomy_ids() {
+	$prefix      = WC_Cache_Helper::get_cache_prefix( &#039;woocommerce-attributes&#039; );
+	$cache_key   = $prefix . &#039;ids&#039;;
+	$cache_value = wp_cache_get( $cache_key, &#039;woocommerce-attributes&#039; );
+
+	if ( false !== $cache_value ) {
+		return $cache_value;
+	}
+
+	$taxonomy_ids = array_map( &#039;absint&#039;, wp_list_pluck( wc_get_attribute_taxonomies(), &#039;attribute_id&#039;, &#039;attribute_name&#039; ) );
+
+	wp_cache_set( $cache_key, $taxonomy_ids, &#039;woocommerce-attributes&#039; );
+
+	return $taxonomy_ids;
+}
+
+/**
+ * Get (cached) attribute taxonomy label and name pairs.
+ *
+ * @since 3.6.0
+ * @return array
+ */
+function wc_get_attribute_taxonomy_labels() {
+	$prefix      = WC_Cache_Helper::get_cache_prefix( &#039;woocommerce-attributes&#039; );
+	$cache_key   = $prefix . &#039;labels&#039;;
+	$cache_value = wp_cache_get( $cache_key, &#039;woocommerce-attributes&#039; );
+
+	if ( false !== $cache_value ) {
+		return $cache_value;
+	}
+
+	$taxonomy_labels = wp_list_pluck( wc_get_attribute_taxonomies(), &#039;attribute_label&#039;, &#039;attribute_name&#039; );
+
+	wp_cache_set( $cache_key, $taxonomy_labels, &#039;woocommerce-attributes&#039; );
+
+	return $taxonomy_labels;
+}
+
+/**
+ * Get a product attribute name.
+ *
+ * @param string $attribute_name Attribute name.
+ * @return string
+ */
+function wc_attribute_taxonomy_name( $attribute_name ) {
+	return $attribute_name ? &#039;pa_&#039; . wc_sanitize_taxonomy_name( $attribute_name ) : &#039;&#039;;
+}
+
+/**
+ * Get the attribute name used when storing values in post meta.
+ *
+ * @since 2.6.0
+ * @param string $attribute_name Attribute name.
+ * @return string
+ */
+function wc_variation_attribute_name( $attribute_name ) {
+	return &#039;attribute_&#039; . sanitize_title( $attribute_name );
+}
+
+/**
+ * Get a product attribute name by ID.
+ *
+ * @since  2.4.0
+ * @param int $attribute_id Attribute ID.
+ * @return string Return an empty string if attribute doesn&#039;t exist.
+ */
+function wc_attribute_taxonomy_name_by_id( $attribute_id ) {
+	$taxonomy_ids   = wc_get_attribute_taxonomy_ids();
+	$attribute_name = (string) array_search( $attribute_id, $taxonomy_ids, true );
+	return wc_attribute_taxonomy_name( $attribute_name );
+}
+
+/**
+ * Get a product attribute ID by name.
+ *
+ * @since  2.6.0
+ * @param string $name Attribute name.
+ * @return int
+ */
+function wc_attribute_taxonomy_id_by_name( $name ) {
+	$name         = wc_attribute_taxonomy_slug( $name );
+	$taxonomy_ids = wc_get_attribute_taxonomy_ids();
+
+	return isset( $taxonomy_ids[ $name ] ) ? $taxonomy_ids[ $name ] : 0;
+}
+
+/**
+ * Get a product attributes label.
+ *
+ * @param string     $name    Attribute name.
+ * @param WC_Product $product Product data.
+ * @return string
+ */
+function wc_attribute_label( $name, $product = &#039;&#039; ) {
+	if ( taxonomy_is_product_attribute( $name ) ) {
+		$slug       = wc_attribute_taxonomy_slug( $name );
+		$all_labels = wc_get_attribute_taxonomy_labels();
+		$label      = isset( $all_labels[ $slug ] ) ? $all_labels[ $slug ] : $slug;
+	} elseif ( $product ) {
+		if ( $product-&gt;is_type( &#039;variation&#039; ) ) {
+			$product = wc_get_product( $product-&gt;get_parent_id() );
+		}
+		$attributes = array();
+
+		if ( false !== $product ) {
+			$attributes = $product-&gt;get_attributes();
+		}
+
+		// Attempt to get label from product, as entered by the user.
+		if ( $attributes &amp;&amp; isset( $attributes[ sanitize_title( $name ) ] ) ) {
+			$label = $attributes[ sanitize_title( $name ) ]-&gt;get_name();
+		} else {
+			$label = $name;
+		}
+	} else {
+		$label = $name;
+	}
+
+	return apply_filters( &#039;woocommerce_attribute_label&#039;, $label, $name, $product );
+}
+
+/**
+ * Get a product attributes orderby setting.
+ *
+ * @param string $name Attribute name.
+ * @return string
+ */
+function wc_attribute_orderby( $name ) {
+	$name       = wc_attribute_taxonomy_slug( $name );
+	$id         = wc_attribute_taxonomy_id_by_name( $name );
+	$taxonomies = wc_get_attribute_taxonomies();
+
+	return apply_filters( &#039;woocommerce_attribute_orderby&#039;, isset( $taxonomies[ &#039;id:&#039; . $id ] ) ? $taxonomies[ &#039;id:&#039; . $id ]-&gt;attribute_orderby : &#039;menu_order&#039;, $name );
+}
+
+/**
+ * Get an array of product attribute taxonomies.
+ *
+ * @return array
+ */
+function wc_get_attribute_taxonomy_names() {
+	$taxonomy_names       = array();
+	$attribute_taxonomies = wc_get_attribute_taxonomies();
+	if ( ! empty( $attribute_taxonomies ) ) {
+		foreach ( $attribute_taxonomies as $tax ) {
+			$taxonomy_names[] = wc_attribute_taxonomy_name( $tax-&gt;attribute_name );
+		}
+	}
+	return $taxonomy_names;
+}
+
+/**
+ * Get attribute types.
+ *
+ * @since  2.4.0
+ * @return array
+ */
+function wc_get_attribute_types() {
+	return (array) apply_filters(
+		&#039;product_attributes_type_selector&#039;,
+		array(
+			&#039;select&#039; =&gt; __( &#039;Select&#039;, &#039;woocommerce&#039; ),
+		)
+	);
+}
+
+/**
+ * Check if there are custom attribute types.
+ *
+ * @since  3.3.2
+ * @return bool True if there are custom types, otherwise false.
+ */
+function wc_has_custom_attribute_types() {
+	$types = wc_get_attribute_types();
+
+	return 1 &lt; count( $types ) || ! array_key_exists( &#039;select&#039;, $types );
+}
+
+/**
+ * Get attribute type label.
+ *
+ * @since  3.0.0
+ * @param  string $type Attribute type slug.
+ * @return string
+ */
+function wc_get_attribute_type_label( $type ) {
+	$types = wc_get_attribute_types();
+
+	return isset( $types[ $type ] ) ? $types[ $type ] : __( &#039;Select&#039;, &#039;woocommerce&#039; );
+}
+
+/**
+ * Check if attribute name is reserved.
+ * https://codex.wordpress.org/Function_Reference/register_taxonomy#Reserved_Terms.
+ *
+ * @since  2.4.0
+ * @param  string $attribute_name Attribute name.
+ * @return bool
+ */
+function wc_check_if_attribute_name_is_reserved( $attribute_name ) {
+	// Forbidden attribute names.
+	$reserved_terms = array(
+		&#039;attachment&#039;,
+		&#039;attachment_id&#039;,
+		&#039;author&#039;,
+		&#039;author_name&#039;,
+		&#039;calendar&#039;,
+		&#039;cat&#039;,
+		&#039;category&#039;,
+		&#039;category__and&#039;,
+		&#039;category__in&#039;,
+		&#039;category__not_in&#039;,
+		&#039;category_name&#039;,
+		&#039;comments_per_page&#039;,
+		&#039;comments_popup&#039;,
+		&#039;cpage&#039;,
+		&#039;day&#039;,
+		&#039;debug&#039;,
+		&#039;error&#039;,
+		&#039;exact&#039;,
+		&#039;feed&#039;,
+		&#039;hour&#039;,
+		&#039;link_category&#039;,
+		&#039;m&#039;,
+		&#039;minute&#039;,
+		&#039;monthnum&#039;,
+		&#039;more&#039;,
+		&#039;name&#039;,
+		&#039;nav_menu&#039;,
+		&#039;nopaging&#039;,
+		&#039;offset&#039;,
+		&#039;order&#039;,
+		&#039;orderby&#039;,
+		&#039;p&#039;,
+		&#039;page&#039;,
+		&#039;page_id&#039;,
+		&#039;paged&#039;,
+		&#039;pagename&#039;,
+		&#039;pb&#039;,
+		&#039;perm&#039;,
+		&#039;post&#039;,
+		&#039;post__in&#039;,
+		&#039;post__not_in&#039;,
+		&#039;post_format&#039;,
+		&#039;post_mime_type&#039;,
+		&#039;post_status&#039;,
+		&#039;post_tag&#039;,
+		&#039;post_type&#039;,
+		&#039;posts&#039;,
+		&#039;posts_per_archive_page&#039;,
+		&#039;posts_per_page&#039;,
+		&#039;preview&#039;,
+		&#039;robots&#039;,
+		&#039;s&#039;,
+		&#039;search&#039;,
+		&#039;second&#039;,
+		&#039;sentence&#039;,
+		&#039;showposts&#039;,
+		&#039;static&#039;,
+		&#039;subpost&#039;,
+		&#039;subpost_id&#039;,
+		&#039;tag&#039;,
+		&#039;tag__and&#039;,
+		&#039;tag__in&#039;,
+		&#039;tag__not_in&#039;,
+		&#039;tag_id&#039;,
+		&#039;tag_slug__and&#039;,
+		&#039;tag_slug__in&#039;,
+		&#039;taxonomy&#039;,
+		&#039;tb&#039;,
+		&#039;term&#039;,
+		&#039;type&#039;,
+		&#039;w&#039;,
+		&#039;withcomments&#039;,
+		&#039;withoutcomments&#039;,
+		&#039;year&#039;,
+	);
+
+	return in_array( $attribute_name, $reserved_terms, true );
+}
+
+/**
+ * Callback for array filter to get visible only.
+ *
+ * @since  3.0.0
+ * @param  WC_Product_Attribute $attribute Attribute data.
+ * @return bool
+ */
+function wc_attributes_array_filter_visible( $attribute ) {
+	return $attribute &amp;&amp; is_a( $attribute, &#039;WC_Product_Attribute&#039; ) &amp;&amp; $attribute-&gt;get_visible() &amp;&amp; ( ! $attribute-&gt;is_taxonomy() || taxonomy_exists( $attribute-&gt;get_name() ) );
+}
+
+/**
+ * Callback for array filter to get variation attributes only.
+ *
+ * @since  3.0.0
+ * @param  WC_Product_Attribute $attribute Attribute data.
+ * @return bool
+ */
+function wc_attributes_array_filter_variation( $attribute ) {
+	return $attribute &amp;&amp; is_a( $attribute, &#039;WC_Product_Attribute&#039; ) &amp;&amp; $attribute-&gt;get_variation();
+}
+
+/**
+ * Check if an attribute is included in the attributes area of a variation name.
+ *
+ * @since  3.0.2
+ * @param  string $attribute Attribute value to check for.
+ * @param  string $name      Product name to check in.
+ * @return bool
+ */
+function wc_is_attribute_in_product_name( $attribute, $name ) {
+	$is_in_name = stristr( $name, &#039; &#039; . $attribute . &#039;,&#039; ) || 0 === stripos( strrev( $name ), strrev( &#039; &#039; . $attribute ) );
+	return apply_filters( &#039;woocommerce_is_attribute_in_product_name&#039;, $is_in_name, $attribute, $name );
+}
+
+/**
+ * Callback for array filter to get default attributes.  Will allow for &#039;0&#039; string values, but regard all other
+ * class PHP FALSE equivalents normally.
+ *
+ * @since 3.1.0
+ * @param mixed $attribute Attribute being considered for exclusion from parent array.
+ * @return bool
+ */
+function wc_array_filter_default_attributes( $attribute ) {
+	return is_scalar( $attribute ) &amp;&amp; ( ! empty( $attribute ) || &#039;0&#039; === $attribute );
+}
+
+/**
+ * Get attribute data by ID.
+ *
+ * @since  3.2.0
+ * @param  int $id Attribute ID.
+ * @return stdClass|null
+ */
+function wc_get_attribute( $id ) {
+	$attributes = wc_get_attribute_taxonomies();
+
+	if ( ! isset( $attributes[ &#039;id:&#039; . $id ] ) ) {
+		return null;
+	}
+
+	$data                    = $attributes[ &#039;id:&#039; . $id ];
+	$attribute               = new stdClass();
+	$attribute-&gt;id           = (int) $data-&gt;attribute_id;
+	$attribute-&gt;name         = $data-&gt;attribute_label;
+	$attribute-&gt;slug         = wc_attribute_taxonomy_name( $data-&gt;attribute_name );
+	$attribute-&gt;type         = $data-&gt;attribute_type;
+	$attribute-&gt;order_by     = $data-&gt;attribute_orderby;
+	$attribute-&gt;has_archives = (bool) $data-&gt;attribute_public;
+	return $attribute;
+}
+
+/**
+ * Create attribute.
+ *
+ * @since  3.2.0
+ * @param  array $args Attribute arguments {
+ *     Array of attribute parameters.
+ *
+ *     @type int    $id           Unique identifier, used to update an attribute.
+ *     @type string $name         Attribute name. Always required.
+ *     @type string $slug         Attribute alphanumeric identifier.
+ *     @type string $type         Type of attribute.
+ *                                Core by default accepts: &#039;select&#039; and &#039;text&#039;.
+ *                                Default to &#039;select&#039;.
+ *     @type string $order_by     Sort order.
+ *                                Accepts: &#039;menu_order&#039;, &#039;name&#039;, &#039;name_num&#039; and &#039;id&#039;.
+ *                                Default to &#039;menu_order&#039;.
+ *     @type bool   $has_archives Enable or disable attribute archives. False by default.
+ * }
+ * @return int|WP_Error
+ */
+function wc_create_attribute( $args ) {
+	global $wpdb;
+
+	$args   = wp_unslash( $args );
+	$id     = ! empty( $args[&#039;id&#039;] ) ? intval( $args[&#039;id&#039;] ) : 0;
+	$format = array( &#039;%s&#039;, &#039;%s&#039;, &#039;%s&#039;, &#039;%s&#039;, &#039;%d&#039; );
+
+	// Name is required.
+	if ( empty( $args[&#039;name&#039;] ) ) {
+		return new WP_Error( &#039;missing_attribute_name&#039;, __( &#039;Please, provide an attribute name.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+	}
+
+	// Set the attribute slug.
+	if ( empty( $args[&#039;slug&#039;] ) ) {
+		$slug = wc_sanitize_taxonomy_name( $args[&#039;name&#039;] );
+	} else {
+		$slug = preg_replace( &#039;/^pa\_/&#039;, &#039;&#039;, wc_sanitize_taxonomy_name( $args[&#039;slug&#039;] ) );
+	}
+
+	// Validate slug.
+	if ( strlen( $slug ) &gt; 28 ) {
+		/* translators: %s: attribute slug */
+		return new WP_Error( &#039;invalid_product_attribute_slug_too_long&#039;, sprintf( __( &#039;Slug &quot;%s&quot; is too long (28 characters max). Shorten it, please.&#039;, &#039;woocommerce&#039; ), $slug ), array( &#039;status&#039; =&gt; 400 ) );
+	} elseif ( wc_check_if_attribute_name_is_reserved( $slug ) ) {
+		/* translators: %s: attribute slug */
+		return new WP_Error( &#039;invalid_product_attribute_slug_reserved_name&#039;, sprintf( __( &#039;Slug &quot;%s&quot; is not allowed because it is a reserved term. Change it, please.&#039;, &#039;woocommerce&#039; ), $slug ), array( &#039;status&#039; =&gt; 400 ) );
+	} elseif ( ( 0 === $id &amp;&amp; taxonomy_exists( wc_attribute_taxonomy_name( $slug ) ) ) || ( isset( $args[&#039;old_slug&#039;] ) &amp;&amp; $args[&#039;old_slug&#039;] !== $slug &amp;&amp; taxonomy_exists( wc_attribute_taxonomy_name( $slug ) ) ) ) {
+		/* translators: %s: attribute slug */
+		return new WP_Error( &#039;invalid_product_attribute_slug_already_exists&#039;, sprintf( __( &#039;Slug &quot;%s&quot; is already in use. Change it, please.&#039;, &#039;woocommerce&#039; ), $slug ), array( &#039;status&#039; =&gt; 400 ) );
+	}
+
+	// Validate type.
+	if ( empty( $args[&#039;type&#039;] ) || ! array_key_exists( $args[&#039;type&#039;], wc_get_attribute_types() ) ) {
+		$args[&#039;type&#039;] = &#039;select&#039;;
+	}
+
+	// Validate order by.
+	if ( empty( $args[&#039;order_by&#039;] ) || ! in_array( $args[&#039;order_by&#039;], array( &#039;menu_order&#039;, &#039;name&#039;, &#039;name_num&#039;, &#039;id&#039; ), true ) ) {
+		$args[&#039;order_by&#039;] = &#039;menu_order&#039;;
+	}
+
+	$data = array(
+		&#039;attribute_label&#039;   =&gt; $args[&#039;name&#039;],
+		&#039;attribute_name&#039;    =&gt; $slug,
+		&#039;attribute_type&#039;    =&gt; $args[&#039;type&#039;],
+		&#039;attribute_orderby&#039; =&gt; $args[&#039;order_by&#039;],
+		&#039;attribute_public&#039;  =&gt; isset( $args[&#039;has_archives&#039;] ) ? (int) $args[&#039;has_archives&#039;] : 0,
+	);
+
+	// Create or update.
+	if ( 0 === $id ) {
+		$results = $wpdb-&gt;insert(
+			$wpdb-&gt;prefix . &#039;woocommerce_attribute_taxonomies&#039;,
+			$data,
+			$format
+		);
+
+		if ( is_wp_error( $results ) ) {
+			return new WP_Error( &#039;cannot_create_attribute&#039;, $results-&gt;get_error_message(), array( &#039;status&#039; =&gt; 400 ) );
+		}
+
+		$id = $wpdb-&gt;insert_id;
+
+		/**
+		 * Attribute added.
+		 *
+		 * @param int   $id   Added attribute ID.
+		 * @param array $data Attribute data.
+		 */
+		do_action( &#039;woocommerce_attribute_added&#039;, $id, $data );
+	} else {
+		$results = $wpdb-&gt;update(
+			$wpdb-&gt;prefix . &#039;woocommerce_attribute_taxonomies&#039;,
+			$data,
+			array( &#039;attribute_id&#039; =&gt; $id ),
+			$format,
+			array( &#039;%d&#039; )
+		);
+
+		if ( false === $results ) {
+			return new WP_Error( &#039;cannot_update_attribute&#039;, __( &#039;Could not update the attribute.&#039;, &#039;woocommerce&#039; ), array( &#039;status&#039; =&gt; 400 ) );
+		}
+
+		// Set old slug to check for database changes.
+		$old_slug = ! empty( $args[&#039;old_slug&#039;] ) ? wc_sanitize_taxonomy_name( $args[&#039;old_slug&#039;] ) : $slug;
+
+		/**
+		 * Attribute updated.
+		 *
+		 * @param int    $id       Added attribute ID.
+		 * @param array  $data     Attribute data.
+		 * @param string $old_slug Attribute old name.
+		 */
+		do_action( &#039;woocommerce_attribute_updated&#039;, $id, $data, $old_slug );
+
+		if ( $old_slug !== $slug ) {
+			// Update taxonomies in the wp term taxonomy table.
+			$wpdb-&gt;update(
+				$wpdb-&gt;term_taxonomy,
+				array( &#039;taxonomy&#039; =&gt; wc_attribute_taxonomy_name( $data[&#039;attribute_name&#039;] ) ),
+				array( &#039;taxonomy&#039; =&gt; &#039;pa_&#039; . $old_slug )
+			);
+
+			// Update taxonomy ordering term meta.
+			$wpdb-&gt;update(
+				$wpdb-&gt;termmeta,
+				array( &#039;meta_key&#039; =&gt; &#039;order&#039; ), // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+				array( &#039;meta_key&#039; =&gt; &#039;order_pa_&#039; . sanitize_title( $old_slug ) ) // WPCS: slow query ok.
+			);
+
+			// Update product attributes which use this taxonomy.
+			$old_taxonomy_name = &#039;pa_&#039; . $old_slug;
+			$new_taxonomy_name = &#039;pa_&#039; . $data[&#039;attribute_name&#039;];
+			$old_attribute_key = sanitize_title( $old_taxonomy_name ); // @see WC_Product::set_attributes().
+			$new_attribute_key = sanitize_title( $new_taxonomy_name ); // @see WC_Product::set_attributes().
+			$metadatas         = $wpdb-&gt;get_results(
+				$wpdb-&gt;prepare(
+					&quot;SELECT post_id, meta_value FROM {$wpdb-&gt;postmeta} WHERE meta_key = &#039;_product_attributes&#039; AND meta_value LIKE %s&quot;,
+					&#039;%&#039; . $wpdb-&gt;esc_like( $old_taxonomy_name ) . &#039;%&#039;
+				),
+				ARRAY_A
+			);
+			foreach ( $metadatas as $metadata ) {
+				$product_id        = $metadata[&#039;post_id&#039;];
+				$unserialized_data = maybe_unserialize( $metadata[&#039;meta_value&#039;] );
+
+				if ( ! $unserialized_data || ! is_array( $unserialized_data ) || ! isset( $unserialized_data[ $old_attribute_key ] ) ) {
+					continue;
+				}
+
+				$unserialized_data[ $new_attribute_key ] = $unserialized_data[ $old_attribute_key ];
+				unset( $unserialized_data[ $old_attribute_key ] );
+				$unserialized_data[ $new_attribute_key ][&#039;name&#039;] = $new_taxonomy_name;
+				update_post_meta( $product_id, &#039;_product_attributes&#039;, wp_slash( $unserialized_data ) );
+			}
+
+			// Update variations which use this taxonomy.
+			$wpdb-&gt;update(
+				$wpdb-&gt;postmeta,
+				array( &#039;meta_key&#039; =&gt; &#039;attribute_pa_&#039; . sanitize_title( $data[&#039;attribute_name&#039;] ) ), // WPCS: slow query ok.
+				array( &#039;meta_key&#039; =&gt; &#039;attribute_pa_&#039; . sanitize_title( $old_slug ) ) // WPCS: slow query ok.
+			);
+		}
+	}
+
+	// Clear cache and flush rewrite rules.
+	wp_schedule_single_event( time(), &#039;woocommerce_flush_rewrite_rules&#039; );
+	delete_transient( &#039;wc_attribute_taxonomies&#039; );
+	WC_Cache_Helper::invalidate_cache_group( &#039;woocommerce-attributes&#039; );
+
+	return $id;
+}
+
+/**
+ * Update an attribute.
+ *
+ * For available args see wc_create_attribute().
+ *
+ * @since  3.2.0
+ * @param  int   $id   Attribute ID.
+ * @param  array $args Attribute arguments.
+ * @return int|WP_Error
+ */
+function wc_update_attribute( $id, $args ) {
+	global $wpdb;
+
+	$attribute = wc_get_attribute( $id );
+
+	$args[&#039;id&#039;] = $attribute ? $attribute-&gt;id : 0;
+
+	if ( $args[&#039;id&#039;] &amp;&amp; empty( $args[&#039;name&#039;] ) ) {
+		$args[&#039;name&#039;] = $attribute-&gt;name;
+	}
+
+	$args[&#039;old_slug&#039;] = $wpdb-&gt;get_var(
+		$wpdb-&gt;prepare(
+			&quot;
+				SELECT attribute_name
+				FROM {$wpdb-&gt;prefix}woocommerce_attribute_taxonomies
+				WHERE attribute_id = %d
+			&quot;,
+			$args[&#039;id&#039;]
+		)
+	);
+
+	return wc_create_attribute( $args );
+}
+
+/**
+ * Delete attribute by ID.
+ *
+ * @since  3.2.0
+ * @param  int $id Attribute ID.
+ * @return bool
+ */
+function wc_delete_attribute( $id ) {
+	global $wpdb;
+
+	$name = $wpdb-&gt;get_var(
+		$wpdb-&gt;prepare(
+			&quot;
+			SELECT attribute_name
+			FROM {$wpdb-&gt;prefix}woocommerce_attribute_taxonomies
+			WHERE attribute_id = %d
+			&quot;,
+			$id
+		)
+	);
+
+	$taxonomy = wc_attribute_taxonomy_name( $name );
+
+	/**
+	 * Before deleting an attribute.
+	 *
+	 * @param int    $id       Attribute ID.
+	 * @param string $name     Attribute name.
+	 * @param string $taxonomy Attribute taxonomy name.
+	 */
+	do_action( &#039;woocommerce_before_attribute_delete&#039;, $id, $name, $taxonomy );
+
+	if ( $name &amp;&amp; $wpdb-&gt;query( $wpdb-&gt;prepare( &quot;DELETE FROM {$wpdb-&gt;prefix}woocommerce_attribute_taxonomies WHERE attribute_id = %d&quot;, $id ) ) ) {
+		if ( taxonomy_exists( $taxonomy ) ) {
+			$terms = get_terms( $taxonomy, &#039;orderby=name&amp;hide_empty=0&#039; );
+			foreach ( $terms as $term ) {
+				wp_delete_term( $term-&gt;term_id, $taxonomy );
+			}
+		}
+
+		/**
+		 * After deleting an attribute.
+		 *
+		 * @param int    $id       Attribute ID.
+		 * @param string $name     Attribute name.
+		 * @param string $taxonomy Attribute taxonomy name.
+		 */
+		do_action( &#039;woocommerce_attribute_deleted&#039;, $id, $name, $taxonomy );
+		wp_schedule_single_event( time(), &#039;woocommerce_flush_rewrite_rules&#039; );
+		delete_transient( &#039;wc_attribute_taxonomies&#039; );
+		WC_Cache_Helper::invalidate_cache_group( &#039;woocommerce-attributes&#039; );
+
+		return true;
+	}
+
+	return false;
+}
+
+/**
+ * Get an unprefixed product attribute name.
+ *
+ * @since 3.6.0
+ *
+ * @param  string $attribute_name Attribute name.
+ * @return string
+ */
+function wc_attribute_taxonomy_slug( $attribute_name ) {
+	$prefix      = WC_Cache_Helper::get_cache_prefix( &#039;woocommerce-attributes&#039; );
+	$cache_key   = $prefix . &#039;slug-&#039; . $attribute_name;
+	$cache_value = wp_cache_get( $cache_key, &#039;woocommerce-attributes&#039; );
+
+	if ( false !== $cache_value ) {
+		return $cache_value;
+	}
+
+	$attribute_name = wc_sanitize_taxonomy_name( $attribute_name );
+	$attribute_slug = 0 === strpos( $attribute_name, &#039;pa_&#039; ) ? substr( $attribute_name, 3 ) : $attribute_name;
+	wp_cache_set( $cache_key, $attribute_slug, &#039;woocommerce-attributes&#039; );
+
+	return $attribute_slug;
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866949"></script>
+    <script src="../js/search.js?updated=1692866949"></script>
+</body>
+</html>

@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-frontend-scripts.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * Handle frontend scripts
+ *
+ * @package WooCommerce\Classes
+ * @version 2.3.0
+ */
+
+ // phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment
+
+use Automattic\Jetpack\Constants;
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * Frontend scripts class.
+ */
+class WC_Frontend_Scripts {
+
+	/**
+	 * Contains an array of script handles registered by WC.
+	 *
+	 * @var array
+	 */
+	private static $scripts = array();
+
+	/**
+	 * Contains an array of script handles registered by WC.
+	 *
+	 * @var array
+	 */
+	private static $styles = array();
+
+	/**
+	 * Contains an array of script handles localized by WC.
+	 *
+	 * @var array
+	 */
+	private static $wp_localize_scripts = array();
+
+	/**
+	 * Hook in methods.
+	 */
+	public static function init() {
+		add_action( &#039;wp_enqueue_scripts&#039;, array( __CLASS__, &#039;load_scripts&#039; ) );
+		add_action( &#039;wp_print_scripts&#039;, array( __CLASS__, &#039;localize_printed_scripts&#039; ), 5 );
+		add_action( &#039;wp_print_footer_scripts&#039;, array( __CLASS__, &#039;localize_printed_scripts&#039; ), 5 );
+	}
+
+	/**
+	 * Get styles for the frontend.
+	 *
+	 * @return array
+	 */
+	public static function get_styles() {
+		$version = Constants::get_constant( &#039;WC_VERSION&#039; );
+
+		/**
+		 * Filter list of WooCommerce styles to enqueue.
+		 *
+		 * @since 2.1.0
+		 * @param array List of default WooCommerce styles.
+		 * @return array List of styles to enqueue.
+		 */
+		$styles = apply_filters(
+			&#039;woocommerce_enqueue_styles&#039;,
+			array(
+				&#039;woocommerce-layout&#039;      =&gt; array(
+					&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/css/woocommerce-layout.css&#039; ),
+					&#039;deps&#039;    =&gt; &#039;&#039;,
+					&#039;version&#039; =&gt; $version,
+					&#039;media&#039;   =&gt; &#039;all&#039;,
+					&#039;has_rtl&#039; =&gt; true,
+				),
+				&#039;woocommerce-smallscreen&#039; =&gt; array(
+					&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/css/woocommerce-smallscreen.css&#039; ),
+					&#039;deps&#039;    =&gt; &#039;woocommerce-layout&#039;,
+					&#039;version&#039; =&gt; $version,
+					&#039;media&#039;   =&gt; &#039;only screen and (max-width: &#039; . apply_filters( &#039;woocommerce_style_smallscreen_breakpoint&#039;, &#039;768px&#039; ) . &#039;)&#039;,
+					&#039;has_rtl&#039; =&gt; true,
+				),
+				&#039;woocommerce-general&#039;     =&gt; array(
+					&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/css/woocommerce.css&#039; ),
+					&#039;deps&#039;    =&gt; &#039;&#039;,
+					&#039;version&#039; =&gt; $version,
+					&#039;media&#039;   =&gt; &#039;all&#039;,
+					&#039;has_rtl&#039; =&gt; true,
+				),
+				&#039;woocommerce-blocktheme&#039;  =&gt; wc_current_theme_is_fse_theme() ? array(
+					&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/css/woocommerce-blocktheme.css&#039; ),
+					&#039;deps&#039;    =&gt; &#039;&#039;,
+					&#039;version&#039; =&gt; $version,
+					&#039;media&#039;   =&gt; &#039;all&#039;,
+					&#039;has_rtl&#039; =&gt; true,
+				) : false,
+			)
+		);
+		return is_array( $styles ) ? array_filter( $styles ) : array();
+	}
+
+	/**
+	 * Return asset URL.
+	 *
+	 * @param string $path Assets path.
+	 * @return string
+	 */
+	private static function get_asset_url( $path ) {
+		return apply_filters( &#039;woocommerce_get_asset_url&#039;, plugins_url( $path, WC_PLUGIN_FILE ), $path );
+	}
+
+	/**
+	 * Register a script for use.
+	 *
+	 * @uses   wp_register_script()
+	 * @param  string   $handle    Name of the script. Should be unique.
+	 * @param  string   $path      Full URL of the script, or path of the script relative to the WordPress root directory.
+	 * @param  string[] $deps      An array of registered script handles this script depends on.
+	 * @param  string   $version   String specifying script version number, if it has one, which is added to the URL as a query string for cache busting purposes. If version is set to false, a version number is automatically added equal to current installed WordPress version. If set to null, no version is added.
+	 * @param  boolean  $in_footer Whether to enqueue the script before &lt;/body&gt; instead of in the &lt;head&gt;. Default &#039;false&#039;.
+	 */
+	private static function register_script( $handle, $path, $deps = array( &#039;jquery&#039; ), $version = WC_VERSION, $in_footer = true ) {
+		self::$scripts[] = $handle;
+		wp_register_script( $handle, $path, $deps, $version, $in_footer );
+	}
+
+	/**
+	 * Register and enqueue a script for use.
+	 *
+	 * @uses   wp_enqueue_script()
+	 * @param  string   $handle    Name of the script. Should be unique.
+	 * @param  string   $path      Full URL of the script, or path of the script relative to the WordPress root directory.
+	 * @param  string[] $deps      An array of registered script handles this script depends on.
+	 * @param  string   $version   String specifying script version number, if it has one, which is added to the URL as a query string for cache busting purposes. If version is set to false, a version number is automatically added equal to current installed WordPress version. If set to null, no version is added.
+	 * @param  boolean  $in_footer Whether to enqueue the script before &lt;/body&gt; instead of in the &lt;head&gt;. Default &#039;false&#039;.
+	 */
+	private static function enqueue_script( $handle, $path = &#039;&#039;, $deps = array( &#039;jquery&#039; ), $version = WC_VERSION, $in_footer = true ) {
+		if ( ! in_array( $handle, self::$scripts, true ) &amp;&amp; $path ) {
+			self::register_script( $handle, $path, $deps, $version, $in_footer );
+		}
+		wp_enqueue_script( $handle );
+	}
+
+	/**
+	 * Register a style for use.
+	 *
+	 * @uses   wp_register_style()
+	 * @param  string   $handle  Name of the stylesheet. Should be unique.
+	 * @param  string   $path    Full URL of the stylesheet, or path of the stylesheet relative to the WordPress root directory.
+	 * @param  string[] $deps    An array of registered stylesheet handles this stylesheet depends on.
+	 * @param  string   $version String specifying stylesheet version number, if it has one, which is added to the URL as a query string for cache busting purposes. If version is set to false, a version number is automatically added equal to current installed WordPress version. If set to null, no version is added.
+	 * @param  string   $media   The media for which this stylesheet has been defined. Accepts media types like &#039;all&#039;, &#039;print&#039; and &#039;screen&#039;, or media queries like &#039;(orientation: portrait)&#039; and &#039;(max-width: 640px)&#039;.
+	 * @param  boolean  $has_rtl If has RTL version to load too.
+	 */
+	private static function register_style( $handle, $path, $deps = array(), $version = WC_VERSION, $media = &#039;all&#039;, $has_rtl = false ) {
+		self::$styles[] = $handle;
+		wp_register_style( $handle, $path, $deps, $version, $media );
+
+		if ( $has_rtl ) {
+			wp_style_add_data( $handle, &#039;rtl&#039;, &#039;replace&#039; );
+		}
+	}
+
+	/**
+	 * Register and enqueue a styles for use.
+	 *
+	 * @uses   wp_enqueue_style()
+	 * @param  string   $handle  Name of the stylesheet. Should be unique.
+	 * @param  string   $path    Full URL of the stylesheet, or path of the stylesheet relative to the WordPress root directory.
+	 * @param  string[] $deps    An array of registered stylesheet handles this stylesheet depends on.
+	 * @param  string   $version String specifying stylesheet version number, if it has one, which is added to the URL as a query string for cache busting purposes. If version is set to false, a version number is automatically added equal to current installed WordPress version. If set to null, no version is added.
+	 * @param  string   $media   The media for which this stylesheet has been defined. Accepts media types like &#039;all&#039;, &#039;print&#039; and &#039;screen&#039;, or media queries like &#039;(orientation: portrait)&#039; and &#039;(max-width: 640px)&#039;.
+	 * @param  boolean  $has_rtl If has RTL version to load too.
+	 */
+	private static function enqueue_style( $handle, $path = &#039;&#039;, $deps = array(), $version = WC_VERSION, $media = &#039;all&#039;, $has_rtl = false ) {
+		if ( ! in_array( $handle, self::$styles, true ) &amp;&amp; $path ) {
+			self::register_style( $handle, $path, $deps, $version, $media, $has_rtl );
+		}
+		wp_enqueue_style( $handle );
+	}
+
+	/**
+	 * Register all WC scripts.
+	 */
+	private static function register_scripts() {
+		$suffix  = Constants::is_true( &#039;SCRIPT_DEBUG&#039; ) ? &#039;&#039; : &#039;.min&#039;;
+		$version = Constants::get_constant( &#039;WC_VERSION&#039; );
+
+		$register_scripts = array(
+			&#039;flexslider&#039;                 =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/flexslider/jquery.flexslider&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039; ),
+				&#039;version&#039; =&gt; &#039;2.7.2-wc.&#039; . $version,
+			),
+			&#039;js-cookie&#039;                  =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/js-cookie/js.cookie&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array(),
+				&#039;version&#039; =&gt; &#039;2.1.4-wc.&#039; . $version,
+			),
+			&#039;jquery-blockui&#039;             =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/jquery-blockui/jquery.blockUI&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039; ),
+				&#039;version&#039; =&gt; &#039;2.7.0-wc.&#039; . $version,
+			),
+			&#039;jquery-cookie&#039;              =&gt; array( // deprecated.
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/jquery-cookie/jquery.cookie&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039; ),
+				&#039;version&#039; =&gt; &#039;1.4.1-wc.&#039; . $version,
+			),
+			&#039;jquery-payment&#039;             =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/jquery-payment/jquery.payment&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039; ),
+				&#039;version&#039; =&gt; &#039;3.0.0-wc.&#039; . $version,
+			),
+			&#039;photoswipe&#039;                 =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/photoswipe/photoswipe&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array(),
+				&#039;version&#039; =&gt; &#039;4.1.1-wc.&#039; . $version,
+			),
+			&#039;photoswipe-ui-default&#039;      =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/photoswipe/photoswipe-ui-default&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;photoswipe&#039; ),
+				&#039;version&#039; =&gt; &#039;4.1.1-wc.&#039; . $version,
+			),
+			&#039;prettyPhoto&#039;                =&gt; array( // deprecated.
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/prettyPhoto/jquery.prettyPhoto&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039; ),
+				&#039;version&#039; =&gt; &#039;3.1.6-wc.&#039; . $version,
+			),
+			&#039;prettyPhoto-init&#039;           =&gt; array( // deprecated.
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/prettyPhoto/jquery.prettyPhoto.init&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039;, &#039;prettyPhoto&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;select2&#039;                    =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/select2/select2.full&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039; ),
+				&#039;version&#039; =&gt; &#039;4.0.3-wc.&#039; . $version,
+			),
+			&#039;selectWoo&#039;                  =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/selectWoo/selectWoo.full&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039; ),
+				&#039;version&#039; =&gt; &#039;1.0.9-wc.&#039; . $version,
+			),
+			&#039;wc-address-i18n&#039;            =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/address-i18n&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039;, &#039;wc-country-select&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;wc-add-payment-method&#039;      =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/add-payment-method&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039;, &#039;woocommerce&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;wc-cart&#039;                    =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/cart&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039;, &#039;woocommerce&#039;, &#039;wc-country-select&#039;, &#039;wc-address-i18n&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;wc-cart-fragments&#039;          =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/cart-fragments&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039;, &#039;js-cookie&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;wc-checkout&#039;                =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/checkout&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039;, &#039;woocommerce&#039;, &#039;wc-country-select&#039;, &#039;wc-address-i18n&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;wc-country-select&#039;          =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/country-select&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;wc-credit-card-form&#039;        =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/credit-card-form&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039;, &#039;jquery-payment&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;wc-add-to-cart&#039;             =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/add-to-cart&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039;, &#039;jquery-blockui&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;wc-add-to-cart-variation&#039;   =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/add-to-cart-variation&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039;, &#039;wp-util&#039;, &#039;jquery-blockui&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;wc-geolocation&#039;             =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/geolocation&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;wc-lost-password&#039;           =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/lost-password&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039;, &#039;woocommerce&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;wc-password-strength-meter&#039; =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/password-strength-meter&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039;, &#039;password-strength-meter&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;wc-single-product&#039;          =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/single-product&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;woocommerce&#039;                =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/frontend/woocommerce&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039;, &#039;jquery-blockui&#039;, &#039;js-cookie&#039; ),
+				&#039;version&#039; =&gt; $version,
+			),
+			&#039;zoom&#039;                       =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/js/zoom/jquery.zoom&#039; . $suffix . &#039;.js&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;jquery&#039; ),
+				&#039;version&#039; =&gt; &#039;1.7.21-wc.&#039; . $version,
+			),
+		);
+		foreach ( $register_scripts as $name =&gt; $props ) {
+			self::register_script( $name, $props[&#039;src&#039;], $props[&#039;deps&#039;], $props[&#039;version&#039;] );
+		}
+	}
+
+	/**
+	 * Register all WC styles.
+	 */
+	private static function register_styles() {
+		$version = Constants::get_constant( &#039;WC_VERSION&#039; );
+
+		$register_styles = array(
+			&#039;photoswipe&#039;                  =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/css/photoswipe/photoswipe.min.css&#039; ),
+				&#039;deps&#039;    =&gt; array(),
+				&#039;version&#039; =&gt; $version,
+				&#039;has_rtl&#039; =&gt; false,
+			),
+			&#039;photoswipe-default-skin&#039;     =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/css/photoswipe/default-skin/default-skin.min.css&#039; ),
+				&#039;deps&#039;    =&gt; array( &#039;photoswipe&#039; ),
+				&#039;version&#039; =&gt; $version,
+				&#039;has_rtl&#039; =&gt; false,
+			),
+			&#039;select2&#039;                     =&gt; array(
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/css/select2.css&#039; ),
+				&#039;deps&#039;    =&gt; array(),
+				&#039;version&#039; =&gt; $version,
+				&#039;has_rtl&#039; =&gt; false,
+			),
+			&#039;woocommerce_prettyPhoto_css&#039; =&gt; array( // deprecated.
+				&#039;src&#039;     =&gt; self::get_asset_url( &#039;assets/css/prettyPhoto.css&#039; ),
+				&#039;deps&#039;    =&gt; array(),
+				&#039;version&#039; =&gt; $version,
+				&#039;has_rtl&#039; =&gt; true,
+			),
+		);
+		foreach ( $register_styles as $name =&gt; $props ) {
+			self::register_style( $name, $props[&#039;src&#039;], $props[&#039;deps&#039;], $props[&#039;version&#039;], &#039;all&#039;, $props[&#039;has_rtl&#039;] );
+		}
+	}
+
+	/**
+	 * Register/queue frontend scripts.
+	 */
+	public static function load_scripts() {
+		global $post;
+
+		if ( ! did_action( &#039;before_woocommerce_init&#039; ) ) {
+			return;
+		}
+
+		self::register_scripts();
+		self::register_styles();
+
+		if ( &#039;yes&#039; === get_option( &#039;woocommerce_enable_ajax_add_to_cart&#039; ) ) {
+			self::enqueue_script( &#039;wc-add-to-cart&#039; );
+		}
+		if ( is_cart() ) {
+			self::enqueue_script( &#039;wc-cart&#039; );
+		}
+		if ( is_cart() || is_checkout() || is_account_page() ) {
+			self::enqueue_script( &#039;selectWoo&#039; );
+			self::enqueue_style( &#039;select2&#039; );
+
+			// Password strength meter. Load in checkout, account login and edit account page.
+			if ( ( &#039;no&#039; === get_option( &#039;woocommerce_registration_generate_password&#039; ) &amp;&amp; ! is_user_logged_in() ) || is_edit_account_page() || is_lost_password_page() ) {
+				self::enqueue_script( &#039;wc-password-strength-meter&#039; );
+			}
+		}
+		if ( is_checkout() ) {
+			self::enqueue_script( &#039;wc-checkout&#039; );
+		}
+		if ( is_add_payment_method_page() ) {
+			self::enqueue_script( &#039;wc-add-payment-method&#039; );
+		}
+		if ( is_lost_password_page() ) {
+			self::enqueue_script( &#039;wc-lost-password&#039; );
+		}
+
+		// Load gallery scripts on product pages only if supported.
+		if ( is_product() || ( ! empty( $post-&gt;post_content ) &amp;&amp; strstr( $post-&gt;post_content, &#039;[product_page&#039; ) ) ) {
+			if ( current_theme_supports( &#039;wc-product-gallery-zoom&#039; ) ) {
+				self::enqueue_script( &#039;zoom&#039; );
+			}
+			if ( current_theme_supports( &#039;wc-product-gallery-slider&#039; ) ) {
+				self::enqueue_script( &#039;flexslider&#039; );
+			}
+			if ( current_theme_supports( &#039;wc-product-gallery-lightbox&#039; ) ) {
+				self::enqueue_script( &#039;photoswipe-ui-default&#039; );
+				self::enqueue_style( &#039;photoswipe-default-skin&#039; );
+				add_action( &#039;wp_footer&#039;, &#039;woocommerce_photoswipe&#039; );
+			}
+			self::enqueue_script( &#039;wc-single-product&#039; );
+		}
+
+		// Only enqueue the geolocation script if the Default Current Address is set to &quot;Geolocate
+		// (with Page Caching Support) and outside of the cart, checkout, account and customizer preview.
+		if (
+			&#039;geolocation_ajax&#039; === get_option( &#039;woocommerce_default_customer_address&#039; )
+			&amp;&amp; ! ( is_cart() || is_account_page() || is_checkout() || is_customize_preview() )
+		) {
+			$ua = strtolower( wc_get_user_agent() ); // Exclude common bots from geolocation by user agent.
+
+			if ( ! strstr( $ua, &#039;bot&#039; ) &amp;&amp; ! strstr( $ua, &#039;spider&#039; ) &amp;&amp; ! strstr( $ua, &#039;crawl&#039; ) ) {
+				self::enqueue_script( &#039;wc-geolocation&#039; );
+			}
+		}
+
+		// Global frontend scripts.
+		self::enqueue_script( &#039;woocommerce&#039; );
+
+		// CSS Styles.
+		$enqueue_styles = self::get_styles();
+		if ( $enqueue_styles ) {
+			foreach ( $enqueue_styles as $handle =&gt; $args ) {
+				if ( ! isset( $args[&#039;has_rtl&#039;] ) ) {
+					$args[&#039;has_rtl&#039;] = false;
+				}
+
+				self::enqueue_style( $handle, $args[&#039;src&#039;], $args[&#039;deps&#039;], $args[&#039;version&#039;], $args[&#039;media&#039;], $args[&#039;has_rtl&#039;] );
+			}
+		}
+
+		// Placeholder style.
+		wp_register_style( &#039;woocommerce-inline&#039;, false ); // phpcs:ignore
+		wp_enqueue_style( &#039;woocommerce-inline&#039; );
+
+		if ( true === wc_string_to_bool( get_option( &#039;woocommerce_checkout_highlight_required_fields&#039;, &#039;yes&#039; ) ) ) {
+			wp_add_inline_style( &#039;woocommerce-inline&#039;, &#039;.woocommerce form .form-row .required { visibility: visible; }&#039; );
+		} else {
+			wp_add_inline_style( &#039;woocommerce-inline&#039;, &#039;.woocommerce form .form-row .required { visibility: hidden; }&#039; );
+		}
+	}
+
+	/**
+	 * Localize a WC script once.
+	 *
+	 * @since 2.3.0 this needs less wp_script_is() calls due to https://core.trac.wordpress.org/ticket/28404 being added in WP 4.0.
+	 * @param string $handle Script handle the data will be attached to.
+	 */
+	private static function localize_script( $handle ) {
+		if ( ! in_array( $handle, self::$wp_localize_scripts, true ) &amp;&amp; wp_script_is( $handle ) ) {
+			$data = self::get_script_data( $handle );
+
+			if ( ! $data ) {
+				return;
+			}
+
+			$name                        = str_replace( &#039;-&#039;, &#039;_&#039;, $handle ) . &#039;_params&#039;;
+			self::$wp_localize_scripts[] = $handle;
+			wp_localize_script( $handle, $name, apply_filters( $name, $data ) );
+		}
+	}
+
+	/**
+	 * Return data for script handles.
+	 *
+	 * @param  string $handle Script handle the data will be attached to.
+	 * @return array|bool
+	 */
+	private static function get_script_data( $handle ) {
+		global $wp;
+
+		switch ( $handle ) {
+			case &#039;woocommerce&#039;:
+				$params = array(
+					&#039;ajax_url&#039;    =&gt; WC()-&gt;ajax_url(),
+					&#039;wc_ajax_url&#039; =&gt; WC_AJAX::get_endpoint( &#039;%%endpoint%%&#039; ),
+				);
+				break;
+			case &#039;wc-geolocation&#039;:
+				$params = array(
+					&#039;wc_ajax_url&#039; =&gt; WC_AJAX::get_endpoint( &#039;%%endpoint%%&#039; ),
+					&#039;home_url&#039;    =&gt; remove_query_arg( &#039;lang&#039;, home_url() ), // FIX for WPML compatibility.
+				);
+				break;
+			case &#039;wc-single-product&#039;:
+				$params = array(
+					&#039;i18n_required_rating_text&#039; =&gt; esc_attr__( &#039;Please select a rating&#039;, &#039;woocommerce&#039; ),
+					&#039;review_rating_required&#039;    =&gt; wc_review_ratings_required() ? &#039;yes&#039; : &#039;no&#039;,
+					&#039;flexslider&#039;                =&gt; apply_filters(
+						&#039;woocommerce_single_product_carousel_options&#039;,
+						array(
+							&#039;rtl&#039;            =&gt; is_rtl(),
+							&#039;animation&#039;      =&gt; &#039;slide&#039;,
+							&#039;smoothHeight&#039;   =&gt; true,
+							&#039;directionNav&#039;   =&gt; false,
+							&#039;controlNav&#039;     =&gt; &#039;thumbnails&#039;,
+							&#039;slideshow&#039;      =&gt; false,
+							&#039;animationSpeed&#039; =&gt; 500,
+							&#039;animationLoop&#039;  =&gt; false, // Breaks photoswipe pagination if true.
+							&#039;allowOneSlide&#039;  =&gt; false,
+						)
+					),
+					&#039;zoom_enabled&#039;              =&gt; apply_filters( &#039;woocommerce_single_product_zoom_enabled&#039;, get_theme_support( &#039;wc-product-gallery-zoom&#039; ) ),
+					&#039;zoom_options&#039;              =&gt; apply_filters( &#039;woocommerce_single_product_zoom_options&#039;, array() ),
+					&#039;photoswipe_enabled&#039;        =&gt; apply_filters( &#039;woocommerce_single_product_photoswipe_enabled&#039;, get_theme_support( &#039;wc-product-gallery-lightbox&#039; ) ),
+					&#039;photoswipe_options&#039;        =&gt; apply_filters(
+						&#039;woocommerce_single_product_photoswipe_options&#039;,
+						array(
+							&#039;shareEl&#039;               =&gt; false,
+							&#039;closeOnScroll&#039;         =&gt; false,
+							&#039;history&#039;               =&gt; false,
+							&#039;hideAnimationDuration&#039; =&gt; 0,
+							&#039;showAnimationDuration&#039; =&gt; 0,
+						)
+					),
+					&#039;flexslider_enabled&#039;        =&gt; apply_filters( &#039;woocommerce_single_product_flexslider_enabled&#039;, get_theme_support( &#039;wc-product-gallery-slider&#039; ) ),
+				);
+				break;
+			case &#039;wc-checkout&#039;:
+				$params = array(
+					&#039;ajax_url&#039;                  =&gt; WC()-&gt;ajax_url(),
+					&#039;wc_ajax_url&#039;               =&gt; WC_AJAX::get_endpoint( &#039;%%endpoint%%&#039; ),
+					&#039;update_order_review_nonce&#039; =&gt; wp_create_nonce( &#039;update-order-review&#039; ),
+					&#039;apply_coupon_nonce&#039;        =&gt; wp_create_nonce( &#039;apply-coupon&#039; ),
+					&#039;remove_coupon_nonce&#039;       =&gt; wp_create_nonce( &#039;remove-coupon&#039; ),
+					&#039;option_guest_checkout&#039;     =&gt; get_option( &#039;woocommerce_enable_guest_checkout&#039; ),
+					&#039;checkout_url&#039;              =&gt; WC_AJAX::get_endpoint( &#039;checkout&#039; ),
+					&#039;is_checkout&#039;               =&gt; is_checkout() &amp;&amp; empty( $wp-&gt;query_vars[&#039;order-pay&#039;] ) &amp;&amp; ! isset( $wp-&gt;query_vars[&#039;order-received&#039;] ) ? 1 : 0,
+					&#039;debug_mode&#039;                =&gt; Constants::is_true( &#039;WP_DEBUG&#039; ),
+					&#039;i18n_checkout_error&#039;       =&gt; esc_attr__( &#039;Error processing checkout. Please try again.&#039;, &#039;woocommerce&#039; ),
+				);
+				break;
+			case &#039;wc-address-i18n&#039;:
+				$params = array(
+					&#039;locale&#039;             =&gt; wp_json_encode( WC()-&gt;countries-&gt;get_country_locale() ),
+					&#039;locale_fields&#039;      =&gt; wp_json_encode( WC()-&gt;countries-&gt;get_country_locale_field_selectors() ),
+					&#039;i18n_required_text&#039; =&gt; esc_attr__( &#039;required&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_optional_text&#039; =&gt; esc_html__( &#039;optional&#039;, &#039;woocommerce&#039; ),
+				);
+				break;
+			case &#039;wc-cart&#039;:
+				$params = array(
+					&#039;ajax_url&#039;                     =&gt; WC()-&gt;ajax_url(),
+					&#039;wc_ajax_url&#039;                  =&gt; WC_AJAX::get_endpoint( &#039;%%endpoint%%&#039; ),
+					&#039;update_shipping_method_nonce&#039; =&gt; wp_create_nonce( &#039;update-shipping-method&#039; ),
+					&#039;apply_coupon_nonce&#039;           =&gt; wp_create_nonce( &#039;apply-coupon&#039; ),
+					&#039;remove_coupon_nonce&#039;          =&gt; wp_create_nonce( &#039;remove-coupon&#039; ),
+				);
+				break;
+			case &#039;wc-cart-fragments&#039;:
+				$params = array(
+					&#039;ajax_url&#039;        =&gt; WC()-&gt;ajax_url(),
+					&#039;wc_ajax_url&#039;     =&gt; WC_AJAX::get_endpoint( &#039;%%endpoint%%&#039; ),
+					&#039;cart_hash_key&#039;   =&gt; apply_filters( &#039;woocommerce_cart_hash_key&#039;, &#039;wc_cart_hash_&#039; . md5( get_current_blog_id() . &#039;_&#039; . get_site_url( get_current_blog_id(), &#039;/&#039; ) . get_template() ) ),
+					&#039;fragment_name&#039;   =&gt; apply_filters( &#039;woocommerce_cart_fragment_name&#039;, &#039;wc_fragments_&#039; . md5( get_current_blog_id() . &#039;_&#039; . get_site_url( get_current_blog_id(), &#039;/&#039; ) . get_template() ) ),
+					&#039;request_timeout&#039; =&gt; 5000,
+				);
+				break;
+			case &#039;wc-add-to-cart&#039;:
+				$params = array(
+					&#039;ajax_url&#039;                =&gt; WC()-&gt;ajax_url(),
+					&#039;wc_ajax_url&#039;             =&gt; WC_AJAX::get_endpoint( &#039;%%endpoint%%&#039; ),
+					&#039;i18n_view_cart&#039;          =&gt; esc_attr__( &#039;View cart&#039;, &#039;woocommerce&#039; ),
+					&#039;cart_url&#039;                =&gt; apply_filters( &#039;woocommerce_add_to_cart_redirect&#039;, wc_get_cart_url(), null ),
+					&#039;is_cart&#039;                 =&gt; is_cart(),
+					&#039;cart_redirect_after_add&#039; =&gt; get_option( &#039;woocommerce_cart_redirect_after_add&#039; ),
+				);
+				break;
+			case &#039;wc-add-to-cart-variation&#039;:
+				// We also need the wp.template for this script :).
+				wc_get_template( &#039;single-product/add-to-cart/variation.php&#039; );
+
+				$params = array(
+					&#039;wc_ajax_url&#039;                      =&gt; WC_AJAX::get_endpoint( &#039;%%endpoint%%&#039; ),
+					&#039;i18n_no_matching_variations_text&#039; =&gt; esc_attr__( &#039;Sorry, no products matched your selection. Please choose a different combination.&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_make_a_selection_text&#039;       =&gt; esc_attr__( &#039;Please select some product options before adding this product to your cart.&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_unavailable_text&#039;            =&gt; esc_attr__( &#039;Sorry, this product is unavailable. Please choose a different combination.&#039;, &#039;woocommerce&#039; ),
+				);
+				break;
+			case &#039;wc-country-select&#039;:
+				$params = array(
+					&#039;countries&#039;                 =&gt; wp_json_encode( array_merge( WC()-&gt;countries-&gt;get_allowed_country_states(), WC()-&gt;countries-&gt;get_shipping_country_states() ) ),
+					&#039;i18n_select_state_text&#039;    =&gt; esc_attr__( &#039;Select an option&amp;hellip;&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_no_matches&#039;           =&gt; _x( &#039;No matches found&#039;, &#039;enhanced select&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_ajax_error&#039;           =&gt; _x( &#039;Loading failed&#039;, &#039;enhanced select&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_input_too_short_1&#039;    =&gt; _x( &#039;Please enter 1 or more characters&#039;, &#039;enhanced select&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_input_too_short_n&#039;    =&gt; _x( &#039;Please enter %qty% or more characters&#039;, &#039;enhanced select&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_input_too_long_1&#039;     =&gt; _x( &#039;Please delete 1 character&#039;, &#039;enhanced select&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_input_too_long_n&#039;     =&gt; _x( &#039;Please delete %qty% characters&#039;, &#039;enhanced select&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_selection_too_long_1&#039; =&gt; _x( &#039;You can only select 1 item&#039;, &#039;enhanced select&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_selection_too_long_n&#039; =&gt; _x( &#039;You can only select %qty% items&#039;, &#039;enhanced select&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_load_more&#039;            =&gt; _x( &#039;Loading more results&amp;hellip;&#039;, &#039;enhanced select&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_searching&#039;            =&gt; _x( &#039;Searching&amp;hellip;&#039;, &#039;enhanced select&#039;, &#039;woocommerce&#039; ),
+				);
+				break;
+			case &#039;wc-password-strength-meter&#039;:
+				$params = array(
+					&#039;min_password_strength&#039; =&gt; apply_filters( &#039;woocommerce_min_password_strength&#039;, 3 ),
+					&#039;stop_checkout&#039;         =&gt; apply_filters( &#039;woocommerce_enforce_password_strength_meter_on_checkout&#039;, false ),
+					&#039;i18n_password_error&#039;   =&gt; esc_attr__( &#039;Please enter a stronger password.&#039;, &#039;woocommerce&#039; ),
+					&#039;i18n_password_hint&#039;    =&gt; esc_attr( wp_get_password_hint() ),
+				);
+				break;
+			default:
+				$params = false;
+		}
+
+		$params = apply_filters_deprecated( $handle . &#039;_params&#039;, array( $params ), &#039;3.0.0&#039;, &#039;woocommerce_get_script_data&#039; );
+
+		return apply_filters( &#039;woocommerce_get_script_data&#039;, $params, $handle );
+	}
+
+	/**
+	 * Localize scripts only when enqueued.
+	 */
+	public static function localize_printed_scripts() {
+		foreach ( self::$scripts as $handle ) {
+			self::localize_script( $handle );
+		}
+	}
+}
+
+WC_Frontend_Scripts::init();
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

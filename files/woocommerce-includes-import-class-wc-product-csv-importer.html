@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-product-csv-importer.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WooCommerce Product CSV importer
+ *
+ * @package WooCommerce\Import
+ * @version 3.1.0
+ */
+
+use Automattic\WooCommerce\Utilities\ArrayUtil;
+
+if ( ! defined( &#039;ABSPATH&#039; ) ) {
+	exit;
+}
+
+/**
+ * Include dependencies.
+ */
+if ( ! class_exists( &#039;WC_Product_Importer&#039;, false ) ) {
+	include_once dirname( __FILE__ ) . &#039;/abstract-wc-product-importer.php&#039;;
+}
+
+if ( ! class_exists( &#039;WC_Product_CSV_Importer_Controller&#039;, false ) ) {
+	include_once WC_ABSPATH . &#039;includes/admin/importers/class-wc-product-csv-importer-controller.php&#039;;
+}
+
+/**
+ * WC_Product_CSV_Importer Class.
+ */
+class WC_Product_CSV_Importer extends WC_Product_Importer {
+
+	/**
+	 * Tracks current row being parsed.
+	 *
+	 * @var integer
+	 */
+	protected $parsing_raw_data_index = 0;
+
+	/**
+	 * Initialize importer.
+	 *
+	 * @param string $file   File to read.
+	 * @param array  $params Arguments for the parser.
+	 */
+	public function __construct( $file, $params = array() ) {
+		$default_args = array(
+			&#039;start_pos&#039;        =&gt; 0, // File pointer start.
+			&#039;end_pos&#039;          =&gt; -1, // File pointer end.
+			&#039;lines&#039;            =&gt; -1, // Max lines to read.
+			&#039;mapping&#039;          =&gt; array(), // Column mapping. csv_heading =&gt; schema_heading.
+			&#039;parse&#039;            =&gt; false, // Whether to sanitize and format data.
+			&#039;update_existing&#039;  =&gt; false, // Whether to update existing items.
+			&#039;delimiter&#039;        =&gt; &#039;,&#039;, // CSV delimiter.
+			&#039;prevent_timeouts&#039; =&gt; true, // Check memory and time usage and abort if reaching limit.
+			&#039;enclosure&#039;        =&gt; &#039;&quot;&#039;, // The character used to wrap text in the CSV.
+			&#039;escape&#039;           =&gt; &quot;\0&quot;, // PHP uses &#039;\&#039; as the default escape character. This is not RFC-4180 compliant. This disables the escape character.
+		);
+
+		$this-&gt;params = wp_parse_args( $params, $default_args );
+		$this-&gt;file   = $file;
+
+		if ( isset( $this-&gt;params[&#039;mapping&#039;][&#039;from&#039;], $this-&gt;params[&#039;mapping&#039;][&#039;to&#039;] ) ) {
+			$this-&gt;params[&#039;mapping&#039;] = array_combine( $this-&gt;params[&#039;mapping&#039;][&#039;from&#039;], $this-&gt;params[&#039;mapping&#039;][&#039;to&#039;] );
+		}
+
+		// Import mappings for CSV data.
+		include_once dirname( dirname( __FILE__ ) ) . &#039;/admin/importers/mappings/mappings.php&#039;;
+
+		$this-&gt;read_file();
+	}
+
+	/**
+	 * Convert a string from the input encoding to UTF-8.
+	 *
+	 * @param string $value The string to convert.
+	 * @return string The converted string.
+	 */
+	private function adjust_character_encoding( $value ) {
+		$encoding = $this-&gt;params[&#039;character_encoding&#039;];
+		return &#039;UTF-8&#039; === $encoding ? $value : mb_convert_encoding( $value, &#039;UTF-8&#039;, $encoding );
+	}
+
+	/**
+	 * Read file.
+	 */
+	protected function read_file() {
+		if ( ! WC_Product_CSV_Importer_Controller::is_file_valid_csv( $this-&gt;file ) ) {
+			wp_die( esc_html__( &#039;Invalid file type. The importer supports CSV and TXT file formats.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$handle = fopen( $this-&gt;file, &#039;r&#039; ); // @codingStandardsIgnoreLine.
+
+		if ( false !== $handle ) {
+			$this-&gt;raw_keys = array_map( &#039;trim&#039;, fgetcsv( $handle, 0, $this-&gt;params[&#039;delimiter&#039;], $this-&gt;params[&#039;enclosure&#039;], $this-&gt;params[&#039;escape&#039;] ) ); // @codingStandardsIgnoreLine
+
+			if ( ArrayUtil::is_truthy( $this-&gt;params, &#039;character_encoding&#039; ) ) {
+				$this-&gt;raw_keys = array_map( array( $this, &#039;adjust_character_encoding&#039; ), $this-&gt;raw_keys );
+			}
+
+			// Remove line breaks in keys, to avoid mismatch mapping of keys.
+			$this-&gt;raw_keys = wc_clean( wp_unslash( $this-&gt;raw_keys ) );
+
+			// Remove BOM signature from the first item.
+			if ( isset( $this-&gt;raw_keys[0] ) ) {
+				$this-&gt;raw_keys[0] = $this-&gt;remove_utf8_bom( $this-&gt;raw_keys[0] );
+			}
+
+			if ( 0 !== $this-&gt;params[&#039;start_pos&#039;] ) {
+				fseek( $handle, (int) $this-&gt;params[&#039;start_pos&#039;] );
+			}
+
+			while ( 1 ) {
+				$row = fgetcsv( $handle, 0, $this-&gt;params[&#039;delimiter&#039;], $this-&gt;params[&#039;enclosure&#039;], $this-&gt;params[&#039;escape&#039;] ); // @codingStandardsIgnoreLine
+
+				if ( false !== $row ) {
+					if ( ArrayUtil::is_truthy( $this-&gt;params, &#039;character_encoding&#039; ) ) {
+						$row = array_map( array( $this, &#039;adjust_character_encoding&#039; ), $row );
+					}
+
+					$this-&gt;raw_data[]                                 = $row;
+					$this-&gt;file_positions[ count( $this-&gt;raw_data ) ] = ftell( $handle );
+
+					if ( ( $this-&gt;params[&#039;end_pos&#039;] &gt; 0 &amp;&amp; ftell( $handle ) &gt;= $this-&gt;params[&#039;end_pos&#039;] ) || 0 === --$this-&gt;params[&#039;lines&#039;] ) {
+						break;
+					}
+				} else {
+					break;
+				}
+			}
+
+			$this-&gt;file_position = ftell( $handle );
+		}
+
+		if ( ! empty( $this-&gt;params[&#039;mapping&#039;] ) ) {
+			$this-&gt;set_mapped_keys();
+		}
+
+		if ( $this-&gt;params[&#039;parse&#039;] ) {
+			$this-&gt;set_parsed_data();
+		}
+	}
+
+	/**
+	 * Remove UTF-8 BOM signature.
+	 *
+	 * @param string $string String to handle.
+	 *
+	 * @return string
+	 */
+	protected function remove_utf8_bom( $string ) {
+		if ( &#039;efbbbf&#039; === substr( bin2hex( $string ), 0, 6 ) ) {
+			$string = substr( $string, 3 );
+		}
+
+		return $string;
+	}
+
+	/**
+	 * Set file mapped keys.
+	 */
+	protected function set_mapped_keys() {
+		$mapping = $this-&gt;params[&#039;mapping&#039;];
+
+		foreach ( $this-&gt;raw_keys as $key ) {
+			$this-&gt;mapped_keys[] = isset( $mapping[ $key ] ) ? $mapping[ $key ] : $key;
+		}
+	}
+
+	/**
+	 * Parse relative field and return product ID.
+	 *
+	 * Handles `id:xx` and SKUs.
+	 *
+	 * If mapping to an id: and the product ID does not exist, this link is not
+	 * valid.
+	 *
+	 * If mapping to a SKU and the product ID does not exist, a temporary object
+	 * will be created so it can be updated later.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return int|string
+	 */
+	public function parse_relative_field( $value ) {
+		global $wpdb;
+
+		if ( empty( $value ) ) {
+			return &#039;&#039;;
+		}
+
+		// IDs are prefixed with id:.
+		if ( preg_match( &#039;/^id:(\d+)$/&#039;, $value, $matches ) ) {
+			$id = intval( $matches[1] );
+
+			// If original_id is found, use that instead of the given ID since a new placeholder must have been created already.
+			$original_id = $wpdb-&gt;get_var( $wpdb-&gt;prepare( &quot;SELECT post_id FROM {$wpdb-&gt;postmeta} WHERE meta_key = &#039;_original_id&#039; AND meta_value = %s;&quot;, $id ) ); // WPCS: db call ok, cache ok.
+
+			if ( $original_id ) {
+				return absint( $original_id );
+			}
+
+			// See if the given ID maps to a valid product allready.
+			$existing_id = $wpdb-&gt;get_var( $wpdb-&gt;prepare( &quot;SELECT ID FROM {$wpdb-&gt;posts} WHERE post_type IN ( &#039;product&#039;, &#039;product_variation&#039; ) AND ID = %d;&quot;, $id ) ); // WPCS: db call ok, cache ok.
+
+			if ( $existing_id ) {
+				return absint( $existing_id );
+			}
+
+			// If we&#039;re not updating existing posts, we may need a placeholder product to map to.
+			if ( ! $this-&gt;params[&#039;update_existing&#039;] ) {
+				$product = wc_get_product_object( &#039;simple&#039; );
+				$product-&gt;set_name( &#039;Import placeholder for &#039; . $id );
+				$product-&gt;set_status( &#039;importing&#039; );
+				$product-&gt;add_meta_data( &#039;_original_id&#039;, $id, true );
+				$id = $product-&gt;save();
+			}
+
+			return $id;
+		}
+
+		$id = wc_get_product_id_by_sku( $value );
+
+		if ( $id ) {
+			return $id;
+		}
+
+		try {
+			$product = wc_get_product_object( &#039;simple&#039; );
+			$product-&gt;set_name( &#039;Import placeholder for &#039; . $value );
+			$product-&gt;set_status( &#039;importing&#039; );
+			$product-&gt;set_sku( $value );
+			$id = $product-&gt;save();
+
+			if ( $id &amp;&amp; ! is_wp_error( $id ) ) {
+				return $id;
+			}
+		} catch ( Exception $e ) {
+			return &#039;&#039;;
+		}
+
+		return &#039;&#039;;
+	}
+
+	/**
+	 * Parse the ID field.
+	 *
+	 * If we&#039;re not doing an update, create a placeholder product so mapping works
+	 * for rows following this one.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return int
+	 */
+	public function parse_id_field( $value ) {
+		global $wpdb;
+
+		$id = absint( $value );
+
+		if ( ! $id ) {
+			return 0;
+		}
+
+		// See if this maps to an ID placeholder already.
+		$original_id = $wpdb-&gt;get_var( $wpdb-&gt;prepare( &quot;SELECT post_id FROM {$wpdb-&gt;postmeta} WHERE meta_key = &#039;_original_id&#039; AND meta_value = %s;&quot;, $id ) ); // WPCS: db call ok, cache ok.
+
+		if ( $original_id ) {
+			return absint( $original_id );
+		}
+
+		// Not updating? Make sure we have a new placeholder for this ID.
+		if ( ! $this-&gt;params[&#039;update_existing&#039;] ) {
+			$mapped_keys      = $this-&gt;get_mapped_keys();
+			$sku_column_index = absint( array_search( &#039;sku&#039;, $mapped_keys, true ) );
+			$row_sku          = isset( $this-&gt;raw_data[ $this-&gt;parsing_raw_data_index ][ $sku_column_index ] ) ? $this-&gt;raw_data[ $this-&gt;parsing_raw_data_index ][ $sku_column_index ] : &#039;&#039;;
+			$id_from_sku      = $row_sku ? wc_get_product_id_by_sku( $row_sku ) : &#039;&#039;;
+
+			// If row has a SKU, make sure placeholder was not made already.
+			if ( $id_from_sku ) {
+				return $id_from_sku;
+			}
+
+			$product = wc_get_product_object( &#039;simple&#039; );
+			$product-&gt;set_name( &#039;Import placeholder for &#039; . $id );
+			$product-&gt;set_status( &#039;importing&#039; );
+			$product-&gt;add_meta_data( &#039;_original_id&#039;, $id, true );
+
+			// If row has a SKU, make sure placeholder has it too.
+			if ( $row_sku ) {
+				$product-&gt;set_sku( $row_sku );
+			}
+			$id = $product-&gt;save();
+		}
+
+		return $id &amp;&amp; ! is_wp_error( $id ) ? $id : 0;
+	}
+
+	/**
+	 * Parse relative comma-delineated field and return product ID.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return array
+	 */
+	public function parse_relative_comma_field( $value ) {
+		if ( empty( $value ) ) {
+			return array();
+		}
+
+		return array_filter( array_map( array( $this, &#039;parse_relative_field&#039; ), $this-&gt;explode_values( $value ) ) );
+	}
+
+	/**
+	 * Parse a comma-delineated field from a CSV.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return array
+	 */
+	public function parse_comma_field( $value ) {
+		if ( empty( $value ) &amp;&amp; &#039;0&#039; !== $value ) {
+			return array();
+		}
+
+		$value = $this-&gt;unescape_data( $value );
+		return array_map( &#039;wc_clean&#039;, $this-&gt;explode_values( $value ) );
+	}
+
+	/**
+	 * Parse a field that is generally &#039;1&#039; or &#039;0&#039; but can be something else.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return bool|string
+	 */
+	public function parse_bool_field( $value ) {
+		if ( &#039;0&#039; === $value ) {
+			return false;
+		}
+
+		if ( &#039;1&#039; === $value ) {
+			return true;
+		}
+
+		// Don&#039;t return explicit true or false for empty fields or values like &#039;notify&#039;.
+		return wc_clean( $value );
+	}
+
+	/**
+	 * Parse a float value field.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return float|string
+	 */
+	public function parse_float_field( $value ) {
+		if ( &#039;&#039; === $value ) {
+			return $value;
+		}
+
+		// Remove the &#039; prepended to fields that start with - if needed.
+		$value = $this-&gt;unescape_data( $value );
+
+		return floatval( $value );
+	}
+
+	/**
+	 * Parse the stock qty field.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return float|string
+	 */
+	public function parse_stock_quantity_field( $value ) {
+		if ( &#039;&#039; === $value ) {
+			return $value;
+		}
+
+		// Remove the &#039; prepended to fields that start with - if needed.
+		$value = $this-&gt;unescape_data( $value );
+
+		return wc_stock_amount( $value );
+	}
+
+	/**
+	 * Parse the tax status field.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return string
+	 */
+	public function parse_tax_status_field( $value ) {
+		if ( &#039;&#039; === $value ) {
+			return $value;
+		}
+
+		// Remove the &#039; prepended to fields that start with - if needed.
+		$value = $this-&gt;unescape_data( $value );
+
+		if ( &#039;true&#039; === strtolower( $value ) || &#039;false&#039; === strtolower( $value ) ) {
+			$value = wc_string_to_bool( $value ) ? &#039;taxable&#039; : &#039;none&#039;;
+		}
+
+		return wc_clean( $value );
+	}
+
+	/**
+	 * Parse a category field from a CSV.
+	 * Categories are separated by commas and subcategories are &quot;parent &gt; subcategory&quot;.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return array of arrays with &quot;parent&quot; and &quot;name&quot; keys.
+	 */
+	public function parse_categories_field( $value ) {
+		if ( empty( $value ) ) {
+			return array();
+		}
+
+		$row_terms  = $this-&gt;explode_values( $value );
+		$categories = array();
+
+		foreach ( $row_terms as $row_term ) {
+			$parent = null;
+			$_terms = array_map( &#039;trim&#039;, explode( &#039;&gt;&#039;, $row_term ) );
+			$total  = count( $_terms );
+
+			foreach ( $_terms as $index =&gt; $_term ) {
+				// Don&#039;t allow users without capabilities to create new categories.
+				if ( ! current_user_can( &#039;manage_product_terms&#039; ) ) {
+					break;
+				}
+
+				$term = wp_insert_term( $_term, &#039;product_cat&#039;, array( &#039;parent&#039; =&gt; intval( $parent ) ) );
+
+				if ( is_wp_error( $term ) ) {
+					if ( $term-&gt;get_error_code() === &#039;term_exists&#039; ) {
+						// When term exists, error data should contain existing term id.
+						$term_id = $term-&gt;get_error_data();
+					} else {
+						break; // We cannot continue on any other error.
+					}
+				} else {
+					// New term.
+					$term_id = $term[&#039;term_id&#039;];
+				}
+
+				// Only requires assign the last category.
+				if ( ( 1 + $index ) === $total ) {
+					$categories[] = $term_id;
+				} else {
+					// Store parent to be able to insert or query categories based in parent ID.
+					$parent = $term_id;
+				}
+			}
+		}
+
+		return $categories;
+	}
+
+	/**
+	 * Parse a tag field from a CSV.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return array
+	 */
+	public function parse_tags_field( $value ) {
+		if ( empty( $value ) ) {
+			return array();
+		}
+
+		$value = $this-&gt;unescape_data( $value );
+		$names = $this-&gt;explode_values( $value );
+		$tags  = array();
+
+		foreach ( $names as $name ) {
+			$term = get_term_by( &#039;name&#039;, $name, &#039;product_tag&#039; );
+
+			if ( ! $term || is_wp_error( $term ) ) {
+				$term = (object) wp_insert_term( $name, &#039;product_tag&#039; );
+			}
+
+			if ( ! is_wp_error( $term ) ) {
+				$tags[] = $term-&gt;term_id;
+			}
+		}
+
+		return $tags;
+	}
+
+	/**
+	 * Parse a tag field from a CSV with space separators.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return array
+	 */
+	public function parse_tags_spaces_field( $value ) {
+		if ( empty( $value ) ) {
+			return array();
+		}
+
+		$value = $this-&gt;unescape_data( $value );
+		$names = $this-&gt;explode_values( $value, &#039; &#039; );
+		$tags  = array();
+
+		foreach ( $names as $name ) {
+			$term = get_term_by( &#039;name&#039;, $name, &#039;product_tag&#039; );
+
+			if ( ! $term || is_wp_error( $term ) ) {
+				$term = (object) wp_insert_term( $name, &#039;product_tag&#039; );
+			}
+
+			if ( ! is_wp_error( $term ) ) {
+				$tags[] = $term-&gt;term_id;
+			}
+		}
+
+		return $tags;
+	}
+
+	/**
+	 * Parse a shipping class field from a CSV.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return int
+	 */
+	public function parse_shipping_class_field( $value ) {
+		if ( empty( $value ) ) {
+			return 0;
+		}
+
+		$term = get_term_by( &#039;name&#039;, $value, &#039;product_shipping_class&#039; );
+
+		if ( ! $term || is_wp_error( $term ) ) {
+			$term = (object) wp_insert_term( $value, &#039;product_shipping_class&#039; );
+		}
+
+		if ( is_wp_error( $term ) ) {
+			return 0;
+		}
+
+		return $term-&gt;term_id;
+	}
+
+	/**
+	 * Parse images list from a CSV. Images can be filenames or URLs.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return array
+	 */
+	public function parse_images_field( $value ) {
+		if ( empty( $value ) ) {
+			return array();
+		}
+
+		$images    = array();
+		$separator = apply_filters( &#039;woocommerce_product_import_image_separator&#039;, &#039;,&#039; );
+
+		foreach ( $this-&gt;explode_values( $value, $separator ) as $image ) {
+			if ( stristr( $image, &#039;://&#039; ) ) {
+				$images[] = esc_url_raw( $image );
+			} else {
+				$images[] = sanitize_file_name( $image );
+			}
+		}
+
+		return $images;
+	}
+
+	/**
+	 * Parse dates from a CSV.
+	 * Dates requires the format YYYY-MM-DD and time is optional.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return string|null
+	 */
+	public function parse_date_field( $value ) {
+		if ( empty( $value ) ) {
+			return null;
+		}
+
+		if ( preg_match( &#039;/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])([ 01-9:]*)$/&#039;, $value ) ) {
+			// Don&#039;t include the time if the field had time in it.
+			return current( explode( &#039; &#039;, $value ) );
+		}
+
+		return null;
+	}
+
+	/**
+	 * Parse backorders from a CSV.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return string
+	 */
+	public function parse_backorders_field( $value ) {
+		if ( empty( $value ) ) {
+			return &#039;no&#039;;
+		}
+
+		$value = $this-&gt;parse_bool_field( $value );
+
+		if ( &#039;notify&#039; === $value ) {
+			return &#039;notify&#039;;
+		} elseif ( is_bool( $value ) ) {
+			return $value ? &#039;yes&#039; : &#039;no&#039;;
+		}
+
+		return &#039;no&#039;;
+	}
+
+	/**
+	 * Just skip current field.
+	 *
+	 * By default is applied wc_clean() to all not listed fields
+	 * in self::get_formatting_callback(), use this method to skip any formatting.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return string
+	 */
+	public function parse_skip_field( $value ) {
+		return $value;
+	}
+
+	/**
+	 * Parse download file urls, we should allow shortcodes here.
+	 *
+	 * Allow shortcodes if present, otherwise esc_url the value.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return string
+	 */
+	public function parse_download_file_field( $value ) {
+		// Absolute file paths.
+		if ( 0 === strpos( $value, &#039;http&#039; ) ) {
+			return esc_url_raw( $value );
+		}
+		// Relative and shortcode paths.
+		return wc_clean( $value );
+	}
+
+	/**
+	 * Parse an int value field
+	 *
+	 * @param int $value field value.
+	 *
+	 * @return int
+	 */
+	public function parse_int_field( $value ) {
+		// Remove the &#039; prepended to fields that start with - if needed.
+		$value = $this-&gt;unescape_data( $value );
+
+		return intval( $value );
+	}
+
+	/**
+	 * Parse a description value field
+	 *
+	 * @param string $description field value.
+	 *
+	 * @return string
+	 */
+	public function parse_description_field( $description ) {
+		$parts = explode( &quot;\\\\n&quot;, $description );
+		foreach ( $parts as $key =&gt; $part ) {
+			$parts[ $key ] = str_replace( &#039;\n&#039;, &quot;\n&quot;, $part );
+		}
+
+		return implode( &#039;\\\n&#039;, $parts );
+	}
+
+	/**
+	 * Parse the published field. 1 is published, 0 is private, -1 is draft.
+	 * Alternatively, &#039;true&#039; can be used for published and &#039;false&#039; for draft.
+	 *
+	 * @param string $value Field value.
+	 *
+	 * @return float|string
+	 */
+	public function parse_published_field( $value ) {
+		if ( &#039;&#039; === $value ) {
+			return $value;
+		}
+
+		// Remove the &#039; prepended to fields that start with - if needed.
+		$value = $this-&gt;unescape_data( $value );
+
+		if ( &#039;true&#039; === strtolower( $value ) || &#039;false&#039; === strtolower( $value ) ) {
+			return wc_string_to_bool( $value ) ? 1 : -1;
+		}
+
+		return floatval( $value );
+	}
+
+	/**
+	 * Deprecated get formatting callback method.
+	 *
+	 * @deprecated 4.3.0
+	 * @return array
+	 */
+	protected function get_formating_callback() {
+		return $this-&gt;get_formatting_callback();
+	}
+
+	/**
+	 * Get formatting callback.
+	 *
+	 * @since 4.3.0
+	 * @return array
+	 */
+	protected function get_formatting_callback() {
+
+		/**
+		 * Columns not mentioned here will get parsed with &#039;wc_clean&#039;.
+		 * column_name =&gt; callback.
+		 */
+		$data_formatting = array(
+			&#039;id&#039;                =&gt; array( $this, &#039;parse_id_field&#039; ),
+			&#039;type&#039;              =&gt; array( $this, &#039;parse_comma_field&#039; ),
+			&#039;published&#039;         =&gt; array( $this, &#039;parse_published_field&#039; ),
+			&#039;featured&#039;          =&gt; array( $this, &#039;parse_bool_field&#039; ),
+			&#039;date_on_sale_from&#039; =&gt; array( $this, &#039;parse_date_field&#039; ),
+			&#039;date_on_sale_to&#039;   =&gt; array( $this, &#039;parse_date_field&#039; ),
+			&#039;name&#039;              =&gt; array( $this, &#039;parse_skip_field&#039; ),
+			&#039;short_description&#039; =&gt; array( $this, &#039;parse_description_field&#039; ),
+			&#039;description&#039;       =&gt; array( $this, &#039;parse_description_field&#039; ),
+			&#039;manage_stock&#039;      =&gt; array( $this, &#039;parse_bool_field&#039; ),
+			&#039;low_stock_amount&#039;  =&gt; array( $this, &#039;parse_stock_quantity_field&#039; ),
+			&#039;backorders&#039;        =&gt; array( $this, &#039;parse_backorders_field&#039; ),
+			&#039;stock_status&#039;      =&gt; array( $this, &#039;parse_bool_field&#039; ),
+			&#039;sold_individually&#039; =&gt; array( $this, &#039;parse_bool_field&#039; ),
+			&#039;width&#039;             =&gt; array( $this, &#039;parse_float_field&#039; ),
+			&#039;length&#039;            =&gt; array( $this, &#039;parse_float_field&#039; ),
+			&#039;height&#039;            =&gt; array( $this, &#039;parse_float_field&#039; ),
+			&#039;weight&#039;            =&gt; array( $this, &#039;parse_float_field&#039; ),
+			&#039;reviews_allowed&#039;   =&gt; array( $this, &#039;parse_bool_field&#039; ),
+			&#039;purchase_note&#039;     =&gt; &#039;wp_filter_post_kses&#039;,
+			&#039;price&#039;             =&gt; &#039;wc_format_decimal&#039;,
+			&#039;regular_price&#039;     =&gt; &#039;wc_format_decimal&#039;,
+			&#039;stock_quantity&#039;    =&gt; array( $this, &#039;parse_stock_quantity_field&#039; ),
+			&#039;category_ids&#039;      =&gt; array( $this, &#039;parse_categories_field&#039; ),
+			&#039;tag_ids&#039;           =&gt; array( $this, &#039;parse_tags_field&#039; ),
+			&#039;tag_ids_spaces&#039;    =&gt; array( $this, &#039;parse_tags_spaces_field&#039; ),
+			&#039;shipping_class_id&#039; =&gt; array( $this, &#039;parse_shipping_class_field&#039; ),
+			&#039;images&#039;            =&gt; array( $this, &#039;parse_images_field&#039; ),
+			&#039;parent_id&#039;         =&gt; array( $this, &#039;parse_relative_field&#039; ),
+			&#039;grouped_products&#039;  =&gt; array( $this, &#039;parse_relative_comma_field&#039; ),
+			&#039;upsell_ids&#039;        =&gt; array( $this, &#039;parse_relative_comma_field&#039; ),
+			&#039;cross_sell_ids&#039;    =&gt; array( $this, &#039;parse_relative_comma_field&#039; ),
+			&#039;download_limit&#039;    =&gt; array( $this, &#039;parse_int_field&#039; ),
+			&#039;download_expiry&#039;   =&gt; array( $this, &#039;parse_int_field&#039; ),
+			&#039;product_url&#039;       =&gt; &#039;esc_url_raw&#039;,
+			&#039;menu_order&#039;        =&gt; &#039;intval&#039;,
+			&#039;tax_status&#039;        =&gt; array( $this, &#039;parse_tax_status_field&#039; ),
+		);
+
+		/**
+		 * Match special column names.
+		 */
+		$regex_match_data_formatting = array(
+			&#039;/attributes:value*/&#039;    =&gt; array( $this, &#039;parse_comma_field&#039; ),
+			&#039;/attributes:visible*/&#039;  =&gt; array( $this, &#039;parse_bool_field&#039; ),
+			&#039;/attributes:taxonomy*/&#039; =&gt; array( $this, &#039;parse_bool_field&#039; ),
+			&#039;/downloads:url*/&#039;       =&gt; array( $this, &#039;parse_download_file_field&#039; ),
+			&#039;/meta:*/&#039;               =&gt; &#039;wp_kses_post&#039;, // Allow some HTML in meta fields.
+		);
+
+		$callbacks = array();
+
+		// Figure out the parse function for each column.
+		foreach ( $this-&gt;get_mapped_keys() as $index =&gt; $heading ) {
+			$callback = &#039;wc_clean&#039;;
+
+			if ( isset( $data_formatting[ $heading ] ) ) {
+				$callback = $data_formatting[ $heading ];
+			} else {
+				foreach ( $regex_match_data_formatting as $regex =&gt; $callback ) {
+					if ( preg_match( $regex, $heading ) ) {
+						$callback = $callback;
+						break;
+					}
+				}
+			}
+
+			$callbacks[] = $callback;
+		}
+
+		return apply_filters( &#039;woocommerce_product_importer_formatting_callbacks&#039;, $callbacks, $this );
+	}
+
+	/**
+	 * Check if strings starts with determined word.
+	 *
+	 * @param string $haystack Complete sentence.
+	 * @param string $needle   Excerpt.
+	 *
+	 * @return bool
+	 */
+	protected function starts_with( $haystack, $needle ) {
+		return substr( $haystack, 0, strlen( $needle ) ) === $needle;
+	}
+
+	/**
+	 * Expand special and internal data into the correct formats for the product CRUD.
+	 *
+	 * @param array $data Data to import.
+	 *
+	 * @return array
+	 */
+	protected function expand_data( $data ) {
+		$data = apply_filters( &#039;woocommerce_product_importer_pre_expand_data&#039;, $data );
+
+		// Images field maps to image and gallery id fields.
+		if ( isset( $data[&#039;images&#039;] ) ) {
+			$images               = $data[&#039;images&#039;];
+			$data[&#039;raw_image_id&#039;] = array_shift( $images );
+
+			if ( ! empty( $images ) ) {
+				$data[&#039;raw_gallery_image_ids&#039;] = $images;
+			}
+			unset( $data[&#039;images&#039;] );
+		}
+
+		// Type, virtual and downloadable are all stored in the same column.
+		if ( isset( $data[&#039;type&#039;] ) ) {
+			$data[&#039;type&#039;]         = array_map( &#039;strtolower&#039;, $data[&#039;type&#039;] );
+			$data[&#039;virtual&#039;]      = in_array( &#039;virtual&#039;, $data[&#039;type&#039;], true );
+			$data[&#039;downloadable&#039;] = in_array( &#039;downloadable&#039;, $data[&#039;type&#039;], true );
+
+			// Convert type to string.
+			$data[&#039;type&#039;] = current( array_diff( $data[&#039;type&#039;], array( &#039;virtual&#039;, &#039;downloadable&#039; ) ) );
+
+			if ( ! $data[&#039;type&#039;] ) {
+				$data[&#039;type&#039;] = &#039;simple&#039;;
+			}
+		}
+
+		// Status is mapped from a special published field.
+		if ( isset( $data[&#039;published&#039;] ) ) {
+			$published = $data[&#039;published&#039;];
+			if ( is_float( $published ) ) {
+				$published = (int) $published;
+			}
+
+			$statuses       = array(
+				-1 =&gt; &#039;draft&#039;,
+				0  =&gt; &#039;private&#039;,
+				1  =&gt; &#039;publish&#039;,
+			);
+			$data[&#039;status&#039;] = $statuses[ $published ] ?? &#039;draft&#039;;
+
+			// Fix draft status of variations.
+			if ( &#039;variation&#039; === ( $data[&#039;type&#039;] ?? null ) &amp;&amp; -1 === $published ) {
+				$data[&#039;status&#039;] = &#039;publish&#039;;
+			}
+
+			unset( $data[&#039;published&#039;] );
+		}
+
+		if ( isset( $data[&#039;stock_quantity&#039;] ) ) {
+			if ( &#039;&#039; === $data[&#039;stock_quantity&#039;] ) {
+				$data[&#039;manage_stock&#039;] = false;
+				$data[&#039;stock_status&#039;] = isset( $data[&#039;stock_status&#039;] ) ? $data[&#039;stock_status&#039;] : true;
+			} else {
+				$data[&#039;manage_stock&#039;] = true;
+			}
+		}
+
+		// Stock is bool or &#039;backorder&#039;.
+		if ( isset( $data[&#039;stock_status&#039;] ) ) {
+			if ( &#039;backorder&#039; === $data[&#039;stock_status&#039;] ) {
+				$data[&#039;stock_status&#039;] = &#039;onbackorder&#039;;
+			} else {
+				$data[&#039;stock_status&#039;] = $data[&#039;stock_status&#039;] ? &#039;instock&#039; : &#039;outofstock&#039;;
+			}
+		}
+
+		// Prepare grouped products.
+		if ( isset( $data[&#039;grouped_products&#039;] ) ) {
+			$data[&#039;children&#039;] = $data[&#039;grouped_products&#039;];
+			unset( $data[&#039;grouped_products&#039;] );
+		}
+
+		// Tag ids.
+		if ( isset( $data[&#039;tag_ids_spaces&#039;] ) ) {
+			$data[&#039;tag_ids&#039;] = $data[&#039;tag_ids_spaces&#039;];
+			unset( $data[&#039;tag_ids_spaces&#039;] );
+		}
+
+		// Handle special column names which span multiple columns.
+		$attributes = array();
+		$downloads  = array();
+		$meta_data  = array();
+
+		foreach ( $data as $key =&gt; $value ) {
+			if ( $this-&gt;starts_with( $key, &#039;attributes:name&#039; ) ) {
+				if ( ! empty( $value ) ) {
+					$attributes[ str_replace( &#039;attributes:name&#039;, &#039;&#039;, $key ) ][&#039;name&#039;] = $value;
+				}
+				unset( $data[ $key ] );
+
+			} elseif ( $this-&gt;starts_with( $key, &#039;attributes:value&#039; ) ) {
+				$attributes[ str_replace( &#039;attributes:value&#039;, &#039;&#039;, $key ) ][&#039;value&#039;] = $value;
+				unset( $data[ $key ] );
+
+			} elseif ( $this-&gt;starts_with( $key, &#039;attributes:taxonomy&#039; ) ) {
+				$attributes[ str_replace( &#039;attributes:taxonomy&#039;, &#039;&#039;, $key ) ][&#039;taxonomy&#039;] = wc_string_to_bool( $value );
+				unset( $data[ $key ] );
+
+			} elseif ( $this-&gt;starts_with( $key, &#039;attributes:visible&#039; ) ) {
+				$attributes[ str_replace( &#039;attributes:visible&#039;, &#039;&#039;, $key ) ][&#039;visible&#039;] = wc_string_to_bool( $value );
+				unset( $data[ $key ] );
+
+			} elseif ( $this-&gt;starts_with( $key, &#039;attributes:default&#039; ) ) {
+				if ( ! empty( $value ) ) {
+					$attributes[ str_replace( &#039;attributes:default&#039;, &#039;&#039;, $key ) ][&#039;default&#039;] = $value;
+				}
+				unset( $data[ $key ] );
+
+			} elseif ( $this-&gt;starts_with( $key, &#039;downloads:id&#039; ) ) {
+				if ( ! empty( $value ) ) {
+					$downloads[ str_replace( &#039;downloads:id&#039;, &#039;&#039;, $key ) ][&#039;id&#039;] = $value;
+				}
+				unset( $data[ $key ] );
+
+			} elseif ( $this-&gt;starts_with( $key, &#039;downloads:name&#039; ) ) {
+				if ( ! empty( $value ) ) {
+					$downloads[ str_replace( &#039;downloads:name&#039;, &#039;&#039;, $key ) ][&#039;name&#039;] = $value;
+				}
+				unset( $data[ $key ] );
+
+			} elseif ( $this-&gt;starts_with( $key, &#039;downloads:url&#039; ) ) {
+				if ( ! empty( $value ) ) {
+					$downloads[ str_replace( &#039;downloads:url&#039;, &#039;&#039;, $key ) ][&#039;url&#039;] = $value;
+				}
+				unset( $data[ $key ] );
+
+			} elseif ( $this-&gt;starts_with( $key, &#039;meta:&#039; ) ) {
+				$meta_data[] = array(
+					&#039;key&#039;   =&gt; str_replace( &#039;meta:&#039;, &#039;&#039;, $key ),
+					&#039;value&#039; =&gt; $value,
+				);
+				unset( $data[ $key ] );
+			}
+		}
+
+		if ( ! empty( $attributes ) ) {
+			// Remove empty attributes and clear indexes.
+			foreach ( $attributes as $attribute ) {
+				if ( empty( $attribute[&#039;name&#039;] ) ) {
+					continue;
+				}
+
+				$data[&#039;raw_attributes&#039;][] = $attribute;
+			}
+		}
+
+		if ( ! empty( $downloads ) ) {
+			$data[&#039;downloads&#039;] = array();
+
+			foreach ( $downloads as $key =&gt; $file ) {
+				if ( empty( $file[&#039;url&#039;] ) ) {
+					continue;
+				}
+
+				$data[&#039;downloads&#039;][] = array(
+					&#039;download_id&#039; =&gt; isset( $file[&#039;id&#039;] ) ? $file[&#039;id&#039;] : null,
+					&#039;name&#039;        =&gt; $file[&#039;name&#039;] ? $file[&#039;name&#039;] : wc_get_filename_from_url( $file[&#039;url&#039;] ),
+					&#039;file&#039;        =&gt; $file[&#039;url&#039;],
+				);
+			}
+		}
+
+		if ( ! empty( $meta_data ) ) {
+			$data[&#039;meta_data&#039;] = $meta_data;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Map and format raw data to known fields.
+	 */
+	protected function set_parsed_data() {
+		$parse_functions = $this-&gt;get_formatting_callback();
+		$mapped_keys     = $this-&gt;get_mapped_keys();
+		$use_mb          = function_exists( &#039;mb_convert_encoding&#039; );
+
+		// Parse the data.
+		foreach ( $this-&gt;raw_data as $row_index =&gt; $row ) {
+			// Skip empty rows.
+			if ( ! count( array_filter( $row ) ) ) {
+				continue;
+			}
+
+			$this-&gt;parsing_raw_data_index = $row_index;
+
+			$data = array();
+
+			do_action( &#039;woocommerce_product_importer_before_set_parsed_data&#039;, $row, $mapped_keys );
+
+			foreach ( $row as $id =&gt; $value ) {
+				// Skip ignored columns.
+				if ( empty( $mapped_keys[ $id ] ) ) {
+					continue;
+				}
+
+				// Convert UTF8.
+				if ( $use_mb ) {
+					$encoding = mb_detect_encoding( $value, mb_detect_order(), true );
+					if ( $encoding ) {
+						$value = mb_convert_encoding( $value, &#039;UTF-8&#039;, $encoding );
+					} else {
+						$value = mb_convert_encoding( $value, &#039;UTF-8&#039;, &#039;UTF-8&#039; );
+					}
+				} else {
+					$value = wp_check_invalid_utf8( $value, true );
+				}
+
+				$data[ $mapped_keys[ $id ] ] = call_user_func( $parse_functions[ $id ], $value );
+			}
+
+			/**
+			 * Filter product importer parsed data.
+			 *
+			 * @param array $parsed_data Parsed data.
+			 * @param WC_Product_Importer $importer Importer instance.
+			 *
+			 * @since
+			 */
+			$this-&gt;parsed_data[] = apply_filters( &#039;woocommerce_product_importer_parsed_data&#039;, $this-&gt;expand_data( $data ), $this );
+		}
+	}
+
+	/**
+	 * Get a string to identify the row from parsed data.
+	 *
+	 * @param array $parsed_data Parsed data.
+	 *
+	 * @return string
+	 */
+	protected function get_row_id( $parsed_data ) {
+		$id       = isset( $parsed_data[&#039;id&#039;] ) ? absint( $parsed_data[&#039;id&#039;] ) : 0;
+		$sku      = isset( $parsed_data[&#039;sku&#039;] ) ? esc_attr( $parsed_data[&#039;sku&#039;] ) : &#039;&#039;;
+		$name     = isset( $parsed_data[&#039;name&#039;] ) ? esc_attr( $parsed_data[&#039;name&#039;] ) : &#039;&#039;;
+		$row_data = array();
+
+		if ( $name ) {
+			$row_data[] = $name;
+		}
+		if ( $id ) {
+			/* translators: %d: product ID */
+			$row_data[] = sprintf( __( &#039;ID %d&#039;, &#039;woocommerce&#039; ), $id );
+		}
+		if ( $sku ) {
+			/* translators: %s: product SKU */
+			$row_data[] = sprintf( __( &#039;SKU %s&#039;, &#039;woocommerce&#039; ), $sku );
+		}
+
+		return implode( &#039;, &#039;, $row_data );
+	}
+
+	/**
+	 * Process importer.
+	 *
+	 * Do not import products with IDs or SKUs that already exist if option
+	 * update existing is false, and likewise, if updating products, do not
+	 * process rows which do not exist if an ID/SKU is provided.
+	 *
+	 * @return array
+	 */
+	public function import() {
+		$this-&gt;start_time = time();
+		$index            = 0;
+		$update_existing  = $this-&gt;params[&#039;update_existing&#039;];
+		$data             = array(
+			&#039;imported&#039;            =&gt; array(),
+			&#039;imported_variations&#039; =&gt; array(),
+			&#039;failed&#039;              =&gt; array(),
+			&#039;updated&#039;             =&gt; array(),
+			&#039;skipped&#039;             =&gt; array(),
+		);
+
+		foreach ( $this-&gt;parsed_data as $parsed_data_key =&gt; $parsed_data ) {
+			do_action( &#039;woocommerce_product_import_before_import&#039;, $parsed_data );
+
+			$id         = isset( $parsed_data[&#039;id&#039;] ) ? absint( $parsed_data[&#039;id&#039;] ) : 0;
+			$sku        = isset( $parsed_data[&#039;sku&#039;] ) ? $parsed_data[&#039;sku&#039;] : &#039;&#039;;
+			$id_exists  = false;
+			$sku_exists = false;
+
+			if ( $id ) {
+				$product   = wc_get_product( $id );
+				$id_exists = $product &amp;&amp; &#039;importing&#039; !== $product-&gt;get_status();
+			}
+
+			if ( $sku ) {
+				$id_from_sku = wc_get_product_id_by_sku( $sku );
+				$product     = $id_from_sku ? wc_get_product( $id_from_sku ) : false;
+				$sku_exists  = $product &amp;&amp; &#039;importing&#039; !== $product-&gt;get_status();
+			}
+
+			if ( $id_exists &amp;&amp; ! $update_existing ) {
+				$data[&#039;skipped&#039;][] = new WP_Error(
+					&#039;woocommerce_product_importer_error&#039;,
+					esc_html__( &#039;A product with this ID already exists.&#039;, &#039;woocommerce&#039; ),
+					array(
+						&#039;id&#039;  =&gt; $id,
+						&#039;row&#039; =&gt; $this-&gt;get_row_id( $parsed_data ),
+					)
+				);
+				continue;
+			}
+
+			if ( $sku_exists &amp;&amp; ! $update_existing ) {
+				$data[&#039;skipped&#039;][] = new WP_Error(
+					&#039;woocommerce_product_importer_error&#039;,
+					esc_html__( &#039;A product with this SKU already exists.&#039;, &#039;woocommerce&#039; ),
+					array(
+						&#039;sku&#039; =&gt; esc_attr( $sku ),
+						&#039;row&#039; =&gt; $this-&gt;get_row_id( $parsed_data ),
+					)
+				);
+				continue;
+			}
+
+			if ( $update_existing &amp;&amp; ( isset( $parsed_data[&#039;id&#039;] ) || isset( $parsed_data[&#039;sku&#039;] ) ) &amp;&amp; ! $id_exists &amp;&amp; ! $sku_exists ) {
+				$data[&#039;skipped&#039;][] = new WP_Error(
+					&#039;woocommerce_product_importer_error&#039;,
+					esc_html__( &#039;No matching product exists to update.&#039;, &#039;woocommerce&#039; ),
+					array(
+						&#039;id&#039;  =&gt; $id,
+						&#039;sku&#039; =&gt; esc_attr( $sku ),
+						&#039;row&#039; =&gt; $this-&gt;get_row_id( $parsed_data ),
+					)
+				);
+				continue;
+			}
+
+			$result = $this-&gt;process_item( $parsed_data );
+
+			if ( is_wp_error( $result ) ) {
+				$result-&gt;add_data( array( &#039;row&#039; =&gt; $this-&gt;get_row_id( $parsed_data ) ) );
+				$data[&#039;failed&#039;][] = $result;
+			} elseif ( $result[&#039;updated&#039;] ) {
+				$data[&#039;updated&#039;][] = $result[&#039;id&#039;];
+			} else {
+				if ( $result[&#039;is_variation&#039;] ) {
+					$data[&#039;imported_variations&#039;][] = $result[&#039;id&#039;];
+				} else {
+					$data[&#039;imported&#039;][] = $result[&#039;id&#039;];
+				}
+			}
+
+			$index ++;
+
+			if ( $this-&gt;params[&#039;prevent_timeouts&#039;] &amp;&amp; ( $this-&gt;time_exceeded() || $this-&gt;memory_exceeded() ) ) {
+				$this-&gt;file_position = $this-&gt;file_positions[ $index ];
+				break;
+			}
+		}
+
+		return $data;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>

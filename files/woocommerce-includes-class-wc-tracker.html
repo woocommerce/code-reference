@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1692866947">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css?updated=1692866947">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img width="180" src="../images/logo.svg" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://docs.woocommerce.com/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+                <li><a href="https://woocommerce.com/careers/?utm_source=woocommerce+core+code+reference&utm_medium=devdocs&utm_campaign=woo+careers" target="_blank">We're hiring!</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">WooCommerce Code Reference</h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceAdmin.html"><abbr title="\WoocommerceAdmin">WoocommerceAdmin</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WoocommerceNavigation.html"><abbr title="\WoocommerceNavigation">WoocommerceNavigation</abbr></a></h3>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-wc-tracker.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WooCommerce Tracker
+ *
+ * The WooCommerce tracker class adds functionality to track WooCommerce usage based on if the customer opted in.
+ * No personal information is tracked, only general WooCommerce settings, general product, order and user counts and admin email for discount code.
+ *
+ * @class WC_Tracker
+ * @since 2.3.0
+ * @package WooCommerce\Classes
+ */
+
+use Automattic\Jetpack\Constants;
+use Automattic\WooCommerce\Internal\DataStores\Orders\OrdersTableDataStore;
+use Automattic\WooCommerce\Utilities\{ FeaturesUtil, OrderUtil, PluginUtil };
+use Automattic\WooCommerce\Internal\Utilities\BlocksUtil;
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+// phpcs:disable Squiz.Classes.ClassFileName.NoMatch, Squiz.Classes.ValidClassName.NotCamelCaps -- Backwards compatibility.
+/**
+ * WooCommerce Tracker Class
+ */
+class WC_Tracker {
+
+	// phpcs:enable
+	/**
+	 * URL to the WooThemes Tracker API endpoint.
+	 *
+	 * @var string
+	 */
+	private static $api_url = &#039;https://tracking.woocommerce.com/v1/&#039;;
+
+	/**
+	 * Hook into cron event.
+	 */
+	public static function init() { // phpcs:ignore WooCommerce.Functions.InternalInjectionMethod.MissingFinal, WooCommerce.Functions.InternalInjectionMethod.MissingInternalTag -- Not an injection.
+		add_action( &#039;woocommerce_tracker_send_event&#039;, array( __CLASS__, &#039;send_tracking_data&#039; ) );
+	}
+
+	/**
+	 * Decide whether to send tracking data or not.
+	 *
+	 * @param boolean $override Should override?.
+	 */
+	public static function send_tracking_data( $override = false ) {
+		// Don&#039;t trigger this on AJAX Requests.
+		if ( Constants::is_true( &#039;DOING_AJAX&#039; ) ) {
+			return;
+		}
+
+		/**
+		 * Filter whether to send tracking data or not.
+		 *
+		 * @since 2.3.0
+		 */
+		if ( ! apply_filters( &#039;woocommerce_tracker_send_override&#039;, $override ) ) {
+			// Send a maximum of once per week by default.
+			$last_send = self::get_last_send_time();
+			if ( $last_send &amp;&amp; $last_send &gt; apply_filters( &#039;woocommerce_tracker_last_send_interval&#039;, strtotime( &#039;-1 week&#039; ) ) ) { // phpcs:ignore
+				return;
+			}
+		} else {
+			// Make sure there is at least a 1 hour delay between override sends, we don&#039;t want duplicate calls due to double clicking links.
+			$last_send = self::get_last_send_time();
+			if ( $last_send &amp;&amp; $last_send &gt; strtotime( &#039;-1 hours&#039; ) ) {
+				return;
+			}
+		}
+
+		// Update time first before sending to ensure it is set.
+		update_option( &#039;woocommerce_tracker_last_send&#039;, time() );
+
+		$params = self::get_tracking_data();
+		wp_safe_remote_post(
+			self::$api_url,
+			array(
+				&#039;method&#039;      =&gt; &#039;POST&#039;,
+				&#039;timeout&#039;     =&gt; 45,
+				&#039;redirection&#039; =&gt; 5,
+				&#039;httpversion&#039; =&gt; &#039;1.0&#039;,
+				&#039;blocking&#039;    =&gt; false,
+				&#039;headers&#039;     =&gt; array( &#039;user-agent&#039; =&gt; &#039;WooCommerceTracker/&#039; . md5( esc_url_raw( home_url( &#039;/&#039; ) ) ) . &#039;;&#039; ),
+				&#039;body&#039;        =&gt; wp_json_encode( $params ),
+				&#039;cookies&#039;     =&gt; array(),
+			)
+		);
+	}
+
+	/**
+	 * Get the last time tracking data was sent.
+	 *
+	 * @return int|bool
+	 */
+	private static function get_last_send_time() {
+		/**
+		 * Filter the last time tracking data was sent.
+		 *
+		 * @since 2.3.0
+		 */
+		return apply_filters( &#039;woocommerce_tracker_last_send_time&#039;, get_option( &#039;woocommerce_tracker_last_send&#039;, false ) );
+	}
+
+	/**
+	 * Test whether this site is a staging site according to the Jetpack criteria.
+	 *
+	 * With Jetpack 8.1+, Jetpack::is_staging_site has been deprecated.
+	 * \Automattic\Jetpack\Status::is_staging_site is the replacement.
+	 * However, there are version of JP where \Automattic\Jetpack\Status exists, but does *not* contain is_staging_site method,
+	 * so with those, code still needs to use the previous check as a fallback.
+	 *
+	 * @return bool
+	 */
+	private static function is_jetpack_staging_site() {
+		if ( class_exists( &#039;\Automattic\Jetpack\Status&#039; ) ) {
+			// Preferred way of checking with Jetpack 8.1+.
+			$jp_status = new \Automattic\Jetpack\Status();
+			if ( is_callable( array( $jp_status, &#039;is_staging_site&#039; ) ) ) {
+				return $jp_status-&gt;is_staging_site();
+			}
+		}
+
+		return ( class_exists( &#039;Jetpack&#039; ) &amp;&amp; is_callable( &#039;Jetpack::is_staging_site&#039; ) &amp;&amp; Jetpack::is_staging_site() );
+	}
+
+	/**
+	 * Get all the tracking data.
+	 *
+	 * @return array
+	 */
+	public static function get_tracking_data() {
+		$data = array();
+
+		// General site info.
+		$data[&#039;url&#039;] = home_url();
+		/**
+		 * Filter the admin email that&#039;s sent with data.
+		 *
+		 * @since 2.3.0
+		 */
+		$data[&#039;email&#039;] = apply_filters( &#039;woocommerce_tracker_admin_email&#039;, get_option( &#039;admin_email&#039; ) );
+		$data[&#039;theme&#039;] = self::get_theme_info();
+
+		// WordPress Info.
+		$data[&#039;wp&#039;] = self::get_wordpress_info();
+
+		// Server Info.
+		$data[&#039;server&#039;] = self::get_server_info();
+
+		// Plugin info.
+		$all_plugins              = self::get_all_plugins();
+		$data[&#039;active_plugins&#039;]   = $all_plugins[&#039;active_plugins&#039;];
+		$data[&#039;inactive_plugins&#039;] = $all_plugins[&#039;inactive_plugins&#039;];
+
+		// Jetpack &amp; WooCommerce Connect.
+		$data[&#039;jetpack_version&#039;]    = Constants::is_defined( &#039;JETPACK__VERSION&#039; ) ? Constants::get_constant( &#039;JETPACK__VERSION&#039; ) : &#039;none&#039;;
+		$data[&#039;jetpack_connected&#039;]  = ( class_exists( &#039;Jetpack&#039; ) &amp;&amp; is_callable( &#039;Jetpack::is_active&#039; ) &amp;&amp; Jetpack::is_active() ) ? &#039;yes&#039; : &#039;no&#039;;
+		$data[&#039;jetpack_is_staging&#039;] = self::is_jetpack_staging_site() ? &#039;yes&#039; : &#039;no&#039;;
+		$data[&#039;connect_installed&#039;]  = class_exists( &#039;WC_Connect_Loader&#039; ) ? &#039;yes&#039; : &#039;no&#039;;
+		$data[&#039;connect_active&#039;]     = ( class_exists( &#039;WC_Connect_Loader&#039; ) &amp;&amp; wp_next_scheduled( &#039;wc_connect_fetch_service_schemas&#039; ) ) ? &#039;yes&#039; : &#039;no&#039;;
+		$data[&#039;helper_connected&#039;]   = self::get_helper_connected();
+
+		// Store count info.
+		$data[&#039;users&#039;]      = self::get_user_counts();
+		$data[&#039;products&#039;]   = self::get_product_counts();
+		$data[&#039;orders&#039;]     = self::get_orders();
+		$data[&#039;reviews&#039;]    = self::get_review_counts();
+		$data[&#039;categories&#039;] = self::get_category_counts();
+
+		// Payment gateway info.
+		$data[&#039;gateways&#039;] = self::get_active_payment_gateways();
+
+		// WcPay settings info.
+		$data[&#039;wcpay_settings&#039;] = self::get_wcpay_settings();
+
+		// Shipping method info.
+		$data[&#039;shipping_methods&#039;] = self::get_active_shipping_methods();
+
+		// Features.
+		$data[&#039;enabled_features&#039;] = self::get_enabled_features();
+
+		// Get all WooCommerce options info.
+		$data[&#039;settings&#039;] = self::get_all_woocommerce_options_values();
+
+		// Template overrides.
+		$data[&#039;template_overrides&#039;] = self::get_all_template_overrides();
+
+		// Cart &amp; checkout tech (blocks or shortcodes).
+		$data[&#039;cart_checkout&#039;] = self::get_cart_checkout_info();
+
+		// Mini Cart block, which only exists since wp 5.9.
+		if ( version_compare( get_bloginfo( &#039;version&#039; ), &#039;5.9&#039;, &#039;&gt;=&#039; ) ) {
+			$data[&#039;mini_cart_block&#039;] = self::get_mini_cart_info();
+		}
+
+		/**
+		 * Filter whether to disable admin tracking.
+		 *
+		 * @since 5.2.0
+		 */
+		$data[&#039;wc_admin_disabled&#039;] = apply_filters( &#039;woocommerce_admin_disabled&#039;, false ) ? &#039;yes&#039; : &#039;no&#039;;
+
+		// Mobile info.
+		$data[&#039;wc_mobile_usage&#039;] = self::get_woocommerce_mobile_usage();
+
+		/**
+		 * Filter the data that&#039;s sent with the tracker.
+		 *
+		 * @since 2.3.0
+		 */
+		return apply_filters( &#039;woocommerce_tracker_data&#039;, $data );
+	}
+
+	/**
+	 * Get the current theme info, theme name and version.
+	 *
+	 * @return array
+	 */
+	public static function get_theme_info() {
+		$theme_data           = wp_get_theme();
+		$theme_child_theme    = wc_bool_to_string( is_child_theme() );
+		$theme_wc_support     = wc_bool_to_string( current_theme_supports( &#039;woocommerce&#039; ) );
+		$theme_is_block_theme = wc_bool_to_string( wc_current_theme_is_fse_theme() );
+
+		return array(
+			&#039;name&#039;        =&gt; $theme_data-&gt;Name, // @phpcs:ignore
+			&#039;version&#039;     =&gt; $theme_data-&gt;Version, // @phpcs:ignore
+			&#039;child_theme&#039; =&gt; $theme_child_theme,
+			&#039;wc_support&#039;  =&gt; $theme_wc_support,
+			&#039;block_theme&#039; =&gt; $theme_is_block_theme,
+		);
+	}
+
+	/**
+	 * Get WordPress related data.
+	 *
+	 * @return array
+	 */
+	private static function get_wordpress_info() {
+		$wp_data = array();
+
+		$memory = wc_let_to_num( WP_MEMORY_LIMIT );
+
+		if ( function_exists( &#039;memory_get_usage&#039; ) ) {
+			// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- False positive.
+			$system_memory = wc_let_to_num( @ini_get( &#039;memory_limit&#039; ) );
+			$memory        = max( $memory, $system_memory );
+		}
+
+		// WordPress 5.5+ environment type specification.
+		// &#039;production&#039; is the default in WP, thus using it as a default here, too.
+		$environment_type = &#039;production&#039;;
+		if ( function_exists( &#039;wp_get_environment_type&#039; ) ) {
+			$environment_type = wp_get_environment_type();
+		}
+
+		$wp_data[&#039;memory_limit&#039;] = size_format( $memory );
+		$wp_data[&#039;debug_mode&#039;]   = ( defined( &#039;WP_DEBUG&#039; ) &amp;&amp; WP_DEBUG ) ? &#039;Yes&#039; : &#039;No&#039;;
+		$wp_data[&#039;locale&#039;]       = get_locale();
+		$wp_data[&#039;version&#039;]      = get_bloginfo( &#039;version&#039; );
+		$wp_data[&#039;multisite&#039;]    = is_multisite() ? &#039;Yes&#039; : &#039;No&#039;;
+		$wp_data[&#039;env_type&#039;]     = $environment_type;
+		$wp_data[&#039;dropins&#039;]      = array_keys( get_dropins() );
+
+		return $wp_data;
+	}
+
+	/**
+	 * Get server related info.
+	 *
+	 * @return array
+	 */
+	private static function get_server_info() {
+		$server_data = array();
+
+		if ( ! empty( $_SERVER[&#039;SERVER_SOFTWARE&#039;] ) ) {
+			$server_data[&#039;software&#039;] = $_SERVER[&#039;SERVER_SOFTWARE&#039;]; // @phpcs:ignore
+		}
+
+		if ( function_exists( &#039;phpversion&#039; ) ) {
+			$server_data[&#039;php_version&#039;] = phpversion();
+		}
+
+		if ( function_exists( &#039;ini_get&#039; ) ) {
+			$server_data[&#039;php_post_max_size&#039;]  = size_format( wc_let_to_num( ini_get( &#039;post_max_size&#039; ) ) );
+			$server_data[&#039;php_time_limt&#039;]      = ini_get( &#039;max_execution_time&#039; );
+			$server_data[&#039;php_max_input_vars&#039;] = ini_get( &#039;max_input_vars&#039; );
+			$server_data[&#039;php_suhosin&#039;]        = extension_loaded( &#039;suhosin&#039; ) ? &#039;Yes&#039; : &#039;No&#039;;
+		}
+
+		$database_version             = wc_get_server_database_version();
+		$server_data[&#039;mysql_version&#039;] = $database_version[&#039;number&#039;];
+
+		$server_data[&#039;php_max_upload_size&#039;]  = size_format( wp_max_upload_size() );
+		$server_data[&#039;php_default_timezone&#039;] = date_default_timezone_get();
+		$server_data[&#039;php_soap&#039;]             = class_exists( &#039;SoapClient&#039; ) ? &#039;Yes&#039; : &#039;No&#039;;
+		$server_data[&#039;php_fsockopen&#039;]        = function_exists( &#039;fsockopen&#039; ) ? &#039;Yes&#039; : &#039;No&#039;;
+		$server_data[&#039;php_curl&#039;]             = function_exists( &#039;curl_init&#039; ) ? &#039;Yes&#039; : &#039;No&#039;;
+
+		return $server_data;
+	}
+
+	/**
+	 * Get all plugins grouped into activated or not.
+	 *
+	 * @return array
+	 */
+	private static function get_all_plugins() {
+		// Ensure get_plugins function is loaded.
+		if ( ! function_exists( &#039;get_plugins&#039; ) ) {
+			include ABSPATH . &#039;/wp-admin/includes/plugin.php&#039;;
+		}
+
+		$plugins             = get_plugins();
+		$active_plugins_keys = get_option( &#039;active_plugins&#039;, array() );
+		$active_plugins      = array();
+
+		foreach ( $plugins as $k =&gt; $v ) {
+			// Take care of formatting the data how we want it.
+			$formatted         = array();
+			$formatted[&#039;name&#039;] = wp_strip_all_tags( $v[&#039;Name&#039;] );
+			if ( isset( $v[&#039;Version&#039;] ) ) {
+				$formatted[&#039;version&#039;] = wp_strip_all_tags( $v[&#039;Version&#039;] );
+			}
+			if ( isset( $v[&#039;Author&#039;] ) ) {
+				$formatted[&#039;author&#039;] = wp_strip_all_tags( $v[&#039;Author&#039;] );
+			}
+			if ( isset( $v[&#039;Network&#039;] ) ) {
+				$formatted[&#039;network&#039;] = wp_strip_all_tags( $v[&#039;Network&#039;] );
+			}
+			if ( isset( $v[&#039;PluginURI&#039;] ) ) {
+				$formatted[&#039;plugin_uri&#039;] = wp_strip_all_tags( $v[&#039;PluginURI&#039;] );
+			}
+			$formatted[&#039;feature_compatibility&#039;] = array();
+			if ( wc_get_container()-&gt;get( PluginUtil::class )-&gt;is_woocommerce_aware_plugin( $k ) ) {
+				$formatted[&#039;feature_compatibility&#039;] = array_filter( FeaturesUtil::get_compatible_features_for_plugin( $k ) );
+			}
+			if ( in_array( $k, $active_plugins_keys, true ) ) {
+				// Remove active plugins from list so we can show active and inactive separately.
+				unset( $plugins[ $k ] );
+				$active_plugins[ $k ] = $formatted;
+			} else {
+				$plugins[ $k ] = $formatted;
+			}
+		}
+
+		return array(
+			&#039;active_plugins&#039;   =&gt; $active_plugins,
+			&#039;inactive_plugins&#039; =&gt; $plugins,
+		);
+	}
+
+	/**
+	 * Get the settings of WooCommerce Payments plugin
+	 *
+	 * @return array
+	 */
+	private static function get_wcpay_settings() {
+		return get_option( &#039;woocommerce_woocommerce_payments_settings&#039; );
+	}
+
+	/**
+	 * Check to see if the helper is connected to woocommerce.com
+	 *
+	 * @return string
+	 */
+	private static function get_helper_connected() {
+		if ( class_exists( &#039;WC_Helper_Options&#039; ) &amp;&amp; is_callable( &#039;WC_Helper_Options::get&#039; ) ) {
+			$authenticated = WC_Helper_Options::get( &#039;auth&#039; );
+		} else {
+			$authenticated = &#039;&#039;;
+		}
+		return ( ! empty( $authenticated ) ) ? &#039;yes&#039; : &#039;no&#039;;
+	}
+
+
+	/**
+	 * Get user totals based on user role.
+	 *
+	 * @return array
+	 */
+	private static function get_user_counts() {
+		$user_count          = array();
+		$user_count_data     = count_users();
+		$user_count[&#039;total&#039;] = $user_count_data[&#039;total_users&#039;];
+
+		// Get user count based on user role.
+		foreach ( $user_count_data[&#039;avail_roles&#039;] as $role =&gt; $count ) {
+			$user_count[ $role ] = $count;
+		}
+
+		return $user_count;
+	}
+
+	/**
+	 * Get product totals based on product type.
+	 *
+	 * @return array
+	 */
+	public static function get_product_counts() {
+		$product_count          = array();
+		$product_count_data     = wp_count_posts( &#039;product&#039; );
+		$product_count[&#039;total&#039;] = $product_count_data-&gt;publish;
+
+		$product_statuses = get_terms( &#039;product_type&#039;, array( &#039;hide_empty&#039; =&gt; 0 ) );
+		foreach ( $product_statuses as $product_status ) {
+			$product_count[ $product_status-&gt;name ] = $product_status-&gt;count;
+		}
+
+		return $product_count;
+	}
+
+	/**
+	 * Get order counts.
+	 *
+	 * @return array
+	 */
+	private static function get_order_counts() {
+		$order_count = array();
+		foreach ( wc_get_order_statuses() as $status_slug =&gt; $status_name ) {
+			$order_count[ $status_slug ] = wc_orders_count( $status_slug );
+		}
+		return $order_count;
+	}
+
+	/**
+	 * Combine all order data.
+	 *
+	 * @return array
+	 */
+	private static function get_orders() {
+		$order_dates    = self::get_order_dates();
+		$order_counts   = self::get_order_counts();
+		$order_totals   = self::get_order_totals();
+		$order_gateways = self::get_orders_by_gateway();
+		$order_origin   = self::get_orders_origins();
+
+		return array_merge( $order_dates, $order_counts, $order_totals, $order_gateways, $order_origin );
+	}
+
+	/**
+	 * Get order totals.
+	 *
+	 * @since 5.4.0
+	 * @return array
+	 */
+	private static function get_order_totals() {
+		global $wpdb;
+
+		$orders_table = OrdersTableDataStore::get_orders_table_name();
+
+		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
+			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$gross_total = $wpdb-&gt;get_var(
+				&quot;
+				SELECT SUM(total_amount) AS &#039;gross_total&#039;
+				FROM $orders_table
+				WHERE status in (&#039;wc-completed&#039;, &#039;wc-refunded&#039;);
+			&quot;
+			);
+			// phpcs:enable
+		} else {
+			$gross_total = $wpdb-&gt;get_var(
+				&quot;
+					SELECT
+						SUM( order_meta.meta_value ) AS &#039;gross_total&#039;
+					FROM {$wpdb-&gt;prefix}posts AS orders
+					LEFT JOIN {$wpdb-&gt;prefix}postmeta AS order_meta ON order_meta.post_id = orders.ID
+					WHERE order_meta.meta_key = &#039;_order_total&#039;
+						AND orders.post_status in ( &#039;wc-completed&#039;, &#039;wc-refunded&#039; )
+					GROUP BY order_meta.meta_key
+				&quot;
+			);
+		}
+
+		if ( is_null( $gross_total ) ) {
+			$gross_total = 0;
+		}
+
+		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
+			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$processing_gross_total = $wpdb-&gt;get_var(
+				&quot;
+				SELECT SUM(total_amount) AS &#039;gross_total&#039;
+				FROM $orders_table
+				WHERE status = &#039;wc-processing&#039;;
+			&quot;
+			);
+			// phpcs:enable
+		} else {
+			$processing_gross_total = $wpdb-&gt;get_var(
+				&quot;
+				SELECT
+					SUM( order_meta.meta_value ) AS &#039;gross_total&#039;
+				FROM {$wpdb-&gt;prefix}posts AS orders
+				LEFT JOIN {$wpdb-&gt;prefix}postmeta AS order_meta ON order_meta.post_id = orders.ID
+				WHERE order_meta.meta_key = &#039;_order_total&#039;
+					AND orders.post_status = &#039;wc-processing&#039;
+				GROUP BY order_meta.meta_key
+			&quot;
+			);
+		}
+
+		if ( is_null( $processing_gross_total ) ) {
+			$processing_gross_total = 0;
+		}
+
+		return array(
+			&#039;gross&#039;            =&gt; $gross_total,
+			&#039;processing_gross&#039; =&gt; $processing_gross_total,
+		);
+	}
+
+	/**
+	 * Get last order date.
+	 *
+	 * @return string
+	 */
+	private static function get_order_dates() {
+		global $wpdb;
+
+		$orders_table = OrdersTableDataStore::get_orders_table_name();
+		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
+			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$min_max = $wpdb-&gt;get_row(
+				&quot;
+				SELECT
+					MIN( date_created_gmt ) as &#039;first&#039;, MAX( date_created_gmt ) as &#039;last&#039;
+				FROM $orders_table
+				WHERE status = &#039;wc-completed&#039;;
+				&quot;,
+				ARRAY_A
+			);
+			// phpcs:enable
+		} else {
+			$min_max = $wpdb-&gt;get_row(
+				&quot;
+					SELECT
+						MIN( post_date_gmt ) as &#039;first&#039;, MAX( post_date_gmt ) as &#039;last&#039;
+					FROM {$wpdb-&gt;prefix}posts
+					WHERE post_type = &#039;shop_order&#039;
+					AND post_status = &#039;wc-completed&#039;
+				&quot;,
+				ARRAY_A
+			);
+		}
+
+		if ( is_null( $min_max ) ) {
+			$min_max = array(
+				&#039;first&#039; =&gt; &#039;-&#039;,
+				&#039;last&#039;  =&gt; &#039;-&#039;,
+			);
+		}
+
+		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
+			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$processing_min_max = $wpdb-&gt;get_row(
+				&quot;
+				SELECT
+					MIN( date_created_gmt ) as &#039;processing_first&#039;, MAX( date_created_gmt ) as &#039;processing_last&#039;
+				FROM $orders_table
+				WHERE status = &#039;wc-processing&#039;;
+				&quot;,
+				ARRAY_A
+			);
+			// phpcs:enable
+		} else {
+			$processing_min_max = $wpdb-&gt;get_row(
+				&quot;
+				SELECT
+					MIN( post_date_gmt ) as &#039;processing_first&#039;, MAX( post_date_gmt ) as &#039;processing_last&#039;
+				FROM {$wpdb-&gt;prefix}posts
+				WHERE post_type = &#039;shop_order&#039;
+				AND post_status = &#039;wc-processing&#039;
+			&quot;,
+				ARRAY_A
+			);
+		}
+
+		if ( is_null( $processing_min_max ) ) {
+			$processing_min_max = array(
+				&#039;processing_first&#039; =&gt; &#039;-&#039;,
+				&#039;processing_last&#039;  =&gt; &#039;-&#039;,
+			);
+		}
+
+		return array_merge( $min_max, $processing_min_max );
+	}
+
+	/**
+	 * Extract the group key for an associative array of objects which have unique ids in the key.
+	 * A &#039;group_key&#039; property is introduced in the object.
+	 * For example, two objects with keys like &#039;WooDataPay ** #123&#039; and &#039;WooDataPay ** #78&#039; would
+	 * both have a group_key of &#039;WooDataPay **&#039; after this function call.
+	 *
+	 * @param array  $objects     The array of objects that need to be grouped.
+	 * @param string $default_key The property that will be the default group_key.
+	 * @return array Contains the objects with a group_key property.
+	 */
+	private static function extract_group_key( $objects, $default_key ) {
+		$keys = array_keys( $objects );
+
+		// Sort keys by length and then by characters within the same length keys.
+		usort(
+			$keys,
+			function( $a, $b ) {
+				if ( strlen( $a ) === strlen( $b ) ) {
+					return strcmp( $a, $b );
+				}
+				return ( strlen( $a ) &lt; strlen( $b ) ) ? -1 : 1;
+			}
+		);
+
+		// Look for common tokens in every pair of adjacent keys.
+		$prev = &#039;&#039;;
+		foreach ( $keys as $key ) {
+			if ( $prev ) {
+				$comm_tokens = array();
+
+				// Tokenize the current and previous gateway names.
+				$curr_tokens = preg_split( &#039;/[ :,\-_]+/&#039;, $key );
+				$prev_tokens = preg_split( &#039;/[ :,\-_]+/&#039;, $prev );
+
+				$len_curr = count( $curr_tokens );
+				$len_prev = count( $prev_tokens );
+
+				$index_unique = -1;
+				// Gather the common tokens.
+				// Let us allow for the unique reference id to be anywhere in the name.
+				for ( $i = 0; $i &lt; $len_curr &amp;&amp; $i &lt; $len_prev; $i++ ) {
+					if ( $curr_tokens[ $i ] === $prev_tokens[ $i ] ) {
+						$comm_tokens[] = $curr_tokens[ $i ];
+					} elseif ( preg_match( &#039;/\d/&#039;, $curr_tokens[ $i ] ) &amp;&amp; preg_match( &#039;/\d/&#039;, $prev_tokens[ $i ] ) ) {
+						$index_unique = $i;
+					}
+				}
+
+				// If only one token is different, and those tokens contain digits, then that could be the unique id.
+				if ( count( $curr_tokens ) - count( $comm_tokens ) &lt;= 1 &amp;&amp; count( $comm_tokens ) &gt; 0 &amp;&amp; $index_unique &gt; -1 ) {
+					$objects[ $key ]-&gt;group_key  = implode( &#039; &#039;, $comm_tokens );
+					$objects[ $prev ]-&gt;group_key = implode( &#039; &#039;, $comm_tokens );
+				} else {
+					$objects[ $key ]-&gt;group_key = $objects[ $key ]-&gt;$default_key;
+				}
+			} else {
+				$objects[ $key ]-&gt;group_key = $objects[ $key ]-&gt;$default_key;
+			}
+			$prev = $key;
+		}
+		return $objects;
+	}
+
+	/**
+	 * Get order details by gateway.
+	 *
+	 * @return array
+	 */
+	private static function get_orders_by_gateway() {
+		global $wpdb;
+
+		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
+			$orders_table = OrdersTableDataStore::get_orders_table_name();
+			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$orders_and_gateway_details = $wpdb-&gt;get_results(
+				&quot;
+				SELECT payment_method AS gateway, currency AS currency, SUM( total_amount ) AS totals, count( id ) AS counts
+				FROM $orders_table
+				WHERE status IN ( &#039;wc-completed&#039;, &#039;wc-processing&#039;, &#039;wc-refunded&#039; )
+				GROUP BY gateway, currency;
+				&quot;
+			);
+			// phpcs:enable
+		} else {
+			$orders_and_gateway_details = $wpdb-&gt;get_results(
+				&quot;
+				SELECT
+					gateway, currency, SUM(total) AS totals, COUNT(order_id) AS counts
+				FROM (
+					SELECT
+						orders.id AS order_id,
+						MAX(CASE WHEN meta_key = &#039;_payment_method&#039; THEN meta_value END) gateway,
+						MAX(CASE WHEN meta_key = &#039;_order_total&#039; THEN meta_value END) total,
+						MAX(CASE WHEN meta_key = &#039;_order_currency&#039; THEN meta_value END) currency
+					FROM
+						{$wpdb-&gt;prefix}posts orders
+					LEFT JOIN
+						{$wpdb-&gt;prefix}postmeta order_meta ON order_meta.post_id = orders.id
+					WHERE orders.post_type = &#039;shop_order&#039;
+						AND orders.post_status in ( &#039;wc-completed&#039;, &#039;wc-processing&#039;, &#039;wc-refunded&#039; )
+						AND meta_key in( &#039;_payment_method&#039;,&#039;_order_total&#039;,&#039;_order_currency&#039;)
+					GROUP BY orders.id
+				) order_gateways
+				GROUP BY gateway, currency
+				&quot;
+			);
+		}
+
+		$orders_by_gateway_currency = array();
+
+		// The associative array that is created as the result of array_reduce is passed to extract_group_key()
+		// This function has the logic that will remove specific transaction identifiers that may sometimes be part of a
+		// payment method. For example, two payments methods like &#039;WooDataPay ** #123&#039; and &#039;WooDataPay ** #78&#039; would
+		// both have the same group_key &#039;WooDataPay **&#039;.
+		$orders_by_gateway = self::extract_group_key(
+			// Convert into an associative array with a combination of currency and gateway as key.
+			array_reduce(
+				$orders_and_gateway_details,
+				function( $result, $item ) {
+					$item-&gt;gateway = preg_replace( &#039;/\s+/&#039;, &#039; &#039;, $item-&gt;gateway );
+
+					// Introduce currency as a prefix for the key.
+					$key = $item-&gt;currency . &#039;==&#039; . $item-&gt;gateway;
+
+					$result[ $key ] = $item;
+					return $result;
+				},
+				array()
+			),
+			&#039;gateway&#039;
+		);
+
+		// Aggregate using group_key.
+		foreach ( $orders_by_gateway as $orders_details ) {
+			$gkey = $orders_details-&gt;group_key;
+
+			// Remove currency as prefix of key for backward compatibility.
+			if ( str_contains( $gkey, &#039;==&#039; ) ) {
+				$tokens = preg_split( &#039;/==/&#039;, $gkey );
+				$key    = $tokens[1];
+			} else {
+				$key = $gkey;
+			}
+
+			$key = str_replace( array( &#039;payment method&#039;, &#039;payment gateway&#039;, &#039;gateway&#039; ), &#039;&#039;, strtolower( $key ) );
+			$key = trim( preg_replace( &#039;/[: ,#*\-_]+/&#039;, &#039; &#039;, $key ) );
+
+			// Add currency as postfix of gateway for backward compatibility.
+			$key       = &#039;gateway_&#039; . $key . &#039;_&#039; . $orders_details-&gt;currency;
+			$count_key = $key . &#039;_count&#039;;
+			$total_key = $key . &#039;_total&#039;;
+
+			if ( array_key_exists( $count_key, $orders_by_gateway_currency ) || array_key_exists( $total_key, $orders_by_gateway_currency ) ) {
+				$orders_by_gateway_currency[ $count_key ] = $orders_by_gateway_currency[ $count_key ] + $orders_details-&gt;counts;
+				$orders_by_gateway_currency[ $total_key ] = $orders_by_gateway_currency[ $total_key ] + $orders_details-&gt;totals;
+			} else {
+				$orders_by_gateway_currency[ $count_key ] = $orders_details-&gt;counts;
+				$orders_by_gateway_currency[ $total_key ] = $orders_details-&gt;totals;
+			}
+		}
+
+		return $orders_by_gateway_currency;
+	}
+
+	/**
+	 * Get orders origin details.
+	 *
+	 * @return array
+	 */
+	private static function get_orders_origins() {
+		global $wpdb;
+
+		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
+			$op_table_name = OrdersTableDataStore::get_operational_data_table_name();
+			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$orders_origin = $wpdb-&gt;get_results(
+				&quot;
+				SELECT created_via as origin, COUNT( order_id ) as count
+				FROM $op_table_name
+				GROUP BY created_via;
+				&quot;
+			);
+			// phpcs:enable
+		} else {
+			$orders_origin = $wpdb-&gt;get_results(
+				&quot;
+				SELECT
+					meta_value as origin, COUNT( DISTINCT ( orders.id ) ) as count
+				FROM
+					$wpdb-&gt;posts orders
+				LEFT JOIN
+					$wpdb-&gt;postmeta order_meta ON order_meta.post_id = orders.id
+				WHERE
+					meta_key = &#039;_created_via&#039;
+				GROUP BY
+					meta_value;
+			&quot;
+			);
+		}
+
+		// The associative array that is created as the result of array_reduce is passed to extract_group_key()
+		// This function has the logic that will remove specific identifiers that may sometimes be part of an origin.
+		// For example, two origins like &#039;Import #123&#039; and &#039;Import ** #78&#039; would both have a group_key &#039;Import **&#039;.
+		$orders_and_origins = self::extract_group_key(
+			// Convert into an associative array with the origin as key.
+			array_reduce(
+				$orders_origin,
+				function( $result, $item ) {
+					$key = $item-&gt;origin;
+
+					$result[ $key ] = $item;
+					return $result;
+				},
+				array()
+			),
+			&#039;origin&#039;
+		);
+
+		$orders_by_origin = array();
+
+		// Aggregate using group_key.
+		foreach ( $orders_and_origins as $origin ) {
+			$key = strtolower( $origin-&gt;group_key );
+
+			if ( array_key_exists( $key, $orders_by_origin ) ) {
+				$orders_by_origin[ $key ] = $orders_by_origin[ $key ] + (int) $origin-&gt;count;
+			} else {
+				$orders_by_origin[ $key ] = (int) $origin-&gt;count;
+			}
+		}
+
+		return array( &#039;created_via&#039; =&gt; $orders_by_origin );
+	}
+
+	/**
+	 * Get review counts for different statuses.
+	 *
+	 * @return array
+	 */
+	private static function get_review_counts() {
+		global $wpdb;
+		$review_count = array( &#039;total&#039; =&gt; 0 );
+		$status_map   = array(
+			&#039;0&#039;     =&gt; &#039;pending&#039;,
+			&#039;1&#039;     =&gt; &#039;approved&#039;,
+			&#039;trash&#039; =&gt; &#039;trash&#039;,
+			&#039;spam&#039;  =&gt; &#039;spam&#039;,
+		);
+		$counts       = $wpdb-&gt;get_results(
+			&quot;
+			SELECT comment_approved, COUNT(*) AS num_reviews
+			FROM {$wpdb-&gt;comments}
+			WHERE comment_type = &#039;review&#039;
+			GROUP BY comment_approved
+			&quot;,
+			ARRAY_A
+		);
+
+		if ( ! $counts ) {
+			return $review_count;
+		}
+
+		foreach ( $counts as $count ) {
+			$status = $count[&#039;comment_approved&#039;];
+			if ( array_key_exists( $status, $status_map ) ) {
+				$review_count[ $status_map[ $status ] ] = $count[&#039;num_reviews&#039;];
+			}
+			$review_count[&#039;total&#039;] += $count[&#039;num_reviews&#039;];
+		}
+
+		return $review_count;
+	}
+
+	/**
+	 * Get the number of product categories.
+	 *
+	 * @return int
+	 */
+	private static function get_category_counts() {
+		return wp_count_terms( &#039;product_cat&#039; );
+	}
+
+	/**
+	 * Get a list of all active payment gateways.
+	 *
+	 * @return array
+	 */
+	private static function get_active_payment_gateways() {
+		$active_gateways = array();
+		$gateways        = WC()-&gt;payment_gateways-&gt;payment_gateways();
+		foreach ( $gateways as $id =&gt; $gateway ) {
+			if ( isset( $gateway-&gt;enabled ) &amp;&amp; &#039;yes&#039; === $gateway-&gt;enabled ) {
+				$active_gateways[ $id ] = array(
+					&#039;title&#039;    =&gt; $gateway-&gt;title,
+					&#039;supports&#039; =&gt; $gateway-&gt;supports,
+				);
+			}
+		}
+
+		return $active_gateways;
+	}
+
+
+	/**
+	 * Get a list of all active shipping methods.
+	 *
+	 * @return array
+	 */
+	private static function get_active_shipping_methods() {
+		$active_methods   = array();
+		$shipping_methods = WC()-&gt;shipping()-&gt;get_shipping_methods();
+		foreach ( $shipping_methods as $id =&gt; $shipping_method ) {
+			if ( isset( $shipping_method-&gt;enabled ) &amp;&amp; &#039;yes&#039; === $shipping_method-&gt;enabled ) {
+				$active_methods[ $id ] = array(
+					&#039;title&#039;      =&gt; $shipping_method-&gt;title,
+					&#039;tax_status&#039; =&gt; $shipping_method-&gt;tax_status,
+				);
+			}
+		}
+
+		return $active_methods;
+	}
+
+	/**
+	 * Get an array of slugs for WC features that are enabled on the site.
+	 *
+	 * @return string[]
+	 */
+	private static function get_enabled_features() {
+		$all_features     = FeaturesUtil::get_features( true, true );
+		$enabled_features = array_filter(
+			$all_features,
+			function( $feature ) {
+				return $feature[&#039;is_enabled&#039;];
+			}
+		);
+
+		return array_keys( $enabled_features );
+	}
+
+	/**
+	 * Get all options starting with woocommerce_ prefix.
+	 *
+	 * @return array
+	 */
+	private static function get_all_woocommerce_options_values() {
+		return array(
+			&#039;version&#039;                               =&gt; WC()-&gt;version,
+			&#039;currency&#039;                              =&gt; get_woocommerce_currency(),
+			&#039;base_location&#039;                         =&gt; WC()-&gt;countries-&gt;get_base_country(),
+			&#039;base_state&#039;                            =&gt; WC()-&gt;countries-&gt;get_base_state(),
+			&#039;base_postcode&#039;                         =&gt; WC()-&gt;countries-&gt;get_base_postcode(),
+			&#039;selling_locations&#039;                     =&gt; WC()-&gt;countries-&gt;get_allowed_countries(),
+			&#039;api_enabled&#039;                           =&gt; get_option( &#039;woocommerce_api_enabled&#039; ),
+			&#039;weight_unit&#039;                           =&gt; get_option( &#039;woocommerce_weight_unit&#039; ),
+			&#039;dimension_unit&#039;                        =&gt; get_option( &#039;woocommerce_dimension_unit&#039; ),
+			&#039;download_method&#039;                       =&gt; get_option( &#039;woocommerce_file_download_method&#039; ),
+			&#039;download_require_login&#039;                =&gt; get_option( &#039;woocommerce_downloads_require_login&#039; ),
+			&#039;calc_taxes&#039;                            =&gt; get_option( &#039;woocommerce_calc_taxes&#039; ),
+			&#039;coupons_enabled&#039;                       =&gt; get_option( &#039;woocommerce_enable_coupons&#039; ),
+			&#039;guest_checkout&#039;                        =&gt; get_option( &#039;woocommerce_enable_guest_checkout&#039; ),
+			&#039;checkout_login_reminder&#039;               =&gt; get_option( &#039;woocommerce_enable_checkout_login_reminder&#039; ),
+			&#039;secure_checkout&#039;                       =&gt; get_option( &#039;woocommerce_force_ssl_checkout&#039; ),
+			&#039;enable_signup_and_login_from_checkout&#039; =&gt; get_option( &#039;woocommerce_enable_signup_and_login_from_checkout&#039; ),
+			&#039;enable_myaccount_registration&#039;         =&gt; get_option( &#039;woocommerce_enable_myaccount_registration&#039; ),
+			&#039;registration_generate_username&#039;        =&gt; get_option( &#039;woocommerce_registration_generate_username&#039; ),
+			&#039;registration_generate_password&#039;        =&gt; get_option( &#039;woocommerce_registration_generate_password&#039; ),
+			&#039;hpos_enabled&#039;                          =&gt; get_option( &#039;woocommerce_feature_custom_order_tables_enabled&#039; ),
+			&#039;hpos_sync_enabled&#039;                     =&gt; get_option( &#039;woocommerce_custom_orders_table_data_sync_enabled&#039; ),
+			&#039;hpos_cot_authoritative&#039;                =&gt; get_option( &#039;woocommerce_custom_orders_table_enabled&#039; ),
+			&#039;hpos_transactions_enabled&#039;             =&gt; get_option( &#039;woocommerce_use_db_transactions_for_custom_orders_table_data_sync&#039; ),
+			&#039;hpos_transactions_level&#039;               =&gt; get_option( &#039;woocommerce_db_transactions_isolation_level_for_custom_orders_table_data_sync&#039; ),
+			&#039;show_marketplace_suggestions&#039;          =&gt; get_option( &#039;woocommerce_show_marketplace_suggestions&#039; ),
+		);
+	}
+
+	/**
+	 * Look for any template override and return filenames.
+	 *
+	 * @return array
+	 */
+	private static function get_all_template_overrides() {
+		$override_data = array();
+		/**
+		 * Filter the paths to scan for template overrides.
+		 *
+		 * @since 2.3.0
+		 */
+		$template_paths = apply_filters( &#039;woocommerce_template_overrides_scan_paths&#039;, array( &#039;WooCommerce&#039; =&gt; WC()-&gt;plugin_path() . &#039;/templates/&#039; ) );
+		$scanned_files  = array();
+
+		require_once WC()-&gt;plugin_path() . &#039;/includes/admin/class-wc-admin-status.php&#039;;
+
+		foreach ( $template_paths as $plugin_name =&gt; $template_path ) {
+			$scanned_files[ $plugin_name ] = WC_Admin_Status::scan_template_files( $template_path );
+		}
+
+		foreach ( $scanned_files as $plugin_name =&gt; $files ) {
+			foreach ( $files as $file ) {
+				if ( file_exists( get_stylesheet_directory() . &#039;/&#039; . $file ) ) {
+					$theme_file = get_stylesheet_directory() . &#039;/&#039; . $file;
+				} elseif ( file_exists( get_stylesheet_directory() . &#039;/&#039; . WC()-&gt;template_path() . $file ) ) {
+					$theme_file = get_stylesheet_directory() . &#039;/&#039; . WC()-&gt;template_path() . $file;
+				} elseif ( file_exists( get_template_directory() . &#039;/&#039; . $file ) ) {
+					$theme_file = get_template_directory() . &#039;/&#039; . $file;
+				} elseif ( file_exists( get_template_directory() . &#039;/&#039; . WC()-&gt;template_path() . $file ) ) {
+					$theme_file = get_template_directory() . &#039;/&#039; . WC()-&gt;template_path() . $file;
+				} else {
+					$theme_file = false;
+				}
+
+				if ( false !== $theme_file ) {
+					$override_data[] = basename( $theme_file );
+				}
+			}
+		}
+		return $override_data;
+	}
+
+	/**
+	 * Search a specific post for text content.
+	 *
+	 * @param integer $post_id The id of the post to search.
+	 * @param string  $text    The text to search for.
+	 * @return string &#039;Yes&#039; if post contains $text (otherwise &#039;No&#039;).
+	 */
+	public static function post_contains_text( $post_id, $text ) {
+		global $wpdb;
+
+		// Search for the text anywhere in the post.
+		$wildcarded = &quot;%{$text}%&quot;;
+
+		$result = $wpdb-&gt;get_var(
+			$wpdb-&gt;prepare(
+				&quot;
+				SELECT COUNT( * ) FROM {$wpdb-&gt;prefix}posts
+				WHERE ID=%d
+				AND {$wpdb-&gt;prefix}posts.post_content LIKE %s
+				&quot;,
+				array( $post_id, $wildcarded )
+			)
+		);
+
+		return ( &#039;0&#039; !== $result ) ? &#039;Yes&#039; : &#039;No&#039;;
+	}
+
+
+	/**
+	 * Get tracker data for a specific block type on a woocommerce page.
+	 *
+	 * @param string $block_name The name (id) of a block, e.g. `woocommerce/cart`.
+	 * @param string $woo_page_name The woo page to search, e.g. `cart`.
+	 * @return array Associative array of tracker data with keys:
+	 * - page_contains_block
+	 * - block_attributes
+	 */
+	public static function get_block_tracker_data( $block_name, $woo_page_name ) {
+		$blocks = WC_Blocks_Utils::get_blocks_from_page( $block_name, $woo_page_name );
+
+		$block_present = false;
+		$attributes    = array();
+		if ( $blocks &amp;&amp; count( $blocks ) ) {
+			// Return any customised attributes from the first block.
+			$block_present = true;
+			$attributes    = $blocks[0][&#039;attrs&#039;];
+		}
+
+		return array(
+			&#039;page_contains_block&#039; =&gt; $block_present ? &#039;Yes&#039; : &#039;No&#039;,
+			&#039;block_attributes&#039;    =&gt; $attributes,
+		);
+	}
+
+	/**
+	 * Get tracker data for a pickup location method.
+	 *
+	 * @return array Associative array of tracker data with keys:
+	 * - pickup_location_enabled
+	 * - pickup_locations_count
+	 */
+	public static function get_pickup_location_data() {
+		$pickup_location_enabled = false;
+		$pickup_locations_count  = count( get_option( &#039;pickup_location_pickup_locations&#039;, array() ) );
+
+		// Get the available shipping methods.
+		$shipping_methods = WC()-&gt;shipping()-&gt;get_shipping_methods();
+
+		// Check if the desired shipping method is enabled.
+		if ( isset( $shipping_methods[&#039;pickup_location&#039;] ) &amp;&amp; $shipping_methods[&#039;pickup_location&#039;]-&gt;is_enabled() ) {
+			$pickup_location_enabled = true;
+		}
+
+		return array(
+			&#039;pickup_location_enabled&#039; =&gt; $pickup_location_enabled,
+			&#039;pickup_locations_count&#039;  =&gt; $pickup_locations_count,
+		);
+	}
+
+	/**
+	 * Get info about the cart &amp; checkout pages.
+	 *
+	 * @return array
+	 */
+	public static function get_cart_checkout_info() {
+		$cart_page_id     = wc_get_page_id( &#039;cart&#039; );
+		$checkout_page_id = wc_get_page_id( &#039;checkout&#039; );
+
+		$cart_block_data     = self::get_block_tracker_data( &#039;woocommerce/cart&#039;, &#039;cart&#039; );
+		$checkout_block_data = self::get_block_tracker_data( &#039;woocommerce/checkout&#039;, &#039;checkout&#039; );
+
+		$pickup_location_data = self::get_pickup_location_data();
+
+		return array(
+			&#039;cart_page_contains_cart_shortcode&#039;         =&gt; self::post_contains_text(
+				$cart_page_id,
+				&#039;[woocommerce_cart]&#039;
+			),
+			&#039;checkout_page_contains_checkout_shortcode&#039; =&gt; self::post_contains_text(
+				$checkout_page_id,
+				&#039;[woocommerce_checkout]&#039;
+			),
+
+			&#039;cart_page_contains_cart_block&#039;             =&gt; $cart_block_data[&#039;page_contains_block&#039;],
+			&#039;cart_block_attributes&#039;                     =&gt; $cart_block_data[&#039;block_attributes&#039;],
+			&#039;checkout_page_contains_checkout_block&#039;     =&gt; $checkout_block_data[&#039;page_contains_block&#039;],
+			&#039;checkout_block_attributes&#039;                 =&gt; $checkout_block_data[&#039;block_attributes&#039;],
+			&#039;pickup_location&#039;                           =&gt; $pickup_location_data,
+		);
+	}
+
+	/**
+	 * Get info about the Mini Cart Block.
+	 *
+	 * @return array
+	 */
+	private static function get_mini_cart_info() {
+		$mini_cart_block_name = &#039;woocommerce/mini-cart&#039;;
+		$mini_cart_block_data = wc_current_theme_is_fse_theme() ? BlocksUtil::get_block_from_template_part( $mini_cart_block_name, &#039;header&#039; ) : BlocksUtil::get_blocks_from_widget_area( $mini_cart_block_name );
+		return array(
+			&#039;mini_cart_used&#039;             =&gt; empty( $mini_cart_block_data[0] ) ? &#039;No&#039; : &#039;Yes&#039;,
+			&#039;mini_cart_block_attributes&#039; =&gt; empty( $mini_cart_block_data[0] ) ? array() : $mini_cart_block_data[0][&#039;attrs&#039;],
+		);
+	}
+
+	/**
+	 * Get info about WooCommerce Mobile App usage
+	 *
+	 * @return array
+	 */
+	public static function get_woocommerce_mobile_usage() {
+		return get_option( &#039;woocommerce_mobile_app_usage&#039; );
+	}
+}
+
+WC_Tracker::init();
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on August 24th, 2023 at 08:49 am.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1692866947"></script>
+    <script src="../js/search.js?updated=1692866947"></script>
+</body>
+</html>
