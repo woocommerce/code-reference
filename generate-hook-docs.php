@@ -179,7 +179,7 @@ class HookDocsGenerator
                                     $hook = str_replace('_CLASS_', strtoupper($current_class), $hook);
                                     $hook = str_replace('$this', strtoupper($current_class), $hook);
                                     $hook = str_replace(array( '.', '{', '}', '"', "'", ' ', ')', '(' ), '', $hook);
-                                    $hook = preg_replace('/\/\/phpcs:(.*)(\n)/', '', $hook);
+                                    $hook = preg_replace('/\/\/phpcs\:(.*)/', '', $hook);
                                     $loop = 0;
 
                                     // Keep adding to hook until we find a comma or colon.
