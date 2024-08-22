@@ -1,5 +1,14 @@
 {% extends 'base.html.twig' %}
 
+{% block javascripts %}
+    <script src="{{ path('js/prism.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+{% endblock %}
+
 {% block content %}
     {% include 'components/breadcrumbs.html.twig' %}
 
