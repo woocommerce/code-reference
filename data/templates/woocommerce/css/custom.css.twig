@@ -46,20 +46,12 @@ abbr[title] {
 
 /* Logo */
 .site-branding {
-    margin: 1.5em 0 1em;
+    margin: 29px 0 0 0;
     text-align: left;
 }
 
-.site-branding a::after {
-    content: 'DOCS';
-    font-family: var(--font-secondary);
-    color: #000;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 32.5px;
-    vertical-align: top;
-    letter-spacing: -2px;
-    margin-left: 8px;
+.site-branding .site-logo img {
+    width: 204px;
 }
 
 /* Navigation */
@@ -95,12 +87,20 @@ abbr[title] {
 .phpdocumentor-title {
     font-family: var(--font-secondary);
     color: var(--title-text-color);
-    letter-spacing: -1px;
+    letter-spacing: 1px;
     line-height: 1.2;
     text-align: center;
-    padding: 0.67em 0;
-    margin-top: 0;
+    padding: 0;
+    margin: 1.0em 0;
+    font-size: var(--text-xl);
+    font-weight: normal;
 }
+
+.phpdocumentor-title a {
+    text-decoration: none;
+    color: var(--title-text-color);
+}
+
 .phpdocumentor-title small {
     text-shadow: none;
     font-size: var(--text-xxs);
@@ -204,20 +204,21 @@ abbr[title] {
 }
 
 .phpdocumentor-search__field {
-    background-color: #fff;
-    border: 0;
-    border-radius: 50px;
+    background: #f2efec;
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
     color: #333;
     font-size: 18px;
     line-height: 50px;
-    padding-left: 45px;
-    width: 80%;
-    height: 50px;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    width: 50%;
+    height: 40px;
     margin-bottom: 0;
 }
 
 .phpdocumentor-search__field:focus {
-    border: none;
+    border: 1px solid var(--primary-color-darken);
 }
 
 .autoComplete_highlighted {
@@ -336,7 +337,4 @@ main.phpdocumentor::after {
         border-bottom: 1px solid var(--table-separator-color);
     }
 
-    .phpdocumentor-title {
-        font-size: var(--text-xxxxl);
-    }
 }

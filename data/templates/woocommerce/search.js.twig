@@ -8,7 +8,7 @@ var autoCompletejs = new autoComplete({
         key: ['name'],
         cache: true
     },
-    placeHolder: 'Search',
+    placeHolder: 'Search the docs...',
     selector: '#autoComplete',
     highlight: true,
     threshold: 1,
