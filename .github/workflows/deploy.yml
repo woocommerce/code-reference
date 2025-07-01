@@ -3,8 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'WooCommerce Version'
-        required: true
+        description: 'WooCommerce version (defaults to latest release in repository)'
+        required: false
+        default: ''
 jobs:
   build-and-deploy:
     name: Build and deploy
@@ -28,9 +29,22 @@ jobs:
         restore-keys: ${{ runner.os }}-composer-
     - name: Install dependencies
       run: composer install --prefer-dist
+    - name: Fetch latest release version if not provided
+      id: get-latest-version
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        INPUT_VERSION: ${{ github.event.inputs.version }}
+      run: |
+        if [ -z "$INPUT_VERSION" ]; then
+          VERSION=$(gh release view --repo "$GITHUB_REPOSITORY_OWNER/woocommerce" --json tagName -q .tagName)
+        else
+          VERSION="$INPUT_VERSION"
+        fi
+
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
     - name: Build
       run: |
-        ./deploy.sh --build-only -s ${{ github.event.inputs.version }}
+        ./deploy.sh --build-only -s ${{ steps.get-latest-version.outputs.version }} -r "$GITHUB_REPOSITORY_OWNER/woocommerce"
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@59173cb633d9a3514f5f4552a6a3e62c6710355c # v2
