@@ -9,9 +9,48 @@ on:
         required: false
         default: ''
 jobs:
+  verify:
+    name: Verify if a rebuild is needed
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.get-latest-version.outputs.version }}
+      rebuild: ${{ steps.check-if-built.outputs.rebuild }}
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Fetch latest release version if not provided
+      id: get-latest-version
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        INPUT_VERSION: ${{ github.event.inputs.version }}
+      run: |
+        if [ -z "$INPUT_VERSION" ]; then
+          VERSION=$(gh release view --repo "$GITHUB_REPOSITORY_OWNER/woocommerce" --json tagName -q .tagName)
+        else
+          VERSION="$INPUT_VERSION"
+        fi
+
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+    - name: Check if build is necessary
+      id: check-if-built
+      env:
+        VERSION: ${{ steps.get-latest-version.outputs.version }}
+      run: |
+        last_built_version=$(git log -1 --pretty=%B 'origin/gh-pages' | grep -oP '\d+\.\d+\.\d+')
+
+        if [ "$last_built_version" = "$VERSION" ]; then
+            echo "rebuild=false" >> $GITHUB_OUTPUT
+        else
+            echo "rebuild=true" >> $GITHUB_OUTPUT
+        fi
+
   build-and-deploy:
     name: Build and deploy
-    runs-on: [ubuntu-latest]
+    runs-on: ubuntu-latest
+    needs: verify
+    if: ${{ needs.verify.outputs.rebuild == 'true' }}
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -31,22 +70,9 @@ jobs:
         restore-keys: ${{ runner.os }}-composer-
     - name: Install dependencies
       run: composer install --prefer-dist
-    - name: Fetch latest release version if not provided
-      id: get-latest-version
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        INPUT_VERSION: ${{ github.event.inputs.version }}
-      run: |
-        if [ -z "$INPUT_VERSION" ]; then
-          VERSION=$(gh release view --repo "$GITHUB_REPOSITORY_OWNER/woocommerce" --json tagName -q .tagName)
-        else
-          VERSION="$INPUT_VERSION"
-        fi
-
-        echo "version=$VERSION" >> $GITHUB_OUTPUT
     - name: Build
       run: |
-        ./deploy.sh --build-only -s ${{ steps.get-latest-version.outputs.version }} -r "$GITHUB_REPOSITORY_OWNER/woocommerce"
+        ./deploy.sh --build-only -s ${{ needs.verify.outputs.version }} -r "$GITHUB_REPOSITORY_OWNER/woocommerce"
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@59173cb633d9a3514f5f4552a6a3e62c6710355c # v2
@@ -55,4 +81,4 @@ jobs:
       with:
         target_branch: gh-pages
         build_dir: build/api
-        commit_message: "${{ format('Build: {0}', steps.get-latest-version.outputs.version) }}"
+        commit_message: "${{ format('Build: {0}', needs.verify.outputs.version) }}"
