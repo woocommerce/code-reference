@@ -1,27 +1,69 @@
 name: GitHub Pages deploy
 on:
+  schedule:
+    - cron: '0 23 * * *'
   workflow_dispatch:
     inputs:
       version:
-        description: 'WooCommerce Version'
-        required: true
+        description: 'WooCommerce version (defaults to latest release in repository)'
+        required: false
+        default: ''
 jobs:
+  verify:
+    name: Verify if a rebuild is needed
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.get-latest-version.outputs.version }}
+      rebuild: ${{ steps.check-if-built.outputs.rebuild }}
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Fetch latest release version if not provided
+      id: get-latest-version
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        INPUT_VERSION: ${{ github.event.inputs.version }}
+      run: |
+        if [ -z "$INPUT_VERSION" ]; then
+          VERSION=$(gh release view --repo "$GITHUB_REPOSITORY_OWNER/woocommerce" --json tagName -q .tagName)
+        else
+          VERSION="$INPUT_VERSION"
+        fi
+
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+    - name: Check if build is necessary
+      id: check-if-built
+      env:
+        VERSION: ${{ steps.get-latest-version.outputs.version }}
+      run: |
+        last_built_version=$(git log -1 --pretty=%B 'origin/gh-pages' | grep -oP '\d+\.\d+\.\d+')
+
+        if [ "$last_built_version" = "$VERSION" ]; then
+            echo "rebuild=false" >> $GITHUB_OUTPUT
+        else
+            echo "rebuild=true" >> $GITHUB_OUTPUT
+        fi
+
   build-and-deploy:
     name: Build and deploy
-    runs-on: [ubuntu-latest]
+    runs-on: ubuntu-latest
+    needs: verify
+    if: ${{ needs.verify.outputs.rebuild == 'true' }}
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Setup PHP with composer v2
       uses: shivammathur/setup-php@0f7f1d08e3e32076e51cae65eb0b0c871405b16e # v2.34.1
       with:
-        php-version: '7.4'
+        php-version: '8.1'
         tools: composer:v2
     - name: Get composer cache directory
       id: composer-cache
-      run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+      run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
     - name: Cache dependencies
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: ${{ steps.composer-cache.outputs.dir }}
         key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -30,7 +72,7 @@ jobs:
       run: composer install --prefer-dist
     - name: Build
       run: |
-        ./deploy.sh --build-only -s ${{ github.event.inputs.version }}
+        ./deploy.sh --build-only -s ${{ needs.verify.outputs.version }} -r "$GITHUB_REPOSITORY_OWNER/woocommerce"
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@59173cb633d9a3514f5f4552a6a3e62c6710355c # v2
@@ -39,3 +81,4 @@ jobs:
       with:
         target_branch: gh-pages
         build_dir: build/api
+        commit_message: "${{ format('Build: {0}', needs.verify.outputs.version) }}"
