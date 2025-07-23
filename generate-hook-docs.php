@@ -26,13 +26,6 @@ class HookDocsGenerator
     protected const SEARCH_INDEX_PATH = 'build/api/js/searchIndex.js';
 
     /**
-     * List of files found.
-     *
-     * @var array
-     */
-    protected static $found_files = [];
-
-    /**
      * Get files to scan.
      *
      * @return array
