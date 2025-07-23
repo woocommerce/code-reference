@@ -54,9 +54,9 @@ class HookDocsGenerator
             self::getFiles('*.php', GLOB_MARK, self::SOURCE_PATH . 'includes/export/'),
             self::getFiles('*.php', GLOB_MARK, self::SOURCE_PATH . 'includes/gateways/'),
             self::getFiles('*.php', GLOB_MARK, self::SOURCE_PATH . 'includes/import/'),
-            self::getFiles('*.php', GLOB_MARK, self::SOURCE_PATH . 'includes/shipping/')
+            self::getFiles('*.php', GLOB_MARK, self::SOURCE_PATH . 'includes/shipping/'),
+            self::getFiles('*.php', GLOB_MARK, self::SOURCE_PATH . 'src/')
         );
-
         return array_filter($files);
     }
 
@@ -108,18 +108,9 @@ class HookDocsGenerator
 
         if (is_array($paths)) {
             foreach ($paths as $p) {
-                $found_files = [];
                 $retrieved_files = (array) self::getFiles($pattern, $flags, $p . '/');
-                foreach ($retrieved_files as $file) {
-                    if (! in_array($file, self::$found_files)) {
-                        $found_files[] = $file;
-                    }
-                }
-
-                self::$found_files = array_merge(self::$found_files, $found_files);
-
-                if (is_array($files) && is_array($found_files)) {
-                    $files = array_merge($files, $found_files);
+                if (is_array($files) && is_array($retrieved_files)) {
+                    $files = array_merge($files, $retrieved_files);
                 }
             }
         }

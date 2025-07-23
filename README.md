@@ -10,10 +10,27 @@ git clone https://github.com/woocommerce/code-reference.git
 
 ## Usage
 
+### Production Deployment
+
 ```bash
 cd code-reference
 ./deploy.sh -s <VERSION>
 ```
+
+### Local Development
+
+For local development and testing with your own WooCommerce installation:
+
+```bash
+cd code-reference
+./run-local.sh
+```
+
+The script will prompt you for the path to your WooCommerce plugin directory. This should be the directory containing the main WooCommerce plugin files (e.g., `Users/YourUserName/woocommerce/plugins/woocommerce`).
+
+After generation, the Documenation will be served from the `build/api` folder.
+
+A local web server will start at `http://localhost:8000`.
 
 ### Options
 
