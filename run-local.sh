@@ -22,35 +22,44 @@ if [ ! -d "vendor" ]; then
     composer install
 fi
 
-# Prompt user for WooCommerce directory
-echo "📁 Please provide the path to your WooCommerce directory."
-echo "Example: /Users/YourUserName/woocommerce/plugins/woocommerce"
-echo ""
+# Check if woocommerce directory exists in current directory
+if [ -d "woocommerce" ]; then
+    echo "📁 Found existing woocommerce directory in current project."
+    WOOCOMMERCE_DIR="woocommerce"
+else
+    # Prompt user for WooCommerce directory
+    echo "📁 Please provide the path to your WooCommerce directory."
+    echo "Example: /Users/YourUserName/woocommerce/plugins/woocommerce"
+    echo ""
+    read -p "Enter WooCommerce directory path: " WOOCOMMERCE_DIR
 
-# Read user input with a default suggestion
-read -p "Enter WooCommerce directory path: " WOOCOMMERCE_DIR
-
-
-# Check if directory exists
-if [ ! -d "$WOOCOMMERCE_DIR" ]; then
-    echo "❌ WooCommerce plugin directory not found at: $WOOCOMMERCE_DIR"
-    echo "   Please check the path and try again."
-    exit 1
+    # Check if directory exists
+    if [ ! -d "$WOOCOMMERCE_DIR" ]; then
+        echo "❌ WooCommerce plugin directory not found at: $WOOCOMMERCE_DIR"
+        echo "   Please check the path and try again."
+        exit 1
+    fi
 fi
 
 echo "📁 Using WooCommerce plugin directory: $WOOCOMMERCE_DIR"
 
-# Create symbolic link to the WooCommerce directory
-if [ -L "woocommerce" ]; then
-    echo "🔗 Removing existing symbolic link..."
-    rm woocommerce
-elif [ -d "woocommerce" ]; then
-    echo "🗑️  Removing existing woocommerce directory..."
-    rm -rf woocommerce
-fi
+# Only copy files if we're using an external path (not the existing woocommerce directory)
+if [ "$WOOCOMMERCE_DIR" != "woocommerce" ]; then
+    if [ -d "woocommerce" ]; then
+        echo "🗑️  Removing existing woocommerce directory..."
+        rm -rf woocommerce
+    fi
 
-echo "🔗 Creating symbolic link to local WooCommerce plugin directory..."
-ln -s "$WOOCOMMERCE_DIR" woocommerce
+    echo "📁 Copying WooCommerce files..."
+    mkdir -p woocommerce
+
+    # Copy only the directories we want for documentation
+    cp -r "$WOOCOMMERCE_DIR"/includes woocommerce/ 2>/dev/null || true
+    cp -r "$WOOCOMMERCE_DIR"/src woocommerce/ 2>/dev/null || true
+    cp -r "$WOOCOMMERCE_DIR"/templates woocommerce/ 2>/dev/null || true
+else
+    echo "📁 Using existing woocommerce directory in project."
+fi
 
 # Clean up any existing build
 if [ -d "build" ]; then
@@ -74,8 +83,6 @@ php generate-hook-docs.php
 echo ""
 echo "✅ Documentation generated successfully!"
 echo "📁 Output location: ./build/api/"
-echo "🔗 The symbolic link to your WooCommerce directory will remain for future builds."
-echo "   To remove it: rm woocommerce" 
 echo ""
 echo "🌐 Starting local web server for WooCommerce Code Reference..."
 echo "📁 Serving from: ./build/api"
