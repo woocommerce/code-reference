@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 set -o errexit # Abort if any command fails
 
+# Change to the script's directory for safety
+cd "$(dirname "$0")"
+
 echo "🚀 WooCommerce Code Reference Generator - Local Development"
 echo "=========================================================="
+echo ""
+echo "Usage: ./run-local.sh [source-directory]"
+echo "  - If source-directory is provided, use that as WooCommerce source"
+echo "  - If no argument provided, use ./woocommerce if it exists, otherwise prompt"
+echo ""
 
 # Check if PHP is available
 if ! command -v php &> /dev/null; then
@@ -22,29 +30,35 @@ if [ ! -d "vendor" ]; then
     composer install
 fi
 
-# Check if woocommerce directory exists in current directory
-if [ -d "woocommerce" ]; then
-    echo "📁 Found existing woocommerce directory in current project."
+# Determine WooCommerce directory
+if [ $# -eq 1 ]; then
+    # Use provided source directory
+    WOOCOMMERCE_DIR="$1"
+    echo "📁 Using provided source directory: $WOOCOMMERCE_DIR"
+elif [ -d "woocommerce" ]; then
+    # Use existing woocommerce directory in current project
     WOOCOMMERCE_DIR="woocommerce"
+    echo "📁 Found existing woocommerce directory in current project."
 else
     # Prompt user for WooCommerce directory
     echo "📁 Please provide the path to your WooCommerce directory."
     echo "Example: /Users/YourUserName/woocommerce/plugins/woocommerce"
     echo ""
     read -p "Enter WooCommerce directory path: " WOOCOMMERCE_DIR
+fi
 
-    # Check if directory exists
-    if [ ! -d "$WOOCOMMERCE_DIR" ]; then
-        echo "❌ WooCommerce plugin directory not found at: $WOOCOMMERCE_DIR"
-        echo "   Please check the path and try again."
-        exit 1
-    fi
+# Check if directory exists
+if [ ! -d "$WOOCOMMERCE_DIR" ]; then
+    echo "❌ WooCommerce plugin directory not found at: $WOOCOMMERCE_DIR"
+    echo "   Please check the path and try again."
+    exit 1
 fi
 
 echo "📁 Using WooCommerce plugin directory: $WOOCOMMERCE_DIR"
 
-# Only copy files if we're using an external path (not the existing woocommerce directory)
+# Copy files if we're using an external path (not the existing woocommerce directory)
 if [ "$WOOCOMMERCE_DIR" != "woocommerce" ]; then
+    # Always remove existing woocommerce directory when using external source
     if [ -d "woocommerce" ]; then
         echo "🗑️  Removing existing woocommerce directory..."
         rm -rf woocommerce
@@ -61,24 +75,10 @@ else
     echo "📁 Using existing woocommerce directory in project."
 fi
 
-# Clean up any existing build
-if [ -d "build" ]; then
-    echo "🧹 Cleaning up existing build..."
-    rm -rf build
-fi
-
+# Generate documentation
 echo "🔧 Generating documentation from local WooCommerce source..."
 echo ""
-
-# Run PHPDocumentor directly with the local source
-./vendor/bin/phpdoc run \
-    --template="data/templates/woocommerce" \
-    --sourcecode \
-    --defaultpackagename="WooCommerce"
-
-# Generate hook documentation AFTER PHPDocumentor completes
-echo "🔧 Generating hook documentation..."
-php generate-hook-docs.php
+./deploy.sh --no-download --build-only --source-version 0.0.0
 
 echo ""
 echo "✅ Documentation generated successfully!"
@@ -92,4 +92,4 @@ echo "Press Ctrl+C to stop the server"
 echo ""
 
 # Start PHP development server
-php -S localhost:8000 -t build/api 
+php -S localhost:8000 -t build/api
