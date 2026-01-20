@@ -63,6 +63,7 @@ class HookDocsGenerator
     {
         $url = str_replace('.php', '.html#source-view.' . $file['line'], $file['path']);
         $url = str_replace(['_', '/'], '-', $url);
+        $url = strtolower($url);
 
         return '../files/' . $url;
     }
