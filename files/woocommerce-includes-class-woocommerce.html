@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="algolia-site-verification"  content="16BACF3DF9DCEE45" />
+    <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../images/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../images/favicon-180x180.png" />
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1771283534">
+    <link rel="stylesheet" href="../css/template.css?updated=1771283534">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img src="../images/logo.png" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://developer.woocommerce.com/docs/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title"><a href="../index.html">WooCommerce Code Reference</a></h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-woocommerce.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * WooCommerce setup
+ *
+ * @package WooCommerce
+ * @since   3.2.0
+ */
+
+defined( &#039;ABSPATH&#039; ) || exit;
+
+use Automattic\WooCommerce\Internal\AddressProvider\AddressProviderController;
+use Automattic\WooCommerce\Internal\AssignDefaultCategory;
+use Automattic\WooCommerce\Internal\BatchProcessing\BatchProcessingController;
+use Automattic\WooCommerce\Internal\Caches\ProductCacheController;
+use Automattic\WooCommerce\Internal\ComingSoon\ComingSoonAdminBarBadge;
+use Automattic\WooCommerce\Internal\ComingSoon\ComingSoonCacheInvalidator;
+use Automattic\WooCommerce\Internal\ComingSoon\ComingSoonRequestHandler;
+use Automattic\WooCommerce\Internal\DataStores\Orders\CustomOrdersTableController;
+use Automattic\WooCommerce\Internal\DownloadPermissionsAdjuster;
+use Automattic\WooCommerce\Internal\Features\FeaturesController;
+use Automattic\WooCommerce\Internal\MCP\MCPAdapterProvider;
+use Automattic\WooCommerce\Internal\Abilities\AbilitiesRegistry;
+use Automattic\WooCommerce\Internal\ProductAttributesLookup\DataRegenerator;
+use Automattic\WooCommerce\Internal\ProductAttributesLookup\LookupDataStore;
+use Automattic\WooCommerce\Internal\ProductDownloads\ApprovedDirectories\Register as ProductDownloadDirectories;
+use Automattic\WooCommerce\Internal\ProductImage\MatchImageBySKU;
+use Automattic\WooCommerce\Internal\RestockRefundedItemsAdjuster;
+use Automattic\WooCommerce\Internal\Settings\OptionSanitizer;
+use Automattic\WooCommerce\Internal\Utilities\LegacyRestApiStub;
+use Automattic\WooCommerce\Internal\Utilities\WebhookUtil;
+use Automattic\WooCommerce\Internal\Admin\EmailImprovements\EmailImprovements;
+use Automattic\WooCommerce\Internal\Admin\Marketplace;
+use Automattic\WooCommerce\Proxies\LegacyProxy;
+use Automattic\WooCommerce\Utilities\{LoggingUtil, TimeUtil};
+use Automattic\WooCommerce\Internal\Logging\RemoteLogger;
+use Automattic\WooCommerce\Caches\OrderCountCacheService;
+use Automattic\WooCommerce\Internal\Caches\ProductVersionStringInvalidator;
+use Automattic\WooCommerce\Internal\StockNotifications\StockNotifications;
+use Automattic\Jetpack\Constants;
+
+/**
+ * Main WooCommerce Class.
+ *
+ * @class WooCommerce
+ */
+final class WooCommerce {
+
+	/**
+	 * WooCommerce version.
+	 *
+	 * @var string
+	 */
+	public $version = &#039;10.5.2&#039;;
+
+	/**
+	 * WooCommerce Schema version.
+	 *
+	 * @since 4.3 started with version string 430.
+	 *
+	 * @var string
+	 */
+	public $db_version = &#039;920&#039;;
+
+	/**
+	 * The single instance of the class.
+	 *
+	 * @var WooCommerce
+	 * @since 2.1
+	 */
+	protected static $_instance = null;
+
+	/**
+	 * Session instance.
+	 *
+	 * @var WC_Session|WC_Session_Handler
+	 */
+	public $session = null;
+
+	/**
+	 * Query instance.
+	 *
+	 * @var WC_Query
+	 */
+	public $query = null;
+
+	/**
+	 * API instance
+	 *
+	 * @deprecated 9.0.0 The Legacy REST API has been removed from WooCommerce core. Now this property points to a RestApiUtil instance, unless the Legacy REST API plugin is installed.
+	 *
+	 * @var WC_API
+	 */
+	private $api;
+
+	/**
+	 * Product factory instance.
+	 *
+	 * @var WC_Product_Factory
+	 */
+	public $product_factory = null;
+
+	/**
+	 * Countries instance.
+	 *
+	 * @var WC_Countries
+	 */
+	public $countries = null;
+
+	/**
+	 * Integrations instance.
+	 *
+	 * @var WC_Integrations
+	 */
+	public $integrations = null;
+
+	/**
+	 * Cart instance.
+	 *
+	 * @var WC_Cart
+	 */
+	public $cart = null;
+
+	/**
+	 * Customer instance.
+	 *
+	 * @var WC_Customer
+	 */
+	public $customer = null;
+
+	/**
+	 * Order factory instance.
+	 *
+	 * @var WC_Order_Factory
+	 */
+	public $order_factory = null;
+
+	/**
+	 * Structured data instance.
+	 *
+	 * @var WC_Structured_Data
+	 */
+	public $structured_data = null;
+
+	/**
+	 * Array of deprecated hook handlers.
+	 *
+	 * @var array of WC_Deprecated_Hooks
+	 */
+	public $deprecated_hook_handlers = array();
+
+	/**
+	 * Main WooCommerce Instance.
+	 *
+	 * Ensures only one instance of WooCommerce is loaded or can be loaded.
+	 *
+	 * @since 2.1
+	 * @static
+	 * @see WC()
+	 * @return WooCommerce - Main instance.
+	 */
+	public static function instance() {
+		if ( is_null( self::$_instance ) ) {
+			self::$_instance = new self();
+		}
+		return self::$_instance;
+	}
+
+	/**
+	 * Cloning is forbidden.
+	 *
+	 * @since 2.1
+	 */
+	public function __clone() {
+		wc_doing_it_wrong( __FUNCTION__, __( &#039;Cloning is forbidden.&#039;, &#039;woocommerce&#039; ), &#039;2.1&#039; );
+	}
+
+	/**
+	 * Unserializing instances of this class is forbidden.
+	 *
+	 * @since 2.1
+	 */
+	public function __wakeup() {
+		wc_doing_it_wrong( __FUNCTION__, __( &#039;Unserializing instances of this class is forbidden.&#039;, &#039;woocommerce&#039; ), &#039;2.1&#039; );
+	}
+
+	/**
+	 * Autoload inaccessible or non-existing properties on demand.
+	 *
+	 * @param mixed $key Key name.
+	 * @return mixed
+	 */
+	public function __get( $key ) {
+		if ( &#039;api&#039; === $key ) {
+			// The Legacy REST API was removed from WooCommerce core as of version 9.0 (moved to a dedicated plugin),
+			// but some plugins are still using wc()-&gt;api-&gt;get_endpoint_data. This method now lives in the RestApiUtil class,
+			// but we expose it through LegacyRestApiStub to limit the scope of what can be done via WC()-&gt;api.
+			//
+			// On the other hand, if the dedicated plugin is installed it will set the $api property by itself
+			// to an instance of the old WC_API class, which of course still has the get_endpoint_data method.
+			if ( is_null( $this-&gt;api ) &amp;&amp; ! $this-&gt;legacy_rest_api_is_available() ) {
+				$this-&gt;api = wc_get_container()-&gt;get( LegacyRestApiStub::class );
+			}
+
+			return $this-&gt;api;
+		}
+
+		if ( in_array( $key, array( &#039;payment_gateways&#039;, &#039;shipping&#039;, &#039;mailer&#039;, &#039;checkout&#039; ), true ) ) {
+			return $this-&gt;$key();
+		}
+	}
+
+	/**
+	 * Set the value of an inaccessible or non-existing property.
+	 *
+	 * @param string $key Property name.
+	 * @param mixed  $value Property value.
+	 * @throws Exception Attempt to access a property that&#039;s private or protected.
+	 */
+	public function __set( string $key, $value ) {
+		if ( &#039;api&#039; === $key ) {
+			$this-&gt;api = $value;
+		} elseif ( property_exists( $this, $key ) ) {
+			throw new Exception( &#039;Cannot access private property &#039; . __CLASS__ . &#039;::$&#039; . esc_html( $key ) );
+		} else {
+			$this-&gt;$key = $value;
+		}
+	}
+
+	/**
+	 * Check if the Legacy REST API plugin is active (and thus the Legacy REST API is available).
+	 *
+	 * @return bool
+	 */
+	public function legacy_rest_api_is_available() {
+		return class_exists( &#039;WC_Legacy_REST_API_Plugin&#039;, false );
+	}
+
+	/**
+	 * Get the WooCommerce version.
+	 *
+	 * @since 10.3.0
+	 *
+	 * @return string The WooCommerce version.
+	 */
+	public function stable_version(): string {
+		return explode( &#039;-&#039;, $this-&gt;version, 2 )[0];
+	}
+
+	/**
+	 * WooCommerce Constructor.
+	 */
+	public function __construct() {
+		$this-&gt;define_constants();
+		$this-&gt;define_tables();
+		$this-&gt;includes();
+		$this-&gt;init_hooks();
+	}
+
+	/**
+	 * When WP has loaded all plugins, trigger the `woocommerce_loaded` hook.
+	 *
+	 * This ensures `woocommerce_loaded` is called only after all other plugins
+	 * are loaded, to avoid issues caused by plugin directory naming changing
+	 * the load order. See #21524 for details.
+	 *
+	 * @since 3.6.0
+	 */
+	public function on_plugins_loaded() {
+		/**
+		 * Action to signal that WooCommerce has finished loading.
+		 *
+		 * @since 3.6.0
+		 */
+		do_action( &#039;woocommerce_loaded&#039; );
+	}
+
+	/**
+	 * Initialize Jetpack Connection Config.
+	 *
+	 * @return void
+	 */
+	public function init_jetpack_connection_config() {
+		$config = new Automattic\Jetpack\Config();
+		$config-&gt;ensure(
+			&#039;connection&#039;,
+			array(
+				&#039;slug&#039; =&gt; &#039;woocommerce&#039;,
+				// Cannot use __() here because it would cause translations to be loaded too early.
+				// See https://github.com/woocommerce/woocommerce/pull/47113.
+				&#039;name&#039; =&gt; &#039;WooCommerce&#039;,
+			)
+		);
+	}
+
+	/**
+	 * Hook into actions and filters.
+	 *
+	 * @since 2.3
+	 */
+	private function init_hooks() {
+		register_activation_hook( WC_PLUGIN_FILE, array( &#039;WC_Install&#039;, &#039;install&#039; ) );
+		register_shutdown_function( array( $this, &#039;log_errors&#039; ) );
+
+		add_action( &#039;plugins_loaded&#039;, array( $this, &#039;on_plugins_loaded&#039; ), -1 );
+		add_action( &#039;plugins_loaded&#039;, array( $this, &#039;init_customizer&#039; ) );
+		add_action( &#039;plugins_loaded&#039;, array( $this, &#039;init_jetpack_connection_config&#039; ), 1 );
+		add_action( &#039;admin_notices&#039;, array( $this, &#039;build_dependencies_notice&#039; ) );
+		add_action( &#039;after_setup_theme&#039;, array( $this, &#039;setup_environment&#039; ) );
+		add_action( &#039;after_setup_theme&#039;, array( $this, &#039;include_template_functions&#039; ), 11 );
+		add_action( &#039;load-post.php&#039;, array( $this, &#039;includes&#039; ) );
+		add_action( &#039;init&#039;, array( $this, &#039;init&#039; ), 0 );
+		add_action( &#039;init&#039;, array( &#039;WC_Shortcodes&#039;, &#039;init&#039; ) );
+		add_action( &#039;init&#039;, array( &#039;WC_Emails&#039;, &#039;init_transactional_emails&#039; ) );
+		add_action( &#039;init&#039;, array( $this, &#039;add_image_sizes&#039; ) );
+		add_action( &#039;init&#039;, array( $this, &#039;load_rest_api&#039; ) );
+		if ( $this-&gt;is_request( &#039;admin&#039; ) || ( $this-&gt;is_rest_api_request() &amp;&amp; ! $this-&gt;is_store_api_request() ) || ( defined( &#039;WP_CLI&#039; ) &amp;&amp; WP_CLI ) ) {
+			add_action( &#039;init&#039;, array( &#039;WC_Site_Tracking&#039;, &#039;init&#039; ) );
+		}
+		add_action( &#039;switch_blog&#039;, array( $this, &#039;wpdb_table_fix&#039; ), 0 );
+		add_action( &#039;activated_plugin&#039;, array( $this, &#039;activated_plugin&#039; ) );
+		add_action( &#039;deactivated_plugin&#039;, array( $this, &#039;deactivated_plugin&#039; ) );
+		add_action( &#039;woocommerce_installed&#039;, array( $this, &#039;add_woocommerce_inbox_variant&#039; ) );
+		add_action( &#039;woocommerce_updated&#039;, array( $this, &#039;add_woocommerce_inbox_variant&#039; ) );
+		add_action( &#039;rest_api_init&#039;, array( $this, &#039;register_wp_admin_settings&#039; ) );
+		add_action( &#039;woocommerce_installed&#039;, array( $this, &#039;add_woocommerce_remote_variant&#039; ) );
+		add_action( &#039;woocommerce_updated&#039;, array( $this, &#039;add_woocommerce_remote_variant&#039; ) );
+		add_action( &#039;woocommerce_newly_installed&#039;, &#039;wc_set_hooked_blocks_version&#039;, 10 );
+		add_action( &#039;update_option_woocommerce_allow_tracking&#039;, array( $this, &#039;get_tracking_history&#039; ), 10, 2 );
+		add_action( &#039;update_option_woocommerce_allow_tracking&#039;, array( $this, &#039;handle_tracking_setting_change&#039; ), 10, 2 );
+		add_action( &#039;action_scheduler_ensure_recurring_actions&#039;, array( $this, &#039;register_recurring_actions&#039; ) );
+		add_action( &#039;action_scheduler_init&#039;, array( $this, &#039;add_recurring_action_wrappers&#039; ) );
+
+		add_filter( &#039;robots_txt&#039;, array( $this, &#039;robots_txt&#039; ) );
+		add_filter( &#039;wp_plugin_dependencies_slug&#039;, array( $this, &#039;convert_woocommerce_slug&#039; ) );
+		add_filter( &#039;woocommerce_register_log_handlers&#039;, array( $this, &#039;register_remote_log_handler&#039; ) );
+
+		// These classes set up hooks on instantiation.
+		$container = wc_get_container();
+		$container-&gt;get( ProductDownloadDirectories::class );
+		$container-&gt;get( DownloadPermissionsAdjuster::class );
+		$container-&gt;get( AssignDefaultCategory::class );
+		$container-&gt;get( DataRegenerator::class );
+		$container-&gt;get( LookupDataStore::class );
+		$container-&gt;get( MatchImageBySKU::class );
+		$container-&gt;get( RestockRefundedItemsAdjuster::class );
+		$container-&gt;get( CustomOrdersTableController::class );
+		$container-&gt;get( ProductCacheController::class );
+		$container-&gt;get( OptionSanitizer::class );
+		$container-&gt;get( BatchProcessingController::class );
+		$container-&gt;get( FeaturesController::class );
+		$container-&gt;get( WebhookUtil::class );
+		$container-&gt;get( Marketplace::class );
+		$container-&gt;get( TimeUtil::class );
+		$container-&gt;get( ComingSoonAdminBarBadge::class );
+		$container-&gt;get( ComingSoonCacheInvalidator::class );
+		$container-&gt;get( ComingSoonRequestHandler::class );
+		$container-&gt;get( OrderCountCacheService::class );
+		$container-&gt;get( EmailImprovements::class );
+		$container-&gt;get( AddressProviderController::class );
+		$container-&gt;get( AbilitiesRegistry::class );
+		$container-&gt;get( MCPAdapterProvider::class );
+		$container-&gt;get( ProductVersionStringInvalidator::class );
+
+		// Feature flags.
+		if ( Constants::is_true( &#039;WOOCOMMERCE_BIS_ALPHA_ENABLED&#039; ) ) {
+			$container-&gt;get( StockNotifications::class );
+		}
+
+		/**
+		 * These classes have a register method for attaching hooks.
+		 */
+		$container-&gt;get( Automattic\WooCommerce\Internal\Utilities\PluginInstaller::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\TransientFiles\TransientFilesEngine::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Orders\OrderAttributionController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Orders\OrderAttributionBlocksController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\CostOfGoodsSold\CostOfGoodsSoldController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\FraudProtection\FraudProtectionController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\FraudProtection\AdminSettingsHandler::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Admin\Settings\PaymentsController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Admin\Settings\PaymentsProviders\WooPayments\WooPaymentsController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Utilities\LegacyRestApiStub::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Email\EmailStyleSync::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Fulfillments\FulfillmentsController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Admin\Agentic\AgenticController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\ProductFeed\ProductFeed::class )-&gt;register();
+
+		// Classes inheriting from RestApiControllerBase.
+		$container-&gt;get( Automattic\WooCommerce\Internal\ReceiptRendering\ReceiptRenderingRestController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Orders\OrderActionsRestController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Orders\OrderStatusRestController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Admin\Settings\PaymentsRestController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Admin\Settings\PaymentsProviders\WooPayments\WooPaymentsRestController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Admin\EmailPreview\EmailPreviewRestController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\Admin\Emails\EmailListingRestController::class )-&gt;register();
+
+		$container-&gt;get( Automattic\WooCommerce\Internal\ProductFilters\MainQueryController::class )-&gt;register();
+		$container-&gt;get( Automattic\WooCommerce\Internal\ProductFilters\CacheController::class )-&gt;register();
+	}
+
+	/**
+	 * Add woocommerce_inbox_variant for the Remote Inbox Notification.
+	 *
+	 * P2 post can be found at https://wp.me/paJDYF-1uJ.
+	 *
+	 * This will no longer be used. The more flexible add_woocommerce_remote_variant
+	 * below will be used instead.
+	 */
+	public function add_woocommerce_inbox_variant() {
+		$config_name = &#039;woocommerce_inbox_variant_assignment&#039;;
+		if ( false === get_option( $config_name, false ) ) {
+			update_option( $config_name, wp_rand( 1, 12 ) );
+		}
+	}
+
+	/**
+	 * Add woocommerce_remote_variant_assignment used to determine cohort
+	 * or group assignment for Remote Spec Engines.
+	 */
+	public function add_woocommerce_remote_variant() {
+		$config_name = &#039;woocommerce_remote_variant_assignment&#039;;
+		if ( false === get_option( $config_name, false ) ) {
+			update_option( $config_name, wp_rand( 1, 120 ) );
+		}
+	}
+
+	/**
+	 * Ensures fatal errors are logged so they can be picked up in the status report.
+	 *
+	 * @since 3.2.0
+	 */
+	public function log_errors() {
+		$error = error_get_last();
+		if ( $error &amp;&amp; in_array( $error[&#039;type&#039;], array( E_ERROR, E_PARSE, E_COMPILE_ERROR, E_USER_ERROR, E_RECOVERABLE_ERROR ), true ) ) {
+			$error_copy = $error;
+			$message    = $error_copy[&#039;message&#039;];
+			unset( $error_copy[&#039;message&#039;] );
+
+			$context = array(
+				&#039;source&#039;         =&gt; &#039;fatal-errors&#039;,
+				&#039;error&#039;          =&gt; $error_copy,
+				// Indicate that this error should be logged remotely if remote logging is enabled.
+				&#039;remote-logging&#039; =&gt; true,
+			);
+
+			if ( false !== strpos( $message, &#039;Stack trace:&#039; ) ) {
+				$segments  = explode( &#039;Stack trace:&#039;, $message );
+				$message   = str_replace( PHP_EOL, &#039; &#039;, trim( $segments[0] ) );
+				$backtrace = array_map(
+					&#039;trim&#039;,
+					explode( PHP_EOL, $segments[1] )
+				);
+
+				$context[&#039;backtrace&#039;] = $backtrace;
+			} else {
+				$context[&#039;backtrace&#039;] = true;
+			}
+
+			$logger = wc_get_logger();
+			$logger-&gt;critical(
+				$message,
+				$context
+			);
+
+			/**
+			 * Action triggered when there are errors during shutdown.
+			 *
+			 * @since 3.2.0
+			 */
+			do_action( &#039;woocommerce_shutdown_error&#039;, $error );
+		}
+	}
+
+	/**
+	 * Define WC Constants.
+	 */
+	private function define_constants() {
+		$this-&gt;define( &#039;WC_ABSPATH&#039;, dirname( WC_PLUGIN_FILE ) . &#039;/&#039; );
+		$this-&gt;define( &#039;WC_PLUGIN_BASENAME&#039;, plugin_basename( WC_PLUGIN_FILE ) );
+		$this-&gt;define( &#039;WC_VERSION&#039;, $this-&gt;version );
+		$this-&gt;define( &#039;WOOCOMMERCE_VERSION&#039;, $this-&gt;version );
+		$this-&gt;define( &#039;WC_ROUNDING_PRECISION&#039;, 6 );
+		$this-&gt;define( &#039;WC_DISCOUNT_ROUNDING_MODE&#039;, 2 );
+		$this-&gt;define( &#039;WC_TAX_ROUNDING_MODE&#039;, &#039;yes&#039; === get_option( &#039;woocommerce_prices_include_tax&#039;, &#039;no&#039; ) ? 2 : 1 );
+		$this-&gt;define( &#039;WC_DELIMITER&#039;, &#039;|&#039; );
+		$this-&gt;define( &#039;WC_SESSION_CACHE_GROUP&#039;, &#039;wc_session_id&#039; );
+		$this-&gt;define( &#039;WC_TEMPLATE_DEBUG_MODE&#039;, false );
+
+		/**
+		 * As of 8.8.0, it is preferable to use the `woocommerce_log_directory` filter hook to change the log
+		 * directory. WC_LOG_DIR_CUSTOM is a back-compatibility measure so we can tell if `WC_LOG_DIR` has been
+		 * defined outside of WC Core.
+		 */
+		if ( defined( &#039;WC_LOG_DIR&#039; ) ) {
+			$this-&gt;define( &#039;WC_LOG_DIR_CUSTOM&#039;, true );
+		} else {
+			$this-&gt;define( &#039;WC_LOG_DIR&#039;, LoggingUtil::get_log_directory( false ) );
+		}
+
+		// These three are kept defined for compatibility, but are no longer used.
+		$this-&gt;define( &#039;WC_NOTICE_MIN_PHP_VERSION&#039;, &#039;7.2&#039; );
+		$this-&gt;define( &#039;WC_NOTICE_MIN_WP_VERSION&#039;, &#039;5.2&#039; );
+		$this-&gt;define( &#039;WC_PHP_MIN_REQUIREMENTS_NOTICE&#039;, &#039;wp_php_min_requirements_&#039; . WC_NOTICE_MIN_PHP_VERSION . &#039;_&#039; . WC_NOTICE_MIN_WP_VERSION );
+
+		/** Define if we&#039;re checking against major, minor or no versions in the following places:
+		 *   - plugin screen in WP Admin (displaying extra warning when updating to new major versions)
+		 *   - System Status Report (&#039;Installed version not tested with active version of WooCommerce&#039; warning)
+		 *   - core update screen in WP Admin (displaying extra warning when updating to new major versions)
+		 *   - enable/disable automated updates in the plugin screen in WP Admin (if there are any plugins
+		 *      that don&#039;t declare compatibility, the auto-update is disabled)
+		 *
+		 * We dropped SemVer before WC 5.0, so all versions are backwards compatible now, thus no more check needed.
+		 * The SSR in the name is preserved for bw compatibility, as this was initially used in System Status Report.
+		 */
+		$this-&gt;define( &#039;WC_SSR_PLUGIN_UPDATE_RELEASE_VERSION_TYPE&#039;, &#039;none&#039; );
+	}
+
+	/**
+	 * Register custom tables within $wpdb object.
+	 */
+	private function define_tables() {
+		global $wpdb;
+
+		// List of tables without prefixes.
+		$tables = array(
+			&#039;payment_tokenmeta&#039;      =&gt; &#039;woocommerce_payment_tokenmeta&#039;,
+			&#039;order_itemmeta&#039;         =&gt; &#039;woocommerce_order_itemmeta&#039;,
+			&#039;wc_product_meta_lookup&#039; =&gt; &#039;wc_product_meta_lookup&#039;,
+			&#039;wc_tax_rate_classes&#039;    =&gt; &#039;wc_tax_rate_classes&#039;,
+			&#039;wc_reserved_stock&#039;      =&gt; &#039;wc_reserved_stock&#039;,
+		);
+
+		foreach ( $tables as $name =&gt; $table ) {
+			$wpdb-&gt;$name    = $wpdb-&gt;prefix . $table;
+			$wpdb-&gt;tables[] = $table;
+		}
+	}
+
+	/**
+	 * Define constant if not already set.
+	 *
+	 * @param string      $name  Constant name.
+	 * @param string|bool $value Constant value.
+	 */
+	private function define( $name, $value ) {
+		if ( ! defined( $name ) ) {
+			define( $name, $value );
+		}
+	}
+
+	/**
+	 * Returns true if the request is a non-legacy REST API request.
+	 *
+	 * Legacy REST requests should still run some extra code for backwards compatibility.
+	 *
+	 * @todo: replace this function once core WP function is available: https://core.trac.wordpress.org/ticket/42061.
+	 *
+	 * @return bool
+	 */
+	public function is_rest_api_request() {
+		if ( empty( $_SERVER[&#039;REQUEST_URI&#039;] ) ) {
+			return false;
+		}
+
+		$rest_prefix         = trailingslashit( rest_get_url_prefix() );
+		$is_rest_api_request = ( false !== strpos( $_SERVER[&#039;REQUEST_URI&#039;], $rest_prefix ) ); // phpcs:disable WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+
+		/**
+		 * Whether this is a REST API request.
+		 *
+		 * @since 3.6.0
+		 */
+		return apply_filters( &#039;woocommerce_is_rest_api_request&#039;, $is_rest_api_request );
+	}
+
+	/**
+	 * Returns true if the request is a store REST API request.
+	 *
+	 * @return bool
+	 */
+	public function is_store_api_request() {
+		if ( empty( $_SERVER[&#039;REQUEST_URI&#039;] ) ) {
+			return false;
+		}
+		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		return false !== strpos( $_SERVER[&#039;REQUEST_URI&#039;], trailingslashit( rest_get_url_prefix() ) . &#039;wc/store/&#039; );
+	}
+
+	/**
+	 * Load REST API.
+	 */
+	public function load_rest_api() {
+		\Automattic\WooCommerce\RestApi\Server::instance()-&gt;init();
+	}
+
+	/**
+	 * What type of request is this?
+	 *
+	 * @param  string $type admin, ajax, cron or frontend.
+	 * @return bool
+	 */
+	private function is_request( $type ) {
+		switch ( $type ) {
+			case &#039;admin&#039;:
+				return is_admin();
+			case &#039;ajax&#039;:
+				return defined( &#039;DOING_AJAX&#039; );
+			case &#039;cron&#039;:
+				return defined( &#039;DOING_CRON&#039; );
+			case &#039;frontend&#039;:
+				return ( ! is_admin() || defined( &#039;DOING_AJAX&#039; ) ) &amp;&amp; ! defined( &#039;DOING_CRON&#039; ) &amp;&amp; ! $this-&gt;is_rest_api_request();
+		}
+	}
+
+	/**
+	 * Include required core files used in admin and on the frontend.
+	 */
+	public function includes() {
+		/**
+		 * Class autoloader.
+		 */
+		include_once WC_ABSPATH . &#039;includes/class-wc-autoloader.php&#039;;
+
+		/**
+		 * Interfaces.
+		 */
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-abstract-order-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-coupon-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-customer-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-customer-download-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-customer-download-log-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-object-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-order-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-order-item-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-order-item-product-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-order-item-type-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-order-refund-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-payment-token-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-product-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-product-variable-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-shipping-zone-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-logger-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-log-handler-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-webhooks-data-store-interface.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/interfaces/class-wc-queue-interface.php&#039;;
+
+		/**
+		 * Core traits.
+		 */
+		include_once WC_ABSPATH . &#039;includes/traits/trait-wc-item-totals.php&#039;;
+
+		/**
+		 * Abstract classes.
+		 */
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-address-provider.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-data.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-object-query.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-payment-token.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-product.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-order.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-settings-api.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-shipping-method.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-payment-gateway.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-integration.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-log-handler.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-deprecated-hooks.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-session.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/abstracts/abstract-wc-privacy.php&#039;;
+
+		/**
+		 * Core classes.
+		 */
+		include_once WC_ABSPATH . &#039;includes/wc-core-functions.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-datetime.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-post-types.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-install.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-geolocation.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-download-handler.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-comments.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-post-data.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-ajax.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-emails.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-data-exception.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-query.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-meta-data.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-order-factory.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-order-query.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-product-factory.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-product-query.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-payment-tokens.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-shipping-zone.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/gateways/class-wc-payment-gateway-cc.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/gateways/class-wc-payment-gateway-echeck.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-countries.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-integrations.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-cache-helper.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-https.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-deprecated-action-hooks.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-deprecated-filter-hooks.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-background-emailer.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-discounts.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-cart-totals.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/customizer/class-wc-shop-customizer.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-regenerate-images.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-privacy.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-structured-data.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-shortcodes.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-logger.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/queue/class-wc-action-queue.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/queue/class-wc-queue.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/admin/marketplace-suggestions/class-wc-marketplace-updater.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/admin/class-wc-admin-marketplace-promotions.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/blocks/class-wc-blocks-utils.php&#039;;
+
+		/**
+		 * Data stores - used to store and retrieve CRUD object data from the database.
+		 */
+		include_once WC_ABSPATH . &#039;includes/class-wc-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-data-store-wp.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-coupon-data-store-cpt.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-product-data-store-cpt.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-product-grouped-data-store-cpt.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-product-variable-data-store-cpt.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-product-variation-data-store-cpt.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/abstract-wc-order-item-type-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-order-item-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-order-item-coupon-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-order-item-fee-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-order-item-product-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-order-item-shipping-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-order-item-tax-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-payment-token-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-customer-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-customer-data-store-session.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-customer-download-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-customer-download-log-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-shipping-zone-data-store.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/abstract-wc-order-data-store-cpt.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-order-data-store-cpt.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-order-refund-data-store-cpt.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/data-stores/class-wc-webhook-data-store.php&#039;;
+
+		/**
+		 * REST API.
+		 */
+		include_once WC_ABSPATH . &#039;includes/class-wc-rest-authentication.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-rest-exception.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-auth.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-register-wp-admin-settings.php&#039;;
+
+		/**
+		 * Tracks.
+		 */
+		include_once WC_ABSPATH . &#039;includes/tracks/class-wc-tracks.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/tracks/class-wc-tracks-event.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/tracks/class-wc-tracks-client.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/tracks/class-wc-tracks-footer-pixel.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/tracks/class-wc-site-tracking.php&#039;;
+
+		/**
+		 * WCCOM Site.
+		 */
+		include_once WC_ABSPATH . &#039;includes/wccom-site/class-wc-wccom-site.php&#039;;
+
+		/**
+		 * Product Usage
+		 */
+		include_once WC_ABSPATH . &#039;includes/product-usage/class-wc-product-usage.php&#039;;
+
+		/**
+		 * Libraries and packages.
+		 */
+		include_once WC_ABSPATH . &#039;packages/action-scheduler/action-scheduler.php&#039;;
+
+		if ( defined( &#039;WP_CLI&#039; ) &amp;&amp; WP_CLI ) {
+			include_once WC_ABSPATH . &#039;includes/class-wc-cli.php&#039;;
+		}
+
+		if ( $this-&gt;is_request( &#039;admin&#039; ) ) {
+			include_once WC_ABSPATH . &#039;includes/admin/class-wc-admin.php&#039;;
+			// Simulate loading plugin for the legacy reports.
+			// This will be removed after moving the legacy reports to a separate plugin.
+			include_once WC_ABSPATH . &#039;includes/admin/woocommerce-legacy-reports.php&#039;;
+		}
+
+		// We load frontend includes in the post editor, because they may be invoked via pre-loading of blocks.
+		$in_post_editor = doing_action( &#039;load-post.php&#039; ) || doing_action( &#039;load-post-new.php&#039; );
+
+		if ( $this-&gt;is_request( &#039;frontend&#039; ) || $this-&gt;is_rest_api_request() || $in_post_editor ) {
+			$this-&gt;frontend_includes();
+		}
+
+		$this-&gt;theme_support_includes();
+		$this-&gt;query = new WC_Query();
+	}
+
+	/**
+	 * Include classes for theme support.
+	 *
+	 * @since 3.3.0
+	 */
+	private function theme_support_includes() {
+		if ( wc_is_wp_default_theme_active() ) {
+			switch ( get_template() ) {
+				case &#039;twentyten&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-ten.php&#039;;
+					break;
+				case &#039;twentyeleven&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-eleven.php&#039;;
+					break;
+				case &#039;twentytwelve&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-twelve.php&#039;;
+					break;
+				case &#039;twentythirteen&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-thirteen.php&#039;;
+					break;
+				case &#039;twentyfourteen&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-fourteen.php&#039;;
+					break;
+				case &#039;twentyfifteen&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-fifteen.php&#039;;
+					break;
+				case &#039;twentysixteen&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-sixteen.php&#039;;
+					break;
+				case &#039;twentyseventeen&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-seventeen.php&#039;;
+					break;
+				case &#039;twentynineteen&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-nineteen.php&#039;;
+					break;
+				case &#039;twentytwenty&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-twenty.php&#039;;
+					break;
+				case &#039;twentytwentyone&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-twenty-one.php&#039;;
+					break;
+				case &#039;twentytwentytwo&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-twenty-two.php&#039;;
+					break;
+				case &#039;twentytwentythree&#039;:
+					include_once WC_ABSPATH . &#039;includes/theme-support/class-wc-twenty-twenty-three.php&#039;;
+					break;
+			}
+		}
+	}
+
+	/**
+	 * Include required frontend files.
+	 */
+	public function frontend_includes() {
+		include_once WC_ABSPATH . &#039;includes/wc-cart-functions.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/wc-notice-functions.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/wc-template-hooks.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-template-loader.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-frontend-scripts.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-form-handler.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-cart.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-tax.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-shipping-zones.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-customer.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-embed.php&#039;;
+		include_once WC_ABSPATH . &#039;includes/class-wc-session-handler.php&#039;;
+	}
+
+	/**
+	 * Function used to Init WooCommerce Template Functions - This makes them pluggable by plugins and themes.
+	 */
+	public function include_template_functions() {
+		include_once WC_ABSPATH . &#039;includes/wc-template-functions.php&#039;;
+	}
+
+	/**
+	 * Init WooCommerce when WordPress Initialises.
+	 */
+	public function init() {
+		// See the comment inside FeaturesController::__construct.
+		wc_get_container()-&gt;get( FeaturesController::class )-&gt;register_additional_features();
+
+		/**
+		 * Action triggered before WooCommerce initialization begins.
+		 */
+		do_action( &#039;before_woocommerce_init&#039; ); // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingSinceComment
+
+		// Set up localisation.
+		$this-&gt;load_plugin_textdomain();
+
+		// Load class instances.
+		$this-&gt;product_factory                     = new WC_Product_Factory();
+		$this-&gt;order_factory                       = new WC_Order_Factory();
+		$this-&gt;countries                           = new WC_Countries();
+		$this-&gt;integrations                        = new WC_Integrations();
+		$this-&gt;structured_data                     = new WC_Structured_Data();
+		$this-&gt;deprecated_hook_handlers[&#039;actions&#039;] = new WC_Deprecated_Action_Hooks();
+		$this-&gt;deprecated_hook_handlers[&#039;filters&#039;] = new WC_Deprecated_Filter_Hooks();
+
+		// Classes/actions loaded for the frontend and for ajax requests.
+		if ( $this-&gt;is_request( &#039;frontend&#039; ) ) {
+			wc_load_cart();
+		}
+
+		$this-&gt;load_webhooks();
+
+		/**
+		 * Action triggered after WooCommerce initialization finishes.
+		 */
+		do_action( &#039;woocommerce_init&#039; ); // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingSinceComment
+	}
+
+	/**
+	 * Load Localisation files.
+	 *
+	 * Note: the first-loaded translation file overrides any following ones if the same translation is present.
+	 *
+	 * Locales found in:
+	 *      - WP_LANG_DIR/woocommerce/woocommerce-LOCALE.mo
+	 *      - WP_LANG_DIR/plugins/woocommerce-LOCALE.mo
+	 */
+	public function load_plugin_textdomain() {
+		/**
+		 * Filter to adjust the WooCommerce locale to use for translations.
+		 */
+		$locale                  = apply_filters( &#039;plugin_locale&#039;, determine_locale(), &#039;woocommerce&#039; ); // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingSinceComment
+		$custom_translation_path = WP_LANG_DIR . &#039;/woocommerce/woocommerce-&#039; . $locale . &#039;.mo&#039;;
+		$plugin_translation_path = WP_LANG_DIR . &#039;/plugins/woocommerce-&#039; . $locale . &#039;.mo&#039;;
+
+		// If a custom translation exists (by default it will not, as it is not a standard WordPress convention)
+		// we unload the existing translation, then essentially layer the custom translation on top of the canonical
+		// translation. Otherwise, we simply step back and let WP manage things.
+		if ( is_readable( $custom_translation_path ) ) {
+			unload_textdomain( &#039;woocommerce&#039; );
+			load_textdomain( &#039;woocommerce&#039;, $custom_translation_path );
+			load_textdomain( &#039;woocommerce&#039;, $plugin_translation_path );
+		}
+	}
+
+	/**
+	 * Ensure theme and server variable compatibility and setup image sizes.
+	 */
+	public function setup_environment() {
+		/**
+		 * WC_TEMPLATE_PATH constant.
+		 *
+		 * @deprecated 2.2 Use WC()-&gt;template_path() instead.
+		 */
+		$this-&gt;define( &#039;WC_TEMPLATE_PATH&#039;, $this-&gt;template_path() );
+
+		$this-&gt;add_thumbnail_support();
+	}
+
+	/**
+	 * Ensure post thumbnail support is turned on.
+	 */
+	private function add_thumbnail_support() {
+		if ( ! current_theme_supports( &#039;post-thumbnails&#039; ) ) {
+			add_theme_support( &#039;post-thumbnails&#039; );
+		}
+		add_post_type_support( &#039;product&#039;, &#039;thumbnail&#039; );
+	}
+
+	/**
+	 * Add WC Image sizes to WP.
+	 *
+	 * As of 3.3, image sizes can be registered via themes using add_theme_support for woocommerce
+	 * and defining an array of args. If these are not defined, we will use defaults. This is
+	 * handled in wc_get_image_size function.
+	 *
+	 * 3.3 sizes:
+	 *
+	 * woocommerce_thumbnail - Used in product listings. We assume these work for a 3 column grid layout.
+	 * woocommerce_single - Used on single product pages for the main image.
+	 *
+	 * @since 2.3
+	 */
+	public function add_image_sizes() {
+		$thumbnail         = wc_get_image_size( &#039;thumbnail&#039; );
+		$single            = wc_get_image_size( &#039;single&#039; );
+		$gallery_thumbnail = wc_get_image_size( &#039;gallery_thumbnail&#039; );
+
+		add_image_size( &#039;woocommerce_thumbnail&#039;, $thumbnail[&#039;width&#039;], $thumbnail[&#039;height&#039;], $thumbnail[&#039;crop&#039;] );
+		add_image_size( &#039;woocommerce_single&#039;, $single[&#039;width&#039;], $single[&#039;height&#039;], $single[&#039;crop&#039;] );
+		add_image_size( &#039;woocommerce_gallery_thumbnail&#039;, $gallery_thumbnail[&#039;width&#039;], $gallery_thumbnail[&#039;height&#039;], $gallery_thumbnail[&#039;crop&#039;] );
+	}
+
+	/**
+	 * Get the plugin url.
+	 *
+	 * @return string
+	 */
+	public function plugin_url() {
+		return untrailingslashit( plugins_url( &#039;/&#039;, WC_PLUGIN_FILE ) );
+	}
+
+	/**
+	 * Get the plugin path.
+	 *
+	 * @return string
+	 */
+	public function plugin_path() {
+		return untrailingslashit( plugin_dir_path( WC_PLUGIN_FILE ) );
+	}
+
+	/**
+	 * Get the template path.
+	 *
+	 * @return string
+	 */
+	public function template_path() {
+		/**
+		 * Filter to adjust the base templates path.
+		 */
+		return apply_filters( &#039;woocommerce_template_path&#039;, &#039;woocommerce/&#039; ); // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingSinceComment
+	}
+
+	/**
+	 * Get Ajax URL.
+	 *
+	 * @return string
+	 */
+	public function ajax_url() {
+		return admin_url( &#039;admin-ajax.php&#039;, &#039;relative&#039; );
+	}
+
+	/**
+	 * Return the WC API URL for a given request.
+	 *
+	 * @param string    $request Requested endpoint.
+	 * @param bool|null $ssl     If should use SSL, null if should auto detect. Default: null.
+	 * @return string
+	 */
+	public function api_request_url( $request, $ssl = null ) {
+		if ( is_null( $ssl ) ) {
+			$scheme = wp_parse_url( home_url(), PHP_URL_SCHEME );
+		} elseif ( $ssl ) {
+			$scheme = &#039;https&#039;;
+		} else {
+			$scheme = &#039;http&#039;;
+		}
+
+		if ( strstr( get_option( &#039;permalink_structure&#039; ), &#039;/index.php/&#039; ) ) {
+			$api_request_url = trailingslashit( home_url( &#039;/index.php/wc-api/&#039; . $request, $scheme ) );
+		} elseif ( get_option( &#039;permalink_structure&#039; ) ) {
+			$api_request_url = trailingslashit( home_url( &#039;/wc-api/&#039; . $request, $scheme ) );
+		} else {
+			$api_request_url = add_query_arg( &#039;wc-api&#039;, $request, trailingslashit( home_url( &#039;&#039;, $scheme ) ) );
+		}
+
+		/**
+		 * Filter to adjust the url of an incoming API request.
+		 */
+		return esc_url_raw( apply_filters( &#039;woocommerce_api_request_url&#039;, $api_request_url, $request, $ssl ) );  // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingSinceComment
+	}
+
+	/**
+	 * Load &amp; enqueue active webhooks.
+	 *
+	 * @since 2.2
+	 */
+	private function load_webhooks() {
+
+		if ( ! is_blog_installed() ) {
+			return;
+		}
+
+		/**
+		 * Hook: woocommerce_load_webhooks_limit.
+		 *
+		 * @since 3.6.0
+		 * @param int $limit Used to limit how many webhooks are loaded. Default: no limit.
+		 */
+		$limit = apply_filters( &#039;woocommerce_load_webhooks_limit&#039;, null );
+
+		wc_load_webhooks( &#039;active&#039;, $limit );
+	}
+
+	/**
+	 * Initialize the customer and cart objects and setup customer saving on shutdown.
+	 *
+	 * Note, wc()-&gt;customer is session based. Changes to customer data via this property are not persisted to the database automatically.
+	 *
+	 * @since 3.6.4
+	 * @return void
+	 */
+	public function initialize_cart() {
+		if ( is_null( $this-&gt;customer ) || ! $this-&gt;customer instanceof WC_Customer ) {
+			$this-&gt;customer = new WC_Customer( get_current_user_id(), true );
+			// Customer session should be saved during shutdown.
+			add_action( &#039;shutdown&#039;, array( $this-&gt;customer, &#039;save&#039; ), 10 );
+		}
+		if ( is_null( $this-&gt;cart ) || ! $this-&gt;cart instanceof WC_Cart ) {
+			$this-&gt;cart = new WC_Cart();
+		}
+	}
+
+	/**
+	 * Initialize the session class.
+	 *
+	 * @since 3.6.4
+	 * @return void
+	 */
+	public function initialize_session() {
+		/**
+		 * Filter to overwrite the session class that handles session data for users.
+		 */
+		$session_class = apply_filters( &#039;woocommerce_session_handler&#039;, &#039;WC_Session_Handler&#039; ); // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingSinceComment
+		if ( is_null( $this-&gt;session ) || ! $this-&gt;session instanceof $session_class ) {
+			$this-&gt;session = new $session_class();
+			$this-&gt;session-&gt;init();
+		}
+	}
+
+	/**
+	 * Tell bots not to index some WooCommerce-created directories.
+	 *
+	 * We try to detect the default &quot;User-agent: *&quot; added by WordPress and add our rules to that group, because
+	 * it&#039;s possible that some bots will only interpret the first group of rules if there are multiple groups with
+	 * the same user agent.
+	 *
+	 * @param string $output The contents that WordPress will output in a robots.txt file.
+	 *
+	 * @return string
+	 *
+	 * @internal For exclusive usage of WooCommerce core, backwards compatibility not guaranteed.
+	 */
+	public function robots_txt( $output ) {
+		$path = ( ! empty( $site_url[&#039;path&#039;] ) ) ? $site_url[&#039;path&#039;] : &#039;&#039;;
+
+		$lines       = preg_split( &#039;/\r\n|\r|\n/&#039;, $output );
+		$agent_index = array_search( &#039;User-agent: *&#039;, $lines, true );
+
+		if ( false !== $agent_index ) {
+			$above = array_slice( $lines, 0, $agent_index + 1 );
+			$below = array_slice( $lines, $agent_index + 1 );
+		} else {
+			$above = $lines;
+			$below = array();
+
+			$above[] = &#039;&#039;;
+			$above[] = &#039;User-agent: *&#039;;
+		}
+
+		$above[] = &quot;Disallow: $path/wp-content/uploads/wc-logs/&quot;;
+		$above[] = &quot;Disallow: $path/wp-content/uploads/woocommerce_transient_files/&quot;;
+		$above[] = &quot;Disallow: $path/wp-content/uploads/woocommerce_uploads/&quot;;
+		$above[] = &#039;Disallow: /*?add-to-cart=&#039;;
+		$above[] = &#039;Disallow: /*?*add-to-cart=&#039;;
+
+		$lines = array_merge( $above, $below );
+
+		return implode( PHP_EOL, $lines );
+	}
+
+	/**
+	 * Set tablenames inside WPDB object.
+	 */
+	public function wpdb_table_fix() {
+		$this-&gt;define_tables();
+	}
+
+	/**
+	 * Ran when any plugin is activated.
+	 *
+	 * @since 3.6.0
+	 * @param string $filename The filename of the activated plugin.
+	 */
+	public function activated_plugin( $filename ) {
+		include_once __DIR__ . &#039;/admin/helper/class-wc-helper.php&#039;;
+
+		if ( &#039;/woocommerce.php&#039; === substr( $filename, -16 ) ) {
+			set_transient( &#039;woocommerce_activated_plugin&#039;, $filename );
+		}
+
+		WC_Helper::activated_plugin( $filename );
+	}
+
+	/**
+	 * Ran when any plugin is deactivated.
+	 *
+	 * @since 3.6.0
+	 * @param string $filename The filename of the deactivated plugin.
+	 */
+	public function deactivated_plugin( $filename ) {
+		include_once __DIR__ . &#039;/admin/helper/class-wc-helper.php&#039;;
+
+		WC_Helper::deactivated_plugin( $filename );
+	}
+
+	/**
+	 * Get queue instance.
+	 *
+	 * @return WC_Queue_Interface
+	 */
+	public function queue() {
+		return WC_Queue::instance();
+	}
+
+	/**
+	 * Get Checkout Class.
+	 *
+	 * @return WC_Checkout
+	 */
+	public function checkout() {
+		return WC_Checkout::instance();
+	}
+
+	/**
+	 * Get gateways class.
+	 *
+	 * @return WC_Payment_Gateways
+	 */
+	public function payment_gateways() {
+		return WC_Payment_Gateways::instance();
+	}
+
+	/**
+	 * Get shipping class.
+	 *
+	 * @return WC_Shipping
+	 */
+	public function shipping() {
+		return WC_Shipping::instance();
+	}
+
+	/**
+	 * Email Class.
+	 *
+	 * @return WC_Emails
+	 */
+	public function mailer() {
+		return WC_Emails::instance();
+	}
+
+	/**
+	 * Check if plugin assets are built and minified
+	 *
+	 * @return bool
+	 */
+	public function build_dependencies_satisfied() {
+		// Check if we have compiled CSS.
+		if ( ! file_exists( WC()-&gt;plugin_path() . &#039;/assets/css/admin.css&#039; ) ) {
+			return false;
+		}
+
+		// Check if we have minified JS.
+		if ( ! file_exists( WC()-&gt;plugin_path() . &#039;/assets/js/admin/woocommerce_admin.min.js&#039; ) ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Output a admin notice when build dependencies not met.
+	 *
+	 * @return void
+	 */
+	public function build_dependencies_notice() {
+		if ( $this-&gt;build_dependencies_satisfied() ) {
+			return;
+		}
+
+		$message_one = __( &#039;You have installed a development version of WooCommerce which requires files to be built and minified. From the plugin directory, run &lt;code&gt;pnpm install&lt;/code&gt; and then &lt;code&gt;pnpm --filter=\&#039;@woocommerce/plugin-woocommerce\&#039; build&lt;/code&gt; to build and minify assets.&#039;, &#039;woocommerce&#039; );
+		$message_two = sprintf(
+			/* translators: 1: URL of WordPress.org Repository 2: URL of the GitHub Repository release page */
+			__( &#039;Or you can download a pre-built version of the plugin from the &lt;a href=&quot;%1$s&quot;&gt;WordPress.org repository&lt;/a&gt; or by visiting &lt;a href=&quot;%2$s&quot;&gt;the releases page in the GitHub repository&lt;/a&gt;.&#039;, &#039;woocommerce&#039; ),
+			&#039;https://wordpress.org/plugins/woocommerce/&#039;,
+			&#039;https://github.com/woocommerce/woocommerce/releases&#039;
+		);
+		printf( &#039;&lt;div class=&quot;error&quot;&gt;&lt;p&gt;%s %s&lt;/p&gt;&lt;/div&gt;&#039;, $message_one, $message_two ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	}
+
+	/**
+	 * Is the WooCommerce Admin actively included in the WooCommerce core?
+	 * Based on presence of a basic WC Admin function.
+	 *
+	 * @return boolean
+	 */
+	public function is_wc_admin_active() {
+		return function_exists( &#039;wc_admin_url&#039; );
+	}
+
+	/**
+	 * Call a user function. This should be used to execute any non-idempotent function, especially
+	 * those in the `includes` directory or provided by WordPress.
+	 *
+	 * This method can be useful for unit tests, since functions called using this method
+	 * can be easily mocked by using WC_Unit_Test_Case::register_legacy_proxy_function_mocks.
+	 *
+	 * @param string $function_name The function to execute.
+	 * @param mixed  ...$parameters The parameters to pass to the function.
+	 *
+	 * @return mixed The result from the function.
+	 *
+	 * @since 4.4
+	 */
+	public function call_function( $function_name, ...$parameters ) {
+		return wc_get_container()-&gt;get( LegacyProxy::class )-&gt;call_function( $function_name, ...$parameters );
+	}
+
+	/**
+	 * Call a static method in a class. This should be used to execute any non-idempotent method in classes
+	 * from the `includes` directory.
+	 *
+	 * This method can be useful for unit tests, since methods called using this method
+	 * can be easily mocked by using WC_Unit_Test_Case::register_legacy_proxy_static_mocks.
+	 *
+	 * @param string $class_name The name of the class containing the method.
+	 * @param string $method_name The name of the method.
+	 * @param mixed  ...$parameters The parameters to pass to the method.
+	 *
+	 * @return mixed The result from the method.
+	 *
+	 * @since 4.4
+	 */
+	public function call_static( $class_name, $method_name, ...$parameters ) {
+		return wc_get_container()-&gt;get( LegacyProxy::class )-&gt;call_static( $class_name, $method_name, ...$parameters );
+	}
+
+	/**
+	 * Gets an instance of a given legacy class.
+	 * This must not be used to get instances of classes in the `src` directory.
+	 *
+	 * This method can be useful for unit tests, since objects obtained using this method
+	 * can be easily mocked by using WC_Unit_Test_Case::register_legacy_proxy_class_mocks.
+	 *
+	 * @param string $class_name The name of the class to get an instance for.
+	 * @param mixed  ...$args Parameters to be passed to the class constructor or to the appropriate internal &#039;get_instance_of_&#039; method.
+	 *
+	 * @return object The instance of the class.
+	 * @throws \Exception The requested class belongs to the `src` directory, or there was an error creating an instance of the class.
+	 *
+	 * @since 4.4
+	 */
+	public function get_instance_of( string $class_name, ...$args ) {
+		return wc_get_container()-&gt;get( LegacyProxy::class )-&gt;get_instance_of( $class_name, ...$args );
+	}
+
+	/**
+	 * Gets the value of a global.
+	 *
+	 * @param string $global_name The name of the global to get the value for.
+	 * @return mixed The value of the global.
+	 */
+	public function get_global( string $global_name ) {
+		return wc_get_container()-&gt;get( LegacyProxy::class )-&gt;get_global( $global_name );
+	}
+
+	/**
+	 * Register WC settings from WP-API to the REST API.
+	 *
+	 * This method used to be part of the now removed Legacy REST API.
+	 *
+	 * @since 9.0.0
+	 *
+	 * @internal For exclusive usage of WooCommerce core, backwards compatibility not guaranteed.
+	 */
+	public function register_wp_admin_settings() {
+		$pages = WC_Admin_Settings::get_settings_pages();
+		foreach ( $pages as $page ) {
+			new WC_Register_WP_Admin_Settings( $page, &#039;page&#039; );
+		}
+
+		$emails = WC_Emails::instance();
+		foreach ( $emails-&gt;get_emails() as $email ) {
+			new WC_Register_WP_Admin_Settings( $email, &#039;email&#039; );
+		}
+	}
+
+	/**
+	 * Converts the WooCommerce slug to the correct slug for the current version.
+	 * This ensures that when the plugin is installed in a different folder name, the correct slug is used so that dependent plugins can be installed/activated.
+	 *
+	 * @since 9.0.0
+	 * @param string $slug The plugin slug to convert.
+	 *
+	 * @return string
+	 */
+	public function convert_woocommerce_slug( $slug ) {
+		if ( &#039;woocommerce&#039; === $slug ) {
+			$slug = dirname( WC_PLUGIN_BASENAME );
+		}
+		return $slug;
+	}
+
+	/**
+	 * Register the remote log handler.
+	 *
+	 * @param \WC_Log_Handler[] $handlers The handlers to register.
+	 *
+	 * @return \WC_Log_Handler[]
+	 *
+	 * @internal For exclusive usage of WooCommerce core, backwards compatibility not guaranteed.
+	 */
+	public function register_remote_log_handler( $handlers ) {
+		$handlers[] = wc_get_container()-&gt;get( RemoteLogger::class );
+		return $handlers;
+	}
+
+	/**
+	 * Tracks the history WooCommerce Allow Tracking option.
+	 * - When the field was first set to allow tracking
+	 * - Last time the option was changed
+	 *
+	 * @param string $old_value The old value for the woocommerce_allow_tracking option.
+	 * @param string $value The current value for the woocommerce_allow_tracking option.
+	 * @since x.x.x
+	 *
+	 * @return void
+	 */
+	public function get_tracking_history( $old_value, $value ) {
+		// If woocommerce_allow_tracking_first_optin is not set. It means is the first time it gets set.
+		if ( ! get_option( &#039;woocommerce_allow_tracking_first_optin&#039; ) &amp;&amp; &#039;yes&#039; === $value ) {
+			update_option( &#039;woocommerce_allow_tracking_first_optin&#039;, time() );
+		}
+
+		// Always update the last change.
+		update_option( &#039;woocommerce_allow_tracking_last_modified&#039;, time() );
+	}
+
+	/**
+	 * For actions that may fail at execution time due to missing callbacks, register the recurring action in a wrapper
+	 * to prevent errors, and load the classes where the callback is added.
+	 *
+	 * @return void
+	 * @internal For exclusive usage of WooCommerce core, backwards compatibility not guaranteed.
+	 */
+	public function add_recurring_action_wrappers() {
+		add_action( &#039;woocommerce_tracker_send_event_wrapper&#039;, array( $this, &#039;add_woocommerce_tracker_send_event_wrapper&#039; ) );
+		add_action( &#039;wc_admin_daily_wrapper&#039;, array( $this, &#039;add_wc_admin_daily_wrapper&#039; ) );
+		add_action( &#039;generate_category_lookup_table_wrapper&#039;, array( $this, &#039;add_generate_category_lookup_table_wrapper&#039; ) );
+		add_action( &#039;woocommerce_cleanup_rate_limits_wrapper&#039;, array( $this, &#039;add_woocommerce_cleanup_rate_limits_wrapper&#039; ) );
+	}
+
+	/**
+	 * Unschedule unwrapped actions that may have been added to the site.
+	 *
+	 * @return void
+	 * @internal For exclusive usage of WooCommerce core, backwards compatibility not guaranteed.
+	 */
+	public function unschedule_unwrapped_actions() {
+		// Unschedule the unwrapped actions.
+		as_unschedule_all_actions( &#039;woocommerce_tracker_send_event&#039; );
+		as_unschedule_all_actions( &#039;wc_admin_daily&#039; );
+		as_unschedule_all_actions( &#039;generate_category_lookup_table&#039; );
+		as_unschedule_all_actions( &#039;woocommerce_cleanup_rate_limits&#039; );
+	}
+
+	/**
+	 * Wrapper for the `woocommerce_tracker_send_event` action. This prevents the event failing when the class is not loaded.
+	 * It loads the class if it exists, and then calls the actual action.
+	 *
+	 * @return void
+	 * @internal For exclusive usage of WooCommerce core, backwards compatibility not guaranteed.
+	 */
+	public function add_woocommerce_tracker_send_event_wrapper() {
+		if ( true !== wc_string_to_bool( get_option( &#039;woocommerce_allow_tracking&#039;, &#039;no&#039; ) ) ) {
+			return;
+		}
+		try {
+			include_once WC_ABSPATH . &#039;includes/class-wc-tracker.php&#039;;
+			if ( class_exists( WC_Tracker::class ) ) {
+				WC_Tracker::init();
+			}
+		} catch ( Throwable $e ) {
+			wc_get_logger()-&gt;error( &#039;Error initializing WC_Tracker: &#039; . $e-&gt;getMessage(), array( &#039;source&#039; =&gt; &#039;woocommerce-scheduled-actions&#039; ) );
+		}
+		// phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment
+		do_action( &#039;woocommerce_tracker_send_event&#039; );
+	}
+
+	/**
+	 * Wrapper for the `wc_admin_daily` action. This prevents the event failing when the class is not loaded.
+	 * It loads the class if it exists, and then calls the actual action.
+	 *
+	 * @return void
+	 * @internal For exclusive usage of WooCommerce core, backwards compatibility not guaranteed.
+	 */
+	public function add_wc_admin_daily_wrapper() {
+		try {
+			if ( class_exists( \Automattic\WooCommerce\Internal\Admin\Events::class ) ) {
+				\Automattic\WooCommerce\Internal\Admin\Events::instance();
+			}
+		} catch ( Throwable $e ) {
+			wc_get_logger()-&gt;error( &#039;Error initializing wc_admin_daily: &#039; . $e-&gt;getMessage(), array( &#039;source&#039; =&gt; &#039;woocommerce-scheduled-actions&#039; ) );
+		}
+		// phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment
+		do_action( &#039;wc_admin_daily&#039; );
+	}
+
+	/**
+	 * Wrapper for the `generate_category_lookup_table` action. This prevents the event failing when the class is not loaded.
+	 * It loads the class if it exists, and then calls the actual action.
+	 *
+	 * @return void
+	 * @internal For exclusive usage of WooCommerce core, backwards compatibility not guaranteed.
+	 */
+	public function add_generate_category_lookup_table_wrapper() {
+		try {
+			if ( class_exists( \Automattic\WooCommerce\Internal\Admin\CategoryLookup::class ) ) {
+				\Automattic\WooCommerce\Internal\Admin\CategoryLookup::instance();
+			}
+		} catch ( Throwable $e ) {
+			wc_get_logger()-&gt;error( &#039;Error in category lookup wrapper: &#039; . $e-&gt;getMessage(), array( &#039;source&#039; =&gt; &#039;woocommerce-scheduled-actions&#039; ) );
+		}
+		// phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment
+		do_action( &#039;generate_category_lookup_table&#039; );
+	}
+
+	/**
+	 * Wrapper for the `woocommerce_cleanup_rate_limits` action. This prevents the event failing when the class is not loaded.
+	 * It loads the class if it exists, and then calls the actual action.
+	 *
+	 * @return void
+	 * @internal For exclusive usage of WooCommerce core, backwards compatibility not guaranteed.
+	 */
+	public function add_woocommerce_cleanup_rate_limits_wrapper() {
+		try {
+			include_once WC_ABSPATH . &#039;includes/class-wc-rate-limiter.php&#039;;
+			if ( class_exists( WC_Rate_Limiter::class ) ) {
+				WC_Rate_Limiter::init();
+			}
+		} catch ( Throwable $e ) {
+			wc_get_logger()-&gt;error( &#039;Error in rate limiter cleanup wrapper: &#039; . $e-&gt;getMessage(), array( &#039;source&#039; =&gt; &#039;woocommerce-scheduled-actions&#039; ) );
+		}
+		// phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment
+		do_action( &#039;woocommerce_cleanup_rate_limits&#039; );
+	}
+
+	/**
+	 * Register recurring actions.
+	 */
+	public function register_recurring_actions() {
+		// Remove any unwrapped actions that may have been scheduled before scheduling the new wrapped ones.
+		$this-&gt;unschedule_unwrapped_actions();
+
+		// Check if Action Scheduler is available.
+		if ( ! function_exists( &#039;as_schedule_recurring_action&#039; ) || ! function_exists( &#039;as_schedule_single_action&#039; ) ) {
+			return;
+		}
+
+		$gmt_offset   = get_option( &#039;gmt_offset&#039; );
+		$offset_hours = ( $gmt_offset &gt; 0 ? &#039;-&#039; : &#039;+&#039; ) . absint( $gmt_offset ) . &#039; hours&#039;;
+
+		// Schedule daily sales event at midnight tomorrow.
+		$scheduled_sales_time = strtotime( &#039;00:00 tomorrow &#039; . $offset_hours );
+
+		as_schedule_recurring_action( $scheduled_sales_time, DAY_IN_SECONDS, &#039;woocommerce_scheduled_sales&#039;, array(), &#039;woocommerce&#039;, true );
+
+		$held_duration = get_option( &#039;woocommerce_hold_stock_minutes&#039;, &#039;60&#039; );
+
+		if ( &#039;&#039; !== $held_duration ) {
+			/**
+			 * Determines the interval at which to cancel unpaid orders in minutes.
+			 *
+			 * @since 5.1.0
+			 */
+			$cancel_unpaid_interval = apply_filters( &#039;woocommerce_cancel_unpaid_orders_interval_minutes&#039;, absint( $held_duration ) );
+
+			as_schedule_single_action( time() + ( absint( $cancel_unpaid_interval ) * 60 ), &#039;woocommerce_cancel_unpaid_orders&#039;, array(), &#039;woocommerce&#039;, true );
+
+		}
+
+		$tomorrow_3am = strtotime( &#039;tomorrow 03:00 am &#039; . $offset_hours );
+		$tomorrow_6am = strtotime( &#039;tomorrow 06:00 am &#039; . $offset_hours );
+
+		// Delay the first run of `woocommerce_cleanup_personal_data` by 10 seconds
+		// so it doesn&#039;t occur in the same request. WooCommerce Admin also schedules
+		// a daily cron that gets lost due to a race condition. WC_Privacy&#039;s background
+		// processing instance updates the cron schedule from within a cron job.
+		as_schedule_recurring_action( time() + 10, DAY_IN_SECONDS, &#039;woocommerce_cleanup_personal_data&#039;, array(), &#039;woocommerce&#039;, true );
+
+		as_schedule_recurring_action( $tomorrow_3am, DAY_IN_SECONDS, &#039;woocommerce_cleanup_logs&#039;, array(), &#039;woocommerce&#039;, true );
+
+		$next_run_timestamp = as_next_scheduled_action( &#039;woocommerce_cleanup_sessions&#039;, array(), &#039;woocommerce&#039; );
+		if ( $next_run_timestamp !== $tomorrow_6am ) {
+			as_unschedule_all_actions( &#039;woocommerce_cleanup_sessions&#039; );
+			as_schedule_recurring_action( $tomorrow_6am, 12 * HOUR_IN_SECONDS, &#039;woocommerce_cleanup_sessions&#039;, array(), &#039;woocommerce&#039;, true );
+		}
+
+		as_schedule_recurring_action( $tomorrow_6am, 15 * DAY_IN_SECONDS, &#039;woocommerce_geoip_updater&#039;, array(), &#039;woocommerce&#039;, true );
+
+		// Schedule the action to send tracking events if tracking is enabled.
+		$this-&gt;schedule_tracking_action();
+
+		as_schedule_recurring_action( $tomorrow_3am, DAY_IN_SECONDS, &#039;woocommerce_cleanup_rate_limits_wrapper&#039;, array(), &#039;woocommerce&#039;, true );
+
+		as_schedule_recurring_action( time(), DAY_IN_SECONDS, &#039;wc_admin_daily_wrapper&#039;, array(), &#039;woocommerce&#039;, true );
+
+		// Note: this is potentially redundant when the core package exists.
+		as_schedule_single_action( time() + 10, &#039;generate_category_lookup_table_wrapper&#039;, array(), &#039;woocommerce&#039;, true );
+	}
+
+	/**
+	 * Schedule the action send tracking events if tracking is enabled, or unregister it if tracking is disabled.
+	 * This will be called when the `woocommerce_allow_tracking` option is updated.
+	 *
+	 * @param string $old_value The old value of the `woocommerce_allow_tracking` option.
+	 * @param string $value     The new value of the `woocommerce_allow_tracking` option.
+	 *
+	 * @return void
+	 */
+	public function handle_tracking_setting_change( $old_value, $value ) {
+		if ( $old_value === $value ) {
+			return;
+		}
+		if ( false === wc_string_to_bool( $value ) ) {
+			as_unschedule_all_actions( &#039;woocommerce_tracker_send_event_wrapper&#039;, array(), &#039;woocommerce&#039; );
+		} else {
+			$this-&gt;schedule_tracking_action();
+		}
+	}
+
+	/**
+	 * Schedule the action to send tracking events if tracking is enabled.
+	 *
+	 * @return void
+	 */
+	public function schedule_tracking_action() {
+		if ( false === wc_string_to_bool( get_option( &#039;woocommerce_allow_tracking&#039;, &#039;no&#039; ) ) ) {
+			return;
+		}
+
+		/**
+		 * How frequent to schedule the tracker send event.
+		 *
+		 * @since 2.3.0
+		 */
+		$tracker_recurrence = apply_filters( &#039;woocommerce_tracker_event_recurrence&#039;, &#039;daily&#039; );
+		$core_internals     = wp_get_schedules();
+		as_schedule_recurring_action( time() + 10, $core_internals[ $tracker_recurrence ][&#039;interval&#039;], &#039;woocommerce_tracker_send_event_wrapper&#039;, array(), &#039;woocommerce&#039;, true );
+	}
+
+	/**
+	 * Initialize the customizer on the plugins_loaded action.
+	 * If WooCommerce is network activated, wp_is_block_theme() will be called too early,
+	 * which cause the warning in #58364. By initializing the customizer on plugins_loaded,
+	 * we ensure that wp_is_block_theme() is called after theme directories registration.
+	 *
+	 * @internal
+	 * @see https://github.com/woocommerce/woocommerce/issues/58364
+	 */
+	public function init_customizer() {
+		global $pagenow;
+		if (
+			&#039;customize.php&#039; === $pagenow ||
+			isset( $_REQUEST[&#039;customize_theme&#039;] ) || // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			! wp_is_block_theme()
+		) {
+			new WC_Shop_Customizer();
+		}
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on February 16th, 2026 at 11:12 pm.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1771283534"></script>
+    <script src="../js/search.js?updated=1771283534"></script>
+</body>
+</html>

@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="algolia-site-verification"  content="16BACF3DF9DCEE45" />
+    <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../images/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../images/favicon-180x180.png" />
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1771283541">
+    <link rel="stylesheet" href="../css/template.css?updated=1771283541">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img src="../images/logo.png" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://developer.woocommerce.com/docs/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title"><a href="../index.html">WooCommerce Code Reference</a></h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">BlockTemplateUtils.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+declare( strict_types=1 );
+
+namespace Automattic\WooCommerce\Blocks\Utils;
+
+use WP_Block_Patterns_Registry;
+use Automattic\WooCommerce\Admin\Features\Features;
+use Automattic\WooCommerce\Blocks\Options;
+use Automattic\WooCommerce\Blocks\Package;
+use Automattic\WooCommerce\Blocks\BlockTemplatesRegistry;
+use Automattic\WooCommerce\Blocks\Templates\ProductCatalogTemplate;
+
+/**
+ * Utility methods used for serving block templates from WooCommerce Blocks.
+ * {@internal This class and its methods should only be used within the BlockTemplateController.php and is not intended for public use.}
+ */
+class BlockTemplateUtils {
+	/**
+	 * Directory names for block templates
+	 *
+	 * Directory names conventions for block templates have changed with Gutenberg 12.1.0,
+	 * however, for backwards-compatibility, we also keep the older conventions, prefixed
+	 * with `DEPRECATED_`.
+	 *
+	 * @var array {
+	 *     @var string DEPRECATED_TEMPLATES  Old directory name of the block templates directory.
+	 *     @var string DEPRECATED_TEMPLATE_PARTS  Old directory name of the block template parts directory.
+	 *     @var string TEMPLATES_DIR_NAME  Directory name of the block templates directory.
+	 *     @var string TEMPLATE_PARTS_DIR_NAME  Directory name of the block template parts directory.
+	 * }
+	 */
+	const DIRECTORY_NAMES = array(
+		&#039;DEPRECATED_TEMPLATES&#039;      =&gt; &#039;block-templates&#039;,
+		&#039;DEPRECATED_TEMPLATE_PARTS&#039; =&gt; &#039;block-template-parts&#039;,
+		&#039;TEMPLATES&#039;                 =&gt; &#039;templates&#039;,
+		&#039;TEMPLATE_PARTS&#039;            =&gt; &#039;parts&#039;,
+	);
+
+	const TEMPLATES_ROOT_DIR = &#039;templates&#039;;
+
+	/**
+	 * WooCommerce plugin slug
+	 *
+	 * This is used to save templates to the DB which are stored against this value in the wp_terms table.
+	 *
+	 * @var string
+	 */
+	const PLUGIN_SLUG = &#039;woocommerce/woocommerce&#039;;
+
+	/**
+	 * Deprecated WooCommerce plugin slug
+	 *
+	 * For supporting users who have customized templates under the incorrect plugin slug during the first release.
+	 * More context found here: https://github.com/woocommerce/woocommerce-gutenberg-products-block/issues/5423.
+	 *
+	 * @var string
+	 */
+	const DEPRECATED_PLUGIN_SLUG = &#039;woocommerce&#039;;
+
+	/**
+	 * Returns the template matching the slug
+	 *
+	 * @param string $template_slug Slug of the template to retrieve.
+	 *
+	 * @return AbstractTemplate|AbstractTemplatePart|null
+	 */
+	public static function get_template( $template_slug ) {
+		$block_templates_registry = Package::container()-&gt;get( BlockTemplatesRegistry::class );
+		return $block_templates_registry-&gt;get_template( $template_slug );
+	}
+
+	/**
+	 * Returns an array containing the references of
+	 * the passed blocks and their inner blocks.
+	 *
+	 * @param array $blocks array of blocks.
+	 *
+	 * @return array block references to the passed blocks and their inner blocks.
+	 */
+	public static function flatten_blocks( &amp;$blocks ) {
+		$all_blocks = array();
+		$queue      = array();
+		foreach ( $blocks as &amp;$block ) {
+			$queue[] = &amp;$block;
+		}
+		$queue_count = count( $queue );
+
+		while ( $queue_count &gt; 0 ) {
+			$block = &amp;$queue[0];
+			array_shift( $queue );
+			$all_blocks[] = &amp;$block;
+
+			if ( ! empty( $block[&#039;innerBlocks&#039;] ) ) {
+				foreach ( $block[&#039;innerBlocks&#039;] as &amp;$inner_block ) {
+					$queue[] = &amp;$inner_block;
+				}
+			}
+
+			$queue_count = count( $queue );
+		}
+
+		return $all_blocks;
+	}
+
+	/**
+	 * Parses wp_template content and injects the current theme&#039;s
+	 * stylesheet as a theme attribute into each wp_template_part
+	 *
+	 * @param string $template_content serialized wp_template content.
+	 *
+	 * @return string Updated wp_template content.
+	 */
+	public static function inject_theme_attribute_in_content( $template_content ) {
+		$has_updated_content = false;
+		$new_content         = &#039;&#039;;
+		$template_blocks     = parse_blocks( $template_content );
+
+		$blocks = self::flatten_blocks( $template_blocks );
+		foreach ( $blocks as &amp;$block ) {
+			if (
+				&#039;core/template-part&#039; === $block[&#039;blockName&#039;] &amp;&amp;
+				! isset( $block[&#039;attrs&#039;][&#039;theme&#039;] )
+			) {
+				$block[&#039;attrs&#039;][&#039;theme&#039;] = wp_get_theme()-&gt;get_stylesheet();
+				$has_updated_content     = true;
+			}
+		}
+
+		if ( $has_updated_content ) {
+			foreach ( $template_blocks as &amp;$block ) {
+				$new_content .= serialize_block( $block );
+			}
+
+			return $new_content;
+		}
+
+		return $template_content;
+	}
+
+	/**
+	 * Build a unified template object based a post Object.
+	 * Important: This method is an almost identical duplicate from wp-includes/block-template-utils.php as it was not intended for public use. It has been modified to build templates from plugins rather than themes.
+	 *
+	 * @param \WP_Post $post Template post.
+	 *
+	 * @return \WP_Block_Template|\WP_Error Template.
+	 */
+	public static function build_template_result_from_post( $post ) {
+		$terms = get_the_terms( $post, &#039;wp_theme&#039; );
+
+		if ( is_wp_error( $terms ) ) {
+			return $terms;
+		}
+
+		if ( ! $terms ) {
+			return new \WP_Error( &#039;template_missing_theme&#039;, __( &#039;No theme is defined for this template.&#039;, &#039;woocommerce&#039; ) );
+		}
+
+		$theme          = $terms[0]-&gt;name;
+		$has_theme_file = true;
+
+		$template                 = new \WP_Block_Template();
+		$template-&gt;wp_id          = $post-&gt;ID;
+		$template-&gt;id             = $theme . &#039;//&#039; . $post-&gt;post_name;
+		$template-&gt;theme          = $theme;
+		$template-&gt;content        = $post-&gt;post_content;
+		$template-&gt;slug           = $post-&gt;post_name;
+		$template-&gt;source         = &#039;custom&#039;;
+		$template-&gt;type           = $post-&gt;post_type;
+		$template-&gt;description    = $post-&gt;post_excerpt;
+		$template-&gt;title          = $post-&gt;post_title;
+		$template-&gt;status         = $post-&gt;post_status;
+		$template-&gt;has_theme_file = $has_theme_file;
+		$template-&gt;is_custom      = false;
+		$template-&gt;post_types     = array(); // Don&#039;t appear in any Edit Post template selector dropdown.
+
+		if ( &#039;wp_template_part&#039; === $post-&gt;post_type ) {
+			$type_terms = get_the_terms( $post, &#039;wp_template_part_area&#039; );
+			if ( ! is_wp_error( $type_terms ) &amp;&amp; false !== $type_terms ) {
+				$template-&gt;area = $type_terms[0]-&gt;name;
+			}
+		}
+
+		// We are checking &#039;woocommerce&#039; to maintain classic templates which are saved to the DB,
+		// prior to updating to use the correct slug.
+		// More information found here: https://github.com/woocommerce/woocommerce-gutenberg-products-block/issues/5423.
+		if ( self::PLUGIN_SLUG === $theme || self::DEPRECATED_PLUGIN_SLUG === strtolower( $theme ) ) {
+			$template-&gt;origin = &#039;plugin&#039;;
+		}
+
+		/*
+		* Run the block hooks algorithm introduced in WP 6.4 on the template content.
+		*/
+		if ( function_exists( &#039;inject_ignored_hooked_blocks_metadata_attributes&#039; ) ) {
+			$hooked_blocks = get_hooked_blocks();
+			if ( ! empty( $hooked_blocks ) || has_filter( &#039;hooked_block_types&#039; ) ) {
+				$before_block_visitor = make_before_block_visitor( $hooked_blocks, $template );
+				$after_block_visitor  = make_after_block_visitor( $hooked_blocks, $template );
+				$blocks               = parse_blocks( $template-&gt;content );
+				$template-&gt;content    = traverse_and_serialize_blocks( $blocks, $before_block_visitor, $after_block_visitor );
+			}
+		}
+
+		return $template;
+	}
+
+	/**
+	 * Build a unified template object based on a theme file.
+	 *
+	 * @internal Important: This method is an almost identical duplicate from wp-includes/block-template-utils.php as it was not intended for public use. It has been modified to build templates from plugins rather than themes.
+	 *
+	 * @param array|object $template_file Theme file.
+	 * @param string       $template_type wp_template or wp_template_part.
+	 *
+	 * @return \WP_Block_Template Template.
+	 */
+	public static function build_template_result_from_file( $template_file, $template_type ) {
+		$template_file = (object) $template_file;
+
+		// If the theme has an archive-products.html template but does not have product taxonomy templates
+		// then we will load in the archive-product.html template from the theme to use for product taxonomies on the frontend.
+		$template_is_from_theme = &#039;theme&#039; === $template_file-&gt;source;
+		$theme_name             = wp_get_theme()-&gt;get( &#039;TextDomain&#039; );
+
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		$template_content  = file_get_contents( $template_file-&gt;path );
+		$template          = new \WP_Block_Template();
+		$template-&gt;id      = $template_is_from_theme ? $theme_name . &#039;//&#039; . $template_file-&gt;slug : self::PLUGIN_SLUG . &#039;//&#039; . $template_file-&gt;slug;
+		$template-&gt;theme   = $template_is_from_theme ? $theme_name : self::PLUGIN_SLUG;
+		$template-&gt;content = self::inject_theme_attribute_in_content( $template_content );
+		// Remove the term description block from the archive-product template
+		// as the Product Catalog/Shop page doesn&#039;t have a description.
+		if ( ProductCatalogTemplate::SLUG === $template_file-&gt;slug ) {
+			$template-&gt;content = str_replace( &#039;&lt;!-- wp:term-description {&quot;align&quot;:&quot;wide&quot;} /--&gt;&#039;, &#039;&#039;, $template-&gt;content );
+		}
+		// Plugin was agreed as a valid source value despite existing inline docs at the time of creating: https://github.com/WordPress/gutenberg/issues/36597#issuecomment-976232909.
+		$template-&gt;source         = $template_file-&gt;source ? $template_file-&gt;source : &#039;plugin&#039;;
+		$template-&gt;slug           = $template_file-&gt;slug;
+		$template-&gt;type           = $template_type;
+		$template-&gt;title          = ! empty( $template_file-&gt;title ) ? $template_file-&gt;title : self::get_block_template_title( $template_file-&gt;slug );
+		$template-&gt;description    = ! empty( $template_file-&gt;description ) ? $template_file-&gt;description : self::get_block_template_description( $template_file-&gt;slug );
+		$template-&gt;status         = &#039;publish&#039;;
+		$template-&gt;has_theme_file = true;
+		$template-&gt;origin         = $template_file-&gt;source;
+		$template-&gt;is_custom      = false; // Templates loaded from the filesystem aren&#039;t custom, ones that have been edited and loaded from the DB are.
+		$template-&gt;post_types     = array(); // Don&#039;t appear in any Edit Post template selector dropdown.
+		$template-&gt;area           = self::get_block_template_area( $template-&gt;slug, $template_type );
+
+		/*
+		* Run the block hooks algorithm introduced in WP 6.4 on the template content.
+		*/
+		if ( function_exists( &#039;inject_ignored_hooked_blocks_metadata_attributes&#039; ) ) {
+			$before_block_visitor = &#039;_inject_theme_attribute_in_template_part_block&#039;;
+			$after_block_visitor  = null;
+			$hooked_blocks        = get_hooked_blocks();
+			if ( ! empty( $hooked_blocks ) || has_filter( &#039;hooked_block_types&#039; ) ) {
+				$before_block_visitor = make_before_block_visitor( $hooked_blocks, $template );
+				$after_block_visitor  = make_after_block_visitor( $hooked_blocks, $template );
+			}
+			$blocks            = parse_blocks( $template-&gt;content );
+			$template-&gt;content = traverse_and_serialize_blocks( $blocks, $before_block_visitor, $after_block_visitor );
+		}
+
+		return $template;
+	}
+
+	/**
+	 * Build a new template object so that we can make Woo Blocks default templates available in the current theme should they not have any.
+	 *
+	 * @param string $template_file Block template file path.
+	 * @param string $template_type wp_template or wp_template_part.
+	 * @param string $template_slug Block template slug e.g. single-product.
+	 * @param bool   $template_is_from_theme If the block template file is being loaded from the current theme instead of Woo Blocks.
+	 *
+	 * @return object Block template object.
+	 */
+	public static function create_new_block_template_object( $template_file, $template_type, $template_slug, $template_is_from_theme = false ) {
+		$theme_name = wp_get_theme()-&gt;get( &#039;TextDomain&#039; );
+
+		$new_template_item = array(
+			&#039;slug&#039;        =&gt; $template_slug,
+			&#039;id&#039;          =&gt; $template_is_from_theme ? $theme_name . &#039;//&#039; . $template_slug : self::PLUGIN_SLUG . &#039;//&#039; . $template_slug,
+			&#039;path&#039;        =&gt; $template_file,
+			&#039;type&#039;        =&gt; $template_type,
+			&#039;theme&#039;       =&gt; $template_is_from_theme ? $theme_name : self::PLUGIN_SLUG,
+			// Plugin was agreed as a valid source value despite existing inline docs at the time of creating: https://github.com/WordPress/gutenberg/issues/36597#issuecomment-976232909.
+			&#039;source&#039;      =&gt; $template_is_from_theme ? &#039;theme&#039; : &#039;plugin&#039;,
+			&#039;title&#039;       =&gt; self::get_block_template_title( $template_slug ),
+			&#039;description&#039; =&gt; self::get_block_template_description( $template_slug ),
+			&#039;post_types&#039;  =&gt; array(), // Don&#039;t appear in any Edit Post template selector dropdown.
+		);
+
+		return (object) $new_template_item;
+	}
+
+	/**
+	 * Finds all nested template part file paths in a theme&#039;s directory.
+	 *
+	 * @param string $template_type wp_template or wp_template_part.
+	 * @return array $path_list A list of paths to all template part files.
+	 */
+	public static function get_template_paths( $template_type ) {
+		$wp_template_filenames = array(
+			&#039;archive-product.html&#039;,
+			&#039;order-confirmation.html&#039;,
+			&#039;page-cart.html&#039;,
+			&#039;page-checkout.html&#039;,
+			&#039;product-search-results.html&#039;,
+			&#039;single-product.html&#039;,
+			&#039;taxonomy-product_attribute.html&#039;,
+			&#039;taxonomy-product_brand.html&#039;,
+			&#039;taxonomy-product_cat.html&#039;,
+			&#039;taxonomy-product_tag.html&#039;,
+		);
+
+		if ( Features::is_enabled( &#039;launch-your-store&#039; ) ) {
+			$wp_template_filenames[] = &#039;coming-soon.html&#039;;
+		}
+
+		$wp_template_part_filenames = array(
+			&#039;checkout-header.html&#039;,
+			&#039;coming-soon-social-links.html&#039;,
+			&#039;mini-cart.html&#039;,
+			&#039;simple-product-add-to-cart-with-options.html&#039;,
+			&#039;external-product-add-to-cart-with-options.html&#039;,
+			&#039;variable-product-add-to-cart-with-options.html&#039;,
+			&#039;grouped-product-add-to-cart-with-options.html&#039;,
+		);
+
+		/*
+		* This may return the blockified directory for wp_templates.
+		* At the moment every template file has a corresponding blockified file.
+		* If we decide to add a new template file that doesn&#039;t, we will need to update this logic.
+		*/
+		$directory = self::get_templates_directory( $template_type );
+
+		$path_list = array_map(
+			function ( $filename ) use ( $directory ) {
+				return $directory . DIRECTORY_SEPARATOR . $filename;
+			},
+			&#039;wp_template&#039; === $template_type ? $wp_template_filenames : $wp_template_part_filenames
+		);
+
+		return $path_list;
+	}
+
+	/**
+	 * Gets the directory where templates of a specific template type can be found.
+	 *
+	 * @param string $template_type wp_template or wp_template_part.
+	 *
+	 * @return string
+	 */
+	public static function get_templates_directory( $template_type = &#039;wp_template&#039; ) {
+			$root_path                = dirname( __DIR__, 3 ) . &#039;/&#039; . self::TEMPLATES_ROOT_DIR . DIRECTORY_SEPARATOR;
+			$templates_directory      = $root_path . self::DIRECTORY_NAMES[&#039;TEMPLATES&#039;];
+			$template_parts_directory = $root_path . self::DIRECTORY_NAMES[&#039;TEMPLATE_PARTS&#039;];
+
+		if ( &#039;wp_template_part&#039; === $template_type ) {
+			return $template_parts_directory;
+		}
+
+		if ( self::should_use_blockified_product_grid_templates() ) {
+			return $templates_directory . &#039;/blockified&#039;;
+		}
+
+		return $templates_directory;
+	}
+
+	/**
+	 * Returns template title.
+	 *
+	 * @param string $template_slug The template slug (e.g. single-product).
+	 * @return string Human friendly title.
+	 */
+	public static function get_block_template_title( $template_slug ) {
+		$registered_template = self::get_template( $template_slug );
+		if ( isset( $registered_template ) ) {
+			return $registered_template-&gt;get_template_title();
+		} else {
+			// Human friendly title converted from the slug.
+			return ucwords( preg_replace( &#039;/[\-_]/&#039;, &#039; &#039;, $template_slug ) );
+		}
+	}
+
+	/**
+	 * Returns template description.
+	 *
+	 * @param string $template_slug The template slug (e.g. single-product).
+	 * @return string Template description.
+	 */
+	public static function get_block_template_description( $template_slug ) {
+		$registered_template = self::get_template( $template_slug );
+		if ( isset( $registered_template ) ) {
+			return $registered_template-&gt;get_template_description();
+		}
+		return &#039;&#039;;
+	}
+
+	/**
+	 * Returns area for template parts.
+	 *
+	 * @param string $template_slug The template part slug (e.g. mini-cart).
+	 * @param string $template_type Either `wp_template` or `wp_template_part`.
+	 * @return string Template part area.
+	 */
+	public static function get_block_template_area( $template_slug, $template_type ) {
+		if ( &#039;wp_template_part&#039; === $template_type ) {
+			$registered_template = self::get_template( $template_slug );
+			if ( $registered_template &amp;&amp; property_exists( $registered_template, &#039;template_area&#039; ) ) {
+				return $registered_template-&gt;template_area;
+			}
+		}
+		return &#039;uncategorized&#039;;
+	}
+
+	/**
+	 * Converts template paths into a slug
+	 *
+	 * @param string $path The template&#039;s path.
+	 * @return string slug
+	 */
+	public static function generate_template_slug_from_path( $path ) {
+		$template_extension = &#039;.html&#039;;
+
+		return basename( $path, $template_extension );
+	}
+
+	/**
+	 * Gets the first matching template part within themes directories
+	 *
+	 * Since [Gutenberg 12.1.0](https://github.com/WordPress/gutenberg/releases/tag/v12.1.0), the conventions for
+	 * block templates and parts directory has changed from `block-templates` and `block-templates-parts`
+	 * to `templates` and `parts` respectively.
+	 *
+	 * This function traverses all possible combinations of directory paths where a template or part
+	 * could be located and returns the first one which is readable, prioritizing the new convention
+	 * over the deprecated one, but maintaining that one for backwards compatibility.
+	 *
+	 * @param string $template_slug  The slug of the template (i.e. without the file extension).
+	 * @param string $template_type  Either `wp_template` or `wp_template_part`.
+	 *
+	 * @return string|null  The matched path or `null` if no match was found.
+	 */
+	public static function get_theme_template_path( $template_slug, $template_type = &#039;wp_template&#039; ) {
+		$template_filename      = $template_slug . &#039;.html&#039;;
+		$possible_templates_dir = &#039;wp_template&#039; === $template_type ? array(
+			self::DIRECTORY_NAMES[&#039;TEMPLATES&#039;],
+			self::DIRECTORY_NAMES[&#039;DEPRECATED_TEMPLATES&#039;],
+		) : array(
+			self::DIRECTORY_NAMES[&#039;TEMPLATE_PARTS&#039;],
+			self::DIRECTORY_NAMES[&#039;DEPRECATED_TEMPLATE_PARTS&#039;],
+		);
+
+		// Combine the possible root directory names with either the template directory
+		// or the stylesheet directory for child themes.
+		$possible_paths = array_reduce(
+			$possible_templates_dir,
+			function ( $carry, $item ) use ( $template_filename ) {
+				$filepath = DIRECTORY_SEPARATOR . $item . DIRECTORY_SEPARATOR . $template_filename;
+
+				$carry[] = get_stylesheet_directory() . $filepath;
+				$carry[] = get_template_directory() . $filepath;
+
+				return $carry;
+			},
+			array()
+		);
+
+		// Return the first matching.
+		foreach ( $possible_paths as $path ) {
+			if ( is_readable( $path ) ) {
+				return $path;
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * Check if the theme has a template. So we know if to load our own in or not.
+	 *
+	 * @param string $template_name name of the template file without .html extension e.g. &#039;single-product&#039;.
+	 * @return boolean
+	 */
+	public static function theme_has_template( $template_name ) {
+		return (bool) self::get_theme_template_path( $template_name, &#039;wp_template&#039; );
+	}
+
+	/**
+	 * Check if the theme has a template. So we know if to load our own in or not.
+	 *
+	 * @param string $template_name name of the template file without .html extension e.g. &#039;single-product&#039;.
+	 * @return boolean
+	 */
+	public static function theme_has_template_part( $template_name ) {
+		return (bool) self::get_theme_template_path( $template_name, &#039;wp_template_part&#039; );
+	}
+
+	/**
+	 * Checks to see if they are using a compatible version of WP, or if not they have a compatible version of the Gutenberg plugin installed.
+	 *
+	 * @param string $template_type Optional. Template type: `wp_template` or `wp_template_part`.
+	 *                              Default `wp_template`.
+	 * @return boolean
+	 */
+	public static function supports_block_templates( $template_type = &#039;wp_template&#039; ) {
+		if ( &#039;wp_template_part&#039; === $template_type &amp;&amp; ( wp_is_block_theme() || current_theme_supports( &#039;block-template-parts&#039; ) ) ) {
+			return true;
+		} elseif ( &#039;wp_template&#039; === $template_type &amp;&amp; wp_is_block_theme() ) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Gets the `archive-product` fallback template stored on the db for a given slug.
+	 *
+	 * @param string $template_slug Slug to check for fallbacks.
+	 * @param array  $db_templates Templates that have already been found on the db.
+	 * @return boolean|object
+	 */
+	public static function get_fallback_template_from_db( $template_slug, $db_templates ) {
+		$registered_template = self::get_template( $template_slug );
+
+		if ( $registered_template &amp;&amp; isset( $registered_template-&gt;fallback_template ) ) {
+			foreach ( $db_templates as $template ) {
+				if ( $registered_template-&gt;fallback_template === $template-&gt;slug ) {
+					return $template;
+				}
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Removes templates from the theme or WooCommerce which have the same slug
+	 * as template saved in the database with the `woocommerce/woocommerce` theme.
+	 * Before WC migrated to the Template Registration API from WordPress, templates
+	 * were saved in the database with the `woocommerce/woocommerce` theme instead
+	 * of the theme&#039;s slug.
+	 *
+	 * @param \WP_Block_Template[]|\stdClass[] $templates List of templates to run the filter on.
+	 *
+	 * @return array List of templates with duplicates removed. The customised alternative is preferred over the theme default.
+	 */
+	public static function remove_templates_with_custom_alternative( $templates ) {
+
+		// Get the slugs of all templates that have been customised and saved in the database.
+		$customised_template_slugs = array_column(
+			array_filter(
+				$templates,
+				function ( $template ) {
+					// This template has been customised and saved as a post.
+					return &#039;custom&#039; === $template-&gt;source &amp;&amp; ( self::PLUGIN_SLUG === $template-&gt;theme || self::DEPRECATED_PLUGIN_SLUG === $template-&gt;theme );
+				}
+			),
+			&#039;slug&#039;
+		);
+
+		// Remove theme and WC templates that have the same slug as a customised one.
+		return array_values(
+			array_filter(
+				$templates,
+				function ( $template ) use ( $customised_template_slugs ) {
+					// This template has been customised and saved as a post, so return it.
+					return ! ( &#039;custom&#039; !== $template-&gt;source &amp;&amp; in_array( $template-&gt;slug, $customised_template_slugs, true ) );
+				}
+			)
+		);
+	}
+
+	/**
+	 * Removes customized templates that shouldn&#039;t be available. That means customized templates based on the
+	 * WooCommerce default template when there is a customized template based on the theme template.
+	 *
+	 * @param \WP_Block_Template[]|\stdClass[] $templates  List of templates to run the filter on.
+	 *
+	 * @return array Filtered list of templates with only relevant templates available.
+	 */
+	public static function remove_duplicate_customized_templates( $templates ) {
+		$theme_slug = get_stylesheet();
+
+		$customized_theme_template_slugs = array_column(
+			array_filter(
+				$templates,
+				function ( $template ) use ( $theme_slug ) {
+					// This template has been customised and saved as a post.
+					return &#039;custom&#039; === $template-&gt;source &amp;&amp; $theme_slug === $template-&gt;theme;
+				}
+			),
+			&#039;slug&#039;
+		);
+
+		return array_filter(
+			$templates,
+			function ( $template ) use ( $theme_slug, $customized_theme_template_slugs ) {
+				if ( $template-&gt;theme === $theme_slug ) {
+					// This is a customized template based on the theme template, so it should be returned.
+					return true;
+				}
+				// Customized from the WooCommerce default template: keep only if there is no customized theme template with same slug.
+				if ( &#039;custom&#039; === $template-&gt;source ) {
+					return ! in_array( $template-&gt;slug, $customized_theme_template_slugs, true );
+				}
+				return true;
+			}
+		);
+	}
+
+	/**
+	 * Returns whether the blockified templates should be used or not.
+	 * If the option is not stored on the db, we need to check if the current theme is a block one or not.
+	 *
+	 * @return boolean
+	 */
+	public static function should_use_blockified_product_grid_templates() {
+		$use_blockified_templates = get_option( Options::WC_BLOCK_USE_BLOCKIFIED_PRODUCT_GRID_BLOCK_AS_TEMPLATE );
+
+		if ( false === $use_blockified_templates ) {
+			return wp_is_block_theme();
+		}
+
+		return wc_string_to_bool( $use_blockified_templates );
+	}
+
+	/**
+	 * Determines whether the provided $blocks contains any of the $block_names,
+	 * or if they contain a pattern that contains any of the $block_names.
+	 *
+	 * @param string[]   $block_names Full block types to look for.
+	 * @param WP_Block[] $blocks      Array of block objects.
+	 * @return bool Whether the content contains the specified block.
+	 */
+	public static function has_block_including_patterns( $block_names, $blocks ) {
+		$flattened_blocks = self::flatten_blocks( $blocks );
+
+		foreach ( $flattened_blocks as &amp;$block ) {
+			if ( isset( $block[&#039;blockName&#039;] ) &amp;&amp; in_array( $block[&#039;blockName&#039;], $block_names, true ) ) {
+				return true;
+			}
+			if (
+				&#039;core/pattern&#039; === $block[&#039;blockName&#039;] &amp;&amp;
+				isset( $block[&#039;attrs&#039;][&#039;slug&#039;] )
+			) {
+				$registry = WP_Block_Patterns_Registry::get_instance();
+				$pattern  = $registry-&gt;get_registered( $block[&#039;attrs&#039;][&#039;slug&#039;] );
+				if ( isset( $pattern[&#039;content&#039;] ) ) {
+					$pattern_blocks = parse_blocks( $pattern[&#039;content&#039;] );
+					if ( self::has_block_including_patterns( $block_names, $pattern_blocks ) ) {
+						return true;
+					}
+				}
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Returns whether the passed `$template` has the legacy template block.
+	 *
+	 * @param object $template The template object.
+	 * @return boolean
+	 */
+	public static function template_has_legacy_template_block( $template ) {
+		if ( has_block( &#039;woocommerce/legacy-template&#039;, $template-&gt;content ) ) {
+			return true;
+		}
+
+		$blocks = parse_blocks( $template-&gt;content );
+
+		return self::has_block_including_patterns( array( &#039;woocommerce/legacy-template&#039; ), $blocks );
+	}
+
+	/**
+	 * Updates the title, description and area of a template to the correct values and to make them more user-friendly.
+	 * For example, instead of:
+	 * - Title: `Tag (product_tag)`
+	 * - Description: `Displays taxonomy: Tag.`
+	 * we display:
+	 * - Title: `Products by Tag`
+	 * - Description: `Displays products filtered by a tag.`.
+	 *
+	 * @param WP_Block_Template $template The template object.
+	 * @param string            $template_type wp_template or wp_template_part.
+	 *
+	 * @return WP_Block_Template
+	 */
+	public static function update_template_data( $template, $template_type ) {
+		if ( ! $template ) {
+			return $template;
+		}
+		if ( empty( $template-&gt;title ) || $template-&gt;title === $template-&gt;slug ) {
+			$template-&gt;title = self::get_block_template_title( $template-&gt;slug );
+		}
+		if ( empty( $template-&gt;description ) ) {
+			$template-&gt;description = self::get_block_template_description( $template-&gt;slug );
+		}
+		if ( empty( $template-&gt;area ) || &#039;uncategorized&#039; === $template-&gt;area ) {
+			$template-&gt;area = self::get_block_template_area( $template-&gt;slug, $template_type );
+		}
+
+		return $template;
+	}
+
+	/**
+	 * Gets the templates saved in the database.
+	 *
+	 * @param array  $slugs An array of slugs to retrieve templates for.
+	 * @param string $template_type wp_template or wp_template_part.
+	 *
+	 * @return \WP_Block_Template[] An array of found templates.
+	 */
+	public static function get_block_templates_from_db( $slugs = array(), $template_type = &#039;wp_template&#039; ) {
+		$check_query_args = array(
+			&#039;post_type&#039;      =&gt; $template_type,
+			&#039;posts_per_page&#039; =&gt; -1,
+			&#039;no_found_rows&#039;  =&gt; true,
+			&#039;tax_query&#039;      =&gt; array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+				array(
+					&#039;taxonomy&#039; =&gt; &#039;wp_theme&#039;,
+					&#039;field&#039;    =&gt; &#039;name&#039;,
+					&#039;terms&#039;    =&gt; array( self::DEPRECATED_PLUGIN_SLUG, self::PLUGIN_SLUG, get_stylesheet() ),
+				),
+			),
+		);
+
+		if ( is_array( $slugs ) &amp;&amp; count( $slugs ) &gt; 0 ) {
+			$check_query_args[&#039;post_name__in&#039;] = $slugs;
+		}
+
+		$check_query         = new \WP_Query( $check_query_args );
+		$saved_woo_templates = $check_query-&gt;posts;
+
+		return array_map(
+			function ( $saved_woo_template ) {
+				return self::build_template_result_from_post( $saved_woo_template );
+			},
+			$saved_woo_templates
+		);
+	}
+
+	/**
+	 * Gets the template part by slug
+	 *
+	 * @param string $slug The template part slug.
+	 *
+	 * @return string The template part content.
+	 */
+	public static function get_template_part( $slug ) {
+		$templates_from_db = self::get_block_templates_from_db( array( $slug ), &#039;wp_template_part&#039; );
+		if ( count( $templates_from_db ) &gt; 0 ) {
+			$template_slug_to_load = $templates_from_db[0]-&gt;theme;
+		} else {
+			$theme_has_template    = self::theme_has_template_part( $slug );
+			$template_slug_to_load = $theme_has_template ? get_stylesheet() : self::PLUGIN_SLUG;
+		}
+		$template_part = get_block_template( $template_slug_to_load . &#039;//&#039; . $slug, &#039;wp_template_part&#039; );
+
+		if ( $template_part &amp;&amp; ! empty( $template_part-&gt;content ) ) {
+			return $template_part-&gt;content;
+		}
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		return file_get_contents( self::get_templates_directory( &#039;wp_template_part&#039; ) . DIRECTORY_SEPARATOR . $slug . &#039;.html&#039; );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on February 16th, 2026 at 11:12 pm.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1771283541"></script>
+    <script src="../js/search.js?updated=1771283541"></script>
+</body>
+</html>

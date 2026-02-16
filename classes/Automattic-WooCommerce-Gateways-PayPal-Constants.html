@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="algolia-site-verification"  content="16BACF3DF9DCEE45" />
+    <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../images/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../images/favicon-180x180.png" />
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1771283618">
+    <link rel="stylesheet" href="../css/template.css?updated=1771283618">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img src="../images/logo.png" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://developer.woocommerce.com/docs/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title"><a href="../index.html">WooCommerce Code Reference</a></h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic.html">Automattic</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce.html">WooCommerce</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce-gateways.html">Gateways</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce-gateways-paypal.html">PayPal</a></li>
+    </ul>
+
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    Constants
+
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="../packages/WooCommerce.html">WooCommerce</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.14">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">14</span>
+</aside>
+
+            <p class="phpdocumentor-summary">PayPal Gateway Constants.</p>
+
+    <section class="phpdocumentor-description"><p>Provides constants for PayPal payment statuses, intents, and other PayPal-related values.</p>
+</section>
+
+
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">10.5.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+
+
+
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_FIELDS_TO_REDACT">FIELDS_TO_REDACT</a>
+    <span>
+        &nbsp;= array(&#039;given_name&#039;, &#039;surname&#039;, &#039;full_name&#039;, &#039;address_line_1&#039;, &#039;address_line_2&#039;, &#039;admin_area_1&#039;, &#039;admin_area_2&#039;, &#039;postal_code&#039;, &#039;phone&#039;, &#039;phone_number&#039;, &#039;national_number&#039;)                    </span>
+</dt>
+<dd>Fields to redact from logs.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_INTENT_AUTHORIZE">INTENT_AUTHORIZE</a>
+    <span>
+        &nbsp;= &#039;AUTHORIZE&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_INTENT_CAPTURE">INTENT_CAPTURE</a>
+    <span>
+        &nbsp;= &#039;CAPTURE&#039;                    </span>
+</dt>
+<dd>PayPal payment intents.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYMENT_ACTION_AUTHORIZE">PAYMENT_ACTION_AUTHORIZE</a>
+    <span>
+        &nbsp;= &#039;authorize&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYMENT_ACTION_CAPTURE">PAYMENT_ACTION_CAPTURE</a>
+    <span>
+        &nbsp;= &#039;capture&#039;                    </span>
+</dt>
+<dd>PayPal payment actions.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYMENT_SOURCE_PAYLATER">PAYMENT_SOURCE_PAYLATER</a>
+    <span>
+        &nbsp;= &#039;paylater&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYMENT_SOURCE_PAYPAL">PAYMENT_SOURCE_PAYPAL</a>
+    <span>
+        &nbsp;= &#039;paypal&#039;                    </span>
+</dt>
+<dd>Supported payment sources.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYMENT_SOURCE_VENMO">PAYMENT_SOURCE_VENMO</a>
+    <span>
+        &nbsp;= &#039;venmo&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ADDRESS_LINE_MAX_LENGTH">PAYPAL_ADDRESS_LINE_MAX_LENGTH</a>
+    <span>
+        &nbsp;= 300                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_CITY_MAX_LENGTH">PAYPAL_CITY_MAX_LENGTH</a>
+    <span>
+        &nbsp;= 120                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_COUNTRY_CODE_LENGTH">PAYPAL_COUNTRY_CODE_LENGTH</a>
+    <span>
+        &nbsp;= 2                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_INVOICE_ID_MAX_LENGTH">PAYPAL_INVOICE_ID_MAX_LENGTH</a>
+    <span>
+        &nbsp;= 127                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ISSUE_AUTHORIZATION_ALREADY_CAPTURED">PAYPAL_ISSUE_AUTHORIZATION_ALREADY_CAPTURED</a>
+    <span>
+        &nbsp;= &#039;AUTHORIZATION_ALREADY_CAPTURED&#039;                    </span>
+</dt>
+<dd>PayPal authorization already captured issue code.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ISSUE_PAYEE_ACCOUNT_LOCKED_OR_CLOSED">PAYPAL_ISSUE_PAYEE_ACCOUNT_LOCKED_OR_CLOSED</a>
+    <span>
+        &nbsp;= &#039;PAYEE_ACCOUNT_LOCKED_OR_CLOSED&#039;                    </span>
+</dt>
+<dd>PayPal account locked or closed issue code.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ISSUE_PAYEE_ACCOUNT_RESTRICTED">PAYPAL_ISSUE_PAYEE_ACCOUNT_RESTRICTED</a>
+    <span>
+        &nbsp;= &#039;PAYEE_ACCOUNT_RESTRICTED&#039;                    </span>
+</dt>
+<dd>PayPal account restricted issue code.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_LOCALE_MAX_LENGTH">PAYPAL_LOCALE_MAX_LENGTH</a>
+    <span>
+        &nbsp;= 10                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ORDER_ITEM_NAME_MAX_LENGTH">PAYPAL_ORDER_ITEM_NAME_MAX_LENGTH</a>
+    <span>
+        &nbsp;= 127                    </span>
+</dt>
+<dd>Maximum lengths for PayPal fields.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ORDER_META_ADDRESSES_UPDATED">PAYPAL_ORDER_META_ADDRESSES_UPDATED</a>
+    <span>
+        &nbsp;= &#039;_paypal_addresses_updated&#039;                    </span>
+</dt>
+<dd>Meta key for storing PayPal addresses updated flag in order meta.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ORDER_META_AUTHORIZATION_CHECKED">PAYPAL_ORDER_META_AUTHORIZATION_CHECKED</a>
+    <span>
+        &nbsp;= &#039;_paypal_authorization_checked&#039;                    </span>
+</dt>
+<dd>Meta key for storing PayPal authorization checked flag in order meta.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ORDER_META_AUTHORIZATION_ID">PAYPAL_ORDER_META_AUTHORIZATION_ID</a>
+    <span>
+        &nbsp;= &#039;_paypal_authorization_id&#039;                    </span>
+</dt>
+<dd>Meta key for storing PayPal authorization ID in order meta.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ORDER_META_CAPTURE_ID">PAYPAL_ORDER_META_CAPTURE_ID</a>
+    <span>
+        &nbsp;= &#039;_paypal_capture_id&#039;                    </span>
+</dt>
+<dd>Meta key for storing PayPal capture ID in order meta.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ORDER_META_ORDER_ID">PAYPAL_ORDER_META_ORDER_ID</a>
+    <span>
+        &nbsp;= &#039;_paypal_order_id&#039;                    </span>
+</dt>
+<dd>Meta key for storing PayPal order ID in order meta.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ORDER_META_PAYMENT_SOURCE">PAYPAL_ORDER_META_PAYMENT_SOURCE</a>
+    <span>
+        &nbsp;= &#039;_paypal_payment_source&#039;                    </span>
+</dt>
+<dd>Meta key for storing PayPal payment source in order meta.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ORDER_META_SHIPPING_CALLBACK_TOKEN">PAYPAL_ORDER_META_SHIPPING_CALLBACK_TOKEN</a>
+    <span>
+        &nbsp;= &#039;_paypal_shipping_callback_token&#039;                    </span>
+</dt>
+<dd>Meta key for storing PayPal shipping callback token in order meta.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_ORDER_META_STATUS">PAYPAL_ORDER_META_STATUS</a>
+    <span>
+        &nbsp;= &#039;_paypal_status&#039;                    </span>
+</dt>
+<dd>Meta key for storing PayPal payment status in order meta.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_POSTAL_CODE_MAX_LENGTH">PAYPAL_POSTAL_CODE_MAX_LENGTH</a>
+    <span>
+        &nbsp;= 60                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_PAYPAL_STATE_MAX_LENGTH">PAYPAL_STATE_MAX_LENGTH</a>
+    <span>
+        &nbsp;= 300                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_SHIPPING_GET_FROM_FILE">SHIPPING_GET_FROM_FILE</a>
+    <span>
+        &nbsp;= &#039;GET_FROM_FILE&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_SHIPPING_NO_SHIPPING">SHIPPING_NO_SHIPPING</a>
+    <span>
+        &nbsp;= &#039;NO_SHIPPING&#039;                    </span>
+</dt>
+<dd>PayPal shipping preferences.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_SHIPPING_SET_PROVIDED_ADDRESS">SHIPPING_SET_PROVIDED_ADDRESS</a>
+    <span>
+        &nbsp;= &#039;SET_PROVIDED_ADDRESS&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_STATUS_APPROVED">STATUS_APPROVED</a>
+    <span>
+        &nbsp;= &#039;APPROVED&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_STATUS_AUTHORIZED">STATUS_AUTHORIZED</a>
+    <span>
+        &nbsp;= &#039;AUTHORIZED&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_STATUS_CAPTURED">STATUS_CAPTURED</a>
+    <span>
+        &nbsp;= &#039;CAPTURED&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_STATUS_COMPLETED">STATUS_COMPLETED</a>
+    <span>
+        &nbsp;= &#039;COMPLETED&#039;                    </span>
+</dt>
+<dd>PayPal payment statuses.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_STATUS_PAYER_ACTION_REQUIRED">STATUS_PAYER_ACTION_REQUIRED</a>
+    <span>
+        &nbsp;= &#039;PAYER_ACTION_REQUIRED&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_SUPPORTED_CURRENCIES">SUPPORTED_CURRENCIES</a>
+    <span>
+        &nbsp;= array(
+    &#039;AUD&#039;,
+    // Australian Dollar.
+    &#039;BRL&#039;,
+    // Brazilian Real.
+    &#039;CAD&#039;,
+    // Canadian Dollar.
+    &#039;CNY&#039;,
+    // Chinese Renminbi.
+    &#039;CZK&#039;,
+    // Czech Koruna.
+    &#039;DKK&#039;,
+    // Danish Krone.
+    &#039;EUR&#039;,
+    // Euro.
+    &#039;HKD&#039;,
+    // Hong Kong Dollar.
+    &#039;HUF&#039;,
+    // Hungarian Forint.
+    &#039;ILS&#039;,
+    // Israeli New Shekel.
+    &#039;JPY&#039;,
+    // Japanese Yen.
+    &#039;MYR&#039;,
+    // Malaysian Ringgit.
+    &#039;MXN&#039;,
+    // Mexican Peso.
+    &#039;TWD&#039;,
+    // New Taiwan Dollar.
+    &#039;NZD&#039;,
+    // New Zealand Dollar.
+    &#039;NOK&#039;,
+    // Norwegian Krone.
+    &#039;PHP&#039;,
+    // Philippine Peso.
+    &#039;PLN&#039;,
+    // Polish Złoty.
+    &#039;GBP&#039;,
+    // Pound Sterling.
+    &#039;SGD&#039;,
+    // Singapore Dollar.
+    &#039;SEK&#039;,
+    // Swedish Krona.
+    &#039;CHF&#039;,
+    // Swiss Franc.
+    &#039;THB&#039;,
+    // Thai Baht.
+    &#039;USD&#039;,
+    // United States Dollar.
+    &#039;RUB&#039;,
+)                    </span>
+</dt>
+<dd>List of currencies supported by PayPal (Orders API V2).</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_SUPPORTED_PAYMENT_SOURCES">SUPPORTED_PAYMENT_SOURCES</a>
+    <span>
+        &nbsp;= array(self::PAYMENT_SOURCE_PAYPAL, self::PAYMENT_SOURCE_VENMO, self::PAYMENT_SOURCE_PAYLATER)                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_USER_ACTION_PAY_NOW">USER_ACTION_PAY_NOW</a>
+    <span>
+        &nbsp;= &#039;PAY_NOW&#039;                    </span>
+</dt>
+<dd>PayPal user actions.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_VOIDED">VOIDED</a>
+    <span>
+        &nbsp;= &#039;VOIDED&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Gateways-PayPal-Constants.html#constant_WPCOM_PROXY_REQUEST_TIMEOUT">WPCOM_PROXY_REQUEST_TIMEOUT</a>
+    <span>
+        &nbsp;= 60                    </span>
+</dt>
+<dd>PayPal proxy request timeout.</dd>
+
+                </dl>
+
+
+
+        
+    <section class="phpdocumentor-constants">
+        <h3 class="phpdocumentor-elements__header" id="constants">
+            Constants
+            <a href="#constants" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_FIELDS_TO_REDACT">
+        FIELDS_TO_REDACT
+        <a href="#constant_FIELDS_TO_REDACT" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.79">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">79</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Fields to redact from logs.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">FIELDS_TO_REDACT</span>
+    = <span class="phpdocumentor-signature__default-value">array(&#039;given_name&#039;, &#039;surname&#039;, &#039;full_name&#039;, &#039;address_line_1&#039;, &#039;address_line_2&#039;, &#039;admin_area_1&#039;, &#039;admin_area_2&#039;, &#039;postal_code&#039;, &#039;phone&#039;, &#039;phone_number&#039;, &#039;national_number&#039;)</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_INTENT_AUTHORIZE">
+        INTENT_AUTHORIZE
+        <a href="#constant_INTENT_AUTHORIZE" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.34">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">34</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">INTENT_AUTHORIZE</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;AUTHORIZE&#039;</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_INTENT_CAPTURE">
+        INTENT_CAPTURE
+        <a href="#constant_INTENT_CAPTURE" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.33">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">33</span>
+</aside>
+
+        <p class="phpdocumentor-summary">PayPal payment intents.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">INTENT_CAPTURE</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;CAPTURE&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYMENT_ACTION_AUTHORIZE">
+        PAYMENT_ACTION_AUTHORIZE
+        <a href="#constant_PAYMENT_ACTION_AUTHORIZE" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.40">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYMENT_ACTION_AUTHORIZE</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;authorize&#039;</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYMENT_ACTION_CAPTURE">
+        PAYMENT_ACTION_CAPTURE
+        <a href="#constant_PAYMENT_ACTION_CAPTURE" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.39">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">39</span>
+</aside>
+
+        <p class="phpdocumentor-summary">PayPal payment actions.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYMENT_ACTION_CAPTURE</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;capture&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYMENT_SOURCE_PAYLATER">
+        PAYMENT_SOURCE_PAYLATER
+        <a href="#constant_PAYMENT_SOURCE_PAYLATER" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.71">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">71</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYMENT_SOURCE_PAYLATER</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;paylater&#039;</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYMENT_SOURCE_PAYPAL">
+        PAYMENT_SOURCE_PAYPAL
+        <a href="#constant_PAYMENT_SOURCE_PAYPAL" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.69">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">69</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Supported payment sources.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYMENT_SOURCE_PAYPAL</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;paypal&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYMENT_SOURCE_VENMO">
+        PAYMENT_SOURCE_VENMO
+        <a href="#constant_PAYMENT_SOURCE_VENMO" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.70">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">70</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYMENT_SOURCE_VENMO</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;venmo&#039;</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ADDRESS_LINE_MAX_LENGTH">
+        PAYPAL_ADDRESS_LINE_MAX_LENGTH
+        <a href="#constant_PAYPAL_ADDRESS_LINE_MAX_LENGTH" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.59">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">59</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ADDRESS_LINE_MAX_LENGTH</span>
+    = <span class="phpdocumentor-signature__default-value">300</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_CITY_MAX_LENGTH">
+        PAYPAL_CITY_MAX_LENGTH
+        <a href="#constant_PAYPAL_CITY_MAX_LENGTH" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.62">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">62</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_CITY_MAX_LENGTH</span>
+    = <span class="phpdocumentor-signature__default-value">120</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_COUNTRY_CODE_LENGTH">
+        PAYPAL_COUNTRY_CODE_LENGTH
+        <a href="#constant_PAYPAL_COUNTRY_CODE_LENGTH" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.60">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">60</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_COUNTRY_CODE_LENGTH</span>
+    = <span class="phpdocumentor-signature__default-value">2</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_INVOICE_ID_MAX_LENGTH">
+        PAYPAL_INVOICE_ID_MAX_LENGTH
+        <a href="#constant_PAYPAL_INVOICE_ID_MAX_LENGTH" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.58">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">58</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_INVOICE_ID_MAX_LENGTH</span>
+    = <span class="phpdocumentor-signature__default-value">127</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ISSUE_AUTHORIZATION_ALREADY_CAPTURED">
+        PAYPAL_ISSUE_AUTHORIZATION_ALREADY_CAPTURED
+        <a href="#constant_PAYPAL_ISSUE_AUTHORIZATION_ALREADY_CAPTURED" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.131">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">131</span>
+</aside>
+
+        <p class="phpdocumentor-summary">PayPal authorization already captured issue code.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ISSUE_AUTHORIZATION_ALREADY_CAPTURED</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;AUTHORIZATION_ALREADY_CAPTURED&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ISSUE_PAYEE_ACCOUNT_LOCKED_OR_CLOSED">
+        PAYPAL_ISSUE_PAYEE_ACCOUNT_LOCKED_OR_CLOSED
+        <a href="#constant_PAYPAL_ISSUE_PAYEE_ACCOUNT_LOCKED_OR_CLOSED" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.138">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">138</span>
+</aside>
+
+        <p class="phpdocumentor-summary">PayPal account locked or closed issue code.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ISSUE_PAYEE_ACCOUNT_LOCKED_OR_CLOSED</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;PAYEE_ACCOUNT_LOCKED_OR_CLOSED&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ISSUE_PAYEE_ACCOUNT_RESTRICTED">
+        PAYPAL_ISSUE_PAYEE_ACCOUNT_RESTRICTED
+        <a href="#constant_PAYPAL_ISSUE_PAYEE_ACCOUNT_RESTRICTED" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.145">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">145</span>
+</aside>
+
+        <p class="phpdocumentor-summary">PayPal account restricted issue code.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ISSUE_PAYEE_ACCOUNT_RESTRICTED</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;PAYEE_ACCOUNT_RESTRICTED&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_LOCALE_MAX_LENGTH">
+        PAYPAL_LOCALE_MAX_LENGTH
+        <a href="#constant_PAYPAL_LOCALE_MAX_LENGTH" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.64">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">64</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_LOCALE_MAX_LENGTH</span>
+    = <span class="phpdocumentor-signature__default-value">10</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ORDER_ITEM_NAME_MAX_LENGTH">
+        PAYPAL_ORDER_ITEM_NAME_MAX_LENGTH
+        <a href="#constant_PAYPAL_ORDER_ITEM_NAME_MAX_LENGTH" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.57">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">57</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Maximum lengths for PayPal fields.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ORDER_ITEM_NAME_MAX_LENGTH</span>
+    = <span class="phpdocumentor-signature__default-value">127</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ORDER_META_ADDRESSES_UPDATED">
+        PAYPAL_ORDER_META_ADDRESSES_UPDATED
+        <a href="#constant_PAYPAL_ORDER_META_ADDRESSES_UPDATED" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.199">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">199</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Meta key for storing PayPal addresses updated flag in order meta.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ORDER_META_ADDRESSES_UPDATED</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;_paypal_addresses_updated&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">10.5.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ORDER_META_AUTHORIZATION_CHECKED">
+        PAYPAL_ORDER_META_AUTHORIZATION_CHECKED
+        <a href="#constant_PAYPAL_ORDER_META_AUTHORIZATION_CHECKED" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.181">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">181</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Meta key for storing PayPal authorization checked flag in order meta.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ORDER_META_AUTHORIZATION_CHECKED</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;_paypal_authorization_checked&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">10.5.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ORDER_META_AUTHORIZATION_ID">
+        PAYPAL_ORDER_META_AUTHORIZATION_ID
+        <a href="#constant_PAYPAL_ORDER_META_AUTHORIZATION_ID" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.172">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">172</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Meta key for storing PayPal authorization ID in order meta.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ORDER_META_AUTHORIZATION_ID</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;_paypal_authorization_id&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">10.5.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ORDER_META_CAPTURE_ID">
+        PAYPAL_ORDER_META_CAPTURE_ID
+        <a href="#constant_PAYPAL_ORDER_META_CAPTURE_ID" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.163">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">163</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Meta key for storing PayPal capture ID in order meta.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ORDER_META_CAPTURE_ID</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;_paypal_capture_id&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">10.5.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ORDER_META_ORDER_ID">
+        PAYPAL_ORDER_META_ORDER_ID
+        <a href="#constant_PAYPAL_ORDER_META_ORDER_ID" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.190">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">190</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Meta key for storing PayPal order ID in order meta.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ORDER_META_ORDER_ID</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;_paypal_order_id&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">10.5.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ORDER_META_PAYMENT_SOURCE">
+        PAYPAL_ORDER_META_PAYMENT_SOURCE
+        <a href="#constant_PAYPAL_ORDER_META_PAYMENT_SOURCE" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.208">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">208</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Meta key for storing PayPal payment source in order meta.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ORDER_META_PAYMENT_SOURCE</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;_paypal_payment_source&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">10.5.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ORDER_META_SHIPPING_CALLBACK_TOKEN">
+        PAYPAL_ORDER_META_SHIPPING_CALLBACK_TOKEN
+        <a href="#constant_PAYPAL_ORDER_META_SHIPPING_CALLBACK_TOKEN" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.217">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">217</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Meta key for storing PayPal shipping callback token in order meta.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ORDER_META_SHIPPING_CALLBACK_TOKEN</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;_paypal_shipping_callback_token&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">10.5.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_ORDER_META_STATUS">
+        PAYPAL_ORDER_META_STATUS
+        <a href="#constant_PAYPAL_ORDER_META_STATUS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.154">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">154</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Meta key for storing PayPal payment status in order meta.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_ORDER_META_STATUS</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;_paypal_status&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">10.5.0</span>
+                                                                                                        <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_POSTAL_CODE_MAX_LENGTH">
+        PAYPAL_POSTAL_CODE_MAX_LENGTH
+        <a href="#constant_PAYPAL_POSTAL_CODE_MAX_LENGTH" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.63">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">63</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_POSTAL_CODE_MAX_LENGTH</span>
+    = <span class="phpdocumentor-signature__default-value">60</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAYPAL_STATE_MAX_LENGTH">
+        PAYPAL_STATE_MAX_LENGTH
+        <a href="#constant_PAYPAL_STATE_MAX_LENGTH" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.61">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">61</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PAYPAL_STATE_MAX_LENGTH</span>
+    = <span class="phpdocumentor-signature__default-value">300</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SHIPPING_GET_FROM_FILE">
+        SHIPPING_GET_FROM_FILE
+        <a href="#constant_SHIPPING_GET_FROM_FILE" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.46">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">46</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">SHIPPING_GET_FROM_FILE</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;GET_FROM_FILE&#039;</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SHIPPING_NO_SHIPPING">
+        SHIPPING_NO_SHIPPING
+        <a href="#constant_SHIPPING_NO_SHIPPING" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.45">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">45</span>
+</aside>
+
+        <p class="phpdocumentor-summary">PayPal shipping preferences.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">SHIPPING_NO_SHIPPING</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;NO_SHIPPING&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SHIPPING_SET_PROVIDED_ADDRESS">
+        SHIPPING_SET_PROVIDED_ADDRESS
+        <a href="#constant_SHIPPING_SET_PROVIDED_ADDRESS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.47">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">47</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">SHIPPING_SET_PROVIDED_ADDRESS</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;SET_PROVIDED_ADDRESS&#039;</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_STATUS_APPROVED">
+        STATUS_APPROVED
+        <a href="#constant_STATUS_APPROVED" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.24">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">24</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">STATUS_APPROVED</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;APPROVED&#039;</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_STATUS_AUTHORIZED">
+        STATUS_AUTHORIZED
+        <a href="#constant_STATUS_AUTHORIZED" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.26">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">26</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">STATUS_AUTHORIZED</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;AUTHORIZED&#039;</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_STATUS_CAPTURED">
+        STATUS_CAPTURED
+        <a href="#constant_STATUS_CAPTURED" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.25">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">25</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">STATUS_CAPTURED</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;CAPTURED&#039;</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_STATUS_COMPLETED">
+        STATUS_COMPLETED
+        <a href="#constant_STATUS_COMPLETED" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.23">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">23</span>
+</aside>
+
+        <p class="phpdocumentor-summary">PayPal payment statuses.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">STATUS_COMPLETED</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;COMPLETED&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_STATUS_PAYER_ACTION_REQUIRED">
+        STATUS_PAYER_ACTION_REQUIRED
+        <a href="#constant_STATUS_PAYER_ACTION_REQUIRED" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.27">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">27</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">STATUS_PAYER_ACTION_REQUIRED</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;PAYER_ACTION_REQUIRED&#039;</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SUPPORTED_CURRENCIES">
+        SUPPORTED_CURRENCIES
+        <a href="#constant_SUPPORTED_CURRENCIES" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.98">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">98</span>
+</aside>
+
+        <p class="phpdocumentor-summary">List of currencies supported by PayPal (Orders API V2).</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">array&lt;string|int, string&gt;</span>
+    <span class="phpdocumentor-signature__name">SUPPORTED_CURRENCIES</span>
+    = <span class="phpdocumentor-signature__default-value">array(
+    &#039;AUD&#039;,
+    // Australian Dollar.
+    &#039;BRL&#039;,
+    // Brazilian Real.
+    &#039;CAD&#039;,
+    // Canadian Dollar.
+    &#039;CNY&#039;,
+    // Chinese Renminbi.
+    &#039;CZK&#039;,
+    // Czech Koruna.
+    &#039;DKK&#039;,
+    // Danish Krone.
+    &#039;EUR&#039;,
+    // Euro.
+    &#039;HKD&#039;,
+    // Hong Kong Dollar.
+    &#039;HUF&#039;,
+    // Hungarian Forint.
+    &#039;ILS&#039;,
+    // Israeli New Shekel.
+    &#039;JPY&#039;,
+    // Japanese Yen.
+    &#039;MYR&#039;,
+    // Malaysian Ringgit.
+    &#039;MXN&#039;,
+    // Mexican Peso.
+    &#039;TWD&#039;,
+    // New Taiwan Dollar.
+    &#039;NZD&#039;,
+    // New Zealand Dollar.
+    &#039;NOK&#039;,
+    // Norwegian Krone.
+    &#039;PHP&#039;,
+    // Philippine Peso.
+    &#039;PLN&#039;,
+    // Polish Złoty.
+    &#039;GBP&#039;,
+    // Pound Sterling.
+    &#039;SGD&#039;,
+    // Singapore Dollar.
+    &#039;SEK&#039;,
+    // Swedish Krona.
+    &#039;CHF&#039;,
+    // Swiss Franc.
+    &#039;THB&#039;,
+    // Thai Baht.
+    &#039;USD&#039;,
+    // United States Dollar.
+    &#039;RUB&#039;,
+)</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SUPPORTED_PAYMENT_SOURCES">
+        SUPPORTED_PAYMENT_SOURCES
+        <a href="#constant_SUPPORTED_PAYMENT_SOURCES" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.72">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">72</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">SUPPORTED_PAYMENT_SOURCES</span>
+    = <span class="phpdocumentor-signature__default-value">array(self::PAYMENT_SOURCE_PAYPAL, self::PAYMENT_SOURCE_VENMO, self::PAYMENT_SOURCE_PAYLATER)</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_USER_ACTION_PAY_NOW">
+        USER_ACTION_PAY_NOW
+        <a href="#constant_USER_ACTION_PAY_NOW" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.52">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">52</span>
+</aside>
+
+        <p class="phpdocumentor-summary">PayPal user actions.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">USER_ACTION_PAY_NOW</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;PAY_NOW&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_VOIDED">
+        VOIDED
+        <a href="#constant_VOIDED" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.28">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">28</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">VOIDED</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;VOIDED&#039;</span>
+</code>
+
+
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_WPCOM_PROXY_REQUEST_TIMEOUT">
+        WPCOM_PROXY_REQUEST_TIMEOUT
+        <a href="#constant_WPCOM_PROXY_REQUEST_TIMEOUT" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Gateways/PayPal/Constants.php"><a href="../files/woocommerce-src-gateways-paypal-constants.html#source-view.18">src/Gateways/PayPal/Constants.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">18</span>
+</aside>
+
+        <p class="phpdocumentor-summary">PayPal proxy request timeout.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">WPCOM_PROXY_REQUEST_TIMEOUT</span>
+    = <span class="phpdocumentor-signature__default-value">60</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
+
+        
+
+        
+    </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on February 16th, 2026 at 11:13 pm.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1771283618"></script>
+    <script src="../js/search.js?updated=1771283618"></script>
+</body>
+</html>

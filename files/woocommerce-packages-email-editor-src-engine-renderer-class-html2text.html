@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="algolia-site-verification"  content="16BACF3DF9DCEE45" />
+    <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../images/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../images/favicon-180x180.png" />
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1771283537">
+    <link rel="stylesheet" href="../css/template.css?updated=1771283537">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img src="../images/logo.png" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://developer.woocommerce.com/docs/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title"><a href="../index.html">WooCommerce Code Reference</a></h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-html2text.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * HTML to Text Converter class
+ *
+ * This file was extracted from the `soundasleep/html2text` package.
+ * Copyright (c) 2019 Jevon Wright
+ * MIT License
+ *
+ * @package Automattic\WooCommerce\EmailEditor
+ */
+
+declare( strict_types = 1 );
+
+namespace Automattic\WooCommerce\EmailEditor\Engine\Renderer;
+
+/**
+ * Converts HTML into plain text format suitable for email display
+ *
+ * Features:
+ * - Maintains links with href copied over
+ * - Information in the &lt;head&gt; is lost
+ * - Handles various HTML elements appropriately for text conversion
+ */
+class Html2Text {
+
+	/**
+	 * Default options for HTML to text conversion
+	 *
+	 * @return array&lt;string, bool|string&gt; Default options array.
+	 */
+	public static function default_options(): array {
+		return array(
+			&#039;ignore_errors&#039; =&gt; false,
+			&#039;drop_links&#039;    =&gt; false,
+			&#039;char_set&#039;      =&gt; &#039;auto&#039;,
+		);
+	}
+
+	/**
+	 * Converts HTML into plain text format
+	 *
+	 * @param string                             $html    The input HTML.
+	 * @param boolean|array&lt;string, bool|string&gt; $options Conversion options.
+	 * @return string The HTML converted to text.
+	 * @throws Html2Text_Exception|\InvalidArgumentException If the HTML could not be loaded or invalid options are provided.
+	 */
+	public static function convert( string $html, $options = array() ): string {
+
+		if ( false === $options || true === $options ) {
+			// Using old style (&lt; 1.0) of passing in options.
+			$options = array( &#039;ignore_errors&#039; =&gt; $options );
+		}
+
+		$options = array_merge( static::default_options(), $options );
+
+		// Check all options are valid.
+		foreach ( array_keys( $options ) as $key ) {
+			if ( ! in_array( $key, array_keys( static::default_options() ), true ) ) {
+				// Log invalid option for debugging purposes without exposing in exception.
+				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log -- Security: Logging sensitive data separately from user-facing exception messages.
+				error_log( &#039;Html2Text: Invalid option provided: &#039; . htmlspecialchars( (string) $key, ENT_QUOTES, &#039;UTF-8&#039; ) . &#039;. Valid options are: &#039; . htmlspecialchars( implode( &#039;,&#039;, array_keys( static::default_options() ) ), ENT_QUOTES, &#039;UTF-8&#039; ) );
+				// Throw generic error message to avoid exposing user input.
+				throw new \InvalidArgumentException( &#039;Invalid option provided for html2text conversion.&#039; );
+			}
+		}
+
+		$is_office_document = self::is_office_document( $html );
+
+		if ( $is_office_document ) {
+			// Remove office namespace.
+			$html = str_replace( array( &#039;&lt;o:p&gt;&#039;, &#039;&lt;/o:p&gt;&#039; ), &#039;&#039;, $html );
+		}
+
+		$html = self::fix_newlines( $html );
+
+		// Use mb_convert_encoding for legacy versions of php.
+		if ( PHP_MAJOR_VERSION * 10 + PHP_MINOR_VERSION &lt; 81 &amp;&amp; mb_detect_encoding( $html, &#039;UTF-8&#039;, true ) ) {
+			$converted = mb_convert_encoding( $html, &#039;HTML-ENTITIES&#039;, &#039;UTF-8&#039; );
+			$html      = false !== $converted ? $converted : $html;
+		}
+
+		// Ensure $html is always a string before passing to get_document.
+		if ( ! is_string( $html ) ) {
+			$html = (string) $html;
+		}
+
+		$doc = self::get_document( $html, $options );
+
+		$output = self::iterate_over_node( $doc, null, false, $is_office_document, $options );
+
+		// Process output for whitespace/newlines.
+		$output = self::process_whitespace_newlines( $output );
+
+		return $output;
+	}
+
+	/**
+	 * Unify newlines
+	 *
+	 * Converts \r\n to \n, and \r to \n. This means that all newlines
+	 * (Unix, Windows, Mac) all become \ns.
+	 *
+	 * @param string $text Text with any number of \r, \r\n and \n combinations.
+	 * @return string The fixed text.
+	 */
+	public static function fix_newlines( string $text ): string {
+		// Replace \r\n to \n.
+		$text = str_replace( &quot;\r\n&quot;, &quot;\n&quot;, $text );
+		// Remove \rs.
+		$text = str_replace( &quot;\r&quot;, &quot;\n&quot;, $text );
+
+		return $text;
+	}
+
+	/**
+	 * Get non-breaking space character codes
+	 *
+	 * @return array&lt;string&gt; Array of nbsp codes.
+	 */
+	public static function nbsp_codes(): array {
+		return array(
+			&quot;\xc2\xa0&quot;,
+			&quot;\u00a0&quot;,
+		);
+	}
+
+	/**
+	 * Get zero-width non-joiner character codes
+	 *
+	 * @return array&lt;string&gt; Array of zwnj codes.
+	 */
+	public static function zwnj_codes(): array {
+		return array(
+			&quot;\xe2\x80\x8c&quot;,
+			&quot;\u200c&quot;,
+		);
+	}
+
+	/**
+	 * Remove leading or trailing spaces and excess empty lines from provided multiline text
+	 *
+	 * @param string $text Multiline text with any number of leading or trailing spaces or excess lines.
+	 * @return string The fixed text.
+	 */
+	public static function process_whitespace_newlines( string $text ): string {
+
+		// Remove excess spaces around tabs.
+		$result = preg_replace( &#039;/ *\t */im&#039;, &quot;\t&quot;, $text );
+		$text   = null !== $result ? $result : $text;
+
+		// Remove leading whitespace.
+		$text = ltrim( $text );
+
+		// Remove leading spaces on each line.
+		$result = preg_replace( &quot;/\n[ \t]*/im&quot;, &quot;\n&quot;, $text );
+		$text   = null !== $result ? $result : $text;
+
+		// Convert non-breaking spaces to regular spaces to prevent output issues,
+		// do it here so they do NOT get removed with other leading spaces, as they
+		// are sometimes used for indentation.
+		$text = self::render_text( $text );
+
+		// Remove trailing whitespace.
+		$text = rtrim( $text );
+
+		// Remove trailing spaces on each line.
+		$result = preg_replace( &quot;/[ \t]*\n/im&quot;, &quot;\n&quot;, $text );
+		$text   = null !== $result ? $result : $text;
+
+		// Unarmor pre blocks.
+		$text = self::fix_newlines( $text );
+
+		// Remove unnecessary empty lines.
+		$result = preg_replace( &quot;/\n\n\n*/im&quot;, &quot;\n\n&quot;, $text );
+
+		return null !== $result ? $result : $text;
+	}
+
+	/**
+	 * Can we guess that this HTML is generated by Microsoft Office?
+	 *
+	 * @param string $html The HTML content.
+	 * @return bool True if this appears to be an Office document.
+	 */
+	public static function is_office_document( string $html ): bool {
+		return strpos( $html, &#039;urn:schemas-microsoft-com:office&#039; ) !== false;
+	}
+
+	/**
+	 * Check if text is whitespace
+	 *
+	 * @param string $text The text to check.
+	 * @return bool True if the text is whitespace.
+	 */
+	public static function is_whitespace( string $text ): bool {
+		return 0 === strlen( trim( self::render_text( $text ), &quot;\n\r\t &quot; ) );
+	}
+
+	/**
+	 * Parse HTML into a DOMDocument
+	 *
+	 * @param string                     $html    The input HTML.
+	 * @param array&lt;string, bool|string&gt; $options Parsing options.
+	 * @return \DOMDocument The parsed document tree.
+	 * @throws Html2Text_Exception If the HTML could not be loaded.
+	 */
+	private static function get_document( string $html, array $options ): \DOMDocument {
+
+		$doc = new \DOMDocument();
+
+		$html = trim( $html );
+
+		if ( ! $html ) {
+			// DOMDocument doesn&#039;t support empty value and throws an error.
+			// Return empty document instead.
+			return $doc;
+		}
+
+		if ( &#039;&lt;&#039; !== $html[0] ) {
+			// If HTML does not begin with a tag, we put a body tag around it.
+			// If we do not do this, PHP will insert a paragraph tag around
+			// the first block of text for some reason which can mess up
+			// the newlines. See pre.html test for an example.
+			$html = &#039;&lt;body&gt;&#039; . $html . &#039;&lt;/body&gt;&#039;;
+		}
+
+		$header = &#039;&#039;;
+		// Use char sets for modern versions of php.
+		if ( PHP_MAJOR_VERSION * 10 + PHP_MINOR_VERSION &gt;= 81 ) {
+			// Use specified char_set, or auto detect if not set.
+			$char_set = ! empty( $options[&#039;char_set&#039;] ) &amp;&amp; is_string( $options[&#039;char_set&#039;] ) ? $options[&#039;char_set&#039;] : &#039;auto&#039;;
+			if ( &#039;auto&#039; === $char_set ) {
+				$detected = mb_detect_encoding( $html );
+				$char_set = false !== $detected ? $detected : &#039;UTF-8&#039;;
+			} elseif ( strpos( $char_set, &#039;,&#039; ) !== false ) {
+				$encoding_list = explode( &#039;,&#039;, $char_set );
+				$encoding_list = array_map( &#039;trim&#039;, $encoding_list );
+				$encoding_list = array_filter(
+					$encoding_list,
+					function ( $encoding ) {
+						return ! empty( $encoding );
+					}
+				);
+				if ( ! empty( $encoding_list ) ) {
+					// Ensure we have a proper list with consecutive integer keys.
+					$encoding_list = array_values( $encoding_list );
+					mb_detect_order( $encoding_list );
+					$detected = mb_detect_encoding( $html );
+					$char_set = false !== $detected ? $detected : &#039;UTF-8&#039;;
+				}
+			}
+			// Turn off error detection for Windows-1252 legacy html.
+			if ( strpos( $char_set, &#039;1252&#039; ) !== false ) {
+				$options[&#039;ignore_errors&#039;] = true;
+			}
+			$header = &#039;&lt;?xml version=&quot;1.0&quot; encoding=&quot;&#039; . $char_set . &#039;&quot;&gt;&#039;;
+		}
+
+		if ( ! empty( $options[&#039;ignore_errors&#039;] ) ) {
+			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$doc-&gt;strictErrorChecking = false;
+			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$doc-&gt;recover = true;
+			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$doc-&gt;xmlStandalone  = true;
+			$old_internal_errors = libxml_use_internal_errors( true );
+			$load_result         = $doc-&gt;loadHTML( $header . $html, LIBXML_NOWARNING | LIBXML_NOERROR | LIBXML_NONET | LIBXML_PARSEHUGE );
+			libxml_use_internal_errors( $old_internal_errors );
+		} else {
+			$load_result = $doc-&gt;loadHTML( $header . $html );
+		}
+
+		if ( ! $load_result ) {
+			// Log truncated HTML content for debugging purposes (limit to 500 chars to prevent log bloat).
+			$html_preview = strlen( $html ) &gt; 500 ? substr( $html, 0, 500 ) . &#039;...[truncated]&#039; : $html;
+			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log -- Security: Logging sensitive data separately from user-facing exception messages.
+			error_log( &#039;Html2Text: Failed to load HTML content: &#039; . htmlspecialchars( $html_preview, ENT_QUOTES, &#039;UTF-8&#039; ) );
+			// Throw a generic error message to avoid exposing sensitive data.
+			throw new Html2Text_Exception( &#039;Could not load HTML - the content may be malformed.&#039; );
+		}
+
+		return $doc;
+	}
+
+	/**
+	 * Replace any special characters with simple text versions
+	 *
+	 * This prevents output issues:
+	 * - Convert non-breaking spaces to regular spaces; and
+	 * - Convert zero-width non-joiners to &#039;&#039; (nothing).
+	 *
+	 * This is to match our goal of rendering documents as they would be rendered
+	 * by a browser.
+	 *
+	 * @param string $text The text to process.
+	 * @return string The processed text.
+	 */
+	private static function render_text( string $text ): string {
+		$text = str_replace( self::nbsp_codes(), &#039; &#039;, $text );
+		$text = str_replace( self::zwnj_codes(), &#039;&#039;, $text );
+		return $text;
+	}
+
+	/**
+	 * Get the next child name
+	 *
+	 * @param \DOMNode|null $node The node to check.
+	 * @return string|null The next child name.
+	 */
+	private static function next_child_name( ?\DOMNode $node ): ?string {
+		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		if ( null === $node || null === $node-&gt;nextSibling ) {
+			return null;
+		}
+
+		// Get the next child.
+		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$next_node = $node-&gt;nextSibling;
+		while ( null !== $next_node ) {
+			if ( $next_node instanceof \DOMText ) {
+				// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+				if ( ! self::is_whitespace( $next_node-&gt;wholeText ) ) {
+					break;
+				}
+			}
+
+			if ( $next_node instanceof \DOMElement ) {
+				break;
+			}
+
+			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$next_node = $next_node-&gt;nextSibling;
+		}
+
+		$next_name = null;
+		if ( $next_node instanceof \DOMElement || $next_node instanceof \DOMText ) {
+			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$next_name = strtolower( $next_node-&gt;nodeName );
+		}
+
+		return $next_name;
+	}
+
+	/**
+	 * Iterate over a DOM node and convert to text
+	 *
+	 * @param \DOMNode                   $node                The DOM node.
+	 * @param string|null                $prev_name           Previous node name.
+	 * @param bool                       $in_pre              Whether we&#039;re in a pre block.
+	 * @param bool                       $is_office_document  Whether this is an Office document.
+	 * @param array&lt;string, bool|string&gt; $options             Conversion options.
+	 * @return string The converted text.
+	 */
+	private static function iterate_over_node( \DOMNode $node, ?string $prev_name, bool $in_pre, bool $is_office_document, array $options ): string {
+		if ( $node instanceof \DOMText ) {
+			// Replace whitespace characters with a space (equivalent to \s).
+			if ( $in_pre ) {
+				// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+				$text = &quot;\n&quot; . trim( self::render_text( $node-&gt;wholeText ), &quot;\n\r\t &quot; ) . &quot;\n&quot;;
+
+				// Remove trailing whitespace only.
+				$result = preg_replace( &quot;/[ \t]*\n/im&quot;, &quot;\n&quot;, $text );
+				$text   = null !== $result ? $result : $text;
+
+				// Armor newlines with \r.
+				return str_replace( &quot;\n&quot;, &quot;\r&quot;, $text );
+			}
+			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$text   = self::render_text( $node-&gt;wholeText );
+			$result = preg_replace( &quot;/[\\t\\n\\f\\r ]+/im&quot;, &#039; &#039;, $text );
+			$text   = null !== $result ? $result : $text;
+
+			if ( ! self::is_whitespace( $text ) &amp;&amp; ( &#039;p&#039; === $prev_name || &#039;div&#039; === $prev_name ) ) {
+				return &quot;\n&quot; . $text;
+			}
+			return $text;
+		}
+
+		if ( $node instanceof \DOMDocumentType || $node instanceof \DOMProcessingInstruction ) {
+			// Ignore.
+			return &#039;&#039;;
+		}
+
+		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$name      = strtolower( $node-&gt;nodeName );
+		$next_name = self::next_child_name( $node );
+
+		// Start whitespace.
+		switch ( $name ) {
+			case &#039;hr&#039;:
+				$prefix = &#039;&#039;;
+				if ( null !== $prev_name ) {
+					$prefix = &quot;\n&quot;;
+				}
+				return $prefix . &quot;---------------------------------------------------------------\n&quot;;
+
+			case &#039;style&#039;:
+			case &#039;head&#039;:
+			case &#039;title&#039;:
+			case &#039;meta&#039;:
+			case &#039;script&#039;:
+				// Ignore these tags.
+				return &#039;&#039;;
+
+			case &#039;h1&#039;:
+			case &#039;h2&#039;:
+			case &#039;h3&#039;:
+			case &#039;h4&#039;:
+			case &#039;h5&#039;:
+			case &#039;h6&#039;:
+			case &#039;ol&#039;:
+			case &#039;ul&#039;:
+			case &#039;pre&#039;:
+				// Add two newlines.
+				$output = &quot;\n\n&quot;;
+				break;
+
+			case &#039;td&#039;:
+			case &#039;th&#039;:
+				// Add tab char to separate table fields.
+				$output = &quot;\t&quot;;
+				break;
+
+			case &#039;p&#039;:
+				// Microsoft exchange emails often include HTML which, when passed through
+				// html2text, results in lots of double line returns everywhere.
+				//
+				// To fix this, for any p element with a className of `MsoNormal` (the standard
+				// classname in any Microsoft export or outlook for a paragraph that behaves
+				// like a line return) we skip the first line returns and set the name to br.
+				if ( $is_office_document &amp;&amp; $node instanceof \DOMElement &amp;&amp; &#039;MsoNormal&#039; === $node-&gt;getAttribute( &#039;class&#039; ) ) {
+					$output = &#039;&#039;;
+					$name   = &#039;br&#039;;
+					break;
+				}
+
+				// Add two lines.
+				$output = &quot;\n\n&quot;;
+				break;
+
+			case &#039;tr&#039;:
+				// Add one line.
+				$output = &quot;\n&quot;;
+				break;
+
+			case &#039;div&#039;:
+				$output = &#039;&#039;;
+				if ( null !== $prev_name ) {
+					// Add one line.
+					$output .= &quot;\n&quot;;
+				}
+				break;
+
+			case &#039;li&#039;:
+				$output = &#039;- &#039;;
+				break;
+
+			default:
+				// Print out contents of unknown tags.
+				$output = &#039;&#039;;
+				break;
+		}
+
+		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		if ( $node-&gt;childNodes-&gt;length &gt; 0 ) {
+
+			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$n                      = $node-&gt;childNodes-&gt;item( 0 );
+			$previous_sibling_names = array();
+			$previous_sibling_name  = null;
+			$parts                  = array();
+			$trailing_whitespace    = 0;
+
+			while ( null !== $n ) {
+
+				$text = self::iterate_over_node( $n, $previous_sibling_name, $in_pre || &#039;pre&#039; === $name, $is_office_document, $options );
+
+				// Pass current node name to next child, as previousSibling does not appear to get populated.
+				if ( $n instanceof \DOMDocumentType
+					|| $n instanceof \DOMProcessingInstruction
+					|| ( $n instanceof \DOMText &amp;&amp; self::is_whitespace( $text ) ) ) {
+					// Keep current previousSiblingName, these are invisible.
+					++$trailing_whitespace;
+				} else {
+					// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+					$previous_sibling_name    = strtolower( $n-&gt;nodeName );
+					$previous_sibling_names[] = $previous_sibling_name;
+					$trailing_whitespace      = 0;
+				}
+
+				$node-&gt;removeChild( $n );
+				// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+				$n = $node-&gt;childNodes-&gt;item( 0 );
+
+				$parts[] = $text;
+			}
+
+			// Remove trailing whitespace, important for the br check below.
+			while ( $trailing_whitespace-- &gt; 0 ) {
+				array_pop( $parts );
+			}
+
+			// Suppress last br tag inside a node list if follows text.
+			$last_name = array_pop( $previous_sibling_names );
+			if ( &#039;br&#039; === $last_name ) {
+				$last_name = array_pop( $previous_sibling_names );
+				if ( &#039;#text&#039; === $last_name ) {
+					array_pop( $parts );
+				}
+			}
+
+			$output .= implode( &#039;&#039;, $parts );
+		}
+
+		// End whitespace.
+		switch ( $name ) {
+			case &#039;h1&#039;:
+			case &#039;h2&#039;:
+			case &#039;h3&#039;:
+			case &#039;h4&#039;:
+			case &#039;h5&#039;:
+			case &#039;h6&#039;:
+			case &#039;pre&#039;:
+			case &#039;p&#039;:
+				// Add two lines.
+				$output .= &quot;\n\n&quot;;
+				break;
+
+			case &#039;br&#039;:
+				// Add one line.
+				$output .= &quot;\n&quot;;
+				break;
+
+			case &#039;div&#039;:
+				break;
+
+			case &#039;a&#039;:
+				// Links are returned in [text](link) format.
+				$href = $node instanceof \DOMElement ? $node-&gt;getAttribute( &#039;href&#039; ) : &#039;&#039;;
+
+				$output = trim( $output );
+
+				// Remove double [[ ]] s from linking images.
+				if ( &#039;[&#039; === substr( $output, 0, 1 ) &amp;&amp; &#039;]&#039; === substr( $output, -1 ) ) {
+					$output = substr( $output, 1, strlen( $output ) - 2 );
+
+					// For linking images, the title of the &lt;a&gt; overrides the title of the &lt;img&gt;.
+					if ( $node instanceof \DOMElement &amp;&amp; $node-&gt;getAttribute( &#039;title&#039; ) ) {
+						$output = $node-&gt;getAttribute( &#039;title&#039; );
+					}
+				}
+
+				// If there is no link text, but a title attr.
+				if ( ! $output &amp;&amp; $node instanceof \DOMElement &amp;&amp; $node-&gt;getAttribute( &#039;title&#039; ) ) {
+					$output = $node-&gt;getAttribute( &#039;title&#039; );
+				}
+
+				if ( ! $href ) {
+					// It doesn&#039;t link anywhere.
+					if ( $node instanceof \DOMElement &amp;&amp; $node-&gt;getAttribute( &#039;name&#039; ) ) {
+						if ( $options[&#039;drop_links&#039;] ) {
+							$output = &quot;$output&quot;;
+						} else {
+							$output = &quot;[$output]&quot;;
+						}
+					}
+				} elseif ( $href === $output || &quot;mailto:$output&quot; === $href || &quot;http://$output&quot; === $href || &quot;https://$output&quot; === $href ) {
+					// Link to the same address: just use link.
+					$output = &quot;$output&quot;;
+				} elseif ( $output ) {
+					// Replace it.
+					if ( $options[&#039;drop_links&#039;] ) {
+						$output = &quot;$output&quot;;
+					} else {
+						$output = &quot;[$output]($href)&quot;;
+					}
+				} else {
+					// Empty string.
+					$output = &quot;$href&quot;;
+				}
+
+				// Does the next node require additional whitespace?
+				switch ( $next_name ) {
+					case &#039;h1&#039;:
+					case &#039;h2&#039;:
+					case &#039;h3&#039;:
+					case &#039;h4&#039;:
+					case &#039;h5&#039;:
+					case &#039;h6&#039;:
+						$output .= &quot;\n&quot;;
+						break;
+				}
+				break;
+
+			case &#039;img&#039;:
+				if ( $node instanceof \DOMElement &amp;&amp; $node-&gt;getAttribute( &#039;title&#039; ) ) {
+					$output = &#039;[&#039; . $node-&gt;getAttribute( &#039;title&#039; ) . &#039;]&#039;;
+				} elseif ( $node instanceof \DOMElement &amp;&amp; $node-&gt;getAttribute( &#039;alt&#039; ) ) {
+					$output = &#039;[&#039; . $node-&gt;getAttribute( &#039;alt&#039; ) . &#039;]&#039;;
+				} else {
+					$output = &#039;&#039;;
+				}
+				break;
+
+			case &#039;li&#039;:
+				$output .= &quot;\n&quot;;
+				break;
+
+			case &#039;blockquote&#039;:
+				// Process quoted text for whitespace/newlines.
+				$output = self::process_whitespace_newlines( $output );
+
+				// Add leading newline.
+				$output = &quot;\n&quot; . $output;
+
+				// Prepend &#039;&gt; &#039; at the beginning of all lines.
+				$result = preg_replace( &quot;/\n/im&quot;, &quot;\n&gt; &quot;, $output );
+				$output = null !== $result ? $result : $output;
+
+				// Replace leading &#039;&gt; &gt;&#039; with &#039;&gt;&gt;&#039;.
+				$result = preg_replace( &quot;/\n&gt; &gt;/im&quot;, &quot;\n&gt;&gt;&quot;, $output );
+				$output = null !== $result ? $result : $output;
+
+				// Add another leading newline and trailing newlines.
+				$output = &quot;\n&quot; . $output . &quot;\n\n&quot;;
+				break;
+			default:
+				// Do nothing.
+		}
+
+		return $output;
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on February 16th, 2026 at 11:12 pm.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1771283537"></script>
+    <script src="../js/search.js?updated=1771283537"></script>
+</body>
+</html>

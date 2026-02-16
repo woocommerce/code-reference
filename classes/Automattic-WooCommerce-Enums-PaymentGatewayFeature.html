@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="algolia-site-verification"  content="16BACF3DF9DCEE45" />
+    <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../images/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../images/favicon-180x180.png" />
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1771283618">
+    <link rel="stylesheet" href="../css/template.css?updated=1771283618">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img src="../images/logo.png" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://developer.woocommerce.com/docs/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title"><a href="../index.html">WooCommerce Code Reference</a></h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic.html">Automattic</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce.html">WooCommerce</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce-enums.html">Enums</a></li>
+    </ul>
+
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    PaymentGatewayFeature
+
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="../packages/WooCommerce.html">WooCommerce</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.10">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">10</span>
+</aside>
+
+            <p class="phpdocumentor-summary">Enum class for all the payment gateway feature&#039;s values.</p>
+
+    <section class="phpdocumentor-description"></section>
+
+
+
+
+
+
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_ADD_PAYMENT_METHOD">ADD_PAYMENT_METHOD</a>
+    <span>
+        &nbsp;= &#039;add_payment_method&#039;                    </span>
+</dt>
+<dd>Payment gateway supports add payment methods.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_AGENTIC_COMMERCE">AGENTIC_COMMERCE</a>
+    <span>
+        &nbsp;= &#039;agentic_commerce&#039;                    </span>
+</dt>
+<dd>Agentic Commerce feature.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_CREDIT_CARD_FORM_CVC_ON_SAVED_METHOD">CREDIT_CARD_FORM_CVC_ON_SAVED_METHOD</a>
+    <span>
+        &nbsp;= &#039;credit_card_form_cvc_on_saved_method&#039;                    </span>
+</dt>
+<dd>Payment gateway supports credit card form on saved method.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_DEFAULT_CREDIT_CARD_FORM">DEFAULT_CREDIT_CARD_FORM</a>
+    <span>
+        &nbsp;= &#039;default_credit_card_form&#039;                    </span>
+</dt>
+<dd>Payment gateway supports default credit card form.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_DEPOSITS">DEPOSITS</a>
+    <span>
+        &nbsp;= &#039;deposits&#039;                    </span>
+</dt>
+<dd>Payment gateway supports deposits.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_MULTIPLE_SUBSCRIPTIONS">MULTIPLE_SUBSCRIPTIONS</a>
+    <span>
+        &nbsp;= &#039;multiple_subscriptions&#039;                    </span>
+</dt>
+<dd>Payment gateway supports multiple subscriptions.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_PAY_BUTTON">PAY_BUTTON</a>
+    <span>
+        &nbsp;= &#039;pay_button&#039;                    </span>
+</dt>
+<dd>Payment gateway supports pay button.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_PRE_ORDERS">PRE_ORDERS</a>
+    <span>
+        &nbsp;= &#039;pre-orders&#039;                    </span>
+</dt>
+<dd>Payment gateway supports pre-orders.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_PRODUCTS">PRODUCTS</a>
+    <span>
+        &nbsp;= &#039;products&#039;                    </span>
+</dt>
+<dd>Payment gateway supports products.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_REFUNDS">REFUNDS</a>
+    <span>
+        &nbsp;= &#039;refunds&#039;                    </span>
+</dt>
+<dd>Payment gateway supports refunds.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_SUBSCRIPTION_AMOUNT_CHANGES">SUBSCRIPTION_AMOUNT_CHANGES</a>
+    <span>
+        &nbsp;= &#039;subscription_amount_changes&#039;                    </span>
+</dt>
+<dd>Payment gateway supports subscription amount changes.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_SUBSCRIPTION_CANCELLATION">SUBSCRIPTION_CANCELLATION</a>
+    <span>
+        &nbsp;= &#039;subscription_cancellation&#039;                    </span>
+</dt>
+<dd>Payment gateway supports subscription cancellation.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_SUBSCRIPTION_DATE_CHANGES">SUBSCRIPTION_DATE_CHANGES</a>
+    <span>
+        &nbsp;= &#039;subscription_date_changes&#039;                    </span>
+</dt>
+<dd>Payment gateway supports subscription date changes.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_SUBSCRIPTION_PAYMENT_METHOD_CHANGE">SUBSCRIPTION_PAYMENT_METHOD_CHANGE</a>
+    <span>
+        &nbsp;= &#039;subscription_payment_method_change&#039;                    </span>
+</dt>
+<dd>Payment gateway supports subscription payment method changes.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_SUBSCRIPTION_PAYMENT_METHOD_CHANGE_ADMIN">SUBSCRIPTION_PAYMENT_METHOD_CHANGE_ADMIN</a>
+    <span>
+        &nbsp;= &#039;subscription_payment_method_change_admin&#039;                    </span>
+</dt>
+<dd>Payment gateway supports subscription payment method changes by admin.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_SUBSCRIPTION_PAYMENT_METHOD_CHANGE_CUSTOMER">SUBSCRIPTION_PAYMENT_METHOD_CHANGE_CUSTOMER</a>
+    <span>
+        &nbsp;= &#039;subscription_payment_method_change_customer&#039;                    </span>
+</dt>
+<dd>Payment gateway supports subscription payment method changes by customer or admin.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_SUBSCRIPTION_REACTIVATION">SUBSCRIPTION_REACTIVATION</a>
+    <span>
+        &nbsp;= &#039;subscription_reactivation&#039;                    </span>
+</dt>
+<dd>Payment gateway supports subscription reactivation.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_SUBSCRIPTION_SUSPENSION">SUBSCRIPTION_SUSPENSION</a>
+    <span>
+        &nbsp;= &#039;subscription_suspension&#039;                    </span>
+</dt>
+<dd>Payment gateway supports subscription suspension.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_SUBSCRIPTIONS">SUBSCRIPTIONS</a>
+    <span>
+        &nbsp;= &#039;subscriptions&#039;                    </span>
+</dt>
+<dd>Payment gateway supports subscriptions.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Enums-PaymentGatewayFeature.html#constant_TOKENIZATION">TOKENIZATION</a>
+    <span>
+        &nbsp;= &#039;tokenization&#039;                    </span>
+</dt>
+<dd>Payment gateway supports tokenization.</dd>
+
+                </dl>
+
+
+
+        
+    <section class="phpdocumentor-constants">
+        <h3 class="phpdocumentor-elements__header" id="constants">
+            Constants
+            <a href="#constants" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_ADD_PAYMENT_METHOD">
+        ADD_PAYMENT_METHOD
+        <a href="#constant_ADD_PAYMENT_METHOD" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.16">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">16</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports add payment methods.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">ADD_PAYMENT_METHOD</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;add_payment_method&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_AGENTIC_COMMERCE">
+        AGENTIC_COMMERCE
+        <a href="#constant_AGENTIC_COMMERCE" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.147">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">147</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Agentic Commerce feature.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">AGENTIC_COMMERCE</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;agentic_commerce&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_CREDIT_CARD_FORM_CVC_ON_SAVED_METHOD">
+        CREDIT_CARD_FORM_CVC_ON_SAVED_METHOD
+        <a href="#constant_CREDIT_CARD_FORM_CVC_ON_SAVED_METHOD" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.23">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">23</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports credit card form on saved method.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">CREDIT_CARD_FORM_CVC_ON_SAVED_METHOD</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;credit_card_form_cvc_on_saved_method&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_DEFAULT_CREDIT_CARD_FORM">
+        DEFAULT_CREDIT_CARD_FORM
+        <a href="#constant_DEFAULT_CREDIT_CARD_FORM" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.30">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">30</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports default credit card form.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">DEFAULT_CREDIT_CARD_FORM</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;default_credit_card_form&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_DEPOSITS">
+        DEPOSITS
+        <a href="#constant_DEPOSITS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.37">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">37</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports deposits.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">DEPOSITS</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;deposits&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_MULTIPLE_SUBSCRIPTIONS">
+        MULTIPLE_SUBSCRIPTIONS
+        <a href="#constant_MULTIPLE_SUBSCRIPTIONS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.44">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">44</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports multiple subscriptions.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">MULTIPLE_SUBSCRIPTIONS</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;multiple_subscriptions&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PAY_BUTTON">
+        PAY_BUTTON
+        <a href="#constant_PAY_BUTTON" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.51">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">51</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports pay button.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PAY_BUTTON</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;pay_button&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PRE_ORDERS">
+        PRE_ORDERS
+        <a href="#constant_PRE_ORDERS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.58">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">58</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports pre-orders.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PRE_ORDERS</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;pre-orders&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PRODUCTS">
+        PRODUCTS
+        <a href="#constant_PRODUCTS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.65">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">65</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports products.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">PRODUCTS</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;products&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_REFUNDS">
+        REFUNDS
+        <a href="#constant_REFUNDS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.72">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">72</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports refunds.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">REFUNDS</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;refunds&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SUBSCRIPTION_AMOUNT_CHANGES">
+        SUBSCRIPTION_AMOUNT_CHANGES
+        <a href="#constant_SUBSCRIPTION_AMOUNT_CHANGES" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.79">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">79</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports subscription amount changes.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">SUBSCRIPTION_AMOUNT_CHANGES</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;subscription_amount_changes&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SUBSCRIPTION_CANCELLATION">
+        SUBSCRIPTION_CANCELLATION
+        <a href="#constant_SUBSCRIPTION_CANCELLATION" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.86">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">86</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports subscription cancellation.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">SUBSCRIPTION_CANCELLATION</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;subscription_cancellation&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SUBSCRIPTION_DATE_CHANGES">
+        SUBSCRIPTION_DATE_CHANGES
+        <a href="#constant_SUBSCRIPTION_DATE_CHANGES" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.93">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">93</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports subscription date changes.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">SUBSCRIPTION_DATE_CHANGES</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;subscription_date_changes&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SUBSCRIPTION_PAYMENT_METHOD_CHANGE">
+        SUBSCRIPTION_PAYMENT_METHOD_CHANGE
+        <a href="#constant_SUBSCRIPTION_PAYMENT_METHOD_CHANGE" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.100">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">100</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports subscription payment method changes.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">SUBSCRIPTION_PAYMENT_METHOD_CHANGE</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;subscription_payment_method_change&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SUBSCRIPTION_PAYMENT_METHOD_CHANGE_ADMIN">
+        SUBSCRIPTION_PAYMENT_METHOD_CHANGE_ADMIN
+        <a href="#constant_SUBSCRIPTION_PAYMENT_METHOD_CHANGE_ADMIN" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.107">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">107</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports subscription payment method changes by admin.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">SUBSCRIPTION_PAYMENT_METHOD_CHANGE_ADMIN</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;subscription_payment_method_change_admin&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SUBSCRIPTION_PAYMENT_METHOD_CHANGE_CUSTOMER">
+        SUBSCRIPTION_PAYMENT_METHOD_CHANGE_CUSTOMER
+        <a href="#constant_SUBSCRIPTION_PAYMENT_METHOD_CHANGE_CUSTOMER" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.114">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">114</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports subscription payment method changes by customer or admin.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">SUBSCRIPTION_PAYMENT_METHOD_CHANGE_CUSTOMER</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;subscription_payment_method_change_customer&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SUBSCRIPTION_REACTIVATION">
+        SUBSCRIPTION_REACTIVATION
+        <a href="#constant_SUBSCRIPTION_REACTIVATION" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.121">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">121</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports subscription reactivation.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">SUBSCRIPTION_REACTIVATION</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;subscription_reactivation&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SUBSCRIPTION_SUSPENSION">
+        SUBSCRIPTION_SUSPENSION
+        <a href="#constant_SUBSCRIPTION_SUSPENSION" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.128">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">128</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports subscription suspension.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">SUBSCRIPTION_SUSPENSION</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;subscription_suspension&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SUBSCRIPTIONS">
+        SUBSCRIPTIONS
+        <a href="#constant_SUBSCRIPTIONS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.135">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">135</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports subscriptions.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">SUBSCRIPTIONS</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;subscriptions&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TOKENIZATION">
+        TOKENIZATION
+        <a href="#constant_TOKENIZATION" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/src/Enums/PaymentGatewayFeature.php"><a href="../files/woocommerce-src-enums-paymentgatewayfeature.html#source-view.142">src/Enums/PaymentGatewayFeature.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">142</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Payment gateway supports tokenization.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">TOKENIZATION</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;tokenization&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
+
+        
+
+        
+    </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on February 16th, 2026 at 11:13 pm.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1771283618"></script>
+    <script src="../js/search.js?updated=1771283618"></script>
+</body>
+</html>

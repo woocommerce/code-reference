@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="algolia-site-verification"  content="16BACF3DF9DCEE45" />
+    <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../images/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../images/favicon-180x180.png" />
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1771283586">
+    <link rel="stylesheet" href="../css/template.css?updated=1771283586">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img src="../images/logo.png" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://developer.woocommerce.com/docs/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title"><a href="../index.html">WooCommerce Code Reference</a></h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic.html">Automattic</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce.html">WooCommerce</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce-vendor.html">Vendor</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce-vendor-league.html">League</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce-vendor-league-iso3166.html">ISO3166</a></li>
+    </ul>
+
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    ISO3166
+
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="../packages/WooCommerce.html">WooCommerce</a></li>
+                            </ul>
+        </div>
+    
+            <span class="phpdocumentor-element__implements">
+            implements
+                            <abbr title="\Countable">Countable</abbr>,                             <abbr title="\IteratorAggregate">IteratorAggregate</abbr>,                             <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166DataProvider.html"><abbr title="\Automattic\WooCommerce\Vendor\League\ISO3166\ISO3166DataProvider">ISO3166DataProvider</abbr></a>                    </span>
+    
+    </h2>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.18">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">18</span>
+</aside>
+
+        
+    <section class="phpdocumentor-description"></section>
+
+
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">implements</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>\IteratorAggregate&lt;string, array&gt;</p>
+</section>
+
+                </dd>
+                        </dl>
+
+
+
+
+<h3 id="interfaces_class_traits">
+    Interfaces, Classes and Traits
+    <a href="#interfaces_class_traits" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><abbr title="\Countable">Countable</abbr></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><abbr title="\IteratorAggregate">IteratorAggregate</abbr></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166DataProvider.html"><abbr title="\Automattic\WooCommerce\Vendor\League\ISO3166\ISO3166DataProvider">ISO3166DataProvider</abbr></a></dt>
+        <dd></dd>
+    
+    
+    </dl>
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#constant_KEY_ALPHA2">KEY_ALPHA2</a>
+    <span>
+        &nbsp;= &#039;alpha2&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#constant_KEY_ALPHA3">KEY_ALPHA3</a>
+    <span>
+        &nbsp;= &#039;alpha3&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#constant_KEY_NAME">KEY_NAME</a>
+    <span>
+        &nbsp;= &#039;name&#039;                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#constant_KEY_NUMERIC">KEY_NUMERIC</a>
+    <span>
+        &nbsp;= &#039;numeric&#039;                    </span>
+</dt>
+<dd></dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#property_countries">$countries</a>
+    <span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd>Default dataset.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#property_keys">$keys</a>
+    <span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd></dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#method___construct">__construct()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#method_all">all()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}&gt;    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#method_alpha2">alpha2()</a>
+    <span>
+                        &nbsp;: array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}    </span>
+</dt>
+<dd>Lookup ISO3166-1 data by alpha2 identifier.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#method_alpha3">alpha3()</a>
+    <span>
+                        &nbsp;: array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}    </span>
+</dt>
+<dd>Lookup ISO3166-1 data by alpha3 identifier.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#method_exactName">exactName()</a>
+    <span>
+                        &nbsp;: array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#method_iterator">iterator()</a>
+    <span>
+                        &nbsp;: <abbr title="\Generator">Generator</abbr>&lt;string, array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}&gt;    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#method_name">name()</a>
+    <span>
+                        &nbsp;: array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}    </span>
+</dt>
+<dd>Lookup ISO3166-1 data by name identifier.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#method_numeric">numeric()</a>
+    <span>
+                        &nbsp;: array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}    </span>
+</dt>
+<dd>Lookup ISO3166-1 data by numeric identifier (numerical string, that is).</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-ISO3166.html#method_lookup">lookup()</a>
+    <span>
+                        &nbsp;: array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}    </span>
+</dt>
+<dd>Lookup ISO3166-1 data by given identifier.</dd>
+
+        </dl>
+
+
+
+        
+    <section class="phpdocumentor-constants">
+        <h3 class="phpdocumentor-elements__header" id="constants">
+            Constants
+            <a href="#constants" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_KEY_ALPHA2">
+        KEY_ALPHA2
+        <a href="#constant_KEY_ALPHA2" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.21">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">21</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">KEY_ALPHA2</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;alpha2&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_KEY_ALPHA3">
+        KEY_ALPHA3
+        <a href="#constant_KEY_ALPHA3" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.23">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">23</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">KEY_ALPHA3</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;alpha3&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_KEY_NAME">
+        KEY_NAME
+        <a href="#constant_KEY_NAME" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.27">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">27</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">KEY_NAME</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;name&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_KEY_NUMERIC">
+        KEY_NUMERIC
+        <a href="#constant_KEY_NUMERIC" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.25">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">25</span>
+</aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">KEY_NUMERIC</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;numeric&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
+
+        
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="#properties" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_countries">
+        $countries
+        <a href="#property_countries" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.182">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">182</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Default dataset.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$countries</span>
+     = <span class="phpdocumentor-signature__default-value">[[&#039;name&#039; =&gt; &#039;Afghanistan&#039;, &#039;alpha2&#039; =&gt; &#039;AF&#039;, &#039;alpha3&#039; =&gt; &#039;AFG&#039;, &#039;numeric&#039; =&gt; &#039;004&#039;, &#039;currency&#039; =&gt; [&#039;AFN&#039;]], [&#039;name&#039; =&gt; &#039;Åland Islands&#039;, &#039;alpha2&#039; =&gt; &#039;AX&#039;, &#039;alpha3&#039; =&gt; &#039;ALA&#039;, &#039;numeric&#039; =&gt; &#039;248&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Albania&#039;, &#039;alpha2&#039; =&gt; &#039;AL&#039;, &#039;alpha3&#039; =&gt; &#039;ALB&#039;, &#039;numeric&#039; =&gt; &#039;008&#039;, &#039;currency&#039; =&gt; [&#039;ALL&#039;]], [&#039;name&#039; =&gt; &#039;Algeria&#039;, &#039;alpha2&#039; =&gt; &#039;DZ&#039;, &#039;alpha3&#039; =&gt; &#039;DZA&#039;, &#039;numeric&#039; =&gt; &#039;012&#039;, &#039;currency&#039; =&gt; [&#039;DZD&#039;]], [&#039;name&#039; =&gt; &#039;American Samoa&#039;, &#039;alpha2&#039; =&gt; &#039;AS&#039;, &#039;alpha3&#039; =&gt; &#039;ASM&#039;, &#039;numeric&#039; =&gt; &#039;016&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Andorra&#039;, &#039;alpha2&#039; =&gt; &#039;AD&#039;, &#039;alpha3&#039; =&gt; &#039;AND&#039;, &#039;numeric&#039; =&gt; &#039;020&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Angola&#039;, &#039;alpha2&#039; =&gt; &#039;AO&#039;, &#039;alpha3&#039; =&gt; &#039;AGO&#039;, &#039;numeric&#039; =&gt; &#039;024&#039;, &#039;currency&#039; =&gt; [&#039;AOA&#039;]], [&#039;name&#039; =&gt; &#039;Anguilla&#039;, &#039;alpha2&#039; =&gt; &#039;AI&#039;, &#039;alpha3&#039; =&gt; &#039;AIA&#039;, &#039;numeric&#039; =&gt; &#039;660&#039;, &#039;currency&#039; =&gt; [&#039;XCD&#039;]], [&#039;name&#039; =&gt; &#039;Antarctica&#039;, &#039;alpha2&#039; =&gt; &#039;AQ&#039;, &#039;alpha3&#039; =&gt; &#039;ATA&#039;, &#039;numeric&#039; =&gt; &#039;010&#039;, &#039;currency&#039; =&gt; [&#039;ARS&#039;, &#039;AUD&#039;, &#039;BGN&#039;, &#039;BRL&#039;, &#039;BYR&#039;, &#039;CLP&#039;, &#039;CNY&#039;, &#039;CZK&#039;, &#039;EUR&#039;, &#039;GBP&#039;, &#039;INR&#039;, &#039;JPY&#039;, &#039;KRW&#039;, &#039;NOK&#039;, &#039;NZD&#039;, &#039;PEN&#039;, &#039;PKR&#039;, &#039;PLN&#039;, &#039;RON&#039;, &#039;RUB&#039;, &#039;SEK&#039;, &#039;UAH&#039;, &#039;USD&#039;, &#039;UYU&#039;, &#039;ZAR&#039;]], [&#039;name&#039; =&gt; &#039;Antigua and Barbuda&#039;, &#039;alpha2&#039; =&gt; &#039;AG&#039;, &#039;alpha3&#039; =&gt; &#039;ATG&#039;, &#039;numeric&#039; =&gt; &#039;028&#039;, &#039;currency&#039; =&gt; [&#039;XCD&#039;]], [&#039;name&#039; =&gt; &#039;Argentina&#039;, &#039;alpha2&#039; =&gt; &#039;AR&#039;, &#039;alpha3&#039; =&gt; &#039;ARG&#039;, &#039;numeric&#039; =&gt; &#039;032&#039;, &#039;currency&#039; =&gt; [&#039;ARS&#039;]], [&#039;name&#039; =&gt; &#039;Armenia&#039;, &#039;alpha2&#039; =&gt; &#039;AM&#039;, &#039;alpha3&#039; =&gt; &#039;ARM&#039;, &#039;numeric&#039; =&gt; &#039;051&#039;, &#039;currency&#039; =&gt; [&#039;AMD&#039;]], [&#039;name&#039; =&gt; &#039;Aruba&#039;, &#039;alpha2&#039; =&gt; &#039;AW&#039;, &#039;alpha3&#039; =&gt; &#039;ABW&#039;, &#039;numeric&#039; =&gt; &#039;533&#039;, &#039;currency&#039; =&gt; [&#039;AWG&#039;]], [&#039;name&#039; =&gt; &#039;Australia&#039;, &#039;alpha2&#039; =&gt; &#039;AU&#039;, &#039;alpha3&#039; =&gt; &#039;AUS&#039;, &#039;numeric&#039; =&gt; &#039;036&#039;, &#039;currency&#039; =&gt; [&#039;AUD&#039;]], [&#039;name&#039; =&gt; &#039;Austria&#039;, &#039;alpha2&#039; =&gt; &#039;AT&#039;, &#039;alpha3&#039; =&gt; &#039;AUT&#039;, &#039;numeric&#039; =&gt; &#039;040&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Azerbaijan&#039;, &#039;alpha2&#039; =&gt; &#039;AZ&#039;, &#039;alpha3&#039; =&gt; &#039;AZE&#039;, &#039;numeric&#039; =&gt; &#039;031&#039;, &#039;currency&#039; =&gt; [&#039;AZN&#039;]], [&#039;name&#039; =&gt; &#039;Bahamas&#039;, &#039;alpha2&#039; =&gt; &#039;BS&#039;, &#039;alpha3&#039; =&gt; &#039;BHS&#039;, &#039;numeric&#039; =&gt; &#039;044&#039;, &#039;currency&#039; =&gt; [&#039;BSD&#039;]], [&#039;name&#039; =&gt; &#039;Bahrain&#039;, &#039;alpha2&#039; =&gt; &#039;BH&#039;, &#039;alpha3&#039; =&gt; &#039;BHR&#039;, &#039;numeric&#039; =&gt; &#039;048&#039;, &#039;currency&#039; =&gt; [&#039;BHD&#039;]], [&#039;name&#039; =&gt; &#039;Bangladesh&#039;, &#039;alpha2&#039; =&gt; &#039;BD&#039;, &#039;alpha3&#039; =&gt; &#039;BGD&#039;, &#039;numeric&#039; =&gt; &#039;050&#039;, &#039;currency&#039; =&gt; [&#039;BDT&#039;]], [&#039;name&#039; =&gt; &#039;Barbados&#039;, &#039;alpha2&#039; =&gt; &#039;BB&#039;, &#039;alpha3&#039; =&gt; &#039;BRB&#039;, &#039;numeric&#039; =&gt; &#039;052&#039;, &#039;currency&#039; =&gt; [&#039;BBD&#039;]], [&#039;name&#039; =&gt; &#039;Belarus&#039;, &#039;alpha2&#039; =&gt; &#039;BY&#039;, &#039;alpha3&#039; =&gt; &#039;BLR&#039;, &#039;numeric&#039; =&gt; &#039;112&#039;, &#039;currency&#039; =&gt; [&#039;BYN&#039;]], [&#039;name&#039; =&gt; &#039;Belgium&#039;, &#039;alpha2&#039; =&gt; &#039;BE&#039;, &#039;alpha3&#039; =&gt; &#039;BEL&#039;, &#039;numeric&#039; =&gt; &#039;056&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Belize&#039;, &#039;alpha2&#039; =&gt; &#039;BZ&#039;, &#039;alpha3&#039; =&gt; &#039;BLZ&#039;, &#039;numeric&#039; =&gt; &#039;084&#039;, &#039;currency&#039; =&gt; [&#039;BZD&#039;]], [&#039;name&#039; =&gt; &#039;Benin&#039;, &#039;alpha2&#039; =&gt; &#039;BJ&#039;, &#039;alpha3&#039; =&gt; &#039;BEN&#039;, &#039;numeric&#039; =&gt; &#039;204&#039;, &#039;currency&#039; =&gt; [&#039;XOF&#039;]], [&#039;name&#039; =&gt; &#039;Bermuda&#039;, &#039;alpha2&#039; =&gt; &#039;BM&#039;, &#039;alpha3&#039; =&gt; &#039;BMU&#039;, &#039;numeric&#039; =&gt; &#039;060&#039;, &#039;currency&#039; =&gt; [&#039;BMD&#039;]], [&#039;name&#039; =&gt; &#039;Bhutan&#039;, &#039;alpha2&#039; =&gt; &#039;BT&#039;, &#039;alpha3&#039; =&gt; &#039;BTN&#039;, &#039;numeric&#039; =&gt; &#039;064&#039;, &#039;currency&#039; =&gt; [&#039;BTN&#039;]], [&#039;name&#039; =&gt; &#039;Bolivia (Plurinational State of)&#039;, &#039;alpha2&#039; =&gt; &#039;BO&#039;, &#039;alpha3&#039; =&gt; &#039;BOL&#039;, &#039;numeric&#039; =&gt; &#039;068&#039;, &#039;currency&#039; =&gt; [&#039;BOB&#039;]], [&#039;name&#039; =&gt; &#039;Bonaire, Sint Eustatius and Saba&#039;, &#039;alpha2&#039; =&gt; &#039;BQ&#039;, &#039;alpha3&#039; =&gt; &#039;BES&#039;, &#039;numeric&#039; =&gt; &#039;535&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Bosnia and Herzegovina&#039;, &#039;alpha2&#039; =&gt; &#039;BA&#039;, &#039;alpha3&#039; =&gt; &#039;BIH&#039;, &#039;numeric&#039; =&gt; &#039;070&#039;, &#039;currency&#039; =&gt; [&#039;BAM&#039;]], [&#039;name&#039; =&gt; &#039;Botswana&#039;, &#039;alpha2&#039; =&gt; &#039;BW&#039;, &#039;alpha3&#039; =&gt; &#039;BWA&#039;, &#039;numeric&#039; =&gt; &#039;072&#039;, &#039;currency&#039; =&gt; [&#039;BWP&#039;]], [&#039;name&#039; =&gt; &#039;Bouvet Island&#039;, &#039;alpha2&#039; =&gt; &#039;BV&#039;, &#039;alpha3&#039; =&gt; &#039;BVT&#039;, &#039;numeric&#039; =&gt; &#039;074&#039;, &#039;currency&#039; =&gt; [&#039;NOK&#039;]], [&#039;name&#039; =&gt; &#039;Brazil&#039;, &#039;alpha2&#039; =&gt; &#039;BR&#039;, &#039;alpha3&#039; =&gt; &#039;BRA&#039;, &#039;numeric&#039; =&gt; &#039;076&#039;, &#039;currency&#039; =&gt; [&#039;BRL&#039;]], [&#039;name&#039; =&gt; &#039;British Indian Ocean Territory&#039;, &#039;alpha2&#039; =&gt; &#039;IO&#039;, &#039;alpha3&#039; =&gt; &#039;IOT&#039;, &#039;numeric&#039; =&gt; &#039;086&#039;, &#039;currency&#039; =&gt; [&#039;GBP&#039;]], [&#039;name&#039; =&gt; &#039;Brunei Darussalam&#039;, &#039;alpha2&#039; =&gt; &#039;BN&#039;, &#039;alpha3&#039; =&gt; &#039;BRN&#039;, &#039;numeric&#039; =&gt; &#039;096&#039;, &#039;currency&#039; =&gt; [&#039;BND&#039;, &#039;SGD&#039;]], [&#039;name&#039; =&gt; &#039;Bulgaria&#039;, &#039;alpha2&#039; =&gt; &#039;BG&#039;, &#039;alpha3&#039; =&gt; &#039;BGR&#039;, &#039;numeric&#039; =&gt; &#039;100&#039;, &#039;currency&#039; =&gt; [&#039;BGN&#039;]], [&#039;name&#039; =&gt; &#039;Burkina Faso&#039;, &#039;alpha2&#039; =&gt; &#039;BF&#039;, &#039;alpha3&#039; =&gt; &#039;BFA&#039;, &#039;numeric&#039; =&gt; &#039;854&#039;, &#039;currency&#039; =&gt; [&#039;XOF&#039;]], [&#039;name&#039; =&gt; &#039;Burundi&#039;, &#039;alpha2&#039; =&gt; &#039;BI&#039;, &#039;alpha3&#039; =&gt; &#039;BDI&#039;, &#039;numeric&#039; =&gt; &#039;108&#039;, &#039;currency&#039; =&gt; [&#039;BIF&#039;]], [&#039;name&#039; =&gt; &#039;Cabo Verde&#039;, &#039;alpha2&#039; =&gt; &#039;CV&#039;, &#039;alpha3&#039; =&gt; &#039;CPV&#039;, &#039;numeric&#039; =&gt; &#039;132&#039;, &#039;currency&#039; =&gt; [&#039;CVE&#039;]], [&#039;name&#039; =&gt; &#039;Cambodia&#039;, &#039;alpha2&#039; =&gt; &#039;KH&#039;, &#039;alpha3&#039; =&gt; &#039;KHM&#039;, &#039;numeric&#039; =&gt; &#039;116&#039;, &#039;currency&#039; =&gt; [&#039;KHR&#039;]], [&#039;name&#039; =&gt; &#039;Cameroon&#039;, &#039;alpha2&#039; =&gt; &#039;CM&#039;, &#039;alpha3&#039; =&gt; &#039;CMR&#039;, &#039;numeric&#039; =&gt; &#039;120&#039;, &#039;currency&#039; =&gt; [&#039;XAF&#039;]], [&#039;name&#039; =&gt; &#039;Canada&#039;, &#039;alpha2&#039; =&gt; &#039;CA&#039;, &#039;alpha3&#039; =&gt; &#039;CAN&#039;, &#039;numeric&#039; =&gt; &#039;124&#039;, &#039;currency&#039; =&gt; [&#039;CAD&#039;]], [&#039;name&#039; =&gt; &#039;Cayman Islands&#039;, &#039;alpha2&#039; =&gt; &#039;KY&#039;, &#039;alpha3&#039; =&gt; &#039;CYM&#039;, &#039;numeric&#039; =&gt; &#039;136&#039;, &#039;currency&#039; =&gt; [&#039;KYD&#039;]], [&#039;name&#039; =&gt; &#039;Central African Republic&#039;, &#039;alpha2&#039; =&gt; &#039;CF&#039;, &#039;alpha3&#039; =&gt; &#039;CAF&#039;, &#039;numeric&#039; =&gt; &#039;140&#039;, &#039;currency&#039; =&gt; [&#039;XAF&#039;]], [&#039;name&#039; =&gt; &#039;Chad&#039;, &#039;alpha2&#039; =&gt; &#039;TD&#039;, &#039;alpha3&#039; =&gt; &#039;TCD&#039;, &#039;numeric&#039; =&gt; &#039;148&#039;, &#039;currency&#039; =&gt; [&#039;XAF&#039;]], [&#039;name&#039; =&gt; &#039;Chile&#039;, &#039;alpha2&#039; =&gt; &#039;CL&#039;, &#039;alpha3&#039; =&gt; &#039;CHL&#039;, &#039;numeric&#039; =&gt; &#039;152&#039;, &#039;currency&#039; =&gt; [&#039;CLP&#039;]], [&#039;name&#039; =&gt; &#039;China&#039;, &#039;alpha2&#039; =&gt; &#039;CN&#039;, &#039;alpha3&#039; =&gt; &#039;CHN&#039;, &#039;numeric&#039; =&gt; &#039;156&#039;, &#039;currency&#039; =&gt; [&#039;CNY&#039;]], [&#039;name&#039; =&gt; &#039;Christmas Island&#039;, &#039;alpha2&#039; =&gt; &#039;CX&#039;, &#039;alpha3&#039; =&gt; &#039;CXR&#039;, &#039;numeric&#039; =&gt; &#039;162&#039;, &#039;currency&#039; =&gt; [&#039;AUD&#039;]], [&#039;name&#039; =&gt; &#039;Cocos (Keeling) Islands&#039;, &#039;alpha2&#039; =&gt; &#039;CC&#039;, &#039;alpha3&#039; =&gt; &#039;CCK&#039;, &#039;numeric&#039; =&gt; &#039;166&#039;, &#039;currency&#039; =&gt; [&#039;AUD&#039;]], [&#039;name&#039; =&gt; &#039;Colombia&#039;, &#039;alpha2&#039; =&gt; &#039;CO&#039;, &#039;alpha3&#039; =&gt; &#039;COL&#039;, &#039;numeric&#039; =&gt; &#039;170&#039;, &#039;currency&#039; =&gt; [&#039;COP&#039;]], [&#039;name&#039; =&gt; &#039;Comoros&#039;, &#039;alpha2&#039; =&gt; &#039;KM&#039;, &#039;alpha3&#039; =&gt; &#039;COM&#039;, &#039;numeric&#039; =&gt; &#039;174&#039;, &#039;currency&#039; =&gt; [&#039;KMF&#039;]], [&#039;name&#039; =&gt; &#039;Congo&#039;, &#039;alpha2&#039; =&gt; &#039;CG&#039;, &#039;alpha3&#039; =&gt; &#039;COG&#039;, &#039;numeric&#039; =&gt; &#039;178&#039;, &#039;currency&#039; =&gt; [&#039;XAF&#039;]], [&#039;name&#039; =&gt; &#039;Congo (Democratic Republic of the)&#039;, &#039;alpha2&#039; =&gt; &#039;CD&#039;, &#039;alpha3&#039; =&gt; &#039;COD&#039;, &#039;numeric&#039; =&gt; &#039;180&#039;, &#039;currency&#039; =&gt; [&#039;CDF&#039;]], [&#039;name&#039; =&gt; &#039;Cook Islands&#039;, &#039;alpha2&#039; =&gt; &#039;CK&#039;, &#039;alpha3&#039; =&gt; &#039;COK&#039;, &#039;numeric&#039; =&gt; &#039;184&#039;, &#039;currency&#039; =&gt; [&#039;NZD&#039;]], [&#039;name&#039; =&gt; &#039;Costa Rica&#039;, &#039;alpha2&#039; =&gt; &#039;CR&#039;, &#039;alpha3&#039; =&gt; &#039;CRI&#039;, &#039;numeric&#039; =&gt; &#039;188&#039;, &#039;currency&#039; =&gt; [&#039;CRC&#039;]], [&#039;name&#039; =&gt; &#039;Côte d&#039;Ivoire&#039;, &#039;alpha2&#039; =&gt; &#039;CI&#039;, &#039;alpha3&#039; =&gt; &#039;CIV&#039;, &#039;numeric&#039; =&gt; &#039;384&#039;, &#039;currency&#039; =&gt; [&#039;XOF&#039;]], [&#039;name&#039; =&gt; &#039;Croatia&#039;, &#039;alpha2&#039; =&gt; &#039;HR&#039;, &#039;alpha3&#039; =&gt; &#039;HRV&#039;, &#039;numeric&#039; =&gt; &#039;191&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Cuba&#039;, &#039;alpha2&#039; =&gt; &#039;CU&#039;, &#039;alpha3&#039; =&gt; &#039;CUB&#039;, &#039;numeric&#039; =&gt; &#039;192&#039;, &#039;currency&#039; =&gt; [&#039;CUC&#039;, &#039;CUP&#039;]], [&#039;name&#039; =&gt; &#039;Curaçao&#039;, &#039;alpha2&#039; =&gt; &#039;CW&#039;, &#039;alpha3&#039; =&gt; &#039;CUW&#039;, &#039;numeric&#039; =&gt; &#039;531&#039;, &#039;currency&#039; =&gt; [&#039;ANG&#039;]], [&#039;name&#039; =&gt; &#039;Cyprus&#039;, &#039;alpha2&#039; =&gt; &#039;CY&#039;, &#039;alpha3&#039; =&gt; &#039;CYP&#039;, &#039;numeric&#039; =&gt; &#039;196&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Czechia&#039;, &#039;alpha2&#039; =&gt; &#039;CZ&#039;, &#039;alpha3&#039; =&gt; &#039;CZE&#039;, &#039;numeric&#039; =&gt; &#039;203&#039;, &#039;currency&#039; =&gt; [&#039;CZK&#039;]], [&#039;name&#039; =&gt; &#039;Denmark&#039;, &#039;alpha2&#039; =&gt; &#039;DK&#039;, &#039;alpha3&#039; =&gt; &#039;DNK&#039;, &#039;numeric&#039; =&gt; &#039;208&#039;, &#039;currency&#039; =&gt; [&#039;DKK&#039;]], [&#039;name&#039; =&gt; &#039;Djibouti&#039;, &#039;alpha2&#039; =&gt; &#039;DJ&#039;, &#039;alpha3&#039; =&gt; &#039;DJI&#039;, &#039;numeric&#039; =&gt; &#039;262&#039;, &#039;currency&#039; =&gt; [&#039;DJF&#039;]], [&#039;name&#039; =&gt; &#039;Dominica&#039;, &#039;alpha2&#039; =&gt; &#039;DM&#039;, &#039;alpha3&#039; =&gt; &#039;DMA&#039;, &#039;numeric&#039; =&gt; &#039;212&#039;, &#039;currency&#039; =&gt; [&#039;XCD&#039;]], [&#039;name&#039; =&gt; &#039;Dominican Republic&#039;, &#039;alpha2&#039; =&gt; &#039;DO&#039;, &#039;alpha3&#039; =&gt; &#039;DOM&#039;, &#039;numeric&#039; =&gt; &#039;214&#039;, &#039;currency&#039; =&gt; [&#039;DOP&#039;]], [&#039;name&#039; =&gt; &#039;Ecuador&#039;, &#039;alpha2&#039; =&gt; &#039;EC&#039;, &#039;alpha3&#039; =&gt; &#039;ECU&#039;, &#039;numeric&#039; =&gt; &#039;218&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Egypt&#039;, &#039;alpha2&#039; =&gt; &#039;EG&#039;, &#039;alpha3&#039; =&gt; &#039;EGY&#039;, &#039;numeric&#039; =&gt; &#039;818&#039;, &#039;currency&#039; =&gt; [&#039;EGP&#039;]], [&#039;name&#039; =&gt; &#039;El Salvador&#039;, &#039;alpha2&#039; =&gt; &#039;SV&#039;, &#039;alpha3&#039; =&gt; &#039;SLV&#039;, &#039;numeric&#039; =&gt; &#039;222&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Equatorial Guinea&#039;, &#039;alpha2&#039; =&gt; &#039;GQ&#039;, &#039;alpha3&#039; =&gt; &#039;GNQ&#039;, &#039;numeric&#039; =&gt; &#039;226&#039;, &#039;currency&#039; =&gt; [&#039;XAF&#039;]], [&#039;name&#039; =&gt; &#039;Eritrea&#039;, &#039;alpha2&#039; =&gt; &#039;ER&#039;, &#039;alpha3&#039; =&gt; &#039;ERI&#039;, &#039;numeric&#039; =&gt; &#039;232&#039;, &#039;currency&#039; =&gt; [&#039;ERN&#039;]], [&#039;name&#039; =&gt; &#039;Estonia&#039;, &#039;alpha2&#039; =&gt; &#039;EE&#039;, &#039;alpha3&#039; =&gt; &#039;EST&#039;, &#039;numeric&#039; =&gt; &#039;233&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Ethiopia&#039;, &#039;alpha2&#039; =&gt; &#039;ET&#039;, &#039;alpha3&#039; =&gt; &#039;ETH&#039;, &#039;numeric&#039; =&gt; &#039;231&#039;, &#039;currency&#039; =&gt; [&#039;ETB&#039;]], [&#039;name&#039; =&gt; &#039;Eswatini&#039;, &#039;alpha2&#039; =&gt; &#039;SZ&#039;, &#039;alpha3&#039; =&gt; &#039;SWZ&#039;, &#039;numeric&#039; =&gt; &#039;748&#039;, &#039;currency&#039; =&gt; [&#039;SZL&#039;, &#039;ZAR&#039;]], [&#039;name&#039; =&gt; &#039;Falkland Islands (Malvinas)&#039;, &#039;alpha2&#039; =&gt; &#039;FK&#039;, &#039;alpha3&#039; =&gt; &#039;FLK&#039;, &#039;numeric&#039; =&gt; &#039;238&#039;, &#039;currency&#039; =&gt; [&#039;FKP&#039;]], [&#039;name&#039; =&gt; &#039;Faroe Islands&#039;, &#039;alpha2&#039; =&gt; &#039;FO&#039;, &#039;alpha3&#039; =&gt; &#039;FRO&#039;, &#039;numeric&#039; =&gt; &#039;234&#039;, &#039;currency&#039; =&gt; [&#039;DKK&#039;]], [&#039;name&#039; =&gt; &#039;Fiji&#039;, &#039;alpha2&#039; =&gt; &#039;FJ&#039;, &#039;alpha3&#039; =&gt; &#039;FJI&#039;, &#039;numeric&#039; =&gt; &#039;242&#039;, &#039;currency&#039; =&gt; [&#039;FJD&#039;]], [&#039;name&#039; =&gt; &#039;Finland&#039;, &#039;alpha2&#039; =&gt; &#039;FI&#039;, &#039;alpha3&#039; =&gt; &#039;FIN&#039;, &#039;numeric&#039; =&gt; &#039;246&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;France&#039;, &#039;alpha2&#039; =&gt; &#039;FR&#039;, &#039;alpha3&#039; =&gt; &#039;FRA&#039;, &#039;numeric&#039; =&gt; &#039;250&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;French Guiana&#039;, &#039;alpha2&#039; =&gt; &#039;GF&#039;, &#039;alpha3&#039; =&gt; &#039;GUF&#039;, &#039;numeric&#039; =&gt; &#039;254&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;French Polynesia&#039;, &#039;alpha2&#039; =&gt; &#039;PF&#039;, &#039;alpha3&#039; =&gt; &#039;PYF&#039;, &#039;numeric&#039; =&gt; &#039;258&#039;, &#039;currency&#039; =&gt; [&#039;XPF&#039;]], [&#039;name&#039; =&gt; &#039;French Southern Territories&#039;, &#039;alpha2&#039; =&gt; &#039;TF&#039;, &#039;alpha3&#039; =&gt; &#039;ATF&#039;, &#039;numeric&#039; =&gt; &#039;260&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Gabon&#039;, &#039;alpha2&#039; =&gt; &#039;GA&#039;, &#039;alpha3&#039; =&gt; &#039;GAB&#039;, &#039;numeric&#039; =&gt; &#039;266&#039;, &#039;currency&#039; =&gt; [&#039;XAF&#039;]], [&#039;name&#039; =&gt; &#039;Gambia&#039;, &#039;alpha2&#039; =&gt; &#039;GM&#039;, &#039;alpha3&#039; =&gt; &#039;GMB&#039;, &#039;numeric&#039; =&gt; &#039;270&#039;, &#039;currency&#039; =&gt; [&#039;GMD&#039;]], [&#039;name&#039; =&gt; &#039;Georgia&#039;, &#039;alpha2&#039; =&gt; &#039;GE&#039;, &#039;alpha3&#039; =&gt; &#039;GEO&#039;, &#039;numeric&#039; =&gt; &#039;268&#039;, &#039;currency&#039; =&gt; [&#039;GEL&#039;]], [&#039;name&#039; =&gt; &#039;Germany&#039;, &#039;alpha2&#039; =&gt; &#039;DE&#039;, &#039;alpha3&#039; =&gt; &#039;DEU&#039;, &#039;numeric&#039; =&gt; &#039;276&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Ghana&#039;, &#039;alpha2&#039; =&gt; &#039;GH&#039;, &#039;alpha3&#039; =&gt; &#039;GHA&#039;, &#039;numeric&#039; =&gt; &#039;288&#039;, &#039;currency&#039; =&gt; [&#039;GHS&#039;]], [&#039;name&#039; =&gt; &#039;Gibraltar&#039;, &#039;alpha2&#039; =&gt; &#039;GI&#039;, &#039;alpha3&#039; =&gt; &#039;GIB&#039;, &#039;numeric&#039; =&gt; &#039;292&#039;, &#039;currency&#039; =&gt; [&#039;GIP&#039;]], [&#039;name&#039; =&gt; &#039;Greece&#039;, &#039;alpha2&#039; =&gt; &#039;GR&#039;, &#039;alpha3&#039; =&gt; &#039;GRC&#039;, &#039;numeric&#039; =&gt; &#039;300&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Greenland&#039;, &#039;alpha2&#039; =&gt; &#039;GL&#039;, &#039;alpha3&#039; =&gt; &#039;GRL&#039;, &#039;numeric&#039; =&gt; &#039;304&#039;, &#039;currency&#039; =&gt; [&#039;DKK&#039;]], [&#039;name&#039; =&gt; &#039;Grenada&#039;, &#039;alpha2&#039; =&gt; &#039;GD&#039;, &#039;alpha3&#039; =&gt; &#039;GRD&#039;, &#039;numeric&#039; =&gt; &#039;308&#039;, &#039;currency&#039; =&gt; [&#039;XCD&#039;]], [&#039;name&#039; =&gt; &#039;Guadeloupe&#039;, &#039;alpha2&#039; =&gt; &#039;GP&#039;, &#039;alpha3&#039; =&gt; &#039;GLP&#039;, &#039;numeric&#039; =&gt; &#039;312&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Guam&#039;, &#039;alpha2&#039; =&gt; &#039;GU&#039;, &#039;alpha3&#039; =&gt; &#039;GUM&#039;, &#039;numeric&#039; =&gt; &#039;316&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Guatemala&#039;, &#039;alpha2&#039; =&gt; &#039;GT&#039;, &#039;alpha3&#039; =&gt; &#039;GTM&#039;, &#039;numeric&#039; =&gt; &#039;320&#039;, &#039;currency&#039; =&gt; [&#039;GTQ&#039;]], [&#039;name&#039; =&gt; &#039;Guernsey&#039;, &#039;alpha2&#039; =&gt; &#039;GG&#039;, &#039;alpha3&#039; =&gt; &#039;GGY&#039;, &#039;numeric&#039; =&gt; &#039;831&#039;, &#039;currency&#039; =&gt; [&#039;GBP&#039;]], [&#039;name&#039; =&gt; &#039;Guinea&#039;, &#039;alpha2&#039; =&gt; &#039;GN&#039;, &#039;alpha3&#039; =&gt; &#039;GIN&#039;, &#039;numeric&#039; =&gt; &#039;324&#039;, &#039;currency&#039; =&gt; [&#039;GNF&#039;]], [&#039;name&#039; =&gt; &#039;Guinea-Bissau&#039;, &#039;alpha2&#039; =&gt; &#039;GW&#039;, &#039;alpha3&#039; =&gt; &#039;GNB&#039;, &#039;numeric&#039; =&gt; &#039;624&#039;, &#039;currency&#039; =&gt; [&#039;XOF&#039;]], [&#039;name&#039; =&gt; &#039;Guyana&#039;, &#039;alpha2&#039; =&gt; &#039;GY&#039;, &#039;alpha3&#039; =&gt; &#039;GUY&#039;, &#039;numeric&#039; =&gt; &#039;328&#039;, &#039;currency&#039; =&gt; [&#039;GYD&#039;]], [&#039;name&#039; =&gt; &#039;Haiti&#039;, &#039;alpha2&#039; =&gt; &#039;HT&#039;, &#039;alpha3&#039; =&gt; &#039;HTI&#039;, &#039;numeric&#039; =&gt; &#039;332&#039;, &#039;currency&#039; =&gt; [&#039;HTG&#039;]], [&#039;name&#039; =&gt; &#039;Heard Island and McDonald Islands&#039;, &#039;alpha2&#039; =&gt; &#039;HM&#039;, &#039;alpha3&#039; =&gt; &#039;HMD&#039;, &#039;numeric&#039; =&gt; &#039;334&#039;, &#039;currency&#039; =&gt; [&#039;AUD&#039;]], [&#039;name&#039; =&gt; &#039;Holy See&#039;, &#039;alpha2&#039; =&gt; &#039;VA&#039;, &#039;alpha3&#039; =&gt; &#039;VAT&#039;, &#039;numeric&#039; =&gt; &#039;336&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Honduras&#039;, &#039;alpha2&#039; =&gt; &#039;HN&#039;, &#039;alpha3&#039; =&gt; &#039;HND&#039;, &#039;numeric&#039; =&gt; &#039;340&#039;, &#039;currency&#039; =&gt; [&#039;HNL&#039;]], [&#039;name&#039; =&gt; &#039;Hong Kong&#039;, &#039;alpha2&#039; =&gt; &#039;HK&#039;, &#039;alpha3&#039; =&gt; &#039;HKG&#039;, &#039;numeric&#039; =&gt; &#039;344&#039;, &#039;currency&#039; =&gt; [&#039;HKD&#039;]], [&#039;name&#039; =&gt; &#039;Hungary&#039;, &#039;alpha2&#039; =&gt; &#039;HU&#039;, &#039;alpha3&#039; =&gt; &#039;HUN&#039;, &#039;numeric&#039; =&gt; &#039;348&#039;, &#039;currency&#039; =&gt; [&#039;HUF&#039;]], [&#039;name&#039; =&gt; &#039;Iceland&#039;, &#039;alpha2&#039; =&gt; &#039;IS&#039;, &#039;alpha3&#039; =&gt; &#039;ISL&#039;, &#039;numeric&#039; =&gt; &#039;352&#039;, &#039;currency&#039; =&gt; [&#039;ISK&#039;]], [&#039;name&#039; =&gt; &#039;India&#039;, &#039;alpha2&#039; =&gt; &#039;IN&#039;, &#039;alpha3&#039; =&gt; &#039;IND&#039;, &#039;numeric&#039; =&gt; &#039;356&#039;, &#039;currency&#039; =&gt; [&#039;INR&#039;]], [&#039;name&#039; =&gt; &#039;Indonesia&#039;, &#039;alpha2&#039; =&gt; &#039;ID&#039;, &#039;alpha3&#039; =&gt; &#039;IDN&#039;, &#039;numeric&#039; =&gt; &#039;360&#039;, &#039;currency&#039; =&gt; [&#039;IDR&#039;]], [&#039;name&#039; =&gt; &#039;Iran (Islamic Republic of)&#039;, &#039;alpha2&#039; =&gt; &#039;IR&#039;, &#039;alpha3&#039; =&gt; &#039;IRN&#039;, &#039;numeric&#039; =&gt; &#039;364&#039;, &#039;currency&#039; =&gt; [&#039;IRR&#039;]], [&#039;name&#039; =&gt; &#039;Iraq&#039;, &#039;alpha2&#039; =&gt; &#039;IQ&#039;, &#039;alpha3&#039; =&gt; &#039;IRQ&#039;, &#039;numeric&#039; =&gt; &#039;368&#039;, &#039;currency&#039; =&gt; [&#039;IQD&#039;]], [&#039;name&#039; =&gt; &#039;Ireland&#039;, &#039;alpha2&#039; =&gt; &#039;IE&#039;, &#039;alpha3&#039; =&gt; &#039;IRL&#039;, &#039;numeric&#039; =&gt; &#039;372&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Isle of Man&#039;, &#039;alpha2&#039; =&gt; &#039;IM&#039;, &#039;alpha3&#039; =&gt; &#039;IMN&#039;, &#039;numeric&#039; =&gt; &#039;833&#039;, &#039;currency&#039; =&gt; [&#039;GBP&#039;]], [&#039;name&#039; =&gt; &#039;Israel&#039;, &#039;alpha2&#039; =&gt; &#039;IL&#039;, &#039;alpha3&#039; =&gt; &#039;ISR&#039;, &#039;numeric&#039; =&gt; &#039;376&#039;, &#039;currency&#039; =&gt; [&#039;ILS&#039;]], [&#039;name&#039; =&gt; &#039;Italy&#039;, &#039;alpha2&#039; =&gt; &#039;IT&#039;, &#039;alpha3&#039; =&gt; &#039;ITA&#039;, &#039;numeric&#039; =&gt; &#039;380&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Jamaica&#039;, &#039;alpha2&#039; =&gt; &#039;JM&#039;, &#039;alpha3&#039; =&gt; &#039;JAM&#039;, &#039;numeric&#039; =&gt; &#039;388&#039;, &#039;currency&#039; =&gt; [&#039;JMD&#039;]], [&#039;name&#039; =&gt; &#039;Japan&#039;, &#039;alpha2&#039; =&gt; &#039;JP&#039;, &#039;alpha3&#039; =&gt; &#039;JPN&#039;, &#039;numeric&#039; =&gt; &#039;392&#039;, &#039;currency&#039; =&gt; [&#039;JPY&#039;]], [&#039;name&#039; =&gt; &#039;Jersey&#039;, &#039;alpha2&#039; =&gt; &#039;JE&#039;, &#039;alpha3&#039; =&gt; &#039;JEY&#039;, &#039;numeric&#039; =&gt; &#039;832&#039;, &#039;currency&#039; =&gt; [&#039;GBP&#039;]], [&#039;name&#039; =&gt; &#039;Jordan&#039;, &#039;alpha2&#039; =&gt; &#039;JO&#039;, &#039;alpha3&#039; =&gt; &#039;JOR&#039;, &#039;numeric&#039; =&gt; &#039;400&#039;, &#039;currency&#039; =&gt; [&#039;JOD&#039;]], [&#039;name&#039; =&gt; &#039;Kazakhstan&#039;, &#039;alpha2&#039; =&gt; &#039;KZ&#039;, &#039;alpha3&#039; =&gt; &#039;KAZ&#039;, &#039;numeric&#039; =&gt; &#039;398&#039;, &#039;currency&#039; =&gt; [&#039;KZT&#039;]], [&#039;name&#039; =&gt; &#039;Kenya&#039;, &#039;alpha2&#039; =&gt; &#039;KE&#039;, &#039;alpha3&#039; =&gt; &#039;KEN&#039;, &#039;numeric&#039; =&gt; &#039;404&#039;, &#039;currency&#039; =&gt; [&#039;KES&#039;]], [&#039;name&#039; =&gt; &#039;Kiribati&#039;, &#039;alpha2&#039; =&gt; &#039;KI&#039;, &#039;alpha3&#039; =&gt; &#039;KIR&#039;, &#039;numeric&#039; =&gt; &#039;296&#039;, &#039;currency&#039; =&gt; [&#039;AUD&#039;]], [&#039;name&#039; =&gt; &#039;Korea (Democratic People&#039;s Republic of)&#039;, &#039;alpha2&#039; =&gt; &#039;KP&#039;, &#039;alpha3&#039; =&gt; &#039;PRK&#039;, &#039;numeric&#039; =&gt; &#039;408&#039;, &#039;currency&#039; =&gt; [&#039;KPW&#039;]], [&#039;name&#039; =&gt; &#039;Korea (Republic of)&#039;, &#039;alpha2&#039; =&gt; &#039;KR&#039;, &#039;alpha3&#039; =&gt; &#039;KOR&#039;, &#039;numeric&#039; =&gt; &#039;410&#039;, &#039;currency&#039; =&gt; [&#039;KRW&#039;]], [&#039;name&#039; =&gt; &#039;Kosovo&#039;, &#039;alpha2&#039; =&gt; &#039;XK&#039;, &#039;alpha3&#039; =&gt; &#039;XKX&#039;, &#039;numeric&#039; =&gt; &#039;412&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Kuwait&#039;, &#039;alpha2&#039; =&gt; &#039;KW&#039;, &#039;alpha3&#039; =&gt; &#039;KWT&#039;, &#039;numeric&#039; =&gt; &#039;414&#039;, &#039;currency&#039; =&gt; [&#039;KWD&#039;]], [&#039;name&#039; =&gt; &#039;Kyrgyzstan&#039;, &#039;alpha2&#039; =&gt; &#039;KG&#039;, &#039;alpha3&#039; =&gt; &#039;KGZ&#039;, &#039;numeric&#039; =&gt; &#039;417&#039;, &#039;currency&#039; =&gt; [&#039;KGS&#039;]], [&#039;name&#039; =&gt; &#039;Lao People&#039;s Democratic Republic&#039;, &#039;alpha2&#039; =&gt; &#039;LA&#039;, &#039;alpha3&#039; =&gt; &#039;LAO&#039;, &#039;numeric&#039; =&gt; &#039;418&#039;, &#039;currency&#039; =&gt; [&#039;LAK&#039;]], [&#039;name&#039; =&gt; &#039;Latvia&#039;, &#039;alpha2&#039; =&gt; &#039;LV&#039;, &#039;alpha3&#039; =&gt; &#039;LVA&#039;, &#039;numeric&#039; =&gt; &#039;428&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Lebanon&#039;, &#039;alpha2&#039; =&gt; &#039;LB&#039;, &#039;alpha3&#039; =&gt; &#039;LBN&#039;, &#039;numeric&#039; =&gt; &#039;422&#039;, &#039;currency&#039; =&gt; [&#039;LBP&#039;]], [&#039;name&#039; =&gt; &#039;Lesotho&#039;, &#039;alpha2&#039; =&gt; &#039;LS&#039;, &#039;alpha3&#039; =&gt; &#039;LSO&#039;, &#039;numeric&#039; =&gt; &#039;426&#039;, &#039;currency&#039; =&gt; [&#039;LSL&#039;, &#039;ZAR&#039;]], [&#039;name&#039; =&gt; &#039;Liberia&#039;, &#039;alpha2&#039; =&gt; &#039;LR&#039;, &#039;alpha3&#039; =&gt; &#039;LBR&#039;, &#039;numeric&#039; =&gt; &#039;430&#039;, &#039;currency&#039; =&gt; [&#039;LRD&#039;]], [&#039;name&#039; =&gt; &#039;Libya&#039;, &#039;alpha2&#039; =&gt; &#039;LY&#039;, &#039;alpha3&#039; =&gt; &#039;LBY&#039;, &#039;numeric&#039; =&gt; &#039;434&#039;, &#039;currency&#039; =&gt; [&#039;LYD&#039;]], [&#039;name&#039; =&gt; &#039;Liechtenstein&#039;, &#039;alpha2&#039; =&gt; &#039;LI&#039;, &#039;alpha3&#039; =&gt; &#039;LIE&#039;, &#039;numeric&#039; =&gt; &#039;438&#039;, &#039;currency&#039; =&gt; [&#039;CHF&#039;]], [&#039;name&#039; =&gt; &#039;Lithuania&#039;, &#039;alpha2&#039; =&gt; &#039;LT&#039;, &#039;alpha3&#039; =&gt; &#039;LTU&#039;, &#039;numeric&#039; =&gt; &#039;440&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Luxembourg&#039;, &#039;alpha2&#039; =&gt; &#039;LU&#039;, &#039;alpha3&#039; =&gt; &#039;LUX&#039;, &#039;numeric&#039; =&gt; &#039;442&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Macao&#039;, &#039;alpha2&#039; =&gt; &#039;MO&#039;, &#039;alpha3&#039; =&gt; &#039;MAC&#039;, &#039;numeric&#039; =&gt; &#039;446&#039;, &#039;currency&#039; =&gt; [&#039;MOP&#039;]], [&#039;name&#039; =&gt; &#039;North Macedonia&#039;, &#039;alpha2&#039; =&gt; &#039;MK&#039;, &#039;alpha3&#039; =&gt; &#039;MKD&#039;, &#039;numeric&#039; =&gt; &#039;807&#039;, &#039;currency&#039; =&gt; [&#039;MKD&#039;]], [&#039;name&#039; =&gt; &#039;Madagascar&#039;, &#039;alpha2&#039; =&gt; &#039;MG&#039;, &#039;alpha3&#039; =&gt; &#039;MDG&#039;, &#039;numeric&#039; =&gt; &#039;450&#039;, &#039;currency&#039; =&gt; [&#039;MGA&#039;]], [&#039;name&#039; =&gt; &#039;Malawi&#039;, &#039;alpha2&#039; =&gt; &#039;MW&#039;, &#039;alpha3&#039; =&gt; &#039;MWI&#039;, &#039;numeric&#039; =&gt; &#039;454&#039;, &#039;currency&#039; =&gt; [&#039;MWK&#039;]], [&#039;name&#039; =&gt; &#039;Malaysia&#039;, &#039;alpha2&#039; =&gt; &#039;MY&#039;, &#039;alpha3&#039; =&gt; &#039;MYS&#039;, &#039;numeric&#039; =&gt; &#039;458&#039;, &#039;currency&#039; =&gt; [&#039;MYR&#039;]], [&#039;name&#039; =&gt; &#039;Maldives&#039;, &#039;alpha2&#039; =&gt; &#039;MV&#039;, &#039;alpha3&#039; =&gt; &#039;MDV&#039;, &#039;numeric&#039; =&gt; &#039;462&#039;, &#039;currency&#039; =&gt; [&#039;MVR&#039;]], [&#039;name&#039; =&gt; &#039;Mali&#039;, &#039;alpha2&#039; =&gt; &#039;ML&#039;, &#039;alpha3&#039; =&gt; &#039;MLI&#039;, &#039;numeric&#039; =&gt; &#039;466&#039;, &#039;currency&#039; =&gt; [&#039;XOF&#039;]], [&#039;name&#039; =&gt; &#039;Malta&#039;, &#039;alpha2&#039; =&gt; &#039;MT&#039;, &#039;alpha3&#039; =&gt; &#039;MLT&#039;, &#039;numeric&#039; =&gt; &#039;470&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Marshall Islands&#039;, &#039;alpha2&#039; =&gt; &#039;MH&#039;, &#039;alpha3&#039; =&gt; &#039;MHL&#039;, &#039;numeric&#039; =&gt; &#039;584&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Martinique&#039;, &#039;alpha2&#039; =&gt; &#039;MQ&#039;, &#039;alpha3&#039; =&gt; &#039;MTQ&#039;, &#039;numeric&#039; =&gt; &#039;474&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Mauritania&#039;, &#039;alpha2&#039; =&gt; &#039;MR&#039;, &#039;alpha3&#039; =&gt; &#039;MRT&#039;, &#039;numeric&#039; =&gt; &#039;478&#039;, &#039;currency&#039; =&gt; [&#039;MRO&#039;]], [&#039;name&#039; =&gt; &#039;Mauritius&#039;, &#039;alpha2&#039; =&gt; &#039;MU&#039;, &#039;alpha3&#039; =&gt; &#039;MUS&#039;, &#039;numeric&#039; =&gt; &#039;480&#039;, &#039;currency&#039; =&gt; [&#039;MUR&#039;]], [&#039;name&#039; =&gt; &#039;Mayotte&#039;, &#039;alpha2&#039; =&gt; &#039;YT&#039;, &#039;alpha3&#039; =&gt; &#039;MYT&#039;, &#039;numeric&#039; =&gt; &#039;175&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Mexico&#039;, &#039;alpha2&#039; =&gt; &#039;MX&#039;, &#039;alpha3&#039; =&gt; &#039;MEX&#039;, &#039;numeric&#039; =&gt; &#039;484&#039;, &#039;currency&#039; =&gt; [&#039;MXN&#039;]], [&#039;name&#039; =&gt; &#039;Micronesia (Federated States of)&#039;, &#039;alpha2&#039; =&gt; &#039;FM&#039;, &#039;alpha3&#039; =&gt; &#039;FSM&#039;, &#039;numeric&#039; =&gt; &#039;583&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Moldova (Republic of)&#039;, &#039;alpha2&#039; =&gt; &#039;MD&#039;, &#039;alpha3&#039; =&gt; &#039;MDA&#039;, &#039;numeric&#039; =&gt; &#039;498&#039;, &#039;currency&#039; =&gt; [&#039;MDL&#039;]], [&#039;name&#039; =&gt; &#039;Monaco&#039;, &#039;alpha2&#039; =&gt; &#039;MC&#039;, &#039;alpha3&#039; =&gt; &#039;MCO&#039;, &#039;numeric&#039; =&gt; &#039;492&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Mongolia&#039;, &#039;alpha2&#039; =&gt; &#039;MN&#039;, &#039;alpha3&#039; =&gt; &#039;MNG&#039;, &#039;numeric&#039; =&gt; &#039;496&#039;, &#039;currency&#039; =&gt; [&#039;MNT&#039;]], [&#039;name&#039; =&gt; &#039;Montenegro&#039;, &#039;alpha2&#039; =&gt; &#039;ME&#039;, &#039;alpha3&#039; =&gt; &#039;MNE&#039;, &#039;numeric&#039; =&gt; &#039;499&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Montserrat&#039;, &#039;alpha2&#039; =&gt; &#039;MS&#039;, &#039;alpha3&#039; =&gt; &#039;MSR&#039;, &#039;numeric&#039; =&gt; &#039;500&#039;, &#039;currency&#039; =&gt; [&#039;XCD&#039;]], [&#039;name&#039; =&gt; &#039;Morocco&#039;, &#039;alpha2&#039; =&gt; &#039;MA&#039;, &#039;alpha3&#039; =&gt; &#039;MAR&#039;, &#039;numeric&#039; =&gt; &#039;504&#039;, &#039;currency&#039; =&gt; [&#039;MAD&#039;]], [&#039;name&#039; =&gt; &#039;Mozambique&#039;, &#039;alpha2&#039; =&gt; &#039;MZ&#039;, &#039;alpha3&#039; =&gt; &#039;MOZ&#039;, &#039;numeric&#039; =&gt; &#039;508&#039;, &#039;currency&#039; =&gt; [&#039;MZN&#039;]], [&#039;name&#039; =&gt; &#039;Myanmar&#039;, &#039;alpha2&#039; =&gt; &#039;MM&#039;, &#039;alpha3&#039; =&gt; &#039;MMR&#039;, &#039;numeric&#039; =&gt; &#039;104&#039;, &#039;currency&#039; =&gt; [&#039;MMK&#039;]], [&#039;name&#039; =&gt; &#039;Namibia&#039;, &#039;alpha2&#039; =&gt; &#039;NA&#039;, &#039;alpha3&#039; =&gt; &#039;NAM&#039;, &#039;numeric&#039; =&gt; &#039;516&#039;, &#039;currency&#039; =&gt; [&#039;NAD&#039;, &#039;ZAR&#039;]], [&#039;name&#039; =&gt; &#039;Nauru&#039;, &#039;alpha2&#039; =&gt; &#039;NR&#039;, &#039;alpha3&#039; =&gt; &#039;NRU&#039;, &#039;numeric&#039; =&gt; &#039;520&#039;, &#039;currency&#039; =&gt; [&#039;AUD&#039;]], [&#039;name&#039; =&gt; &#039;Nepal&#039;, &#039;alpha2&#039; =&gt; &#039;NP&#039;, &#039;alpha3&#039; =&gt; &#039;NPL&#039;, &#039;numeric&#039; =&gt; &#039;524&#039;, &#039;currency&#039; =&gt; [&#039;NPR&#039;]], [&#039;name&#039; =&gt; &#039;Netherlands&#039;, &#039;alpha2&#039; =&gt; &#039;NL&#039;, &#039;alpha3&#039; =&gt; &#039;NLD&#039;, &#039;numeric&#039; =&gt; &#039;528&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;New Caledonia&#039;, &#039;alpha2&#039; =&gt; &#039;NC&#039;, &#039;alpha3&#039; =&gt; &#039;NCL&#039;, &#039;numeric&#039; =&gt; &#039;540&#039;, &#039;currency&#039; =&gt; [&#039;XPF&#039;]], [&#039;name&#039; =&gt; &#039;New Zealand&#039;, &#039;alpha2&#039; =&gt; &#039;NZ&#039;, &#039;alpha3&#039; =&gt; &#039;NZL&#039;, &#039;numeric&#039; =&gt; &#039;554&#039;, &#039;currency&#039; =&gt; [&#039;NZD&#039;]], [&#039;name&#039; =&gt; &#039;Nicaragua&#039;, &#039;alpha2&#039; =&gt; &#039;NI&#039;, &#039;alpha3&#039; =&gt; &#039;NIC&#039;, &#039;numeric&#039; =&gt; &#039;558&#039;, &#039;currency&#039; =&gt; [&#039;NIO&#039;]], [&#039;name&#039; =&gt; &#039;Niger&#039;, &#039;alpha2&#039; =&gt; &#039;NE&#039;, &#039;alpha3&#039; =&gt; &#039;NER&#039;, &#039;numeric&#039; =&gt; &#039;562&#039;, &#039;currency&#039; =&gt; [&#039;XOF&#039;]], [&#039;name&#039; =&gt; &#039;Nigeria&#039;, &#039;alpha2&#039; =&gt; &#039;NG&#039;, &#039;alpha3&#039; =&gt; &#039;NGA&#039;, &#039;numeric&#039; =&gt; &#039;566&#039;, &#039;currency&#039; =&gt; [&#039;NGN&#039;]], [&#039;name&#039; =&gt; &#039;Niue&#039;, &#039;alpha2&#039; =&gt; &#039;NU&#039;, &#039;alpha3&#039; =&gt; &#039;NIU&#039;, &#039;numeric&#039; =&gt; &#039;570&#039;, &#039;currency&#039; =&gt; [&#039;NZD&#039;]], [&#039;name&#039; =&gt; &#039;Norfolk Island&#039;, &#039;alpha2&#039; =&gt; &#039;NF&#039;, &#039;alpha3&#039; =&gt; &#039;NFK&#039;, &#039;numeric&#039; =&gt; &#039;574&#039;, &#039;currency&#039; =&gt; [&#039;AUD&#039;]], [&#039;name&#039; =&gt; &#039;Northern Mariana Islands&#039;, &#039;alpha2&#039; =&gt; &#039;MP&#039;, &#039;alpha3&#039; =&gt; &#039;MNP&#039;, &#039;numeric&#039; =&gt; &#039;580&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Norway&#039;, &#039;alpha2&#039; =&gt; &#039;NO&#039;, &#039;alpha3&#039; =&gt; &#039;NOR&#039;, &#039;numeric&#039; =&gt; &#039;578&#039;, &#039;currency&#039; =&gt; [&#039;NOK&#039;]], [&#039;name&#039; =&gt; &#039;Oman&#039;, &#039;alpha2&#039; =&gt; &#039;OM&#039;, &#039;alpha3&#039; =&gt; &#039;OMN&#039;, &#039;numeric&#039; =&gt; &#039;512&#039;, &#039;currency&#039; =&gt; [&#039;OMR&#039;]], [&#039;name&#039; =&gt; &#039;Pakistan&#039;, &#039;alpha2&#039; =&gt; &#039;PK&#039;, &#039;alpha3&#039; =&gt; &#039;PAK&#039;, &#039;numeric&#039; =&gt; &#039;586&#039;, &#039;currency&#039; =&gt; [&#039;PKR&#039;]], [&#039;name&#039; =&gt; &#039;Palau&#039;, &#039;alpha2&#039; =&gt; &#039;PW&#039;, &#039;alpha3&#039; =&gt; &#039;PLW&#039;, &#039;numeric&#039; =&gt; &#039;585&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Palestine, State of&#039;, &#039;alpha2&#039; =&gt; &#039;PS&#039;, &#039;alpha3&#039; =&gt; &#039;PSE&#039;, &#039;numeric&#039; =&gt; &#039;275&#039;, &#039;currency&#039; =&gt; [&#039;ILS&#039;]], [&#039;name&#039; =&gt; &#039;Panama&#039;, &#039;alpha2&#039; =&gt; &#039;PA&#039;, &#039;alpha3&#039; =&gt; &#039;PAN&#039;, &#039;numeric&#039; =&gt; &#039;591&#039;, &#039;currency&#039; =&gt; [&#039;PAB&#039;]], [&#039;name&#039; =&gt; &#039;Papua New Guinea&#039;, &#039;alpha2&#039; =&gt; &#039;PG&#039;, &#039;alpha3&#039; =&gt; &#039;PNG&#039;, &#039;numeric&#039; =&gt; &#039;598&#039;, &#039;currency&#039; =&gt; [&#039;PGK&#039;]], [&#039;name&#039; =&gt; &#039;Paraguay&#039;, &#039;alpha2&#039; =&gt; &#039;PY&#039;, &#039;alpha3&#039; =&gt; &#039;PRY&#039;, &#039;numeric&#039; =&gt; &#039;600&#039;, &#039;currency&#039; =&gt; [&#039;PYG&#039;]], [&#039;name&#039; =&gt; &#039;Peru&#039;, &#039;alpha2&#039; =&gt; &#039;PE&#039;, &#039;alpha3&#039; =&gt; &#039;PER&#039;, &#039;numeric&#039; =&gt; &#039;604&#039;, &#039;currency&#039; =&gt; [&#039;PEN&#039;]], [&#039;name&#039; =&gt; &#039;Philippines&#039;, &#039;alpha2&#039; =&gt; &#039;PH&#039;, &#039;alpha3&#039; =&gt; &#039;PHL&#039;, &#039;numeric&#039; =&gt; &#039;608&#039;, &#039;currency&#039; =&gt; [&#039;PHP&#039;]], [&#039;name&#039; =&gt; &#039;Pitcairn&#039;, &#039;alpha2&#039; =&gt; &#039;PN&#039;, &#039;alpha3&#039; =&gt; &#039;PCN&#039;, &#039;numeric&#039; =&gt; &#039;612&#039;, &#039;currency&#039; =&gt; [&#039;NZD&#039;]], [&#039;name&#039; =&gt; &#039;Poland&#039;, &#039;alpha2&#039; =&gt; &#039;PL&#039;, &#039;alpha3&#039; =&gt; &#039;POL&#039;, &#039;numeric&#039; =&gt; &#039;616&#039;, &#039;currency&#039; =&gt; [&#039;PLN&#039;]], [&#039;name&#039; =&gt; &#039;Portugal&#039;, &#039;alpha2&#039; =&gt; &#039;PT&#039;, &#039;alpha3&#039; =&gt; &#039;PRT&#039;, &#039;numeric&#039; =&gt; &#039;620&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Puerto Rico&#039;, &#039;alpha2&#039; =&gt; &#039;PR&#039;, &#039;alpha3&#039; =&gt; &#039;PRI&#039;, &#039;numeric&#039; =&gt; &#039;630&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Qatar&#039;, &#039;alpha2&#039; =&gt; &#039;QA&#039;, &#039;alpha3&#039; =&gt; &#039;QAT&#039;, &#039;numeric&#039; =&gt; &#039;634&#039;, &#039;currency&#039; =&gt; [&#039;QAR&#039;]], [&#039;name&#039; =&gt; &#039;Réunion&#039;, &#039;alpha2&#039; =&gt; &#039;RE&#039;, &#039;alpha3&#039; =&gt; &#039;REU&#039;, &#039;numeric&#039; =&gt; &#039;638&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Romania&#039;, &#039;alpha2&#039; =&gt; &#039;RO&#039;, &#039;alpha3&#039; =&gt; &#039;ROU&#039;, &#039;numeric&#039; =&gt; &#039;642&#039;, &#039;currency&#039; =&gt; [&#039;RON&#039;]], [&#039;name&#039; =&gt; &#039;Russian Federation&#039;, &#039;alpha2&#039; =&gt; &#039;RU&#039;, &#039;alpha3&#039; =&gt; &#039;RUS&#039;, &#039;numeric&#039; =&gt; &#039;643&#039;, &#039;currency&#039; =&gt; [&#039;RUB&#039;]], [&#039;name&#039; =&gt; &#039;Rwanda&#039;, &#039;alpha2&#039; =&gt; &#039;RW&#039;, &#039;alpha3&#039; =&gt; &#039;RWA&#039;, &#039;numeric&#039; =&gt; &#039;646&#039;, &#039;currency&#039; =&gt; [&#039;RWF&#039;]], [&#039;name&#039; =&gt; &#039;Saint Barthélemy&#039;, &#039;alpha2&#039; =&gt; &#039;BL&#039;, &#039;alpha3&#039; =&gt; &#039;BLM&#039;, &#039;numeric&#039; =&gt; &#039;652&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Saint Helena, Ascension and Tristan da Cunha&#039;, &#039;alpha2&#039; =&gt; &#039;SH&#039;, &#039;alpha3&#039; =&gt; &#039;SHN&#039;, &#039;numeric&#039; =&gt; &#039;654&#039;, &#039;currency&#039; =&gt; [&#039;SHP&#039;]], [&#039;name&#039; =&gt; &#039;Saint Kitts and Nevis&#039;, &#039;alpha2&#039; =&gt; &#039;KN&#039;, &#039;alpha3&#039; =&gt; &#039;KNA&#039;, &#039;numeric&#039; =&gt; &#039;659&#039;, &#039;currency&#039; =&gt; [&#039;XCD&#039;]], [&#039;name&#039; =&gt; &#039;Saint Lucia&#039;, &#039;alpha2&#039; =&gt; &#039;LC&#039;, &#039;alpha3&#039; =&gt; &#039;LCA&#039;, &#039;numeric&#039; =&gt; &#039;662&#039;, &#039;currency&#039; =&gt; [&#039;XCD&#039;]], [&#039;name&#039; =&gt; &#039;Saint Martin (French part)&#039;, &#039;alpha2&#039; =&gt; &#039;MF&#039;, &#039;alpha3&#039; =&gt; &#039;MAF&#039;, &#039;numeric&#039; =&gt; &#039;663&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;, &#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Saint Pierre and Miquelon&#039;, &#039;alpha2&#039; =&gt; &#039;PM&#039;, &#039;alpha3&#039; =&gt; &#039;SPM&#039;, &#039;numeric&#039; =&gt; &#039;666&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Saint Vincent and the Grenadines&#039;, &#039;alpha2&#039; =&gt; &#039;VC&#039;, &#039;alpha3&#039; =&gt; &#039;VCT&#039;, &#039;numeric&#039; =&gt; &#039;670&#039;, &#039;currency&#039; =&gt; [&#039;XCD&#039;]], [&#039;name&#039; =&gt; &#039;Samoa&#039;, &#039;alpha2&#039; =&gt; &#039;WS&#039;, &#039;alpha3&#039; =&gt; &#039;WSM&#039;, &#039;numeric&#039; =&gt; &#039;882&#039;, &#039;currency&#039; =&gt; [&#039;WST&#039;]], [&#039;name&#039; =&gt; &#039;San Marino&#039;, &#039;alpha2&#039; =&gt; &#039;SM&#039;, &#039;alpha3&#039; =&gt; &#039;SMR&#039;, &#039;numeric&#039; =&gt; &#039;674&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Sao Tome and Principe&#039;, &#039;alpha2&#039; =&gt; &#039;ST&#039;, &#039;alpha3&#039; =&gt; &#039;STP&#039;, &#039;numeric&#039; =&gt; &#039;678&#039;, &#039;currency&#039; =&gt; [&#039;STD&#039;]], [&#039;name&#039; =&gt; &#039;Saudi Arabia&#039;, &#039;alpha2&#039; =&gt; &#039;SA&#039;, &#039;alpha3&#039; =&gt; &#039;SAU&#039;, &#039;numeric&#039; =&gt; &#039;682&#039;, &#039;currency&#039; =&gt; [&#039;SAR&#039;]], [&#039;name&#039; =&gt; &#039;Senegal&#039;, &#039;alpha2&#039; =&gt; &#039;SN&#039;, &#039;alpha3&#039; =&gt; &#039;SEN&#039;, &#039;numeric&#039; =&gt; &#039;686&#039;, &#039;currency&#039; =&gt; [&#039;XOF&#039;]], [&#039;name&#039; =&gt; &#039;Serbia&#039;, &#039;alpha2&#039; =&gt; &#039;RS&#039;, &#039;alpha3&#039; =&gt; &#039;SRB&#039;, &#039;numeric&#039; =&gt; &#039;688&#039;, &#039;currency&#039; =&gt; [&#039;RSD&#039;]], [&#039;name&#039; =&gt; &#039;Seychelles&#039;, &#039;alpha2&#039; =&gt; &#039;SC&#039;, &#039;alpha3&#039; =&gt; &#039;SYC&#039;, &#039;numeric&#039; =&gt; &#039;690&#039;, &#039;currency&#039; =&gt; [&#039;SCR&#039;]], [&#039;name&#039; =&gt; &#039;Sierra Leone&#039;, &#039;alpha2&#039; =&gt; &#039;SL&#039;, &#039;alpha3&#039; =&gt; &#039;SLE&#039;, &#039;numeric&#039; =&gt; &#039;694&#039;, &#039;currency&#039; =&gt; [&#039;SLL&#039;]], [&#039;name&#039; =&gt; &#039;Singapore&#039;, &#039;alpha2&#039; =&gt; &#039;SG&#039;, &#039;alpha3&#039; =&gt; &#039;SGP&#039;, &#039;numeric&#039; =&gt; &#039;702&#039;, &#039;currency&#039; =&gt; [&#039;SGD&#039;]], [&#039;name&#039; =&gt; &#039;Sint Maarten (Dutch part)&#039;, &#039;alpha2&#039; =&gt; &#039;SX&#039;, &#039;alpha3&#039; =&gt; &#039;SXM&#039;, &#039;numeric&#039; =&gt; &#039;534&#039;, &#039;currency&#039; =&gt; [&#039;ANG&#039;]], [&#039;name&#039; =&gt; &#039;Slovakia&#039;, &#039;alpha2&#039; =&gt; &#039;SK&#039;, &#039;alpha3&#039; =&gt; &#039;SVK&#039;, &#039;numeric&#039; =&gt; &#039;703&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Slovenia&#039;, &#039;alpha2&#039; =&gt; &#039;SI&#039;, &#039;alpha3&#039; =&gt; &#039;SVN&#039;, &#039;numeric&#039; =&gt; &#039;705&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Solomon Islands&#039;, &#039;alpha2&#039; =&gt; &#039;SB&#039;, &#039;alpha3&#039; =&gt; &#039;SLB&#039;, &#039;numeric&#039; =&gt; &#039;090&#039;, &#039;currency&#039; =&gt; [&#039;SBD&#039;]], [&#039;name&#039; =&gt; &#039;Somalia&#039;, &#039;alpha2&#039; =&gt; &#039;SO&#039;, &#039;alpha3&#039; =&gt; &#039;SOM&#039;, &#039;numeric&#039; =&gt; &#039;706&#039;, &#039;currency&#039; =&gt; [&#039;SOS&#039;]], [&#039;name&#039; =&gt; &#039;South Africa&#039;, &#039;alpha2&#039; =&gt; &#039;ZA&#039;, &#039;alpha3&#039; =&gt; &#039;ZAF&#039;, &#039;numeric&#039; =&gt; &#039;710&#039;, &#039;currency&#039; =&gt; [&#039;ZAR&#039;]], [&#039;name&#039; =&gt; &#039;South Georgia and the South Sandwich Islands&#039;, &#039;alpha2&#039; =&gt; &#039;GS&#039;, &#039;alpha3&#039; =&gt; &#039;SGS&#039;, &#039;numeric&#039; =&gt; &#039;239&#039;, &#039;currency&#039; =&gt; [&#039;GBP&#039;]], [&#039;name&#039; =&gt; &#039;South Sudan&#039;, &#039;alpha2&#039; =&gt; &#039;SS&#039;, &#039;alpha3&#039; =&gt; &#039;SSD&#039;, &#039;numeric&#039; =&gt; &#039;728&#039;, &#039;currency&#039; =&gt; [&#039;SSP&#039;]], [&#039;name&#039; =&gt; &#039;Spain&#039;, &#039;alpha2&#039; =&gt; &#039;ES&#039;, &#039;alpha3&#039; =&gt; &#039;ESP&#039;, &#039;numeric&#039; =&gt; &#039;724&#039;, &#039;currency&#039; =&gt; [&#039;EUR&#039;]], [&#039;name&#039; =&gt; &#039;Sri Lanka&#039;, &#039;alpha2&#039; =&gt; &#039;LK&#039;, &#039;alpha3&#039; =&gt; &#039;LKA&#039;, &#039;numeric&#039; =&gt; &#039;144&#039;, &#039;currency&#039; =&gt; [&#039;LKR&#039;]], [&#039;name&#039; =&gt; &#039;Sudan&#039;, &#039;alpha2&#039; =&gt; &#039;SD&#039;, &#039;alpha3&#039; =&gt; &#039;SDN&#039;, &#039;numeric&#039; =&gt; &#039;729&#039;, &#039;currency&#039; =&gt; [&#039;SDG&#039;]], [&#039;name&#039; =&gt; &#039;Suriname&#039;, &#039;alpha2&#039; =&gt; &#039;SR&#039;, &#039;alpha3&#039; =&gt; &#039;SUR&#039;, &#039;numeric&#039; =&gt; &#039;740&#039;, &#039;currency&#039; =&gt; [&#039;SRD&#039;]], [&#039;name&#039; =&gt; &#039;Svalbard and Jan Mayen&#039;, &#039;alpha2&#039; =&gt; &#039;SJ&#039;, &#039;alpha3&#039; =&gt; &#039;SJM&#039;, &#039;numeric&#039; =&gt; &#039;744&#039;, &#039;currency&#039; =&gt; [&#039;NOK&#039;]], [&#039;name&#039; =&gt; &#039;Sweden&#039;, &#039;alpha2&#039; =&gt; &#039;SE&#039;, &#039;alpha3&#039; =&gt; &#039;SWE&#039;, &#039;numeric&#039; =&gt; &#039;752&#039;, &#039;currency&#039; =&gt; [&#039;SEK&#039;]], [&#039;name&#039; =&gt; &#039;Switzerland&#039;, &#039;alpha2&#039; =&gt; &#039;CH&#039;, &#039;alpha3&#039; =&gt; &#039;CHE&#039;, &#039;numeric&#039; =&gt; &#039;756&#039;, &#039;currency&#039; =&gt; [&#039;CHF&#039;]], [&#039;name&#039; =&gt; &#039;Syrian Arab Republic&#039;, &#039;alpha2&#039; =&gt; &#039;SY&#039;, &#039;alpha3&#039; =&gt; &#039;SYR&#039;, &#039;numeric&#039; =&gt; &#039;760&#039;, &#039;currency&#039; =&gt; [&#039;SYP&#039;]], [&#039;name&#039; =&gt; &#039;Taiwan (Province of China)&#039;, &#039;alpha2&#039; =&gt; &#039;TW&#039;, &#039;alpha3&#039; =&gt; &#039;TWN&#039;, &#039;numeric&#039; =&gt; &#039;158&#039;, &#039;currency&#039; =&gt; [&#039;TWD&#039;]], [&#039;name&#039; =&gt; &#039;Tajikistan&#039;, &#039;alpha2&#039; =&gt; &#039;TJ&#039;, &#039;alpha3&#039; =&gt; &#039;TJK&#039;, &#039;numeric&#039; =&gt; &#039;762&#039;, &#039;currency&#039; =&gt; [&#039;TJS&#039;]], [&#039;name&#039; =&gt; &#039;Tanzania, United Republic of&#039;, &#039;alpha2&#039; =&gt; &#039;TZ&#039;, &#039;alpha3&#039; =&gt; &#039;TZA&#039;, &#039;numeric&#039; =&gt; &#039;834&#039;, &#039;currency&#039; =&gt; [&#039;TZS&#039;]], [&#039;name&#039; =&gt; &#039;Thailand&#039;, &#039;alpha2&#039; =&gt; &#039;TH&#039;, &#039;alpha3&#039; =&gt; &#039;THA&#039;, &#039;numeric&#039; =&gt; &#039;764&#039;, &#039;currency&#039; =&gt; [&#039;THB&#039;]], [&#039;name&#039; =&gt; &#039;Timor-Leste&#039;, &#039;alpha2&#039; =&gt; &#039;TL&#039;, &#039;alpha3&#039; =&gt; &#039;TLS&#039;, &#039;numeric&#039; =&gt; &#039;626&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Togo&#039;, &#039;alpha2&#039; =&gt; &#039;TG&#039;, &#039;alpha3&#039; =&gt; &#039;TGO&#039;, &#039;numeric&#039; =&gt; &#039;768&#039;, &#039;currency&#039; =&gt; [&#039;XOF&#039;]], [&#039;name&#039; =&gt; &#039;Tokelau&#039;, &#039;alpha2&#039; =&gt; &#039;TK&#039;, &#039;alpha3&#039; =&gt; &#039;TKL&#039;, &#039;numeric&#039; =&gt; &#039;772&#039;, &#039;currency&#039; =&gt; [&#039;NZD&#039;]], [&#039;name&#039; =&gt; &#039;Tonga&#039;, &#039;alpha2&#039; =&gt; &#039;TO&#039;, &#039;alpha3&#039; =&gt; &#039;TON&#039;, &#039;numeric&#039; =&gt; &#039;776&#039;, &#039;currency&#039; =&gt; [&#039;TOP&#039;]], [&#039;name&#039; =&gt; &#039;Trinidad and Tobago&#039;, &#039;alpha2&#039; =&gt; &#039;TT&#039;, &#039;alpha3&#039; =&gt; &#039;TTO&#039;, &#039;numeric&#039; =&gt; &#039;780&#039;, &#039;currency&#039; =&gt; [&#039;TTD&#039;]], [&#039;name&#039; =&gt; &#039;Tunisia&#039;, &#039;alpha2&#039; =&gt; &#039;TN&#039;, &#039;alpha3&#039; =&gt; &#039;TUN&#039;, &#039;numeric&#039; =&gt; &#039;788&#039;, &#039;currency&#039; =&gt; [&#039;TND&#039;]], [&#039;name&#039; =&gt; &#039;Türkiye&#039;, &#039;alpha2&#039; =&gt; &#039;TR&#039;, &#039;alpha3&#039; =&gt; &#039;TUR&#039;, &#039;numeric&#039; =&gt; &#039;792&#039;, &#039;currency&#039; =&gt; [&#039;TRY&#039;]], [&#039;name&#039; =&gt; &#039;Turkmenistan&#039;, &#039;alpha2&#039; =&gt; &#039;TM&#039;, &#039;alpha3&#039; =&gt; &#039;TKM&#039;, &#039;numeric&#039; =&gt; &#039;795&#039;, &#039;currency&#039; =&gt; [&#039;TMT&#039;]], [&#039;name&#039; =&gt; &#039;Turks and Caicos Islands&#039;, &#039;alpha2&#039; =&gt; &#039;TC&#039;, &#039;alpha3&#039; =&gt; &#039;TCA&#039;, &#039;numeric&#039; =&gt; &#039;796&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Tuvalu&#039;, &#039;alpha2&#039; =&gt; &#039;TV&#039;, &#039;alpha3&#039; =&gt; &#039;TUV&#039;, &#039;numeric&#039; =&gt; &#039;798&#039;, &#039;currency&#039; =&gt; [&#039;AUD&#039;]], [&#039;name&#039; =&gt; &#039;Uganda&#039;, &#039;alpha2&#039; =&gt; &#039;UG&#039;, &#039;alpha3&#039; =&gt; &#039;UGA&#039;, &#039;numeric&#039; =&gt; &#039;800&#039;, &#039;currency&#039; =&gt; [&#039;UGX&#039;]], [&#039;name&#039; =&gt; &#039;Ukraine&#039;, &#039;alpha2&#039; =&gt; &#039;UA&#039;, &#039;alpha3&#039; =&gt; &#039;UKR&#039;, &#039;numeric&#039; =&gt; &#039;804&#039;, &#039;currency&#039; =&gt; [&#039;UAH&#039;]], [&#039;name&#039; =&gt; &#039;United Arab Emirates&#039;, &#039;alpha2&#039; =&gt; &#039;AE&#039;, &#039;alpha3&#039; =&gt; &#039;ARE&#039;, &#039;numeric&#039; =&gt; &#039;784&#039;, &#039;currency&#039; =&gt; [&#039;AED&#039;]], [&#039;name&#039; =&gt; &#039;United Kingdom of Great Britain and Northern Ireland&#039;, &#039;alpha2&#039; =&gt; &#039;GB&#039;, &#039;alpha3&#039; =&gt; &#039;GBR&#039;, &#039;numeric&#039; =&gt; &#039;826&#039;, &#039;currency&#039; =&gt; [&#039;GBP&#039;]], [&#039;name&#039; =&gt; &#039;United States of America&#039;, &#039;alpha2&#039; =&gt; &#039;US&#039;, &#039;alpha3&#039; =&gt; &#039;USA&#039;, &#039;numeric&#039; =&gt; &#039;840&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;United States Minor Outlying Islands&#039;, &#039;alpha2&#039; =&gt; &#039;UM&#039;, &#039;alpha3&#039; =&gt; &#039;UMI&#039;, &#039;numeric&#039; =&gt; &#039;581&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Uruguay&#039;, &#039;alpha2&#039; =&gt; &#039;UY&#039;, &#039;alpha3&#039; =&gt; &#039;URY&#039;, &#039;numeric&#039; =&gt; &#039;858&#039;, &#039;currency&#039; =&gt; [&#039;UYU&#039;]], [&#039;name&#039; =&gt; &#039;Uzbekistan&#039;, &#039;alpha2&#039; =&gt; &#039;UZ&#039;, &#039;alpha3&#039; =&gt; &#039;UZB&#039;, &#039;numeric&#039; =&gt; &#039;860&#039;, &#039;currency&#039; =&gt; [&#039;UZS&#039;]], [&#039;name&#039; =&gt; &#039;Vanuatu&#039;, &#039;alpha2&#039; =&gt; &#039;VU&#039;, &#039;alpha3&#039; =&gt; &#039;VUT&#039;, &#039;numeric&#039; =&gt; &#039;548&#039;, &#039;currency&#039; =&gt; [&#039;VUV&#039;]], [&#039;name&#039; =&gt; &#039;Venezuela (Bolivarian Republic of)&#039;, &#039;alpha2&#039; =&gt; &#039;VE&#039;, &#039;alpha3&#039; =&gt; &#039;VEN&#039;, &#039;numeric&#039; =&gt; &#039;862&#039;, &#039;currency&#039; =&gt; [&#039;VEF&#039;]], [&#039;name&#039; =&gt; &#039;Viet Nam&#039;, &#039;alpha2&#039; =&gt; &#039;VN&#039;, &#039;alpha3&#039; =&gt; &#039;VNM&#039;, &#039;numeric&#039; =&gt; &#039;704&#039;, &#039;currency&#039; =&gt; [&#039;VND&#039;]], [&#039;name&#039; =&gt; &#039;Virgin Islands (British)&#039;, &#039;alpha2&#039; =&gt; &#039;VG&#039;, &#039;alpha3&#039; =&gt; &#039;VGB&#039;, &#039;numeric&#039; =&gt; &#039;092&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Virgin Islands (U.S.)&#039;, &#039;alpha2&#039; =&gt; &#039;VI&#039;, &#039;alpha3&#039; =&gt; &#039;VIR&#039;, &#039;numeric&#039; =&gt; &#039;850&#039;, &#039;currency&#039; =&gt; [&#039;USD&#039;]], [&#039;name&#039; =&gt; &#039;Wallis and Futuna&#039;, &#039;alpha2&#039; =&gt; &#039;WF&#039;, &#039;alpha3&#039; =&gt; &#039;WLF&#039;, &#039;numeric&#039; =&gt; &#039;876&#039;, &#039;currency&#039; =&gt; [&#039;XPF&#039;]], [&#039;name&#039; =&gt; &#039;Western Sahara&#039;, &#039;alpha2&#039; =&gt; &#039;EH&#039;, &#039;alpha3&#039; =&gt; &#039;ESH&#039;, &#039;numeric&#039; =&gt; &#039;732&#039;, &#039;currency&#039; =&gt; [&#039;MAD&#039;]], [&#039;name&#039; =&gt; &#039;Yemen&#039;, &#039;alpha2&#039; =&gt; &#039;YE&#039;, &#039;alpha3&#039; =&gt; &#039;YEM&#039;, &#039;numeric&#039; =&gt; &#039;887&#039;, &#039;currency&#039; =&gt; [&#039;YER&#039;]], [&#039;name&#039; =&gt; &#039;Zambia&#039;, &#039;alpha2&#039; =&gt; &#039;ZM&#039;, &#039;alpha3&#039; =&gt; &#039;ZMB&#039;, &#039;numeric&#039; =&gt; &#039;894&#039;, &#039;currency&#039; =&gt; [&#039;ZMW&#039;]], [&#039;name&#039; =&gt; &#039;Zimbabwe&#039;, &#039;alpha2&#039; =&gt; &#039;ZW&#039;, &#039;alpha3&#039; =&gt; &#039;ZWE&#039;, &#039;numeric&#039; =&gt; &#039;716&#039;, &#039;currency&#039; =&gt; [&#039;BWP&#039;, &#039;EUR&#039;, &#039;GBP&#039;, &#039;USD&#039;, &#039;ZAR&#039;]]]</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_keys">
+        $keys
+        <a href="#property_keys" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.29">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">29</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$keys</span>
+     = <span class="phpdocumentor-signature__default-value">[self::KEY_ALPHA2, self::KEY_ALPHA3, self::KEY_NUMERIC, self::KEY_NAME]</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="#methods" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method___construct">
+        __construct()
+        <a href="#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.34">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">34</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$countries</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$countries</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>replace default dataset with given array</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_all">
+        all()
+        <a href="#method_all" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.104">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">104</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">all</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}&gt;</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_alpha2">
+        alpha2()
+        <a href="#method_alpha2" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.54">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">54</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Lookup ISO3166-1 data by alpha2 identifier.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">alpha2</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$alpha2</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$alpha2</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_alpha3">
+        alpha3()
+        <a href="#method_alpha3" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.64">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">64</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Lookup ISO3166-1 data by alpha3 identifier.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">alpha3</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$alpha3</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$alpha3</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_exactName">
+        exactName()
+        <a href="#method_exactName" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.84">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">84</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">exactName</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_iterator">
+        iterator()
+        <a href="#method_iterator" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.116">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">116</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">iterator</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">"name"|"alpha2"|"alpha3"|"numeric"&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">self::KEY_ALPHA2</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Generator">Generator</abbr>&lt;string, array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">"name"|"alpha2"|"alpha3"|"numeric"</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">self::KEY_ALPHA2</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-Exception-DomainException.html"><abbr title="\Automattic\WooCommerce\Vendor\League\ISO3166\Exception\DomainException">DomainException</abbr></a></span>
+                                                                                    <section class="phpdocumentor-description"><p>if an invalid key is specified</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Generator">Generator</abbr>&lt;string, array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}&gt;</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_name">
+        name()
+        <a href="#method_name" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.44">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">44</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Lookup ISO3166-1 data by name identifier.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">name</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_numeric">
+        numeric()
+        <a href="#method_numeric" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.74">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">74</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Lookup ISO3166-1 data by numeric identifier (numerical string, that is).</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">numeric</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$numeric</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$numeric</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_lookup">
+        lookup()
+        <a href="#method_lookup" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/League/ISO3166/ISO3166.php"><a href="../files/woocommerce-lib-packages-league-iso3166-iso3166.html#source-view.162">lib/packages/League/ISO3166/ISO3166.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">162</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Lookup ISO3166-1 data by given identifier.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">lookup</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">"name"|"alpha2"|"alpha3"|"numeric"&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}</span></code>
+
+        <section class="phpdocumentor-description"><p>Looks for a match against the given key for each entry in the dataset.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">"name"|"alpha2"|"alpha3"|"numeric"</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="../classes/Automattic-WooCommerce-Vendor-League-ISO3166-Exception-OutOfBoundsException.html"><abbr title="\Automattic\WooCommerce\Vendor\League\ISO3166\Exception\OutOfBoundsException">OutOfBoundsException</abbr></a></span>
+                                                                                    <section class="phpdocumentor-description"><p>if key does not exist in dataset</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array{name: string, alpha2: string, alpha3: string, numeric: numeric-string, currency: string[]}</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+            </section>
+
+    </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on February 16th, 2026 at 11:13 pm.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1771283586"></script>
+    <script src="../js/search.js?updated=1771283586"></script>
+</body>
+</html>

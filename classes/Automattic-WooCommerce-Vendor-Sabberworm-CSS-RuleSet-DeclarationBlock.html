@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="algolia-site-verification"  content="16BACF3DF9DCEE45" />
+    <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../images/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../images/favicon-180x180.png" />
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1771283587">
+    <link rel="stylesheet" href="../css/template.css?updated=1771283587">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img src="../images/logo.png" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://developer.woocommerce.com/docs/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title"><a href="../index.html">WooCommerce Code Reference</a></h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic.html">Automattic</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce.html">WooCommerce</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce-vendor.html">Vendor</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce-vendor-sabberworm.html">Sabberworm</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce-vendor-sabberworm-css.html">CSS</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="../namespaces/automattic-woocommerce-vendor-sabberworm-css-ruleset.html">RuleSet</a></li>
+    </ul>
+
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    DeclarationBlock
+
+        <span class="phpdocumentor-element__extends">
+        extends <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\RuleSet\RuleSet">RuleSet</abbr></a>
+    </span>
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="../packages/WooCommerce.html">WooCommerce</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.29">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">29</span>
+</aside>
+
+            <p class="phpdocumentor-summary">This class represents a `RuleSet` constrained by a `Selector`.</p>
+
+    <section class="phpdocumentor-description"><p>It contains an array of selector objects (comma-separated in the CSS) as well as the rules to be applied to the
+matching elements.</p>
+<p>Declaration blocks usually appear directly inside a <code class="prettyprint">Document</code> or another <code class="prettyprint">CSSList</code> (mostly a <code class="prettyprint">MediaQuery</code>).</p>
+</section>
+
+
+
+
+
+
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+                <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html#property_aRules">$aRules</a>
+    <span>
+                &nbsp;: array&lt;string, array&lt;int<0, max>, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>&gt;&gt;            </span>
+</dt>
+<dd>the rules in this rule set, using the property name as the key,
+with potentially multiple rules per property name.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#property_aSelectors">$aSelectors</a>
+    <span>
+                &nbsp;: array&lt;int, \Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector|string&gt;            </span>
+</dt>
+<dd></dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method___construct">__construct()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method___toString">__toString()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html#method_addComments">addComments()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html#method_addRule">addRule()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_createBackgroundShorthand">createBackgroundShorthand()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_createBorderShorthand">createBorderShorthand()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Combines `border-color`, `border-style` and `border-width` into `border`.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_createDimensionsShorthand">createDimensionsShorthand()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Looks for long format CSS dimensional properties
+(margin, padding, border-color, border-style and border-width)
+and converts them into shorthand CSS properties.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_createFontShorthand">createFontShorthand()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Looks for long format CSS font properties (e.g. `font-weight`) and
+tries to convert them into a shorthand CSS `font` property.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_createListStyleShorthand">createListStyleShorthand()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_createShorthandProperties">createShorthandProperties()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_createShorthands">createShorthands()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Creates shorthand declarations (e.g. `margin` or `font`) whenever possible.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_expandBackgroundShorthand">expandBackgroundShorthand()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Converts shorthand background declarations
+(e.g. `background: url(&quot;chess.png&quot;) gray 50% repeat fixed;`)
+into their constituent parts.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_expandBorderShorthand">expandBorderShorthand()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Splits shorthand border declarations (e.g. `border: 1px red;`).</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_expandDimensionsShorthand">expandDimensionsShorthand()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Splits shorthand dimensional declarations (e.g. `margin: 0px auto;`)
+into their constituent parts.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_expandFontShorthand">expandFontShorthand()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Converts shorthand font declarations
+(e.g. `font: 300 italic 11px/14px verdana, helvetica, sans-serif;`)
+into their constituent parts.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_expandListStyleShorthand">expandListStyleShorthand()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_expandShorthands">expandShorthands()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Splits shorthand declarations (e.g. `margin` or `font`) into their constituent parts.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html#method_getComments">getComments()</a>
+    <span>
+                        &nbsp;: array&lt;string, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Comment-Comment.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Comment\Comment">Comment</abbr></a>&gt;    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html#method_getRules">getRules()</a>
+    <span>
+                        &nbsp;: array&lt;int, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>&gt;    </span>
+</dt>
+<dd>Returns all rules matching the given rule name</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html#method_getRulesAssoc">getRulesAssoc()</a>
+    <span>
+                        &nbsp;: array&lt;string, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>&gt;    </span>
+</dt>
+<dd>Returns all rules matching the given pattern and returns them in an associative array with the rule’s name
+as keys. This method exists mainly for backwards-compatibility and is really only partially useful.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_getSelector">getSelector()</a>
+    <span>
+                        &nbsp;: array&lt;int, \Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector|string&gt;    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_getSelectors">getSelectors()</a>
+    <span>
+                        &nbsp;: array&lt;int, \Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector|string&gt;    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html#method_removeAllRules">removeAllRules()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html#method_removeMatchingRules">removeMatchingRules()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Removes rules by property name or search pattern.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html#method_removeRule">removeRule()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Removes a `Rule` from this `RuleSet` by identity.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_removeSelector">removeSelector()</a>
+    <span>
+                        &nbsp;: bool    </span>
+</dt>
+<dd>Remove one of the selectors of the block.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_render">render()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html#method_setComments">setComments()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html#method_setRules">setRules()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Overrides all the rules of this set.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_setSelector">setSelector()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-DeclarationBlock.html#method_setSelectors">setSelectors()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-RuleSet-RuleSet.html#method_renderRules">renderRules()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd></dd>
+
+        </dl>
+
+
+
+        
+
+        
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="#properties" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_aRules">
+        $aRules
+        <a href="#property_aRules" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-ruleset.html#source-view.36">lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">36</span>
+</aside>
+
+        <p class="phpdocumentor-summary">the rules in this rule set, using the property name as the key,
+with potentially multiple rules per property name.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;string, array&lt;int<0, max>, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>&gt;&gt;</span>
+    <span class="phpdocumentor-signature__name">$aRules</span>
+    </code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_aSelectors">
+        $aSelectors
+        <a href="#property_aSelectors" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.34">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">34</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;int, \Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector|string&gt;</span>
+    <span class="phpdocumentor-signature__name">$aSelectors</span>
+    </code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="#methods" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method___construct">
+        __construct()
+        <a href="#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.39">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">39</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$iLineNo</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$iLineNo</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method___toString">
+        __toString()
+        <a href="#method___toString" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.837">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">837</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">__toString</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Parsing-OutputException.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Parsing\OutputException">OutputException</abbr></a></span>
+                                                                                    <section class="phpdocumentor-description"></section>
+
+                </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>in V8.8.0, will be removed in V9.0.0. Use <code class="prettyprint">render</code> instead.</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_addComments">
+        addComments()
+        <a href="#method_addComments" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-ruleset.html#source-view.335">lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">335</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">addComments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Comment-Comment.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Comment\Comment">Comment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$aComments</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$aComments</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Comment-Comment.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Comment\Comment">Comment</abbr></a>&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_addRule">
+        addRule()
+        <a href="#method_addRule" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-ruleset.html#source-view.108">lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">108</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">addRule</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$oRule</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$oSibling</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$oRule</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$oSibling</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_createBackgroundShorthand">
+        createBackgroundShorthand()
+        <a href="#method_createBackgroundShorthand" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.621">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">621</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">createBackgroundShorthand</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_createBorderShorthand">
+        createBorderShorthand()
+        <a href="#method_createBorderShorthand" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.657">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">657</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Combines `border-color`, `border-style` and `border-width` into `border`.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">createBorderShorthand</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"><p>Should be run after <code class="prettyprint">create_dimensions_shorthand</code>!</p>
+</section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_createDimensionsShorthand">
+        createDimensionsShorthand()
+        <a href="#method_createDimensionsShorthand" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.676">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">676</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Looks for long format CSS dimensional properties
+(margin, padding, border-color, border-style and border-width)
+and converts them into shorthand CSS properties.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">createDimensionsShorthand</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_createFontShorthand">
+        createFontShorthand()
+        <a href="#method_createFontShorthand" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.752">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">752</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Looks for long format CSS font properties (e.g. `font-weight`) and
+tries to convert them into a shorthand CSS `font` property.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">createFontShorthand</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"><p>At least <code class="prettyprint">font-size</code> AND <code class="prettyprint">font-family</code> must be present in order to create a shorthand declaration.</p>
+</section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_createListStyleShorthand">
+        createListStyleShorthand()
+        <a href="#method_createListStyleShorthand" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.638">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">638</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">createListStyleShorthand</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_createShorthandProperties">
+        createShorthandProperties()
+        <a href="#method_createShorthandProperties" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.583">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">583</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">createShorthandProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;array-key, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$aProperties</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$sShorthand</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$aProperties</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;array-key, string&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$sShorthand</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_createShorthands">
+        createShorthands()
+        <a href="#method_createShorthands" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.206">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">206</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Creates shorthand declarations (e.g. `margin` or `font`) whenever possible.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">createShorthands</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_expandBackgroundShorthand">
+        expandBackgroundShorthand()
+        <a href="#method_expandBackgroundShorthand" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.424">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">424</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Converts shorthand background declarations
+(e.g. `background: url(&quot;chess.png&quot;) gray 50% repeat fixed;`)
+into their constituent parts.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">expandBackgroundShorthand</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><a href="http://www.w3.org/TR/21/colors.html#propdef-background"><abbr title="http://www.w3.org/TR/21/colors.html#propdef-background">http://www.w3.org/TR/21/colors.html#propdef-background</abbr></a></span>
+                                                                <section class="phpdocumentor-description"></section>
+
+                </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_expandBorderShorthand">
+        expandBorderShorthand()
+        <a href="#method_expandBorderShorthand" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.227">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">227</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Splits shorthand border declarations (e.g. `border: 1px red;`).</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">expandBorderShorthand</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"><p>Additional splitting happens in expandDimensionsShorthand.</p>
+<p>Multiple borders are not yet supported as of 3.</p>
+</section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_expandDimensionsShorthand">
+        expandDimensionsShorthand()
+        <a href="#method_expandDimensionsShorthand" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.290">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">290</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Splits shorthand dimensional declarations (e.g. `margin: 0px auto;`)
+into their constituent parts.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">expandDimensionsShorthand</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"><p>Handles <code class="prettyprint">margin</code>, <code class="prettyprint">padding</code>, <code class="prettyprint">border-color</code>, <code class="prettyprint">border-style</code> and <code class="prettyprint">border-width</code>.</p>
+</section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_expandFontShorthand">
+        expandFontShorthand()
+        <a href="#method_expandFontShorthand" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.352">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">352</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Converts shorthand font declarations
+(e.g. `font: 300 italic 11px/14px verdana, helvetica, sans-serif;`)
+into their constituent parts.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">expandFontShorthand</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_expandListStyleShorthand">
+        expandListStyleShorthand()
+        <a href="#method_expandListStyleShorthand" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.498">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">498</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">expandListStyleShorthand</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_expandShorthands">
+        expandShorthands()
+        <a href="#method_expandShorthands" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.189">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">189</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Splits shorthand declarations (e.g. `margin` or `font`) into their constituent parts.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">expandShorthands</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>since 8.7.0, will be removed without substitution in version 9.0 in #511</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getComments">
+        getComments()
+        <a href="#method_getComments" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-ruleset.html#source-view.343">lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">343</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getComments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Comment-Comment.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Comment\Comment">Comment</abbr></a>&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Comment-Comment.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Comment\Comment">Comment</abbr></a>&gt;</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getRules">
+        getRules()
+        <a href="#method_getRules" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-ruleset.html#source-view.159">lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">159</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Returns all rules matching the given rule name</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getRules</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>|string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mRule</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;int, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$mRule</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>|string|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Pattern to search for. If null, returns all rules.
+If the pattern ends with a dash, all rules starting with the pattern are returned
+as well as one matching the pattern with the dash excluded.
+Passing a <code class="prettyprint">Rule</code> for this parameter is deprecated in version 8.9.0, and will not work from v9.0.
+Call <code class="prettyprint">getRules($rule-&gt;getRule())</code> instead.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">example</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>$oRuleSet-&gt;getRules('font') // returns array(0 =&gt; $oRule, …) or array().</p>
+</section>
+
+                </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">example</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>$oRuleSet-&gt;getRules('font-')
+//returns an array of all rules either beginning with font- or matching font.</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;int, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>&gt;</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getRulesAssoc">
+        getRulesAssoc()
+        <a href="#method_getRulesAssoc" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-ruleset.html#source-view.220">lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">220</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Returns all rules matching the given pattern and returns them in an associative array with the rule’s name
+as keys. This method exists mainly for backwards-compatibility and is really only partially useful.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getRulesAssoc</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>|string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mRule</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>&gt;</span></code>
+
+        <section class="phpdocumentor-description"><p>Note: This method loses some information: Calling this (with an argument of <code class="prettyprint">background-</code>) on a declaration block
+like <code class="prettyprint">{ background-color: green; background-color; rgba(0, 127, 0, 0.7); }</code> will only yield an associative array
+containing the rgba-valued rule while <code class="prettyprint">getRules()</code> would yield an indexed array containing both.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$mRule</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>|string|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>$mRule
+Pattern to search for. If null, returns all rules. If the pattern ends with a dash,
+all rules starting with the pattern are returned as well as one matching the pattern with the dash
+excluded.
+Passing a <code class="prettyprint">Rule</code> for this parameter is deprecated in version 8.9.0, and will not work from v9.0.
+Call <code class="prettyprint">getRulesAssoc($rule-&gt;getRule())</code> instead.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>&gt;</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getSelector">
+        getSelector()
+        <a href="#method_getSelector" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.156">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">156</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getSelector</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;int, \Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector|string&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>will be removed in version 9.0; use <code class="prettyprint">getSelectors()</code> instead</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;int, \Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector|string&gt;</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getSelectors">
+        getSelectors()
+        <a href="#method_getSelectors" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.177">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">177</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getSelectors</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;int, \Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector|string&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;int, \Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector|string&gt;</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_removeAllRules">
+        removeAllRules()
+        <a href="#method_removeAllRules" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-ruleset.html#source-view.283">lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">283</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">removeAllRules</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_removeMatchingRules">
+        removeMatchingRules()
+        <a href="#method_removeMatchingRules" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-ruleset.html#source-view.266">lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">266</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Removes rules by property name or search pattern.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">removeMatchingRules</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$searchPattern</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$searchPattern</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>pattern to remove.
+If the pattern ends in a dash,
+all rules starting with the pattern are removed as well as one matching the pattern with the dash
+excluded.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_removeRule">
+        removeRule()
+        <a href="#method_removeRule" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-ruleset.html#source-view.238">lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">238</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Removes a `Rule` from this `RuleSet` by identity.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">removeRule</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>|string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mRule</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$mRule</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>|string|null</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p><code class="prettyprint">Rule</code> to remove.
+Passing a <code class="prettyprint">string</code> or <code class="prettyprint">null</code> is deprecated in version 8.9.0, and will no longer work from v9.0.
+Use <code class="prettyprint">removeMatchingRules()</code> or <code class="prettyprint">removeAllRules()</code> instead.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_removeSelector">
+        removeSelector()
+        <a href="#method_removeSelector" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.137">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">137</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Remove one of the selectors of the block.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">removeSelector</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Property-Selector.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector">Selector</abbr></a>|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mSelector</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$mSelector</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Property-Selector.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector">Selector</abbr></a>|string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_render">
+        render()
+        <a href="#method_render" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.849">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">849</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">render</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-OutputFormat.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\OutputFormat">OutputFormat</abbr></a>|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$oOutputFormat</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$oOutputFormat</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-OutputFormat.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\OutputFormat">OutputFormat</abbr></a>|null</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Parsing-OutputException.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Parsing\OutputException">OutputException</abbr></a></span>
+                                                                                    <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setComments">
+        setComments()
+        <a href="#method_setComments" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-ruleset.html#source-view.353">lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">353</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setComments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Comment-Comment.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Comment\Comment">Comment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$aComments</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$aComments</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Comment-Comment.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Comment\Comment">Comment</abbr></a>&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setRules">
+        setRules()
+        <a href="#method_setRules" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-ruleset.html#source-view.195">lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">195</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Overrides all the rules of this set.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setRules</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;array-key, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$aRules</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$aRules</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;array-key, <a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Rule-Rule.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Rule\Rule">Rule</abbr></a>&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The rules to override with.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+            -deprecated                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setSelector">
+        setSelector()
+        <a href="#method_setSelector" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.169">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">169</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature -deprecated">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setSelector</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Property-Selector.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector">Selector</abbr></a>|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mSelector</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-CSSList-CSSList.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\CSSList\CSSList">CSSList</abbr></a>|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$oList</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$mSelector</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Property-Selector.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector">Selector</abbr></a>|string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$oList</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-CSSList-CSSList.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\CSSList\CSSList">CSSList</abbr></a>|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">deprecated</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                                        <section class="phpdocumentor-description"><p>will be removed in version 9.0; use <code class="prettyprint">setSelectors()</code> instead</p>
+</section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setSelectors">
+        setSelectors()
+        <a href="#method_setSelectors" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-declarationblock.html#source-view.98">lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">98</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setSelectors</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;int, \Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector|string&gt;|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mSelector</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-CSSList-CSSList.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\CSSList\CSSList">CSSList</abbr></a>|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$oList</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$mSelector</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;int, \Automattic\WooCommerce\Vendor\Sabberworm\CSS\Property\Selector|string&gt;|string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$oList</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-CSSList-CSSList.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\CSSList\CSSList">CSSList</abbr></a>|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-Parsing-UnexpectedTokenException.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\Parsing\UnexpectedTokenException">UnexpectedTokenException</abbr></a></span>
+                                                                                    <section class="phpdocumentor-description"></section>
+
+                </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_renderRules">
+        renderRules()
+        <a href="#method_renderRules" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php"><a href="../files/woocommerce-lib-packages-sabberworm-css-ruleset-ruleset.html#source-view.301">lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php</a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">301</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">renderRules</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-OutputFormat.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\OutputFormat">OutputFormat</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$oOutputFormat</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$oOutputFormat</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="../classes/Automattic-WooCommerce-Vendor-Sabberworm-CSS-OutputFormat.html"><abbr title="\Automattic\WooCommerce\Vendor\Sabberworm\CSS\OutputFormat">OutputFormat</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash; <span class="phpdocumentor-return-value__description"></span>
+    
+</article>
+            </section>
+
+    </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on February 16th, 2026 at 11:13 pm.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1771283587"></script>
+    <script src="../js/search.js?updated=1771283587"></script>
+</body>
+</html>

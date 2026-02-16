@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="algolia-site-verification"  content="16BACF3DF9DCEE45" />
+    <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../images/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../images/favicon-180x180.png" />
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1771283538">
+    <link rel="stylesheet" href="../css/template.css?updated=1771283538">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img src="../images/logo.png" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://developer.woocommerce.com/docs/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title"><a href="../index.html">WooCommerce Code Reference</a></h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">class-html-processing-helper.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+/**
+ * This file is part of the WooCommerce Email Editor package
+ *
+ * @package Automattic\WooCommerce\EmailEditor
+ */
+
+declare( strict_types = 1 );
+namespace Automattic\WooCommerce\EmailEditor\Integrations\Utils;
+
+/**
+ * Helper class for HTML processing and manipulation.
+ */
+class Html_Processing_Helper {
+	/**
+	 * Clean CSS classes by removing background and border related classes.
+	 *
+	 * @param string $classes CSS classes to clean.
+	 * @return string Cleaned CSS classes.
+	 */
+	public static function clean_css_classes( string $classes ): string {
+		// Limit input length to prevent DoS attacks.
+		if ( strlen( $classes ) &gt; 1000 ) {
+			$classes = substr( $classes, 0, 1000 );
+		}
+
+		// Remove generic background classes but keep specific color classes.
+		$result = preg_replace( &#039;/\bhas-background\b/&#039;, &#039;&#039;, $classes );
+		if ( null === $result ) {
+			$classes = &#039;&#039;;
+		} else {
+			$classes = $result;
+		}
+
+		// Remove border classes.
+		$result = preg_replace( &#039;/\bhas-[a-z-]*border[a-z-]*\b/&#039;, &#039;&#039;, $classes );
+		if ( null === $result ) {
+			$classes = &#039;&#039;;
+		} else {
+			$classes = $result;
+		}
+
+		$result = preg_replace( &#039;/\b[a-z-]+-border-[a-z-]+\b/&#039;, &#039;&#039;, $classes );
+		if ( null === $result ) {
+			$classes = &#039;&#039;;
+		} else {
+			$classes = $result;
+		}
+
+		// Clean up multiple spaces.
+		$result = preg_replace( &#039;/\s+/&#039;, &#039; &#039;, $classes );
+		if ( null === $result ) {
+			$classes = &#039;&#039;;
+		} else {
+			$classes = $result;
+		}
+
+		return trim( $classes );
+	}
+
+	/**
+	 * Sanitize CSS value to prevent injection attacks.
+	 *
+	 * @param string $value CSS value to sanitize.
+	 * @return string Sanitized CSS value or empty string if invalid.
+	 */
+	public static function sanitize_css_value( string $value ): string {
+		// Remove dangerous script injection characters (angle brackets) but preserve quotes for CSS strings.
+		$result = preg_replace( &#039;/[&lt;&gt;]/&#039;, &#039;&#039;, $value );
+		if ( null === $result ) {
+			$value = &#039;&#039;;
+		} else {
+			$value = $result;
+		}
+
+		// Remove dangerous CSS functions and expressions.
+		$dangerous_patterns = array(
+			&#039;/expression\s*\(/i&#039;,
+			&#039;/url\s*\(\s*javascript\s*:/i&#039;,
+			&#039;/url\s*\(\s*data\s*:/i&#039;,
+			&#039;/url\s*\(\s*vbscript\s*:/i&#039;,
+			&#039;/import\s*\(/i&#039;,
+			&#039;/behavior\s*:/i&#039;,
+			&#039;/binding\s*:/i&#039;,
+			&#039;/filter\s*:/i&#039;,
+			&#039;/progid\s*:/i&#039;,
+		);
+
+		foreach ( $dangerous_patterns as $pattern ) {
+			if ( preg_match( $pattern, $value ) ) {
+				return &#039;&#039;;
+			}
+		}
+
+		return trim( $value );
+	}
+
+	/**
+	 * Sanitize dimension value to ensure it&#039;s a valid CSS dimension.
+	 *
+	 * Supports numeric values (converted to px) and standard CSS units.
+	 *
+	 * @param mixed $value The dimension value to sanitize.
+	 * @return string Sanitized dimension value or empty string if invalid.
+	 */
+	public static function sanitize_dimension_value( $value ): string {
+		if ( ! is_string( $value ) &amp;&amp; ! is_numeric( $value ) ) {
+			return &#039;&#039;;
+		}
+
+		$value = (string) $value;
+
+		// If it&#039;s just a number, assume pixels.
+		if ( is_numeric( $value ) ) {
+			$value = $value . &#039;px&#039;;
+		}
+
+		// Use existing CSS value sanitization for security.
+		$sanitized_value = self::sanitize_css_value( $value );
+
+		// Additional validation for dimension-specific units.
+		if ( ! empty( $sanitized_value ) &amp;&amp; preg_match( &#039;/^(\d+(?:\.\d+)?)(px|em|rem|%|vh|vw|ex|ch|in|cm|mm|pt|pc)$/&#039;, $sanitized_value ) ) {
+			return $sanitized_value;
+		}
+
+		return &#039;&#039;;
+	}
+
+	/**
+	 * Sanitize color value to ensure it&#039;s a valid color format.
+	 *
+	 * Supports hex colors, rgb/rgba, hsl/hsla, named colors, and CSS variables.
+	 *
+	 * @param string $color The color value to sanitize.
+	 * @return string Sanitized color value or safe default if invalid.
+	 */
+	public static function sanitize_color( string $color ): string {
+		// Remove any whitespace.
+		$color = trim( $color );
+
+		// Check if it&#039;s a valid hex color (#fff, #ffffff, #ffffffff).
+		if ( preg_match( &#039;/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/&#039;, $color ) ) {
+			return strtolower( $color );
+		}
+
+		// Check for rgb/rgba colors.
+		if ( preg_match( &#039;/^rgba?\(\s*(25[0-5]|2[0-4]\d|1\d{2}|\d{1,2})\s*,\s*(25[0-5]|2[0-4]\d|1\d{2}|\d{1,2})\s*,\s*(25[0-5]|2[0-4]\d|1\d{2}|\d{1,2})\s*(?:,\s*(?:1(?:\.0+)?|0(?:\.\d+)?|\.\d+)\s*)?\)$/&#039;, $color ) ) {
+			return $color;
+		}
+
+		// Check for hsl/hsla colors.
+		if ( preg_match( &#039;/^hsla?\(\s*(360|3[0-5]\d|[12]\d{2}|\d{1,2})\s*,\s*(100|[1-9]?\d)%\s*,\s*(100|[1-9]?\d)%\s*(?:,\s*(?:1(?:\.0+)?|0(?:\.\d+)?|\.\d+)\s*)?\)$/&#039;, $color ) ) {
+			return $color;
+		}
+
+		// Check for named colors and other valid CSS color values.
+		// We use a permissive approach: accept any string that doesn&#039;t contain dangerous characters
+		// and let the CSS engine handle the actual validation.
+		if ( preg_match( &#039;/^[a-zA-Z][a-zA-Z0-9-]*$/&#039;, $color ) &amp;&amp; ! preg_match( &#039;/^(expression|javascript|vbscript|data|import|behavior|binding|filter|progid)/i&#039;, $color ) ) {
+			return strtolower( $color );
+		}
+
+		// Check if it&#039;s a CSS variable (var(--variable-name)).
+		if ( preg_match( &#039;/^var\(--[a-zA-Z0-9\-_]+\)$/&#039;, $color ) ) {
+			return $color;
+		}
+
+		// If not a valid color format, return a safe default.
+		return &#039;#000000&#039;;
+	}
+
+	/**
+	 * Normalize rel attribute by lowercasing, deduplicating tokens, and ensuring required tokens.
+	 *
+	 * @param string|null $rel_value Current rel attribute value.
+	 * @param bool        $require_security_tokens Whether to require noopener and noreferrer tokens.
+	 * @return string Normalized rel attribute value.
+	 */
+	private static function normalize_rel_attribute( ?string $rel_value, bool $require_security_tokens = false ): string {
+		$allowed_tokens  = array( &#039;noopener&#039;, &#039;noreferrer&#039;, &#039;nofollow&#039;, &#039;external&#039; );
+		$required_tokens = $require_security_tokens ? array( &#039;noopener&#039;, &#039;noreferrer&#039; ) : array();
+
+		// If no rel value and no required tokens, return empty.
+		if ( null === $rel_value &amp;&amp; empty( $required_tokens ) ) {
+			return &#039;&#039;;
+		}
+
+		// Start with required tokens.
+		$tokens = $required_tokens;
+
+		// If rel value exists, parse and normalize it.
+		if ( null !== $rel_value ) {
+			$existing_tokens = preg_split( &#039;/\s+/&#039;, trim( $rel_value ) );
+			if ( false !== $existing_tokens ) {
+				// Normalize existing tokens: lowercase, remove empty, filter allowed.
+				$normalized_existing = array_filter(
+					array_map( &#039;strtolower&#039;, $existing_tokens ),
+					function ( $token ) use ( $allowed_tokens ) {
+						return ! empty( $token ) &amp;&amp; in_array( $token, $allowed_tokens, true );
+					}
+				);
+				// Merge with required tokens, removing duplicates.
+				$tokens = array_unique( array_merge( $tokens, $normalized_existing ) );
+			}
+		}
+
+		// Return normalized rel attribute or empty string if no valid tokens.
+		return empty( $tokens ) ? &#039;&#039; : implode( &#039; &#039;, $tokens );
+	}
+
+	/**
+	 * Validate and sanitize specific caption attributes for security.
+	 *
+	 * @param \WP_HTML_Tag_Processor $html HTML tag processor.
+	 * @param string                 $attr_name Attribute name to validate.
+	 */
+	public static function validate_caption_attribute( \WP_HTML_Tag_Processor $html, string $attr_name ): void {
+		$attr_value = $html-&gt;get_attribute( $attr_name );
+		if ( null === $attr_value ) {
+			return;
+		}
+
+		// Block all event handler attributes (on*) - Critical security fix.
+		if ( str_starts_with( $attr_name, &#039;on&#039; ) ) {
+			$html-&gt;remove_attribute( $attr_name );
+			return;
+		}
+
+		switch ( $attr_name ) {
+			case &#039;href&#039;:
+				// Only allow http, https, mailto, and tel protocols.
+				if ( ! preg_match( &#039;/^(https?:\/\/|mailto:|tel:)/i&#039;, (string) $attr_value ) ) {
+					$html-&gt;remove_attribute( $attr_name );
+					break;
+				}
+
+				// Sanitize and normalize the URL using WordPress&#039;s esc_url_raw.
+				$sanitized_url = esc_url_raw( (string) $attr_value );
+				if ( empty( $sanitized_url ) ) {
+					// If esc_url_raw returns empty, the URL was invalid - remove the attribute.
+					$html-&gt;remove_attribute( $attr_name );
+				} else {
+					// Set the attribute to the sanitized/normalized value.
+					$html-&gt;set_attribute( $attr_name, $sanitized_url );
+				}
+				break;
+
+			case &#039;target&#039;:
+				// Allow only common safe targets.
+				$allowed_targets = array( &#039;_blank&#039;, &#039;_self&#039; );
+				$target_value    = strtolower( (string) $attr_value );
+				if ( ! in_array( $target_value, $allowed_targets, true ) ) {
+					$html-&gt;remove_attribute( $attr_name );
+				} elseif ( &#039;_blank&#039; === $target_value ) {
+					// When target is &quot;_blank&quot;, ensure rel attribute has noopener and noreferrer.
+					$current_rel    = $html-&gt;get_attribute( &#039;rel&#039; );
+					$rel_value      = is_string( $current_rel ) ? $current_rel : null;
+					$normalized_rel = self::normalize_rel_attribute( $rel_value, true );
+					$html-&gt;set_attribute( &#039;rel&#039;, $normalized_rel );
+				}
+				break;
+
+			case &#039;rel&#039;:
+				// Normalize rel attribute: lowercase, deduplicate, preserve safe tokens.
+				$rel_value      = is_string( $attr_value ) ? $attr_value : null;
+				$normalized_rel = self::normalize_rel_attribute( $rel_value, false );
+				if ( empty( $normalized_rel ) ) {
+					$html-&gt;remove_attribute( $attr_name );
+				} else {
+					$html-&gt;set_attribute( $attr_name, $normalized_rel );
+				}
+				break;
+
+			case &#039;style&#039;:
+				// Only allow safe CSS properties for typography and basic styling.
+				$safe_properties  = self::get_safe_css_properties();
+				$sanitized_styles = array();
+				$style_parts      = explode( &#039;;&#039;, (string) $attr_value );
+
+				foreach ( $style_parts as $style_part ) {
+					$style_part = trim( $style_part );
+					if ( empty( $style_part ) ) {
+						continue;
+					}
+
+					$property_parts = explode( &#039;:&#039;, $style_part, 2 );
+					if ( count( $property_parts ) !== 2 ) {
+						continue;
+					}
+
+					$property = trim( strtolower( $property_parts[0] ) );
+					$value    = trim( $property_parts[1] );
+
+					// Only allow safe properties.
+					if ( in_array( $property, $safe_properties, true ) ) {
+						// Use centralized CSS value sanitization.
+						$sanitized_value = self::sanitize_css_value( $value );
+						if ( ! empty( $sanitized_value ) ) {
+							$sanitized_styles[] = $property . &#039;: &#039; . $sanitized_value;
+						}
+					}
+				}
+
+				if ( empty( $sanitized_styles ) ) {
+					$html-&gt;remove_attribute( $attr_name );
+				} else {
+					$html-&gt;set_attribute( $attr_name, implode( &#039;; &#039;, $sanitized_styles ) );
+				}
+				break;
+
+			case &#039;class&#039;:
+				// Only allow alphanumeric characters, hyphens, and underscores.
+				if ( ! preg_match( &#039;/^[a-zA-Z0-9\s\-_]+$/&#039;, (string) $attr_value ) ) {
+					$html-&gt;remove_attribute( $attr_name );
+				}
+				break;
+
+			case &#039;data-type&#039;:
+			case &#039;data-id&#039;:
+				// Only allow alphanumeric characters, hyphens, and underscores.
+				if ( ! preg_match( &#039;/^[a-zA-Z0-9\-_]+$/&#039;, (string) $attr_value ) ) {
+					$html-&gt;remove_attribute( $attr_name );
+				}
+				break;
+
+			default:
+				// Handle data-* attributes with strict validation.
+				if ( str_starts_with( $attr_name, &#039;data-&#039; ) ) {
+					if ( ! preg_match( &#039;/^[a-zA-Z0-9\-_]+$/&#039;, (string) $attr_value ) ) {
+						$html-&gt;remove_attribute( $attr_name );
+					}
+					break;
+				}
+				// Default deny policy: Remove any attribute not explicitly allowed.
+				$html-&gt;remove_attribute( $attr_name );
+				break;
+		}
+	}
+
+	/**
+	 * Get list of safe CSS properties for typography and basic styling.
+	 *
+	 * @return array Array of safe CSS property names.
+	 */
+	public static function get_safe_css_properties(): array {
+		return array(
+			&#039;color&#039;,
+			&#039;background-color&#039;,
+			&#039;font-family&#039;,
+			&#039;font-size&#039;,
+			&#039;font-weight&#039;,
+			&#039;font-style&#039;,
+			&#039;text-decoration&#039;,
+			&#039;text-align&#039;,
+			&#039;line-height&#039;,
+			&#039;letter-spacing&#039;,
+			&#039;text-transform&#039;,
+		);
+	}
+
+	/**
+	 * Get list of safe CSS properties for caption typography (excludes background properties).
+	 *
+	 * @return array Array of safe CSS property names for captions.
+	 */
+	public static function get_caption_css_properties(): array {
+		return array(
+			&#039;font-family&#039;,
+			&#039;font-size&#039;,
+			&#039;font-weight&#039;,
+			&#039;font-style&#039;,
+			&#039;text-decoration&#039;,
+			&#039;line-height&#039;,
+			&#039;letter-spacing&#039;,
+			&#039;text-transform&#039;,
+		);
+	}
+
+	/**
+	 * Validate HTML container attributes for security before content extraction.
+	 * This method checks if a container element (like figcaption, span) has safe attributes.
+	 *
+	 * @param string $container_html Full container HTML (e.g., &lt;figcaption class=&quot;...&quot;&gt;content&lt;/figcaption&gt;).
+	 * @return bool True if container attributes are safe, false otherwise.
+	 */
+	public static function validate_container_attributes( string $container_html ): bool {
+		// Use WP_HTML_Tag_Processor to validate container attributes.
+		$html = new \WP_HTML_Tag_Processor( $container_html );
+		if ( ! $html-&gt;next_tag() ) {
+			return false;
+		}
+
+		// Get all attributes and validate each one using our existing validation logic.
+		$attributes = $html-&gt;get_attribute_names_with_prefix( &#039;&#039; );
+		if ( is_array( $attributes ) ) {
+			foreach ( $attributes as $attr_name ) {
+				// Use the same validation logic as validate_caption_attribute for consistency.
+				$attr_value = $html-&gt;get_attribute( $attr_name );
+				if ( null === $attr_value ) {
+					continue;
+				}
+
+				// Block event handlers immediately.
+				if ( str_starts_with( $attr_name, &#039;on&#039; ) ) {
+					return false;
+				}
+
+				// Apply the same validation rules as caption attributes.
+				// Create a temporary processor to test validation.
+				$escaped_value = htmlspecialchars( (string) $attr_value, ENT_QUOTES, &#039;UTF-8&#039; );
+				$temp_html     = new \WP_HTML_Tag_Processor( &#039;&lt;span &#039; . $attr_name . &#039;=&quot;&#039; . $escaped_value . &#039;&quot;&gt;test&lt;/span&gt;&#039; );
+				if ( $temp_html-&gt;next_tag() ) {
+					$original_value = $temp_html-&gt;get_attribute( $attr_name );
+					self::validate_caption_attribute( $temp_html, $attr_name );
+					$validated_value = $temp_html-&gt;get_attribute( $attr_name );
+
+					// If attribute was removed during validation, container is unsafe.
+					if ( null !== $original_value &amp;&amp; null === $validated_value ) {
+						return false;
+					}
+				}
+			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * Sanitize caption HTML to allow only specific tags and attributes.
+	 *
+	 * @param string $caption_html Raw caption HTML.
+	 * @return string Sanitized caption HTML.
+	 */
+	public static function sanitize_caption_html( string $caption_html ): string {
+		// If no HTML tags, return as-is.
+		if ( false === strpos( $caption_html, &#039;&lt;&#039; ) ) {
+			return $caption_html;
+		}
+
+		// Remove dangerous content: script, style, and other executable elements.
+		$result = preg_replace( &#039;/&lt;(script|style|iframe|object|embed|form|input|button)\b[^&gt;]*&gt;.*?&lt;\/\1&gt;/is&#039;, &#039;&#039;, $caption_html );
+		if ( null === $result ) {
+			$caption_html = &#039;&#039;;
+		} else {
+			$caption_html = $result;
+		}
+
+		// Use a more conservative approach - only validate attributes, don&#039;t modify tags.
+		$allowed_tags = array( &#039;strong&#039;, &#039;em&#039;, &#039;a&#039;, &#039;mark&#039;, &#039;kbd&#039;, &#039;s&#039;, &#039;sub&#039;, &#039;sup&#039;, &#039;span&#039;, &#039;br&#039; );
+
+		$html = new \WP_HTML_Tag_Processor( $caption_html );
+
+		// First pass: Process attributes for allowed tags only.
+		while ( $html-&gt;next_tag() ) {
+			$tag_name = $html-&gt;get_tag();
+
+			// Skip processing for disallowed tags.
+			if ( ! in_array( $tag_name, $allowed_tags, true ) ) {
+				continue;
+			}
+
+			// Only process attributes for allowed tags.
+			$attributes = $html-&gt;get_attribute_names_with_prefix( &#039;&#039; );
+			if ( is_array( $attributes ) ) {
+				foreach ( $attributes as $attr_name ) {
+					// Validate and sanitize each attribute individually.
+					self::validate_caption_attribute( $html, $attr_name );
+				}
+			}
+		}
+
+		// Second pass: Remove disallowed tags using a simple regex approach.
+		$final_html = $html-&gt;get_updated_html();
+
+		// Create a regex pattern to match disallowed tags.
+		$allowed_tags_pattern = implode( &#039;|&#039;, array_map( &#039;preg_quote&#039;, $allowed_tags ) );
+
+		// Remove disallowed opening and closing tags, keeping only their content.
+		$result = preg_replace( &#039;/&lt;(?!(?:&#039; . $allowed_tags_pattern . &#039;)\b)[^&gt;]*&gt;(.*?)&lt;\/(?!(?:&#039; . $allowed_tags_pattern . &#039;)\b)[^&gt;]*&gt;/s&#039;, &#039;$1&#039;, $final_html );
+		if ( null === $result ) {
+			$final_html = &#039;&#039;;
+		} else {
+			$final_html = $result;
+		}
+
+		// Remove disallowed self-closing tags.
+		$result = preg_replace( &#039;/&lt;(?!(?:&#039; . $allowed_tags_pattern . &#039;)\b)[^&gt;]*\/&gt;/s&#039;, &#039;&#039;, $final_html );
+		if ( null === $result ) {
+			$final_html = &#039;&#039;;
+		} else {
+			$final_html = $result;
+		}
+
+		return $final_html;
+	}
+
+	/**
+	 * Sanitize image HTML while preserving necessary attributes for email rendering.
+	 *
+	 * @param string $image_html Raw image HTML.
+	 * @return string Sanitized image HTML.
+	 */
+	public static function sanitize_image_html( string $image_html ): string {
+		// If no HTML tags, return as-is.
+		if ( false === strpos( $image_html, &#039;&lt;&#039; ) ) {
+			return $image_html;
+		}
+
+		// Extract img tag using regex for reliable processing.
+		if ( ! preg_match( &#039;/&lt;img[^&gt;]*&gt;/i&#039;, $image_html, $matches ) ) {
+			return $image_html;
+		}
+
+		$img_tag              = $matches[0];
+		$sanitized_attributes = array();
+		$has_src              = false;
+
+		// Extract and sanitize individual attributes using WP_HTML_Tag_Processor for attribute processing.
+		$html = new \WP_HTML_Tag_Processor( $img_tag );
+		if ( $html-&gt;next_tag() ) {
+			$attributes = $html-&gt;get_attribute_names_with_prefix( &#039;&#039; );
+			if ( is_array( $attributes ) ) {
+				foreach ( $attributes as $attr_name ) {
+					$attr_value = $html-&gt;get_attribute( $attr_name );
+
+					// Sanitize specific attributes.
+					switch ( $attr_name ) {
+						case &#039;src&#039;:
+							// Sanitize image source URL.
+							$sanitized_src = esc_url( (string) $attr_value );
+							if ( ! empty( $sanitized_src ) ) {
+								$sanitized_attributes[] = $attr_name . &#039;=&quot;&#039; . $sanitized_src . &#039;&quot;&#039;;
+								$has_src                = true;
+							}
+							break;
+
+						case &#039;alt&#039;:
+						case &#039;width&#039;:
+						case &#039;height&#039;:
+							// Sanitize text attributes.
+							$sanitized_attributes[] = $attr_name . &#039;=&quot;&#039; . esc_attr( (string) $attr_value ) . &#039;&quot;&#039;;
+							break;
+
+						case &#039;class&#039;:
+							// Clean CSS classes.
+							$cleaned_classes = self::clean_css_classes( (string) $attr_value );
+							if ( ! empty( $cleaned_classes ) ) {
+								$sanitized_attributes[] = $attr_name . &#039;=&quot;&#039; . esc_attr( $cleaned_classes ) . &#039;&quot;&#039;;
+							}
+							break;
+
+						case &#039;style&#039;:
+							// Sanitize inline styles - only allow safe properties for email rendering.
+							$sanitized_styles = self::sanitize_image_styles( (string) $attr_value );
+							if ( ! empty( $sanitized_styles ) ) {
+								$sanitized_attributes[] = $attr_name . &#039;=&quot;&#039; . esc_attr( $sanitized_styles ) . &#039;&quot;&#039;;
+							}
+							break;
+					}
+				}
+			}
+		}
+
+		// If no valid src attribute, return empty string.
+		if ( ! $has_src ) {
+			return &#039;&#039;;
+		}
+
+		// Rebuild the img tag with sanitized attributes.
+		if ( empty( $sanitized_attributes ) ) {
+			return &#039;&#039;;
+		}
+
+		return &#039;&lt;img &#039; . implode( &#039; &#039;, $sanitized_attributes ) . &#039;&gt;&#039;;
+	}
+
+	/**
+	 * Sanitize inline styles for image elements - only allow safe properties for email rendering.
+	 *
+	 * @param string $style_value Raw style value.
+	 * @return string Sanitized style value.
+	 */
+	private static function sanitize_image_styles( string $style_value ): string {
+		$sanitized_styles = array();
+		$style_parts      = explode( &#039;;&#039;, $style_value );
+
+		foreach ( $style_parts as $style_part ) {
+			$style_part = trim( $style_part );
+			if ( empty( $style_part ) ) {
+				continue;
+			}
+
+			$property_parts = explode( &#039;:&#039;, $style_part, 2 );
+			if ( count( $property_parts ) !== 2 ) {
+				continue;
+			}
+
+			$property = trim( strtolower( $property_parts[0] ) );
+			$value    = trim( $property_parts[1] );
+
+			// Allow safe CSS properties for images in email rendering.
+			$safe_properties = array( &#039;width&#039;, &#039;height&#039;, &#039;max-width&#039;, &#039;max-height&#039;, &#039;display&#039;, &#039;margin&#039;, &#039;padding&#039;, &#039;border&#039;, &#039;border-radius&#039; );
+			if ( in_array( $property, $safe_properties, true ) ) {
+				$sanitized_value = self::sanitize_css_value( $value );
+				if ( ! empty( $sanitized_value ) ) {
+					$sanitized_styles[] = $property . &#039;: &#039; . $sanitized_value;
+				}
+			}
+		}
+
+		return implode( &#039;; &#039;, $sanitized_styles );
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on February 16th, 2026 at 11:12 pm.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1771283538"></script>
+    <script src="../js/search.js?updated=1771283538"></script>
+</body>
+</html>

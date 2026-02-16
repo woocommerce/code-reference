@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooCommerce Code Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="algolia-site-verification"  content="16BACF3DF9DCEE45" />
+    <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../images/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../images/favicon-180x180.png" />
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css?updated=1771283540">
+    <link rel="stylesheet" href="../css/template.css?updated=1771283540">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" integrity="sha256-0vuk8LXoyrmCjp1f0O300qo1M75ZQyhH9X3J6d+scmk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCYZ2CYMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KCYZ2CYMS', {
+		'content_group' : 'WooCommerce Core Code Reference',
+	});
+</script>
+        <script src="../js/prism.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.dispatchEvent(new HashChangeEvent('hashchange'));
+        });
+    </script>
+</head>
+<body id="top">
+    <header class="phpdocumentor-top-header">
+    <section class="phpdocumentor-section">
+        <div class="site-branding">
+            <a class="site-logo" href="../index.html"><img src="../images/logo.png" alt="WooCommerce" /></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="../hooks/hooks.html">Hooks Reference</a></li>
+                <li><a href="https://developer.woocommerce.com/docs/">Documentation</a></li>
+                <li><a href="https://woocommerce.github.io/woocommerce-rest-api-docs/">REST API Docs</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<div class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title"><a href="../index.html">WooCommerce Code Reference</a></h1>
+        <section class="phpdocumentor-search">
+    <label class="phpdocumentor-label">
+        <span class="visually-hidden">Search (click ESC to close search results)</span>
+        <input id="autoComplete" tabindex="1" type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading..." disabled />
+    </label>
+</section>
+
+    </section>
+</div>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/woocommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/woocommerce-admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    </ul>
+                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="../namespaces/automattic-woocommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/WooCommerce.html"><abbr title="\WooCommerce">WooCommerce</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/WooCommerce-Abstracts.html"><abbr title="\WooCommerce\Abstracts">Abstracts</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Classes.html"><abbr title="\WooCommerce\Classes">Classes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Admin.html"><abbr title="\WooCommerce\Admin">Admin</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Helper.html"><abbr title="\WooCommerce\Helper">Helper</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Views.html"><abbr title="\WooCommerce\Views">Views</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Templates.html"><abbr title="\WooCommerce\Templates">Templates</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Reports.html"><abbr title="\WooCommerce\Reports">Reports</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Blocks.html"><abbr title="\WooCommerce\Blocks">Blocks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-RestApi.html"><abbr title="\WooCommerce\RestApi">RestApi</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-CLI.html"><abbr title="\WooCommerce\CLI">CLI</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-l10n.html"><abbr title="\WooCommerce\l10n">l10n</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Webhooks.html"><abbr title="\WooCommerce\Webhooks">Webhooks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-DataStores.html"><abbr title="\WooCommerce\DataStores">DataStores</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Emails.html"><abbr title="\WooCommerce\Emails">Emails</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Export.html"><abbr title="\WooCommerce\Export">Export</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Gateways.html"><abbr title="\WooCommerce\Gateways">Gateways</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PayPal.html"><abbr title="\WooCommerce\PayPal">PayPal</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Import.html"><abbr title="\WooCommerce\Import">Import</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Integrations.html"><abbr title="\WooCommerce\Integrations">Integrations</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interfaces.html"><abbr title="\WooCommerce\Interfaces">Interfaces</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Interface.html"><abbr title="\WooCommerce\Interface">Interface</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-LogHandlers.html"><abbr title="\WooCommerce\LogHandlers">LogHandlers</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-PaymentTokens.html"><abbr title="\WooCommerce\PaymentTokens">PaymentTokens</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Utilities.html"><abbr title="\WooCommerce\Utilities">Utilities</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shipping.html"><abbr title="\WooCommerce\Shipping">Shipping</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Shortcodes.html"><abbr title="\WooCommerce\Shortcodes">Shortcodes</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Tracks.html"><abbr title="\WooCommerce\Tracks">Tracks</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Traits.html"><abbr title="\WooCommerce\Traits">Traits</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Functions.html"><abbr title="\WooCommerce\Functions">Functions</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCom.html"><abbr title="\WooCommerce\WCCom">WCCom</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-WCCOM.html"><abbr title="\WooCommerce\WCCOM">WCCOM</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Widgets.html"><abbr title="\WooCommerce\Widgets">Widgets</abbr></a></li>
+                                    <li><a href="../packages/WooCommerce-Uninstaller.html"><abbr title="\WooCommerce\Uninstaller">Uninstaller</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="../packages/Automattic.html"><abbr title="\Automattic">Automattic</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="../packages/Automattic-WooCommerce.html"><abbr title="\Automattic\WooCommerce">WooCommerce</abbr></a></li>
+                            </ul>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../indices/files.html">Files</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="../hooks/hooks.html">Hooks Reference</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+    </ul>
+
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">Checkout.php</h2>
+
+                
+
+        
+                    <h3 class="phpdocumentor-elements__header" id="source-code">
+                Source code
+                <a href="#source-code" class="headerlink"><i class="fas fa-link"></i></a>
+            </h3>
+            <pre id="source-view" tabindex="-1" class="language-php line-numbers linkable-line-numbers"><code>&lt;?php
+declare( strict_types = 1);
+namespace Automattic\WooCommerce\Blocks\BlockTypes;
+
+use Automattic\Block_Scanner;
+use Automattic\WooCommerce\StoreApi\Utilities\LocalPickupUtils;
+use Automattic\WooCommerce\Blocks\Utils\CartCheckoutUtils;
+use Automattic\WooCommerce\Blocks\Domain\Services\CheckoutFields;
+use Automattic\WooCommerce\Blocks\Package;
+use Automattic\WooCommerce\StoreApi\Utilities\PaymentUtils;
+use Automattic\WooCommerce\Blocks\Domain\Services\CheckoutFieldsSchema\Validation;
+use Automattic\WooCommerce\Internal\AddressProvider\AddressProviderController;
+use Automattic\WooCommerce\Internal\FraudProtection\CheckoutEventTracker;
+use Automattic\WooCommerce\Internal\FraudProtection\FraudProtectionController;
+
+/**
+ * Checkout class.
+ *
+ * @internal
+ */
+class Checkout extends AbstractBlock {
+	/**
+	 * Block name.
+	 *
+	 * @var string
+	 */
+	protected $block_name = &#039;checkout&#039;;
+
+	/**
+	 * Chunks build folder.
+	 *
+	 * @var string
+	 */
+	protected $chunks_folder = &#039;checkout-blocks&#039;;
+
+	/**
+	 * Initialize this block type.
+	 *
+	 * - Hook into WP lifecycle.
+	 * - Register the block with WordPress.
+	 */
+	protected function initialize() {
+		parent::initialize();
+		add_action( &#039;rest_api_init&#039;, array( $this, &#039;register_settings&#039; ) );
+		add_action( &#039;wp_loaded&#039;, array( $this, &#039;register_patterns&#039; ) );
+		// This prevents the page redirecting when the cart is empty. This is so the editor still loads the page preview.
+		add_filter(
+			&#039;woocommerce_checkout_redirect_empty_cart&#039;,
+			function ( $redirect_empty_cart ) {
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				return isset( $_GET[&#039;_wp-find-template&#039;] ) ? false : $redirect_empty_cart;
+			}
+		);
+
+		add_action( &#039;save_post&#039;, array( $this, &#039;update_local_pickup_title&#039; ), 10, 2 );
+	}
+
+	/**
+	 * Dequeues the scripts added by WC Core to the Checkout page.
+	 *
+	 * @return void
+	 */
+	public function dequeue_woocommerce_core_scripts() {
+		wp_dequeue_script( &#039;wc-checkout&#039; );
+		wp_dequeue_script( &#039;wc-address-autocomplete&#039; );
+		wp_dequeue_style( &#039;wc-address-autocomplete&#039; );
+		wp_dequeue_script( &#039;wc-password-strength-meter&#039; );
+		wp_dequeue_script( &#039;selectWoo&#039; );
+		wp_dequeue_style( &#039;select2&#039; );
+	}
+
+	/**
+	 * Exposes settings exposed by the checkout block.
+	 */
+	public function register_settings() {
+		register_setting(
+			&#039;options&#039;,
+			&#039;woocommerce_checkout_phone_field&#039;,
+			array(
+				&#039;type&#039;         =&gt; &#039;object&#039;,
+				&#039;description&#039;  =&gt; __( &#039;Controls the display of the phone field in checkout.&#039;, &#039;woocommerce&#039; ),
+				&#039;label&#039;        =&gt; __( &#039;Phone number&#039;, &#039;woocommerce&#039; ),
+				&#039;show_in_rest&#039; =&gt; array(
+					&#039;name&#039;   =&gt; &#039;woocommerce_checkout_phone_field&#039;,
+					&#039;schema&#039; =&gt; array(
+						&#039;type&#039; =&gt; &#039;string&#039;,
+						&#039;enum&#039; =&gt; array( &#039;optional&#039;, &#039;required&#039;, &#039;hidden&#039; ),
+					),
+				),
+				&#039;default&#039;      =&gt; CartCheckoutUtils::get_phone_field_visibility(),
+			)
+		);
+		register_setting(
+			&#039;options&#039;,
+			&#039;woocommerce_checkout_company_field&#039;,
+			array(
+				&#039;type&#039;         =&gt; &#039;object&#039;,
+				&#039;description&#039;  =&gt; __( &#039;Controls the display of the company field in checkout.&#039;, &#039;woocommerce&#039; ),
+				&#039;label&#039;        =&gt; __( &#039;Company&#039;, &#039;woocommerce&#039; ),
+				&#039;show_in_rest&#039; =&gt; array(
+					&#039;name&#039;   =&gt; &#039;woocommerce_checkout_company_field&#039;,
+					&#039;schema&#039; =&gt; array(
+						&#039;type&#039; =&gt; &#039;string&#039;,
+						&#039;enum&#039; =&gt; array( &#039;optional&#039;, &#039;required&#039;, &#039;hidden&#039; ),
+					),
+				),
+				&#039;default&#039;      =&gt; CartCheckoutUtils::get_company_field_visibility(),
+			)
+		);
+		register_setting(
+			&#039;options&#039;,
+			&#039;woocommerce_checkout_address_2_field&#039;,
+			array(
+				&#039;type&#039;         =&gt; &#039;object&#039;,
+				&#039;description&#039;  =&gt; __( &#039;Controls the display of the apartment (address_2) field in checkout.&#039;, &#039;woocommerce&#039; ),
+				&#039;label&#039;        =&gt; __( &#039;Address Line 2&#039;, &#039;woocommerce&#039; ),
+				&#039;show_in_rest&#039; =&gt; array(
+					&#039;name&#039;   =&gt; &#039;woocommerce_checkout_address_2_field&#039;,
+					&#039;schema&#039; =&gt; array(
+						&#039;type&#039; =&gt; &#039;string&#039;,
+						&#039;enum&#039; =&gt; array( &#039;optional&#039;, &#039;required&#039;, &#039;hidden&#039; ),
+					),
+				),
+				&#039;default&#039;      =&gt; CartCheckoutUtils::get_address_2_field_visibility(),
+			)
+		);
+	}
+
+	/**
+	 * Register block pattern for Empty Cart Message to make it translatable.
+	 */
+	public function register_patterns() {
+		register_block_pattern(
+			&#039;woocommerce/checkout-heading&#039;,
+			array(
+				&#039;title&#039;    =&gt; &#039;&#039;,
+				&#039;inserter&#039; =&gt; false,
+				&#039;content&#039;  =&gt; &#039;&lt;!-- wp:heading {&quot;align&quot;:&quot;wide&quot;, &quot;level&quot;:1} --&gt;&lt;h1 class=&quot;wp-block-heading alignwide&quot;&gt;&#039; . esc_html__( &#039;Checkout&#039;, &#039;woocommerce&#039; ) . &#039;&lt;/h1&gt;&lt;!-- /wp:heading --&gt;&#039;,
+			)
+		);
+	}
+
+	/**
+	 * Get the editor script handle for this block type.
+	 *
+	 * @param string $key Data to get, or default to everything.
+	 * @return array|string;
+	 */
+	protected function get_block_type_editor_script( $key = null ) {
+		$script = [
+			&#039;handle&#039;       =&gt; &#039;wc-&#039; . $this-&gt;block_name . &#039;-block&#039;,
+			&#039;path&#039;         =&gt; $this-&gt;asset_api-&gt;get_block_asset_build_path( $this-&gt;block_name ),
+			&#039;dependencies&#039; =&gt; [ &#039;wc-blocks&#039; ],
+		];
+		return $key ? $script[ $key ] : $script;
+	}
+
+	/**
+	 * Get the frontend script handle for this block type.
+	 *
+	 * @see $this-&gt;register_block_type()
+	 * @param string $key Data to get, or default to everything.
+	 * @return array|string
+	 */
+	protected function get_block_type_script( $key = null ) {
+		$dependencies = [];
+
+		// Load password strength meter script asynchronously if needed.
+		if ( ! is_user_logged_in() &amp;&amp; &#039;no&#039; === get_option( &#039;woocommerce_registration_generate_password&#039; ) ) {
+			$dependencies[] = &#039;zxcvbn-async&#039;;
+		}
+
+		$checkout_fields = Package::container()-&gt;get( CheckoutFields::class );
+		// Load schema parser asynchronously if we need it.
+		if ( Validation::has_field_schema( $checkout_fields-&gt;get_additional_fields() ) ) {
+			$dependencies[] = &#039;wc-schema-parser&#039;;
+		}
+
+		$script = [
+			&#039;handle&#039;       =&gt; &#039;wc-&#039; . $this-&gt;block_name . &#039;-block-frontend&#039;,
+			&#039;path&#039;         =&gt; $this-&gt;asset_api-&gt;get_block_asset_build_path( $this-&gt;block_name . &#039;-frontend&#039; ),
+			&#039;dependencies&#039; =&gt; $dependencies,
+		];
+		return $key ? $script[ $key ] : $script;
+	}
+
+	/**
+	 * Get the frontend style handle for this block type.
+	 *
+	 * @return string[]
+	 */
+	protected function get_block_type_style() {
+		return array_merge( parent::get_block_type_style(), [ &#039;wc-blocks-packages-style&#039; ] );
+	}
+
+	/**
+	 * Enqueue frontend assets for this block, just in time for rendering.
+	 *
+	 * @param array    $attributes  Any attributes that currently are available from the block.
+	 * @param string   $content    The block content.
+	 * @param WP_Block $block    The block object.
+	 */
+	protected function enqueue_assets( array $attributes, $content, $block ) {
+		/**
+		 * Fires before checkout block scripts are enqueued.
+		 *
+		 * @since 4.6.0
+		 */
+		do_action( &#039;woocommerce_blocks_enqueue_checkout_block_scripts_before&#039; );
+		parent::enqueue_assets( $attributes, $content, $block );
+		/**
+		 * Fires after checkout block scripts are enqueued.
+		 *
+		 * @since 4.6.0
+		 */
+		do_action( &#039;woocommerce_blocks_enqueue_checkout_block_scripts_after&#039; );
+	}
+
+	/**
+	 * Append frontend scripts when rendering the block.
+	 *
+	 * @param array    $attributes Block attributes.
+	 * @param string   $content    Block content.
+	 * @param WP_Block $block Block instance.
+	 * @return string Rendered block type output.
+	 */
+	protected function render( $attributes, $content, $block ) {
+
+		if ( $this-&gt;is_checkout_endpoint() ) {
+			// Note: Currently the block only takes care of the main checkout form -- if an endpoint is set, refer to the
+			// legacy shortcode instead and do not render block.
+			return wp_is_block_theme() ? do_shortcode( &#039;[woocommerce_checkout]&#039; ) : &#039;[woocommerce_checkout]&#039;;
+		}
+
+		// Track checkout page loaded for fraud protection.
+		if ( wc_get_container()-&gt;get( FraudProtectionController::class )-&gt;feature_is_enabled() ) {
+			wc_get_container()-&gt;get( CheckoutEventTracker::class )
+				-&gt;track_checkout_page_loaded();
+		}
+
+		// Dequeue the core scripts when rendering this block.
+		add_action( &#039;wp_enqueue_scripts&#039;, array( $this, &#039;dequeue_woocommerce_core_scripts&#039; ), 20 );
+
+		/**
+		 * We need to check if $content has any templates from prior iterations of the block, in order to update to the latest iteration.
+		 * We test the iteration version by searching for new blocks brought in by it.
+		 * The blocks used for testing should be always available in the block (not removable by the user).
+		 * Checkout i1&#039;s content was returning an empty div, with no data-block-name attribute
+		 */
+		$regex_for_empty_block = &#039;/&lt;div class=&quot;[a-zA-Z0-9_\- ]*wp-block-woocommerce-checkout[a-zA-Z0-9_\- ]*&quot;&gt;&lt;\/div&gt;/mi&#039;;
+		$has_i1_template       = preg_match( $regex_for_empty_block, $content );
+
+		if ( $has_i1_template ) {
+			// This fallback needs to match the default templates defined in our Blocks.
+			$inner_blocks_html = &#039;
+				&lt;div data-block-name=&quot;woocommerce/checkout-fields-block&quot; class=&quot;wp-block-woocommerce-checkout-fields-block&quot;&gt;
+					&lt;div data-block-name=&quot;woocommerce/checkout-express-payment-block&quot; class=&quot;wp-block-woocommerce-checkout-express-payment-block&quot;&gt;&lt;/div&gt;
+					&lt;div data-block-name=&quot;woocommerce/checkout-contact-information-block&quot; class=&quot;wp-block-woocommerce-checkout-contact-information-block&quot;&gt;&lt;/div&gt;
+					&lt;div data-block-name=&quot;woocommerce/checkout-shipping-address-block&quot; class=&quot;wp-block-woocommerce-checkout-shipping-address-block&quot;&gt;&lt;/div&gt;
+					&lt;div data-block-name=&quot;woocommerce/checkout-billing-address-block&quot; class=&quot;wp-block-woocommerce-checkout-billing-address-block&quot;&gt;&lt;/div&gt;
+					&lt;div data-block-name=&quot;woocommerce/checkout-shipping-methods-block&quot; class=&quot;wp-block-woocommerce-checkout-shipping-methods-block&quot;&gt;&lt;/div&gt;
+					&lt;div data-block-name=&quot;woocommerce/checkout-payment-block&quot; class=&quot;wp-block-woocommerce-checkout-payment-block&quot;&gt;&lt;/div&gt;
+					&lt;div data-block-name=&quot;woocommerce/checkout-additional-information-block&quot; class=&quot;wp-block-woocommerce-checkout-additional-information-block&quot;&gt;&lt;/div&gt;&#039; .
+					( isset( $attributes[&#039;showOrderNotes&#039;] ) &amp;&amp; false === $attributes[&#039;showOrderNotes&#039;] ? &#039;&#039; : &#039;&lt;div data-block-name=&quot;woocommerce/checkout-order-note-block&quot; class=&quot;wp-block-woocommerce-checkout-order-note-block&quot;&gt;&lt;/div&gt;&#039; ) .
+					( isset( $attributes[&#039;showPolicyLinks&#039;] ) &amp;&amp; false === $attributes[&#039;showPolicyLinks&#039;] ? &#039;&#039; : &#039;&lt;div data-block-name=&quot;woocommerce/checkout-terms-block&quot; class=&quot;wp-block-woocommerce-checkout-terms-block&quot;&gt;&lt;/div&gt;&#039; ) .
+					&#039;&lt;div data-block-name=&quot;woocommerce/checkout-actions-block&quot; class=&quot;wp-block-woocommerce-checkout-actions-block&quot;&gt;&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div data-block-name=&quot;woocommerce/checkout-totals-block&quot; class=&quot;wp-block-woocommerce-checkout-totals-block&quot;&gt;
+					&lt;div data-block-name=&quot;woocommerce/checkout-order-summary-block&quot; class=&quot;wp-block-woocommerce-checkout-order-summary-block&quot;&gt;&lt;/div&gt;
+				&lt;/div&gt;
+			&#039;;
+
+			$content = str_replace( &#039;&lt;/div&gt;&#039;, $inner_blocks_html . &#039;&lt;/div&gt;&#039;, $content );
+		}
+
+		/**
+		 * Checkout i3 added inner blocks for Order summary.
+		 * We need to add them to Checkout i2 templates.
+		 * The order needs to match the order in which these blocks were registered.
+		 */
+		$order_summary_with_inner_blocks = &#039;$0
+			&lt;div data-block-name=&quot;woocommerce/checkout-order-summary-cart-items-block&quot; class=&quot;wp-block-woocommerce-checkout-order-summary-cart-items-block&quot;&gt;&lt;/div&gt;
+			&lt;div data-block-name=&quot;woocommerce/checkout-order-summary-subtotal-block&quot; class=&quot;wp-block-woocommerce-checkout-order-summary-subtotal-block&quot;&gt;&lt;/div&gt;
+			&lt;div data-block-name=&quot;woocommerce/checkout-order-summary-fee-block&quot; class=&quot;wp-block-woocommerce-checkout-order-summary-fee-block&quot;&gt;&lt;/div&gt;
+			&lt;div data-block-name=&quot;woocommerce/checkout-order-summary-discount-block&quot; class=&quot;wp-block-woocommerce-checkout-order-summary-discount-block&quot;&gt;&lt;/div&gt;
+			&lt;div data-block-name=&quot;woocommerce/checkout-order-summary-coupon-form-block&quot; class=&quot;wp-block-woocommerce-checkout-order-summary-coupon-form-block&quot;&gt;&lt;/div&gt;
+			&lt;div data-block-name=&quot;woocommerce/checkout-order-summary-shipping-block&quot; class=&quot;wp-block-woocommerce-checkout-order-summary-shipping-block&quot;&gt;&lt;/div&gt;
+			&lt;div data-block-name=&quot;woocommerce/checkout-order-summary-taxes-block&quot; class=&quot;wp-block-woocommerce-checkout-order-summary-taxes-block&quot;&gt;&lt;/div&gt;
+		&#039;;
+		// Order summary subtotal block was added in i3, so we search for it to see if we have a Checkout i2 template.
+		$regex_for_order_summary_subtotal = &#039;/&lt;div[^&lt;]*?data-block-name=&quot;woocommerce\/checkout-order-summary-subtotal-block&quot;[^&gt;]*?&gt;/mi&#039;;
+		$regex_for_order_summary          = &#039;/&lt;div[^&lt;]*?data-block-name=&quot;woocommerce\/checkout-order-summary-block&quot;[^&gt;]*?&gt;/mi&#039;;
+		$has_i2_template                  = ! preg_match( $regex_for_order_summary_subtotal, $content );
+
+		if ( $has_i2_template ) {
+			$content = preg_replace( $regex_for_order_summary, $order_summary_with_inner_blocks, $content );
+		}
+
+		/**
+		 * Add the Local Pickup toggle to checkouts missing this forced template.
+		 */
+		$local_pickup_inner_blocks = &#039;&lt;div data-block-name=&quot;woocommerce/checkout-shipping-method-block&quot; class=&quot;wp-block-woocommerce-checkout-shipping-method-block&quot;&gt;&lt;/div&gt;&#039; . PHP_EOL . PHP_EOL . &#039;&lt;div data-block-name=&quot;woocommerce/checkout-pickup-options-block&quot; class=&quot;wp-block-woocommerce-checkout-pickup-options-block&quot;&gt;&lt;/div&gt;&#039; . PHP_EOL . PHP_EOL . &#039;$0&#039;;
+		$has_local_pickup_regex    = &#039;/&lt;div[^&lt;]*?data-block-name=&quot;woocommerce\/checkout-shipping-method-block&quot;[^&gt;]*?&gt;/mi&#039;;
+		$has_local_pickup          = preg_match( $has_local_pickup_regex, $content );
+
+		if ( ! $has_local_pickup ) {
+			$shipping_address_block_regex = &#039;/&lt;div[^&lt;]*?data-block-name=&quot;woocommerce\/checkout-shipping-address-block&quot; class=&quot;wp-block-woocommerce-checkout-shipping-address-block&quot;[^&gt;]*?&gt;&lt;\/div&gt;/mi&#039;;
+			$content                      = preg_replace( $shipping_address_block_regex, $local_pickup_inner_blocks, $content );
+		}
+
+		/**
+		 * Add the Additional Information block to checkouts missing it.
+		 */
+		$additional_information_inner_blocks = &#039;$0&#039; . PHP_EOL . PHP_EOL . &#039;&lt;div data-block-name=&quot;woocommerce/checkout-additional-information-block&quot; class=&quot;wp-block-woocommerce-checkout-additional-information-block&quot;&gt;&lt;/div&gt;&#039; . PHP_EOL . PHP_EOL;
+		$has_additional_information_regex    = &#039;/&lt;div[^&lt;]*?data-block-name=&quot;woocommerce\/checkout-additional-information-block&quot;[^&gt;]*?&gt;/mi&#039;;
+		$has_additional_information_block    = preg_match( $has_additional_information_regex, $content );
+
+		if ( ! $has_additional_information_block ) {
+			$payment_block_regex = &#039;/&lt;div[^&lt;]*?data-block-name=&quot;woocommerce\/checkout-payment-block&quot; class=&quot;wp-block-woocommerce-checkout-payment-block&quot;[^&gt;]*?&gt;&lt;\/div&gt;/mi&#039;;
+			$content             = preg_replace( $payment_block_regex, $additional_information_inner_blocks, $content );
+		}
+
+		return $content;
+	}
+
+	/**
+	 * Check if we&#039;re viewing a checkout page endpoint, rather than the main checkout page itself.
+	 *
+	 * @return boolean
+	 */
+	protected function is_checkout_endpoint() {
+		return is_wc_endpoint_url( &#039;order-pay&#039; ) || is_wc_endpoint_url( &#039;order-received&#039; );
+	}
+
+	/**
+	 * Update the local pickup title in WooCommerce Settings when the checkout page containing a Checkout block is saved.
+	 *
+	 * @param int      $post_id The post ID.
+	 * @param \WP_Post $post    The post object.
+	 * @return void
+	 */
+	public function update_local_pickup_title( $post_id, $post ) {
+
+		// This is not a proper save action, maybe an autosave, so don&#039;t continue.
+		if ( empty( $post-&gt;post_status ) || &#039;inherit&#039; === $post-&gt;post_status ) {
+			return;
+		}
+
+		// Check if we are editing the checkout page and that it contains a Checkout block.
+		// Cast to string for Checkout page ID comparison because get_option can return it as a string, so better to compare both values as strings.
+		if ( ! empty( $post-&gt;post_type ) &amp;&amp; &#039;wp_template&#039; !== $post-&gt;post_type &amp;&amp; ( false === has_block( &#039;woocommerce/checkout&#039;, $post ) || (string) get_option( &#039;woocommerce_checkout_page_id&#039; ) !== (string) $post_id ) ) {
+			return;
+		}
+
+		if ( ( ! empty( $post-&gt;post_type ) &amp;&amp; ! empty( $post-&gt;post_name ) &amp;&amp; &#039;page-checkout&#039; !== $post-&gt;post_name &amp;&amp; &#039;wp_template&#039; === $post-&gt;post_type ) || false === has_block( &#039;woocommerce/checkout&#039;, $post ) ) {
+			return;
+		}
+		$pickup_location_settings = LocalPickupUtils::get_local_pickup_settings( &#039;edit&#039; );
+
+		if ( ! isset( $pickup_location_settings[&#039;title&#039;] ) ) {
+			return;
+		}
+
+		if ( empty( $post-&gt;post_content ) ) {
+			return;
+		}
+
+		$title = $this-&gt;find_local_pickup_text_in_checkout_block( $post-&gt;post_content );
+
+		// Set the title to be an empty string if it isn&#039;t a string. This will make it fall back to the default value of &quot;Pickup&quot;.
+		if ( ! is_string( $title ) ) {
+			$title = &#039;&#039;;
+		}
+
+		$pickup_location_settings[&#039;title&#039;] = $title;
+		update_option( &#039;woocommerce_pickup_location_settings&#039;, $pickup_location_settings );
+	}
+
+	/**
+	 * Find the shipping methods block, then get the value of the localPickupText attribute from it.
+	 *
+	 * @param string $post_content The post content to search through.
+	 * @return null|string The local pickup text if found, otherwise null.
+	 */
+	private function find_local_pickup_text_in_checkout_block( $post_content ) {
+		$scanner = Block_Scanner::create( $post_content );
+
+		while ( $scanner-&gt;next_delimiter() ) {
+			if ( $scanner-&gt;opens_block( &#039;woocommerce/checkout-shipping-method-block&#039; ) ) {
+				$attributes = $scanner-&gt;allocate_and_return_parsed_attributes();
+				if ( isset( $attributes[&#039;localPickupText&#039;] ) ) {
+					return $attributes[&#039;localPickupText&#039;];
+				}
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * Extra data passed through from server to client for block.
+	 *
+	 * @param array $attributes  Any attributes that currently are available from the block.
+	 *                           Note, this will be empty in the editor context when the block is
+	 *                           not in the post content on editor load.
+	 */
+	protected function enqueue_data( array $attributes = [] ) {
+		parent::enqueue_data( $attributes );
+
+		$country_data    = CartCheckoutUtils::get_country_data();
+		$address_formats = WC()-&gt;countries-&gt;get_address_formats();
+
+		// Move the address format into the &#039;countryData&#039; setting.
+		// We need to skip &#039;default&#039; because that&#039;s not a valid country.
+		foreach ( $address_formats as $country_code =&gt; $format ) {
+			if ( &#039;default&#039; === $country_code ) {
+				continue;
+			}
+			$country_data[ $country_code ][&#039;format&#039;] = $format;
+		}
+
+		$providers_payload = [];
+		if ( class_exists( AddressProviderController::class ) &amp;&amp; &#039;no&#039; !== get_option( &#039;woocommerce_address_autocomplete_enabled&#039;, &#039;no&#039; ) ) {
+			$controller        = wc_get_container()-&gt;get( AddressProviderController::class );
+			$providers         = $controller-&gt;get_providers();
+			$providers_payload = array_map(
+				static function ( $provider ) {
+					return array(
+						&#039;id&#039;            =&gt; (string) $provider-&gt;id,
+						&#039;name&#039;          =&gt; sanitize_text_field( (string) $provider-&gt;name ),
+						&#039;branding_html&#039; =&gt; wp_kses_post( (string) $provider-&gt;branding_html ),
+					);
+				},
+				(array) $providers
+			);
+		}
+		$this-&gt;asset_data_registry-&gt;add( &#039;addressAutocompleteProviders&#039;, $providers_payload );
+		$this-&gt;asset_data_registry-&gt;add( &#039;countryData&#039;, $country_data );
+		$this-&gt;asset_data_registry-&gt;add( &#039;defaultAddressFormat&#039;, $address_formats[&#039;default&#039;] );
+		$this-&gt;asset_data_registry-&gt;add(
+			&#039;checkoutAllowsGuest&#039;,
+			false === filter_var(
+				wc()-&gt;checkout()-&gt;is_registration_required(),
+				FILTER_VALIDATE_BOOLEAN
+			)
+		);
+		$this-&gt;asset_data_registry-&gt;add(
+			&#039;checkoutAllowsSignup&#039;,
+			filter_var(
+				wc()-&gt;checkout()-&gt;is_registration_enabled(),
+				FILTER_VALIDATE_BOOLEAN
+			)
+		);
+		$this-&gt;asset_data_registry-&gt;add( &#039;checkoutShowLoginReminder&#039;, filter_var( get_option( &#039;woocommerce_enable_checkout_login_reminder&#039; ), FILTER_VALIDATE_BOOLEAN ) );
+		$this-&gt;asset_data_registry-&gt;add( &#039;displayCartPricesIncludingTax&#039;, &#039;incl&#039; === get_option( &#039;woocommerce_tax_display_cart&#039; ) );
+		$this-&gt;asset_data_registry-&gt;add( &#039;displayItemizedTaxes&#039;, &#039;itemized&#039; === get_option( &#039;woocommerce_tax_total_display&#039; ) );
+		$this-&gt;asset_data_registry-&gt;add( &#039;forcedBillingAddress&#039;, &#039;billing_only&#039; === get_option( &#039;woocommerce_ship_to_destination&#039; ) );
+		$this-&gt;asset_data_registry-&gt;add( &#039;generatePassword&#039;, filter_var( get_option( &#039;woocommerce_registration_generate_password&#039; ), FILTER_VALIDATE_BOOLEAN ) );
+		$this-&gt;asset_data_registry-&gt;add( &#039;taxesEnabled&#039;, wc_tax_enabled() );
+		$this-&gt;asset_data_registry-&gt;add( &#039;couponsEnabled&#039;, wc_coupons_enabled() );
+		$this-&gt;asset_data_registry-&gt;add( &#039;shippingEnabled&#039;, wc_shipping_enabled() );
+		$this-&gt;asset_data_registry-&gt;add( &#039;hasDarkEditorStyleSupport&#039;, current_theme_supports( &#039;dark-editor-style&#039; ) );
+		$this-&gt;asset_data_registry-&gt;register_page_id( isset( $attributes[&#039;cartPageId&#039;] ) ? $attributes[&#039;cartPageId&#039;] : 0 );
+		$this-&gt;asset_data_registry-&gt;add( &#039;isBlockTheme&#039;, wp_is_block_theme() );
+		$this-&gt;asset_data_registry-&gt;add( &#039;isCheckoutBlock&#039;, true );
+
+		$pickup_location_settings = LocalPickupUtils::get_local_pickup_settings();
+		$local_pickup_method_ids  = LocalPickupUtils::get_local_pickup_method_ids();
+
+		$this-&gt;asset_data_registry-&gt;add( &#039;localPickupEnabled&#039;, $pickup_location_settings[&#039;enabled&#039;] );
+		$this-&gt;asset_data_registry-&gt;add( &#039;localPickupText&#039;, $pickup_location_settings[&#039;title&#039;] );
+		$this-&gt;asset_data_registry-&gt;add( &#039;localPickupCost&#039;, $pickup_location_settings[&#039;cost&#039;] );
+		$this-&gt;asset_data_registry-&gt;add( &#039;collectableMethodIds&#039;, $local_pickup_method_ids );
+		$this-&gt;asset_data_registry-&gt;add( &#039;shippingMethodsExist&#039;, CartCheckoutUtils::shipping_methods_exist() );
+
+		$is_block_editor = $this-&gt;is_block_editor();
+
+		if ( $is_block_editor ) {
+			$this-&gt;asset_data_registry-&gt;add(
+				&#039;localPickupLocations&#039;,
+				array_filter(
+					array_map(
+						function ( $location ) {
+							if ( ! wc_string_to_bool( $location[&#039;enabled&#039;] ) ) {
+								return null;
+							}
+							$location[&#039;formatted_address&#039;] = wc()-&gt;countries-&gt;get_formatted_address( $location[&#039;address&#039;], &#039;, &#039; );
+							return $location;
+						},
+						LocalPickupUtils::get_local_pickup_method_locations()
+					)
+				),
+			);
+		}
+
+		if ( $is_block_editor &amp;&amp; ! $this-&gt;asset_data_registry-&gt;exists( &#039;globalShippingMethods&#039; ) ) {
+			$shipping_methods           = WC()-&gt;shipping()-&gt;get_shipping_methods();
+			$formatted_shipping_methods = array_reduce(
+				$shipping_methods,
+				function ( $acc, $method ) use ( $local_pickup_method_ids ) {
+					if ( in_array( $method-&gt;id, $local_pickup_method_ids, true ) ) {
+						return $acc;
+					}
+					if ( $method-&gt;supports( &#039;settings&#039; ) ) {
+						$acc[] = [
+							&#039;id&#039;          =&gt; $method-&gt;id,
+							&#039;title&#039;       =&gt; $method-&gt;method_title,
+							&#039;description&#039; =&gt; $method-&gt;method_description,
+						];
+					}
+					return $acc;
+				},
+				[]
+			);
+			$this-&gt;asset_data_registry-&gt;add( &#039;globalShippingMethods&#039;, $formatted_shipping_methods );
+		}
+
+		if ( $is_block_editor &amp;&amp; ! $this-&gt;asset_data_registry-&gt;exists( &#039;activeShippingZones&#039; ) &amp;&amp; class_exists( &#039;\WC_Shipping_Zones&#039; ) ) {
+			$this-&gt;asset_data_registry-&gt;add( &#039;activeShippingZones&#039;, CartCheckoutUtils::get_shipping_zones() );
+		}
+
+		if ( $is_block_editor &amp;&amp; ! $this-&gt;asset_data_registry-&gt;exists( &#039;globalPaymentMethods&#039; ) ) {
+			// These are used to show options in the sidebar. We want to get the full list of enabled payment methods,
+			// not just the ones that are available for the current cart (which may not exist yet).
+			$payment_methods           = PaymentUtils::get_enabled_payment_gateways();
+			$formatted_payment_methods = array_reduce(
+				$payment_methods,
+				function ( $acc, $method ) {
+					$acc[] = [
+						&#039;id&#039;          =&gt; $method-&gt;id,
+						&#039;title&#039;       =&gt; $method-&gt;get_method_title() !== &#039;&#039; ? $method-&gt;get_method_title() : $method-&gt;get_title(),
+						&#039;description&#039; =&gt; $method-&gt;get_method_description() !== &#039;&#039; ? $method-&gt;get_method_description() : $method-&gt;get_description(),
+					];
+					return $acc;
+				},
+				[]
+			);
+			$this-&gt;asset_data_registry-&gt;add( &#039;globalPaymentMethods&#039;, $formatted_payment_methods );
+		}
+
+		if ( $is_block_editor &amp;&amp; ! $this-&gt;asset_data_registry-&gt;exists( &#039;incompatibleExtensions&#039; ) ) {
+			if ( ! class_exists( &#039;\Automattic\WooCommerce\Utilities\FeaturesUtil&#039; ) || ! function_exists( &#039;get_plugins&#039; ) ) {
+				return;
+			}
+
+			$declared_extensions     = \Automattic\WooCommerce\Utilities\FeaturesUtil::get_compatible_plugins_for_feature( &#039;cart_checkout_blocks&#039; );
+			$all_plugins             = \get_plugins(); // Note that `get_compatible_plugins_for_feature` calls `get_plugins` internally, so this is already in cache.
+			$incompatible_extensions = array_reduce(
+				$declared_extensions[&#039;incompatible&#039;],
+				function ( $acc, $item ) use ( $all_plugins ) {
+					$plugin      = $all_plugins[ $item ] ?? null;
+					$plugin_id   = $plugin[&#039;TextDomain&#039;] ?? dirname( $item, 2 );
+					$plugin_name = $plugin[&#039;Name&#039;] ?? $plugin_id;
+					$acc[]       = [
+						&#039;id&#039;    =&gt; $plugin_id,
+						&#039;title&#039; =&gt; $plugin_name,
+					];
+					return $acc;
+				},
+				[]
+			);
+			$this-&gt;asset_data_registry-&gt;add( &#039;incompatibleExtensions&#039;, $incompatible_extensions );
+		}
+
+		if ( ! is_admin() &amp;&amp; ! WC()-&gt;is_rest_api_request() ) {
+			$this-&gt;asset_data_registry-&gt;hydrate_api_request( &#039;/wc/store/v1/cart&#039; );
+			$this-&gt;asset_data_registry-&gt;hydrate_data_from_api_request( &#039;checkoutData&#039;, &#039;/wc/store/v1/checkout&#039; );
+			$this-&gt;hydrate_customer_payment_methods();
+		}
+
+		/**
+		 * Fires after checkout block data is registered.
+		 *
+		 * @since 2.6.0
+		 */
+		do_action( &#039;woocommerce_blocks_checkout_enqueue_data&#039; );
+	}
+
+	/**
+	 * Get saved customer payment methods for use in checkout.
+	 */
+	protected function hydrate_customer_payment_methods() {
+		$payment_methods = PaymentUtils::get_saved_payment_methods();
+
+		if ( ! $payment_methods || $this-&gt;asset_data_registry-&gt;exists( &#039;customerPaymentMethods&#039; ) ) {
+			return;
+		}
+
+		$this-&gt;asset_data_registry-&gt;add(
+			&#039;customerPaymentMethods&#039;,
+			is_array( $payment_methods ) ? $payment_methods[&#039;enabled&#039;] : null
+		);
+	}
+
+	/**
+	 * Register script and style assets for the block type before it is registered.
+	 *
+	 * This registers the scripts; it does not enqueue them.
+	 */
+	protected function register_block_type_assets() {
+		parent::register_block_type_assets();
+		$chunks        = $this-&gt;get_chunks_paths( $this-&gt;chunks_folder );
+		$vendor_chunks = $this-&gt;get_chunks_paths( &#039;vendors--checkout-blocks&#039; );
+		$shared_chunks = [ &#039;cart-blocks/cart-express-payment--checkout-blocks/express-payment-frontend&#039; ];
+		$this-&gt;register_chunk_translations( array_merge( $chunks, $vendor_chunks, $shared_chunks ) );
+	}
+
+	/**
+	 * Get list of Checkout block &amp; its inner-block types.
+	 *
+	 * @return array;
+	 */
+	public static function get_checkout_block_types() {
+		return [
+			&#039;Checkout&#039;,
+			&#039;CheckoutActionsBlock&#039;,
+			&#039;CheckoutAdditionalInformationBlock&#039;,
+			&#039;CheckoutBillingAddressBlock&#039;,
+			&#039;CheckoutContactInformationBlock&#039;,
+			&#039;CheckoutExpressPaymentBlock&#039;,
+			&#039;CheckoutFieldsBlock&#039;,
+			&#039;CheckoutOrderNoteBlock&#039;,
+			&#039;CheckoutOrderSummaryBlock&#039;,
+			&#039;CheckoutOrderSummaryCartItemsBlock&#039;,
+			&#039;CheckoutOrderSummaryCouponFormBlock&#039;,
+			&#039;CheckoutOrderSummaryDiscountBlock&#039;,
+			&#039;CheckoutOrderSummaryFeeBlock&#039;,
+			&#039;CheckoutOrderSummaryShippingBlock&#039;,
+			&#039;CheckoutOrderSummarySubtotalBlock&#039;,
+			&#039;CheckoutOrderSummaryTaxesBlock&#039;,
+			&#039;CheckoutOrderSummaryTotalsBlock&#039;,
+			&#039;CheckoutPaymentBlock&#039;,
+			&#039;CheckoutShippingAddressBlock&#039;,
+			&#039;CheckoutShippingMethodsBlock&#039;,
+			&#039;CheckoutShippingMethodBlock&#039;,
+			&#039;CheckoutPickupOptionsBlock&#039;,
+			&#039;CheckoutTermsBlock&#039;,
+			&#039;CheckoutTotalsBlock&#039;,
+		];
+	}
+}
+</code></pre>
+            </article>
+            </div>
+        </div>
+        <a href="#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <footer class="phpdocumentor phpdocumentor-footer">
+    <div class="phpdocumentor-section">
+        <span>WooCommerce Code Reference API documentation generated by <a href="http://www.phpdoc.org/">phpDocumentor</a> on February 16th, 2026 at 11:12 pm.</span>
+    </div>
+</footer>
+
+    <script>
+        cssVars({});
+    </script>
+    <script>
+        var searchParams = {
+            'searchIndex': '..\/js\/searchIndex.json'
+        };
+    </script>
+    <script src="../js/searchIndex.js?updated=1771283540"></script>
+    <script src="../js/search.js?updated=1771283540"></script>
+</body>
+</html>
