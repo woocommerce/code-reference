@@ -22,6 +22,7 @@ jobs:
   verify:
     name: Verify if a rebuild is needed
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     outputs:
       version: ${{ steps.get-latest-version.outputs.version }}
       rebuild: ${{ steps.check-if-built.outputs.rebuild }}
@@ -57,6 +58,7 @@ jobs:
   build-and-deploy:
     name: Build and deploy
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     needs: verify
     if: ${{ needs.verify.outputs.rebuild == 'true' }}
     environment:
