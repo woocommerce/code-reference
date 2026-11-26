@@ -145,9 +145,9 @@ class HookDocsGenerator
                             $token_type = 'class';
                         } elseif (T_FUNCTION == $token[0]) {
                             $token_type = 'function';
-                        } elseif ('do_action' === $token[1]) {
+                        } elseif ('do_action' === $token[1] || ('do_staged_action' === $token[1] && 'function' !== $token_type)) {
                             $token_type = 'action';
-                        } elseif ('apply_filters' === $token[1]) {
+                        } elseif ('apply_filters' === $token[1] || ('apply_staged_filters' === $token[1] && 'function' !== $token_type)) {
                             $token_type = 'filter';
                         } elseif ($token_type && ! empty($trimmed_token_1)) {
                             switch ($token_type) {
@@ -159,6 +159,10 @@ class HookDocsGenerator
                                     break;
                                 case 'filter':
                                 case 'action':
+                                    // The staged hook wrappers fire the hook name they get; their callers are listed instead.
+                                    if (in_array($current_function, ['do_staged_action', 'apply_staged_filters'], true)) {
+                                        break;
+                                    }
                                     $hook = trim($token[1], "'");
                                     $hook = str_replace('_FUNCTION_', strtoupper($current_function), $hook);
                                     $hook = str_replace('_CLASS_', strtoupper($current_class), $hook);
